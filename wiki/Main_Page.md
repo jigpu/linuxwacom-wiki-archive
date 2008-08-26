@@ -22,6 +22,6 @@ Getting started
 
 -   Project Logo
 
-To set your project logo simply [Upload a new
-version](/wiki/Special:Upload&wpDestFile=Logo.png "wikilink") of the following
-image: ![](Logo.png "fig:Logo.png")
+To set your project logo simply
+[Special:Upload&wpDestFile=Logo.png](/wiki/Special:Upload&wpDestFile=Logo.png "wikilink")
+of the following image: ![](Logo.png "fig:Logo.png")
