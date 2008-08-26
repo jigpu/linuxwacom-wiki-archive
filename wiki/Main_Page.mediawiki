@@ -8,6 +8,5 @@ Consult the [http://meta.wikimedia.org/wiki/Help:Contents User's Guide] for info
 * [http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]
 
 * Project Logo
-To set your project logo simply click on the following Logo image and replace with your own project PNG image.
-
+To set your project logo simply [[Special:Upload&wpDestFile=Logo.png|Upload a new version]] of the following image:
 [[Image:Logo.png]]

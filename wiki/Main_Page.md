@@ -22,7 +22,6 @@ Getting started
 
 -   Project Logo
 
-To set your project logo simply click on the following Logo image and
-replace with your own project PNG image.
-
-![](Logo.png "Logo.png")
+To set your project logo simply [Upload a new
+version](/wiki/Special:Upload&wpDestFile=Logo.png "wikilink") of the following
+image: ![](Logo.png "fig:Logo.png")
