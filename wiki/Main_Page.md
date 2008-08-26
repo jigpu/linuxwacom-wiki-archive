@@ -21,4 +21,7 @@ Getting started
 Project Logo
 ------------
 
-Click on ![](Logo.png "fig:Logo.png") to upload a PNG Logo image.
+Click on the following image to upload a new version of the PNG logo
+image for your project:
+
+![](MediaWikiSidebarLogo.png "MediaWikiSidebarLogo.png")
