@@ -9,4 +9,5 @@ Consult the [http://meta.wikimedia.org/wiki/Help:Contents User's Guide] for info
 
 == Project Logo ==
 Click on the following image and '''Upload a new version''' to set a new PNG logo image.
+
 [[Image:Logo.png]]

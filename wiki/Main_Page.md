@@ -22,4 +22,6 @@ Project Logo
 ------------
 
 Click on the following image and **Upload a new version** to set a new
-PNG logo image. ![](Logo.png "fig:Logo.png")
+PNG logo image.
+
+![](Logo.png "Logo.png")
