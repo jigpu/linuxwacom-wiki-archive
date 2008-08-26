@@ -18,4 +18,4 @@ Getting started
 -   [MediaWiki release mailing
     list](http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce)
 
-![](Smiley.jpg "Smiley.jpg")
+![](Smiley.jpg "fig:Smiley.jpg") ![](Wink.jpg "fig:Wink.jpg")
