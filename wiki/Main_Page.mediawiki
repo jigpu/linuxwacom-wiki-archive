@@ -8,6 +8,4 @@ Consult the [http://meta.wikimedia.org/wiki/Help:Contents User's Guide] for info
 * [http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]
 
 == Project Logo ==
-Click on the following image and '''Upload a new version''' to set a new PNG logo image.
-
-[[Image:Logo.png]]
+Click on [[Image:Logo.png]] to upload a PNG Logo image.

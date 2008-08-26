@@ -21,7 +21,4 @@ Getting started
 Project Logo
 ------------
 
-Click on the following image and **Upload a new version** to set a new
-PNG logo image.
-
-![](Logo.png "Logo.png")
+Click on ![](Logo.png "fig:Logo.png") to upload a PNG Logo image.
