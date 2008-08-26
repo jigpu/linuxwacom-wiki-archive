@@ -17,3 +17,5 @@ Getting started
 -   [MediaWiki FAQ](http://www.mediawiki.org/wiki/Manual:FAQ)
 -   [MediaWiki release mailing
     list](http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce)
+
+![](Smiley.jpg "Smiley.jpg")
