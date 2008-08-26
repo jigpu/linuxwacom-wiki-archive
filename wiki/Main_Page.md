@@ -18,4 +18,11 @@ Getting started
 -   [MediaWiki release mailing
     list](http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce)
 
-![](Smiley.jpg "fig:Smiley.jpg") ![](Wink.jpg "fig:Wink.jpg")
+<!-- -->
+
+-   Project Logo
+
+To set your project logo simply click on the following Logo image and
+replace with your own project PNG image.
+
+![](Logo.png "Logo.png")

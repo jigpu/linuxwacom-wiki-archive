@@ -7,5 +7,7 @@ Consult the [http://meta.wikimedia.org/wiki/Help:Contents User's Guide] for info
 * [http://www.mediawiki.org/wiki/Manual:FAQ MediaWiki FAQ]
 * [http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]
 
-[[Image:Smiley.jpg]]
-[[Image:Wink.jpg]]
+* Project Logo
+To set your project logo simply click on the following Logo image and replace with your own project PNG image.
+
+[[Image:Logo.png]]
