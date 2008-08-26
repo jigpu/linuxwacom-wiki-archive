@@ -18,10 +18,8 @@ Getting started
 -   [MediaWiki release mailing
     list](http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce)
 
-<!-- -->
+Project Logo
+------------
 
--   Project Logo
-
-To set your project logo simply
-[Special:Upload&wpDestFile=Logo.png](/wiki/Special:Upload&wpDestFile=Logo.png "wikilink")
-of the following image: ![](Logo.png "fig:Logo.png")
+Click on the following image and **Upload a new version** to set a new
+PNG logo image. ![](Logo.png "fig:Logo.png")
