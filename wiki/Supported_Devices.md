@@ -25,3 +25,7 @@ Devices supported by the Linux Wacom Project:
 -   PL & DTF
 -   Bamboo, Bamboo1, & BambooFun
 -   TabletPC (with/without touch)
+
+<b>Bluetooth series:</b>
+
+-   Wacom Pen Tablet
