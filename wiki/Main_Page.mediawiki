@@ -7,7 +7,7 @@ The Linux Wacom Project manages the drivers, libraries, and documentation for co
 
 {{:Supported Devices}}
 
-NOTE: A FreeBSD Wacom driver is available through the FreeBSD ports system. Please email your questions and/or suggestion directly to Bartosz Fabianowski, the Wacom FreeBSD developer.
+NOTE: A FreeBSD Wacom driver is available through the FreeBSD ports system. Please email your questions and/or suggestion directly to [mailto:freebsd@chillt.de?subject=WACOM Bartosz Fabianowski], the Wacom FreeBSD developer.
 
 === User help ===
 The [[HOWTO]] contains step-by-step instructions for getting your tablet running. If you run into trouble, let us know so we can get the documentation updated.

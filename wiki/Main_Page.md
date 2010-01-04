@@ -22,7 +22,8 @@ Wacom Project provides two packages:
 
 NOTE: A FreeBSD Wacom driver is available through the FreeBSD ports
 system. Please email your questions and/or suggestion directly to
-Bartosz Fabianowski, the Wacom FreeBSD developer.
+[Bartosz Fabianowski](mailto:freebsd@chillt.de?subject=WACOM), the Wacom
+FreeBSD developer.
 
 ### User help
 
