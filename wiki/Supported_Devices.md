@@ -4,7 +4,7 @@ permalink: wiki/Supported_Devices/
 layout: wiki
 ---
 
-<noinclude>Supported devices by the Linux Wacom Project</noinclude>
+Devices supported by the Linux Wacom Project:
 
 <b>Serial devices:</b>
 
