@@ -1,0 +1,7 @@
+== Which devices are supported? ==
+
+{{:Supported Devices}}
+
+== How do I configure my device ==
+
+See the [[HOWTO section]].
