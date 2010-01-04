@@ -1,14 +1,20 @@
-<big>'''MediaWiki has been successfully installed.'''</big>
+= The Linux Wacom Project =
 
-Consult the [http://meta.wikimedia.org/wiki/Help:Contents User's Guide] for information on using the wiki software.
+The Linux Wacom Project manages the drivers, libraries, and documentation for configuring and running Wacom tablets under the Linux operating system. It contains diagnostic applications as well as updated kernel drivers and XFree86/Xorg XInput drivers. 
 
-== Getting started ==
-* [http://www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
-* [http://www.mediawiki.org/wiki/Manual:FAQ MediaWiki FAQ]
-* [http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]
 
-== Project Logo ==
-Click on the following image to upload a new version of the PNG logo image for your project:
+NOTE: A FreeBSD Wacom driver is available through the FreeBSD ports system. Please email your questions and/or suggestion directly to Bartosz Fabianowski, the Wacom FreeBSD developer.
 
-[[Image:MediaWikiSidebarLogo.png]]
+=== User help ===
+The [[HOWTO section]] contains step-by-step instructions for getting your tablet running. If you run into trouble, let us know so we can get the documentation updated.
+The most commonly asked questions and the best answers available to date are in the [[FAQ]]. If you still have problem, please check [http://sourceforge.net/tracker/?group_id=69596 Trackers] to see if someone else has reported the issue or has a patch for the problem.
 
+=== Mailing lists ===
+The Linux Wacom project provides three mailing lists:
+* [http://lists.sourceforge.net/mailman/listinfo/linuxwacom-announce linuxwacom-announce] ([http://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-announce archives])is a low-volume mailing list announcing new software releases.
+* [http://lists.sourceforge.net/mailman/listinfo/linuxwacom-devel linuxwacom-devel] ([http://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-devel archives]) is the developer's mailing list. If you have patches for linuxwacom or you want to contribute in other ways, please subscribe to this list.
+* [http://lists.sourceforge.net/mailman/listinfo/linuxwacom-discuss linuxwacom-discuss] ([http://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-discuss archives]) is a list for general discussions and user problems.
+
+The archives for these lists are also useful for searching problems you are encountering.
+
+The most recent updates are available in the News section, including bug fixes, recently discovered problems, available solutions, and general development progress.
