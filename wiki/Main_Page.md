@@ -26,11 +26,11 @@ Bartosz Fabianowski, the Wacom FreeBSD developer.
 
 ### User help
 
-The [HOWTO section](/wiki/HOWTO_section "wikilink") contains step-by-step
-instructions for getting your tablet running. If you run into trouble,
-let us know so we can get the documentation updated. The most commonly
-asked questions and the best answers available to date are in the
-[FAQ](/wiki/FAQ "wikilink"). If you still have problem, please check
+The [HOWTO](/wiki/HOWTO "wikilink") contains step-by-step instructions for
+getting your tablet running. If you run into trouble, let us know so we
+can get the documentation updated. The most commonly asked questions and
+the best answers available to date are in the [FAQ](/wiki/FAQ "wikilink"). If
+you still have problem, please check
 [Trackers](http://sourceforge.net/tracker/?group_id=69596) to see if
 someone else has reported the issue or has a patch for the problem.
 
