@@ -7,7 +7,8 @@ layout: wiki
 The xf86-input-wacom driver is the wacom-specific X11 input driver for
 the X.Org X Server version 1.7 and later (X11R7.5 or later).
 
-### Installing from git
+Installing from git
+===================
 
     git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom
     cd xf86-input-wacom
@@ -21,9 +22,11 @@ for evdev\_drv.so. If it is in /usr/lib/xorg/modules/input, then the
 prefix of /usr is enough. If it is in /usr/lib64/xorg/modules/input,
 then you need to specify --libdir=/usr/lib64.
 
-### Configuration
+Configuration
+=============
 
-#### Hotplugging setup with HAL
+Hotplugging setup with HAL
+--------------------------
 
 Ideally, you should be using the X Server's hotplugging features instead
 of manual configuration. This allows you to (un)plug the device at
@@ -58,9 +61,11 @@ your tablet device will usually look something like this:
       linux.subsystem = 'input'  (string)
       linux.sysfs_path = '/sys/devices/pci0000:00/0000:00:1a.1/usb4/4-1/4-1:1.0/input/input47/event10'  (string)
 
-#### Manual setup in the xorg.conf
+Manual setup in the xorg.conf
+-----------------------------
 
-### Testing
+Testing
+=======
 
 Once installed, you need to restart the X server. Either hit
 Ctrl+Alt+Backspace (if enabled), log out or reboot, whichever you
