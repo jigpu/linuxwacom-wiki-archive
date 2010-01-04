@@ -17,8 +17,7 @@ Wacom Project provides two packages:
     patches and the X11 input driver for X Servers up to including 1.6.
 -   [xf86-input-wacom](xf86-input-wacom "wikilink"): the X11 input
     driver for X Servers 1.7 and later
-    ([http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html
-    X11R7.5](http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html_X11R7.5 "wikilink"))
+    ([X11R7.5](http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html))
 
 NOTE: A FreeBSD Wacom driver is available through the FreeBSD ports
 system. Please email your questions and/or suggestion directly to
