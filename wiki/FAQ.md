@@ -11,3 +11,42 @@ How do I configure my device
 ----------------------------
 
 See the [HOWTO section](/wiki/HOWTO_section "wikilink").
+
+How do I get the special features of my stylus to work?
+-------------------------------------------------------
+
+There are many different types of styli, mice, and pucks. All of them
+work to varying degrees, so if you are running into trouble, please send
+an email to the [mailing lists](mailing_lists "wikilink"). Also, if you
+are having trouble with the stable build of linuxwacom, try the beta.
+Many of the tools have been recently added and have not yet been moved
+to the production release.
+
+Note, tilt is only supported with protocol V tablets, which include
+Intuos series and Cintiq 21UX/20WSX/12WX to date (July. 31, 2009). Any
+other tablets don't have tilt no matter you have the tilt option in your
+xorg.conf or not.
+
+Is hotplug supported for X input devices?
+-----------------------------------------
+
+Yes, but only for devices configured via HAL. If you have your devices
+configured in the xorg.conf, you can work around this by switching
+virtual terminals after replugging your tablet. That is, press Ctrl +
+Alt + F1 together then release them (screen turns to console); and press
+Ctrl + Alt + F7 together then release them (screen returns back to
+normal). On some distributions (e.g. Fedora), the original X session
+runs on VT1, hence substitute the commands with Ctrl + Alt + F2 and Ctrl
++ Alt + F1.
+
+Who is responsible for this code?
+---------------------------------
+
+You are. Linux Wacom is an open source project and driven by Linux users
+with Wacom tablets such as yourself. John Joganic took up the code in
+November of 2002 and created this project. The source code was written
+by at least two dozen individuals, most of them are not directly
+involved in the project any more. Ping Cheng has assumed the project
+administrator since 2003. You can help out by testing, reporting bugs,
+documentation on this wiki and of course by writing patches (see the
+[mailing lists](mailing_lists "wikilink")).
