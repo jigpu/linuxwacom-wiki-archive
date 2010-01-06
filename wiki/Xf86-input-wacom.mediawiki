@@ -11,6 +11,10 @@ make && make install
 
 This gets the latest version from git and installs it into the given prefix. In most cases, the prefix of /usr is the right one. If you're on a 64-bit machine, configure with --libdir=/usr/lib64. If unsure, search for evdev_drv.so. If it is in /usr/lib/xorg/modules/input, then the prefix of /usr is enough. If it is in /usr/lib64/xorg/modules/input, then you need to specify --libdir=/usr/lib64.
 
+If you are trying to replace the distribution-installed version of the driver with the version from git, use the same build flags as your distribution does. 
+
+* [http://koji.fedoraproject.org/koji/packageinfo?packageID=9537 Fedora:] select the latest build for your version and look at the build.log. Search for the configure line and copy everything from that line.
+
 = Configuration =
 == Hotplugging setup with HAL ==
 Ideally, you should be using the X Server's hotplugging features instead of manual configuration. This allows you to (un)plug the device at runtime. The driver provides a wacom.fdi file that is by default installed into HAL's policy directory (<i>/usr/share/hal/fdi/policy/20thirdparty</i>). Once installed, you need to restart HAL and verify that the right driver will be loaded.

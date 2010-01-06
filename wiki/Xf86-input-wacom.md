@@ -22,6 +22,14 @@ for evdev\_drv.so. If it is in /usr/lib/xorg/modules/input, then the
 prefix of /usr is enough. If it is in /usr/lib64/xorg/modules/input,
 then you need to specify --libdir=/usr/lib64.
 
+If you are trying to replace the distribution-installed version of the
+driver with the version from git, use the same build flags as your
+distribution does.
+
+-   [Fedora:](http://koji.fedoraproject.org/koji/packageinfo?packageID=9537)
+    select the latest build for your version and look at the build.log.
+    Search for the configure line and copy everything from that line.
+
 Configuration
 =============
 
