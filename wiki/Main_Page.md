@@ -25,7 +25,8 @@ system. Please email your questions and/or suggestion directly to
 [Bartosz Fabianowski](mailto:freebsd@chillt.de?subject=WACOM), the Wacom
 FreeBSD developer.
 
-### User help
+User help
+---------
 
 The [HOWTO](/wiki/HOWTO "wikilink") contains step-by-step instructions for
 getting your tablet running. If you run into trouble, let us know so we
@@ -35,7 +36,8 @@ you still have problem, please check
 [Trackers](http://sourceforge.net/tracker/?group_id=69596) to see if
 someone else has reported the issue or has a patch for the problem.
 
-### Mailing lists
+Mailing lists
+-------------
 
 The Linux Wacom project provides three mailing lists:
 
@@ -54,6 +56,10 @@ The Linux Wacom project provides three mailing lists:
 The archives for these lists are also useful for searching problems you
 are encountering.
 
-The most recent updates are available in the News section, including bug
-fixes, recently discovered problems, available solutions, and general
-development progress.
+News
+----
+
+FAQ
+---
+
+Please see the [FAQ](/wiki/FAQ "wikilink") for more details.
