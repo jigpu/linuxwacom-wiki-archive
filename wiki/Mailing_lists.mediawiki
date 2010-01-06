@@ -1,0 +1,6 @@
+The Linux Wacom Project provides three mailing lists:
+* [http://lists.sourceforge.net/mailman/listinfo/linuxwacom-announce linuxwacom-announce] ([http://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-announce archives])is a low-volume mailing list announcing new software releases.
+* [http://lists.sourceforge.net/mailman/listinfo/linuxwacom-devel linuxwacom-devel] ([http://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-devel archives]) is the developer's mailing list. If you have patches for linuxwacom or you want to contribute in other ways, please subscribe to this list.
+* [http://lists.sourceforge.net/mailman/listinfo/linuxwacom-discuss linuxwacom-discuss] ([http://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-discuss archives]) is a list for general discussions and user problems.
+
+The archives for these lists are also useful for searching problems you are encountering.
