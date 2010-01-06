@@ -4,6 +4,28 @@ permalink: wiki/FAQ/
 layout: wiki
 ---
 
+Why linuxwacom and xf86-input-wacom?
+------------------------------------
+
+xf86-input-wacom was created as a fork of linuxwacom for the following
+reasons:
+
+-   linuxwacom has collected some amount of cruft over the years,
+    including some amount of ifdefs that attempt to support every X
+    server version since XFree86-4.
+-   xf86-input-wacom is an X11-only driver, the kernel driver is not
+    part of xf86-input-wacom.
+-   Ping has expressed a desire to keep linuxwacom in CVS, in part to
+    avoid disruption for current users of the linuxwacom releases.
+-   The use of git as SCM should encourage more outside participation,
+    so far Ping has done most of the heavy lifting in the driver. A more
+    community-driven development model is desirable. We have already
+    seen numerous patches from others and are very happy about this.
+
+xf86-input-wacom is the preferred driver for X Servers 1.7 and later.
+linuxwacom will <b>not</b> compile against these servers without
+additional patches.
+
 Which devices are supported?
 ----------------------------
 
