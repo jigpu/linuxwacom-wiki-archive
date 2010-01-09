@@ -28,4 +28,4 @@ Devices supported by the Linux Wacom Project:
 
 <b>Bluetooth series:</b>
 
--   Wacom Pen Tablet
+-   Wireless Pen Tablet
