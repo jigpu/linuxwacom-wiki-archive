@@ -16,6 +16,9 @@ The most commonly asked questions and the best answers available to date are in 
 == Mailing lists ==
 {{:Mailing lists}}
 
+== Development ==
+Please see the [[DeveloperPages]].
+
 == News ==
 {{:News}}
 

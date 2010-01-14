@@ -39,6 +39,11 @@ someone else has reported the issue or has a patch for the problem.
 Mailing lists
 -------------
 
+Development
+-----------
+
+Please see the [DeveloperPages](/wiki/DeveloperPages "wikilink").
+
 News
 ----
 
