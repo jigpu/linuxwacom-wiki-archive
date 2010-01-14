@@ -37,3 +37,8 @@ version (e.g. 0.10.2).
     the xf86-input-wacom folder and click "upload here". If you upload
     to the wrong folder, you can cut/paste with the gear icon next to
     the uploaded file.
+9.  Type up a short announce email summarising the new features in this
+    version and append the git shortlog: **git shortlog
+    xf86-input-wacom-OLDVERSION..xf86-input-wacom-VERSION**
+10. **Sign off the email** and send it to the [ linuxwacom-announce
+    list](/wiki/Mailing_lists "wikilink")
