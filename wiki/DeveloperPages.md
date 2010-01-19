@@ -29,14 +29,11 @@ version (e.g. 0.10.2).
     [xf86-input-wacom-md5](https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/xf86-input-wacom.md5/download)
     and append the checksums for the new tarballs with: **md5sum
     xf86-input-wacom-VERSION.tar\* &gt;&gt; xf86-input-wacom.md5**.
-8.  Upload the .md5, the .tar.gz and the .tar.bz2 file *in this order*
-    to the [sourceforge file
-    explorer](https://sourceforge.net/project/admin/explorer.php?group_id=69596).
-    The order ensures that the tar.bz2 file is the newest and offered by
-    the big download button. To upload, click on the gear icon next to
-    the xf86-input-wacom folder and click "upload here". If you upload
-    to the wrong folder, you can cut/paste with the gear icon next to
-    the uploaded file.
+8.  Create a [service \| shell on
+    sourceforge](https://sourceforge.net/apps/trac/sourceforge/wiki/Shell)
+    and upload the tarballs and the xf86-input-wacom.md5 file by running
+    **scp <tarballs>
+    USER@shell.sourceforge.net:/home/frs/project/l/li/linuxwacom/xf86-input-wacom/**
 9.  Type up a short announce email summarising the new features in this
     version and append the git shortlog: **git shortlog
     xf86-input-wacom-OLDVERSION..xf86-input-wacom-VERSION**
