@@ -29,8 +29,8 @@ version (e.g. 0.10.2).
     [xf86-input-wacom-md5](https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/xf86-input-wacom.md5/download)
     and append the checksums for the new tarballs with: **md5sum
     xf86-input-wacom-VERSION.tar\* &gt;&gt; xf86-input-wacom.md5**.
-8.  Create a [service \| shell on
-    sourceforge](https://sourceforge.net/apps/trac/sourceforge/wiki/Shell)
+8.  Create a [shell on
+    sourceforge](https://sourceforge.net/apps/trac/sourceforge/wiki/Shell%20service)
     and upload the tarballs and the xf86-input-wacom.md5 file by running
     **scp <tarballs>
     USER@shell.sourceforge.net:/home/frs/project/l/li/linuxwacom/xf86-input-wacom/**
