@@ -740,3 +740,5 @@ Here is another sample from Red Hat Enterprise Linux ES v.4:
                 wacom_drv.o - yes
           wacom*_drv quirks - libc-wrapper key-events
         ----------------------------------------
+
+Next: The [USB Kernel driver](/wiki/USB_Kernel_driver "wikilink")

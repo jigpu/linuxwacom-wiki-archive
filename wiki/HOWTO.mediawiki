@@ -816,3 +816,6 @@ Here is another sample from Red Hat Enterprise Linux ES v.4:
       wacom*_drv quirks - libc-wrapper key-events
     ----------------------------------------
 </pre>
+
+
+Next: The [[USB Kernel driver]]
