@@ -42,10 +42,11 @@ Mailing lists
 IRC
 ---
 
-The official linux wacom irc channel is \#linuxwacom on
-irc.freenode.net. It is recommended if you ask questions there that you
-also ask them on the mailing list. Please be patient if you ask a
-question on irc. People are not always watching the channel.
+The official linuxwacom [IRC](/wiki/Irc "wikilink") channel is
+**\#linuxwacom** on **irc.freenode.net**. It is recommended if you ask
+questions there that you also ask them on the mailing list. Please be
+patient if you ask a question on IRC. People are not always watching the
+channel.
 
 Development
 -----------
