@@ -4,6 +4,9 @@ permalink: wiki/IRC/
 layout: wiki
 ---
 
+IRC
+===
+
 The official linux wacom irc is \#linuxwacom on irc.freenode.net. Feel
 free to ask problems on whatever issues you may have, but be patient as
 there is not always someone watching the channel. It is recommended that
