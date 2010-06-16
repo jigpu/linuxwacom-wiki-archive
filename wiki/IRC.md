@@ -7,6 +7,7 @@ layout: wiki
 The official linux wacom irc is \#linuxwacom on irc.freenode.net.
 
 IRC channel management
+----------------------
 
 To add someone to the access list so they can promote themselves to
 admin (op): /msg chanserv flags \#linuxwacom +o nickname
