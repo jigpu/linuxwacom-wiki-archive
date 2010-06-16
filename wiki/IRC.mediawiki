@@ -1,0 +1,16 @@
+The official linux wacom irc is #linuxwacom on irc.freenode.net.
+
+
+IRC channel management
+
+To add someone to the access list so they can promote themselves to admin (op):
+/msg chanserv flags #linuxwacom +o nickname
+
+To op someone or yourself (you can only op yourself if you have the appropriate level in the access list):
+/mode #linuxwacom +o nickname
+
+To add channel modes:
+/mode #linuxwacom +mode
+
+To remove channel modes:
+/mode #linuxwacom -mode
