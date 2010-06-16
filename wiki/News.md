@@ -4,6 +4,9 @@ permalink: wiki/News/
 layout: wiki
 ---
 
+-   '''07. June 2010: ''' linuxwacom-0.8.8 released.
+-   '''02. June 2010: ''' linuxwacom-0.8.7-2 released.
+-   '''21. May 2010: ''' linuxwacom-0.8.7-1 released.
 -   **27. April 2010:** xf86-input-wacom 0.10.6 released.
 -   **26. March 2010:** linuxwacom-0.8.5-12 released.
 -   **19. March 2010:** xf86-input-wacom 0.10.5 released.
