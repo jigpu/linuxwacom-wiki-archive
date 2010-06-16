@@ -39,7 +39,7 @@ someone else has reported the issue or has a patch for the problem.
 Mailing lists
 -------------
 
-Irc
+IRC
 ---
 
 The official linux wacom irc channel is \#linuxwacom on
