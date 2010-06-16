@@ -27,6 +27,7 @@ To add channel modes:
 To remove channel modes:
  /mode #linuxwacom -mode
 
+For a full list of modes visit the freenode [http://freenode.net/using_the_network.shtml Using the network] page.
 
 ==Dealing with problem people==
 If you want someone to not be able to enter the channel, or to not talk if they are in the channel (this bans them):

@@ -45,6 +45,9 @@ To remove channel modes:
 
 `/mode #linuxwacom -mode`
 
+For a full list of modes visit the freenode [Using the
+network](http://freenode.net/using_the_network.shtml) page.
+
 Dealing with problem people
 ---------------------------
 
