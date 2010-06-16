@@ -1,5 +1,3 @@
-= IRC =
-
 The official linux wacom irc is #linuxwacom on irc.freenode.net.  Feel free to ask problems on whatever issues you may have, but be patient as there is not always someone watching the channel.  It is recommended that you ask any questions on the mailing list as well as in irc, as you may get extra help in the mailing list even if it takes a while longer.
 
 
