@@ -14,15 +14,23 @@ IRC channel management
 ----------------------
 
 To add someone to the access list so they can promote themselves to
-admin (op): /msg chanserv flags \#linuxwacom +o nickname
+admin (op):
+
+`/msg chanserv flags #linuxwacom +o nickname`
 
 NOTE: It is the standard on freenode and generally a good idea to ONLY
 op your self if needed. Such as if a spammer enters the channel or
 channel maintenance needs to be done.
 
 To op someone or yourself (you can only op yourself if you have the
-appropriate level in the access list): /mode \#linuxwacom +o nickname
+appropriate level in the access list):
 
-To add channel modes: /mode \#linuxwacom +mode
+`/mode #linuxwacom +o nickname`
 
-To remove channel modes: /mode \#linuxwacom -mode
+To add channel modes:
+
+`/mode #linuxwacom +mode`
+
+To remove channel modes:
+
+`/mode #linuxwacom -mode`
