@@ -1,10 +1,12 @@
-The official linux wacom irc is #linuxwacom on irc.freenode.net.
+The official linux wacom irc is #linuxwacom on irc.freenode.net.  Feel free to ask problems on whatever issues you may have, but be patient as there is not always someone watching the channel.  It is recommended that you ask any questions on the mailing list as well as in irc, as you may get extra help in the mailing list even if it takes a while longer.
 
 
 ==IRC channel management==
 
 To add someone to the access list so they can promote themselves to admin (op):
 /msg chanserv flags #linuxwacom +o nickname
+
+NOTE:  It is the standard on freenode and generally a good idea to ONLY op your self if needed.  Such as if a spammer enters the channel or channel maintenance needs to be done.
 
 To op someone or yourself (you can only op yourself if you have the appropriate level in the access list):
 /mode #linuxwacom +o nickname
