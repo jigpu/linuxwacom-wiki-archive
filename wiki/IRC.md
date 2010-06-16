@@ -11,7 +11,7 @@ you ask any questions on the mailing list as well as in irc, as you may
 get extra help in the mailing list even if it takes a while longer.
 
 IRC channel management
-----------------------
+======================
 
 To add someone to the access list so they can promote themselves to
 admin (op):
@@ -49,7 +49,7 @@ For a full list of modes visit the freenode [Using the
 network](http://freenode.net/using_the_network.shtml) page.
 
 Dealing with problem people
----------------------------
+===========================
 
 If you want someone to not be able to enter the channel, or to not talk
 if they are in the channel (this bans them):
