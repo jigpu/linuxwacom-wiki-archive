@@ -20,7 +20,8 @@ prefix. In most cases, the prefix of /usr is the right one. If you're on
 a 64-bit machine, configure with --libdir=/usr/lib64. If unsure, search
 for evdev\_drv.so. If it is in /usr/lib/xorg/modules/input, then the
 prefix of /usr is enough. If it is in /usr/lib64/xorg/modules/input,
-then you need to specify --libdir=/usr/lib64.
+even if it is in /usr/lib/xorg/modules/input, then you need to specify
+--libdir=/usr/lib64.
 
 If you are trying to replace the distribution-installed version of the
 driver with the version from git, use the same build flags as your
