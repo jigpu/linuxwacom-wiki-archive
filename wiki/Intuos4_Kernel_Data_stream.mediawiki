@@ -1,0 +1,133 @@
+Data stream obtained with [http://people.freedesktop.org/~whot/evtest/ evtest]. This data stream is valid for an Intuos4 USB device, as of 01:46, 2 August 2010 (UTC).
+
+<pre>
+Input driver version is 1.0.0
+Input device ID: bus 0x3 vendor 0x56a product 0xb9 version 0x104
+Input device name: "Wacom Intuos4 6x9"
+Supported events:
+  Event type 0 (Sync)
+  Event type 1 (Key)
+    Event code 256 (Btn0)
+    Event code 257 (Btn1)
+    Event code 258 (Btn2)
+    Event code 259 (Btn3)
+    Event code 260 (Btn4)
+    Event code 261 (Btn5)
+    Event code 262 (Btn6)
+    Event code 263 (Btn7)
+    Event code 264 (Btn8)
+    Event code 272 (LeftBtn)
+    Event code 273 (RightBtn)
+    Event code 274 (MiddleBtn)
+    Event code 275 (SideBtn)
+    Event code 276 (ExtraBtn)
+    Event code 320 (ToolPen)
+    Event code 321 (ToolRubber)
+    Event code 322 (ToolBrush)
+    Event code 323 (ToolPencil)
+    Event code 324 (ToolAirbrush)
+    Event code 325 (ToolFinger)
+    Event code 326 (ToolMouse)
+    Event code 327 (ToolLens)
+    Event code 330 (Touch)
+    Event code 331 (Stylus)
+    Event code 332 (Stylus2)
+  Event type 2 (Relative)
+    Event code 8 (Wheel)
+  Event type 3 (Absolute)
+    Event code 0 (X)
+      Value      0
+      Min        0
+      Max    44704
+      Fuzz       4
+    Event code 1 (Y)
+      Value      0
+      Min        0
+      Max    27940
+      Fuzz       4
+    Event code 2 (Z)
+      Value      0
+      Min     -900
+      Max      899
+    Event code 5 (Rz)
+      Value      0
+      Min     -900
+      Max      899
+    Event code 6 (Throttle)
+      Value      0
+      Min    -1023
+      Max     1023
+    Event code 8 (Wheel)
+      Value      0
+      Min        0
+      Max     1023
+    Event code 24 (Pressure)
+      Value      0
+      Min        0
+      Max     2047
+    Event code 25 (Distance)
+      Value      0
+      Min        0
+      Max       63
+    Event code 26 (XTilt)
+      Value      0
+      Min        0
+      Max      127
+    Event code 27 (YTilt)
+      Value      0
+      Min        0
+      Max      127
+    Event code 40 (Misc)
+      Value      0
+      Min        0
+      Max        0
+  Event type 4 (Misc)
+    Event code 0 (Serial)
+Testing ... (interrupt to exit)
+</pre>
+
+Some notes about the usage of the above values:
+* ''Misc'' and  ''Serial'' are used for the tool serial numbers. The serial for the pad is -1.
+* ''ToolPen'' and ''ToolRubber'' are the two indicators for pen or eraser (in X11 driver lingo), thus if ''ToolPen'' is set, the front end of the stylus is in proximity. 
+* ''Touch'' indicates if the current tool (pen/eraser) is touching the surface.
+* ''ToolFinger'' is set whenever a button on the pad is pressed, and released with that button too.
+* ''Stylus'' and ''Stylus2'' are the side buttons on the pen.
+
+
+Example for Eraser usage, first proximity then touch:
+<pre>
+Event: time 1280712954.368537, type 3 (Absolute), code 0 (X), value 32329
+Event: time 1280712954.368544, type 3 (Absolute), code 1 (Y), value 17794
+Event: time 1280712954.368547, type 3 (Absolute), code 25 (Distance), value 55
+Event: time 1280712954.368551, type 3 (Absolute), code 26 (XTilt), value 61
+Event: time 1280712954.368554, type 3 (Absolute), code 27 (YTilt), value 55
+Event: time 1280712954.368561, type 3 (Absolute), code 40 (Misc), value 2058
+Event: time 1280712954.368565, type 1 (Key), code 321 (ToolRubber), value 1
+Event: time 1280712954.368568, type 4 (Misc), code 0 (Serial), value -1719661676
+Event: time 1280712954.368571, -------------- Report Sync ------------
+
+...
+
+Event: time 1280712954.424532, type 3 (Absolute), code 0 (X), value 32446
+Event: time 1280712954.424538, type 3 (Absolute), code 1 (Y), value 18578
+Event: time 1280712954.424541, type 3 (Absolute), code 25 (Distance), value 14
+Event: time 1280712954.424544, type 3 (Absolute), code 24 (Pressure), value 1084
+Event: time 1280712954.424547, type 3 (Absolute), code 26 (XTilt), value 66
+Event: time 1280712954.424552, type 1 (Key), code 330 (Touch), value 1
+Event: time 1280712954.424558, type 4 (Misc), code 0 (Serial), value -1719661676
+Event: time 1280712954.424561, -------------- Report Sync ------------
+</pre>
+
+Example for ToolFinger usage:
+<pre>
+Event: time 1280712957.080574, type 1 (Key), code 263 (Btn7), value 1
+Event: time 1280712957.080581, type 1 (Key), code 325 (ToolFinger), value 1
+Event: time 1280712957.080584, type 3 (Absolute), code 40 (Misc), value 15
+Event: time 1280712957.080587, type 4 (Misc), code 0 (Serial), value -1
+Event: time 1280712957.080590, -------------- Report Sync ------------
+Event: time 1280712957.128567, type 1 (Key), code 263 (Btn7), value 0
+Event: time 1280712957.128572, type 1 (Key), code 325 (ToolFinger), value 0
+Event: time 1280712957.128574, type 3 (Absolute), code 40 (Misc), value 0
+Event: time 1280712957.128578, type 4 (Misc), code 0 (Serial), value -1
+Event: time 1280712957.128581, -------------- Report Sync ------------
+</pre>
