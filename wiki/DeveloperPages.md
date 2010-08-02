@@ -4,6 +4,11 @@ permalink: wiki/DeveloperPages/
 layout: wiki
 ---
 
+Kernel Data
+===========
+
+[Intuos4 Kernel Data stream](/wiki/Intuos4_Kernel_Data_stream "wikilink")
+
 Making releases
 ===============
 
