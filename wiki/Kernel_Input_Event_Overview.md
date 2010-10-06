@@ -96,6 +96,11 @@ For Intous devices, the Pad data is assigned to channel 0xffffffff (-1)
 and the Stylus/Mouse data are assigned a dynamic serial \# as reported
 by hardware.
 
+Its important to note that buttons located on tablet are treated as a
+tool and send BTN\_TOOL\_FINGER while generic tablets just send those
+button events as needed. xf86-input-wacom currently has issues with
+generic tablets approach.
+
 Touchpad Overview
 -----------------
 
