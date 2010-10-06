@@ -54,7 +54,6 @@ The following shows events returned from a hypothetical wacom tablet and indenta
 ** ABS_X
 ** ABS_Y
 ** ABS_PRESSURE
-* MSC_SERIAL
 * BTN_TOOL_ERASER
 ** MSC_SERIAL (fixed to 1 to represent group 1)
 ** ABS_MISC

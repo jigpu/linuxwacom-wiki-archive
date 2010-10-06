@@ -131,7 +131,6 @@ two tools can be in proximity at the same time; such as the pen tool and
     -   ABS\_X
     -   ABS\_Y
     -   ABS\_PRESSURE
--   MSC\_SERIAL
 -   BTN\_TOOL\_ERASER
     -   MSC\_SERIAL (fixed to 1 to represent group 1)
     -   ABS\_MISC
