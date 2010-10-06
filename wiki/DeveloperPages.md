@@ -8,6 +8,7 @@ Kernel Data
 ===========
 
 [Intuos4 Kernel Data stream](/wiki/Intuos4_Kernel_Data_stream "wikilink")
+
 [Kernel Input Event Overview](/wiki/Kernel_Input_Event_Overview "wikilink")
 
 Making releases

@@ -1,5 +1,6 @@
 = Kernel Data =
 [[Intuos4 Kernel Data stream]]
+
 [[Kernel Input Event Overview]]
 
 = Making releases =
