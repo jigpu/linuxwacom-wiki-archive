@@ -1,6 +1,6 @@
 = Kernel Data =
 [[Intuos4 Kernel Data stream]]
-
+[[Kernel Input Event Overview]]
 
 = Making releases =
 This section describes how to do a new xf86-input-wacom release. VERSION stands for the new version (e.g. 0.10.3), OLDVERSION for the previous version (e.g. 0.10.2).
