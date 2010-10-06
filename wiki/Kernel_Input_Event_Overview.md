@@ -134,10 +134,23 @@ to mean "2nd finger tool". One important difference is that even though
 Finger 1 (BTN\_TOOL\_DOUBLETAP) and Finger 2 (BTN\_TOOL\_TRIPLETAP)
 share common events, the kernel driver still lets both fingers be in
 proximity at the same time. This mean Linux Input layer filtering can
-cause events to be be lost and can be see when gesture logic gets
+cause events to be be lost and this can be seen when gesture logic gets
 confused from lost data.
 
-The only solution is to eventually move to use Linux Input layer
-Multi-Touch support. The Bamboo touchpad device is scheduled to be
-switched over to this interface around Linux 2.6.37 timeframe. Tablet
-PC's for no current timeframe when they will be switched over.
+The up side to this approach is since they are re-using tablet serial
+\#/multiplexing schemes, these touchpad-like devices can be handled by
+xf86-input-wacom.
+
+The long term solution to lost events is to eventually change to using
+the Linux Input layer MT (multi-touch) support that has been added to
+recent kernels to work around this now common to all multi-touch
+hardware filtering issue.
+
+The Bamboo touchpad device is scheduled to be switched over to this
+interface around Linux 2.6.37 timeframe. Tablet PC's for no current
+timeframe when they will be switched over.
+
+There exists a version of Bamboo kernel drivers in linuxwacom tarballs
+that the touchpad acts exactly like Tablet PC's. The only difference is
+that they also report the tablet buttons as a 3rd tool in addition to
+the 2 finger tools.
