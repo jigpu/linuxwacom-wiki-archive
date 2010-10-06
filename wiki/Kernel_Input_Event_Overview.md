@@ -109,24 +109,25 @@ For Intous 1 and 2 devices, the Pad data is assigned to channel
 0xffffffff (-1) and the Stylus/Mouse data are assigned a dynamic
 positive serial \#. These tablets could theoretically allow multiple
 tools to be in proximity at the same time but because of Linux Input
-layer limitations this is not allowed. On possible future solution is to
-switch to Linux Multi-Touch Input events to avoid event filtering.
+layer limitations this is not allowed. One possible future solution is
+to switch to Linux Multi-Touch Input events to avoid event filtering.
 
 Its important to note that buttons located on the tablet pad are treated
-as a tool and send BTN\_TOOL\_FINGER while generic tablets just send
-those button events as needed. xf86-input-wacom currently has issues
-with generic tablets approach but will hopefully be resolved soon.
+as a tool and send an BTN\_TOOL\_FINGER event while generic tablets just
+send those button events as needed. xf86-input-wacom currently has
+issues with generic tablet's approach but this will hopefully be
+resolved soon.
 
 The following shows events returned from a hypothetical wacom tablet and
 indentation shows implied hierarchy of events. When a BTN\_TOOL\_\* goes
 out of proximity, a well behaved wacom kernel driver will also reset all
-items under its hierarchy to a known fixed value (zero) but this can not
-be relied upon. Also of note, the value of MSC\_SERIAL is never reset to
-a neutral values, such as zero, even though its listed under the
-hierarchy. Any time data for new tool is sent, the MSC\_SERIAL will
-always be sent within that same EV\_SYNC window. This is important to
-know for the case when two tools can be in proximity at the same time;
-such as the pen tool and "finger" tool (buttons on tablet pad).
+items under its hierarchy to a known fixed value (zero). Also of note,
+the value of MSC\_SERIAL is never reset to a neutral values, such as
+zero, even though its listed under the hierarchy. Any time data for new
+tool is sent, the new MSC\_SERIAL will always be sent within that same
+EV\_SYNC window. This is important to know for the case when two tools
+can be in proximity at the same time; such as the pen tool and "finger"
+tool (buttons on tablet pad).
 
 -   BTN\_TOOL\_PEN
     -   MSC\_SERIAL (fixed to 1 to represent group 1)
