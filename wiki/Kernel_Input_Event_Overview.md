@@ -197,3 +197,38 @@ There exists a version of Bamboo kernel drivers in linuxwacom tarballs
 that the touchpad acts exactly like Tablet PC's. The only difference is
 that they also report the tablet buttons as a 3rd tool in addition to
 the 2 finger tools.
+
+Hypothetical Wacom Tablet using Tablet PC method of sending concurrent
+finger data:
+
+-   BTN\_TOOL\_DOUBLETAP
+    -   MSC\_SERIAL (fixed to 1 to represent group 1)
+    -   ABS\_MISC
+    -   BTN\_TOUCH
+    -   ABS\_X
+    -   ABS\_Y
+    -   ABS\_PRESSURE
+-   BTN\_TOOL\_TRIPLETAP
+    -   MSC\_SERIAL (fixed to 2 to represent group 2)
+    -   ABS\_MISC
+    -   BTN\_TOUCH
+    -   ABS\_X
+    -   ABS\_Y
+    -   ABS\_PRESSURE
+-   BTN\_TOOL\_FINGER
+    -   MSC\_SERIAL (fixed to 0xf0 to represent group 3)
+    -   ABS\_MISC
+    -   BTN\_LEFT
+    -   BTN\_RIGHT
+
+You can compare this to synaptics-like events handled by
+xf86-input-synaptics or xf86-input-evdev and their different hierarchy:
+
+-   BTN\_TOUCH
+    -   ABS\_X
+    -   ABS\_Y
+    -   ABS\_PRESSURE
+-   BTN\_TOOL\_DOUBLETAP
+-   BTN\_TOOL\_TRIPLETAP
+-   BTN\_LEFT
+-   BTN\_RIGHT
