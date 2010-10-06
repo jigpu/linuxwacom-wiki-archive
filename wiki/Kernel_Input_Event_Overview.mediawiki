@@ -45,6 +45,28 @@ For Intous devices, the Pad data is assigned to channel 0xffffffff (-1) and the 
 
 Its important to note that buttons located on tablet are treated as a tool and send BTN_TOOL_FINGER while generic tablets just send those button events as needed.  xf86-input-wacom currently has issues with generic tablets approach.
 
+The following shows events returned from a hypothetical wacom tablet and indentation shows implied hierarchy of events. When a BTN_TOOL_* goes out of proximity, a well behaved driver will also reset all items under its hiearchy to a known fixed value (zero) but this can not be relied upon.  Also of note, the value of MSC_SERIAL never is reset.  Any time data for new tool is sent, the MSC_SERIAL will always be sent first.  This is important for case when two tools can be in proximity at the same time; such as the pen tool and "finger" tool (buttons on tablet pad).
+
+* MSC_SERIAL
+* BTN_TOOL_PEN
+** ABS_MISC
+** BTN_TOUCH
+** ABS_X
+** ABS_Y
+** ABS_PRESSURE
+* MSC_SERIAL
+* BTN_TOOL_ERASER
+** ABS_MISC
+** BTN_TOUCH
+** ABS_X
+** ABS_Y
+** ABS_PRESSURE
+* MSC_SERIAL
+* BTN_TOOL_FINGER
+** ABS_MISC
+** BTN_LEFT
+** BTN_RIGHT
+
 == Touchpad Overview ==
 
 Recently, Wacom has begun to ship touchpad-like devices.  The first were Tablet PC's that supported touch on the screens.  The next were in the Bamboo series of tablets.

@@ -114,6 +114,36 @@ tool and send BTN\_TOOL\_FINGER while generic tablets just send those
 button events as needed. xf86-input-wacom currently has issues with
 generic tablets approach.
 
+The following shows events returned from a hypothetical wacom tablet and
+indentation shows implied hierarchy of events. When a BTN\_TOOL\_\* goes
+out of proximity, a well behaved driver will also reset all items under
+its hiearchy to a known fixed value (zero) but this can not be relied
+upon. Also of note, the value of MSC\_SERIAL never is reset. Any time
+data for new tool is sent, the MSC\_SERIAL will always be sent first.
+This is important for case when two tools can be in proximity at the
+same time; such as the pen tool and "finger" tool (buttons on tablet
+pad).
+
+-   MSC\_SERIAL
+-   BTN\_TOOL\_PEN
+    -   ABS\_MISC
+    -   BTN\_TOUCH
+    -   ABS\_X
+    -   ABS\_Y
+    -   ABS\_PRESSURE
+-   MSC\_SERIAL
+-   BTN\_TOOL\_ERASER
+    -   ABS\_MISC
+    -   BTN\_TOUCH
+    -   ABS\_X
+    -   ABS\_Y
+    -   ABS\_PRESSURE
+-   MSC\_SERIAL
+-   BTN\_TOOL\_FINGER
+    -   ABS\_MISC
+    -   BTN\_LEFT
+    -   BTN\_RIGHT
+
 Touchpad Overview
 -----------------
 
