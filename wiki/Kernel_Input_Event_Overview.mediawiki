@@ -2,13 +2,22 @@
 
 There are simple 1 tool tablets supported by Linux Kernel.  The Wacom tablets never fall in to this category but its useful to understand them first.
 
-These generic tablets will report events over standard Linux /dev/input/event0 interfaces.  They will send a BTN_TOUCH with value of non-zero any time a tool comes into proximity of the tablet and 0 when out of proximity.  The ABS_PRESSURE event is used to determine when the tool is touching the tablet.  The most common other events they will send are ABS_X and ABS_Y to indicate the location of pen on tablet and BTN_STYLUS when a button is pressed located on the stylus itself.  All these events only make sense when BTN_TOUCH is a non-zero value.
+These generic tablets will report events over standard Linux /dev/input/event0 interfaces.  They will send a BTN_TOUCH with value of non-zero any time a tool comes into proximity of the tablet and 0 when out of proximity.  The ABS_PRESSURE event is used to determine when the tool is touching the tablet.  The most common other events they will send are ABS_X and ABS_Y to indicate the location of pen on tablet and BTN_STYLUS when a button is pressed located on the stylus itself.  These supporting events only make sense to have non-zero values when BTN_TOUCH is a non-zero value.
 
 Most user applications detect difference between a tablet /dev/input/event0 and other types of inputs by looking for support for either BTN_STYLUS or BTN_TOOL_PEN events.
 
-Of those two, BTN_TOOL_PEN exists purely to inform userland this tablet supports pen tools.  Its value generally tracks value of BTN_TOUCH.
+Of those two, BTN_TOOL_PEN exists purely to inform userland this tablet supports pen tools.  The value returned with this event generally tracks the value of BTN_TOUCH.
 
 There are also various buttons such as BTN_LEFT/BTN_RIGHT/BTN_1/etc that tablets can report regardless of the state of BTN_TOUCH.  These represent buttons that exist on tablet itself and user expects these to work regardless of a tool being used.
+
+The following shows events returned from a hypothetical tablet and indentation represents implied hierarchy.  A well behaved tablet should return zeros for items under hierarchy when going out of proximity but this can not be relied upon.
+
+* BTN_TOUCH
+** ABS_X
+** ABS_Y
+** ABS_PRESSURE
+* BTN_LEFT
+* BTN_RIGHT
 
 == Wacom Tablet Input Event Overview ==
 

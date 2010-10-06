@@ -17,21 +17,34 @@ non-zero any time a tool comes into proximity of the tablet and 0 when
 out of proximity. The ABS\_PRESSURE event is used to determine when the
 tool is touching the tablet. The most common other events they will send
 are ABS\_X and ABS\_Y to indicate the location of pen on tablet and
-BTN\_STYLUS when a button is pressed located on the stylus itself. All
-these events only make sense when BTN\_TOUCH is a non-zero value.
+BTN\_STYLUS when a button is pressed located on the stylus itself. These
+supporting events only make sense to have non-zero values when
+BTN\_TOUCH is a non-zero value.
 
 Most user applications detect difference between a tablet
 /dev/input/event0 and other types of inputs by looking for support for
 either BTN\_STYLUS or BTN\_TOOL\_PEN events.
 
 Of those two, BTN\_TOOL\_PEN exists purely to inform userland this
-tablet supports pen tools. Its value generally tracks value of
-BTN\_TOUCH.
+tablet supports pen tools. The value returned with this event generally
+tracks the value of BTN\_TOUCH.
 
 There are also various buttons such as BTN\_LEFT/BTN\_RIGHT/BTN\_1/etc
 that tablets can report regardless of the state of BTN\_TOUCH. These
 represent buttons that exist on tablet itself and user expects these to
 work regardless of a tool being used.
+
+The following shows events returned from a hypothetical tablet and
+indentation represents implied hierarchy. A well behaved tablet should
+return zeros for items under hierarchy when going out of proximity but
+this can not be relied upon.
+
+-   BTN\_TOUCH
+    -   ABS\_X
+    -   ABS\_Y
+    -   ABS\_PRESSURE
+-   BTN\_LEFT
+-   BTN\_RIGHT
 
 Wacom Tablet Input Event Overview
 ---------------------------------
