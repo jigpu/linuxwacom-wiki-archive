@@ -195,11 +195,11 @@ recent kernels to work around this now common to all multi-touch
 hardware filtering issue.
 
 The Bamboo touchpad device is scheduled to be switched over to this
-interface around Linux 2.6.37 timeframe. Tablet PC's for no current
+interface around Linux 2.6.37 timeframe. Tablet PC's currently have no
 timeframe when they will be switched over.
 
 There exists a version of Bamboo kernel drivers in linuxwacom tarballs
-that the touchpad acts exactly like Tablet PC's. The only difference is
+were the touchpad acts exactly like Tablet PC's. The only difference is
 that they also report the tablet buttons as a 3rd tool in addition to
 the 2 finger tools.
 
@@ -227,7 +227,8 @@ finger data:
     -   BTN\_RIGHT
 
 You can compare this to synaptics-like events handled by
-xf86-input-synaptics or xf86-input-evdev and their different hierarchy:
+xf86-input-synaptics or xf86-input-evdev and their different event
+hierarchy:
 
 -   BTN\_TOUCH
     -   ABS\_X

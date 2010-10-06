@@ -83,9 +83,9 @@ The up side to this approach is since they are re-using tablet serial #/multiple
 
 The long term solution to lost events is to eventually change to using the Linux Input layer MT (multi-touch) support that has been added to recent kernels to work around this now common to all multi-touch hardware filtering issue.  
 
-The Bamboo touchpad device is scheduled to be switched over to this interface around Linux 2.6.37 timeframe.  Tablet PC's for no current timeframe when they will be switched over.
+The Bamboo touchpad device is scheduled to be switched over to this interface around Linux 2.6.37 timeframe.  Tablet PC's currently have no timeframe when they will be switched over.
 
-There exists a version of Bamboo kernel drivers in linuxwacom tarballs that the touchpad acts exactly like Tablet PC's.  The only difference is that they also report the tablet buttons as a 3rd tool in addition to the 2 finger tools.
+There exists a version of Bamboo kernel drivers in linuxwacom tarballs were the touchpad acts exactly like Tablet PC's.  The only difference is that they also report the tablet buttons as a 3rd tool in addition to the 2 finger tools.
 
 Hypothetical Wacom Tablet using Tablet PC method of sending concurrent finger data:
 
@@ -109,7 +109,7 @@ Hypothetical Wacom Tablet using Tablet PC method of sending concurrent finger da
 ** BTN_LEFT
 ** BTN_RIGHT
 
-You can compare this to synaptics-like events handled by xf86-input-synaptics or xf86-input-evdev and their different hierarchy:
+You can compare this to synaptics-like events handled by xf86-input-synaptics or xf86-input-evdev and their different event hierarchy:
 
 * BTN_TOUCH
 ** ABS_X
