@@ -27,9 +27,9 @@ The pen and eraser show a form of physical mutual exclusion since you must flip 
 
 There are cases where user expects multiple tools to work concurrently though.  The kernel drivers break tools up into 3 groups.  When a group supports more then 1 tool then the kernel will only allow 1 tool per group to ever be in proximity.  Different tablets support different combinations of tool groups.
 
-* Stylus or Mouse Tool (Pen, Eraser, Mouse, etc)
-* Mouse Tool of Intuos 1 or 2 (when #1 is Stylus Tool)
-* Buttons located on Wacom Tablet (not buttons on stylus)
+# Stylus or Mouse Tool (Pen, Eraser, Mouse, etc)
+# Mouse Tool of Intuos 1 or 2 (when #1 is Stylus Tool)
+# Buttons located on Wacom Tablet (not buttons on stylus)
 
 When the kernel reports data for stylus, it reports them much like the generic tablets do (BTN_TOUCH for proximity).  In addition, the kernel will always send a BTN_TOOL_* that tracks BTN_TOUCH to indicate to user which tool the events are currently be reported for.
 
@@ -45,10 +45,10 @@ For Intous devices, the Pad data is assigned to channel 0xffffffff (-1) and the 
 
 Its important to note that buttons located on tablet are treated as a tool and send BTN_TOOL_FINGER while generic tablets just send those button events as needed.  xf86-input-wacom currently has issues with generic tablets approach.
 
-The following shows events returned from a hypothetical wacom tablet and indentation shows implied hierarchy of events. When a BTN_TOOL_* goes out of proximity, a well behaved driver will also reset all items under its hiearchy to a known fixed value (zero) but this can not be relied upon.  Also of note, the value of MSC_SERIAL never is reset.  Any time data for new tool is sent, the MSC_SERIAL will always be sent first.  This is important for case when two tools can be in proximity at the same time; such as the pen tool and "finger" tool (buttons on tablet pad).
+The following shows events returned from a hypothetical wacom tablet and indentation shows implied hierarchy of events. When a BTN_TOOL_* goes out of proximity, a well behaved driver will also reset all items under its hiearchy to a known fixed value (zero) but this can not be relied upon.  Also of note, the value of MSC_SERIAL never is reset even though its listed under the hierarchy.  Any time data for new tool is sent, the MSC_SERIAL will always be sent first.  This is important for case when two tools can be in proximity at the same time; such as the pen tool and "finger" tool (buttons on tablet pad).
 
-* MSC_SERIAL
 * BTN_TOOL_PEN
+** MSC_SERIAL (fixed to 1 to represent group 1)
 ** ABS_MISC
 ** BTN_TOUCH
 ** ABS_X
@@ -56,13 +56,14 @@ The following shows events returned from a hypothetical wacom tablet and indenta
 ** ABS_PRESSURE
 * MSC_SERIAL
 * BTN_TOOL_ERASER
+** MSC_SERIAL (fixed to 1 to represent group 1)
 ** ABS_MISC
 ** BTN_TOUCH
 ** ABS_X
 ** ABS_Y
 ** ABS_PRESSURE
-* MSC_SERIAL
 * BTN_TOOL_FINGER
+** MSC_SERIAL (fixed to 0xf0 to represent group 3).
 ** ABS_MISC
 ** BTN_LEFT
 ** BTN_RIGHT

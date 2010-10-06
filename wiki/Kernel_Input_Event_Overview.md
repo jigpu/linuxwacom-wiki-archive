@@ -66,9 +66,9 @@ supports more then 1 tool then the kernel will only allow 1 tool per
 group to ever be in proximity. Different tablets support different
 combinations of tool groups.
 
--   Stylus or Mouse Tool (Pen, Eraser, Mouse, etc)
--   Mouse Tool of Intuos 1 or 2 (when \#1 is Stylus Tool)
--   Buttons located on Wacom Tablet (not buttons on stylus)
+1.  Stylus or Mouse Tool (Pen, Eraser, Mouse, etc)
+2.  Mouse Tool of Intuos 1 or 2 (when \#1 is Stylus Tool)
+3.  Buttons located on Wacom Tablet (not buttons on stylus)
 
 When the kernel reports data for stylus, it reports them much like the
 generic tablets do (BTN\_TOUCH for proximity). In addition, the kernel
@@ -118,14 +118,14 @@ The following shows events returned from a hypothetical wacom tablet and
 indentation shows implied hierarchy of events. When a BTN\_TOOL\_\* goes
 out of proximity, a well behaved driver will also reset all items under
 its hiearchy to a known fixed value (zero) but this can not be relied
-upon. Also of note, the value of MSC\_SERIAL never is reset. Any time
-data for new tool is sent, the MSC\_SERIAL will always be sent first.
-This is important for case when two tools can be in proximity at the
-same time; such as the pen tool and "finger" tool (buttons on tablet
-pad).
+upon. Also of note, the value of MSC\_SERIAL never is reset even though
+its listed under the hierarchy. Any time data for new tool is sent, the
+MSC\_SERIAL will always be sent first. This is important for case when
+two tools can be in proximity at the same time; such as the pen tool and
+"finger" tool (buttons on tablet pad).
 
--   MSC\_SERIAL
 -   BTN\_TOOL\_PEN
+    -   MSC\_SERIAL (fixed to 1 to represent group 1)
     -   ABS\_MISC
     -   BTN\_TOUCH
     -   ABS\_X
@@ -133,13 +133,14 @@ pad).
     -   ABS\_PRESSURE
 -   MSC\_SERIAL
 -   BTN\_TOOL\_ERASER
+    -   MSC\_SERIAL (fixed to 1 to represent group 1)
     -   ABS\_MISC
     -   BTN\_TOUCH
     -   ABS\_X
     -   ABS\_Y
     -   ABS\_PRESSURE
--   MSC\_SERIAL
 -   BTN\_TOOL\_FINGER
+    -   MSC\_SERIAL (fixed to 0xf0 to represent group 3).
     -   ABS\_MISC
     -   BTN\_LEFT
     -   BTN\_RIGHT
