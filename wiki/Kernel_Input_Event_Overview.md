@@ -5,7 +5,7 @@ layout: wiki
 ---
 
 Simple/Generic Tablet Input Event Overview
-==========================================
+------------------------------------------
 
 There are simple 1 tool tablets supported by Linux Kernel. The Wacom
 tablets never fall in to this category but its useful to understand them
@@ -34,7 +34,7 @@ represent buttons that exist on tablet itself and user expects these to
 work regardless of a tool being used.
 
 Wacom Tablet Input Event Overview
-=================================
+---------------------------------
 
 Wacom tablets support multiple tools that can report events over a
 single Linux /dev/input/event0 device and these tools often share
@@ -95,3 +95,44 @@ exclusive.
 For Intous devices, the Pad data is assigned to channel 0xffffffff (-1)
 and the Stylus/Mouse data are assigned a dynamic serial \# as reported
 by hardware.
+
+Touchpad Overview
+-----------------
+
+Recently, Wacom has begun to ship touchpad-like devices. The first were
+Tablet PC's that supported touch on the screens. The next were in the
+Bamboo series of tablets.
+
+All current touchpad-like events are reported over its own
+/dev/input/event0 device. For Tablet PC's and Bamboo tablets that also
+support Stylus, there will be another /dev/input/event device and it
+will report stylus tools using description for tablets.
+
+The original Tablet PC borrowed the multiplexing scheme used by tablets.
+It broke the touchpad data into two sets. 1) Finger 1 related events and
+2) Finger 2 related events.
+
+A synaptics-like touchpad input device would normally send BTN\_TOUCH to
+indicate when one or more fingers are touching, BTN\_TOOL\_DOUBLETAP to
+indicate when 2 or more fingers are touching and BTN\_TOOL\_TRIPLETAP to
+indicate when 3 or more fingers are touching. For example, 1st finger
+touch will send BTN\_TOUCH = 1, 2nd finger will send
+BTN\_TOOL\_DOUBLETAP = 1, release 2nd finger will send
+BTN\_TOOL\_DOUBLETAP = 0, and release 1st finger will send BTN\_TOUCH =
+0. Synaptics-like devices only have 1 set of ABS\_X/ABS\_Y values for
+all fingers though.
+
+To allow multiple finger data to be reported, Wacom Tablet PC's treat
+fingers like tablet tools and follow tablet descriptions if you treat
+BTN\_TOOL\_DOUBLETAP to mean "1st finger tool" and BTN\_TOOL\_TRIPLETAP
+to mean "2nd finger tool". One important difference is that even though
+Finger 1 (BTN\_TOOL\_DOUBLETAP) and Finger 2 (BTN\_TOOL\_TRIPLETAP)
+share common events, the kernel driver still lets both fingers be in
+proximity at the same time. This mean Linux Input layer filtering can
+cause events to be be lost and can be see when gesture logic gets
+confused from lost data.
+
+The only solution is to eventually move to use Linux Input layer
+Multi-Touch support. The Bamboo touchpad device is scheduled to be
+switched over to this interface around Linux 2.6.37 timeframe. Tablet
+PC's for no current timeframe when they will be switched over.
