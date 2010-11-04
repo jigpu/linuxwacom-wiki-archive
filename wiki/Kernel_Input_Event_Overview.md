@@ -58,7 +58,7 @@ end and both these tools have X/Y and Pressure values.
 The pen and eraser show a form of physical mutual exclusion since you
 must flip the stylus to use the other tool. This flip will force old
 tool out of proximity and new tool to come into proximity. For this
-discussion, we will ignore the case were user owns multiple stylus.
+discussion, we will ignore the case where user owns multiple stylus.
 
 There are cases where user expects multiple tools to work concurrently
 though. The kernel drivers break tools up into 3 groups. When a group

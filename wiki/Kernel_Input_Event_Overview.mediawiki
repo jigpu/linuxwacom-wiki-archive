@@ -23,7 +23,7 @@ The following shows events returned from a hypothetical tablet and indentation r
 
 Wacom tablets support multiple tools that can report events over a single Linux /dev/input/event0 device and these tools often share similar characteristics.  The easiest example is a tablet can have a stylus with both a pen tool on one end and an eraser tool on the other end and both these tools have X/Y and Pressure values.
 
-The pen and eraser show a form of physical mutual exclusion since you must flip the stylus to use the other tool.  This flip will force old tool out of proximity and new tool to come into proximity.  For this discussion, we will ignore the case were user owns multiple stylus.
+The pen and eraser show a form of physical mutual exclusion since you must flip the stylus to use the other tool.  This flip will force old tool out of proximity and new tool to come into proximity.  For this discussion, we will ignore the case where user owns multiple stylus.
 
 There are cases where user expects multiple tools to work concurrently though.  The kernel drivers break tools up into 3 groups.  When a group supports more then 1 tool then the kernel will only allow 1 tool per group to ever be in proximity.  Different tablets support different combinations of tool groups.
 
