@@ -34,8 +34,27 @@ distribution does.
 Configuration
 =============
 
+Hotplugging setup with udev
+---------------------------
+
+X Servers 1.8 and later use udev as device enumeration backend on Linux.
+Note that ideally no X-related configuration is stored in udev itself,
+it is simply used for getting hotplug notifications and a list of
+available devices. The devices visible to the X server include all
+devices with the udev property *ID\_INPUT* set to 1 (see *udevadm info
+--export-bd*).
+
+Actual configuration is performed through [xorg.conf.d
+snippets](http://who-t.blogspot.com/2010/01/new-configuration-world-order.html).
+The xf86-input-wacom git tree ships an example configuration file in
+*/conf/50-wacom.conf*. Drop this into your local /etc/X11/xorg.conf.d
+directory and you're good to go.
+
 Hotplugging setup with HAL
 --------------------------
+
+*X Servers 1.8 and later do not use HAL by default see [\#Hotplugging
+setup with udev](#Hotplugging_setup_with_udev "wikilink") instead*
 
 Ideally, you should be using the X Server's hotplugging features instead
 of manual configuration. This allows you to (un)plug the device at
