@@ -15,8 +15,7 @@ Note that kernel patches integrated into the
 way upstream and thus need to be re-implemented or forward-ported for
 future kernels. Additionally, kernel patches in linuxwacom are not
 shipped by any major distribution. Any kernel developer is encouraged to
-work on the [http://kernel.org upstream
-kernel](http://kernel.org_upstream_kernel "wikilink") instead.
+work on the [upstream kernel](http://kernel.org) instead.
 
 Kernel Data
 ===========
