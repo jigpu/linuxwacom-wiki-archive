@@ -36,22 +36,16 @@ version (e.g. 0.10.2).
 4.  Tag the module: '''git tag -m "xf86-input-wacom VERSION" -s
     xf86-input-wacom-VERSION
 5.  Push to the remote: **git push origin master**
-6.  Push the tag to the remote: **git push origin
-    xf86-input-wacom-VERSION**
-7.  Download
-    [xf86-input-wacom-md5](https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/xf86-input-wacom.md5/download)
-    and append the checksums for the new tarballs with: **md5sum
-    xf86-input-wacom-VERSION.tar\* &gt;&gt; xf86-input-wacom.md5**.
-8.  Create a [shell on
-    sourceforge](https://sourceforge.net/apps/trac/sourceforge/wiki/Shell%20service)
-    and upload the tarballs and the xf86-input-wacom.md5 file by running
-    **scp <tarballs>
-    USER@shell.sourceforge.net:/home/frs/project/l/li/linuxwacom/xf86-input-wacom/**
-9.  Type up a short announce email summarising the new features in this
+6.  Run the release script: **sh release.sh**. This script will push the
+    tag and upload the tarballs to the remote.
+7.  Type up a short announce email summarising the new features in this
     version and append the git shortlog: **git shortlog
     xf86-input-wacom-OLDVERSION..xf86-input-wacom-VERSION**
-10. **Sign off the email** and send it to the [ linuxwacom-announce
+8.  **Sign off the email** and send it to the [ linuxwacom-announce
     list](/wiki/Mailing_lists "wikilink")
+
+Note that it may take a while until the uploaded tarballs are available
+through the download links.
 
 Device IDs
 ==========
