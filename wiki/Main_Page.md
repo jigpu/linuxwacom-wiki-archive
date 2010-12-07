@@ -26,6 +26,21 @@ first for a better understanding of the difference between
 [linuxwacom](linuxwacom "wikilink") and
 [xf86-input-wacom](xf86-input-wacom "wikilink").
 
+### So, what do I need?
+
+On most desktop distributions, you need
+[xf86-input-wacom](xf86-input-wacom "wikilink") as your X driver. Note
+that distributions usually already ship a version of xf86-input-wacom in
+their repositories. Kernel patches for Wacom devices, if they have been
+submitted upstream will also likely be available in your distribution's
+kernel.
+
+If your device is not supported by the current kernel and no Wacom
+patches are pending, you may be lucky with the
+[linuxwacom](linuxwacom "wikilink") kernel patches. Note that these
+apply outside of your distribution and you will need to re-install each
+time you update your distribution kernel.
+
 Supported Devices
 -----------------
 
