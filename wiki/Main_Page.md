@@ -19,6 +19,12 @@ Wacom Project provides two packages:
     driver for X Servers 1.7 and later
     ([X11R7.5](http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html))
 
+Please read [Wacom Support in
+Linux](http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html)
+first for a better understanding of the difference between
+[linuxwacom](linuxwacom "wikilink") and
+[xf86-input-wacom](xf86-input-wacom "wikilink").
+
 NOTE: A FreeBSD Wacom driver is available through the
 [FreeBSD](http://www.freshports.org/x11-drivers/input-wacom) ports
 system. Please email your questions and/or suggestion directly to

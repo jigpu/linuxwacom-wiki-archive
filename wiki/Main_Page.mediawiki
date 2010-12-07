@@ -5,6 +5,8 @@ The Linux Wacom Project manages the drivers, libraries, and documentation for co
 * [[linuxwacom]]: a combined package of kernel patches and the X11 input driver for X Servers up to including 1.6.
 * [[xf86-input-wacom]]: the X11 input driver for X Servers 1.7 and later ([http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html X11R7.5])
 
+Please read [http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html Wacom Support in Linux] first for a better understanding of the difference between [[linuxwacom]] and [[xf86-input-wacom]].
+
 {{:Supported Devices}}
 
 NOTE: A FreeBSD Wacom driver is available through the [http://www.freshports.org/x11-drivers/input-wacom FreeBSD] ports system. Please email your questions and/or suggestion directly to [mailto:freebsd@chillt.de?subject=WACOM Bartosz Fabianowski], the Wacom FreeBSD developer.
