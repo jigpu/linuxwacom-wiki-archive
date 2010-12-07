@@ -4,6 +4,12 @@ permalink: wiki/DeveloperPages/
 layout: wiki
 ---
 
+For Wacom kernel driver development, please submit your patches to the
+[Linux Kernel Developers Mailing List](http://lkml.org). Only patches
+that appear in the upstream kernel will be appear in distributions and
+thus ensure tablets will be working out-of-the-box with future releases
+of your distribution.
+
 Kernel Data
 ===========
 

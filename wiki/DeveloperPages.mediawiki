@@ -1,3 +1,6 @@
+For Wacom kernel driver development, please submit your patches to the [http://lkml.org Linux Kernel Developers Mailing List]. Only patches that appear in the upstream kernel will be appear in distributions and thus ensure tablets will be working out-of-the-box with future releases of your distribution.
+
+
 = Kernel Data =
 [[Intuos4 Kernel Data stream]]
 
