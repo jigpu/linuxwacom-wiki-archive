@@ -26,6 +26,9 @@ first for a better understanding of the difference between
 [linuxwacom](linuxwacom "wikilink") and
 [xf86-input-wacom](xf86-input-wacom "wikilink").
 
+Supported Devices
+-----------------
+
 NOTE: A FreeBSD Wacom driver is available through the
 [FreeBSD](http://www.freshports.org/x11-drivers/input-wacom) ports
 system. Please email your questions and/or suggestion directly to
