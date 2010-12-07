@@ -60,3 +60,10 @@ FAQ
 ---
 
 Please see the [FAQ](/wiki/FAQ "wikilink") for more details.
+
+Editing the wiki
+----------------
+
+If you want to edit this wiki, please create a user account and email
+*peter.hutterer at who-t net* to be assigned editor rights. User rights
+management is unfortunately manual.
