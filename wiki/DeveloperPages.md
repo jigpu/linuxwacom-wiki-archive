@@ -10,6 +10,14 @@ that appear in the upstream kernel will be appear in distributions and
 thus ensure tablets will be working out-of-the-box with future releases
 of your distribution.
 
+Note that kernel patches integrated into the
+[linuxwacom](linuxwacom "wikilink") tarball usually do not find their
+way upstream and thus need to be re-implemented or forward-ported for
+future kernels. Additionally, kernel patches in linuxwacom are not
+shipped by any major distribution. Any kernel developer is encouraged to
+work on the [http://kernel.org upstream
+kernel](http://kernel.org_upstream_kernel "wikilink") instead.
+
 Kernel Data
 ===========
 
