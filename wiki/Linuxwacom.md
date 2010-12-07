@@ -5,7 +5,9 @@ layout: wiki
 ---
 
 linuxwacom is a combined kernel + X driver package for X servers up to
-including 1.6.
+including 1.6. Note that the kernel patches provided here are backports,
+including new device support for kernels. If you run a reasonably modern
+desktop distribution, you do not need the linuxwacom tarballs.
 
 Download
 --------
@@ -29,3 +31,14 @@ from your downloaded tarball.
 not want to build it, simply leave out this flag. The prefix of /usr is
 correct on most distributions (unfortunately, the default is still
 /usr/local which isn't used widely anymore).
+
+linuxwacom xdrv
+---------------
+
+The linuxwacom tarball includes an X driver for X servers up to
+including the 1.6.x series. For newer X servers, please use
+[xf86-input-wacom](xf86-input-wacom "wikilink") instead, the linuxwacom
+X driver will not build. Note that if you run a kernel that requires
+linuxwacom backports, you may still do so. Install the kernel patches
+provided in the tarball and the
+[xf86-input-wacom](xf86-input-wacom "wikilink") X driver.
