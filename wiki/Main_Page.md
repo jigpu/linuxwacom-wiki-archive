@@ -14,7 +14,8 @@ kernel drivers and XFree86/Xorg XInput drivers. Currently, the Linux
 Wacom Project provides two packages:
 
 -   [linuxwacom](linuxwacom "wikilink"): a combined package of kernel
-    patches and the X11 input driver for X Servers up to including 1.6.
+    patches (backports!) and the X11 input driver for X Servers up to
+    including 1.6.
 -   [xf86-input-wacom](xf86-input-wacom "wikilink"): the X11 input
     driver for X Servers 1.7 and later
     ([X11R7.5](http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html))
