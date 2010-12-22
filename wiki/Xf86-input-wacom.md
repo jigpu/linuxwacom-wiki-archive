@@ -17,9 +17,9 @@ Installing from git
 
 This gets the latest version from git and installs it into the given
 prefix. In most cases, the prefix of /usr is the right one. If you're on
-a 64-bit machine, configure with --libdir=/usr/lib64. If unsure, search
-for evdev\_drv.so. If it is in /usr/lib/xorg/modules/input, then the
-prefix of /usr is enough. If it is in /usr/lib64/xorg/modules/input,
+a 64-bit machine, you also need to add --libdir=/usr/lib64. If unsure,
+search for evdev\_drv.so. If it is in /usr/lib/xorg/modules/input, then
+the prefix of /usr is enough. If it is in /usr/lib64/xorg/modules/input,
 even if it is in /usr/lib/xorg/modules/input, then you need to specify
 --libdir=/usr/lib64.
 
