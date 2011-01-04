@@ -29,9 +29,12 @@ The other approach is tablets will send a BTN\_TOOL\_PEN event with
 value of non-zero any time a tool comes into proximity of the tablet and
 0 when out of proximity. The BTN\_TOUCH event is then used to determine
 when the tool is touching the tablet. The ABS\_PRESSURE event is
-optional in this case but can be sent to complement the BTN\_TOUCH.
-Similar to above, a non-zero value of ABS\_PRESSURE may need to be
-ignored by application when BTN\_TOUCH=0 or BTN\_TOOL\_PEN=0.
+optional in this case but can be sent to complement the BTN\_TOUCH. When
+ABS\_PRESSURE is supported, the meaning of BTN\_TOUCH can sometimes
+change to always track BTN\_TOOL\_PEN and then ABS\_PRESSURE must be
+used to determine in proximity versus touching. Similar to above, a
+non-zero value of ABS\_PRESSURE may need to be ignored by application
+when BTN\_TOUCH=0 or BTN\_TOOL\_PEN=0.
 
 There are cases of simple tablets were the hardware can not report when
 in proximity of tablet and can only report when physically touching. In
