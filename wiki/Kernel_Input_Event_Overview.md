@@ -307,7 +307,7 @@ example, if slot 0's ABS\_MT\_POSITION\_X=10 and slot 1's
 ABS\_MT\_POSITION\_X=20 during previous sends then here is example
 filtering behavior:
 
-send(ABS\_MT\_SLOT,0)-&gt; sends ABS\_MT\_SLOT=0
-send(ABS\_MT\_POSITION\_X,10) -&gt; event is filtered
-send(ABS\_MT\_SLOT,1) -&gt; sends ABS\_MT\_SLOT=1
-send(ABS\_MT\_POSITION\_X,10) -&gt; sends ABS\_MT\_POSITION\_X=10
+-   send(ABS\_MT\_SLOT,0)-&gt; sends ABS\_MT\_SLOT=0
+-   send(ABS\_MT\_POSITION\_X,10) -&gt; event is filtered
+-   send(ABS\_MT\_SLOT,1) -&gt; sends ABS\_MT\_SLOT=1
+-   send(ABS\_MT\_POSITION\_X,10) -&gt; sends ABS\_MT\_POSITION\_X=10
