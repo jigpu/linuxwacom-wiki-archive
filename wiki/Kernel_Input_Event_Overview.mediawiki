@@ -32,8 +32,8 @@ Here is a hypothetical tablet that uses BTN_TOOL_PEN approach.  In this example,
 * BTN_TOOL_PEN
 ** ABS_X
 ** ABS_Y
-* BTN_TOUCH
 ** ABS_PRESSURE
+* BTN_TOUCH
 * BTN_LEFT
 * BTN_RIGHT
 

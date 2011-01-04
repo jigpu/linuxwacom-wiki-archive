@@ -75,8 +75,8 @@ value. ABS\_PRESSURE needs to be looked at to detect touch.
 -   BTN\_TOOL\_PEN
     -   ABS\_X
     -   ABS\_Y
--   BTN\_TOUCH
     -   ABS\_PRESSURE
+-   BTN\_TOUCH
 -   BTN\_LEFT
 -   BTN\_RIGHT
 
