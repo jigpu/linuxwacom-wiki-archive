@@ -20,26 +20,23 @@ kernel drivers to report proximity versus touching information.
 The one approach is tablets will send a BTN\_TOUCH event with value of
 non-zero any time a tool comes into proximity of the tablet and 0 when
 out of proximity. The ABS\_PRESSURE event is then used to determine when
-the tool is touching the tablet. ABS\_PRESSURE only make sense to have
-non-zero values when BTN\_TOUCH is a non-zero value and applications may
-be required to ignore ABS\_PRESSURE in case driver sends non-zero values
-always.
+the tool is touching the tablet.
 
 The other approach is tablets will send a BTN\_TOOL\_PEN event with
 value of non-zero any time a tool comes into proximity of the tablet and
 0 when out of proximity. The BTN\_TOUCH event is then used to determine
 when the tool is touching the tablet. The ABS\_PRESSURE event is
-optional in this case but can be sent to complement the BTN\_TOUCH. When
-ABS\_PRESSURE is supported, the meaning of BTN\_TOUCH can sometimes
-change to always track BTN\_TOOL\_PEN and then ABS\_PRESSURE must be
-used to determine in proximity versus touching. Similar to above, a
-non-zero value of ABS\_PRESSURE may need to be ignored by application
-when BTN\_TOUCH=0 or BTN\_TOOL\_PEN=0.
+optional in this case but can be sent to complement the BTN\_TOUCH.
+
+When ABS\_PRESSURE, BTN\_TOUCH, and BTN\_TOOL\_PEN are all 3 supported,
+the meaning of BTN\_TOUCH can sometimes change to same meaning as
+BTN\_TOOL\_PEN. In this case, it is safest to ignore BTN\_TOUCH value.
 
 There are cases of simple tablets were the hardware can not report when
-in proximity of tablet and can only report when physically touching. In
-these cases, BTN\_TOUCH=non-zero will always come with a
-BTN\_PRESSURE=non-zero or BTN\_TOOL\_PEN will always equal BTN\_TOUCH.
+in proximity of tablet and can only report when physically touching.
+Applications generally do not need to worry about this. The events
+reported will never be a combination where the tool is in proximity but
+not touching tablet.
 
 Most user applications detect difference between a tablet and things
 such as touchpads on /dev/input/eventX is by looking for support for
@@ -48,13 +45,16 @@ handle the common case of never reporting BTN\_TOOL\_PEN.
 
 The other common events tablets will send are ABS\_X and ABS\_Y to
 indicate the location of pen on tablet and BTN\_STYLUS when a button is
-pressed that is located on the stylus/pen tool itself.
+pressed that is located on the stylus/pen tool itself. ABS\_X, ABS\_Y,
+ABS\_PRESSURE, and BTN\_STYLUS values should always be ignored by
+applications when driver reports tool is not in proximity to prevent
+unwanted behavior because some drivers will report values even while
+tool is out of proximity.
 
 There are also various buttons such as BTN\_LEFT/BTN\_RIGHT/BTN\_1/etc
-that tablets can report regardless of the state of
-ABS\_PRESSURE/BTN\_TOUCH. These represent buttons that exist on the
-tablet itself (as apposed to on stylus/pen tool) and user expects these
-to work regardless of a tool being used.
+that tablets can report regardless of the state tools These represent
+buttons that exist on the tablet itself (as apposed to on stylus/pen
+tool) and user expects these to work regardless of what tool is doing.
 
 The following shows events returned from a hypothetical tablet and
 indentation represents implied hierarchy. Some tablets will return zeros
@@ -68,13 +68,25 @@ be relied upon.
 -   BTN\_LEFT
 -   BTN\_RIGHT
 
-Here is a hypothetical tablet that uses BTN\_TOOL\_PEN approach:
+Here is a hypothetical tablet that uses BTN\_TOOL\_PEN approach. In this
+example, BTN\_TOOL\_PEN and BTN\_TOOCH most likely are always same
+value. ABS\_PRESSURE needs to be looked at to detect touch.
 
 -   BTN\_TOOL\_PEN
     -   ABS\_X
     -   ABS\_Y
 -   BTN\_TOUCH
     -   ABS\_PRESSURE
+-   BTN\_LEFT
+-   BTN\_RIGHT
+
+Here is one last hypothetical generic tablet that uses BTN\_TOOL\_PEN
+approach. Here BTN\_TOUCH determines physical touch.
+
+-   BTN\_TOOL\_PEN
+    -   ABS\_X
+    -   ABS\_Y
+    -   BTN\_TOUCH
 -   BTN\_LEFT
 -   BTN\_RIGHT
 
