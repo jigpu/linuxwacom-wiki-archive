@@ -138,11 +138,32 @@ Hypothetical Wacom Tablet using Tablet PC method of sending concurrent finger da
 
 You can compare this to synaptics-like events handled by xf86-input-synaptics or xf86-input-evdev and their different event hierarchy:
 
-* BTN_TOUCH
+* BTN_TOOL_FINGER
+** BTN_TOUCH
 ** ABS_X
 ** ABS_Y
 ** ABS_PRESSURE
 * BTN_TOOL_DOUBLETAP
-* BTN_TOOL_TRIPLETAP
+** BTN_TOUCH
+** ABS_X
+** ABS_Y
+** ABS_PRESSURE
 * BTN_LEFT
 * BTN_RIGHT
+
+Only 1 of BTN_TOOL_FINGER or BTN_TOOL_DOUBLETAP can be in proximity at the same time.  Its related ABS_X, ABS_Y, and ABS_PRESSURE are almost always a value related to first finger touching the touchpad but changes in meaning can and do happen when switching between tool types.
+
+In addition, newer kernels can add Multi-Touch protocol events to above synaptic-like events.
+
+* ABS_MT_SLOT
+** ABS_MT_TRACKING_ID
+** ABS_MT_POSITION_X
+** ABS_MT_POSITION_Y
+** ABS_MT_PRESSURE
+
+These work similar to older events but event filtering behavior is modified.  Instead of filtering events based on previous sent value (if ABS_X=10 and send ABS_X=10 during tool switch then its filtered), the filtering is now based on previous value of a specific slot.  For example, if slot 0's ABS_MT_POSITION_X=10 and slot 1's ABS_MT_POSITION_X=20 during previous sends then here is example filtering behavior:
+
+send(ABS_MT_SLOT,0)-> sends ABS_MT_SLOT=0
+send(ABS_MT_POSITION_X,10) -> event is filtered
+send(ABS_MT_SLOT,1) -> sends ABS_MT_SLOT=1
+send(ABS_MT_POSITION_X,10) -> sends ABS_MT_POSITION_X=10

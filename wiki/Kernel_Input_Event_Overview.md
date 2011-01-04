@@ -272,11 +272,42 @@ You can compare this to synaptics-like events handled by
 xf86-input-synaptics or xf86-input-evdev and their different event
 hierarchy:
 
--   BTN\_TOUCH
+-   BTN\_TOOL\_FINGER
+    -   BTN\_TOUCH
     -   ABS\_X
     -   ABS\_Y
     -   ABS\_PRESSURE
 -   BTN\_TOOL\_DOUBLETAP
--   BTN\_TOOL\_TRIPLETAP
+    -   BTN\_TOUCH
+    -   ABS\_X
+    -   ABS\_Y
+    -   ABS\_PRESSURE
 -   BTN\_LEFT
 -   BTN\_RIGHT
+
+Only 1 of BTN\_TOOL\_FINGER or BTN\_TOOL\_DOUBLETAP can be in proximity
+at the same time. Its related ABS\_X, ABS\_Y, and ABS\_PRESSURE are
+almost always a value related to first finger touching the touchpad but
+changes in meaning can and do happen when switching between tool types.
+
+In addition, newer kernels can add Multi-Touch protocol events to above
+synaptic-like events.
+
+-   ABS\_MT\_SLOT
+    -   ABS\_MT\_TRACKING\_ID
+    -   ABS\_MT\_POSITION\_X
+    -   ABS\_MT\_POSITION\_Y
+    -   ABS\_MT\_PRESSURE
+
+These work similar to older events but event filtering behavior is
+modified. Instead of filtering events based on previous sent value (if
+ABS\_X=10 and send ABS\_X=10 during tool switch then its filtered), the
+filtering is now based on previous value of a specific slot. For
+example, if slot 0's ABS\_MT\_POSITION\_X=10 and slot 1's
+ABS\_MT\_POSITION\_X=20 during previous sends then here is example
+filtering behavior:
+
+send(ABS\_MT\_SLOT,0)-&gt; sends ABS\_MT\_SLOT=0
+send(ABS\_MT\_POSITION\_X,10) -&gt; event is filtered
+send(ABS\_MT\_SLOT,1) -&gt; sends ABS\_MT\_SLOT=1
+send(ABS\_MT\_POSITION\_X,10) -&gt; sends ABS\_MT\_POSITION\_X=10
