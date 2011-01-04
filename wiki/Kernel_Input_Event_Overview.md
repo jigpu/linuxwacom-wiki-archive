@@ -79,30 +79,31 @@ Wacom Tablet Input Event Overview
 ---------------------------------
 
 Wacom tablets support multiple tools that can report events over a
-single Linux /dev/input/event0 device and these tools often share
+single Linux /dev/input/eventX device and these tools often share
 similar characteristics. The easiest example is a tablet can have a
 stylus with both a pen tool on one end and an eraser tool on the other
 end and both these tools have X/Y and Pressure values.
 
 The pen and eraser show a form of physical mutual exclusion since you
 must flip the stylus to use the other tool. This flip will force old
-tool out of proximity and new tool to come into proximity. For this
+tool out of proximity and new tool to come into proximity. For most of
 discussion, we will ignore the case where user owns multiple stylus.
 
 There are cases where user expects multiple tools to work concurrently
-though. The kernel drivers break tools up into 3 groups. When a group
-supports more then 1 tool then the kernel will only allow 1 tool per
-group to ever be in proximity. Different tablets support different
-combinations of tool groups.
+though. The wacom kernel drivers break tools up into 3 groups. When 1
+group can support more then 1 tool then the wacom kernel driver will
+only allow 1 tool per group to ever be in proximity. Different tablets
+support different combinations of tool groups.
 
 1.  Stylus or Mouse Tool (Pen, Eraser, Mouse, etc)
 2.  Mouse Tool of Intuos 1 or 2 (when \#1 is Stylus Tool)
 3.  Buttons located on Wacom Tablet (not buttons on stylus)
 
-When the kernel reports data for stylus, it reports them much like the
-generic tablets do (BTN\_TOUCH for proximity). In addition, the kernel
-will always send a BTN\_TOOL\_\* that tracks BTN\_TOUCH to indicate to
-user which tool the events are currently be reported for.
+When the wacom kernel driver reports data for stylus, it reports them
+much like the generic tablets do (BTN\_TOOL\_\* for proximity). In
+addition, the kernel will always send a BTN\_TOUCH that tracks the
+BTN\_TOOL\_\* and uses ABS\_PRESSURE as a more accurate gauge of when
+physical touch is occurring.
 
 Its important to understand that the Linux Input layer will filter out
 duplicate events and does not understand concept of multiple tools.
@@ -110,8 +111,8 @@ Unless something is done, if tool A leaves proximity at ABS\_X of 10 and
 tool B enters proximity at ABS\_X of 10 then user land would never be
 inform tool B is at ABS\_X of 10. Wacom kernel drivers work around this
 issue by forcing all events to a known starting value (zero) each time a
-tool leaves proximity and user land is required to assuming this
-starting value when it first enters proximity.
+tool leaves proximity and user land can assume this starting value when
+it first enters proximity.
 
 If you review events supported by the above 3 groups of tools, you'll
 notice tools within 1 group share common events but tools in different
@@ -128,26 +129,23 @@ event that contains a serial \# to aid in tracking current tool as well
 as a ABS\_MISC which is a hard code device ID. Of these two, the
 MSC\_SERIAL is the most useful to user land.
 
-For most tablets, the Stylus and Mouse events are hard code to serial \#
-1 and Pad button events are hard coded to either 0xffffffff (-1) for
-Intous series or to 0xf0 for all others tablets. Its OK that all tools
-in group 1 (Stylus and Mouse) are assigned to the same serial \# because
-they are mutually exclusive.
+For Protocol 4 tablets, the Stylus and Mouse events are hard code to
+serial \# 1 and Pad button events are hard coded to 0xf0. Its OK that
+all tools in group 1 (Stylus and Mouse) are assigned to the same serial
+\# because they are mutually exclusive.
 
-For Intous 1 and 2 devices, the Pad data is assigned to channel
-0xffffffff (-1) and the Stylus/Mouse data are assigned a dynamic
-positive serial \#. These tablets could theoretically allow multiple
-tools to be in proximity at the same time but because of Linux Input
-layer limitations this is not allowed. One possible future solution is
-to switch to Linux Multi-Touch Input events to avoid event filtering.
+For Protocol 5 devices (Intuos and Cintiq series), the Pad device is
+assigned to channel 0xffffffff (-1) and all other tools are assigned a
+unique serial \# read from tool by hardware. Intous and Intuos 2 tablets
+support up to 2 tools within group 1 or 2 to be in proximity at same
+time which means when switching between two tools within group 1 then
+applications must account for Linux event filtering.
 
 Its important to note that buttons located on the tablet pad are treated
 as a tool and send an BTN\_TOOL\_FINGER event while generic tablets just
-send those button events as needed. xf86-input-wacom currently has
-issues with generic tablet's approach but this will hopefully be
-resolved soon.
+send those button events as needed.
 
-The following shows events returned from a hypothetical wacom tablet and
+The following shows events returned from a hypothetical Wacom tablet and
 indentation shows implied hierarchy of events. When a BTN\_TOOL\_\* goes
 out of proximity, a well behaved wacom kernel driver will also reset all
 items under its hierarchy to a known fixed value (zero). Also of note,
