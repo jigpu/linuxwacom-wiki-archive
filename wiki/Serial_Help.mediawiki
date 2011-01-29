@@ -10,3 +10,41 @@ We have a few situations that can arise when trouble shooting a serial tablet.
 # The serial port has been assigned to another program, interfering with the tablet signals
 # The older wacom driver that supports serial tablets is incompatible with the X server you are running
 # You are running X server 1.7 or later with the newer xf86-input-wacom driver which does not support serial tablets at the moment.
+
+=== Serial Port Configuration ===
+
+The first thing that you should do before you go any further is to boot your computer into the BIOS, finding the values of your serial ports. They will show up usually as COM1 through COM3 with the UART value and IRQ being shown. Write these values done and reboot your system. Check your kernel boot log with the 'dmesg' command from a console, your looking to find some values with ttySX being loaded.
+
+<pre>
+Host@User# dmesg | grep ttyS
+serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+serial8250: ttyS3 at I/O 0x2e8 (irq = 3) is a 16550A
+00:06: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+00:07: ttyS3 at I/O 0x2e8 (irq = 3) is a 16550A
+</pre>
+
+Most of the time on a computer with one serial port it will be set to ttyS0 in the /dev directory. On my system I have a DE-9 serial port and a DA-15 gameport. Above you can see that the DE-9 is the ttyS0 device, with the gameport being assigned ttyS3. These same values coincide in the bios which is what we wanted to verify.
+
+<pre>
+Host@User# setserial -a /dev/ttyS0
+/dev/ttyS0, Line 0, UART: 16550A, Port: 0x03f8, IRQ: 4
+        Baud_base: 115200, close_delay: 50, divisor: 0
+        closing_wait: 3000
+        Flags: spd_normal skip_test
+
+Host@User# setserial -a /dev/ttyS3
+/dev/ttyS3, Line 3, UART: 16550A, Port: 0x02e8, IRQ: 3
+        Baud_base: 115200, close_delay: 50, divisor: 0
+        closing_wait: 3000
+        Flags: spd_normal skip_test
+
+Host@User# setserial -g /dev/ttyS*
+/dev/ttyS0, UART: 16550A, Port: 0x03f8, IRQ: 4
+/dev/ttyS1, UART: unknown, Port: 0x02f8, IRQ: 3
+/dev/ttyS2, UART: unknown, Port: 0x03e8, IRQ: 4
+/dev/ttyS3, UART: 16550A, Port: 0x02e8, IRQ: 3
+</pre>
+
+A command to be aware of to help troubleshoot the problem, is the setserial command. Shown above you can see the print out displaying even more details about the serial devices, using the -a option. A quick way of seeing what serial devices have been created can be down using the -g option of the setserial command. 
+
+The print out shows 4 serial devices being created regardless of weather they actually exist. This is due to a default of 4 serial devices being set in the kernels source code before it is built. You can bypass this with the 8250.nr_uart kernel option telling the kernel to create more or less serial devices at boot time.
