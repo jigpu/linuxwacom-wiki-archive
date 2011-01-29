@@ -1,0 +1,12 @@
+=== Woe Not Serial Woes ===
+
+This page is an effort to help aid you in setting up your serial tablet by braking down the main problem areas. With some
+time and patients, you should be able to apply the appropriate changes in order to make use of your Wacom serial device.
+
+=== Serial Woes Check List ===
+
+We have a few situations that can arise when trouble shooting a serial tablet.
+# The serial port has not been identified and set to the appropriate uart and irq values of your serial hardware.
+# The serial port has been assigned to another program, interfering with the tablet signals
+# The older wacom driver that supports serial tablets is incompatible with the X server you are running
+# You are running X server 1.7 or later with the xf86-input-wacom driver which does not support serial tablets at the moment.
