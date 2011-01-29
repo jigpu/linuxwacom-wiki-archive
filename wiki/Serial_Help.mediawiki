@@ -9,4 +9,4 @@ We have a few situations that can arise when trouble shooting a serial tablet.
 # The serial port has not been identified and set to the appropriate uart and irq values of your serial hardware.
 # The serial port has been assigned to another program, interfering with the tablet signals
 # The older wacom driver that supports serial tablets is incompatible with the X server you are running
-# You are running X server 1.7 or later with the xf86-input-wacom driver which does not support serial tablets at the moment.
+# You are running X server 1.7 or later with the newer xf86-input-wacom driver which does not support serial tablets at the moment.

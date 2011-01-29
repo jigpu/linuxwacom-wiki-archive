@@ -22,5 +22,6 @@ tablet.
     with the tablet signals
 3.  The older wacom driver that supports serial tablets is incompatible
     with the X server you are running
-4.  You are running X server 1.7 or later with the xf86-input-wacom
-    driver which does not support serial tablets at the moment.
+4.  You are running X server 1.7 or later with the newer
+    xf86-input-wacom driver which does not support serial tablets at the
+    moment.
