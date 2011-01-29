@@ -73,6 +73,9 @@ Once configured, the tablet streams data back to the application as
 tools are brought into and out of proximity, are pressed against the
 tablet surface, or are tilted or inverted.
 
+If you have trouble with your serial tablet you can try some of the
+suggestions found in the [Serial Woes](/wiki/Serial_Woes "wikilink") page.
+
 ### USB Tablet Operation - The Long Story
 
 Initially at least, the USB Wacom tablet is an HID compliant device, and

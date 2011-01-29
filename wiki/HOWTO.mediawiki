@@ -26,6 +26,8 @@ When the serial tablet is reset, it defaults to a standard baud rate, often 9600
 
 Once configured, the tablet streams data back to the application as tools are brought into and out of proximity, are pressed against the tablet surface, or are tilted or inverted.
 
+If you have trouble with your serial tablet you can try some of the suggestions found in the [[Serial Woes]] page.
+
 === USB Tablet Operation - The Long Story ===
 
 Initially at least, the USB Wacom tablet is an HID compliant device, and when first connected to the computer, will identify itself as such. Unfortunately, this is not what you want because in this mode, you will not get any of the fancy features. The hid-core.c, mousedev.c, and usbmouse.c kernel drivers contain exceptions for the wacom; when the device is detected, they ignore the tablet. In this way, the more sophisticated wacom driver has the opportunity to assume control.
