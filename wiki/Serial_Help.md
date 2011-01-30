@@ -66,13 +66,14 @@ the BIOS which is what I wanted to verify.
     /dev/ttyS2, UART: unknown, Port: 0x03e8, IRQ: 4
     /dev/ttyS3, UART: 16550A, Port: 0x02e8, IRQ: 3
 
-The print out shows 4 serial devices being created regardless of whether
-they actually exist. This is due to a default of 4 serial devices being
-set in the kernels source code before it is built. You can bypass this
-with the 8250.nr\_uarts kernel option telling the kernel to create more
-serial devices. This is needed for when you want to install a serial
-expansion card that attaches to the PCI interface, the ports will not
-show up at ttyS0 through ttyS3 and will be created at ttyS4 thereafter.
+The print out above shows 4 serial devices being created regardless of
+whether they actually exist. This is due to a default of 4 serial
+devices being set in the kernels source code before it is built. You can
+bypass this with the 8250.nr\_uarts kernel option telling the kernel to
+create more serial devices. This is needed for when you want to install
+a serial expansion card that attaches to the PCI interface, the ports
+will not show up at ttyS0 through ttyS3 and will be created at ttyS4
+thereafter.
 
 Below is an example entry in the menu.lst grub boot configuration file.
 
