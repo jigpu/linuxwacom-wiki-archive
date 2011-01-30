@@ -26,7 +26,7 @@ When the serial tablet is reset, it defaults to a standard baud rate, often 9600
 
 Once configured, the tablet streams data back to the application as tools are brought into and out of proximity, are pressed against the tablet surface, or are tilted or inverted.
 
-If you have trouble with your serial tablet you can try some of the suggestions found in the [[Serial Help]] page.
+If you have trouble with your serial tablet you can try some of the suggestions found in the [[Serial Woes]] page.
 
 === USB Tablet Operation - The Long Story ===
 
