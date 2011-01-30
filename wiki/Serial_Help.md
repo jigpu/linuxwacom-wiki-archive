@@ -66,12 +66,6 @@ the BIOS which is what I wanted to verify.
     /dev/ttyS2, UART: unknown, Port: 0x03e8, IRQ: 4
     /dev/ttyS3, UART: 16550A, Port: 0x02e8, IRQ: 3
 
-A command to be aware of to help troubleshoot the problem, is the
-setserial command. Shown above you can see the print out displaying even
-more details about the serial devices, using the -a option. A quick way
-of seeing what serial devices have been created can be down using the -g
-option of the setserial command.
-
 The print out shows 4 serial devices being created regardless of whether
 they actually exist. This is due to a default of 4 serial devices being
 set in the kernels source code before it is built. You can bypass this
