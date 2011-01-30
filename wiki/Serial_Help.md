@@ -33,7 +33,7 @@ your computer into the BIOS, finding the values of your serial ports.
 They will show up usually as COM1 through COM3 with the UART value and
 IRQ being shown. Write these values done and reboot your system. Check
 your kernel boot log with the 'dmesg' command from a console, your
-looking to find some values with ttySX being loaded.
+looking to find some ttySX entries.
 
     Host@User# dmesg | grep ttyS
     serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A

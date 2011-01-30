@@ -13,7 +13,7 @@ We have a few situations that can arise when trouble shooting a serial tablet.
 
 === Serial Port Configuration ===
 
-The first thing that you should do before you go any further is to boot your computer into the BIOS, finding the values of your serial ports. They will show up usually as COM1 through COM3 with the UART value and IRQ being shown. Write these values done and reboot your system. Check your kernel boot log with the 'dmesg' command from a console, your looking to find some values with ttySX being loaded.
+The first thing that you should do before you go any further is to boot your computer into the BIOS, finding the values of your serial ports. They will show up usually as COM1 through COM3 with the UART value and IRQ being shown. Write these values done and reboot your system. Check your kernel boot log with the 'dmesg' command from a console, your looking to find some ttySX entries.
 
 <pre>
 Host@User# dmesg | grep ttyS
