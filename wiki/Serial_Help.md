@@ -16,25 +16,32 @@ your Wacom serial device.
 We have a few situations that can arise when trouble shooting a serial
 tablet.
 
-1.  The xorg.conf file has been configured incorrectly.
-2.  The serial port has not been identified and set to the appropriate
-    uart and irq values of your serial hardware.
-3.  The serial port has been assigned to another program, interfering
-    with the tablet signals
-4.  The older wacom driver that supports serial tablets is incompatible
-    with the X server you are running
-5.  You are running X server 1.7 or later with the newer
-    xf86-input-wacom driver which does not support serial tablets at the
-    moment.
+:\* The xorg.conf file has been configured incorrectly.
+
+:\* The serial port has not been identified and set to the appropriate
+uart and irq values of your serial hardware.
+
+:\* The serial port has been assigned to another program, interfering
+with the tablet signals
+
+:\* The older wacom driver that supports serial tablets is incompatible
+with the X server you are running
+
+:\* You are running X server 1.7 or later with the newer
+xf86-input-wacom driver which does not support serial tablets at the
+moment.
 
 ### What to Expect
 
--   If your serial port is setup correctly
--   You have a linux wacom driver that supports serial tablets - 0.8.X
-    release -&gt; [Download
-    Page](https://sourceforge.net/projects/linuxwacom/files/)
--   Your X server version is prior to 1.7
--   A xorg.conf file that is configured correctly
+:\* If your serial port is setup correctly
+
+:\* You have a linux wacom driver that supports serial tablets - 0.8.X
+release -&gt; [Download
+Page](https://sourceforge.net/projects/linuxwacom/files/)
+
+:\* Your X server version is prior to 1.7
+
+:\* A xorg.conf file that is configured correctly
 
 If the above rules are in place, your serial tablet should work. If it
 doesn't, you have missed one of the steps in the checklist above.
