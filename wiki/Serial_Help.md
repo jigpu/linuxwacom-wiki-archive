@@ -74,7 +74,7 @@ option of the setserial command.
 The print out shows 4 serial devices being created regardless of whether
 they actually exist. This is due to a default of 4 serial devices being
 set in the kernels source code before it is built. You can bypass this
-with the 8250.nr\_uart kernel option telling the kernel to create more
+with the 8250.nr\_uarts kernel option telling the kernel to create more
 serial devices. This is needed for when you want to install a serial
 expansion card that attaches to the PCI interface, the ports will not
 show up at ttyS0 through ttyS3 and will be created at ttys4 thereafter.
