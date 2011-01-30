@@ -47,4 +47,12 @@ Host@User# setserial -g /dev/ttyS*
 
 A command to be aware of to help troubleshoot the problem, is the setserial command. Shown above you can see the print out displaying even more details about the serial devices, using the -a option. A quick way of seeing what serial devices have been created can be down using the -g option of the setserial command. 
 
-The print out shows 4 serial devices being created regardless of weather they actually exist. This is due to a default of 4 serial devices being set in the kernels source code before it is built. You can bypass this with the 8250.nr_uart kernel option telling the kernel to create more or less serial devices at boot time.
+The print out shows 4 serial devices being created regardless of whether they actually exist. This is due to a default of 4 serial devices being set in the kernels source code before it is built. You can bypass this with the 8250.nr_uart kernel option telling the kernel to create more serial devices. This is needed for when you want to install a serial expansion card that attaches to the PCI interface, the ports will not show up at ttyS0 through ttyS3 and will be created at ttys4 thereafter.
+
+Below is an example entry in the menu.lst grub boot configuration file. 
+
+<pre>
+title           Debian GNU/Linux, kernel 2.6.34
+root            (hd0,0)
+kernel          /boot/vmlinuz-2.6.34 root=/dev/sda1 ro 8250.nr_uarts=6
+</pre>
