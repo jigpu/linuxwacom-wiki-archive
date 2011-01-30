@@ -36,8 +36,8 @@ tablet.
 -   Your X server version is prior to 1.7
 -   A xorg.conf file that is configured correctly
 
-Your serial tablet should work, if it doesn't then you have missed one
-of the steps in the checklist above.
+If the above rules are in place, your serial tablet should work. If it
+doesn't, you have missed one of the steps in the checklist above.
 
 Below is the relevant sections of my Xorg.0.log file, this is what you
 would expect to see if the tablet is recognized and setup correctly
