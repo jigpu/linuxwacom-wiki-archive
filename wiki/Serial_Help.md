@@ -77,10 +77,47 @@ set in the kernels source code before it is built. You can bypass this
 with the 8250.nr\_uarts kernel option telling the kernel to create more
 serial devices. This is needed for when you want to install a serial
 expansion card that attaches to the PCI interface, the ports will not
-show up at ttyS0 through ttyS3 and will be created at ttys4 thereafter.
+show up at ttyS0 through ttyS3 and will be created at ttyS4 thereafter.
 
 Below is an example entry in the menu.lst grub boot configuration file.
 
     title           Debian GNU/Linux, kernel 2.6.34
     root            (hd0,0)
     kernel          /boot/vmlinuz-2.6.34 root=/dev/sda1 ro 8250.nr_uarts=6
+
+In debian your setserial setting are saved in the /etc/serial.conf file.
+Sometimes your serial card will not show up with the appropriate values
+needed, in which case you will have to manually edit this file. The best
+way to find out the UART and IRQ values for your cards serial ports is
+to use the lspci command with the -vv option which will output extra
+verbose infromation.
+
+    02:0b.0 Serial controller: Lava Computer mfg Inc Lava DSerial-PCI Port A (prog-if 02 [16550])
+            Subsystem: Lava Computer mfg Inc Lava DSerial-PCI Port A
+            Control: I/O+ Mem- BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+            Status: Cap- 66MHz- UDF- FastB2B+ ParErr- DEVSEL=slow >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+            Interrupt: pin A routed to IRQ 23
+            Region 0: I/O ports at dfa8 [size=8]
+            Kernel driver in use: serial
+            Kernel modules: 8250_pci
+
+    02:0b.1 Serial controller: Lava Computer mfg Inc Lava DSerial-PCI Port B (prog-if 02 [16550])
+            Subsystem: Lava Computer mfg Inc Lava DSerial-PCI Port B
+            Control: I/O+ Mem- BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+            Status: Cap- 66MHz- UDF- FastB2B+ ParErr- DEVSEL=slow >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+            Interrupt: pin A routed to IRQ 23
+            Region 0: I/O ports at dfe0 [size=8]
+            Kernel driver in use: serial
+            Kernel modules: 8250_pci
+
+The previous text is the print out of the lspci command showing my Lava
+DSerial-PCI card. There are two sections, one for port A and one for
+port B. This is the correct hardware information I need to pass to the
+setserial command at boot time. Below is an example of the parameters
+being specified in the serial.conf file. Some of the other values
+related to the serial card I found by searching the internet.
+
+    /dev/ttyS0 uart 16550A port 0x03f8 irq 4 spd_normal skip_test closing_wait 3000
+    /dev/ttyS3 uart 16550A port 0x02e8 irq 3 spd_normal skip_test closing_wait 3000
+    /dev/ttyS4 uart 16550A port 0xdfa8 irq 23 spd_normal skip_test close_delay 256 closing_wait 15360
+    /dev/ttyS5 uart 16550A port 0xdfe0 irq 23 spd_normal skip_test close_delay 256 closing_wait 15360
