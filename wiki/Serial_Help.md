@@ -31,7 +31,8 @@ tablet.
 
 -   If your serial port is setup correctly
 -   You have a linux wacom driver that supports serial tablets - 0.8.X
-    release
+    release -&gt; [Download
+    Page](https://sourceforge.net/projects/linuxwacom/files/)
 -   Your X server version is prior to 1.7
 -   A xorg.conf file that is configured correctly
 
