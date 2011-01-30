@@ -28,12 +28,13 @@ tablet.
 
 ### Serial Port Configuration
 
-The first thing that you should do before you go any further is to boot
-your computer into the BIOS, finding the values of your serial ports.
-They will show up usually as COM1 through COM3 with the UART value and
-IRQ being shown. Write these values done and reboot your system. Check
-your kernel boot log with the 'dmesg' command from a console, your
-looking to find some ttySX entries.
+Before you can proceed to diagnose other areas of setting up your Wacom
+serial tablet, you need to first make sure the serial values are set up
+correctly. You do this by comparing your BIOS values with the values set
+when the kernel boots up. The values in the BIOS will show up as COM1
+through COM3. Write the UART and IRQ values done, then reboot your
+system. Check your kernel boot log with the 'dmesg' command from a
+console, your looking to find some ttySX entries.
 
     Host@User# dmesg | grep ttyS
     serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
@@ -45,7 +46,7 @@ Most of the time on a computer with one serial port it will be set to
 ttyS0 in the /dev directory. On my system I have a DE-9 serial port and
 a DA-15 gameport. Above you can see that the DE-9 is the ttyS0 device,
 with the gameport being assigned ttyS3. These same values coincide in
-the bios which is what we wanted to verify.
+the BIOS which is what I wanted to verify.
 
     Host@User# setserial -a /dev/ttyS0
     /dev/ttyS0, Line 0, UART: 16550A, Port: 0x03f8, IRQ: 4
