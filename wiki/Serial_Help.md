@@ -101,6 +101,39 @@ xorg.conf file will show up here, such as setting the cursor speed to
     (==) Wacom using pressure threshold of 27 for button 1
     (==) Wacom Serial Intuos2 tablet speed=9600 (38400) maxX=20320 maxY=16240 maxZ=1023 resX=2540 resY=2540 tilt=enabled
 
+### Configuring xorg.conf
+
+This is a basic xorg.conf configuration file showing the relevant
+sections, tested with a Intuos 2 serial tablet. These same values should
+also work with other Wacom serial tablet models.
+
+    Section "InputDevice"
+            Driver          "wacom"
+            Identifier      "stylus"
+            Option          "Device"        "/dev/ttyS0"
+            Option          "Type"          "stylus"
+    EndSection
+
+    Section "InputDevice"
+            Driver          "wacom"
+            Identifier      "eraser"
+            Option          "Device"        "/dev/ttyS0"
+            Option          "Type"          "eraser"
+    EndSection
+
+    Section "InputDevice"
+            Driver          "wacom"
+            Identifier      "cursor"
+            Option          "Device"        "/dev/ttyS0"
+            Option          "Type"          "cursor"
+    EndSection
+
+    Section "ServerLayout"
+            InputDevice     "stylus" 
+            InputDevice     "eraser" 
+            InputDevice     "cursor" 
+    EndSection
+
 ### Serial Port Configuration
 
 Before you can proceed to diagnose other areas of setting up your Wacom
