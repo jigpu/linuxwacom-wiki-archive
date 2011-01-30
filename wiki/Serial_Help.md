@@ -4,27 +4,101 @@ permalink: wiki/Serial_Help/
 layout: wiki
 ---
 
-### Woe Not Serial Woes
+### Scope
 
 This page is an effort to help aid you in setting up your serial tablet
 by braking down the main problem areas. With some time and patients, you
 should be able to apply the appropriate changes in order to make use of
 your Wacom serial device.
 
-### Serial Woes Check List
+### Checklist
 
 We have a few situations that can arise when trouble shooting a serial
 tablet.
 
-1.  The serial port has not been identified and set to the appropriate
+1.  The xorg.conf file has been configured incorrectly.
+2.  The serial port has not been identified and set to the appropriate
     uart and irq values of your serial hardware.
-2.  The serial port has been assigned to another program, interfering
+3.  The serial port has been assigned to another program, interfering
     with the tablet signals
-3.  The older wacom driver that supports serial tablets is incompatible
+4.  The older wacom driver that supports serial tablets is incompatible
     with the X server you are running
-4.  You are running X server 1.7 or later with the newer
+5.  You are running X server 1.7 or later with the newer
     xf86-input-wacom driver which does not support serial tablets at the
     moment.
+
+### What to Expect
+
+-   If your serial port is setup correctly
+-   You have a linux wacom driver that supports serial tablets - 0.8.X
+    release
+-   Your X server version is prior to 1.7
+-   A xorg.conf file that is configured correctly
+
+Your serial tablet should work, if it doesn't then you have missed one
+of the steps in the checklist above.
+
+Below is the relevant sections of my Xorg.0.log file, this is what you
+would expect to see if the tablet is recognized and setup correctly
+without any problems. You can see on the last line, driver version
+0.8.8-9 is being used. This is the most recent version of the driver
+that supports serial tablets. The digit after the 0.8 is a even number,
+telling me that I'm using the stable version of the driver. If the
+decimal after the 0.8 digits happens to be a odd number this is a
+developer version of the driver. It is best to experiment with different
+versions of the driver if you are experiencing problems.
+
+    (II) LoadModule: "wacom"
+    (II) Loading /usr/lib/xorg/modules/input//wacom_drv.so
+    (II) Module wacom: vendor="X.Org Foundation"
+            compiled for 4.3.99.902, module version = 1.0.0
+            Module class: X.Org XInput Driver
+            ABI class: X.Org XInput driver, version 2.0
+    (II) Wacom driver level: 47-0.8.8-9 $
+
+Further on down the Xorg.0.log file you'll see some more entries showing
+the stylus, eraser, and cursor values being set. Any options set in the
+xorg.conf file will show up here, such as setting the cursor speed to
+"3.0" for the intuos 2 mouse.
+
+    (**) Option "Device" "/dev/ttyS0"
+    (**) stylus: always reports core events
+    (**) stylus device is /dev/ttyS0
+    (**) stylus is in absolute mode
+    (**) WACOM: suppress value is 2
+    (**) Option "BaudRate" "9600"
+    (**) stylus: serial speed 9600
+    (**) Option "Device" "/dev/ttyS0"
+    (**) eraser: always reports core events
+    (**) eraser device is /dev/ttyS0
+    (**) eraser is in absolute mode
+    (**) WACOM: suppress value is 2
+    (**) Option "BaudRate" "9600"
+    (**) eraser: serial speed 9600
+    (**) Option "Device" "/dev/ttyS0"
+    (**) cursor: always reports core events
+    (**) cursor device is /dev/ttyS0
+    (**) cursor is in relative mode
+    (**) WACOM: suppress value is 2
+    (**) Option "BaudRate" "9600"
+    (**) cursor: serial speed 9600
+    (**) Option "Speed" "3.0"
+    (**) cursor: speed = 3.000
+    (II) XINPUT: Adding extended input device "stylus" (type: Wacom Stylus)
+    (II) evaluating device (eraser)
+    (II) XINPUT: Adding extended input device "eraser" (type: Wacom Eraser)
+    (II) evaluating device (cursor)
+    (II) XINPUT: Adding extended input device "cursor" (type: Wacom Cursor)
+    (**) Option "StopBits" "1"
+    (**) Option "DataBits" "8"
+    (**) Option "Parity" "None"
+    (**) Option "Vmin" "1"
+    (**) Option "Vtime" "10"
+    (**) Option "FlowControl" "Xoff"
+    (WW) usbDetect: can not ioctl version
+    (==) Wacom tablet model : XD-0608-R00,V1.2-6
+    (==) Wacom using pressure threshold of 27 for button 1
+    (==) Wacom Serial Intuos2 tablet speed=9600 (38400) maxX=20320 maxY=16240 maxZ=1023 resX=2540 resY=2540 tilt=enabled
 
 ### Serial Port Configuration
 
