@@ -116,3 +116,9 @@ related to the serial card I found by searching the internet.
     /dev/ttyS3 uart 16550A port 0x02e8 irq 3 spd_normal skip_test closing_wait 3000
     /dev/ttyS4 uart 16550A port 0xdfa8 irq 23 spd_normal skip_test close_delay 256 closing_wait 15360
     /dev/ttyS5 uart 16550A port 0xdfe0 irq 23 spd_normal skip_test close_delay 256 closing_wait 15360
+
+The main idea of the above examples is to give you an idea of how check
+and modify the serial port values regardless of which distribution of
+linux you are using. If the values are correct, matching the information
+given in the BIOS, and the information printed by programs such as
+lspci, you can check this section off.
