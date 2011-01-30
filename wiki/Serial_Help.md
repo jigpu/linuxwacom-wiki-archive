@@ -81,12 +81,12 @@ Below is an example entry in the menu.lst grub boot configuration file.
     root            (hd0,0)
     kernel          /boot/vmlinuz-2.6.34 root=/dev/sda1 ro 8250.nr_uarts=6
 
-In debian your setserial setting are saved in the /etc/serial.conf file.
-Sometimes your serial card will not show up with the appropriate values
-needed, in which case you will have to manually edit this file. The best
-way to find out the UART and IRQ values for your cards serial ports is
-to use the lspci command with the -vv option which will output extra
-verbose infromation.
+In debian your setserial settings are saved in the /etc/serial.conf
+file. Sometimes your serial card will not show up with the appropriate
+values needed, in which case you will have to manually edit this file.
+The best way to find out the UART and IRQ values for your cards serial
+ports is to use the lspci command with the -vv option which will output
+extra verbose infromation.
 
     02:0b.0 Serial controller: Lava Computer mfg Inc Lava DSerial-PCI Port A (prog-if 02 [16550])
             Subsystem: Lava Computer mfg Inc Lava DSerial-PCI Port A
