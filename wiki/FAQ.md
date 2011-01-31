@@ -38,7 +38,7 @@ xf86-input-wacom.
 How do I configure my device
 ----------------------------
 
-See the [HOWTO section](/wiki/HOWTO_section "wikilink").
+See the [HOWTO](/wiki/HOWTO "wikilink") section.
 
 How do I get the special features of my stylus to work?
 -------------------------------------------------------

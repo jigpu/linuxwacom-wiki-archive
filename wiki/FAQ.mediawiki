@@ -14,7 +14,7 @@ NOTE:  Only ISDV4 serial devices (TabletPC's) are currently supported by xf86-in
 
 == How do I configure my device ==
 
-See the [[HOWTO section]].
+See the [[HOWTO]] section.
 
 == How do I get the special features of my stylus to work? ==
 
