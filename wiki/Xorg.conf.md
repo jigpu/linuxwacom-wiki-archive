@@ -29,7 +29,7 @@ InputDevice section and will appear as its own input device in X.
 
     Section "InputDevice"
       Driver        "wacom"
-      Identifier    "cursor"
+      Identifier    "cursor"                              # Wacom tablet mouse
       Option        "Device"        "/dev/ttyS0"          # SERIAL ONLY
       Option        "Device"        "/dev/input/wacom"    # USB ONLY
       Option        "Type"          "cursor"
@@ -37,17 +37,17 @@ InputDevice section and will appear as its own input device in X.
       Option        "ForceDevice"   "ISDV4"               # Serial Tablet PC ONLY
     EndSection
 
-    # This section is for Intuos3, CintiqV5, Graphire4, or Bamboo
+    # This section is for Intuos3, Intuos4, CintiqV5, Graphire4, Bamboo, or BambooPT
     Section "InputDevice"
       Driver        "wacom"
-      Identifier    "pad"
+      Identifier    "pad"                                 # Tablet buttons
       Option        "Device"        "/dev/ttyS0"          # SERIAL ONLY
       Option        "Device"        "/dev/input/wacom"    # USB ONLY
       Option        "Type"          "pad"
       Option        "USB"           "on"                  # USB ONLY
     EndSection
 
-    # This section is for the TabletPC that supports touch
+    # This section is for Tablets & TabletPCs that support touch
     Section "InputDevice"
       Driver        "wacom"
       Identifier    "touch"
@@ -63,13 +63,10 @@ from the ServerLayout section to take effect. An example layout section
 may look like this:
 
     Section "ServerLayout"
-            Identifier     "Default Layout"
-            Screen 0 "Screen0"   0 0
-            InputDevice    "Mouse0"    "CorePointer"
-            InputDevice    "Keyboard0" "CoreKeyboard"
-            InputDevice    "stylus"    "SendCoreEvents"
-            InputDevice    "eraser"    "SendCoreEvents"
-            InputDevice    "cursor"    "SendCoreEvents"    # For non-LCD tablets only
-        InputDevice    "touch"     "SendCoreEvents"    # Only a few TabletPCs support this type
-            InputDevice    "pad"   # For Intuos3/CintiqV5/Graphire4/Bamboo tablets
+            Identifier     "X.org Configured"
+            InputDevice    "stylus"
+            InputDevice    "eraser"
+            InputDevice    "cursor"                        # For non-LCD tablets only
+        InputDevice    "touch"         # For TabletPCs and BambooPTs that support touch
+            InputDevice    "pad"   # For Intuos3/Intuos4/CintiqV5/Graphire4/Bamboo/BambooPT
     EndSection
