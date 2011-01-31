@@ -57,9 +57,9 @@ udi = '/org/freedesktop/Hal/devices/usb_device_56a_b9_noserial_if0_logicaldev_in
 == Manual setup in the xorg.conf ==
 
 {{:xorg.conf}}
-NOTE:  [Option "ForceDevice" "ISDV4"] was deprecated starting with xf86-input-wacom-0.10.8.  You can remove it from your xorg.conf sections if using 0.10.8 or later.
+The usb symlinks ["/dev/input/wacom" & "/dev/input/wacom-touch"] will only work if you have the correct wacom.rules file in your distribution's appropriate udev rules.d directory.  See "Updated wacom.c" in [[USB Kernel driver]].
 
-NOTE:  The usb symlinks ["/dev/input/wacom" & "/dev/input/wacom-touch"] will only work if you have the correct wacom.rules file in your distribution's appropriate udev rules.d directory.  See "Updated wacom.c" in [[USB Kernel driver]].
+NOTE:  [Option "ForceDevice" "ISDV4"] was deprecated starting with xf86-input-wacom-0.10.8.  You can remove it from your xorg.conf sections if using 0.10.8 or later.
 
 = Testing =
 Once installed, you need to restart the X server. Either hit Ctrl+Alt+Backspace (if enabled), log out or reboot, whichever you prefer. If the driver is working successfully, the log should show an entry similar to this one:
