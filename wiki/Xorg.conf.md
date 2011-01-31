@@ -37,16 +37,6 @@ InputDevice section and will appear as its own input device in X.
       Option        "ForceDevice"   "ISDV4"               # Serial Tablet PC ONLY
     EndSection
 
-    # This section is for Intuos3, Intuos4, CintiqV5, Graphire4, Bamboo, or BambooPT
-    Section "InputDevice"
-      Driver        "wacom"
-      Identifier    "pad"                                 # Tablet buttons
-      Option        "Device"        "/dev/ttyS0"          # SERIAL ONLY
-      Option        "Device"        "/dev/input/wacom"    # USB ONLY
-      Option        "Type"          "pad"
-      Option        "USB"           "on"                  # USB ONLY
-    EndSection
-
     # This section is for Tablets & TabletPCs that support touch
     Section "InputDevice"
       Driver        "wacom"
@@ -55,6 +45,16 @@ InputDevice section and will appear as its own input device in X.
       Option        "Device"        "/dev/input/wacom"    # USB ONLY
       Option        "Type"          "touch"
       Option        "ForceDevice"   "ISDV4"               # Serial Tablet PC ONLY
+      Option        "USB"           "on"                  # USB ONLY
+    EndSection
+
+    # This section is for Intuos3, Intuos4, CintiqV5, Graphire4, Bamboo, or BambooPT
+    Section "InputDevice"
+      Driver        "wacom"
+      Identifier    "pad"                                 # Tablet buttons
+      Option        "Device"        "/dev/ttyS0"          # SERIAL ONLY
+      Option        "Device"        "/dev/input/wacom"    # USB ONLY
+      Option        "Type"          "pad"
       Option        "USB"           "on"                  # USB ONLY
     EndSection
 
