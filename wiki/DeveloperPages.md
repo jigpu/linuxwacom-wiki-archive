@@ -60,7 +60,7 @@ Device IDs
 | Protocol 4 series (no serial numbers are reported) |                                                                                                                     |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | Earlier Graphire without pad                       | 0x00, 0x10, 0x11, 0x12, 0x13, 0x14                                                                                  |
-| Graphire 4                                         | 0x15, 0x16                                                                                                          |
+| Graphire 4                                         | 0x15, 0x16, 0x81                                                                                                    |
 | Bamboo Fun                                         | 0x17, 0x18, 0x65                                                                                                    |
 | Bamboo1 and LLC (low low cost)                     | 0x19, 0x60, 0x61, 0x62, 0x63, 0x64, 0x69                                                                            |
 | PL series                                          | 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x37, 0x38, 0x39, 0xC4, 0xC0, 0xC2, 0xC7                                        |
