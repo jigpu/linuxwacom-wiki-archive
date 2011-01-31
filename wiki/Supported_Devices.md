@@ -24,8 +24,10 @@ Devices supported by the Linux Wacom Project:
 -   PenPartner series
 -   PL & DTF
 -   Bamboo, Bamboo1, & BambooFun
+-   Bamboo Pen & Touch
 -   TabletPC (with/without touch)
 
 <b>Bluetooth series:</b>
 
--   Wireless Pen Tablet
+-   Graphire Bluetooth Wireless
+-   Intuos4 Wireless
