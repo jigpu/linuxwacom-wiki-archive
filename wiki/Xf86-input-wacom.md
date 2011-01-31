@@ -94,11 +94,12 @@ Manual setup in the xorg.conf
 
 NOTE: \[Option "ForceDevice" "ISDV4"\] was deprecated starting with
 xf86-input-wacom-0.10.8. You can remove it from your xorg.conf sections
-if using 0.10.8 or later. NOTE: The usb symlinks \["/dev/input/wacom" &
-"/dev/input/wacom-touch"\] will only work if you have the correct
-wacom.rules file in your distribution's appropriate udev rules.d
-directory. See "Updated wacom.c" in [USB Kernel
-driver](/wiki/USB_Kernel_driver "wikilink").
+if using 0.10.8 or later.
+
+NOTE: The usb symlinks \["/dev/input/wacom" & "/dev/input/wacom-touch"\]
+will only work if you have the correct wacom.rules file in your
+distribution's appropriate udev rules.d directory. See "Updated wacom.c"
+in [USB Kernel driver](/wiki/USB_Kernel_driver "wikilink").
 
 Testing
 =======
