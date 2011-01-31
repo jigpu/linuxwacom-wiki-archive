@@ -76,8 +76,8 @@ Device IDs
 | Protocol 5 series                                  |                                                                                                                     |
 | Intuos                                             | 0x20, 0x21, 0x22, 0x23, 0x24                                                                                        |
 | Intuos2                                            | 0x41, 0x42, 0x43, 0x44, 0x45                                                                                        |
-| Intuos3                                            | 0xB0, 0xB1, 0xB2, 0xB3, 0xB4, 0xB5, 0xB7,                                                                           |
-| Intuos4                                            | 0xB8,0xB9, 0xBA, 0xBB, 0xBC, 0xBD,                                                                                  |
+| Intuos3                                            | 0xB0, 0xB1, 0xB2, 0xB3, 0xB4, 0xB5, 0xB7                                                                            |
+| Intuos4                                            | 0xB8,0xB9, 0xBA, 0xBB, 0xBC, 0xBD                                                                                   |
 | Cintiq 21UX                                        | 0x3F                                                                                                                |
 | Cintiq 12SWX and 20SWX                             | 0xC5, 0xC6,                                                                                                         |
 | Cintiq 21UX2                                       | 0xCC                                                                                                                |
