@@ -10,8 +10,9 @@ The Linux Wacom Project
 The Linux Wacom Project manages the drivers, libraries, and
 documentation for configuring and running Wacom tablets under the Linux
 operating system. It contains diagnostic applications as well as updated
-kernel drivers and XFree86/Xorg X input drivers. Currently, the Linux
-Wacom Project provides two packages:
+kernel drivers and
+[XFree86](http://www.xfree86.org)/[X.Org](http://www.x.org) X input
+drivers. Currently, the Linux Wacom Project provides two packages:
 
 -   [linuxwacom](linuxwacom "wikilink"): a combined package of kernel
     patches (backports!) and the X11 input driver for X Servers up to
