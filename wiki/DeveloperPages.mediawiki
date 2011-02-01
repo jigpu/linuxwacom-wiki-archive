@@ -49,7 +49,7 @@ Note that it may take a while until the uploaded tarballs are available through 
 | PenPartner
 | 0x03
 |-
-| Bamboo Pen (LLC similar to earlier Graphires)
+| Bamboo Pen (LLC similar to Earlier Graphire)
 | 0xD4
 |-
 | Bamboo Touch (2FGT only)
