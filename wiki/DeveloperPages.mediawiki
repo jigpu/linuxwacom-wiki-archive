@@ -10,7 +10,7 @@ For working tablet support, you need two vital pieces installed on your machine.
 * build the source
   ./autogen.sh --prefix=/usr
 * hack it!
-* create a patch with '''git format-patch'''
+* create a patch with [[Using Git|git format-patch]]
 * submit the patch to the [https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel linuxwacom-devel mailing list]
 
 For more information on these steps, see 

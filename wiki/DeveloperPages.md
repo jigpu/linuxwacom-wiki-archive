@@ -23,7 +23,7 @@ To develop, the following steps are required:
 ` ./autogen.sh --prefix=/usr`
 
 -   hack it!
--   create a patch with **git format-patch**
+-   create a patch with [git format-patch](/wiki/Using_Git "wikilink")
 -   submit the patch to the [linuxwacom-devel mailing
     list](https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel)
 
