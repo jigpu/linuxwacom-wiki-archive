@@ -61,13 +61,6 @@ future kernels. Additionally, kernel patches in linuxwacom are not
 shipped by any major distribution. Any kernel developer is encouraged to
 work on the [upstream kernel](http://kernel.org) instead.
 
-Kernel Data
-===========
-
-[Intuos4 Kernel Data stream](/wiki/Intuos4_Kernel_Data_stream "wikilink")
-
-[Kernel Input Event Overview](/wiki/Kernel_Input_Event_Overview "wikilink")
-
 Developer Pages
 ===============
 
