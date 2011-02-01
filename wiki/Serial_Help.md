@@ -45,7 +45,7 @@ Page](https://sourceforge.net/projects/linuxwacom/files/)
 
 If the above rules are in place, your serial tablet should work. If it
 doesn't, you have missed one of the steps in the checklist above. NOTE:
-Xf86-input-wacom supplies the X driver for X servers 1.7 and up. It
+xf86-input-wacom supplies the X driver for X servers 1.7 and up. It
 currently supports ISDV4 devices (serial tabletPCs), but does not yet
 support serial graphics tablets.
 
