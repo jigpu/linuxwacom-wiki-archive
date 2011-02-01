@@ -2,6 +2,8 @@
 title: Intuos4 Kernel Data stream
 permalink: wiki/Intuos4_Kernel_Data_stream/
 layout: wiki
+tags:
+ - DeveloperPages
 ---
 
 Data stream obtained with
