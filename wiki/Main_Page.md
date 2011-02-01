@@ -24,7 +24,8 @@ Please read [Wacom Support in
 Linux](http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html)
 first for a better understanding of the difference between
 [linuxwacom](linuxwacom "wikilink") and
-[xf86-input-wacom](xf86-input-wacom "wikilink").
+[xf86-input-wacom](xf86-input-wacom "wikilink"). We also have a list of
+[Supported Devices](/wiki/Supported_Devices "wikilink").
 
 ### So, what do I need?
 
@@ -40,21 +41,6 @@ patches are pending, you may be lucky with the
 [linuxwacom](linuxwacom "wikilink") kernel patches. Note that these
 apply outside of your distribution and you will need to re-install each
 time you update your distribution kernel.
-
-Supported Devices
------------------
-
-NOTE: Only ISDV4 serial devices (TabletPC's) are currently supported by
-xf86-input-wacom (Xserver 1.7 or later). A [patch
-set](http://sourceforge.net/mailarchive/forum.php?thread_name=4BEB198B.9030809%40sleif.de&forum_name=linuxwacom-discuss)
-by John Tsiombikas & Sebastian Berthold for the serial tablets needs
-further development before inclusion into xf86-input-wacom.
-
-NOTE: A FreeBSD Wacom driver is available through the
-[FreeBSD](http://www.freshports.org/x11-drivers/input-wacom) ports
-system. Please email your questions and/or suggestion directly to
-[Bartosz Fabianowski](mailto:freebsd@chillt.de?subject=WACOM), the Wacom
-FreeBSD developer.
 
 User help
 ---------
