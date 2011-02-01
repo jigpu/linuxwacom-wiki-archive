@@ -4,11 +4,53 @@ permalink: wiki/DeveloperPages/
 layout: wiki
 ---
 
+For working tablet support, you need two vital pieces installed on your
+machine. A kernel driver that recognises the tablet and understands the
+hardware protocol, and an X driver that allows X to use the device.
+
+X driver development
+====================
+
+[xf86-input-wacom](xf86-input-wacom "wikilink") is in a git repository.
+To develop, the following steps are required:
+
+-   clone the source
+
+` git clone `[`git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom`](git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom)
+
+-   build the source
+
+` ./autogen.sh --prefix=/usr`
+
+-   hack it!
+-   create a patch with **git format-patch**
+-   submit the patch to the [linuxwacom-devel mailing
+    list](https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel)
+
+For more information on these steps, see
+
+-   [Using Git](/wiki/Using_Git "wikilink")
+-   [Installing from source](/wiki/Installing_from_source "wikilink")
+-   [Submitting Patches](/wiki/Submitting_Patches "wikilink")
+
+Developing for linuxwacom
+-------------------------
+
+linuxwacom is a collection of backports for both older kernels and older
+X servers. The linuxwacom repository is maintained in CVS and releases
+are made regularly. If you want to propose a patch, please follow the
+instructions [ here](/wiki/LinuxwacomDevelopment "wikilink")
+
+Kernel driver development
+=========================
+
 For Wacom kernel driver development, please submit your patches to the
 [Linux Kernel Developers Mailing List](http://lkml.org). Only patches
 that appear in the upstream kernel will be appear in distributions and
 thus ensure tablets will be working out-of-the-box with future releases
 of your distribution.
+
+**FIXME** more information needed here.
 
 Note that kernel patches integrated into the
 [linuxwacom](linuxwacom "wikilink") tarball usually do not find their
