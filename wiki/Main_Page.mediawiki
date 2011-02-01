@@ -2,8 +2,8 @@
 
 The Linux Wacom Project manages the drivers, libraries, and documentation for configuring and running Wacom tablets under the Linux operating system. It contains diagnostic applications as well as updated kernel drivers and [http://www.xfree86.org XFree86]/[http://www.x.org X.Org] X input drivers. Currently, the Linux Wacom Project provides two packages:
 
-* [[linuxwacom]]: a combined package of kernel patches (backports!) and the X11 input driver for X Servers up to including 1.6.
 * [[xf86-input-wacom]]: the X11 input driver for X Servers 1.7 and later ([http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html X11R7.5])
+* [[linuxwacom]]: a combined package of kernel patches (backports!) and the X11 input driver for X Servers up to including 1.6.
 
 Please read [http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html Wacom Support in Linux] first for a better understanding of the difference between [[linuxwacom]] and [[xf86-input-wacom]]. We also have a list of [[Supported Devices]].
 
