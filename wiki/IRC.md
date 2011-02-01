@@ -2,6 +2,8 @@
 title: IRC
 permalink: wiki/IRC/
 layout: wiki
+tags:
+ - MaintainerPages
 ---
 
 The official linux wacom irc is \#linuxwacom on irc.freenode.net. Feel

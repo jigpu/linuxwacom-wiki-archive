@@ -42,3 +42,6 @@ Reason is optional in this command.
 If you kick someone out of the channel they can rejoin.  If you want to permanently kick someone out of the channel ban them first using the above command and then kick them.  They will not be able to rejoin.
 
 Also, many people have auto-rejoin enabled where if they are kicked out of a channel or lose internet connection then their client automatically rejoins.
+
+
+[[Category:MaintainerPages]]
