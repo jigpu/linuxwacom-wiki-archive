@@ -15,13 +15,14 @@ Installing from git
     ./autogen.sh --prefix=/usr
     make && make install
 
-This gets the latest version from git and installs it into the given
-prefix. In most cases, the prefix of /usr is the right one. If you're on
-a 64-bit machine, you also need to add --libdir=/usr/lib64. If unsure,
-search for evdev\_drv.so. If it is in /usr/lib/xorg/modules/input, then
-the prefix of /usr is enough. If it is in /usr/lib64/xorg/modules/input,
-even if it is in /usr/lib/xorg/modules/input, then you need to specify
---libdir=/usr/lib64.
+This gets the latest version from [ git](/wiki/Using_Git "wikilink") and
+installs it into the given prefix. In most cases, the prefix of */usr*
+is the right one. If you're on a 64-bit machine, you also need to add
+*--libdir=/usr/lib64*. If unsure, search for *evdev\_drv.so*. If it is
+in */usr/lib/xorg/modules/input*, then the prefix of */usr* is enough.
+If it is in */usr/lib64/xorg/modules/input*, even if it is in
+*/usr/lib/xorg/modules/input*, then you need to specify
+*--libdir=/usr/lib64*.
 
 If you are trying to replace the distribution-installed version of the
 driver with the version from git, use the same build flags as your
