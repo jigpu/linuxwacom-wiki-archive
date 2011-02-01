@@ -31,3 +31,15 @@ Devices supported by the Linux Wacom Project:
 
 -   Graphire Bluetooth Wireless
 -   Intuos4 Wireless
+
+NOTE: Only ISDV4 serial devices (TabletPC's) are currently supported by
+xf86-input-wacom (Xserver 1.7 or later). A [patch
+set](http://sourceforge.net/mailarchive/forum.php?thread_name=4BEB198B.9030809%40sleif.de&forum_name=linuxwacom-discuss)
+by John Tsiombikas & Sebastian Berthold for the serial tablets needs
+further development before inclusion into xf86-input-wacom.
+
+NOTE: A FreeBSD Wacom driver is available through the
+[FreeBSD](http://www.freshports.org/x11-drivers/input-wacom) ports
+system. Please email your questions and/or suggestion directly to
+[Bartosz Fabianowski](mailto:freebsd@chillt.de?subject=WACOM), the Wacom
+FreeBSD developer.
