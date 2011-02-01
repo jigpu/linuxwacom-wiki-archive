@@ -32,7 +32,7 @@ On most desktop distributions, you need
 [xf86-input-wacom](xf86-input-wacom "wikilink") as your X driver. Note
 that distributions usually already ship a version of xf86-input-wacom in
 their repositories. Kernel patches for Wacom devices, if they have been
-submitted upstream will also likely be available in your distribution's
+submitted upstream, will also likely be available in your distribution's
 kernel.
 
 If your device is not supported by the current kernel and no Wacom
