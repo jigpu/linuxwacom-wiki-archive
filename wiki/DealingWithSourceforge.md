@@ -1,0 +1,23 @@
+---
+title: DealingWithSourceforge
+permalink: wiki/DealingWithSourceforge/
+layout: wiki
+tags:
+ - MaintainerPages
+---
+
+Sourceforge is a bit ... iffy. Here's a list of things you need to know
+about our sourceforge account.
+
+Creating a shell
+================
+
+The [shell
+service](https://sourceforge.net/apps/trac/sourceforge/wiki/Shell%20service)
+has the detailed instructions, but long story short: to log onto sf via
+ssh, you need to create a shell for your username and the project.
+
+` ssh -t `<user>`,linuxwacom@shell.sourceforge.net create`
+
+Once the shell is created, it will exist for 4 hours unless closed
+earlier by the user.
