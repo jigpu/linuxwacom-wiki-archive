@@ -1,5 +1,7 @@
 For working tablet support, you need two vital pieces installed on your machine. A kernel driver that recognises the tablet and understands the hardware protocol, and an X driver that allows X to use the device.
 
+Some information 
+
 = X driver development =
 [[xf86-input-wacom]] is in a git repository. To develop, the following steps are required:
 * clone the source
@@ -30,6 +32,9 @@ Note that kernel patches integrated into the [[linuxwacom]] tarball usually do n
 [[Intuos4 Kernel Data stream]]
 
 [[Kernel Input Event Overview]]
+
+= Developer Pages =
+All pages with information related to development are part of the Category ''DeveloperPages''. Click on [[:Category:DeveloperPages]] to get an overview of this category.
 
 = Maintainer information =
 * [[Making Releases]]: information on how to cut a new release for [[xf86-input-wacom]].

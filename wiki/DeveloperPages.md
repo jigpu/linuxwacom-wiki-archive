@@ -8,6 +8,8 @@ For working tablet support, you need two vital pieces installed on your
 machine. A kernel driver that recognises the tablet and understands the
 hardware protocol, and an X driver that allows X to use the device.
 
+Some information
+
 X driver development
 ====================
 
@@ -65,6 +67,14 @@ Kernel Data
 [Intuos4 Kernel Data stream](/wiki/Intuos4_Kernel_Data_stream "wikilink")
 
 [Kernel Input Event Overview](/wiki/Kernel_Input_Event_Overview "wikilink")
+
+Developer Pages
+===============
+
+All pages with information related to development are part of the
+Category *DeveloperPages*. Click on
+[Category%3ADeveloperPages](/wiki/Category%3ADeveloperPages "wikilink") to get
+an overview of this category.
 
 Maintainer information
 ======================
