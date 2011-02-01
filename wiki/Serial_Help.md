@@ -35,7 +35,7 @@ moment.
 
 :\* If your serial port is setup correctly
 
-:\* You have a linux wacom driver that supports serial tablets - 0.8.X
+:\* You have a linuxwacom X driver that supports serial tablets - 0.8.X
 release -&gt; [Download
 Page](https://sourceforge.net/projects/linuxwacom/files/)
 
@@ -44,15 +44,18 @@ Page](https://sourceforge.net/projects/linuxwacom/files/)
 :\* A xorg.conf file that is configured correctly
 
 If the above rules are in place, your serial tablet should work. If it
-doesn't, you have missed one of the steps in the checklist above.
+doesn't, you have missed one of the steps in the checklist above. NOTE:
+Xf86-input-wacom supplies the X driver for X servers 1.7 and up. It
+currently supports ISDV4 devices (serial tabletPCs), but does not yet
+support serial graphics tablets.
 
 Below is the relevant sections of my Xorg.0.log file, this is what you
 would expect to see if the tablet is recognized and setup correctly
 without any problems. You can see on the last line, driver version
-0.8.8-9 is being used. This is the most recent version of the driver
-that supports serial tablets. The digit after the 0.8 is a even number,
-telling me that I'm using the stable version of the driver. If the
-decimal after the 0.8 digits happens to be a odd number this is a
+0.8.8-9 is being used. The most recent version that supports serial
+tablets is linuxwacom-0.8.8-10. The digit after the 0.8 is a even
+number, telling me that I'm using the stable version of the driver. If
+the decimal after the 0.8 digits happens to be a odd number this is a
 developer version of the driver. It is best to experiment with different
 versions of the driver if you are experiencing problems.
 
