@@ -7,9 +7,9 @@ layout: wiki
 ### Scope
 
 This page is an effort to help aid you in setting up your serial tablet
-by braking down the main problem areas. With some time and patients, you
-should be able to apply the appropriate changes in order to make use of
-your Wacom serial device.
+by breaking down the main problem areas. With some time and patience,
+you should be able to apply the appropriate changes in order to make use
+of your Wacom serial device.
 
 ### Checklist
 
