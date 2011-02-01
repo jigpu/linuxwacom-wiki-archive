@@ -62,7 +62,7 @@ Note that it may take a while until the uploaded tarballs are available through 
 | 0x90
 |-
 | TabletPC (penabled with 1FGT, no mouse)
-| 0x93, 0wx9A
+| 0x93, 0x9A
 |-
 | TabletPC ( penabled with 2FGT)
 | 0xE2
