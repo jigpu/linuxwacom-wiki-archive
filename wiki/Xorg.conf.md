@@ -63,10 +63,10 @@ from the ServerLayout section to take effect. An example layout section
 may look like this:
 
     Section "ServerLayout"
-            Identifier     "X.org Configured"
-            InputDevice    "stylus"
-            InputDevice    "eraser"
-            InputDevice    "cursor"                       # For non-LCD tablets only
-        InputDevice    "touch"         # For TabletPCs and BambooPTs that support touch
-            InputDevice    "pad"   # For Intuos3/Intuos4/CintiqV5/Graphire4/Bamboo/BambooPT
+      Identifier    "X.org Configured"
+      InputDevice   "stylus"
+      InputDevice   "eraser"
+      InputDevice   "cursor"        # For non-LCD tablets only
+      InputDevice   "touch"         # For TabletPCs and BambooPTs that support touch
+      InputDevice   "pad"   # For Intuos3/Intuos4/CintiqV5/Graphire4/Bamboo/BambooPT
     EndSection
