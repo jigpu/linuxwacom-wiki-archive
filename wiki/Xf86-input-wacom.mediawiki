@@ -8,7 +8,7 @@ The following distributions ship xf86-input-wacom:
 * Ubuntu 10.04 and later
 
 = Building the driver =
-{{Building the driver}}
+{{:Building the driver}}
 
 
 
