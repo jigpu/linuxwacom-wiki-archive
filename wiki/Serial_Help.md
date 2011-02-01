@@ -149,7 +149,7 @@ correctly. You do this by comparing your BIOS values with the values set
 when the kernel boots up. The values in the BIOS will show up as COM1
 through COM3. Write the UART and IRQ values done, then reboot your
 system. Check your kernel boot log with the 'dmesg' command from a
-console, your looking to find some ttySX entries.
+console, you're looking to find some ttySX entries.
 
     Host@User# dmesg | grep ttyS
     serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A

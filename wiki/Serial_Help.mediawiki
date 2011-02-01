@@ -111,7 +111,7 @@ EndSection
 
 === Serial Port Configuration ===
 
-Before you can proceed to diagnose other areas of setting up your Wacom serial tablet, you need to first make sure the serial values are set up correctly. You do this by comparing your BIOS values with the values set when the kernel boots up. The values in the BIOS will show up as COM1 through COM3. Write the UART and IRQ values done, then reboot your system. Check your kernel boot log with the 'dmesg' command from a console, your looking to find some ttySX entries.
+Before you can proceed to diagnose other areas of setting up your Wacom serial tablet, you need to first make sure the serial values are set up correctly. You do this by comparing your BIOS values with the values set when the kernel boots up. The values in the BIOS will show up as COM1 through COM3. Write the UART and IRQ values done, then reboot your system. Check your kernel boot log with the 'dmesg' command from a console, you're looking to find some ttySX entries.
 
 <pre>
 Host@User# dmesg | grep ttyS
