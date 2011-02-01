@@ -59,7 +59,7 @@ Mailing lists
 IRC
 ---
 
-The official linuxwacom [IRC](/wiki/Irc "wikilink") channel is
+The official linuxwacom [IRC](/wiki/IRC "wikilink") channel is
 **\#linuxwacom** on **irc.freenode.net**. It is recommended if you ask
 questions there that you also ask them on the mailing list. Please be
 patient if you ask a question on IRC. People are not always watching the
