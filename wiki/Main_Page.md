@@ -68,7 +68,8 @@ channel.
 Development
 -----------
 
-Please see the [DeveloperPages](/wiki/DeveloperPages "wikilink").
+Please see the [DeveloperPages](/wiki/Category%3ADeveloperPages "wikilink")
+for development-related information.
 
 News
 ----
