@@ -49,13 +49,13 @@ Note that it may take a while until the uploaded tarballs are available through 
 | PenPartner
 | 0x03
 |-
-| New LLC Bamboo similiar to Earlier Graphires
+| Bamboo Pen (new LLC similar to earlier Graphires)
 | 0xD4
 |-
-| Bamboo 2FGT only
+| Bamboo Touch (2FGT only)
 | 0xD0
 |-
-| Bamboo 2FGT and penabled
+| Bamboo P & T (penabled with 2FGT)
 | 0xD1, 0xD2, 0xD3, 0xD6, 0xD7, 0xD8, 0xDA, 0xDB.  3&4FGT for 0xDA & 0xDB not supported.
 |-
 | TabletPC (penabled and no touch, no mouse)
