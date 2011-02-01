@@ -154,3 +154,6 @@ These work similar to older events but event filtering behavior is modified.  In
 * send(ABS_MT_POSITION_X,10) -> event is filtered
 * send(ABS_MT_SLOT,1) -> sends ABS_MT_SLOT=1
 * send(ABS_MT_POSITION_X,10) -> sends ABS_MT_POSITION_X=10
+
+
+[[Category:DeveloperPages]]

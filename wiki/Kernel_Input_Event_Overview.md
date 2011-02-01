@@ -2,6 +2,8 @@
 title: Kernel Input Event Overview
 permalink: wiki/Kernel_Input_Event_Overview/
 layout: wiki
+tags:
+ - DeveloperPages
 ---
 
 Simple/Generic Tablet Input Event Overview
