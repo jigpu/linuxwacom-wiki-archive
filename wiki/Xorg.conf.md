@@ -4,6 +4,21 @@ permalink: wiki/Xorg.conf/
 layout: wiki
 ---
 
+Note that in X Servers 1.5 or later (released Sep 3, 2008
+[1](http://lists.x.org/archives/xorg/2008-September/038187.html)), the
+default configuration of the X server will hotplug input devices if they
+are known to the server's configuration backend
+([HAL](http://hal.freedesktop.org) or in servers 1.8 and later
+[udev](http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html))
+
+The X server version running on your system is listed in the first lines
+of */var/log/Xorg.0.log*.
+
+An xorg.conf is only needed in special cases.
+
+Example xorg.conf
+=================
+
 Each device type (stylus, erasor, etc.) needs to be added as a separate
 InputDevice section and will appear as its own input device in X.
 
