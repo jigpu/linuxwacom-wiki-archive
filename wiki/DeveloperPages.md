@@ -8,8 +8,6 @@ For working tablet support, you need two vital pieces installed on your
 machine. A kernel driver that recognises the tablet and understands the
 hardware protocol, and an X driver that allows X to use the device.
 
-Some information
-
 X driver development
 ====================
 
