@@ -2,6 +2,8 @@
 title: Xorg.conf
 permalink: wiki/Xorg.conf/
 layout: wiki
+tags:
+ - HOWTO
 ---
 
 Note that in X Servers 1.5 or later (released Sep 3, 2008

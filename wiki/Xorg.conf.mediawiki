@@ -75,3 +75,5 @@ Section "ServerLayout"
   InputDevice   "pad"   # For Intuos3/Intuos4/CintiqV5/Graphire4/Bamboo/BambooPT
 EndSection
 </pre>
+
+[[Category:HOWTO]]
