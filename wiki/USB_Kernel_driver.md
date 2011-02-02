@@ -79,7 +79,5 @@ support your tablet or hid is in control.
             input0,hiddev0: USB HID v1.00 Mouse [Tablet PTK-640] on usb1:5.0
             input0: Tablet PTK-640 on usb1:5.0
 
-Viewing the Raw Data
---------------------
-
-See [Analysing kernel events](/wiki/Analysing_kernel_events "wikilink")
+To check the event stream coming from the kernel, see [Analysing kernel
+events](/wiki/Analysing_kernel_events "wikilink")

@@ -62,6 +62,4 @@ If instead you got any of the following lines in your log, the wacom driver did 
     	input0: Tablet PTK-640 on usb1:5.0
 </pre>
 
-== Viewing the Raw Data ==
-
-See [[Analysing kernel events]]
+To check the event stream coming from the kernel, see [[Analysing kernel events]]
