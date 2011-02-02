@@ -40,10 +40,12 @@ How do I get the special features of my stylus to work?
 
 There are many different types of styli, mice, and pucks. All of them
 work to varying degrees, so if you are running into trouble, please send
-an email to the [mailing lists](mailing_lists "wikilink"). Also, if you
-are having trouble with the stable build of linuxwacom, try the beta.
-Many of the tools have been recently added and have not yet been moved
-to the production release.
+an email to the [mailing lists](mailing_lists "wikilink").
+
+If you are using the stable build of the
+[linuxwacom](linuxwacom "wikilink") backports, try the beta. Many of the
+tools have been recently added and have not yet been moved to the
+production release.
 
 Note, tilt is only supported with protocol V tablets, which include
 Intuos series and Cintiq 21UX/20WSX/12WX to date (July. 31, 2009). Any
