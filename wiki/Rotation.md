@@ -1,0 +1,44 @@
+---
+title: Rotation
+permalink: wiki/Rotation/
+layout: wiki
+tags:
+ - Tablet_PC_Set_Up
+---
+
+Rotation Scripts
+----------------
+
+Content Pending.
+
+Magick Rotation
+---------------
+
+Magick Rotation is a Python gtk app. that supports automatic rotation
+for Dell, HP, and Lenovo tablet pc's. It's located on Launchpad at:
+<https://launchpad.net/magick-rotation>
+
+### Feature set
+
+-   automatic rotation of screen orientation along with devices (stylus,
+    eraser, & touch) whether on Wacom or evdev drivers
+-   left click on tray icon - toggles touch on & off
+-   right click on tray icon - access to disable switch, Setup, and Quit
+
+#### Setup Options
+
+-   autostart
+-   screen orientation for tablet mode
+-   turn off touch toggle feature
+-   reverse BIOS hinge switch values - for HP Compaq TC4200 & 4400
+-   Advanced Setup access
+-   Save, About, & Close
+
+#### Advanced Setup Options
+
+-   entries for shell commands to run before and after switch to tablet
+    and laptop
+-   enable notification
+-   notification timeout
+-   information update interval
+-   turn on debugging tool and log
