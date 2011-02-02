@@ -1,3 +1,5 @@
+Wacom devices need a specific kernel driver to claim the tablet. The standard USB HID driver will not expose all features of the tablets and thus the tablet will not work. 
+
 ==Testing Tablet Detection ==
 
 In this section we will determine which driver, if any, claims control over the tablet. There are at least two drivers that are interested:
@@ -63,3 +65,6 @@ If instead you got any of the following lines in your log, the wacom driver did 
 </pre>
 
 To check the event stream coming from the kernel, see [[Analysing kernel events]]
+
+[[Category:HOWTO]]
+[[Category:DeveloperPages]]

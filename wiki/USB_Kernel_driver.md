@@ -2,7 +2,14 @@
 title: USB Kernel driver
 permalink: wiki/USB_Kernel_driver/
 layout: wiki
+tags:
+ - HOWTO
+ - DeveloperPages
 ---
+
+Wacom devices need a specific kernel driver to claim the tablet. The
+standard USB HID driver will not expose all features of the tablets and
+thus the tablet will not work.
 
 Testing Tablet Detection
 ------------------------
