@@ -19,6 +19,7 @@ make && sudo make install
 
 --enable-wacom enables the build of the wacom kernel driver. If you do not want to build it, simply leave out this flag. The prefix of /usr is correct on most distributions (unfortunately, the default is still /usr/local which isn't used widely anymore).
 
+A more exhaustive description of the build process is avaiable in [[Building linuxwacom]].
 
 == linuxwacom xdrv ==
 The linuxwacom tarball includes an X driver for X servers up to including the 1.6.x series. For newer X servers, please use [[xf86-input-wacom]] instead, the linuxwacom X driver will not build.

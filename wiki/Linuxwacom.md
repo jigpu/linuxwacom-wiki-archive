@@ -35,6 +35,9 @@ not want to build it, simply leave out this flag. The prefix of /usr is
 correct on most distributions (unfortunately, the default is still
 /usr/local which isn't used widely anymore).
 
+A more exhaustive description of the build process is avaiable in
+[Building linuxwacom](/wiki/Building_linuxwacom "wikilink").
+
 linuxwacom xdrv
 ---------------
 
