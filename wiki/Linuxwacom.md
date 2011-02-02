@@ -9,6 +9,9 @@ including 1.6. Note that the kernel patches provided here are backports,
 including new device support for kernels. If you run a reasonably modern
 desktop distribution, you do not need the linuxwacom tarballs.
 
+All linuxwacom-related pages are compiled in the
+[Category%3ALinuxwacom](/wiki/Category%3ALinuxwacom "wikilink").
+
 Download
 --------
 
