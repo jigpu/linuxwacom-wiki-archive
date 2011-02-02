@@ -1,5 +1,3 @@
-This page contains Brand and model specific information to get your tablet pc running and configured.
-
-To add a page to the list below, apply the '''&#91;&#91;Category:Tablet_PC_Set_Up&#93;&#93;''' tag to the bottom of the page's source.
+#REDIRECT [[Category:Tablet_PC_Set_Up]]
 
 [[Category:HOWTO]]
