@@ -2,14 +2,6 @@
 
 Serial tablet users rejoice: you can skip this entire section. Please go to the [[Viewing Wacom Data]] (wacdump) page for details on viewing the tablet output. USB users stay put; we need to tweak your kernel.
 
-Kernel modules must be recompiled for each new kernel so I can't just provide binaries. By the time you read this, my present kernel will be entirely out of date with yours.
-
-In any event, many new features are available in the latest drivers from the Linux Wacom Project, so I wholly recommend using them over the drivers provided by your standard distribution. Rest assured, continuous efforts are being made to get these changes merged back into the Linux kernel. However, the changes can normally only merged into the next kernel release, instead of the current one.
-
-For those who don't like upgrading kernels, here is a safe statement: if you are not using a newly released tablet model and you are running a recently released kernel version, chances are that you don't need to update your kernel driver from linuxwacom.
-
-Note: If your system is running on a 2.6.9 or older kernel and you want to use a new Wacom device, upgrading to a newer version (preferablely 2.6.18 or later) is required since we do not support kernels older than 2.6.9 any more.
-
 ==Testing Tablet Detection ==
 
 In this section we will determine which driver, if any, claims control over the tablet. There are at least two drivers that are interested:
