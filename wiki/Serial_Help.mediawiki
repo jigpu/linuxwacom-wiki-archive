@@ -1,7 +1,7 @@
 === Scope ===
 
 This page is an effort to help aid you in setting up your serial tablet by breaking down the main problem areas. With some
-time and patience, you should be able to apply the appropriate changes in order to make use of your Wacom serial device.
+time and patience, you should be able to apply the appropriate changes in order to make use of your Wacom serial device. It is assumed that you have a basic understanding of using a console or terminal emulator within linux. Tasks such as searching, viewing, and editing of text files will be necessary.
 
 === Checklist ===
 
