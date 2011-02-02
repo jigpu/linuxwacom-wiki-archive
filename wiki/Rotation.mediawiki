@@ -24,4 +24,4 @@ Magick Rotation is a Python gtk app. that supports automatic rotation for Dell, 
 * information update interval
 * turn on debugging tool and log
 
-[[Category:Tablet_PC_Set_Up]]
+[[Category:HOWTO]]

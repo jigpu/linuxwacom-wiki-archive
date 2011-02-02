@@ -3,7 +3,7 @@ title: Rotation
 permalink: wiki/Rotation/
 layout: wiki
 tags:
- - Tablet_PC_Set_Up
+ - HOWTO
 ---
 
 Rotation Scripts
