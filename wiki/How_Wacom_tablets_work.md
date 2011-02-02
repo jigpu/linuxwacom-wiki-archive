@@ -17,7 +17,7 @@ start there.
 When a Wacom serial tablet is connected to a serial port, software can
 interact with it directly by opening the appropriate device, usually
 /dev/ttyS0. The XFree86 Wacom driver (wacom\_drv.o) does precisely this,
-and all stylus movements are converted into XInput events for programs
+and all stylus movements are converted into X input events for programs
 like the Gimp to turn into fluid brush strokes.
 
 Wacom tablets are capable of handling a number of different data
