@@ -18,8 +18,9 @@ Testing Tablet Detection
 In this section we will determine which driver, if any, claims control
 over the tablet. There are at least two drivers that are interested:
 
-`# (usb)hid.o which may think it is an HID device (for kernel 2.6.17 or older),`  
-`# the wacom driver which should identify the tablet as its own.`
+1.  (usb)hid.o which may think it is an HID device (for kernel 2.6.17 or
+    older),
+2.  the wacom driver which should identify the tablet as its own.
 
 To see which driver is driving the tablet, issuing more
 /proc/bus/usb/devices should list something similiar to the following:
