@@ -13,6 +13,8 @@ On most desktop distributions, you need [[xf86-input-wacom]] as your X driver. N
 If your device is not supported by the current kernel and no Wacom patches are pending, you may be lucky with the [[linuxwacom]] kernel patches. Note that these apply outside of your distribution and you will need to re-install each time you update your distribution kernel.
 
 == User help ==
+Click [[:Category:HOWTO|here]] for a list of HOWTOs.
+
 The [[HOWTO]] contains step-by-step instructions for getting your tablet running. If you run into trouble, let us know so we can get the documentation updated.
 The most commonly asked questions and the best answers available to date are in the [[FAQ]]. If you still have problem, please check [http://sourceforge.net/tracker/?group_id=69596 Trackers] to see if someone else has reported the issue or has a patch for the problem.
 

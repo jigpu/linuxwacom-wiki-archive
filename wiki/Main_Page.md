@@ -46,6 +46,8 @@ time you update your distribution kernel.
 User help
 ---------
 
+Click [here](/wiki/Category%3AHOWTO "wikilink") for a list of HOWTOs.
+
 The [HOWTO](/wiki/HOWTO "wikilink") contains step-by-step instructions for
 getting your tablet running. If you run into trouble, let us know so we
 can get the documentation updated. The most commonly asked questions and
