@@ -537,7 +537,7 @@ Here is another sample from Red Hat Enterprise Linux ES v.4:
         ----------------------------------------
 
 Building wacom.c
-----------------
+================
 
 To build the wacom.ko kernel module, you need to configure wacom as a
 kernel module under your kernel source tree first. The kernel sources
