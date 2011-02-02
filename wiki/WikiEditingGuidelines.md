@@ -15,6 +15,8 @@ mediawiki has a feature called
 pages. Each page can be part of zero, one or more categories. We
 currently use the following categories:
 
+-   [Category%3AHOWTO](/wiki/Category%3AHOWTO "wikilink"): for any HOWTO's s
+    related to the driver setup
 -   [Category%3ADeveloperPages](/wiki/Category%3ADeveloperPages "wikilink"):
     for anything related to development
 -   [Category%3AMaintainerPages](/wiki/Category%3AMaintainerPages "wikilink"):
