@@ -54,13 +54,10 @@ that apply to the [linuxwacom](linuxwacom "wikilink") tarballs are
 available separately [here](/wiki/Category%3ALinuxwacom "wikilink"). If you
 run a modern distribution, you will not need this.
 
-The [HOWTO](/wiki/HOWTO "wikilink") contains step-by-step instructions for
-getting your tablet running. If you run into trouble, let us know so we
-can get the documentation updated. The most commonly asked questions and
-the best answers available to date are in the [FAQ](/wiki/FAQ "wikilink"). If
-you still have problem, please check
-[Trackers](http://sourceforge.net/tracker/?group_id=69596) to see if
-someone else has reported the issue or has a patch for the problem.
+The most commonly asked questions and the best answers available to date
+are in the [FAQ](/wiki/FAQ "wikilink"). If you still have problem, please
+check [Trackers](http://sourceforge.net/tracker/?group_id=69596) to see
+if someone else has reported the issue or has a patch for the problem.
 
 Mailing lists
 -------------
