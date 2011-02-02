@@ -116,9 +116,11 @@ xorg.conf file will show up here, such as setting the cursor speed to
 
 ### Configuring xorg.conf
 
-This is a basic xorg.conf configuration file showing the relevant
-sections, tested with a Intuos 2 serial tablet. These same values should
-also work with other Wacom serial tablet models.
+Here we have the relevant sections needed in order to make your tablet
+work once X is started. The InputDevice sections are isolated sections
+and can be placed as is under your keyboard and mouse InputDevice
+entries. The three InputDevice entries seen in the ServerLayout section
+below, will need to be added to the existing ServerLayout section.
 
     Section "InputDevice"
             Driver          "wacom"
