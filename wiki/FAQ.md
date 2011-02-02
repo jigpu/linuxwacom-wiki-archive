@@ -55,14 +55,15 @@ xorg.conf or not.
 Is hotplug supported for X input devices?
 -----------------------------------------
 
-Yes, but only for devices configured via HAL or xorg.conf.d. If you have
-your devices configured in the xorg.conf, you can work around this by
-switching virtual terminals after replugging your tablet. That is, press
-Ctrl + Alt + F1 together then release them (screen turns to console);
-and press Ctrl + Alt + F7 together then release them (screen returns
-back to normal). On some distributions (e.g. Fedora), the original X
-session runs on VT1, hence substitute the commands with Ctrl + Alt + F2
-and Ctrl + Alt + F1.
+Yes, but only for devices configured via [HAL or
+xorg.conf.d](/wiki/Configuring_X "wikilink"). If you have your devices
+configured in the [xorg.conf](/wiki/Xorg.conf "wikilink"), you can work around
+this by switching virtual terminals after replugging your tablet. That
+is, press Ctrl + Alt + F1 together then release them (screen turns to
+console); and press Ctrl + Alt + F7 together then release them (screen
+returns back to normal). On some distributions (e.g. Fedora), the
+original X session runs on VT1, hence substitute the commands with Ctrl
++ Alt + F2 and Ctrl + Alt + F1.
 
 Who is responsible for this code?
 ---------------------------------
