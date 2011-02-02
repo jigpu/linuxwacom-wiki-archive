@@ -22,8 +22,8 @@ over the tablet. There are at least two drivers that are interested:
     older),
 2.  the wacom driver which should identify the tablet as its own.
 
-To see which driver is driving the tablet, issuing more
-/proc/bus/usb/devices should list something similiar to the following:
+To see which driver is driving the tablet, issuing *more
+/proc/bus/usb/devices* should list something similar to the following:
 
         [jej@ayukawa wacom]$more /proc/bus/usb/devices
         T:  Bus=01 Lev=01 Prnt=01 Port=01 Cnt=02 Dev#=  3 Spd=12  MxCh= 0
@@ -37,9 +37,11 @@ To see which driver is driving the tablet, issuing more
 
 where *Vendor=056a* indicates a Wacom device. *Driver=wacom* means the
 Wacom driver is in control of the tablet. If you see anything other than
-wacom after *Driver=*, at least hid-core.c needs to be updated.
+wacom after *Driver=*, your model is not supported in your current
+kernel and the kernel driver [ needs to be
+update](/wiki/Updating_the_kernel_driver "wikilink").
 
-On newer 2.6 systems, *more /proc/bus/input/devices* gives you
+Alternatively, *more /proc/bus/input/devices* gives you
 
         [jej@ayukawa wacom]$more /proc/bus/input/devices
         I: Bus=0003 Vendor=056a Product=0042 Version=1.15
@@ -55,7 +57,7 @@ On newer 2.6 systems, *more /proc/bus/input/devices* gives you
 where, again, *Vendor=056a* indicates a Wacom device. *Name="Wacom
 Intuos2 6x8"* means an Intuos2 6x8 tablet reported to
 */dev/input/event3*. If there is no Wacom after *Name=*, you need to
-update wacom.c.
+[update the kernel driver](/wiki/Updating_the_kernel_driver "wikilink").
 
 On older 2.6 kernel systems, unplug then replug your tablet after
 issuing tail -f /var/log/messages, you should see a flurry of activity.
@@ -76,12 +78,11 @@ distribution.
 
 If all went well like above, the USB device was successfully detected
 and handled by the wacom driver. This presumably means that information
-like pressure and tilt will be received on */dev/input/event3*. You are
-ready to configure the X driver Downloading the Code.
+like pressure and tilt will be received on */dev/input/event3*.
 
 If instead you got any of the following lines in your log, the wacom
-driver did not get control. Either your wacom driver doesn't support
-your tablet or hid is in control.
+driver did not get control. Either your wacom kernel driver doesn't
+support your tablet or hid is in control.
 
             input0,hiddev0: USB HID v1.00 Mouse [Tablet PTK-640] on usb1:5.0
             input0: Tablet PTK-640 on usb1:5.0
