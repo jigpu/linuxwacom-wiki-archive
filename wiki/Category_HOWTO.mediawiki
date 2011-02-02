@@ -1,1 +1,2 @@
 This page contains a number of HOWTOs to get the driver configured and running on your machine.
+To add a page to this list, apply the '''&#91;&#91;Category:HOWTO&#93;&#93;''' tag to the page's source.
