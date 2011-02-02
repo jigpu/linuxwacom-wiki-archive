@@ -2,7 +2,7 @@ Wacom tablets are available in serial and USB configurations. They are also sold
 
 === Serial Tablet Operation - The Short Story ===
 
-When a Wacom serial tablet is connected to a COM port, software can interact with it directly by opening the appropriate device, usually /dev/ttyS0. The XFree86 Wacom driver (wacom_drv.o) does precisely this, and all stylus movements are converted into XInput events for programs like the Gimp to turn into fluid brush strokes.
+When a Wacom serial tablet is connected to a serial port, software can interact with it directly by opening the appropriate device, usually /dev/ttyS0. The XFree86 Wacom driver (wacom_drv.o) does precisely this, and all stylus movements are converted into XInput events for programs like the Gimp to turn into fluid brush strokes.
 
 Wacom tablets are capable of handling a number of different data protocols, and the Linux Wacom Project code currently utilitizes two, Wacom Protocol IV and Protocol V. Each operates with a fixed-sized packet, the length of which depends on the model and ROM version.
 

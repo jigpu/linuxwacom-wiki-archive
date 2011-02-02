@@ -14,7 +14,7 @@ start there.
 
 ### Serial Tablet Operation - The Short Story
 
-When a Wacom serial tablet is connected to a COM port, software can
+When a Wacom serial tablet is connected to a serial port, software can
 interact with it directly by opening the appropriate device, usually
 /dev/ttyS0. The XFree86 Wacom driver (wacom\_drv.o) does precisely this,
 and all stylus movements are converted into XInput events for programs
