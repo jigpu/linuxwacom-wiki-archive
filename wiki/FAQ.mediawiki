@@ -1,5 +1,5 @@
 == Why linuxwacom and xf86-input-wacom? ==
-xf86-input-wacom was created as a fork of linuxwacom for the following reasons:
+[[xf86-input-wacom]] was created as a fork of [[linuxwacom]] for the following reasons:
 * linuxwacom has collected some amount of cruft over the years, including some amount of ifdefs that attempt to support every X server version since XFree86-4.
 * xf86-input-wacom is an X11-only driver, the kernel driver is not part of xf86-input-wacom.
 * Ping has expressed a desire to keep linuxwacom in CVS, in part to avoid disruption for current users of the linuxwacom releases.

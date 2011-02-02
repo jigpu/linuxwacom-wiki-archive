@@ -7,8 +7,8 @@ layout: wiki
 Why linuxwacom and xf86-input-wacom?
 ------------------------------------
 
-xf86-input-wacom was created as a fork of linuxwacom for the following
-reasons:
+[xf86-input-wacom](xf86-input-wacom "wikilink") was created as a fork of
+[linuxwacom](linuxwacom "wikilink") for the following reasons:
 
 -   linuxwacom has collected some amount of cruft over the years,
     including some amount of ifdefs that attempt to support every X
