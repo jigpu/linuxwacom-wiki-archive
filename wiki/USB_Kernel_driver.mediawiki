@@ -62,14 +62,6 @@ If instead you got any of the following lines in your log, the wacom driver did 
     	input0: Tablet PTK-640 on usb1:5.0
 </pre>
 
-== Updated wacom.c ==
-
-The wacom kernel driver (wacom_wac.c and wacom_sys.c) that is available in linuxwacom-0.8.6-1.tar.bz2 supports Tablet PCs (0xE2 and 0xE3), which will be available in kernel version 2.6.34.
-
-[[Fixed device files with udev]]
-
-
-
 == Building wacom.c ==
 
 To build the wacom.ko kernel module, you need to configure wacom as a kernel module under your kernel source tree first. The kernel sources are required as described on the configuration page.

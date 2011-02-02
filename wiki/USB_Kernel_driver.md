@@ -79,15 +79,6 @@ support your tablet or hid is in control.
             input0,hiddev0: USB HID v1.00 Mouse [Tablet PTK-640] on usb1:5.0
             input0: Tablet PTK-640 on usb1:5.0
 
-Updated wacom.c
----------------
-
-The wacom kernel driver (wacom\_wac.c and wacom\_sys.c) that is
-available in linuxwacom-0.8.6-1.tar.bz2 supports Tablet PCs (0xE2 and
-0xE3), which will be available in kernel version 2.6.34.
-
-[Fixed device files with udev](/wiki/Fixed_device_files_with_udev "wikilink")
-
 Building wacom.c
 ----------------
 
