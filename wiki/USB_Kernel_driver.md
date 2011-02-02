@@ -4,14 +4,6 @@ permalink: wiki/USB_Kernel_driver/
 layout: wiki
 ---
 
-The USB Kernel Driver
-=====================
-
-Serial tablet users rejoice: you can skip this entire section. Please go
-to the [Viewing Wacom Data](/wiki/Viewing_Wacom_Data "wikilink") (wacdump)
-page for details on viewing the tablet output. USB users stay put; we
-need to tweak your kernel.
-
 Testing Tablet Detection
 ------------------------
 

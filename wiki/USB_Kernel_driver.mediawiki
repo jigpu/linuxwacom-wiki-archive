@@ -1,7 +1,3 @@
-= The USB Kernel Driver =
-
-Serial tablet users rejoice: you can skip this entire section. Please go to the [[Viewing Wacom Data]] (wacdump) page for details on viewing the tablet output. USB users stay put; we need to tweak your kernel.
-
 ==Testing Tablet Detection ==
 
 In this section we will determine which driver, if any, claims control over the tablet. There are at least two drivers that are interested:
