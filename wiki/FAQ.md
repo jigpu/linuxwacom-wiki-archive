@@ -29,12 +29,6 @@ additional patches.
 Which devices are supported?
 ----------------------------
 
-NOTE: Only ISDV4 serial devices (TabletPC's) are currently supported by
-xf86-input-wacom (Xserver 1.7 or later). A [patch
-set](http://sourceforge.net/mailarchive/forum.php?thread_name=4BEB198B.9030809%40sleif.de&forum_name=linuxwacom-discuss)
-for the serial tablets needs further development before inclusion into
-xf86-input-wacom.
-
 How do I configure my device
 ----------------------------
 
