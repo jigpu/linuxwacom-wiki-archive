@@ -48,6 +48,12 @@ User help
 
 Click [here](/wiki/Category%3AHOWTO "wikilink") for a list of HOWTOs.
 
+Note that because [linuxwacom](linuxwacom "wikilink") is not necessarily
+available in modern distributions anymore, HOWTOs and other information
+that apply to the [linuxwacom](linuxwacom "wikilink") tarballs are
+available separately [here](/wiki/Category%3ALinuxwacom "wikilink"). If you
+run a modern distribution, you will not need this.
+
 The [HOWTO](/wiki/HOWTO "wikilink") contains step-by-step instructions for
 getting your tablet running. If you run into trouble, let us know so we
 can get the documentation updated. The most commonly asked questions and
