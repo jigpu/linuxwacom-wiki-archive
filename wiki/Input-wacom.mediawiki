@@ -1,0 +1,29 @@
+The input-wacom driver is the usb kernel driver/module paired with xf86-input-wacom.  Intended for developers and testers only.  It provides backward support for kernels 2.6.26 to 2.6.37.  Those with kernels 2.6.36 or higher should use their distro supplied wacom.ko.  Any new kernel driver features and model support should be submitted to the [https://patchwork.kernel.org/project/linux-input/ linux-input mailing list].
+
+
+== Download ==
+
+Please download the latest release from the [https://sourceforge.net/projects/linuxwacom/files/ sourceforge download section].  The input-wacom folder is in the xf86-input-wacom folder.
+
+== Installing from the tarball ==
+In the following, you need to replace the version number with the one from your downloaded tarball.
+<pre>
+tar xjvf input-wacom-0.10.10-1.tar.bz2
+cd input-wacom-0.10.10-1
+./autogen.sh --prefix=/usr
+</pre>
+The prefix of /usr is correct on most distributions (unfortunately, the default is still /usr/local which isn't used widely anymore).  If you're on a 64-bit machine, you may also need to add --libdir=/usr/lib64.  If unsure, search for evdev_drv.so.  If it is in /usr/lib/xorg/modules/input, then the prefix of /usr is enough.  If it is in /usr/lib64/xorg/modules/input, even if it is in /usr/lib/xorg/modules/input, then you need to specify --libdir=/usr/lib64.
+
+Then copy the wacom.ko module to the appropriate directory.  Depending on your kernel you may need to locate the folder the compiled wacom.ko is in and modify the copy command accordingly.
+<pre>
+cp ./2.6.30/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko
+</pre>
+Rebuild all of the module dependencies.
+<pre>
+depmod -a
+</pre>
+
+== X driver ==
+Please see [[Xf86-input-wacom]] for the X driver required for X servers 1.7 and up.
+
+[[Category:DeveloperPages]]
