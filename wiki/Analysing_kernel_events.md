@@ -100,7 +100,8 @@ information to set up the device correctly.
 Event stream
 ------------
 
-An example event stream from evtest looks like this:
+To see events, you need to tap the tablet with the pen or any other
+tool. An example event stream from evtest looks like this:
 
     Event: time 1296609871.898669, type 3 (Absolute), code 0 (X), value 33213
     Event: time 1296609871.898679, type 3 (Absolute), code 1 (Y), value 20076
@@ -129,6 +130,11 @@ An example event stream from evtest looks like this:
 output, you can see three event frames. The events themselves update
 various axes (x, y, distance, etc.). The output itself is mostly
 self-explanatory.
+
+If you don't see any events, the most common cause is that you forgot to
+[disable the X driver](#Disabling_the_X_driver "wikilink"). If you are
+sure you have done so, the kernel driver does not work with your model.
+You need to [submit a bug](/wiki/Submitting_Bugs "wikilink").
 
 Disabling the X driver
 ======================

@@ -75,8 +75,7 @@ Testing ... (interrupt to exit)
 The device information contains the device name, various IDs and the events supported by this device. e.g. in the output above, we can see the tablet has a Button 0, Button 1, a relative wheel axis, and absolute x/y/z axes (plus more, the output was shortened). The X driver uses this information to set up the device correctly.
 
 == Event stream ==
-
-An example event stream from evtest looks like this:
+To see events, you need to tap the tablet with the pen or any other tool. An example event stream from evtest looks like this:
 <pre>
 Event: time 1296609871.898669, type 3 (Absolute), code 0 (X), value 33213
 Event: time 1296609871.898679, type 3 (Absolute), code 1 (Y), value 20076
@@ -104,6 +103,8 @@ Event: time 1296609871.906702, -------------- Report Sync ------------
 
 ''Report Sync'' divides the different hardware events. i.e in the above output, you can see three event frames. The events themselves update various axes (x, y, distance, etc.).
 The output itself is mostly self-explanatory.
+
+If you don't see any events, the most common cause is that you forgot to [[#Disabling the X driver|disable the X driver]]. If you are sure you have done so, the kernel driver does not work with your model. You need to [[Submitting Bugs|submit a bug]].
 
 = Disabling the X driver =
 The wacom X driver puts an ''EVIOCGRAB'' on the device file when the device is enabled. Once the grab is established, only a single process (the X server) will receive events from that device. Thus, if you run evtest from within X, you will only see the device information, but no events.
