@@ -15,8 +15,6 @@ number for the file name. Please look for proper one with wacom under
 
 Below are examples from Debian GNU/Linux distribution:
 
-60-wacom.rules on systems using ATTRS
-
 Systems with only one Wacom device:
 
         # udev rules for wacom tablets.
@@ -145,112 +143,6 @@ Systems with more than one Wacom devices:
         ATTRS{idVendor}=="056a", ACTION=="add", RUN+="check_driver wacom $devpath $env{ID_BUS}"
 
         LABEL="wacom_end"
-
-60-wacom.rules on systems using SYSFS
-
-Systems with only one Wacom device:
-
-        # udev rules for wacom devices
-        # will create:
-        #   /dev/input/wacom
-        #   /dev/input/wacom-touch
-        BUS=="usb", KERNEL=="event*", SYSFS{bInterfaceNumber}=="00", ENV{WACOM_TYPE}="stylus"
-        BUS=="usb", KERNEL=="event*", SYSFS{bInterfaceNumber}=="01", ENV{WACOM_TYPE}="touch"
-
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", ENV{WACOM_TYPE}!="touch", SYMLINK+="input/wacom"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", ENV{WACOM_TYPE}=="touch", SYMLINK+="input/wacom-touch"
-
-Systems with more than one Wacom devices:
-
-        # udev rules for wacom devices
-        # will create:
-        #   /dev/input/wacom
-        #   /dev/input/wacom-tablets/
-        #   /dev/input/wacom-tablets/-
-        #
-        # The last rule is intended for cases when you have more than one tablet
-        # of the same model. The id is usb port dependent.
-        #
-        BUS=="usb", KERNEL=="event*", SYSFS{bInterfaceNumber}=="00", ENV{WACOM_TYPE}="stylus"
-        BUS=="usb", KERNEL=="event*", SYSFS{bInterfaceNumber}=="01", ENV{WACOM_TYPE}="touch"
-
-        # Type-named links for multiple tablets.  If you want to use multiple
-        # tablets of the _same_ type, you will probably need to use the links
-        # from /dev/input/wacom-tablets to identify which is plugged into what usb
-        # port.  For different tablet types though, just pick your links from
-        # the list below.
-        #
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0000", SYMLINK+="input/wacom-tablets/penpartner input/wacom-tablets/penpartner-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0010", SYMLINK+="input/wacom-tablets/graphire input/wacom-tablets/graphire-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0011", SYMLINK+="input/wacom-tablets/graphire2-4x5 input/wacom-tablets/graphire2-4x5-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0012", SYMLINK+="input/wacom-tablets/graphire2-5x7 input/wacom-tablets/graphire2-5x7-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0013", SYMLINK+="input/wacom-tablets/graphire3 input/wacom-tablets/graphire3-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0014", SYMLINK+="input/wacom-tablets/graphire3-6x8 input/wacom-tablets/graphire3-6x8-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0015", SYMLINK+="input/wacom-tablets/graphire4-4x5 input/wacom-tablets/graphire4-4x5-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0016", SYMLINK+="input/wacom-tablets/graphire4-6x8 input/wacom-tablets/graphire4-6x8-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0017", SYMLINK+="input/wacom-tablets/bamboofun-4x5 input/wacom-tablets/bamboofun-4x5-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0018", SYMLINK+="input/wacom-tablet/bamboofun-6x8 input/wacom-tablets/bamboofun-6x8"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0019", SYMLINK+="input/wacom-tablet/bamboo1-medium input/wacom-tablets/bamboo1-medium"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0060", SYMLINK+="input/wacom-tablets/volito input/wacom-tablets/volito-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0061", SYMLINK+="input/wacom-tablets/penstation2 input/wacom-tablets/penstation2-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0062", SYMLINK+="input/wacom-tablets/volito2-4x5 input/wacom-tablets/volito2-4x5-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0063", SYMLINK+="input/wacom-tablets/volito2-2x3 input/wacom-tablets/volito2-2x3-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0064", SYMLINK+="input/wacom-tablets/penpartner2 input/wacom-tablets/penpartner2-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0020", SYMLINK+="input/wacom-tablets/intuos-4x5 input/wacom-tablets/intuos-4x5-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0021", SYMLINK+="input/wacom-tablets/intuos-6x8 input/wacom-tablets/intuos-6x8-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0022", SYMLINK+="input/wacom-tablets/intuos-9x12 input/wacom-tablets/intuos-9x12-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0023", SYMLINK+="input/wacom-tablets/intuos-12x12 input/wacom-tablets/intuos-12x12-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0024", SYMLINK+="input/wacom-tablets/intuos-12x18 input/wacom-tablets/intuos-12x18-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0030", SYMLINK+="input/wacom-tablets/pl400 input/wacom-tablets/pl400-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0031", SYMLINK+="input/wacom-tablets/pl500 input/wacom-tablets/pl500-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0032", SYMLINK+="input/wacom-tablets/pl600 input/wacom-tablets/pl600-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0033", SYMLINK+="input/wacom-tablets/pl600sx input/wacom-tablets/pl600sx-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0034", SYMLINK+="input/wacom-tablets/pl550 input/wacom-tablets/pl550-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0035", SYMLINK+="input/wacom-tablets/pl800 input/wacom-tablets/pl800-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0037", SYMLINK+="input/wacom-tablets/pl700 input/wacom-tablets/pl700-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0038", SYMLINK+="input/wacom-tablets/pl510 input/wacom-tablets/pl510-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0039", SYMLINK+="input/wacom-tablets/dtu710 input/wacom-tablets/dtu710-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00c0", SYMLINK+="input/wacom-tablets/dtf521 input/wacom-tablets/dtf521-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00c4", SYMLINK+="input/wacom-tablets/dtf720 input/wacom-tablets/dtf720-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0003", SYMLINK+="input/wacom-tablets/cintiq_partner input/wacom-tablets/cintiq_partner-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0041", SYMLINK+="input/wacom-tablets/intuos2-4x5 input/wacom-tablets/intuos2-4x5-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0042", SYMLINK+="input/wacom-tablets/intuos2-6x8 input/wacom-tablets/intuos2-6x8-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0043", SYMLINK+="input/wacom-tablets/intuos2-9x12 input/wacom-tablets/intuos2-9x12-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0044", SYMLINK+="input/wacom-tablets/intuos2-12x12 input/wacom-tablets/intuos2-12x12-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0045", SYMLINK+="input/wacom-tablets/intuos2-12x18 input/wacom-tablets/intuos2-12x18-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b0", SYMLINK+="input/wacom-tablets/intuos3-4x5 input/wacom-tablets/intuos3-4x5-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b1", SYMLINK+="input/wacom-tablets/intuos3-6x8 input/wacom-tablets/intuos3-6x8-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b2", SYMLINK+="input/wacom-tablets/intuos3-9x12 input/wacom-tablets/intuos3-9x12-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b3", SYMLINK+="input/wacom-tablets/intuos3-12x12 input/wacom-tablets/intuos3-12x12-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b4", SYMLINK+="input/wacom-tablets/intuos3-12x19 input/wacom-tablets/intuos3-12x19-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b5", SYMLINK+="input/wacom-tablets/intuos3-6x11 input/wacom-tablets/intuos3-6x11-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="003f", SYMLINK+="input/wacom-tablets/cintiq21ux input/wacom-tablets/cintiq21ux-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0047", SYMLINK+="input/wacom-tablets/intuos2-6x8a input/wacom-tablets/intuos2-6x8-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b7", SYMLINK+="input/wacom-tablets/intuos3-4x6 input/wacom-tablets/intuos3-4x6-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b8", SYMLINK+="input/wacom-tablets/intuos4-4x6 input/wacom-tablets/intuos4-4x6-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00b9", SYMLINK+="input/wacom-tablets/intuos4-6x9 input/wacom-tablets/intuos4-6x9-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00ba", SYMLINK+="input/wacom-tablets/intuos4-8x13 input/wacom-tablets/intuos4-8x13-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00bb", SYMLINK+="input/wacom-tablets/intuos4-12x19 input/wacom-tablets/intuos4-12x19-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0065", SYMLINK+="input/wacom-tablets/bamboo input/wacom-tablets/bamboo-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00c6", SYMLINK+="input/wacom-tablets/cintiq12wx input/wacom-tablets/cintiq12wx-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00c5", SYMLINK+="input/wacom-tablets/cintiq20wsx input/wacom-tablets/cintiq20wsx-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00c7", ENV{WACOM_TYPE}!="touch", SYMLINK+="input/wacom-tablets/dtu1931 input/wacom-tablets/dtu1931-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0069", SYMLINK+="input/wacom-tablets/bamboo1 input/wacom-tablets/bamboo1-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0081", SYMLINK+="input/wacom-tablets/graphire_bt-6x8 input/wacom-tablets/graphire_bt-6x8-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0090", SYMLINK="input/wacom-tablets/tpc90"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0093", SYMLINK="input/wacom-tablets/tpc93-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="009a", SYMLINK="input/wacom-tablets/tpc9a-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d0", SYMLINK="input/tablet-bamboo2fg-$env{WACOM_TYPE}-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d1", SYMLINK="input/tablet-bamboo2fg-4x5-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d2", SYMLINK="input/tablet-bamboo-craft-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d3", SYMLINK="input/tablet-bamboo2fg-6x8-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d4", SYMLINK="input/tablet-bamboo-4x5-$env{WACOM_TYPE}"
-
-        # Convenience links for the common case of a single tablet.  We could do just this:
-        #SYSFS{idVendor}=="056a", SYMLINK+="input/wacom-$env{WACOM_TYPE}"
-        # but for legacy reasons, we keep the input/wacom link as the generic stylus device.
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", ENV{WACOM_TYPE}!="touch", SYMLINK+="input/wacom"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", ENV{WACOM_TYPE}=="touch", SYMLINK+="input/wacom-touch"
 
 Newer Mandriva Linux (Mandriva 2007 Spring and later) has an application
 called mousedrake which takes care of the setup and configuration of
