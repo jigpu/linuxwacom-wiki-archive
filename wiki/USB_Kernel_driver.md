@@ -39,7 +39,7 @@ where *Vendor=056a* indicates a Wacom device. *Driver=wacom* means the
 Wacom driver is in control of the tablet. If you see anything other than
 wacom after *Driver=*, your model is not supported in your current
 kernel and the kernel driver [ needs to be
-update](/wiki/Updating_the_kernel_driver "wikilink").
+updated](/wiki/Updating_the_kernel_driver "wikilink").
 
 Alternatively, *more /proc/bus/input/devices* gives you
 

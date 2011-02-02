@@ -22,7 +22,7 @@ To see which driver is driving the tablet, issuing ''more /proc/bus/usb/devices'
     E:  Ad=81(I) Atr=03(Int.) MxPS=  10 Ivl=5ms
 </pre>
 
-where ''Vendor=056a'' indicates a Wacom device. ''Driver=wacom'' means the Wacom driver is in control of the tablet. If you see anything other than wacom after ''Driver='', your model is not supported in your current kernel and the kernel driver [[Updating the kernel driver| needs to be update]].
+where ''Vendor=056a'' indicates a Wacom device. ''Driver=wacom'' means the Wacom driver is in control of the tablet. If you see anything other than wacom after ''Driver='', your model is not supported in your current kernel and the kernel driver [[Updating the kernel driver| needs to be updated]].
 
 Alternatively, ''more /proc/bus/input/devices'' gives you
 
