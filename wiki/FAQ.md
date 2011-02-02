@@ -32,7 +32,8 @@ Which devices are supported?
 How do I configure my device
 ----------------------------
 
-See the [HOWTO](/wiki/HOWTO "wikilink") section.
+See [Building the driver](/wiki/Building_the_driver "wikilink") and
+[Configuring X](/wiki/Configuring_X "wikilink")
 
 How do I get the special features of my stylus to work?
 -------------------------------------------------------

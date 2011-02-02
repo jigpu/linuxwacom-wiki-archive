@@ -13,7 +13,7 @@ xf86-input-wacom is the preferred driver for X Servers 1.7 and later. linuxwacom
 
 == How do I configure my device ==
 
-See the [[HOWTO]] section.
+See [[Building the driver]] and [[Configuring X]]
 
 == How do I get the special features of my stylus to work? ==
 
