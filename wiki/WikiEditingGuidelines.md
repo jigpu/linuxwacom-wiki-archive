@@ -21,6 +21,9 @@ currently use the following categories:
     for anything related to development
 -   [Category%3AMaintainerPages](/wiki/Category%3AMaintainerPages "wikilink"):
     for anything related to maintainership of the project
+-   [Category%3ALinuxwacom](/wiki/Category%3ALinuxwacom "wikilink"): for
+    anything that is related to [linuxwacom](linuxwacom "wikilink")
+    only.
 
 If you are adding or editing a page, please make sure it is part of the
 appropriate category.

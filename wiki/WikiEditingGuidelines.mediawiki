@@ -5,5 +5,6 @@ mediawiki has a feature called [http://www.mediawiki.org/wiki/Help:Categories Ca
 * [[:Category:HOWTO]]: for any HOWTO's s related to the driver setup
 * [[:Category:DeveloperPages]]: for anything related to development
 * [[:Category:MaintainerPages]]: for anything related to maintainership of the project
+* [[:Category:Linuxwacom]]: for anything that is related to [[linuxwacom]] only.
 
 If you are adding or editing a page, please make sure it is part of the appropriate category.
