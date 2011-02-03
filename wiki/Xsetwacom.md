@@ -24,12 +24,22 @@ without warning.**
 Usage
 =====
 
-The four commands you will need are:
+To list the applicable devices.
 
 ` xsetwacom list`
 
-To list the applicable devices. The usual invocation to get a parameter
-is:
+Which produces output similar to this:
+
+    $> xsetwacom list
+    Wacom Intuos4 6x9 eraser            id: 12  type: ERASER    
+    Wacom Intuos4 6x9 cursor            id: 13  type: CURSOR    
+    Wacom Intuos4 6x9 pad               id: 14  type: PAD       
+    Wacom Intuos4 6x9 stylus            id: 15  type: STYLUS    
+
+On the left is the device name, used as parameter in all other xsetwacom
+commands. The device ID and device type is provided as well.
+
+The usual invocation to get a parameter is:
 
 ` xsetwacom get "Wacom Intuos4 6x9 stylus" Button1`
 

@@ -7,9 +7,21 @@ unplugged, disabled or the X Server is restarted.
 '''A note to developers: do not rely on xsetwacom, as it's UI will change without warning.'''
 
 = Usage =
-The four commands you will need are:
+To list the applicable devices. 
   xsetwacom list
-To list the applicable devices. The usual invocation to get a parameter is:
+
+Which produces output similar to this:
+<pre>
+$> xsetwacom list
+Wacom Intuos4 6x9 eraser        	id: 12	type: ERASER    
+Wacom Intuos4 6x9 cursor        	id: 13	type: CURSOR    
+Wacom Intuos4 6x9 pad           	id: 14	type: PAD       
+Wacom Intuos4 6x9 stylus        	id: 15	type: STYLUS    
+</pre>
+On the left is the device name, used as parameter in all other xsetwacom commands. The device ID and device type is provided as well.
+
+
+The usual invocation to get a parameter is:
   xsetwacom get "Wacom Intuos4 6x9 stylus" Button1
 
 Replace the device name with the one applicable in your case. This will print the current value of the parameter, in this case the current mapping for button 1.
