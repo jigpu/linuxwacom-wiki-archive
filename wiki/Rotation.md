@@ -55,8 +55,8 @@ your Startup Applications.
 
 Again determine your "Device names" with 'xinput list' as in the example
 above. Then substitute them for stylus, eraser, and touch (if you have
-it) in the following shell script. Only use the xsetwacom commands for
-the devices you have.
+it) in the following shell script. Only use the
+[xsetwacom](xsetwacom "wikilink") commands for the devices you have.
 
     #!/bin/sh
 

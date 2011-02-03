@@ -28,7 +28,7 @@ xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" rotate half
 While the [[xsetwacom]] settings will apply once entered into a terminal they will not last through a restart.  For that you could create an executable script with the commands and add it to your Startup Applications.
 
 === Tablet PC Rotation Script ===
-Again determine your "Device names" with 'xinput list' as in the example above.  Then substitute them for stylus, eraser, and touch (if you have it) in the following shell script.  Only use the xsetwacom commands for the devices you have.
+Again determine your "Device names" with 'xinput list' as in the example above.  Then substitute them for stylus, eraser, and touch (if you have it) in the following shell script.  Only use the [[xsetwacom]] commands for the devices you have.
 <pre>
 #!/bin/sh
 
