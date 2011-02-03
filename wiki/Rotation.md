@@ -6,6 +6,11 @@ tags:
  - HOWTO
 ---
 
+External helper applications
+============================
+
+There are a few applications out there that provide support:
+
 Magick Rotation
 ---------------
 
