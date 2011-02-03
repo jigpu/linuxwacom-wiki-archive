@@ -6,8 +6,14 @@ tags:
  - HOWTO
 ---
 
-This page is both for general tablet pc issues and tips and Brand and
-model specific issues and tips.
+This page is for general tablet pc issues & tips as well as Brand and
+model specific issues & tips.
+
+Fujitsu tablet pc's
+-------------------
+
+**Tip** If your Wacom digitizer does not initialize (respond) on boot
+many have found restarting X gets it working.
 
 N-trig tablet pc's
 ------------------
@@ -44,7 +50,8 @@ Touch Toggle Script
 -------------------
 
 The following script depends on the [xsetwacom](xsetwacom "wikilink")
-get and set commands.
+get and set commands. The "Device name" for touch is found by using
+'xinput list' as mentioned in the script comments.
 
     #!/bin/bash
 
