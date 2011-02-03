@@ -1,5 +1,9 @@
 xsetwacom is a commandline utility to change wacom driver settings at runtime. This includes direct settings of driver properties but also several 'indirect' settings (i.e. the xsetwacom command does not relate directly to a single property). For a detailed description of xsetwacom's commands and options, please refer to the man page. This page provides a general overview and describes some of the [[#Quirks|quirks]] you may encounter.
 
+Note that any setting changed by xsetwacom will be reset to default (or a
+[[Configuring X|statically configured setting]]) whenever the device is
+unplugged, disabled or the X Server is restarted.
+
 '''A note to developers: do not rely on xsetwacom, as it's UI will change without warning.'''
 
 = Usage =
