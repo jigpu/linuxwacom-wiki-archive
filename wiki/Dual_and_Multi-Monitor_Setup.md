@@ -62,5 +62,3 @@ If you use the NVIDIA binary driver or are running an earlier version of
 xf86-input-wacom, you can manually calculate the matrix and set the
 property with the *xinput* tool. While the following may seem a little
 daunting if you look at the examples you'll find it is not that hard.
-
-Content Pending.
