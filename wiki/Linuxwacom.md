@@ -7,7 +7,9 @@ layout: wiki
 linuxwacom is a combined kernel + X driver package for X servers up to
 including 1.6. Note that the kernel patches provided here are backports,
 including new device support for kernels. If you run a reasonably modern
-desktop distribution, you do not need the linuxwacom tarballs.
+desktop distribution, you do not need the linuxwacom tarballs. A
+separate package for distributions with X servers 1.7 and backports for
+older kernels is available with [input-wacom](input-wacom "wikilink").
 
 All linuxwacom-related pages are compiled in the
 [Category%3ALinuxwacom](/wiki/Category%3ALinuxwacom "wikilink").
