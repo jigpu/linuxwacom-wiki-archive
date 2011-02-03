@@ -2,6 +2,8 @@
 title: Dual and Multi-Monitor Setup
 permalink: wiki/Dual_and_Multi-Monitor_Setup/
 layout: wiki
+tags:
+ - HOWTO
 ---
 
 **Requirements**
