@@ -9,6 +9,13 @@ tags:
 This page is for general tablet pc issues & tips as well as Brand and
 model specific issues & tips.
 
+The LWP project welcomes additions to its mediawiki so please join in if
+you have contributions.
+
+Be aware the Wacom drivers are rapidly evolving and some of this
+information may become dated. If so feel free to update and correct the
+mediawiki.
+
 Fujitsu tablet pc's
 -------------------
 
