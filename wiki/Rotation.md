@@ -6,11 +6,6 @@ tags:
  - HOWTO
 ---
 
-Rotation Scripts
-----------------
-
-Content Pending.
-
 Magick Rotation
 ---------------
 
