@@ -7,12 +7,16 @@ tags:
 ---
 
 The input-wacom driver is the usb kernel driver/module paired with
-xf86-input-wacom. Intended for developers and testers only. It provides
-backward support for kernels 2.6.26 to 2.6.37. Those with kernels 2.6.36
-or higher should use their distro supplied wacom.ko. Any new kernel
-driver features and model support should be submitted to the
-[linux-input mailing
+[xf86-input-wacom](xf86-input-wacom "wikilink"). Intended for developers
+and testers only. It provides backward support for kernels 2.6.26 to
+2.6.37. Those with kernels 2.6.36 or higher should use their distro
+supplied kernel drivers. Any new kernel driver features and model
+support should be submitted to the [linux-input mailing
 list](https://patchwork.kernel.org/project/linux-input/).
+
+**If you are developing support for new devices, do not use this
+package. Develop against upstream kernels instead.** Patches in
+input-wacom may not find their way into upstream kernels.
 
 Download
 --------
