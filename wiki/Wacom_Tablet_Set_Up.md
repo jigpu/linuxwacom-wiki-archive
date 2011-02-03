@@ -6,4 +6,117 @@ tags:
  - HOWTO
 ---
 
+This page is for general tablet issues & tips as well as model specific
+issues & tips.
+
+The LWP project welcomes additions to its mediawiki so please feel free
+to join in.
+
+Be aware the Wacom drivers are rapidly evolving and some of this
+information may become dated. If so feel free to update and correct the
+mediawiki.
+
+Bamboo Pen & Touch
+------------------
+
+In October of 2009 Wacom released a new series of 5 tablets we'll call
+generically the Bamboo Pen & Touch's. The Bamboo Pen had a stylus (with
+no eraser), the Bamboo Touch had 2FG touch only, and the Bamboo Pen &
+Touch's came with a stylus/eraser and touch(2FG)/pad(4 tablet buttons).
+This was followed in October of 2010 by the release of 5 new Bamboo Pen
+& Touch's with two of them being "Special Editions" with 4FGT.
+
+To determine your product ID enter in a terminal 'lsusb' and look in the
+Wacom line. The first 5 models are the 0xD0, 0xD1, 0xD2, 0xD3, & 0xD4.
+The new models are the 0xD6, 0xD7, 0xD8, 0xDA, & 0xDB. See [Device
+IDs](/wiki/Device_IDs "wikilink").
+
+### Set Up
+
+Depending on your distribution's kernel the 5 original models may not be
+recognized because the default wacom.ko with the kernel may not have the
+models in it. If your distribution has not backported support and has no
+plans to you can use the linuxwacom-0.8.8-10's wacom.ko as it does have
+the models in it. See [Linuxwacom](/wiki/Linuxwacom "wikilink"). The wacom.ko
+will be created after the ./configure line, no need for the 'make &&
+sudo make install' line. Just copy it into place.
+
+    sudo cp ./src/2.6.30/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko
+
+Rebuild all of the module dependencies before rebooting with.
+
+    depmod -a
+
+The newer 5 models can either be manually added to linuxwacom's
+wacom\_wac.c in the source code before compiling or you could use
+[input-wacom](input-wacom "wikilink")-0.10.10-1, which already has the
+models added.
+
+To get a X driver for all 10 models you can clone the
+[xf86-input-wacom](xf86-input-wacom "wikilink") git repository. All 10
+models have been added to xf86-input-wacom-0.10.10+ as of January 21,
+2011.
+
+### BambooPT Touch Toggle Script
+
+The following script depends on the [xsetwacom](xsetwacom "wikilink")
+get and set commands. The "Device name" for touch is found by using
+'xinput list' as mentioned in the script comments.
+
+    #!/bin/bash
+
+    ## Get the "Device name" or ID number
+    ## for touch from 'xinput list'.
+
+    TOUCH_STATE=`xsetwacom get "Wacom BambooFun 2FG 4x5 Finger touch" touch`
+    if [ "$TOUCH_STATE" == "on" ]
+      then
+        echo "Touch is ON, turning OFF."
+        xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" touch off
+      else
+        echo "Touch is OFF, turning ON."
+        xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" touch on
+    fi
+
+Place the script in a file called .toggle-touch.sh (or whatever you
+want) and place it in your home directory. Remember it will be a hidden
+file because of the . in front. Also please remember you have to chmod
+it to make it executable, or right click on it and make it executable
+through Properties. Then you have to make a key binding for it in order
+to assign it to a tablet button. One way to do that is to install the
+CompizConfig Settings Manager (if you haven't already).
+
+-   click on the General option
+-   click on Commands
+-   in Command line 0 (or whatever line you want) add the path to
+    .toggle-touch.sh, e.g.: /home/yourusername/.toggle-touch.sh
+-   click on Key Bindings and then to edit the corresponding Run command
+    0 click on the Disabled button.
+-   next use a key combination not already in use, e.g. <Control>t, by
+    pressing the Grab key combination button and pressing the key
+    combination. The ctrl-t combination is the one in the sample
+    xsetwacom script bound to Button1. You can also just press ctrl-t.
+    If you use 'ctrl t' to add a new Tab to Firefox change the touch
+    toggle key combination to say "key ctrl shift t".
+-   assign it to a tablet button
+
+<!-- -->
+
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" Button1 "key ctrl t"  # toggle touch script
+
+-   you're done
+
+**Tip** If you are using a xorg.conf the symlink for the Bamboo P&T pad
+is wacom-touch not wacom.
+
+**Tip** No one has yet reported trying a stylus with an eraser on the
+Bamboo Pen that I'm aware of. If anyone has and the eraser works please
+notify us at
+[linuxwacom-discuss](https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss).
+
+Intuos4
+-------
+
+### OLED's
+
 Content Pending.
