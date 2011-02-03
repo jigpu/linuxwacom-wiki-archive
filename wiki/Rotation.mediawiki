@@ -17,7 +17,7 @@ The Bamboo Pen & Touch will be used as an example since it has three tools:  sty
 <pre>
 xinput list
 </pre>
-The "Device name" for stylus might be "Wacom BambooFun 2FG 4x5 Pen stylus".  It will be without the quotes but you need the quotes for the xsetwacom command.  And so on for eraser and touch.  Once the "Device names" are determined use them in xsetwacom commands like so:
+The "Device name" for stylus might be "Wacom BambooFun 2FG 4x5 Pen stylus".  It will be without the quotes but you need the quotes for the [[xsetwacom]] command.  And so on for eraser and touch.  Once the "Device names" are determined use them in [[xsetwacom]] commands like so:
 <pre>
 xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" rotate half 
 
@@ -25,7 +25,7 @@ xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" rotate half
 
 xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" rotate half
 </pre>
-While the xsetwacom settings will apply once entered into a terminal they will not last through a restart.  For that you could create an executable script with the commands and add it to your Startup Applications.
+While the [[xsetwacom]] settings will apply once entered into a terminal they will not last through a restart.  For that you could create an executable script with the commands and add it to your Startup Applications.
 
 
 [[Category:HOWTO]]

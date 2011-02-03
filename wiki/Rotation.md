@@ -36,8 +36,9 @@ terminal:
 
 The "Device name" for stylus might be "Wacom BambooFun 2FG 4x5 Pen
 stylus". It will be without the quotes but you need the quotes for the
-xsetwacom command. And so on for eraser and touch. Once the "Device
-names" are determined use them in xsetwacom commands like so:
+[xsetwacom](xsetwacom "wikilink") command. And so on for eraser and
+touch. Once the "Device names" are determined use them in
+[xsetwacom](xsetwacom "wikilink") commands like so:
 
     xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" rotate half 
 
@@ -45,7 +46,7 @@ names" are determined use them in xsetwacom commands like so:
 
     xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" rotate half
 
-While the xsetwacom settings will apply once entered into a terminal
-they will not last through a restart. For that you could create an
-executable script with the commands and add it to your Startup
-Applications.
+While the [xsetwacom](xsetwacom "wikilink") settings will apply once
+entered into a terminal they will not last through a restart. For that
+you could create an executable script with the commands and add it to
+your Startup Applications.
