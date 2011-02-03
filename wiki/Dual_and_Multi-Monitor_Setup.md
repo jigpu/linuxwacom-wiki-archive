@@ -4,6 +4,11 @@ permalink: wiki/Dual_and_Multi-Monitor_Setup/
 layout: wiki
 ---
 
+The wacom driver does not support multi-monitor setups directly -
+handling of such setups is catered for by the X Server.
+[xsetwacom](xsetwacom "wikilink") does however provide a parameter to
+easily map a tablet to a screen.
+
 **Requirements**
 
 -   X Server 1.8 or later
@@ -12,12 +17,12 @@ layout: wiki
 MapToOutput
 -----------
 
-The *MapToOutput* parameter maps the wacom tablet to a specific screen.
-This only applies for [XRandR](http://www.x.org/wiki/Projects/XRandR)
-configurations, not to NVIDIA TwinView. If you don't use the NVIDIA
-binary driver, you have a XRandR configuration and can go ahead. If you
-use the NVIDIA binary driver, you'll need to manually set the coordinate
-mapping.
+The *MapToOutput* [xsetwacom](xsetwacom "wikilink") parameter maps the
+wacom tablet to a specific screen. This only applies for
+[XRandR](http://www.x.org/wiki/Projects/XRandR) configurations, not to
+NVIDIA TwinView. If you don't use the NVIDIA binary driver, you have a
+XRandR configuration and can go ahead. If you use the NVIDIA binary
+driver, you'll need to manually set the coordinate mapping.
 
 *MapToOutput* takes an output name as parameter and then adjusts the
 coordinate transformation matrix to the screen size of that output. The
