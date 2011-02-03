@@ -10,6 +10,22 @@ The four valid settings are:
 
 Note that rotation is tool-specific. If you rotate the stylus tool, the eraser tool and all others still have the original rotation. To rotate the complete tablet, rotate all tools.
 
+== Examples ==
+
+=== Left Handed Tablet Orientation ===
+The Bamboo Pen & Touch will be used as an example since it has three tools:  stylus, eraser, and touch.  Find the "Device names" using in a terminal:
+<pre>
+xinput list
+</pre>
+The "Device name" for stylus might be "Wacom BambooFun 2FG 4x5 Pen stylus".  It will be without the quotes but you need the quotes for the xsetwacom command.  And so on for eraser and touch.  Once the "Device names" are determined use them in xsetwacom commands like so:
+<pre>
+xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" rotate half 
+
+xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" rotate half
+
+xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" rotate half
+</pre>
+While the xsetwacom settings will apply once entered into a terminal they will not last through a restart.  For that you could create an executable script with the commands and add it to your Startup Applications.
 
 
 [[Category:HOWTO]]
