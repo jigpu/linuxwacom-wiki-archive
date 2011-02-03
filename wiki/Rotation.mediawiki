@@ -27,5 +27,49 @@ xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" rotate half
 </pre>
 While the [[xsetwacom]] settings will apply once entered into a terminal they will not last through a restart.  For that you could create an executable script with the commands and add it to your Startup Applications.
 
+=== Tablet PC Rotation Script ===
+Again determine your "Device names" with 'xinput list' as in the example above.  Then substitute them for stylus, eraser, and touch (if you have it) in the following shell script.  Only use the xsetwacom commands for the devices you have.
+<pre>
+#!/bin/sh
+
+# Find the line in "xrandr -q --verbose" output that contains current screen orientation and "strip" out current orientation.
+
+rotation="$(xrandr -q --verbose | grep 'connected' | egrep -o  '\) (normal|left|inverted|right) \(' | egrep -o '(normal|left|inverted|right)')"
+
+# Using current screen orientation proceed to rotate screen and input devices.
+
+case "$rotation" in
+    normal)
+#    -rotate to the left
+    xrandr -o left
+    xsetwacom set stylus rotate ccw
+    xsetwacom set eraser rotate ccw
+    xsetwacom set touch rotate ccw
+    ;;
+    left)
+#    -rotate to inverted
+    xrandr -o inverted
+    xsetwacom set stylus rotate half
+    xsetwacom set eraser rotate half
+    xsetwacom set touch rotate half
+    ;;
+    inverted)
+#    -rotate to the right
+    xrandr -o right
+    xsetwacom set stylus rotate cw
+    xsetwacom set eraser rotate cw
+    xsetwacom set touch rotate cw
+    ;;
+    right)
+#    -rotate to normal
+    xrandr -o normal
+    xsetwacom set stylus rotate none
+    xsetwacom set eraser rotate none
+    xsetwacom set touch rotate none
+    ;;
+esac
+</pre>
+This will cause the screen to rotate through 360 degrees counter-clockwise in four 90 degree steps.  Again place the script in an executable file.  You could then add it to a launcher or bind a key to the script.  If you drag the launcher into a panel it will execute with a single click.  Of course you can easily simplify the script to only rotate to one preferred direction when in tablet mode and back to none when in laptop mode.
+
 
 [[Category:HOWTO]]
