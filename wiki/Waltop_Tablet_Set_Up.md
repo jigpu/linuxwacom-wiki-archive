@@ -62,6 +62,12 @@ response despite being set to different values please report your issue
 to
 [linuxwacom-discuss](https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss).
 
+Calibration
+-----------
+
+See
+[xinput\_calibrator](/wiki/External_applications#xinput_calibrator "wikilink").
+
 Dual and Multi-Monitor Set Up
 -----------------------------
 

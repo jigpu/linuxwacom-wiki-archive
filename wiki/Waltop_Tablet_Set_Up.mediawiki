@@ -27,6 +27,11 @@ It's possible additional changes to support your Waltop may have been made since
 
 '''Tip''' If you have problems with both stylus buttons giving the same response despite being set to different values please report your issue to [https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss linuxwacom-discuss].
 
+
+== Calibration ==
+
+See [[External applications#xinput_calibrator|xinput_calibrator]].
+
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
 
