@@ -66,6 +66,11 @@ Unfortunately the Intuos 4 Wireless is not currently supported by the Bluez stac
 === OLED's ===
 Content Pending.
 
+
+== Calibration ==
+
+See [[External applications#xinput_calibrator|xinput_calibrator]].
+
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
 

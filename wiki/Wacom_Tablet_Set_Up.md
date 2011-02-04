@@ -132,6 +132,12 @@ use your usb "charging" cable for your tablet to work in linux.
 
 Content Pending.
 
+Calibration
+-----------
+
+See
+[xinput\_calibrator](/wiki/External_applications#xinput_calibrator "wikilink").
+
 Dual and Multi-Monitor Set Up
 -----------------------------
 
