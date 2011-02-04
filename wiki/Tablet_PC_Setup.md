@@ -47,6 +47,12 @@ script modified for the evdev driver.
         echo 1 > /tmp/touch_off && exit 0
     fi
 
+Dual and Multi-Monitor Set Up
+-----------------------------
+
+See [Dual and Multi-Monitor Set
+Up](/wiki/Dual_and_Multi-Monitor_Set_Up "wikilink").
+
 Screen Rotation
 ---------------
 
