@@ -129,7 +129,8 @@ Using these examples, if your tablet pc Brand & model also reports the
 swivel hinge state, you should be able to modify the script to work for
 you.
 
-See also [External applications](/wiki/External_applications "wikilink").
+Also see [Magick
+Rotation](/wiki/External_applications#Magick_Rotation "wikilink").
 
 Touch Toggle Script
 -------------------
