@@ -119,8 +119,8 @@ to
         if [[ -e /sys/devices/platform/thinkpad_acpi/hotkey_tablet_mode ]]; then
             new=`cat /sys/devices/platform/thinkpad_acpi/hotkey_tablet_mode`
 
-Using these examples if your tablet pc Brand & model also reports the
-swivel hinge state you should be able to modify the script to work for
+Using these examples, if your tablet pc Brand & model also reports the
+swivel hinge state, you should be able to modify the script to work for
 you.
 
 See also [External applications](/wiki/External_applications "wikilink").
