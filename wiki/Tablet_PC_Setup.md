@@ -47,6 +47,12 @@ script modified for the evdev driver.
         echo 1 > /tmp/touch_off && exit 0
     fi
 
+Calibration
+-----------
+
+See
+[xinput\_calibrator](/wiki/External_applications#xinput_calibrator "wikilink").
+
 Dual and Multi-Monitor Set Up
 -----------------------------
 

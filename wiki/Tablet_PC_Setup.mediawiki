@@ -28,6 +28,10 @@ else
 fi
 </pre>
 
+== Calibration ==
+
+See [[External applications#xinput_calibrator|xinput_calibrator]].
+
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
 
