@@ -4,5 +4,8 @@ This page is a list of external applications that interface with the wacom drive
 == Magick Rotation ==
 Magick Rotation is a Python GTK app. that supports automatic rotation for Dell, HP, and Lenovo tablet PCs.  It's located on Launchpad at:  https://launchpad.net/magick-rotation
 
+== xinput_calibrator ==
+The xinput_calibrator is a generic touchscreen calibration program for X.Org.  It's located at freedesktop.org:  http://www.freedesktop.org/wiki/Software/xinput_calibrator
+
 
 [[Category:HOWTO]]
