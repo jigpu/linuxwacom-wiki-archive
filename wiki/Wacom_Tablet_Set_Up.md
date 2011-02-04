@@ -120,3 +120,9 @@ Intuos4
 ### OLED's
 
 Content Pending.
+
+Dual and Multi-Monitor Set Up
+-----------------------------
+
+See [Dual and Multi-Monitor Set
+Up](/wiki/Dual_and_Multi-Monitor_Set_Up "wikilink").
