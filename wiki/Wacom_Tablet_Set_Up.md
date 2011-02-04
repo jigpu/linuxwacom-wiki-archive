@@ -117,6 +117,17 @@ notify us at
 Intuos4
 -------
 
+### Intuos4 Wireless
+
+Unfortunately the Intuos 4 Wireless is not currently supported by the
+Bluez stack. It is not simply a matter of adding the Vendor ID 0x56a and
+Product ID 0xBD alongside the Graphire Bluetooth Wireless' 0x56a & 0x81.
+This is because the Graphire Bluetooth Wireless is a Protocol 4 device
+(tool serial numbers are not reported) while the Intuos 4 Wireless is
+Protocol 5 (serial numbers reported). So code for Protocol 5 support
+needs to be added to the Bluez stack. In the meantime you will need to
+use your usb "charging" cable for your tablet to work in linux.
+
 ### OLED's
 
 Content Pending.
