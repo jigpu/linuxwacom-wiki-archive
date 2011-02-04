@@ -59,6 +59,72 @@ Screen Rotation
 See [Tablet PC Rotation
 Script](/wiki/Rotation#Tablet_PC_Rotation_Script "wikilink").
 
+### Tablet PC Automatic Rotation Script
+
+The following script was developed for HP tablet pc's. Lenovo ThinkPads
+(and very likely other tablet pc's) should be able to use it too with a
+minor modification.
+
+Determine your "Device names" with 'xinput list' entered in a terminal.
+Then substitute them for stylus, eraser, and touch (if you have it) in
+the following shell script using the quotes around the "Device names".
+Only use the [xsetwacom](xsetwacom "wikilink") commands for the devices
+you have.
+
+Notice the script assumes you have **CellWriter** installed. You can
+substitute the onscreen keyboard of your choice or comment out or remove
+the lines.
+
+    #!/bin/bash
+
+    # From Red_Lion post #576:  http://ubuntuforums.org/showthread.php?t=845911&page=58
+
+    old="0"
+    while true; do
+        if [[ -e /sys/devices/platform/hp-wmi/tablet ]]; then
+            new=`cat /sys/devices/platform/hp-wmi/tablet`
+            if [[ $new != $old ]]; then
+                if [[ $new == "0" ]]; then
+                    echo "Rotate to landscape, hide CellWriter."
+                    xrandr -o normal
+                    xsetwacom set stylus rotate none
+                    xsetwacom set eraser rotate none
+                    xsetwacom set touch rotate none
+                    cellwriter --hide-window
+                elif [[ $new == "1" ]]; then
+                    echo "Rotate to portrait, show CellWriter."
+                    xrandr -o right
+                    xsetwacom set stylus rotate cw
+                    xsetwacom set eraser rotate cw
+                    xsetwacom set touch rotate cw
+                    cellwriter --show-window
+                fi
+            fi
+            old=$new
+            sleep 1s
+        fi
+    done
+
+Save it in "/home/yourusername/" as ".automagic\_rotation.sh" (without
+the quotes), or whatever you want to name it. Make the file executable
+and add it to your Startup Applications.
+
+For the **ThinkPad** all you should need to do is change the lines.
+
+        if [[ -e /sys/devices/platform/hp-wmi/tablet ]]; then
+            new=`cat /sys/devices/platform/hp-wmi/tablet`
+
+to
+
+        if [[ -e /sys/devices/platform/thinkpad_acpi/hotkey_tablet_mode ]]; then
+            new=`cat /sys/devices/platform/thinkpad_acpi/hotkey_tablet_mode`
+
+Using these examples if your tablet pc Brand & model also reports the
+swivel hinge state you should be able to modify the script to work for
+you.
+
+See also [External applications](/wiki/External_applications "wikilink").
+
 Touch Toggle Script
 -------------------
 
