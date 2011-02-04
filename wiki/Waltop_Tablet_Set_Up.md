@@ -142,7 +142,7 @@ devices be sure to use "Device name" as the ID \# can change.
     #
     ## ClickForce changes name to Threshold with xf86-input-wacom 0.10.9 (11-19-10)
     #
-    ## Warning:  Changing Mode to either Absolute or Relative in stops the
+    ## Warning:  Changing Mode to either Absolute or Relative in the script stops the
     ## mouse from being able to pull guidelines out of the ruler in Gimp.
 
     ## stylus = ID 12 = "WALTOP International Corp. Slim Tablet stylus"
