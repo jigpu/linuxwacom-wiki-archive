@@ -1,0 +1,530 @@
+---
+title: Tablet PC Configuration
+permalink: wiki/Tablet_PC_Configuration/
+layout: wiki
+tags:
+ - HOWTO
+---
+
+This page is for Brand & model specific configuration issues & tips.
+
+The LWP project welcomes additions to its mediawiki so please join in if
+you have contributions.
+
+Currently [xf86-input-wacom](xf86-input-wacom "wikilink") does not have
+a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).
+However since **wacomcpl** stored its settings as a
+[xsetwacom](xsetwacom "wikilink") script in **.xinitrc** we can at least
+duplicate the .xinitrc, calling it say **.xsetwacom.sh**. Below is a set
+of sample scripts for various tablet pc's. If yours is not among them
+noticed there is a high degree of overlap. They're all Wacom tablet pc's
+after all. So it should be relatively straight forward to assemble one
+for your tablet pc.
+
+While doing things this way may seem a little strange at first you'll
+find yourself quickly adapting. And this allows you some of the finer
+control over your tablet's features wacomcpl gave you.
+
+**Note** While these xsetwacom commands were working as of 2-1-11 be
+aware that the xsetwacom interface may change without notice. If this
+happens feel free to update and correct this LWP mediawiki page.
+
+If a xsetwacom command stops working your friend is the get command.
+
+    xsetwacom get "device name" Threshold
+
+Where Threshold in this example represents the non-functioning parameter
+you are investigating. Also useful are the following.
+
+    xsetwacom list dev
+
+    xsetwacom list param
+
+    xsetwacom list mod
+
+Installing the Script
+---------------------
+
+While you can change your settings on the fly using xsetwacom commands
+in a terminal they only apply during the current session. So you need to
+set it up to auto-start. Create a file and copy & paste the contents of
+the script you want into it. Rename it .xsetwacom.sh (or whatever you
+want) and place it in your home directory. Remember it will be a hidden
+file because of the . in front. To enable the xsetwacom commands in the
+.xsetwacom.sh file to apply to Xserver through a reboot you enter in a
+terminal.
+
+    chmod +x ~/.xsetwacom.sh
+
+Or you could right click on the file and in Properties, in the
+Permission tab, check Execute as program. Then go to
+System-&gt;Preferences-&gt;Startup Applications (or your distributions
+equivalent) and click on Add and for the command write "sh
+/home/yourusername/.xsetwacom.sh" (without the quotes).
+
+Once the script is executable you can double click on it to apply it's
+settings or reboot to check the auto-start set up.
+
+The Sample Xsetwacom Scripts
+----------------------------
+
+In the example scripts below both "Device name" and ID \# are used. Be
+sure to check for yours using 'xinput list' (without the quotes) in a
+terminal and use them. When you use a xorg.conf the "Device names" will
+be stylus, eraser, touch, and pad. If you are hot plugging other devices
+into your tablet pc be sure to use "Device name" as the ID \# can
+change.
+
+### Serial Tablet PCs
+
+#### Fujitsu T4210
+
+    ## Device names and ID numbers from 'xinput list' entered in a terminal.
+    #
+    ## In the example both "Device name" and ID # are used.  Note if you use the
+    ## xorg.conf the "Device names" will be stylus, eraser, touch.
+    #
+    ## If you are hot plugging use "Device name" as ID # can change.
+    #
+    ## ClickForce changes name to Threshold with xf86-input-wacom 0.10.9 (11-19-10)
+    #
+    ## Warning:  Changing Mode to either Absolute or Relative in stylus/eraser stops
+    ## the mouse from being able to pull guidelines out of the ruler in Gimp.
+
+    ## stylus = ID 10 = "Serial Wacom Tablet stylus"
+    xsetwacom set "Serial Wacom Tablet stylus" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet stylus" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet stylus" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet stylus" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Serial Wacom Tablet stylus" PressCurve "5 10 90 95"  # Bezier curve, default 0 0 100 100
+    xsetwacom set "Serial Wacom Tablet stylus" TPCButton "on"  # side switch+tip; off=side switch only or "hover"
+    xsetwacom set "Serial Wacom Tablet stylus" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "Serial Wacom Tablet stylus" Button1 "1"  # left mouse click
+    xsetwacom set "Serial Wacom Tablet stylus" Button2 "3"  # right mouse click
+    xsetwacom set "Serial Wacom Tablet stylus" Button3 "2"  # middle mouse click
+    # sample T4210 coordinates
+    #xsetwacom set 10 topx "0"
+    #xsetwacom set 10 topy "0"
+    #xsetwacom set 10 bottomx "24576"
+    #xsetwacom set 10 bottomy "18432"
+    # or
+    #xsetwacom set 10 topx "78"
+    #xsetwacom set 10 topy "-56"
+    #xsetwacom set 10 bottomx "24517"
+    #xsetwacom set 10 bottomy "18070"
+
+    ## eraser = ID 9 = "Serial Wacom Tablet eraser"
+    xsetwacom set "Serial Wacom Tablet eraser" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet eraser" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet eraser" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet eraser" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Serial Wacom Tablet eraser" PressCurve "0 10 90 100"  # default 0 0 100 100
+    xsetwacom set "Serial Wacom Tablet eraser" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "Serial Wacom Tablet eraser" Button1 "1"
+    #xsetwacom set 9 topx "0"
+    #xsetwacom set 9 topy "0"
+    #xsetwacom set 9 bottomx "24576"
+    #xsetwacom set 9 bottomy "18432"
+
+#### Lenovo ThinkPad X61t
+
+    ## Device names and ID numbers from 'xinput list' entered in a terminal.
+    #
+    ## In the example both "Device name" and ID # are used.  Note if you use the
+    ## xorg.conf the "Device names" will be stylus, eraser, touch.
+    #
+    ## If you are hot plugging use "Device name" as ID # can change.
+    #
+    ## ClickForce changes name to Threshold with xf86-input-wacom 0.10.9 (11-19-10)
+    #
+    ## Warning:  Changing Mode to either Absolute or Relative in stylus/eraser stops
+    ## the mouse from being able to pull guidelines out of the ruler in Gimp.
+
+    ## stylus = ID 14 = "Serial Wacom Tablet stylus"
+    xsetwacom set "Serial Wacom Tablet stylus" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet stylus" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet stylus" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet stylus" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Serial Wacom Tablet stylus" PressCurve "5 10 90 95" # Bezier curve, default is 0,0,100,100
+    xsetwacom set "Serial Wacom Tablet stylus" TPCButton "on"  # stylus tip + button, or "off" for hover mode
+    xsetwacom set "Serial Wacom Tablet stylus" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "Serial Wacom Tablet stylus" Button1 "1"  # left mouse click
+    xsetwacom set "Serial Wacom Tablet stylus" Button2 "3"  # right mouse click
+    xsetwacom set "Serial Wacom Tablet stylus" Button3 "3"
+    # default X61t coordinates (from /var/log/Xorg.0.log)
+    #xsetwacom set "Serial Wacom Tablet stylus" topx "0"
+    #xsetwacom set "Serial Wacom Tablet stylus" topy "0"
+    #xsetwacom set "Serial Wacom Tablet stylus" bottomx "24576"
+    #xsetwacom set "Serial Wacom Tablet stylus" bottomy "18432"
+
+    ## eraser = ID 13 = "Serial Wacom Tablet eraser"
+    xsetwacom set "Serial Wacom Tablet eraser" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet eraser" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet eraser" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet eraser" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Serial Wacom Tablet eraser" PressCurve "0 10 90 100" # default is 0,0,100,100
+    xsetwacom set "Serial Wacom Tablet eraser" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "Serial Wacom Tablet eraser" Button1 "1"
+    # coordinates are the same as used for the stylus
+    #xsetwacom set "Serial Wacom Tablet eraser" topy "0"
+    #xsetwacom set "Serial Wacom Tablet eraser" topx "0"
+    #xsetwacom set "Serial Wacom Tablet eraser" bottomy "24576"
+    #xsetwacom set "Serial Wacom Tablet eraser" bottomx "18432"
+
+    ## Remove comments if your X61t has touch
+    ## touch = ID 15 = "Serial Wacom Tablet touch"
+    #xsetwacom set "Serial Wacom Tablet touch" Touch "on" # default,  or "off"
+    #xsetwacom set "Serial Wacom Tablet touch" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    #xsetwacom set "Serial Wacom Tablet touch" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    #xsetwacom set 15 ClickForce "27"  # pressure, default is 27, range is 0-2047
+    ##xsetwacom set 15 Threshold "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set 15 Mode "Absolute"  # or Relative cursor movement
+    #xsetwacom set 15 TapTime "250"  # default is 250 ms
+    #xsetwacom set 15 Button1 "1"
+    # sample X61t coordinates
+    #xsetwacom set 13 topx "?"
+    #xsetwacom set 13 topy "?"
+    #xsetwacom set 13 bottomx "?"
+    #xsetwacom set 13 bottomy "?"
+
+    ## Developed with MES5464 @ Ubuntu forums
+
+#### Lenovo ThinkPad's X200t & X201t
+
+    ## Device names and ID numbers from 'xinput list' entered in a terminal.
+    #
+    ## In the example both "Device name" and ID # are used.  Note if you use the
+    ## xorg.conf the "Device names" will be stylus, eraser, touch.
+    #
+    ## If you are hot plugging use "Device name" as ID # can change.
+    #
+    ## ClickForce changes name to Threshold with xf86-input-wacom 0.10.9 (11-19-10)
+    #
+    ## Warning:  Changing Mode to either Absolute or Relative in stylus/eraser stops
+    ## the mouse from being able to pull guidelines out of the ruler in Gimp.
+
+    ## stylus = "Serial Wacom Tablet stylus" = ID 15
+    xsetwacom set "Serial Wacom Tablet stylus" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet stylus" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet stylus" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet stylus" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Serial Wacom Tablet stylus" PressCurve "5 10 90 95" # Bezier curve, default is 0,0,100,100
+    xsetwacom set "Serial Wacom Tablet stylus" TPCButton "on  # or is Relative needed for gestures?"  # stylus tip + button, or "off" for hover mode
+    xsetwacom set "Serial Wacom Tablet stylus" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "Serial Wacom Tablet stylus" Button1 "1"  # left mouse click
+    xsetwacom set "Serial Wacom Tablet stylus" Button2 "3"  # right mouse click
+    xsetwacom set "Serial Wacom Tablet stylus" Button3 "2"  # middle mouse click
+    # sample X200t coordinates, default coordinates in /var/log/Xorg.0.log
+    #xsetwacom set "Serial Wacom Tablet stylus" topx "0"
+    #xsetwacom set "Serial Wacom Tablet stylus" topy "0"
+    #xsetwacom set "Serial Wacom Tablet stylus" bottomx "26312"
+    #xsetwacom set "Serial Wacom Tablet stylus" bottomy "16520"
+
+    ## eraser = "Serial Wacom Tablet eraser" = ID 13
+    xsetwacom set "Serial Wacom Tablet eraser" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet eraser" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet eraser" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet eraser" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Serial Wacom Tablet eraser" PressCurve "0 10 90 100" # Bezier curve, default is 0,0,100,100
+    xsetwacom set "Serial Wacom Tablet eraser" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "Serial Wacom Tablet eraser" Button1 "1"
+    # coordinates are the same as used for the stylus
+    #xsetwacom set "Serial Wacom Tablet stylus" topx "0"
+    #xsetwacom set "Serial Wacom Tablet stylus" topy "0"
+    #xsetwacom set "Serial Wacom Tablet stylus" bottomx "26312"
+    #xsetwacom set "Serial Wacom Tablet stylus" bottomy "16520"
+
+    ## depending on your model use the applicable following touch section ##
+
+    ## single finger touch
+    ## touch = "Serial Wacom Tablet touch" = ID 14
+    #xsetwacom set "Serial Wacom Tablet touch" Touch "on" # default,  or "off"
+    #xsetwacom set "Serial Wacom Tablet touch" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    #xsetwacom set "Serial Wacom Tablet touch" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    #xsetwacom set "Serial Wacom Tablet touch" ClickForce  # pressure, default is 27, range is 0-2047
+    ##xsetwacom set "Serial Wacom Tablet touch" Threshold "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet touch" Mode "Absolute"  # or Relative cursor movement
+    #xsetwacom set "Serial Wacom Tablet touch" TapTime "250"  # default is 250 ms
+    #xsetwacom set "Serial Wacom Tablet touch" Button1 "1"
+    # sample X200t coordinates
+    #xsetwacom set "Serial Wacom Tablet touch" topx "48"
+    #xsetwacom set "Serial Wacom Tablet touch" topy "90"
+    #xsetwacom set "Serial Wacom Tablet touch" bottomx "915"
+    #xsetwacom set "Serial Wacom Tablet touch" bottomy "940"
+
+    ## two finger (2FG) or multitouch
+    ## touch = "Serial Wacom Tablet touch" = ID 14
+    xsetwacom set "Serial Wacom Tablet touch" Touch "on" # default,  or "off"
+    xsetwacom set "Serial Wacom Tablet touch" Gesture "on"  # or "off"
+    xsetwacom set "Serial Wacom Tablet touch" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet touch" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet touch" ClickForce  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet touch" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Serial Wacom Tablet touch" Mode "Absolute"  # or Relative cursor movement; is Relative needed for gestures? 
+    xsetwacom set "Serial Wacom Tablet touch" TapTime "250"  # default is 250 ms
+    xsetwacom set "Serial Wacom Tablet touch" Button1 "1"  #  needed for 2FG touch?
+    # 1FG dbl. tap is left click, 2FG dbl. tap is right click
+    xsetwacom set 14 ZoomDistance "50"  # default is 50
+    xsetwacom set 14 ScrollDistance "20"  # default is 20
+    xsetwacom set 14 TapTime "250"  # 2FG R click, default is 250 ms
+    # sample X200t coordinates
+    #xsetwacom set "Serial Wacom Tablet touch" topx "?"
+    #xsetwacom set "Serial Wacom Tablet touch" topy "?"
+    #xsetwacom set "Serial Wacom Tablet touch" bottomx "?"
+    #xsetwacom set "Serial Wacom Tablet touch" bottomy "?"
+
+    ## Developed with vfrjim @ Ubuntu forums
+
+#### Toshiba Portege 3500
+
+    ## Device names and ID numbers from 'xinput list' entered in a terminal.
+    #
+    ## In the example both "Device name" and ID # are used.  Note if you use the
+    ## xorg.conf the "Device names" will be stylus, eraser, touch.
+    #
+    ## If you are hot plugging use "Device name" as ID # can change.
+    #
+    ## ClickForce changes name to Threshold with xf86-input-wacom 0.10.9 (11-19-10)
+    #
+    ## Warning:  Changing Mode to either Absolute or Relative in stylus/eraser stops
+    ## the mouse from being able to pull guidelines out of the ruler in Gimp.
+
+    ## stylus = ID 2 = "Wacom Serial Tablet PC Pen Tablet/Digitizer"
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" PressCurve "5 10 90 95" # Bezier curve, default is 0,0,100,100
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" TPCButton "on"  # stylus tip + button, or "off" for hover mode
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" Button1 "1"  # left mouse click
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" Button2 "3"  # right mouse click
+    # default 3500 coordinates (from /var/log/Xorg.0.log)
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" topx "0"
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" topy "0"
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" bottomx "24576"
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer" bottomy "18432"
+
+    ## eraser = ID 3 = "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser"
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" PressCurve "0 10 90 100" # Bezier curve, default is 0,0,100,100
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" Button1 "1"
+    # coordinates are the same as used for the stylus
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" topx "0"
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" topy "0"
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" bottomx "24576"
+    #xsetwacom set "Wacom Serial Tablet PC Pen Tablet/Digitizer eraser" bottomy "18432"
+
+    ## Developed with Toxicstupidity @ Ubuntu forums
+
+#### Toshiba Portege's M700 & M750
+
+    ## Device names and ID numbers from 'xinput list' entered in a terminal.
+    #
+    ## In the example both "Device name" and ID # are used.  Note if you use the
+    ## xorg.conf the "Device names" will be stylus, eraser, touch.
+    #
+    ## If you are hot plugging use "Device name" as ID # can change.
+    #
+    ## ClickForce changes name to Threshold with xf86-input-wacom 0.10.9 (11-19-10)
+    #
+    ## Warning:  Changing Mode to either Absolute or Relative in stylus/eraser stops
+    ## the mouse from being able to pull guidelines out of the ruler in Gimp.
+
+    ## stylus = ID 14 = "Serial Wacom Tablet stylus"
+    xsetwacom set "Serial Wacom Tablet stylus" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet stylus" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet stylus" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Serial Wacom Tablet stylus" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Serial Wacom Tablet stylus" PressCurve "5 10 90 95" # Bezier curve, default is 0,0,100,100
+    xsetwacom set "Serial Wacom Tablet stylus" TPCButton "on"  # stylus tip + button, or "off" for hover mode
+    xsetwacom set 14 Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set 14 Button1 "1"  # left mouse click
+    xsetwacom set 14 Button2 "3"  # right mouse click
+    xsetwacom set 14 Button3 "2"  # middle mouse click
+    # sample M700 coordinates
+    #xsetwacom set 14 topx "155"
+    #xsetwacom set 14 topy "61"
+    #xsetwacom set 14 bottomx "26252"
+    #xsetwacom set 14 bottomy "16421"
+    # default M750 coordinates (from /var/log/Xorg.0.log)
+    #xsetwacom set 14 topx "0"
+    #xsetwacom set 14 topy "0"
+    #xsetwacom set 14 bottomx "26112"
+    #xsetwacom set 14 bottomy "16320"
+
+    ## eraser = ID 12 = "Serial Wacom Tablet eraser"
+    xsetwacom set 12 Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set 12 RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set 12 ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set 12 Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set 12 PressCurve "0 10 90 100" # Bezier curve, default is 0,0,100,100
+    xsetwacom set 12 Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set 12 Button1 "1"
+    # coordinates are the same as used for the stylus
+    #xsetwacom set 12 topx "155"
+    #xsetwacom set 12 topy "61"
+    #xsetwacom set 12 bottomx "26252"
+    #xsetwacom set 12 bottomy "16421"
+
+    ## touch = ID 13 = "Serial Wacom Tablet touch"
+    xsetwacom set "Serial Wacom Tablet touch" Touch "on" # default,  or "off"
+    xsetwacom set "Serial Wacom Tablet touch" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Serial Wacom Tablet touch" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Serial Wacom Tablet touch" ClickForce  # default is 27, range is 0-2047
+    #xsetwacom set 13 Threshold  # default is 27, range is 0-2047
+    xsetwacom set 13 Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set 13 TapTime "250"  # default is 250 ms
+    xsetwacom set 13 Button1 "1"
+    # default M750 coordinates
+    #xsetwacom set 13 topx "0"
+    #xsetwacom set 13 topy "0"
+    #xsetwacom set 13 bottomx "4096"
+    #xsetwacom set 13 bottomy "4096"
+
+    ## Developed with BackBONE7 (M700) & WG- (M750) @ Ubuntu forums
+
+### USB Tablet PCs
+
+#### HP Pavilion TX2000 & TX2500
+
+    ## Device names and ID numbers from 'xinput list' entered in a terminal.
+    #
+    ## In the example both "Device name" and ID # are used.  Note if you use the
+    ## xorg.conf the "Device names" will be stylus, eraser, touch.
+    #
+    ## If you are hot plugging use "Device name" as ID # can change.
+    #
+    ## ClickForce changes name to Threshold with xf86-input-wacom 0.10.9 (11-19-10)
+    #
+    ## Warning:  Changing Mode to either Absolute or Relative in stylus/eraser stops
+    ## the mouse from being able to pull guidelines out of the ruler in Gimp.
+
+    ## stylus = ID 12 = "Wacom ISDv4 93 Pen"
+    xsetwacom set "Wacom ISDv4 93 Pen" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Wacom ISDv4 93 Pen" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "Wacom ISDv4 93 Pen" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "Wacom ISDv4 93 Pen" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "Wacom ISDv4 93 Pen" PressCurve "5 10 90 95" # Bezier curve, default is 0,0,100,100
+    xsetwacom set 12 TPCButton "on"  # stylus tip + button, or "off" for hover mode
+    xsetwacom set 12 Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set 12 Button1 "1"  # left mouse click
+    xsetwacom set 12 Button2 "3"  # right mouse click
+    xsetwacom set 12 Button3 "2"  # middle mouse click
+    # sample TX2000 coordinates, default coordinates in /var/log/Xorg.0.log
+    #xsetwacom set 12 topx "66"
+    #xsetwacom set 12 topy "-101"
+    #xsetwacom set 12 bottomx "26416"
+    #xsetwacom set 12 bottomy "16630"
+    # sample TX2500 coordinates
+    #xsetwacom set 12 topx "47"
+    #xsetwacom set 12 topy "22"
+    #xsetwacom set 12 bottomx "26416"
+    #xsetwacom set 12 bottomy "16514"
+
+    ## eraser = ID 11 = "Wacom ISDv4 93 Pen eraser"
+    xsetwacom set 11 Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set 11 RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set 11 ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set 11 Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set 11 PressCurve "0 10 90 100" # Bezier curve, default is 0,0,100,100
+    xsetwacom set 11 Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set 11 Button1 "1"
+    # coordinates are the same as used for the stylus
+    #xsetwacom set 11 topx "66"
+    #xsetwacom set 11 topy "-101"
+    #xsetwacom set 11 bottomx "26416"
+    #xsetwacom set 11 bottomy "16630"
+
+    ## touch = ID 13 = "Wacom ISDv4 93 Finger"
+    xsetwacom set "Wacom ISDv4 93 Finger" Touch "on" # default,  or "off"
+    xsetwacom set "Wacom ISDv4 93 Finger" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "Wacom ISDv4 93 Finger" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set 13 ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set 13 Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set 13 Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set 13 TapTime "250"  # default is 250 ms
+    xsetwacom set 13 Button1 "1"
+    # sample TX2000 coordinates
+    #xsetwacom set 13 topx "140"
+    #xsetwacom set 13 topy "215"
+    #xsetwacom set 13 bottomx "4028"
+    #xsetwacom set 13 bottomy "3969"
+    # sample TX2500 coordinates
+    #xsetwacom set 13 topx "174"
+    #xsetwacom set 13 topy "201"
+    #xsetwacom set 13 bottomx "3981"
+    #xsetwacom set 13 bottomy "3898"
+
+    ## Developed with daulpavis (TX2000) & martinjochimsen (TX2500) @ Ubuntu forums
+
+#### N-Trig: HP Touchsmart TX2z & Dell Latitude XT & XT2
+
+    ## Device names and ID numbers from 'xinput list' entered in a terminal.
+    #
+    ## In the example both "Device name" and ID # are used.
+    #
+    ## If you are hot plugging use "Device name" as ID # can change.
+    #
+    ## ClickForce changes name to Threshold with xf86-input-wacom 0.10.9 (11-19-10)
+    #
+    ## Warning:  Changing Mode to either Absolute or Relative in stops the
+    ## mouse from being able to pull guidelines out of the ruler in Gimp.
+
+    ## stylus = ID 13 = "N-Trig Pen stylus"
+    xsetwacom set "N-Trig Pen stylus" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    xsetwacom set "N-Trig Pen stylus" RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    xsetwacom set "N-Trig Pen stylus" ClickForce "27"  # pressure, default is 27, range is 0-2047
+    #xsetwacom set "N-Trig Pen stylus" Threshold "27"  # pressure, default is 27, range is 0-2047
+    xsetwacom set "N-Trig Pen stylus" PressCurve "5 10 90 95" # Bezier curve, default is 0,0,100,100
+    xsetwacom set "N-Trig Pen stylus" TPCButton "on"  # stylus tip + button, or "off" for hover mode
+    xsetwacom set "N-Trig Pen stylus" Mode "Absolute"  # or Relative cursor movement
+    xsetwacom set "N-Trig Pen stylus" Button1 "1"  # left mouse click
+    xsetwacom set "N-Trig Pen stylus" Button2 "3"  # right mouse click
+    xsetwacom set "N-Trig Pen stylus" Button3 "2"  # middle mouse click; Button3 only on Dell's, supposed to be eraser?
+    #xsetwacom set 13 topy "0"
+    #xsetwacom set 13 topx "0"
+    #xsetwacom set 13 bottomy "7200"
+    #xsetwacom set 13 bottomx "9600"
+
+    ## use only one of the following touch sections if setting touch up on the Wacom driver ##
+
+    ## For single finger set up.
+    ## touch = ID 14 = "N-Trig Touchscreen touch"
+    #xsetwacom set 14 Touch "on" # default
+    #xsetwacom set 14 Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    #xsetwacom set 14 RawSample "2"  # data pt.s filtered, default is 2, 0-100
+    #xsetwacom set 14 ClickForce "27"  # default is 27, range is 0-2047
+    ##xsetwacom set 14 Threshold "27"  # default is 27, range is 0-2047
+    #xsetwacom set 14 Mode "Absolute"  # or Relative cursor movement
+    #xsetwacom set 14 TapTime "250"  # default is 250 ms
+    #xsetwacom set "N-Trig Touchscreen touch" Mode "Absolute"  # or Relative cursor movement
+    #xsetwacom set "N-Trig Touchscreen touch" Button1 "1"
+    #xsetwacom set "N-Trig Touchscreen touch" topy "0"
+    #xsetwacom set "N-Trig Touchscreen touch" topx "0"
+    #xsetwacom set "N-Trig Touchscreen touch" bottomy "7200"
+    #xsetwacom set "N-Trig Touchscreen touch" bottomx "9600"
+
+    ## For multitouch/2 finger gestures set up.
+    ## touch = ID ?? = "N-Trig MultiTouch"
+    #xsetwacom set "N-Trig MultiTouch touch" Touch "on"  # or "off"
+    #xsetwacom set "N-Trig MultiTouch touch" Gesture "on"  # or "off"
+    #xsetwacom set "N-Trig MultiTouch touch" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
+    #xsetwacom set "N-Trig MultiTouch touch" ClickForce  # default is 27, range is 0-2047
+    ##xsetwacom set "N-Trig MultiTouch touch" Threshold "27"  # default is 27, range is 0-2047
+    ## 1FG dbl. tap is left click, 2FG dbl. tap is right click
+    #xsetwacom set "N-Trig MultiTouch touch" ZoomDistance "50"  # default is 50
+    #xsetwacom set "N-Trig MultiTouch touch" ScrollDistance "20"  # default is 20
+    #xsetwacom set "N-Trig MultiTouch touch" TapTime "250"  # 2FG R click, default is 250 ms
+    #xsetwacom set "N-Trig MultiTouch touch" Mode "Absolute"  # or is Relative needed for gestures?
+    #xsetwacom set "N-Trig MultiTouch touch" Button1 "1"  #  needed for 2FG touch?
+    #xsetwacom set "N-Trig MultiTouch touch" topy "0"
+    #xsetwacom set "N-Trig MultiTouch touch" topx "0"
+    #xsetwacom set "N-Trig MultiTouch touch" bottomy "7200"
+    #xsetwacom set "N-Trig MultiTouch touch" bottomx "9600"
+
+    ## Developed with brettpim & markginter24 @ Ubuntu forums
