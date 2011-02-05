@@ -152,7 +152,7 @@ We aren't rotating the left monitor so its matrix doesn't change and we can igno
 [  0        -0.666666 0.666666 ]
 [  0         0        1        ]
 </pre>
-'' Right monitor ''
+'' Right monitor rotated to inverted ''
 <pre>xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" -0.444444 0 1 0 -0.666666 0.666666 0 0 1</pre>
 Now what happens if we rotate the tablet pc to portrait mode?  Note X & Y swap, becoming 800x1280.  Since cos(270) = 0 and sin(270) = -1 you end up with this matrix.
 <pre>
@@ -165,7 +165,7 @@ Now what happens if we rotate the tablet pc to portrait mode?  Note X & Y swap, 
 [ -1  0        1        ]
 [  0  0        1        ]
 </pre>
-'' Right monitor ''
+'' Right monitor rotated to portrait ''
 <pre>xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" 0 0.333333 0.666666 -1 0 1 0 0 1</pre>
 
 === Three Monitors ===

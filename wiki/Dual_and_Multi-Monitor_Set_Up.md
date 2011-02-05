@@ -234,7 +234,7 @@ cos(180) = -1 and sin(180) = 0 you end up with:
     [  0        -0.666666 0.666666 ]
     [  0         0        1        ]
 
-'' Right monitor ''
+'' Right monitor rotated to inverted ''
 
     xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" -0.444444 0 1 0 -0.666666 0.666666 0 0 1
 
@@ -251,7 +251,7 @@ with this matrix.
     [ -1  0        1        ]
     [  0  0        1        ]
 
-'' Right monitor ''
+'' Right monitor rotated to portrait ''
 
     xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" 0 0.333333 0.666666 -1 0 1 0 0 1
 
