@@ -142,7 +142,7 @@ Say both monitors are 1280x1024. You first set up the linear transform
 Using fractions amounts to scaling from 0-1 so you end up with the
 following.
 
-      left:           right:
+      left:         right:
     [ 0.5 0 0 ]   [ 0.5 0 0.5 ]
     [ 0   1 0 ]   [ 0   1 0   ]
     [ 0   0 1 ]   [ 0   0 1   ]
