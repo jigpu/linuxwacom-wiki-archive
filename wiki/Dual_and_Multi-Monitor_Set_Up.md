@@ -152,11 +152,11 @@ With the c2 = 0.5 in the right matrix being the x offset.
 Now that you've determined the transform use the appropriate xinput
 command for the monitor you want your device on:
 
-**Left monitor**
+*Left monitor*
 
     xinput set-prop "device name" --type=float "Coordinate Transformation Matrix" 0.5 0 0 0 1 0 0 0 1
 
-**Right monitor**
+*Right monitor*
 
     xinput set-prop "device name" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 1 0 0 0 1
 
@@ -176,11 +176,11 @@ Since for Rumtscho 'xinput list' returned the stylus "device name" as
 "Wacom BambooFun 2FG 6x8 Pen stylus" the appropriate xinput commands for
 device placement on the monitors are these.
 
-**Left monitor**
+*Left monitor*
 
     xinput set-prop "Wacom BambooFun 2FG 6x8 Pen stylus" --type=float "Coordinate Transformation Matrix" 0.333333 0 0 0 .711111 0 0 0 1
 
-**Right monitor**
+*Right monitor*
 
     xinput set-prop "Wacom BambooFun 2FG 6x8 Pen stylus" --type=float "Coordinate Transformation Matrix" 0.666666 0 0.333333 0 1 0 0 0 1
 
@@ -196,11 +196,11 @@ in laptop mode.
     [ 0                 1200/1200  0 ]   [ 0                 800/1200  0               ]
     [ 0                 0          1 ]   [ 0                 0         1               ]
 
-**Left monitor**
+*Left monitor*
 
     xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" 0.555555 0 0 0 1 0 0 0 1
 
-**Right monitor**
+*Right monitor*
 
     xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" 0.444444 0 0.555555 0 0.666666 0 0 0 1
 
@@ -234,7 +234,7 @@ cos(180) = -1 and sin(180) = 0 you end up with:
     [  0        -0.666666 0.666666 ]
     [  0         0        1        ]
 
-''' Right monitor '''
+'' Right monitor ''
 
     xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" -0.444444 0 1 0 -0.666666 0.666666 0 0 1
 
@@ -251,7 +251,7 @@ with this matrix.
     [ -1  0        1        ]
     [  0  0        1        ]
 
-''' Right monitor '''
+'' Right monitor ''
 
     xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" 0 0.333333 0.666666 -1 0 1 0 0 1
 
@@ -278,15 +278,15 @@ this set of matrices.
 So now the xinput commands to set the device to the desired monitor are
 these.
 
-**Left monitor**
+*Left monitor*
 
     xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0 0 1 0 0 0 1
 
-**Center monitor**
+*Center monitor*
 
     xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0.3333 0 1 0 0 0 1
 
-**Right monitor**
+*Right monitor*
 
     xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0.6666 0 1 0 0 0 1
 

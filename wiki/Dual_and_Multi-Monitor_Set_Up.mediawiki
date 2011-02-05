@@ -93,9 +93,9 @@ With the c2 = 0.5 in the right matrix being the x offset.
 
 Now that you've determined the transform use the appropriate xinput command for the monitor you want your device on:
 
-'''Left monitor'''
+''Left monitor''
 <pre>xinput set-prop "device name" --type=float "Coordinate Transformation Matrix" 0.5 0 0 0 1 0 0 0 1</pre>
-'''Right monitor'''
+''Right monitor''
 <pre>xinput set-prop "device name" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 1 0 0 0 1</pre>
 
 ==== Two monitors with different resolutions ====
@@ -110,9 +110,9 @@ Left monitor 1280x1024 & right monitor 2560x1440.  Setting  up the linear transf
 </pre>
 Since for Rumtscho 'xinput list' returned the stylus "device name" as "Wacom BambooFun 2FG 6x8 Pen stylus" the appropriate xinput commands for device placement on the monitors are these.
 
-'''Left monitor'''
+''Left monitor''
 <pre>xinput set-prop "Wacom BambooFun 2FG 6x8 Pen stylus" --type=float "Coordinate Transformation Matrix" 0.333333 0 0 0 .711111 0 0 0 1</pre>
-'''Right monitor'''
+''Right monitor''
 <pre>xinput set-prop "Wacom BambooFun 2FG 6x8 Pen stylus" --type=float "Coordinate Transformation Matrix" 0.666666 0 0.333333 0 1 0 0 0 1</pre>
 
 ==== Two monitors with one rotated ====
@@ -125,9 +125,9 @@ Left monitor 1600x1200 & right monitor (tablet pc) 1280x800.  Tablet pc in lapto
 [ 0                 1200/1200  0 ]   [ 0                 800/1200  0               ]
 [ 0                 0          1 ]   [ 0                 0         1               ]
 </pre>
-'''Left monitor'''
+''Left monitor''
 <pre>xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" 0.555555 0 0 0 1 0 0 0 1</pre>
-'''Right monitor'''
+''Right monitor''
 <pre>xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" 0.444444 0 0.555555 0 0.666666 0 0 0 1</pre>
 Now if we rotate to tablet mode we are adding a rotional transformation.  Let's use rotation by an angle A counter-clockwise about the origin.  The functional form would be x' = xcosA − ysinA and y' = xsinA + ycosA but we want to make it affine so we can use multiplication.  And we need to add it to the current matrix.  So written in matrix form, it becomes the following.
 <pre>
@@ -152,7 +152,7 @@ We aren't rotating the left monitor so its matrix doesn't change and we can igno
 [  0        -0.666666 0.666666 ]
 [  0         0        1        ]
 </pre>
-''' Right monitor '''
+'' Right monitor ''
 <pre>xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" -0.444444 0 1 0 -0.666666 0.666666 0 0 1</pre>
 Now what happes if we rotate the tablet pc to portrait mode?  Note X & Y swap, becoming 800x1280.  Since cos(270) = 0 and sin(270) = -1 you end up with this matrix.
 <pre>
@@ -165,7 +165,7 @@ Now what happes if we rotate the tablet pc to portrait mode?  Note X & Y swap, b
 [ -1  0        1        ]
 [  0  0        1        ]
 </pre>
-''' Right monitor '''
+'' Right monitor ''
 <pre>xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" 0 0.333333 0.666666 -1 0 1 0 0 1</pre>
 
 === Three Monitors ===
@@ -187,11 +187,11 @@ All three monitors have the same resolution, say 1280x1024.  You set up the line
 </pre>
 So now the xinput commands to set the device to the desired monitor are these.
 
-'''Left monitor'''
+''Left monitor''
 <pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0 0 1 0 0 0 1</pre>
-'''Center monitor'''
+''Center monitor''
 <pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0.3333 0 1 0 0 0 1</pre>
-'''Right monitor'''
+''Right monitor''
 <pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0.6666 0 1 0 0 0 1</pre>
 
 '''Note''' The xinput command does not last through a restart.  See below.
