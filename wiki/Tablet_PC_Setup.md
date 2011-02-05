@@ -77,9 +77,10 @@ the following shell script using the quotes around the "Device names".
 Only use the [xsetwacom](xsetwacom "wikilink") commands for the devices
 you have.
 
-Notice the script assumes you have **CellWriter** installed. You can
-substitute the onscreen keyboard of your choice or comment out or remove
-the lines.
+Notice the script assumes you have
+[CellWriter](/wiki/External_applications#CellWriter "wikilink") installed. You
+can substitute the onscreen keyboard of your choice or comment out or
+remove the lines.
 
     #!/bin/bash
 

@@ -43,7 +43,7 @@ The following script was developed for HP tablet pc's.  Lenovo ThinkPads (and ve
 
 Determine your "Device names" with 'xinput list' entered in a terminal. Then substitute them for stylus, eraser, and touch (if you have it) in the following shell script using the quotes around the "Device names". Only use the [[xsetwacom]] commands for the devices you have.
 
-Notice the script assumes you have '''CellWriter''' installed.  You can substitute the onscreen keyboard of your choice or comment out or remove the lines.
+Notice the script assumes you have [[External applications#CellWriter|CellWriter]] installed.  You can substitute the onscreen keyboard of your choice or comment out or remove the lines.
 <pre>
 #!/bin/bash
 
