@@ -238,7 +238,7 @@ cos(180) = -1 and sin(180) = 0 you end up with:
 
     xinput set-prop "Serial Wacom Tablet stylus" --type=float "Coordinate Transformation Matrix" -0.444444 0 1 0 -0.666666 0.666666 0 0 1
 
-Now what happes if we rotate the tablet pc to portrait mode? Note X & Y
+Now what happens if we rotate the tablet pc to portrait mode? Note X & Y
 swap, becoming 800x1280. Since cos(270) = 0 and sin(270) = -1 you end up
 with this matrix.
 
