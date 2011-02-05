@@ -47,8 +47,6 @@ Notice the script assumes you have [[External applications#CellWriter|CellWriter
 <pre>
 #!/bin/bash
 
-# From Red_Lion post #576:  http://ubuntuforums.org/showthread.php?t=845911&page=58
-
 old="0"
 while true; do
 	if [[ -e /sys/devices/platform/hp-wmi/tablet ]]; then
@@ -74,6 +72,8 @@ while true; do
 		sleep 1s
 	fi
 done
+
+# From Red_Lion post #576:  http://ubuntuforums.org/showthread.php?t=845911&page=58
 </pre>
 Save it in "/home/yourusername/" as ".automagic_rotation.sh" (without the quotes), or whatever you want to name it.  Make the file executable and add it to your Startup Applications.
 

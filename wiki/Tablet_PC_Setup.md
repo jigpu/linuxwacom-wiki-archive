@@ -84,8 +84,6 @@ remove the lines.
 
     #!/bin/bash
 
-    # From Red_Lion post #576:  http://ubuntuforums.org/showthread.php?t=845911&page=58
-
     old="0"
     while true; do
         if [[ -e /sys/devices/platform/hp-wmi/tablet ]]; then
@@ -111,6 +109,8 @@ remove the lines.
             sleep 1s
         fi
     done
+
+    # From Red_Lion post #576:  http://ubuntuforums.org/showthread.php?t=845911&page=58
 
 Save it in "/home/yourusername/" as ".automagic\_rotation.sh" (without
 the quotes), or whatever you want to name it. Make the file executable
