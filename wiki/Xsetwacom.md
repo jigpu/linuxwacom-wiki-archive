@@ -57,5 +57,62 @@ Finally, to get a list of parameters just type
 
 ` xsetwacom list param`
 
-Quirks
-======
+xsetwacom Command Parameter Usage
+=================================
+
+MapToOutput
+-----------
+
+The wacom driver does not support multi-monitor setups directly -
+handling of such setups is catered for by the X Server. Xsetwacom does
+however provide a parameter to easily map a tablet to a screen.
+
+**Requirements**
+
+-   X Server 1.8 or later
+-   xf86-input-wacom-0.10.9 or later
+
+The *MapToOutput* parameter maps the wacom tablet to a specific screen.
+This only applies for [XRandR](http://www.x.org/wiki/Projects/XRandR)
+configurations, not to NVIDIA TwinView. If you don't use the NVIDIA
+binary driver, you have a XRandR configuration and can go ahead. If you
+use the NVIDIA binary driver, you'll need to manually set the coordinate
+mapping.
+
+*MapToOutput* takes an output name as parameter and then adjusts the
+coordinate transformation matrix to the screen size of that output. The
+monitor names can be obtained with the *xrandr* tool. In this example,
+the three available outputs are "VGA1", "LVDS1" and "DVI1". To map a
+tool to the VGA monitor, simply run:
+
+` xsetwacom set "device name" MapToOutput VGA1`
+
+See [MapToOutput](/wiki/Dual_and_Multi-Monitor_Set_Up#MapToOutput "wikilink")
+for more detail. If you use the NVIDIA binary driver or are running an
+earlier version of xf86-input-wacom, you can manually calculate the
+matrix and set the property with the *xinput* tool. See [Coordinate
+Transformation
+Matrix](/wiki/Dual_and_Multi-Monitor_Set_Up#Coordinate_Transformation_Matrix "wikilink").
+
+Rotate
+------
+
+The wacom driver supports rotation by 90 degree angles. The *Rotate*
+parameter can be applied at runtime with xsetwacom or statically
+(through the [configuration files](/wiki/Configuring_X "wikilink")). The four
+valid settings are:
+
+-   **none**: the tablet is not rotated in software and uses its natural
+    rotation.
+-   **half**: the tablet is rotated by 180 degrees (upside-down)
+-   **cw**: the tablet is rotated 90 degrees clockwise
+-   **ccw**: the tablet is rotated 90 degrees counter-clockwise
+
+Note that rotation is tool-specific. If you rotate the stylus tool, the
+eraser tool and all others still have the original rotation. To rotate
+the complete tablet, rotate all tools. To rotate a tool use:
+
+` xsetwacom set "device name" Rotate half`
+
+and one of the four valid settings. For more detail see
+[Rotation](/wiki/Rotation "wikilink").
