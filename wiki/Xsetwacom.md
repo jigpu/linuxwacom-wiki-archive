@@ -61,6 +61,10 @@ Finally, to get a list of parameters just type
 xsetwacom Command Parameter Usage
 =================================
 
+Remember entering "man xsetwacom" (without the quotes) in a console will
+bring up the xsetwacom manual and give you a quick overview of
+xsetwacom.
+
 MapToOutput
 -----------
 
@@ -91,6 +95,48 @@ earlier version of xf86-input-wacom, you can manually calculate the
 matrix and set the property with the *xinput* tool. See [Coordinate
 Transformation
 Matrix](/wiki/Dual_and_Multi-Monitor_Set_Up#Coordinate_Transformation_Matrix "wikilink").
+
+PressCurve
+----------
+
+The *PressCurve* parameter used by xsetwacom is a Bezier curve of third
+order or a Bezier Cubic Spline. So it is a cubic equation with four
+points, composed of two endpoints or anchor points (0,0 & 100,100) and
+two control points (x1,y1 & x2,y2) that define the curve's shape. What
+that all means is [xf86-input-wacom](xf86-input-wacom "wikilink")'s X
+driver offers you superb control over your stylus and eraser's feel.
+
+With the default curve the two control points have the same values as
+the anchor points,
+
+` xsetwacom set "device name" PressCurve 0 0 100 100`
+
+which means it is linear, i.e. reflecting the tablet's designed pressure
+response (e.g. 0-1023). Think of it as a 100x100 grid with the Bezier
+curve a straight line from the lower left corner (0,0) to the upper
+right corner (100,100). To get a "softer" feel (a raised curve) to your
+stylus or eraser, you can change the values of the control points to
+say:
+
+` xsetwacom set "device name" PressCurve 0 5 95 100`
+
+Note as long as the inner pair of values (y1 & x2) and the outer pair of
+values (x1 & y2) each equal 100 you've defined a valid Bezier curve. For
+a "firmer" touch (depressed curve), you could use:
+
+` xsetwacom set "device name" PressCurve 5 0 100 95`
+
+Visually the *PressCurve* parameter covers the range:
+
+      0 100   0 100  # ridiculously soft
+      0  50  50 100  # very soft
+      0   0 100 100  # linear, the default
+     50   0 100  50  # very firm
+    100   0 100   0  # unbelievably firm
+
+You can also combine changes to the inner and outer pairs simultaneously
+(altering the control points relative to each other) to achieve the feel
+you prefer with your stylus and eraser.
 
 Rotate
 ------
