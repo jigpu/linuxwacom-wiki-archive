@@ -75,10 +75,7 @@ however provide a parameter to easily map a tablet to a screen.
 The *MapToOutput* parameter maps the wacom tablet to a specific screen.
 This only applies for [XRandR](http://www.x.org/wiki/Projects/XRandR)
 configurations, not to NVIDIA TwinView. If you don't use the NVIDIA
-binary driver, you have a XRandR configuration and can go ahead. If you
-use the NVIDIA binary driver, you'll need to manually set the coordinate
-mapping.
-
+binary driver, you have a XRandR configuration and can go ahead.
 *MapToOutput* takes an output name as parameter and then adjusts the
 coordinate transformation matrix to the screen size of that output. The
 monitor names can be obtained with the *xrandr* tool. In this example,
