@@ -225,7 +225,7 @@ We aren't rotating the left monitor so its matrix doesn't change and we
 can ignore it. If we rotate the tablet pc 180 degrees to inverted, since
 cos(180) = -1 and sin(180) = 0 you end up with:
 
-      right:
+       right:
     [ -1280/(1600+1280)  0        1280/1280 ]
     [  0                -800/1200 800/1200  ]
     [  0                 0        1         ]
@@ -242,7 +242,7 @@ Now what happens if we rotate the tablet pc to portrait mode? Note X & Y
 swap, becoming 800x1280. Since cos(270) = 0 and sin(270) = -1 you end up
 with this matrix.
 
-      right:
+       right:
     [  0          800/(1600+800) 1600/(1600+800) ]
     [ -1280/1280  0              1280/1280       ]
     [  0          0              1               ]
