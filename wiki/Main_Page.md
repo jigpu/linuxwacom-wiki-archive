@@ -84,7 +84,7 @@ News
 FAQ
 ---
 
-Please see the [FAQ](/wiki/FAQ "wikilink") for more details.
+Please see the **[FAQ](/wiki/FAQ "wikilink")** for more details.
 
 Editing the wiki
 ----------------
