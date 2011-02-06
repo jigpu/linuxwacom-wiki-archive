@@ -280,15 +280,15 @@ these.
 
 *Left monitor*
 
-    xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0 0 1 0 0 0 1
+    xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.333333 0 0 0 1 0 0 0 1
 
 *Center monitor*
 
-    xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0.3333 0 1 0 0 0 1
+    xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.333333 0 0.333333 0 1 0 0 0 1
 
 *Right monitor*
 
-    xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0.6666 0 1 0 0 0 1
+    xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.333333 0 0.666666 0 1 0 0 0 1
 
 **Note** The xinput command does not last through a restart. See below.
 

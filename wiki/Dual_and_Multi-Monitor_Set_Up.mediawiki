@@ -188,11 +188,11 @@ All three monitors have the same resolution, say 1280x1024.  You set up the line
 So now the xinput commands to set the device to the desired monitor are these.
 
 ''Left monitor''
-<pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0 0 1 0 0 0 1</pre>
+<pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.333333 0 0 0 1 0 0 0 1</pre>
 ''Center monitor''
-<pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0.3333 0 1 0 0 0 1</pre>
+<pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.333333 0 0.333333 0 1 0 0 0 1</pre>
 ''Right monitor''
-<pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.3333 0 0.6666 0 1 0 0 0 1</pre>
+<pre>xinput set-prop "Device name" --type=float "Coordinate Transformation Matrix" 0.333333 0 0.666666 0 1 0 0 0 1</pre>
 
 '''Note''' The xinput command does not last through a restart.  See below.
 
