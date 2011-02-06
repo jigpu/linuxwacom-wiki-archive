@@ -12,7 +12,8 @@ several 'indirect' settings (i.e. the xsetwacom command does not relate
 directly to a single property). For a detailed description of
 xsetwacom's commands and options, please refer to the man page. This
 page provides a general overview and describes some of the
-[quirks](#Quirks "wikilink") you may encounter.
+[quirks](#xsetwacom_Command_Parameter_Usage "wikilink") you may
+encounter.
 
 Note that any setting changed by xsetwacom will be reset to default (or
 a [statically configured setting](/wiki/Configuring_X "wikilink")) whenever
