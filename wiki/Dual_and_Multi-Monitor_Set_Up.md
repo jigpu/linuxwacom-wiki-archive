@@ -75,7 +75,7 @@ mouse). In a terminal enter the following.
 
 Using the "device name" (in quotes) enter in a terminal.
 
-    xinput list-props "device Name"
+    xinput list-props "device name"
 
 For example:
 
