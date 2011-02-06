@@ -13,11 +13,11 @@ On most desktop distributions, you need [[xf86-input-wacom]] as your X driver. N
 If your device is not supported by the current kernel and no Wacom patches are pending, you may be lucky with the [[linuxwacom]] kernel patches. Note that these apply outside of your distribution and you will need to re-install each time you update your distribution kernel.
 
 == User help ==
-Click [[:Category:HOWTO|here]] for a list of HOWTOs.
+Click '''[[:Category:HOWTO|here]]''' for a list of '''HOWTOs'''.
 
-Note that because [[linuxwacom]] is not necessarily available in modern distributions anymore, HOWTOs and other information that apply to the [[linuxwacom]] tarballs are available separately [[:Category:Linuxwacom|here]]. If you run a modern distribution, you will not need this.
+Note that because [[linuxwacom]] is not necessarily available in modern distributions anymore, '''HOWTOs''' and other information that apply to the '''[[linuxwacom]]''' tarballs are available separately '''[[:Category:Linuxwacom|here]]'''. If you run a modern distribution, you will not need this.
 
-The most commonly asked questions and the best answers available to date are in the [[FAQ]]. If you still have problem, please check [http://sourceforge.net/tracker/?group_id=69596 Trackers] to see if someone else has reported the issue or has a patch for the problem.
+The most commonly asked questions and the best answers available to date are in the '''[[FAQ]]'''. If you still have problem, please check [http://sourceforge.net/tracker/?group_id=69596 Trackers] to see if someone else has reported the issue or has a patch for the problem.
 
 == Mailing lists ==
 {{:Mailing lists}}
