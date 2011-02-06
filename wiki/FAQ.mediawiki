@@ -11,7 +11,7 @@ xf86-input-wacom is the preferred driver for X Servers 1.7 and later. linuxwacom
 
 {{:Supported Devices}}
 
-== How do I configure my device ==
+== How do I configure my device? ==
 
 See [[Building the driver]] and [[Configuring X]]
 

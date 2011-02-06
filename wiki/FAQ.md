@@ -29,8 +29,8 @@ additional patches.
 Which devices are supported?
 ----------------------------
 
-How do I configure my device
-----------------------------
+How do I configure my device?
+-----------------------------
 
 See [Building the driver](/wiki/Building_the_driver "wikilink") and
 [Configuring X](/wiki/Configuring_X "wikilink")
