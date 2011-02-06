@@ -52,8 +52,31 @@ Intuos series and Cintiq 21UX/20WSX/12WX to date (July. 31, 2009). Any
 other tablets don't have tilt no matter you have the tilt option in your
 xorg.conf or not.
 
-Is hotplug supported for X input devices?
------------------------------------------
+How do I rotate the screen and/or stylus on my tablet pc?
+---------------------------------------------------------
+
+See [Screen Rotation](/wiki/Tablet_PC_Setup#Screen_Rotation "wikilink").
+
+How do I set up my Bamboo Pen & Touch?
+--------------------------------------
+
+See [Bamboo Pen &
+Touch](/wiki/Wacom_Tablet_Set_Up#Bamboo_Pen_&_Touch "wikilink").
+
+How do I set up my tablet with Dual or Multi-Monitors?
+------------------------------------------------------
+
+See [Dual and Multi-Monitor Set
+Up](/wiki/Dual_and_Multi-Monitor_Set_Up "wikilink").
+
+I am left handed. How do I flip my tablet?
+------------------------------------------
+
+See *Rotate* in [Xsetwacom](/wiki/Xsetwacom "wikilink") and also
+[Rotation](/wiki/Rotation "wikilink").
+
+Is hot plugging supported for my USB tablet?
+--------------------------------------------
 
 Yes, but only for devices configured via [HAL or
 xorg.conf.d](/wiki/Configuring_X "wikilink"). If you have your devices
