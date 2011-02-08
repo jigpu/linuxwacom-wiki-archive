@@ -69,8 +69,9 @@ MapToOutput
 -----------
 
 The wacom driver does not support multi-monitor setups directly -
-handling of such setups is catered for by the X Server. Xsetwacom does
-however provide a parameter to easily map a tablet to a screen.
+handling of such setups is catered for by the X Server.
+[xsetwacom](xsetwacom "wikilink") does however provide a parameter to
+easily map a tablet to a screen.
 
 **Requirements**
 
@@ -83,9 +84,8 @@ configurations, not to NVIDIA TwinView. If you don't use the NVIDIA
 binary driver, you have a XRandR configuration and can go ahead.
 *MapToOutput* takes an output name as parameter and then adjusts the
 coordinate transformation matrix to the screen size of that output. The
-monitor names can be obtained with the *xrandr* tool. In this example,
-the three available outputs are "VGA1", "LVDS1" and "DVI1". To map a
-tool to the VGA monitor, simply run:
+monitor names can be obtained with the *xrandr* tool (e.g. *VGA1*). To
+map a tool to the VGA monitor, simply run:
 
 ` xsetwacom set "device name" MapToOutput VGA1`
 
