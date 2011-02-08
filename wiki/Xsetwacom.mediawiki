@@ -48,7 +48,7 @@ The ''MapToOutput'' parameter maps the wacom tablet to a specific screen. This o
 See [[Dual and Multi-Monitor Set Up#MapToOutput|MapToOutput]] for more detail.  If you use the NVIDIA binary driver or are running an earlier version of xf86-input-wacom, you can manually calculate the matrix and set the property with the ''xinput'' tool.  See [[Dual and Multi-Monitor Set Up#Coordinate Transformation Matrix|Coordinate Transformation Matrix]].
 
 == PressCurve ==
-The ''PressCurve'' parameter used by xsetwacom is a Bezier curve of third order or a Bezier Cubic Spline.  So it is a cubic equation with four points, composed of two endpoints or anchor points (0,0 & 100,100) and two control points (x1,y1 & x2,y2) that define the curve's shape.  What that all means is [[xf86-input-wacom]]'s X driver offers you superb control over your stylus and eraser's feel.
+The ''PressCurve'' parameter used by xsetwacom is a [http://en.wikipedia.org/wiki/B%C3%A9zier_curve Bezier curve] of third order or a Bezier Cubic Spline.  So it is a cubic equation with four points, composed of two endpoints or anchor points (0,0 & 100,100) and two control points (x1,y1 & x2,y2) that define the curve's shape.  What that all means is [[xf86-input-wacom]]'s X driver offers you superb control over your stylus and eraser's feel.
 
 With the default curve the two control points have the same values as the anchor points,
 

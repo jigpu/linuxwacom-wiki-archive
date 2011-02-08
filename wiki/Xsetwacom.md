@@ -99,12 +99,13 @@ Matrix](/wiki/Dual_and_Multi-Monitor_Set_Up#Coordinate_Transformation_Matrix "wi
 PressCurve
 ----------
 
-The *PressCurve* parameter used by xsetwacom is a Bezier curve of third
-order or a Bezier Cubic Spline. So it is a cubic equation with four
-points, composed of two endpoints or anchor points (0,0 & 100,100) and
-two control points (x1,y1 & x2,y2) that define the curve's shape. What
-that all means is [xf86-input-wacom](xf86-input-wacom "wikilink")'s X
-driver offers you superb control over your stylus and eraser's feel.
+The *PressCurve* parameter used by xsetwacom is a [Bezier
+curve](http://en.wikipedia.org/wiki/B%C3%A9zier_curve) of third order or
+a Bezier Cubic Spline. So it is a cubic equation with four points,
+composed of two endpoints or anchor points (0,0 & 100,100) and two
+control points (x1,y1 & x2,y2) that define the curve's shape. What that
+all means is [xf86-input-wacom](xf86-input-wacom "wikilink")'s X driver
+offers you superb control over your stylus and eraser's feel.
 
 With the default curve the two control points have the same values as
 the anchor points,
