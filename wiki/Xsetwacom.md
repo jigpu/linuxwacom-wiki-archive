@@ -161,3 +161,22 @@ the complete tablet, rotate all tools. To rotate a tool use:
 
 and one of the four valid settings. For more detail see
 [Rotation](/wiki/Rotation "wikilink").
+
+TPCButton
+---------
+
+The Tablet PC Button i.e. *TPCButton* parameter is "on" by default for
+tablet pc's. In order for the stylus buttons to work the stylus tip must
+be in contact with the screen. The default for tablets is "off" which
+enables the *hover* mode. In tablet or hover mode the stylus buttons
+will work with the stylus tip in proximity of the tablet, but the stylus
+tip does not actually have to be touching. So the values are on\|off
+(tablet pc mode\|tablet/hover mode) and apply only to the stylus.
+
+` xsetwacom set "device name" TPCButton "on"`
+
+Note that *TPCButton* parameter functionality was added to xsetwacom in
+the *xf86-input-wacom-0.10.10+ tree*. If you want to use this xsetwacom
+parameter, either clone the
+[xf86-input-wacom](xf86-input-wacom "wikilink") git repository, or
+download a later tar.
