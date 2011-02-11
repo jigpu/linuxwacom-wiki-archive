@@ -133,8 +133,8 @@ coordinates.
 ### Guestimate the Coordinate Values
 
 If you have some experience you may want to eyeball the situation and
-plug in your best guesses. Probably not the best way to go as it usually
-requires some trial and error.
+plug in your "educated" guesses. Probably not the best way to go as it
+usually requires some trial and error.
 
 Apply the Coordinates
 ---------------------

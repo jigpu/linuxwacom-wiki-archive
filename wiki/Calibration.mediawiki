@@ -71,7 +71,7 @@ While you could also use ''evtest'' (event test) if you specify the device's eve
 to obtain the coordinate values, in practice it is not that useful.  Evtest only gives you the coordinates of your first touch of the screen immediately after you run the command.  So you have to constantly shut it off with ctrl-z and restart it and touch the screen again and again with your stylus or finger, trying to zero in on the minumum and maximum coordinates.
 
 === Guestimate the Coordinate Values ===
-If you have some experience you may want to eyeball the situation and plug in your best guesses.  Probably not the best way to go as it usually requires some trial and error.
+If you have some experience you may want to eyeball the situation and plug in your "educated" guesses.  Probably not the best way to go as it usually requires some trial and error.
 
 == Apply the Coordinates ==
 Now that you have acquired your TopX & Y and BottomX & Y values you can implement them with [[xsetwacom]] commands.  Note the eraser and cursor coordinates are the same as the stylus coordinates.  For example the default values of a Cintiq look like the following.
