@@ -47,11 +47,10 @@ script modified for the evdev driver.
         echo 1 > /tmp/touch_off && exit 0
     fi
 
-Calibration
------------
+Calibration of Your Tablet PC
+-----------------------------
 
-See
-[xinput\_calibrator](/wiki/External_applications#xinput_calibrator "wikilink").
+See the [Calibration HOWTO](/wiki/Calibration "wikilink").
 
 Dual and Multi-Monitor Set Up
 -----------------------------

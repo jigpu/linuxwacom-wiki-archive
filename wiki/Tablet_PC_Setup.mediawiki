@@ -28,9 +28,9 @@ else
 fi
 </pre>
 
-== Calibration ==
+== Calibration of Your Tablet PC ==
 
-See [[External applications#xinput_calibrator|xinput_calibrator]].
+See the [[Calibration|Calibration HOWTO]].
 
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
