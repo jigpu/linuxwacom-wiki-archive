@@ -96,6 +96,23 @@ matrix and set the property with the *xinput* tool. See [Coordinate
 Transformation
 Matrix](/wiki/Dual_and_Multi-Monitor_Set_Up#Coordinate_Transformation_Matrix "wikilink").
 
+Mode
+----
+
+The *Mode* parameter sets the device mode as either *Relative*, the
+default for cursor (the Wacom tablet mouse) and tablet touch or
+*Absolute*, the default for the stylus, eraser, and tablet pc touch.
+*Relative Mode* means pointer tracking for the device will function like
+a mouse, whereas *Absolute Mode* means the pointer corresponds to the
+device's actual position on the tablet or tablet pc screen. An example
+of the command would be:
+
+` xsetwacom set "device name" Mode "Absolute"`
+
+Note that using the *Mode* parameter in an xsetwacom command will
+prevent you from pulling a *Guideline* in Gimp with your mouse due to a
+long standing GTK bug.
+
 PressCurve
 ----------
 
