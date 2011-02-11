@@ -35,6 +35,12 @@ How do I configure my device?
 See [Building the driver](/wiki/Building_the_driver "wikilink") and
 [Configuring X](/wiki/Configuring_X "wikilink")
 
+Are there any graphical configuration tools?
+--------------------------------------------
+
+See [External applications\#Graphical Configuration
+Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
+
 How do I get the special features of my stylus to work?
 -------------------------------------------------------
 
