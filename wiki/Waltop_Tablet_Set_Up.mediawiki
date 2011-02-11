@@ -27,12 +27,14 @@ It's possible additional changes to support your Waltop may have been made since
 
 '''Tip''' If you have problems with both stylus buttons giving the same response despite being set to different values please report your issue to [https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss linuxwacom-discuss].
 
-== Calibration ==
-
-See [[External applications#xinput_calibrator|xinput_calibrator]].
+== Calibration of Your Stylus ==
+See the [[Calibration|Calibration HOWTO]].
 
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
+
+== Graphical Configuration GUI ==
+Work is proceeding on a replacement for wacomcpl.  See [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
 
 == Tablet Configuration ==
 Currently [[xf86-input-wacom]] does not have a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).  However since '''wacomcpl''' stored its settings as a [[xsetwacom]] script in '''.xinitrc''' we can at least duplicate the .xinitrc, calling it say '''.xsetwacom.sh'''.  Below is a sample script for your stylus.

@@ -62,17 +62,23 @@ response despite being set to different values please report your issue
 to
 [linuxwacom-discuss](https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss).
 
-Calibration
------------
+Calibration of Your Stylus
+--------------------------
 
-See
-[xinput\_calibrator](/wiki/External_applications#xinput_calibrator "wikilink").
+See the [Calibration HOWTO](/wiki/Calibration "wikilink").
 
 Dual and Multi-Monitor Set Up
 -----------------------------
 
 See [Dual and Multi-Monitor Set
 Up](/wiki/Dual_and_Multi-Monitor_Set_Up "wikilink").
+
+Graphical Configuration GUI
+---------------------------
+
+Work is proceeding on a replacement for wacomcpl. See [Graphical
+Configuration
+Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
 Tablet Configuration
 --------------------
