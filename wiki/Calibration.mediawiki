@@ -1,5 +1,3 @@
-Calibration
-
 The default coordinate settings for your tablet or tablet pc that are supplied by [[xf86-input-wacom|xf86-input-wacom]] are usually accurate.  However depending on your hardware or setup you may need to do some fine tuning.  The default coordinates are available in the Xorg.0.log file in /var/log and would look something like this.
 
   Wacom BambooFun 2FG 4x5 Pen stylus: top X=0 top Y=0 bottom X=14720 bottom Y=9200

@@ -6,8 +6,6 @@ tags:
  - HOWTO
 ---
 
-Calibration
-
 The default coordinate settings for your tablet or tablet pc that are
 supplied by [xf86-input-wacom](xf86-input-wacom "wikilink") are usually
 accurate. However depending on your hardware or setup you may need to do
