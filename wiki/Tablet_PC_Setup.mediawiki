@@ -35,6 +35,9 @@ See the [[Calibration|Calibration HOWTO]].
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
 
+== Graphical Configuration Tools ==
+Work is proceeding on a replacement for wacomcpl.  See [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
+
 == Screen Rotation ==
 See [[Rotation#Tablet PC Rotation Script|Tablet PC Rotation Script]].
 

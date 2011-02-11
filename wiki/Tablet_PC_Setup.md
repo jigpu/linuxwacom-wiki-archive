@@ -58,6 +58,13 @@ Dual and Multi-Monitor Set Up
 See [Dual and Multi-Monitor Set
 Up](/wiki/Dual_and_Multi-Monitor_Set_Up "wikilink").
 
+Graphical Configuration Tools
+-----------------------------
+
+Work is proceeding on a replacement for wacomcpl. See [Graphical
+Configuration
+Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
+
 Screen Rotation
 ---------------
 
