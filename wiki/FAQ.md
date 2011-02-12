@@ -38,8 +38,13 @@ See [Building the driver](/wiki/Building_the_driver "wikilink") and
 Are there any graphical configuration tools?
 --------------------------------------------
 
-See [External applications\#Graphical Configuration
+See [Graphical Configuration
 Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
+
+How do I calibrate my tablet or tablet pc?
+------------------------------------------
+
+See the [Calibration HOWTO](/wiki/Calibration#Calibration "wikilink").
 
 How do I get the special features of my stylus to work?
 -------------------------------------------------------
@@ -93,6 +98,16 @@ console); and press Ctrl + Alt + F7 together then release them (screen
 returns back to normal). On some distributions (e.g. Fedora), the
 original X session runs on VT1, hence substitute the commands with Ctrl
 + Alt + F2 and Ctrl + Alt + F1.
+
+Where is wacomcpl (the Wacom Control Panel)?
+--------------------------------------------
+
+Wacomcpl is not packaged with
+[xf86-input-wacom](xf86-input-wacom "wikilink") and will not work with
+it. Work is proceeding on a replacement integrated into the GNOME
+Desktop environment. For links and an explanation see [Graphical
+Configuration
+Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
 Who is responsible for this code?
 ---------------------------------

@@ -16,7 +16,10 @@ xf86-input-wacom is the preferred driver for X Servers 1.7 and later. linuxwacom
 See [[Building the driver]] and [[Configuring X]]
 
 == Are there any graphical configuration tools? ==
-See [[External applications#Graphical Configuration Tools]].
+See [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
+
+== How do I calibrate my tablet or tablet pc? ==
+See the [[Calibration#Calibration|Calibration HOWTO]].
 
 == How do I get the special features of my stylus to work? ==
 
@@ -41,6 +44,9 @@ See ''Rotate'' in [[Xsetwacom]] and also [[Rotation]].
 
 == Is hot plugging supported for my USB tablet? ==
 Yes, but only for devices configured via [[Configuring X|HAL or xorg.conf.d]]. If you have your devices configured in the [[Xorg.conf|xorg.conf]], you can work around this by switching virtual terminals after replugging your tablet. That is, press Ctrl + Alt + F1 together then release them (screen turns to console); and press Ctrl + Alt + F7 together then release them (screen returns back to normal). On some distributions (e.g. Fedora), the original X session runs on VT1, hence substitute the commands with Ctrl + Alt + F2 and Ctrl + Alt + F1.
+
+== Where is wacomcpl (the Wacom Control Panel)? ==
+Wacomcpl is not packaged with [[xf86-input-wacom]] and will not work with it.  Work is proceeding on a replacement integrated into the GNOME Desktop environment.  For links and an explanation see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
 
 == Who is responsible for this code? ==
 You are. Linux Wacom is an open source project and driven by Linux users with Wacom tablets such as yourself. John Joganic took up the code in November of 2002 and created this project. The source code was written by at least two dozen individuals, most of them are not directly involved in the project any more. Ping Cheng has assumed the project administrator since 2003. You can help out by testing, reporting bugs, documentation on this wiki and of course by writing patches (see the [[mailing lists]]).
