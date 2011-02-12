@@ -197,3 +197,44 @@ the *xf86-input-wacom-0.10.10+ tree*. If you want to use this xsetwacom
 parameter, either clone the
 [xf86-input-wacom](xf86-input-wacom "wikilink") git repository, or
 download a later tar.
+
+Table of New Parameter Names
+============================
+
+**Information Pending** - this entry posted in anticipation of upcoming
+changes, does not apply yet.
+
+Most of the new parameter names apply starting with
+[xf86-input-wacom-0.10.11](http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/)
+released 2-17-11(?). Some were changed or removed earlier. Many of the
+parameter names were changed to make them more readable. Some were
+changed or removed for code stream-lining purposes, such as adding the
+whitespace between Button and the number, i.e. Button5 becoming Button
+5.
+
+| New Parameter Name                 | Old Parameter Name                 |
+|------------------------------------|------------------------------------|
+| AbsWheelUp                         | AbsWUp                             |
+| AbsWheelDown                       | AbsWDn                             |
+| Area x1 y1 x2 y2                   | TopX, TopY, BottomX, & BottomY     |
+| Button 1 ...                       | Button1 ...                        |
+| CursorProximity                    | CursorProx                         |
+| removed                            | GetTabletID                        |
+| MapToOutput                        | new                                |
+| removed                            | mmonitor                           |
+| PressureCurve                      | PressCurve                         |
+| RelWheelUp                         | RelWUp                             |
+| RelWheelDown                       | RelWDn                             |
+| ResetArea                          | xyDefault                          |
+| Rotate values: none, cw, ccw, half | Rotate values: NONE, CW, CCW, HALF |
+| removed                            | Rspeed                             |
+| removed                            | Screen\_No                         |
+| StripLeftUp                        | StripLUp                           |
+| StripLeftDown                      | StripLDn                           |
+| StripRightUp                       | StripRUp                           |
+| StripRightDown                     | StripRDn                           |
+| TabletPCButton                     | TPCButton                          |
+| Threshold                          | ClickForce                         |
+| removed                            | TVResolution                       |
+| removed                            | TwinView                           |
+|                                    |                                    |
