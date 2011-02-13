@@ -70,11 +70,11 @@ If you have a USB tablet, you need to check Wacom kernel driver first [[Linuxwac
 The file linuxwacom-0.8.8-10.tar.bz2 is the stable package and contains files that you will need to get your serial or USB tablet working. The current beta package linuxwacom-0.8.7-2.tar.bz2 is also available and may be used by people who are willing to help test new features. I will never put a beta package on this site that I am not running myself on my primary development machine. So you can be certain that if there are any obvious show stoppers, they will be fixed before you get to see them.
 
 Unpacking the tarball is usually a one-step process, but I show both steps in case the typical -jxf option doesn't work with tar.
-<blockquote>
+
     [jej@ayukawa jej]$ bunzip2 linuxwacom-0.8.8-10.tar.bz2
     [jej@ayukawa jej]$ tar -xf linuxwacom-0.8.8-10.tar
     [jej@ayukawa jej]$ cd linuxwacom-0.8.8-10
-</blockquote>
+
 Once in the package directory, you need only to configure and build the code. This is described in more detail as you continue. The executables and wacom_drv.o are installed automatically; the kernel drivers have different installation procedures depend on the kernel source you use.
 '''Stable files included for linuxwacom-0.8.8-10:'''
 If you are interested, the following tables contain the package contents and release dates. Otherwise, let's continue.

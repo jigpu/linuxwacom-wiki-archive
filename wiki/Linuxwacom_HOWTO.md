@@ -181,9 +181,9 @@ obvious show stoppers, they will be fixed before you get to see them.
 Unpacking the tarball is usually a one-step process, but I show both
 steps in case the typical -jxf option doesn't work with tar.
 
-> `   [jej@ayukawa jej]$ bunzip2 linuxwacom-0.8.8-10.tar.bz2`  
-> `   [jej@ayukawa jej]$ tar -xf linuxwacom-0.8.8-10.tar`  
-> `   [jej@ayukawa jej]$ cd linuxwacom-0.8.8-10`
+`   [jej@ayukawa jej]$ bunzip2 linuxwacom-0.8.8-10.tar.bz2`  
+`   [jej@ayukawa jej]$ tar -xf linuxwacom-0.8.8-10.tar`  
+`   [jej@ayukawa jej]$ cd linuxwacom-0.8.8-10`
 
 Once in the package directory, you need only to configure and build the
 code. This is described in more detail as you continue. The executables
