@@ -170,13 +170,16 @@ tablet or Tablet PC users can go directly to the next section
 
 ### Downloading the Code
 
-The file linuxwacom-0.8.8-10.tar.bz2 is the stable package and contains
-files that you will need to get your serial or USB tablet working. The
-current beta package linuxwacom-0.8.7-2.tar.bz2 is also available and
-may be used by people who are willing to help test new features. I will
-never put a beta package on this site that I am not running myself on my
-primary development machine. So you can be certain that if there are any
-obvious show stoppers, they will be fixed before you get to see them.
+The file
+[linuxwacom-0.8.8-10.tar.bz2](http://sourceforge.net/projects/linuxwacom/files/linuxwacom/0.8.8-10/linuxwacom-0.8.8-10.tar.bz2/download)
+is the stable package and contains files that you will need to get your
+serial or USB tablet working. The current beta package
+[linuxwacom-0.8.7-2.tar.bz2](http://sourceforge.net/projects/linuxwacom/files/linuxwacom-dev/0.8.7-2/linuxwacom-0.8.7-2.tar.bz2/download)
+is also available and may be used by people who are willing to help test
+new features. I will never put a beta package on this site that I am not
+running myself on my primary development machine. So you can be certain
+that if there are any obvious show stoppers, they will be fixed before
+you get to see them.
 
 Unpacking the tarball is usually a one-step process, but I show both
 steps in case the typical -jxf option doesn't work with tar.
