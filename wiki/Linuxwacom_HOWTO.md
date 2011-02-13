@@ -28,7 +28,7 @@ tablets, USB and serial, running on various different Linux
 distributions. As of December 2002, this project has transformed into
 the Linux Wacom Project. Work on this document is on-going so if you
 find an error, have a question, or have something to add, please send an
-email to: linuxwacom-discuss@lists.sf.net.
+email to: linuxwacom-discuss@lists.sourceforge.net.
 
 ### How To Use This Document
 
