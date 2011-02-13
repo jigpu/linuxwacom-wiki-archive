@@ -291,30 +291,30 @@ command, for instance, you must have root access. Additionally, if the
 you must specify the full pathname, /sbin/modprobe, to run the command.
 Here is an example of the problem, followed by solutions.
 
-> `   [jej@ayukawa jej]$ modprobe foo`  
-> `   bash: modprobe: command not found`  
-> `   [jej@ayukawa jej]$ locate modprobe`  
-> `   /sbin/modprobe`  
-> `   [jej@ayukawa jej]$ echo $PATH`  
-> `   /bin:/usr/bin: ... :/home/jej/bin`
+`   [jej@ayukawa jej]$ modprobe foo`  
+`   bash: modprobe: command not found`  
+`   [jej@ayukawa jej]$ locate modprobe`  
+`   /sbin/modprobe`  
+`   [jej@ayukawa jej]$ echo $PATH`  
+`   /bin:/usr/bin: ... :/home/jej/bin`
 
 Normal users do not have /sbin in their path, so running modprobe
 directly fails. Running the program using the full pathname
 (/sbin/modprobe) will solve this, as will adding /sbin to the path. But
 there is another problem, as we will see:
 
-> `   [jej@ayukawa jej]$ /sbin/modprobe foo`  
-> `   foo.o: create_module: Operation not permitted`
+`   [jej@ayukawa jej]$ /sbin/modprobe foo`  
+`   foo.o: create_module: Operation not permitted`
 
 Normal users are not allowed to run this command. For that, we need to
 be root. The su command stands for "substitute user" since it can be
 used to become any user on the system, but it is generally known by the
 incorrect but very memorable mnemonic "superuser."
 
-> `   [jej@ayukawa jej]$ su`  
-> `   Password:`  
-> `   [root@ayukawa jej]# whoami`  
-> `   root`
+`   [jej@ayukawa jej]$ su`  
+`   Password:`  
+`   [root@ayukawa jej]# whoami`  
+`   root`
 
 Note the change to the root account, and the additional change from $ to
 \# on the prompt. I maintain this convention in all the examples in this
@@ -328,11 +328,11 @@ but the path ($PATH) stays the same. Thus, becoming root is not
 sufficient to run modprobe without the full pathname, but does solve the
 access problem.
 
-> `   [root@ayukawa jej]# modprobe foo`  
-> `   bash: modprobe: command not found`  
-> `   [root@ayukawa jej]# export PATH=$PATH:/sbin`  
-> `   [root@ayukawa jej]# modprobe foo`  
-> `   [root@ayukawa jej]#`
+`   [root@ayukawa jej]# modprobe foo`  
+`   bash: modprobe: command not found`  
+`   [root@ayukawa jej]# export PATH=$PATH:/sbin`  
+`   [root@ayukawa jej]# modprobe foo`  
+`   [root@ayukawa jej]#`
 
 In this example, the user adds the /sbin directory to the path and can
 run modprobe normally. export is a bash shell command that changes
@@ -353,12 +353,12 @@ to run in the root account's environment. This is accomplished with the
 root's home directory, requiring you to cd back to the original
 directory in which you were working.
 
-> `   [jej@ayukawa src]$ pwd`  
-> `   /home/jej/src/linuxwacom/src`  
-> `   [jej@ayukawa src]$ su -`  
-> `   [root@ayukawa root]# cd /home/jej/src/linuxwacom/src`  
-> `   [root@ayukawa src]# echo $PATH`  
-> `   /bin:/sbin:/usr/bin: ... :/root/bin`
+`   [jej@ayukawa src]$ pwd`  
+`   /home/jej/src/linuxwacom/src`  
+`   [jej@ayukawa src]$ su -`  
+`   [root@ayukawa root]# cd /home/jej/src/linuxwacom/src`  
+`   [root@ayukawa src]# echo $PATH`  
+`   /bin:/sbin:/usr/bin: ... :/root/bin`
 
 Here, the user starts in the package's src directory, but upon invoking
 "su -" is magically shuttled off to root's home directory. A quick cd
@@ -370,20 +370,20 @@ long-term option:
 
 Option One: Become root and add /sbin to the path.
 
-> `   [jej@ayukawa src]$ su`  
-> `   [jej@ayukawa src]# export PATH=$PATH:/sbin`
+`   [jej@ayukawa src]$ su`  
+`   [jej@ayukawa src]# export PATH=$PATH:/sbin`
 
 Option Two: Become root using root's environment and cd back.
 
-> `   [jej@ayukawa src]$ su -`  
-> `   [root@ayukawa root]# cd /home/jej/src/linuxwacom/src`
+`   [jej@ayukawa src]$ su -`  
+`   [root@ayukawa root]# cd /home/jej/src/linuxwacom/src`
 
 Option Three (recommended): Add /sbin to your personal account's path
 
-> `   [jej@ayukawa src]$ export PATH=$PATH:/sbin`  
-> `   [jej@ayukawa src]$ su`  
-> `   [root@ayukawa src]# echo $PATH`  
-> `   /bin:/usr/bin: ... :/home/jej/bin:/sbin`
+`   [jej@ayukawa src]$ export PATH=$PATH:/sbin`  
+`   [jej@ayukawa src]$ su`  
+`   [root@ayukawa src]# echo $PATH`  
+`   /bin:/usr/bin: ... :/home/jej/bin:/sbin`
 
 By adding the path early in the session, it becomes available every time
 you su to root later on. You could also add the export command to the
@@ -393,8 +393,8 @@ automatically when you log in.
 To exit from the root account and return to your normal account, you can
 use the exit command or type Ctrl-D on an empty line.
 
-> `   [root@ayukawa src]# exit`  
-> `   [jej@ayukawa src]$`
+`   [root@ayukawa src]# exit`  
+`   [jej@ayukawa src]$`
 
 If any of this is not explained clearly, drop me a line and let me know
 where you got stuck. I'd be happy to clarify directly and update this

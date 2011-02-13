@@ -310,77 +310,77 @@ If you are interested, the following tables contain the package contents and rel
 If you are comfortable with the root account, paths, the /sbin directory, and programs like modprobe, you can skip this section. This is largely to clarify some things for people who are new to Linux and get tripped up with the root account and paths. This is not meant to be a tutorial, so if this is over your head, I would recommend reading a book on Linux command line usage. All examples in this document assume the bash shell.
 
 Many of the procedures in this document need root access, and the commands that are executed are located in places on the system that are not normally accessed by typical users. In order to run the modprobe command, for instance, you must have root access. Additionally, if the /sbin directory which contains modprobe does not appear in your path, you must specify the full pathname, /sbin/modprobe, to run the command. Here is an example of the problem, followed by solutions.
-<blockquote>
+
     [jej@ayukawa jej]$ modprobe foo
     bash: modprobe: command not found
     [jej@ayukawa jej]$ locate modprobe
     /sbin/modprobe
     [jej@ayukawa jej]$ echo $PATH
     /bin:/usr/bin: ... :/home/jej/bin
-</blockquote>
+
 Normal users do not have /sbin in their path, so running modprobe directly fails. Running the program using the full pathname (/sbin/modprobe) will solve this, as will adding /sbin to the path. But there is another problem, as we will see:
-<blockquote>
+
     [jej@ayukawa jej]$ /sbin/modprobe foo
     foo.o: create_module: Operation not permitted
-</blockquote>
+
 Normal users are not allowed to run this command. For that, we need to be root. The su command stands for "substitute user" since it can be used to become any user on the system, but it is generally known by the incorrect but very memorable mnemonic "superuser."
-<blockquote>
+
     [jej@ayukawa jej]$ su
     Password:
     [root@ayukawa jej]# whoami
     root
-</blockquote>
+
 Note the change to the root account, and the additional change from $ to # on the prompt. I maintain this convention in all the examples in this document, so if you get an "access denied" error, check the prompt. You probably need to be root.
 
 Now that we have root access, is /sbin in our path? No. We have only been granted the privileges of root; we are not really in the root account's environment. Most notably, the home directory ($HOME) changes, but the path ($PATH) stays the same. Thus, becoming root is not sufficient to run modprobe without the full pathname, but does solve the access problem.
-<blockquote>
+
     [root@ayukawa jej]# modprobe foo
     bash: modprobe: command not found
     [root@ayukawa jej]# export PATH=$PATH:/sbin
     [root@ayukawa jej]# modprobe foo
     [root@ayukawa jej]#
-</blockquote>
+
 In this example, the user adds the /sbin directory to the path and can run modprobe normally. export is a bash shell command that changes aspects of your environment; in this case, /sbin is appended to the path. In the highly unlikely event that you are using a different shell, which for novice users seems unwise to me, you would need to use a different command. Redhat, Mandrake, and similar distributions all use bash by default, so it is unlikely that you would be using anything else.
 
 At any rate, changing the path is a reasonably good solution, if you can remember the syntax of the export command.
 
 Another approach to this problem is to do more than just "be root," but to run in the root account's environment. This is accomplished with the "su -" command and provides you with root's normal path, including the /sbin directory. The unfortunate side-effect is that you wind up in root's home directory, requiring you to cd back to the original directory in which you were working.
-<blockquote>
+
     [jej@ayukawa src]$ pwd
     /home/jej/src/linuxwacom/src
     [jej@ayukawa src]$ su -
     [root@ayukawa root]# cd /home/jej/src/linuxwacom/src
     [root@ayukawa src]# echo $PATH
     /bin:/sbin:/usr/bin: ... :/root/bin
-</blockquote>
+
 Here, the user starts in the package's src directory, but upon invoking "su -" is magically shuttled off to root's home directory. A quick cd back to the package directory and all is better. And, as demonstrated above, the path conveniently contains /sbin.
 
 So that leaves you with two immediate options, and one potential long-term option:
 
 Option One: Become root and add /sbin to the path.
-<blockquote>
+
     [jej@ayukawa src]$ su
     [jej@ayukawa src]# export PATH=$PATH:/sbin
-</blockquote>
+
 Option Two: Become root using root's environment and cd back.
-<blockquote>
+
     [jej@ayukawa src]$ su -
     [root@ayukawa root]# cd /home/jej/src/linuxwacom/src
-</blockquote>
+
 Option Three (recommended): Add /sbin to your personal account's path
-<blockquote>
+
     [jej@ayukawa src]$ export PATH=$PATH:/sbin
     [jej@ayukawa src]$ su
     [root@ayukawa src]# echo $PATH
     /bin:/usr/bin: ... :/home/jej/bin:/sbin
-</blockquote>
+
 By adding the path early in the session, it becomes available every time you su to root later on. You could also add the export command to the .bash_profile file in your home directory and have the path set automatically when you log in.
 
 To exit from the root account and return to your normal account, you can use the exit command or type Ctrl-D on an empty line.
-<blockquote>
+
     [root@ayukawa src]# exit
     [jej@ayukawa src]$
-</blockquote>
+
 If any of this is not explained clearly, drop me a line and let me know where you got stuck. I'd be happy to clarify directly and update this page for future readers.
 
 === Install from Prebuilt ===
