@@ -9,8 +9,8 @@ tags:
 :\* [Getting Values Reported from Wacom
 Devices](/wiki/Sample_Code_for_Linuxwacom#Getting_Values_Reported_from_Wacom_Devices "wikilink")
 
-:\* [Utilitizing Intuos3 or Cintiq 21UX Menu
-Strips](/wiki/Sample_Code_for_Linuxwacom#Utilitizing_Intuos3_or_Cintiq_21UX_Menu_Strips "wikilink")
+:\* [Utilizing Intuos3 or Cintiq 21UX Menu
+Strips](/wiki/Sample_Code_for_Linuxwacom#Utilizing_Intuos3_or_Cintiq_21UX_Menu_Strips "wikilink")
 
 Getting Values Reported from Wacom Devices
 ------------------------------------------
@@ -93,8 +93,8 @@ xidump.c source
             return 0;
         }
 
-Utilitizing Intuos3 or Cintiq 21UX Menu Strips
-----------------------------------------------
+Utilizing Intuos3 or Cintiq 21UX Menu Strips
+--------------------------------------------
 
 '''
 

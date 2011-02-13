@@ -1,5 +1,5 @@
 :* [[Sample Code for Linuxwacom#Getting Values Reported from Wacom Devices|Getting Values Reported from Wacom Devices]]
-:* [[Sample Code for Linuxwacom#Utilitizing Intuos3 or Cintiq 21UX Menu Strips|Utilitizing Intuos3 or Cintiq 21UX Menu Strips]]
+:* [[Sample Code for Linuxwacom#Utilizing Intuos3 or Cintiq 21UX Menu Strips|Utilizing Intuos3 or Cintiq 21UX Menu Strips]]
 
 
 == Getting Values Reported from Wacom Devices ==
@@ -83,7 +83,7 @@ troubleshooting Wacom X driver. The whole source code can be viewed from xidump.
 </pre>
 
 
-== Utilitizing Intuos3 or Cintiq 21UX Menu Strips =='''
+== Utilizing Intuos3 or Cintiq 21UX Menu Strips =='''
 
 Mats Johannesson (aka Voluspa) offered an example for using the Tablet Menus and Touch
 
