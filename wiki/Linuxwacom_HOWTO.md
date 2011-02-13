@@ -163,9 +163,10 @@ server and Linux kernel versions are running on your system. The X
 -version command reveals those information for you.
 
 If you have a USB tablet, you need to check Wacom kernel driver first
-[The USB Kernel Driver](/wiki/The_USB_Kernel_Driver "wikilink"). Serial tablet
-or Tablet PC users can go directly to the next section *Downloading the
-Code* page.
+[The USB Kernel
+Driver](/wiki/Linuxwacom_HOWTO#The_USB_Kernel_Driver "wikilink"). Serial
+tablet or Tablet PC users can go directly to the next section
+*Downloading the Code* page.
 
 ### Downloading the Code
 

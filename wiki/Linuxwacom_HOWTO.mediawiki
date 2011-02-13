@@ -64,7 +64,7 @@ It would be a wise idea at this time to check your XFree86 or Xorg log file for 
 
 To be prepared for the coming steps, it would be nice if you know what X server and Linux kernel versions are running on your system. The X -version command reveals those information for you.
 
-If you have a USB tablet, you need to check Wacom kernel driver first [[The USB Kernel Driver]]. Serial tablet or Tablet PC users can go directly to the next section ''Downloading the Code'' page.
+If you have a USB tablet, you need to check Wacom kernel driver first [[Linuxwacom HOWTO#The USB Kernel Driver|The USB Kernel Driver]]. Serial tablet or Tablet PC users can go directly to the next section ''Downloading the Code'' page.
 
 === Downloading the Code ===
 The file linuxwacom-0.8.8-10.tar.bz2 is the stable package and contains files that you will need to get your serial or USB tablet working. The current beta package linuxwacom-0.8.7-2.tar.bz2 is also available and may be used by people who are willing to help test new features. I will never put a beta package on this site that I am not running myself on my primary development machine. So you can be certain that if there are any obvious show stoppers, they will be fixed before you get to see them.
