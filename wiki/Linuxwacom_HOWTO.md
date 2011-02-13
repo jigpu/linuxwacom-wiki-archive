@@ -414,10 +414,10 @@ installed one for you. Use the command, such as yum remove or apt-get
 uninstall, provided by your distro. Please DO NOT remove the driver
 files manually by rm.
 
-> `   [jej@ayukawa jej]$ cd linuxwacom-0.8.8-10/prebuilt`  
-> `   [jej@ayukawa prebuilt]$ su`  
-> `   [jej@ayukawa prebuilt]# ./uninstall`  
-> `   [jej@ayukawa prebuilt]# ./install`
+`   [jej@ayukawa jej]$ cd linuxwacom-0.8.8-10/prebuilt`  
+`   [jej@ayukawa prebuilt]$ su`  
+`   [jej@ayukawa prebuilt]# ./uninstall`  
+`   [jej@ayukawa prebuilt]# ./install`
 
 Serial tablet (most Tablet PCs are serial) users can skip the rest
 sections and go to Viewing Wacom Data (wacdump) page for details on
