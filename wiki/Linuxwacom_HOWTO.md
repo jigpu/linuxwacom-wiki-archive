@@ -59,8 +59,8 @@ Otherwise, X will just get in the way.
 
 Finally, if you know what you're doing, you can leave your X settings
 intact, print this out, switch to runlevel 3, and follow along from the
-console. An HTML version of this document can be found in the docs
-directory at docs.html.
+console. ~~An HTML version of this document can be found in the docs
+directory at docs.html.~~
 
 ### Wacom Driver Theory of Operation
 
