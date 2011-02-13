@@ -50,7 +50,7 @@ By breaking the responsibility for the data into three distinct levels, the kern
 
 '''Embedded Device Operation - Tablet PC with Wacom Digitizer'''
 
-Refer to [[Tablet PC]] page for detail.
+Refer to [[Linuxwacom HOWTO#Tablet PC|Tablet PC]] page for detail.
 
 == Getting It Together ==
 This section is devoted to preparing your system for the installation. Every distribution handles kernel modules and file locations a bit differently, so the goal here is to return everything to a known state.

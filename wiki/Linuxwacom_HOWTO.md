@@ -129,7 +129,8 @@ path from the USB kernel driver to the gimp application.
 
 **Embedded Device Operation - Tablet PC with Wacom Digitizer**
 
-Refer to [Tablet PC](/wiki/Tablet_PC "wikilink") page for detail.
+Refer to [Tablet PC](/wiki/Linuxwacom_HOWTO#Tablet_PC "wikilink") page for
+detail.
 
 Getting It Together
 -------------------
