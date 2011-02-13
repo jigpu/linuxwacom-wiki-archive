@@ -9,16 +9,14 @@ tags:
 **Import in Progress**
 
 <center>
-**Linux Wacom Project's Linuxwacom HOWTO**
-
 Copyright (C) 2002-2011 - LinuxWacom
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU GENERAL PUBLIC LICENSE as published by the
 Free Software Foundation; either version 2 of the License, or (at your
 option) any later version. A copy of the license is included in the
-section entitled [GNU Free Documentation
-License](/wiki/GNU_Free_Documentation_License "wikilink").
+section entitled [GNU Free Document
+License](/wiki/Linuxwacom_HOWTO#GNU_Free_Document_License "wikilink").
 
 </center>
 Introduction
@@ -4233,7 +4231,9 @@ OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. END OF
 TERMS AND CONDITIONS
 
 <center>
-<small> Copyright (C) 2002-2011 - LinuxWacom This website and its
-contents are licensed under the GNU GENERAL PUBLIC LICENSE. </small>
+<small> Copyright (C) 2002-2011 - LinuxWacom
+
+This website and its contents are licensed under the GNU GENERAL PUBLIC
+LICENSE. </small>
 
 </center>

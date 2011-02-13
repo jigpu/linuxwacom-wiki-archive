@@ -1,15 +1,15 @@
 '''Import in Progress'''
-<center>
-'''Linux Wacom Project's Linuxwacom HOWTO'''
 
+<center>
 Copyright (C) 2002-2011 - LinuxWacom
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU GENERAL PUBLIC LICENSE as published by the
 Free Software Foundation; either version 2 of the License, or
 (at your option) any later version. A copy of the license is included in
-the section entitled [[GNU Free Documentation License]].
+the section entitled [[Linuxwacom HOWTO#GNU Free Document License|GNU Free Document License]].
 </center>
+
 
 == Introduction ==
 This document began in November 2002 as a HOWTO for setting up a USB Wacom Intuos2 on Redhat 8.0. It has since grown to cover all Wacom tablets, USB and serial, running on various different Linux distributions. As of December 2002, this project has transformed into the Linux Wacom Project. Work on this document is on-going so if you find an error, have a question, or have something to add, please send an email to: linuxwacom-discuss@lists.sf.net.
@@ -3369,6 +3369,7 @@ Each version is given a distinguishing version number. If the Program specifies 
 
 <center><small>
 Copyright (C) 2002-2011 - LinuxWacom
+
 This website and its contents are licensed under the GNU GENERAL PUBLIC LICENSE.
 </small></center>
 
