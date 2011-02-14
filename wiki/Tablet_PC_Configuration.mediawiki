@@ -35,6 +35,8 @@ Or you could right click on the file and in Properties, in the Permission tab, c
 Once the script is executable you can double click on it to apply it's settings or reboot to check the auto-start set up.
 
 == The Sample Xsetwacom Scripts ==
+{{Warning|reason=These scripts below have not been reviewed by our developers and should be used with care}}
+
 {{Unclear|reason=
 * Who wrote these scripts? They need to be reviewed by the developers to fix up the coding
 * What values differ from the defaults? And why can't we make those values defaults upstream?
