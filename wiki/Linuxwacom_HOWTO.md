@@ -1667,21 +1667,26 @@ pen), eraser (the other end of your pen if it is clickable), cursor
 your tablet has any) as XInput devices. Most settings, such as stylus
 pressure level and system cursor movement mode can be done in
 /etc/X11/XF86Config or /etc/X11/xorg.conf configuration file before X
-server starts or live through command-line xsetwacom or the simple GUI
-control panel wacomcpl while Wacom driver is running.
+server starts or live through [command-line
+xsetwacom](/wiki/Linuxwacom_HOWTO#Command_Line_Configuration_Interface_(xsetwacom) "wikilink")
+or the simple [GUI control panel
+wacomcpl](/wiki/Linuxwacom_HOWTO#GUI-Based_(tcl/tk)_Wacom_Control_Panel(wacomcpl) "wikilink")
+while Wacom driver is running.
 
 However, adding the InputDevice sections to your XF86Config/ xorg.conf
 file for Wacom devices is required. You should add these devices to the
-ServerLayout section of your XF86Config/xorg.conf file too.
+[ServerLayout](/wiki/Linuxwacom_HOWTO#ServerLayout "wikilink") section of your
+XF86Config/xorg.conf file too.
 
-We assume you are running Either XFree86 4.2 or later Or Xorg. On some
-distributions, this file is called XF86Config-4. Notice that the serial
-and USB configurations are different, so only include the appropriate
-lines. The default serial devices are given. For serial Tablet PCs,
-options "ForceDevice" should be included. You should also change the
-device (e.g. ttyS0 or /dev/input/wacom) to the correct one for your
-tablet. Tablet PC and Cintiq/PL/DTF models don't support cursor type.
-All the new driver options are listed in the manual page below.
+We assume you are running Either XFree86 4.2 or later Or Xorg.
+<span style="background:#00ffff">On some distributions, this file is
+called XF86Config-4. Notice that the serial and USB configurations are
+different, so only include the appropriate lines. The default serial
+devices are given. For serial Tablet PCs, options "ForceDevice" should
+be included. You should also change the device (e.g. ttyS0 or
+/dev/input/wacom) to the correct one for your tablet. Tablet PC and
+Cintiq/PL/DTF models don't support cursor type</span>. All the new
+driver options are listed in the manual page below.
 
         Section "InputDevice"
           Driver        "wacom"
@@ -1746,12 +1751,14 @@ All the new driver options are listed in the manual page below.
 The above four sections identify the stylus, eraser, cursor, touch, and
 pad devices to XInput. Notice that all four reference the same device
 /dev/ttyS0 or /dev/input/wacom depending on whether its a serial or USB
-tablet. Please refer to Testing Tablet Detection and Updated wacom.c
-pages to see which port your tablet is actually mapped to.
+tablet. Please refer to [Testing Tablet
+Detection](/wiki/Linuxwacom_HOWTO#Testing_Tablet_Detection "wikilink") and
+[Updated wacom.c](/wiki/Linuxwacom_HOWTO#Updated_wacom.c "wikilink") pages to
+see which port your tablet is actually mapped to.
 
 The configuration options listed by your system's man page may be way
 out of date. Below is an updated wacom man page which will be installed
-by default when you issue make install.
+by default when you issue *make install*.
 
         WACOM(4)                                                              WACOM(4)
 

@@ -1412,11 +1412,11 @@ Notice that this tablet has no tilt, and the pressure range is considerably redu
 Two steps must be completed to get X to recognize your tablet. First, you need to add some lines to XF86Config/xorg.conf to inform X of the tablet's existence. Second, you need to update the XInput driver that pertains to the tablet since the one that ships with XFree86/Xorg is not very functional. Neither driver holds a candle to the windows driver though, so you'll have to take what you get for the time being. Updates to the XFree86/Xorg driver are available in the stable and beta releases on the [[Linuxwacom HOWTO#Downloading the Code|Downloading the Code]] page.
 
 === Adding the InputDevices ===
-The X Window system identifies the stylus (tip and side switches of your pen), eraser (the other end of your pen if it is clickable), cursor (your Wacom mouse), and pad (buttons, strips and rings on your tablet if your tablet has any) as XInput devices. Most settings, such as stylus pressure level and system cursor movement mode can be done in /etc/X11/XF86Config or /etc/X11/xorg.conf configuration file before X server starts or live through command-line xsetwacom or the simple GUI control panel wacomcpl while Wacom driver is running.
+The X Window system identifies the stylus (tip and side switches of your pen), eraser (the other end of your pen if it is clickable), cursor (your Wacom mouse), and pad (buttons, strips and rings on your tablet if your tablet has any) as XInput devices. Most settings, such as stylus pressure level and system cursor movement mode can be done in /etc/X11/XF86Config or /etc/X11/xorg.conf configuration file before X server starts or live through [[Linuxwacom HOWTO#Command Line Configuration Interface (xsetwacom)|command-line xsetwacom]] or the simple [[Linuxwacom HOWTO#GUI-Based (tcl/tk) Wacom Control Panel(wacomcpl)|GUI control panel wacomcpl]] while Wacom driver is running.
 
-However, adding the InputDevice sections to your XF86Config/ xorg.conf file for Wacom devices is required. You should add these devices to the ServerLayout section of your XF86Config/xorg.conf file too.
+However, adding the InputDevice sections to your XF86Config/ xorg.conf file for Wacom devices is required. You should add these devices to the [[Linuxwacom HOWTO#ServerLayout|ServerLayout]] section of your XF86Config/xorg.conf file too.
 
-We assume you are running Either XFree86 4.2 or later Or Xorg. On some distributions, this file is called XF86Config-4. Notice that the serial and USB configurations are different, so only include the appropriate lines. The default serial devices are given. For serial Tablet PCs, options "ForceDevice" should be included. You should also change the device (e.g. ttyS0 or /dev/input/wacom) to the correct one for your tablet. Tablet PC and Cintiq/PL/DTF models don't support cursor type. All the new driver options are listed in the manual page below.
+We assume you are running Either XFree86 4.2 or later Or Xorg. <span style="background:#00ffff">On some distributions, this file is called XF86Config-4. Notice that the serial and USB configurations are different, so only include the appropriate lines. The default serial devices are given. For serial Tablet PCs, options "ForceDevice" should be included. You should also change the device (e.g. ttyS0 or /dev/input/wacom) to the correct one for your tablet. Tablet PC and Cintiq/PL/DTF models don't support cursor type</span>. All the new driver options are listed in the manual page below.
 <pre>
     Section "InputDevice"
       Driver        "wacom"
@@ -1478,9 +1478,9 @@ We assume you are running Either XFree86 4.2 or later Or Xorg. On some distribut
       Option        "USB"           "on"                  # USB ONLY
     EndSection
 </pre>
-The above four sections identify the stylus, eraser, cursor, touch, and pad devices to XInput. Notice that all four reference the same device /dev/ttyS0 or /dev/input/wacom depending on whether its a serial or USB tablet. Please refer to Testing Tablet Detection and Updated wacom.c pages to see which port your tablet is actually mapped to.
+The above four sections identify the stylus, eraser, cursor, touch, and pad devices to XInput. Notice that all four reference the same device /dev/ttyS0 or /dev/input/wacom depending on whether its a serial or USB tablet. Please refer to [[Linuxwacom HOWTO#Testing Tablet Detection|Testing Tablet Detection]] and [[Linuxwacom HOWTO#Updated wacom.c|Updated wacom.c]] pages to see which port your tablet is actually mapped to.
 
-The configuration options listed by your system's man page may be way out of date. Below is an updated wacom man page which will be installed by default when you issue make install.
+The configuration options listed by your system's man page may be way out of date. Below is an updated wacom man page which will be installed by default when you issue ''make install''.
 <pre>
     WACOM(4)                                                              WACOM(4)
 
