@@ -39,7 +39,7 @@ click on the ALL link and view the entire thing in one long page.~~
   
 <span style="background:#00ffff">Where the guide differs between
 distributions or packages, I have added a comment which appears indented
-with a aqua background.</span>
+with an aqua background.</span>
 
 Also, it bears mentioning since it's a detail often missed: there are
 two drivers in the Linux Wacom Project- wacom.o and wacom\_drv.o. The

@@ -17,7 +17,7 @@ This document began in November 2002 as a HOWTO for setting up a USB Wacom Intuo
 === How To Use This Document ===
 <strike>In terms of document organization, if you have not figured it out already, you can browse the document one page at a time, or you can click on the ALL link and view the entire thing in one long page.</strike>
 
-:<span style="background:#00ffff">Where the guide differs between distributions or packages, I have added a comment which appears indented with a aqua background.</span>
+:<span style="background:#00ffff">Where the guide differs between distributions or packages, I have added a comment which appears indented with an aqua background.</span>
 
 Also, it bears mentioning since it's a detail often missed: there are two drivers in the Linux Wacom Project- wacom.o and wacom_drv.o. The first driver is the USB kernel driver. The second driver is the XFree86 Wacom driver. Serial users need only be concerned with the wacom_drv.o driver. USB users need both. If you try to use the wacom_drv.o driver in place of the wacom.o kernel driver or visa-versa, things generally won't work.
 
