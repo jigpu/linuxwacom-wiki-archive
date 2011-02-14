@@ -25,7 +25,7 @@ without warning.**
 Usage
 =====
 
-To list the applicable devices.
+</noinclude> To list the applicable devices.
 
 ` xsetwacom list`
 
@@ -57,6 +57,8 @@ tool if you want them to apply tablet-wide.
 Finally, to get a list of parameters just type
 
 ` xsetwacom list param`
+
+<noinclude>
 
 xsetwacom Command Parameter Usage
 =================================

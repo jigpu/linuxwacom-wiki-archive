@@ -7,6 +7,7 @@ unplugged, disabled or the X Server is restarted.
 '''A note to developers: do not rely on xsetwacom, as it's UI will change without warning.'''
 
 = Usage =
+</noinclude>
 To list the applicable devices. 
   xsetwacom list
 
@@ -30,6 +31,7 @@ sets the button 1 to logical button 3 - a right click. Note that parameters are 
 
 Finally, to get a list of parameters just type
   xsetwacom list param
+<noinclude>
 
 = xsetwacom Command Parameter Usage =
 Remember entering "man xsetwacom" (without the quotes) in a console will bring up the xsetwacom manual and give you a quick overview of xsetwacom.
