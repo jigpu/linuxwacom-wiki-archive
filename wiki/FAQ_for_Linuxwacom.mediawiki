@@ -13,7 +13,7 @@ See the LWP's [[FAQ#How do I get the special features of my stylus to work?|FAQ]
 See the LWP's [[FAQ#Is hot plugging supported for my USB tablet?|FAQ]]
 
 == Is my tablet supported? What about my special stylus? ==
-The main page contains a list of all tablets that are known to be supported. Tablets with "(beta)" appended are only supported in the beta drivers at present.
+Please see the [[FAQ#Which devices are supported?|Devices supported table]] on the LWP FAQ.  The Main page also contains a link to the table of all tablets that are known to be supported.
 
 Another workaround made by Aristeu is available at wdaemon. The email message related to this solution can be found at [[Linuxwacom HOWTO#Hotplugging the device|Tablet Hotplugging]].
 

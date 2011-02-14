@@ -31,9 +31,10 @@ See the LWP's
 Is my tablet supported? What about my special stylus?
 -----------------------------------------------------
 
-The main page contains a list of all tablets that are known to be
-supported. Tablets with "(beta)" appended are only supported in the beta
-drivers at present.
+Please see the [Devices supported
+table](/wiki/FAQ#Which_devices_are_supported? "wikilink") on the LWP FAQ. The
+Main page also contains a link to the table of all tablets that are
+known to be supported.
 
 Another workaround made by Aristeu is available at wdaemon. The email
 message related to this solution can be found at [Tablet
