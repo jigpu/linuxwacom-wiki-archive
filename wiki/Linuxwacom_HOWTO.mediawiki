@@ -77,8 +77,10 @@ Unpacking the tarball is usually a one-step process, but I show both steps in ca
     [jej@ayukawa jej]$ cd linuxwacom-0.8.8-10
 
 Once in the package directory, you need only to configure and build the code. This is described in more detail as you continue. The executables and wacom_drv.o are installed automatically; the kernel drivers have different installation procedures depend on the kernel source you use.
-'''Stable files included for linuxwacom-0.8.8-10:'''
+
 If you are interested, the following tables contain the package contents and release dates. Otherwise, let's continue.
+
+'''Stable files included for linuxwacom-0.8.8-10:'''
 {|
 ! File !! Comment
 |-

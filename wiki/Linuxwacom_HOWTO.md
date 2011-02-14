@@ -192,9 +192,11 @@ Once in the package directory, you need only to configure and build the
 code. This is described in more detail as you continue. The executables
 and wacom\_drv.o are installed automatically; the kernel drivers have
 different installation procedures depend on the kernel source you use.
-**Stable files included for linuxwacom-0.8.8-10:** If you are
-interested, the following tables contain the package contents and
-release dates. Otherwise, let's continue.
+
+If you are interested, the following tables contain the package contents
+and release dates. Otherwise, let's continue.
+
+**Stable files included for linuxwacom-0.8.8-10:**
 
 | File                        | Comment                                                                                                                 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------|
