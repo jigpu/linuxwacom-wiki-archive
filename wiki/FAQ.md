@@ -58,7 +58,7 @@ You may want to try the latest
 support for your device has been added. If you are using a build of the
 [linuxwacom](linuxwacom "wikilink") backports, try the highest release
 number, whether linuxwacom or linuxwacom-devel (beta). The latest
-release is more likely to support more tools.
+release is likely to support more tools.
 
 Note, tilt is only supported with protocol V tablets, which includes the
 Intuos series and Cintiq 21UX/20WSX/12WX/21UX2. Any other tablets don't

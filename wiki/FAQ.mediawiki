@@ -26,7 +26,7 @@ See the [[Calibration#Calibration|Calibration HOWTO]].
 There are many different types of styli, mice, and pucks. All of them work to varying degrees, so if you are running into trouble, please send an email to the [[mailing lists]].
 
 
-You may want to try the latest [[xf86-input-wacom]] release to see if support for your device has been added.  If you are using a build of the [[linuxwacom]] backports, try the highest release number, whether linuxwacom or linuxwacom-devel (beta). The latest release is more likely to support more tools.
+You may want to try the latest [[xf86-input-wacom]] release to see if support for your device has been added.  If you are using a build of the [[linuxwacom]] backports, try the highest release number, whether linuxwacom or linuxwacom-devel (beta). The latest release is likely to support more tools.
 
 Note, tilt is only supported with protocol V tablets, which includes the Intuos series and Cintiq 21UX/20WSX/12WX/21UX2. Any other tablets don't have tilt, no matter if you have the tilt option in your xorg.conf or not.
 
