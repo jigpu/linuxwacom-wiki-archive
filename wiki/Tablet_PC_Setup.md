@@ -119,12 +119,12 @@ Touch Toggle Script
 
 The following script depends on the [xsetwacom](xsetwacom "wikilink")
 get and set commands. The "Device name" for touch is found by using
-'xinput list' as mentioned in the script comments.
+'xsetwacom list' as mentioned in the script comments.
 
     #!/bin/bash
 
     ## Get the "Device name" or ID number
-    ## for touch from 'xinput list'.
+    ## for touch from 'xsetwacom list'
 
     TOUCH_STATE=`xsetwacom get "Wacom ISDv4 Finger touch" touch`
     if [ "$TOUCH_STATE" == "on" ]

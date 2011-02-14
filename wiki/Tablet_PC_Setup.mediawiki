@@ -74,12 +74,12 @@ Using these examples, if your tablet pc Brand & model also reports the swivel hi
 Also see [[External applications#Magick Rotation|Magick Rotation]].
 
 == Touch Toggle Script ==
-The following script depends on the [[xsetwacom]] get and set commands.  The "Device name" for touch is found by using 'xinput list' as mentioned in the script comments.
+The following script depends on the [[xsetwacom]] get and set commands.  The "Device name" for touch is found by using 'xsetwacom list' as mentioned in the script comments.
 <pre>
 #!/bin/bash
 
 ## Get the "Device name" or ID number
-## for touch from 'xinput list'.
+## for touch from 'xsetwacom list'
 
 TOUCH_STATE=`xsetwacom get "Wacom ISDv4 Finger touch" touch`
 if [ "$TOUCH_STATE" == "on" ]
