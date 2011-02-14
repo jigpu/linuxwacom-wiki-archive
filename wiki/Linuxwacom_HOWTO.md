@@ -2047,12 +2047,14 @@ by default when you issue *make install*.
 This section largely deals with interaction problems between the mouse1
 device, PS/2 mouse, and USB tablets. Serial users can ignore this part.
 
-Starting from linuxwacom-0.7.1, this is not a problem for most kernel
-2.6 systems. If you use kernel 2.6 and a driver newer than 0.7.1, you
-may ignore this page. However, it has been reported that on some vendors
-2.6 systems, the information detailed on this page still applies. So, if
-you tried all the other steps and the tablet still has issues, you may
-want to apply this page to elminate the /dev/input/mice issue.
+  
+<span style="background:#00ffff">Starting from linuxwacom-0.7.1, this is
+not a problem for most kernel 2.6 systems. If you use kernel 2.6 and a
+driver newer than 0.7.1, you may ignore this page. However, it has been
+reported that on some vendors 2.6 systems, the information detailed on
+this page still applies. So, if you tried all the other steps and the
+tablet still has issues, you may want to apply this page to eliminate
+the /dev/input/mice issue.</span>
 
 If you have a USB mouse or PS/2 mouse and are also using a USB tablet,
 there are two solutions here for you: you may either change your mouse1
@@ -2065,10 +2067,10 @@ behavior you want. A better choice is to specify the precise USB device
 or PS/2 mouse from which you want to receive mouse events, namely
 /dev/input/mouse0 or /dev/input/mouse1 or /dev/psaux.
 
-If you do not have a USB mouse, adding the Mouse1 device is probably not
-something you want to do. Despite this, Redhat's Anaconda program will
-do it for you if you boot the machine with the tablet plugged in. You'll
-need to be careful about this.
+If you do not have a USB mouse, adding the Mouse1 device is *probably
+not something you want to do*. Despite this, Redhat's Anaconda program
+will do it for you if you boot the machine with the tablet plugged in.
+You'll need to be careful about this.
 
 When you use the mouse1 input device, the data flows from the USB wacom
 kernel driver, through the event subsystem, down into the mousedev
@@ -2085,10 +2087,10 @@ certain that it is commented out of the ServerLayout section covered
 next.
 
 There is one exception however. If you have no other mouse device in
-your ServerLayout section, do not remove Mouse1. XFree86 will not start
-without at least one core pointer, and the tablet does not count unless
-it is specifically identified as a "CorePointer" rather than merely
-"SendCoreEvents."
+your ServerLayout section, *do not* remove Mouse1. XFree86 will not
+start without at least one core pointer, and the tablet does not count
+unless it is specifically identified as a "CorePointer" rather than
+merely "SendCoreEvents."
 
 ### ServerLayout
 
