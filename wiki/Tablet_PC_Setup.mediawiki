@@ -21,6 +21,8 @@ Work is proceeding on a replacement for wacomcpl.  See [[External applications#G
 See [[Rotation#Tablet PC Rotation Script|Tablet PC Rotation Script]].
 
 === Tablet PC Automatic Rotation Script ===
+
+{{Unclear | reason=Why is this not part of the Rotation page? }}
 The following script was developed for HP tablet pc's.  Lenovo ThinkPads (and very likely other tablet pc's) should be able to use it too with a minor modification.
 
 Determine your "Device names" with 'xinput list' entered in a terminal. Then substitute them for stylus, eraser, and touch (if you have it) in the following shell script using the quotes around the "Device names". Only use the [[xsetwacom]] commands for the devices you have.
