@@ -1127,9 +1127,9 @@ Please backup wacom.c in your kernel tree first. Then copy wacom.c (or wacom_wac
 </pre>
 
 === Testing If wacom.(k)o Will Load ===
-Before we install the wacom driver, we need to test that it will load properly. We do this by loading the driver manually. We will also need to be root to do this.
+Before we install the wacom driver, we need to test that it will load properly. We do this by loading the driver manually. We will also [[Linuxwacom HOWTO#The Root Account|need to be root]] to do this.
 
-WARNING: there is a small chance that this will bomb your kernel, so we run sync to write all the stale buffers to the disk. People using ext3 have little to worry about, but it's always good to be prepared for the worst. At the very least, save your work.
+WARNING: there is a small chance that this will bomb your kernel, so we run ''sync'' to write all the stale buffers to the disk. People using ext3 have little to worry about, but it's always good to be prepared for the worst. At the very least, save your work.
 <pre>
     [root@ayukawa linuxwacom]# sync
 </pre>

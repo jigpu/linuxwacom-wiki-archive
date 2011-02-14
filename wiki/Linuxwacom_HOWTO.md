@@ -1198,11 +1198,11 @@ kernel. An example for kernel 2.6.9 is as following:
 ### Testing If wacom.(k)o Will Load
 
 Before we install the wacom driver, we need to test that it will load
-properly. We do this by loading the driver manually. We will also need
-to be root to do this.
+properly. We do this by loading the driver manually. We will also [need
+to be root](/wiki/Linuxwacom_HOWTO#The_Root_Account "wikilink") to do this.
 
 WARNING: there is a small chance that this will bomb your kernel, so we
-run sync to write all the stale buffers to the disk. People using ext3
+run *sync* to write all the stale buffers to the disk. People using ext3
 have little to worry about, but it's always good to be prepared for the
 worst. At the very least, save your work.
 
