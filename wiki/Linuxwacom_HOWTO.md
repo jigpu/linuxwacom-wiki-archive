@@ -465,9 +465,10 @@ The configuration options are listed on this page. You can also see the
 online list by issuing ./configure -help under linuxwacom's base
 directory.
 
-Note: You should remove the existing linuxwacom package on your system
-before installing the drivers and utilities from this project. Building
-Kernel Modules - USB Only
+**Note**: You should remove the existing linuxwacom package on your
+system before installing the drivers and utilities from this project.
+
+**Building Kernel Modules - USB Only**
 
 In order to build kernel modules, you will need the kernel source
 installed on your system. If you are running on Redhat or Mandrake, you
@@ -484,7 +485,8 @@ linuxwacom.
 
 Note, for kernel 2.6.18 and later, no need to build hid any more. Refer
 to Testing Tablet Detection to see if you need to build hid or not.
-Module Versioning - USB Only
+
+**Module Versioning - USB Only**
 
 The script attempts to discover if the kernel is using module versioning
 by detecting the presence of version numbers in the hid.o module of the
@@ -499,15 +501,17 @@ fine. If it is enabled when it should be disabled, the code may not
 compile, and it almost certainly will not load properly. If the
 configure script fails to determine the correct value, the default
 action of disabling module versioning is the better choice, and you can
-allows enable it manually and rebuild if depmod complains. The
-XFree86/Xorg XInput Driver - USB and Serial
+allows enable it manually and rebuild if depmod complains.
+
+**The XFree86/Xorg XInput Driver - USB and Serial**
 
 Generally, you will not need to build wacom\_drv.o since it ships in
 binary form in the prebuilt directory. There are prebuilt binaries for
 XFree86 and Xorg corresponding to x86 and x86-64 systems, respectively.
 If no one works for you, building from source may be your only option.
 See the Building wacom\_drv.o from Scratch page for more information.
-Library Dependencies - ncurses and XLib
+
+**Library Dependencies - ncurses and XLib**
 
 Various utilities in the linuxwacom package require not only specific
 libraries, but their development header files as well. The ncurses
@@ -521,12 +525,15 @@ headers. On Redhat/Fedore Core, they are contained in the
 XFree86-devel/xorg-sdk package.
 
 If any packages are missing, the configuration will warn you and disable
-building any programs that depend on them. Processor Type
+building any programs that depend on them.
+
+**Processor Type**
 
 The processor type is determined by the script and used to build the
 kernel modules. If it guesses incorrectly, or you would prefer a
-different setting, use the --with-arch option described below. Linux
-Specific Features
+different setting, use the --with-arch option described below.
+
+**Linux Specific Features**
 
 The Linux wacom driver uses the Linux input subsystem, as does the USB
 portions of the XFree86/Xorg driver. Consequently, if you are building
@@ -536,7 +543,10 @@ summary. I recognize that FreeBSD and similar systems have USB support;
 however, until someone can bridge the gap between the FreeBSD kernel and
 the XFree86/X.org driver, the problem is largely unsolved. Contributions
 are of course welcome. The Linux-specific features can be
-enabled/disabled using the --with-linux argument. Configuration Options
+enabled/disabled using the --with-linux argument.
+
+**Configuration Options**
+
 The following options are provided as reference. Normally, you will only
 need a few of these options. Some obscure systems or you want to build a
 driver for another platform may need all of them. Each section of the
@@ -571,7 +581,7 @@ document identifies which options are needed and when.
 | --with-xmoduledir=dir         | best guess | Specify wacom\_drv path explicitly. Implies --enable-dlloader                                                                                                                                                                                              |
 |                               |            |                                                                                                                                                                                                                                                            |
 
-Configuration Samples
+**Configuration Samples**
 
 Here is a sample output of the script on a Fedora Core 5 system:
 
