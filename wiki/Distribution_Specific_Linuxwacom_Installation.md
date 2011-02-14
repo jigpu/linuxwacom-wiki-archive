@@ -353,7 +353,8 @@ old patch, teach it to use the right options for x86\_64 compilation,
 and stop it from generating symlinks into /usr/include/X11 at
 compilation time, and it's done. ". Nico said on Mar 21 2005.
 
-### Building wacom driver On Ubuntu 9.04 64-bit system
+Building wacom driver On Ubuntu 9.04 64-bit system
+--------------------------------------------------
 
 The steps on this page are taken from the following posts:-
 
