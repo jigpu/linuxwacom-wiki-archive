@@ -778,9 +778,9 @@ To see which driver is driving the tablet, issuing more
         I:  If#= 0 Alt= 0 #EPs= 1 Cls=03(HID  ) Sub=01 Prot=02 Driver=wacom
         E:  Ad=81(I) Atr=03(Int.) MxPS=  10 Ivl=5ms
 
-where Vendor=056a indicates a Wacom device. Driver=wacom means Wacom
-driver is in control of the tablet. If you see anything other than wacom
-after Driver=, at least hid-core.c needs to be updated.
+where **Vendor=056a** indicates a Wacom device. **Driver=wacom** means
+Wacom driver is in control of the tablet. If you see anything other than
+**wacom** after **Driver=**, at least hid-core.c needs to be updated.
 
 On newer 2.6 systems, more /proc/bus/input/devices gives you
 
@@ -795,9 +795,10 @@ On newer 2.6 systems, more /proc/bus/input/devices gives you
         B: ABS=f00017b
         B: MSC=1
 
-where, again, Vendor=056a indicates a Wacom device. Name="Wacom Intuos2
-6x8" means an Intuos2 6x8 tablet reported to /dev/input/event3. If there
-is no Wacom after Name=, you need to update wacom.c.
+where, again, **Vendor=056a** indicates a Wacom device. **Name="Wacom
+Intuos2 6x8"** means an Intuos2 6x8 tablet reported to
+/dev/input/event3. If there is no **Wacom** after **Name=**, you need to
+update wacom.c.
 
 On older 2.6 kernel systems, unplug then replug your tablet after
 issuing tail -f /var/log/messages, you should see a flurry of activity.
@@ -819,7 +820,8 @@ distribution.
 If all went well like above, the USB device was successfully detected
 and handled by the wacom driver. This presumably means that information
 like pressure and tilt will be received on /dev/input/event3. You are
-ready to configure the X driver Downloading the Code.
+ready to configure the X driver [Downloading the
+Code](/wiki/Linuxwacom_HOWTO#Downloading_the_Code "wikilink").
 
 If instead you got any of the following lines in your log, the wacom
 driver did not get control. Either your wacom driver doesn't support
