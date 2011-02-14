@@ -11,12 +11,17 @@ tags:
 <center>
 Copyright (C) 2002-2011 - LinuxWacom
 
-Permission is granted to copy, distribute and/or modify this document
+<small>Permission is granted to copy, distribute and/or modify this
+document
+
 under the terms of the GNU GENERAL PUBLIC LICENSE as published by the
-Free Software Foundation; either version 2 of the License, or (at your
-option) any later version. A copy of the license is included in the
-section entitled [GNU Free Document
-License](/wiki/Linuxwacom_HOWTO#GNU_Free_Document_License "wikilink").
+
+Free Software Foundation; either version 2 of the License, or
+
+(at your option) any later version. A copy of the license is included in
+
+the section entitled [GNU Free Document
+License](/wiki/Linuxwacom_HOWTO#GNU_Free_Document_License "wikilink").</small>
 
 </center>
 Introduction
