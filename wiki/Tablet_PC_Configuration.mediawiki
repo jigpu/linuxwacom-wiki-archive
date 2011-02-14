@@ -1,3 +1,7 @@
+{{Unclear|reason=
+* Don't re-explain xsetwacom commands here, we've got [[xsetwacom]] for that
+* Having model-specific scripts like .xsetwacom.sh is a temporary hack and needs to be stated as such}}
+
 This page is for Brand & model specific configuration issues & tips.
 
 The linuxwacom project welcomes additions to its mediawiki so please join in if you have contributions.
@@ -31,6 +35,11 @@ Or you could right click on the file and in Properties, in the Permission tab, c
 Once the script is executable you can double click on it to apply it's settings or reboot to check the auto-start set up.
 
 == The Sample Xsetwacom Scripts ==
+{{Unclear|reason=
+* Who wrote these scripts? They need to be reviewed by the developers to fix up the coding
+* What values differ from the defaults? And why can't we make those values defaults upstream?
+}}
+
 In the example scripts below both "Device name" and ID # are used. Be sure to check for yours using 'xinput  list' (without the quotes) in a terminal and use them. When you use a xorg.conf the "Device names" will be stylus, eraser, touch, and pad. If you are hot plugging other devices into your tablet pc be sure to use "Device name" as the ID # can change.
 
 === Serial Tablet PCs ===
