@@ -1535,7 +1535,7 @@ tablet works without having to hassle with X server. Generally, you must
 be root to run it unless you've set the permissions on the appropriate
 device such that you can read them.
 
-Running wacdump
+**Running wacdump**
 
 In the case of USB tablets, this program can run simultaneously with X,
 but it's best if X has not been configured for the tablet yet. X will
@@ -1573,7 +1573,8 @@ on the command line directly. If you get an end-of-file error or the
 device does not exist, then the wacom may be attached to a different
 event. Serial users may experience a timeout error which indicates that
 either the tablet is not responding or X server has it open. Access
-denied errors probably indicate that you are not root. If you get
+denied errors probably indicate that [you are not
+root](/wiki/Linuxwacom_HOWTO#The_Root_Account "wikilink"). If you get
 different types of errors, let me know so we can get them documented.
 
 Serial users are advised that now is a good time to plug in your tablet,

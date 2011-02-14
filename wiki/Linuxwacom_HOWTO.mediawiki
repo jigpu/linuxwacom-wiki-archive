@@ -1330,7 +1330,7 @@ You should also try running xxd on /dev/input/mouse0. You should get streams of 
 == Viewing Wacom Data (wacdump) ==
 The wacdump program parses and displays raw data from the Linux event subsystem or serial port. It is very handy for verifying that your tablet works without having to hassle with X server. Generally, you must be root to run it unless you've set the permissions on the appropriate device such that you can read them.
 
-Running wacdump
+'''Running wacdump'''
 
 In the case of USB tablets, this program can run simultaneously with X, but it's best if X has not been configured for the tablet yet. X will not share the serial port with wacdump, so serial users should comment out the wacom InputDevice sections from XF86Config (or xorg.conf) before using. Alternatively, you could move your serial tablet to COM2 and try /dev/ttyS1 instead.
 
@@ -1357,7 +1357,7 @@ The command line usage of wacdump is pretty simple:
       serial: art, art2, dig, dig2, pp, gr, pl, int, int2, c100
       usb: pp, gr, gr2, int, int2, pl, vol
 </pre>
-Older versions of wacdump assumed the device to be /dev/input/event0. This is now deprecated. You should instead specify which device to use on the command line directly. If you get an end-of-file error or the device does not exist, then the wacom may be attached to a different event. Serial users may experience a timeout error which indicates that either the tablet is not responding or X server has it open. Access denied errors probably indicate that you are not root. If you get different types of errors, let me know so we can get them documented.
+Older versions of wacdump assumed the device to be /dev/input/event0. This is now deprecated. You should instead specify which device to use on the command line directly. If you get an end-of-file error or the device does not exist, then the wacom may be attached to a different event. Serial users may experience a timeout error which indicates that either the tablet is not responding or X server has it open. Access denied errors probably indicate that [[Linuxwacom HOWTO#The Root Account|you are not root]]. If you get different types of errors, let me know so we can get them documented.
 
 Serial users are advised that now is a good time to plug in your tablet, if you haven't already.
 
