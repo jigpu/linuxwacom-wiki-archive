@@ -276,7 +276,8 @@ If you are interested, the following tables contain the package contents and rel
 | linuxwacom-0.7.0-x86-64-1.tar.bz2
 | 2005-09-23 -
 | Updated wacomcpl and support 16 buttons for all tools.
-
+|-
+|}
 '''Beta Packages by Version and Date:'''
 {|
 ! File !! Date !! Comment
