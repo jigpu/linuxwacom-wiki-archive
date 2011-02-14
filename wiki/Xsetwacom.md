@@ -40,7 +40,7 @@ Which produces output similar to this:
 On the left is the device name, used as parameter in all other xsetwacom
 commands. The device ID and device type is provided as well.
 
-The usual invocation to get a parameter is:
+</noinclude> The usual invocation to get a parameter is:
 
 ` xsetwacom get "Wacom Intuos4 6x9 stylus" Button1`
 
