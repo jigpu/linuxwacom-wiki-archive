@@ -96,7 +96,7 @@ control over your stylus features that wacomcpl gave you.
 
 **Note** While these xsetwacom commands were working as of 2-1-11 be
 aware that the xsetwacom interface may change without notice. If this
-happens feel free to update and correct this LWP mediawiki page.
+happens feel free to update and correct this linxwacom mediawiki page.
 
 If a xsetwacom command stops working your friend is the get command.
 
