@@ -1440,8 +1440,8 @@ kernel. An example for kernel 2.6.9 is as following:
 ### Unknown Tablet?
 
 To determine whether your device is listed in the driver, we need to
-determine the device identifier. It can be discovered by issuing more
-/proc/bus/usb/devices:
+determine the device identifier. It can be discovered by issuing *more
+/proc/bus/usb/devices*:
 
         [jej@ayukawa linuxwacom]# more /proc/bus/usb/devices
         T:  Bus=01 Lev=01 Prnt=01 Port=01 Cnt=02 Dev#=  3 Spd=12  MxCh= 0
@@ -1453,9 +1453,9 @@ determine the device identifier. It can be discovered by issuing more
         I:  If#= 0 Alt= 0 #EPs= 1 Cls=03(HID  ) Sub=01 Prot=02 Driver=wacom
         E:  Ad=81(I) Atr=03(Int.) MxPS=  10 Ivl=5ms
 
-In this case, the tablet identifier is in Vendor=056a ProdID=0044. The
-model (Product=XD-1212-U) is determined by ProdID; the Intuos2 12x12 is
-0x44 for instance.
+In this case, the tablet identifier is in Vendor=056a ProdID=**0044**.
+The model (**Product=XD-1212-U**) is determined by ProdID; the Intuos2
+12x12 is 0x44 for instance.
 
 In the wacom.c (kernel 2.6.9/10) or wacom\_wac.c (kernels 2.6.11 or
 later) file under linuxwacom/src/2.6.x, you will find a table called

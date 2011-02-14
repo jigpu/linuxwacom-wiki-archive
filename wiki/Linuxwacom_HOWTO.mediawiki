@@ -1276,7 +1276,7 @@ Please backup your related kernel files first then copy the source from the rela
 </pre>
 
 === Unknown Tablet? ===
-To determine whether your device is listed in the driver, we need to determine the device identifier. It can be discovered by issuing more /proc/bus/usb/devices:
+To determine whether your device is listed in the driver, we need to determine the device identifier. It can be discovered by issuing ''more /proc/bus/usb/devices'':
 <pre>
     [jej@ayukawa linuxwacom]# more /proc/bus/usb/devices
     T:  Bus=01 Lev=01 Prnt=01 Port=01 Cnt=02 Dev#=  3 Spd=12  MxCh= 0
@@ -1288,7 +1288,7 @@ To determine whether your device is listed in the driver, we need to determine t
     I:  If#= 0 Alt= 0 #EPs= 1 Cls=03(HID  ) Sub=01 Prot=02 Driver=wacom
     E:  Ad=81(I) Atr=03(Int.) MxPS=  10 Ivl=5ms
 </pre>
-In this case, the tablet identifier is in Vendor=056a ProdID=0044. The model (Product=XD-1212-U) is determined by ProdID; the Intuos2 12x12 is 0x44 for instance.
+In this case, the tablet identifier is in Vendor=056a ProdID='''0044'''. The model ('''Product=XD-1212-U''') is determined by ProdID; the Intuos2 12x12 is 0x44 for instance.
 
 In the wacom.c (kernel 2.6.9/10) or wacom_wac.c (kernels 2.6.11 or later) file under linuxwacom/src/2.6.x, you will find a table called "wacom_ids". Look for your device identifier. Only the identifiers listed are handled by the wacom driver, so if it is missing, it needs to be added. Also look for routine usb_hid_configure() in hid-core.c if you are running a kernel older than 2.6.18. At the beginning of the routine, we added the following lines to let HID driver ignore all Wacom devices:
 <pre>
