@@ -1,3 +1,4 @@
+<noinclude>
 xsetwacom is a commandline utility to change wacom driver settings at runtime. This includes direct settings of driver properties but also several 'indirect' settings (i.e. the xsetwacom command does not relate directly to a single property). For a detailed description of xsetwacom's commands and options, please refer to the man page. This page provides a general overview and describes some of the [[#xsetwacom Command Parameter Usage|quirks]] you may encounter.
 
 Note that any setting changed by xsetwacom will be reset to default (or a
@@ -182,6 +183,6 @@ Most of the new parameter names apply starting with [http://sourceforge.net/proj
 | TwinView
 |-
 |}
-
+</noinclude>
 
 [[Category:HOWTO]]
