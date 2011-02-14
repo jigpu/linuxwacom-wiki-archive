@@ -1104,7 +1104,8 @@ draw.</span>
 
 To build the wacom.ko kernel module, you need to configure wacom as a
 kernel module under your kernel source tree first. The kernel sources
-are required as described on the configuration page.
+are required as described on the [Configuration
+page](/wiki/Linuxwacom_HOWTO#Configuring_the_Package "wikilink").
 
 Then, you need to configure the package with --enable-wacom option.
 Here's how the configuration should generally look:
@@ -1141,13 +1142,17 @@ As shown above, the kernel directory was detected and the wacom kernel
 module will be built. If the kernel option shows "no", you will need to
 specify the --with-kernel option and the correct directory.
 
-`   For those who feel comfortable to build everything from the source tree, please skip the make and install steps below. Scroll down to the end of this page to see the steps with light blue background. `
+<span style="background:#00ffff">For those who feel comfortable to build
+everything from the source tree, please skip the make and install steps
+below. Scroll down to the end of this page and see *Manually Build the
+Wacom kernel driver*.</span>
 
-If you wanted to build the kernel driver and you do not see the yes
-after "wacom.o -" in the the "BUILD OPTIONS:", run 'make oldconfig; make
-prepare; make' on your kernel source should fix the issue.
+<span style="background:#00ffff">If you wanted to build the kernel
+driver and you do not see the **yes** after "wacom.o -" in the the
+"BUILD OPTIONS:", run 'make oldconfig; make prepare; make' on your
+kernel source should fix the issue.</span>
 
-To build the driver, just run make.
+To build the driver, just run *make*.
 
 If everything works properly, you'll see the following from the make:
 
@@ -1168,6 +1173,8 @@ If everything works properly, you'll see the following from the make:
         make[3]: Leaving directory `/home/jej/linuxwacom/src/2.6.9'
         ...
 
+**Manually Build the Wacom kernel driver**
+
 This part is for those who want to manually build the wacom kernel
 driver in source tree. If you already followed the steps above, you can
 move on to next page.
@@ -1179,7 +1186,6 @@ copies, you need to add wacom-objs := wacom\_sys.o wacom\_wac.o to the
 Makefile under your kernel source input directory) and rebuild the
 kernel. An example for kernel 2.6.9 is as following:
 
-            
         [jej@ayukawa linuxwacom]$ cp /usr/src/linux/drivers/usb/input/wacom.c /usr/src/linux/drivers/usb/input/wacom.c.2.6.9     
         [jej@ayukawa linuxwacom]$ cp src/2.6.9/wacom.c /usr/src/linux/drivers/usb/input/     
         [jej@ayukawa linuxwacom]$ cd /usr/src/linux      
