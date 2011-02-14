@@ -732,8 +732,10 @@ The USB Kernel Driver
 ---------------------
 
 Serial tablet users rejoice: you can skip this entire section. Please go
-to the Viewing Wacom Data (wacdump) page for details on viewing the
-tablet output. USB users stay put; we need to tweak your kernel.
+to the [Viewing Wacom Data
+(wacdump)](/wiki/Linuxwacom_HOWTO#Viewing_Wacom_Data_(wacdump) "wikilink")
+page for details on viewing the tablet output. USB users stay put; we
+need to tweak your kernel.
 
 Kernel modules must be recompiled for each new kernel so I can't just
 provide binaries. By the time you read this, my present kernel will be
