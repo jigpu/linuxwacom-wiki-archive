@@ -31,17 +31,6 @@ happens feel free to update and correct this LWP mediawiki page.
 
 If a xsetwacom command stops working your friend is the get command.
 
-    xsetwacom get "device name" RelWUp
-
-Where RelWUp in this example represents the non-functioning parameter
-you are investigating. Also useful are the following.
-
-    xsetwacom list dev
-
-    xsetwacom list param
-
-    xsetwacom list mod
-
 Installing the Script
 ---------------------
 
