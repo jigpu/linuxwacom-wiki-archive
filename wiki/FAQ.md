@@ -53,15 +53,17 @@ There are many different types of styli, mice, and pucks. All of them
 work to varying degrees, so if you are running into trouble, please send
 an email to the [mailing lists](mailing_lists "wikilink").
 
-If you are using the stable build of the
-[linuxwacom](linuxwacom "wikilink") backports, try the beta. Many of the
-tools have been recently added and have not yet been moved to the
-production release.
+You may want to try the latest
+[xf86-input-wacom](xf86-input-wacom "wikilink") release to see if
+support for your device has been added. If you are using a build of the
+[linuxwacom](linuxwacom "wikilink") backports, try the highest release
+number, whether linuxwacom or linuxwacom-devel (beta). The latest
+release is more likely to support more tools.
 
-Note, tilt is only supported with protocol V tablets, which include
-Intuos series and Cintiq 21UX/20WSX/12WX to date (July. 31, 2009). Any
-other tablets don't have tilt no matter you have the tilt option in your
-xorg.conf or not.
+Note, tilt is only supported with protocol V tablets, which includes the
+Intuos series and Cintiq 21UX/20WSX/12WX/21UX2. Any other tablets don't
+have tilt, no matter if you have the tilt option in your xorg.conf or
+not.
 
 How do I rotate the screen and/or stylus on my tablet pc?
 ---------------------------------------------------------
