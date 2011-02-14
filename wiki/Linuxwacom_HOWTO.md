@@ -1323,14 +1323,15 @@ module versioning enabled and recompile.
 
 ### Loading the wacom Driver
 
-For Kernel 2.6.x, replace wacom.o with wacom.ko where it is used.
+<span style="background:#00ffff">For Kernel 2.6.x, replace wacom.o with
+wacom.ko where it is used.</span>
 
 If you have installed the driver, now is the time to test whether it
 will load when needed. If you have not installed it, but are instead
-using insmod, substitute insmod mydir/src/wacom.o where you see modprobe
-wacom below. It is important that you use the correct wacom.o file, the
-one you just built, since insmod may load the old driver if it cannot
-find the one you have specified.
+using insmod, substitute *insmod mydir/src/wacom.o* where you see
+*modprobe wacom* below. It is important that you use the correct wacom.o
+file, the one you just built, since insmod may load the old driver if it
+cannot find the one you have specified.
 
         [jej@ayukawa usb]# rmmod wacom
         [jej@ayukawa usb]# modprobe usb-uhci      (or usb-ohci)
