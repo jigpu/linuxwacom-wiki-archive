@@ -21,7 +21,7 @@ Another workaround made by Aristeu is available at wdaemon. The email message re
 We are. That is, Linux users with Wacom tablets are responsible for the development of this code. John Joganic took up the code in November of 2002 and created this project. The source code was written by at least two dozen individuals, most of them are not directly involved in the project any more. I, Ping Cheng, have assumed the project administrator since 2003. What I ask of you, is to use the drivers and report the problems you encounter.
 
 == Why does my cursor move randomly or stay at the top-left corner? ==
-If you use a USB tablet, it is most probably because you didn't configure the X driver properly. Please refer to Mouse1 for solutions.
+If you use a USB tablet, it is most probably because you didn't configure the X driver properly. Please refer to [[Linuxwacom HOWTO#Configuring X11|Configuring X11]] for solutions.
 
 If it happens to a serial tablet, please post your problem at [https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss general discussion].
 

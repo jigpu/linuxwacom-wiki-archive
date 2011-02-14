@@ -55,7 +55,8 @@ Why does my cursor move randomly or stay at the top-left corner?
 ----------------------------------------------------------------
 
 If you use a USB tablet, it is most probably because you didn't
-configure the X driver properly. Please refer to Mouse1 for solutions.
+configure the X driver properly. Please refer to [Configuring
+X11](/wiki/Linuxwacom_HOWTO#Configuring_X11 "wikilink") for solutions.
 
 If it happens to a serial tablet, please post your problem at [general
 discussion](https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss).
