@@ -1262,14 +1262,17 @@ reboot and have the original drivers load instead.
 
 When should I install the driver? When you're comfortable that the
 driver will not crash your system. If you really know what you're doing,
-just load the drivers manually like in the previous section Testing If
-wacom.(k)o Will Load.
+just load the drivers manually like in the previous section [Testing If
+wacom.(k)o Will
+Load](/wiki/Linuxwacom_HOWTO#Testing_If_wacom.(k)o_Will_Load "wikilink").
 
-On some distributions, Mandriva (a.k.a Mandrake) included, the wacom.ko
-driver that appears in the kernel modules directory appears to be
-compressed. If you cannot find wacom.ko using the method below, try
-locating wacom.ko.gz instead. People who encountered this problem were
-able to run gzip on the module and copy that instead.
+  
+<span style="background:#00ffff">On some distributions, Mandriva (a.k.a
+Mandrake) included, the wacom.ko driver that appears in the kernel
+modules directory appears to be compressed. If you cannot find wacom.ko
+using the method below, try locating wacom.ko.gz instead. People who
+encountered this problem were able to run gzip on the module and copy
+that instead.</span>
 
 Installing the driver requires knowing where it belongs. A little
 research will help here. By using the locate command, you can find all
@@ -1297,11 +1300,12 @@ make a backup copy.
 Here, I've saved the original to wacom\_old.ko and copied my new driver
 over it. You should substitute directory names as appropriate.
 
-NOTE: Don't leave the backup copy in the same directory as the original.
-depmod will treat both as valid drivers, regardless of their names. Copy
-the original somewhere outside of the kernel module directory to ensure
-that this does not happen. In at least one case, the backup driver was
-loaded instead of the new one due to a curious dependency issue.
+**NOTE: Don't leave the backup copy in the same directory as the
+original.** *depmod* will treat both as valid drivers, regardless of
+their names. Copy the original somewhere outside of the kernel module
+directory to ensure that this does not happen. In at least one case, the
+backup driver was loaded instead of the new one due to a curious
+dependency issue.
 
 Finally, it is always a good thing to update the module dependencies.
 This is where you find out if the module was compiled without kernel
