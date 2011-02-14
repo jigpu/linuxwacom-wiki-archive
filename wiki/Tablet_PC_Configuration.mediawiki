@@ -1,5 +1,4 @@
 {{Unclear|reason=
-* Don't re-explain xsetwacom commands here, we've got [[xsetwacom]] for that
 * Having model-specific scripts like .xsetwacom.sh is a temporary hack and needs to be stated as such}}
 
 This page is for Brand & model specific configuration issues & tips.
@@ -13,17 +12,8 @@ While doing things this way may seem a little strange at first you'll find yours
 '''Note''' While these xsetwacom commands were working as of 2-1-11 be aware that the xsetwacom interface may change without notice.  If this happens feel free to update and correct this LWP mediawiki page.
 
 If a xsetwacom command stops working your friend is the get command.
-<pre>
-xsetwacom get "device name" Threshold
-</pre>
-Where Threshold in this example represents the non-functioning parameter you are investigating.  Also useful are the following.
-<pre>
-xsetwacom list dev
+{{:Xsetwacom}}
 
-xsetwacom list param
-
-xsetwacom list mod
-</pre>
 
 == Installing the Script ==
 While you can change your settings on the fly using xsetwacom commands in a terminal they only apply during the current session.  So you need to set it up to auto-start.  Create a file and copy & paste the contents of the script you want into it.  Rename it .xsetwacom.sh (or whatever you want) and place it in your home directory. Remember it will be a hidden file because of the . in front. To enable the xsetwacom commands in the .xsetwacom.sh file to apply to Xserver through a reboot you enter in a terminal.
