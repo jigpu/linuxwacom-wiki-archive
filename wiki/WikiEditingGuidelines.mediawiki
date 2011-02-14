@@ -1,5 +1,13 @@
 This page lists a set of guidelines for how to edit the wiki to keep it informative and easy-to navigate.
 
+= What to add? =
+We use a wiki to make it easy to add and maintain information on the wiki. But information on websites goes stale fast when the codebase moves (and the wacom drivers move fast). Stale information means users won't find what they need or what they find won't work. And that defeats the purpose of having the wiki.
+Be conservative in what you add and make sure that the information is correct and will remain correct for the immediate future.
+
+= What not to add? =
+* Do not add hacks or other tricks that happen to work on your computer. Chances are high the hack isn't upstream because it only works on a few devices, will stop working soon or is the wrong approach altogether.
+* Extensive parameter/option documentation: this belongs into man pages so it can be updated when the code updates.
+
 = Use of Categories =
 mediawiki has a feature called [http://www.mediawiki.org/wiki/Help:Categories Categories] to group pages. Each page can be part of zero, one or more categories. We currently use the following categories:
 * [[:Category:HOWTO]]: for any HOWTO's s related to the driver setup
