@@ -1656,7 +1656,8 @@ pertains to the tablet since the one that ships with XFree86/Xorg is not
 very functional. Neither driver holds a candle to the windows driver
 though, so you'll have to take what you get for the time being. Updates
 to the XFree86/Xorg driver are available in the stable and beta releases
-on the Downloading the Code page.
+on the [Downloading the
+Code](/wiki/Linuxwacom_HOWTO#Downloading_the_Code "wikilink") page.
 
 ### Adding the InputDevices
 
