@@ -431,8 +431,9 @@ driver files manually by rm.
 `   [jej@ayukawa prebuilt]# ./install`
 
 Serial tablet (most Tablet PCs are serial) users can skip the rest
-sections and go to Viewing Wacom Data (wacdump) page for details on
-viewing the tablet output now.
+sections and go to [Viewing Wacom Data
+(wacdump)](/wiki/Linuxwacom_HOWTO#Viewing_Wacom_Data_(wacdump) "wikilink")
+page for details on viewing the tablet output now.
 
 If you use an older USB tablet and your running kernel was released 6
 months later than your tablet was first seen in market, you most
@@ -441,9 +442,11 @@ too. If you would like to make certain, continue to next section.
 
 **Note**:If the prebuilt driver doesn't work for you, you would probably
 end up building your own driver in the following sections. Kory Prince
-has provided a Python script, getwacom.py, to download, compile, and
-install the latest linuxwacom release. Please try Kory's script if you
-like to take a shortcut to install the driver.
+has provided a Python script,
+[getwacom.py](https://sourceforge.net/projects/getwacom/files/), to
+download, compile, and install the latest linuxwacom release. Please try
+Kory's script if you would like to take a shortcut to install the
+driver.
 
 ### Configuring the Package
 
