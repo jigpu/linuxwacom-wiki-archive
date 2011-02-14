@@ -28,13 +28,7 @@ There are a few different ways to accomplish this.
 Several calibration programs are available. One such you can use is
 [xinput\_calibrator](/wiki/External_applications#xinput_calibrator "wikilink").
 To install it a tarball, several packages for different distributions,
-and a Ubuntu PPA are available. Installing from the source code is
-simple and described in the README, although you should probably use the
-*--prefix=/usr* flag, e.g.
-
-` ./autogen.sh --prefix=/usr`
-
-before doing your *make && make install*. Entering in a console:
+and a Ubuntu PPA are available. Entering in a console:
 
 ` xinput_calibrator --list`
 
