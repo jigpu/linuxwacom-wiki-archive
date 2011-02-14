@@ -454,7 +454,7 @@ If module versioning is disabled when it should be enabled, depmod will complain
 
 '''The XFree86/Xorg XInput Driver - USB and Serial'''
 
-Generally, you will not need to build wacom_drv.o since it ships in binary form in the prebuilt directory. There are prebuilt binaries for XFree86 and Xorg corresponding to x86 and x86-64 systems, respectively. If no one works for you, building from source may be your only option. See the Building wacom_drv.o from Scratch page for more information.
+Generally, you will not need to build wacom_drv.o since it ships in binary form in the prebuilt directory. There are prebuilt binaries for XFree86 and Xorg corresponding to x86 and x86-64 systems, respectively. If no one works for you, building from source may be your only option. See the [[Linuxwacom HOWTO#Building wacom_drv.o from Scratch|Building wacom_drv.o from Scratch]] page for more information.
 
 '''Library Dependencies - ncurses and XLib'''
 

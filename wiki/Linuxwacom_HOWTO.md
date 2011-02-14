@@ -509,7 +509,9 @@ Generally, you will not need to build wacom\_drv.o since it ships in
 binary form in the prebuilt directory. There are prebuilt binaries for
 XFree86 and Xorg corresponding to x86 and x86-64 systems, respectively.
 If no one works for you, building from source may be your only option.
-See the Building wacom\_drv.o from Scratch page for more information.
+See the [Building wacom\_drv.o from
+Scratch](/wiki/Linuxwacom_HOWTO#Building_wacom_drv.o_from_Scratch "wikilink")
+page for more information.
 
 **Library Dependencies - ncurses and XLib**
 
