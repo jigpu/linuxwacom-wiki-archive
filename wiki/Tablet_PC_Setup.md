@@ -22,31 +22,6 @@ Fujitsu tablet pc's
 **Tip** If your Wacom digitizer does not initialize (respond) on boot
 many have found restarting X gets it working.
 
-N-trig tablet pc's
-------------------
-
-If you have the HP TX2z or Dell XT & XT2 you likely have your touch on
-the evdev driver rather than the Wacom driver. In that case the standard
-Touch Toggle Script will not work for you. You can use the following
-script modified for the evdev driver.
-
-### Evdev Touch Toggle Script
-
-    #!/bin/bash
-
-    ## evdev touch toggle script
-    ##
-    ## Get the "Device name" or ID number
-    ## for touch from 'xinput list'.
-
-    if [ -f /tmp/touch_off ]; then
-            xinput set-prop 'N-Trig Touchscreen' 'Device Enabled' 1
-        rm -f /tmp/touch_off && exit 0
-    else
-            xinput set-prop 'N-Trig Touchscreen' 'Device Enabled' 0
-        echo 1 > /tmp/touch_off && exit 0
-    fi
-
 Calibration of Your Tablet PC
 -----------------------------
 
@@ -168,3 +143,25 @@ it to make it executable, or right click on it and make it executable
 through Properties. Then you can place it in a launcher or bind a key to
 the script. If you drag the launcher into a panel it will execute with a
 single click.
+
+### N-trig tablet pc's
+
+If you have the HP TX2z or Dell XT & XT2 you likely have your touch on
+the evdev driver rather than the Wacom driver. In that case the Touch
+Toggle Script above will not work for you. You can use the following
+script modified for the evdev driver.
+
+    #!/bin/bash
+
+    ## evdev touch toggle script
+    ##
+    ## Get the "Device name" or ID number
+    ## for touch from 'xinput list'.
+
+    if [ -f /tmp/touch_off ]; then
+            xinput set-prop 'N-Trig Touchscreen' 'Device Enabled' 1
+        rm -f /tmp/touch_off && exit 0
+    else
+            xinput set-prop 'N-Trig Touchscreen' 'Device Enabled' 0
+        echo 1 > /tmp/touch_off && exit 0
+    fi
