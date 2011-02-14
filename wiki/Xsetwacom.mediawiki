@@ -8,7 +8,6 @@ unplugged, disabled or the X Server is restarted.
 '''A note to developers: do not rely on xsetwacom, as it's UI will change without warning.'''
 
 = Usage =
-</noinclude>
 To list the applicable devices. 
   xsetwacom list
 

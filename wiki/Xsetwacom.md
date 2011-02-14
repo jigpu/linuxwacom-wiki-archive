@@ -25,7 +25,7 @@ without warning.**
 Usage
 =====
 
-</noinclude> To list the applicable devices.
+To list the applicable devices.
 
 ` xsetwacom list`
 
