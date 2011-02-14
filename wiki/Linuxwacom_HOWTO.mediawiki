@@ -505,7 +505,11 @@ The following options are provided as reference. Normally, you will only need a 
 |-
 | --enable-quirk-tablet-rescale
 | best guess 
-| Enable tablet to screen rescale code. Note: If you have TwinView setup running on a X server 1.4 and later, and your mappping doesn't work properly, enable this option may resolve the issue.
+| Enable tablet to screen rescale code. Note: If you have TwinView setup running on a X server 1.4 and later, and your mapping doesn't work
+|-
+| 
+| 
+| properly, enable this option may resolve the issue.
 |-
 | --enable-quirk-Uninit-called
 | best guess 
@@ -549,11 +553,19 @@ The following options are provided as reference. Normally, you will only need a 
 |-
 | --with-tcl=dir
 | /usr 
-| Specifies the tcl directory. The tcl's include and lib directories should be under this directory. If tcl.h is not in dir/include, it will be searched under dir directly
+| Specifies the tcl directory. The tcl's include and lib directories should be under this directory. If tcl.h is not in dir/include, it will be
+|-
+| 
+| 
+| searched under dir directly
 |-
 | --with-tk=dir
 | /usr 
-| Specifies the tk directory. If tk is under the same directory as tcl, this option can be eliminated. Otherwise, the tk's include and lib directories should be under this directory. If tk.h is not in dir/include, it will be searched under dir directly
+| Specifies the tk directory. If tk is under the same directory as tcl, this option can be eliminated. Otherwise, the tk's include and lib directories
+|-
+| 
+| 
+| should be under this directory. If tk.h is not in dir/include, it will be searched under dir directly
 |-
 | --with-arch=arch
 | best guess 
