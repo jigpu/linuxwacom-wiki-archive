@@ -1321,7 +1321,7 @@ First off, you have to move the mouse or tap the pen to get any output. If the t
     Feb 10 17:31:35 sasami kernel: input0: Wacom Intuos2 12x12 on usb1:2.0
     Feb 10 17:31:35 sasami kernel: wacom.c: v1.43-0.8.8-10 Vojtech Pavlik <vojtech@suse.cz>
 </pre>
-The device driver and the tablet occassionally get out of sync with the tablet thinking it's still in HID mode when in fact it should be in "mode 2." By unloading and reloading the driver manually, the initialization code has another opportunity to get it right. Try the xxd /dev/input/event0 again. This time, it should work. If not, send me some email.
+The device driver and the tablet occassionally get out of sync with the tablet thinking it's still in HID mode when in fact it should be in "mode 2." By unloading and reloading the driver manually, the initialization code has another opportunity to get it right. Try the ''xxd /dev/input/event0'' again. This time, it ''should'' work. If not, send me some email.
 
 Incidentally, if you have a program running that is connected to /dev/input/event0 (like X or wacdump for instance), it is possible that the tablet will not reattach back to the same event. I have seen the wacom reattach to /dev/input/event1 when unloading and reloading the wacom driver with wacdump running for instance. So, try xxd on event1 or event2 if event0 fails.
 

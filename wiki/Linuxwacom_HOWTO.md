@@ -1510,9 +1510,9 @@ no output occurs on those ports, reload the drive:
 The device driver and the tablet occassionally get out of sync with the
 tablet thinking it's still in HID mode when in fact it should be in
 "mode 2." By unloading and reloading the driver manually, the
-initialization code has another opportunity to get it right. Try the xxd
-/dev/input/event0 again. This time, it should work. If not, send me some
-email.
+initialization code has another opportunity to get it right. Try the
+*xxd /dev/input/event0* again. This time, it *should* work. If not, send
+me some email.
 
 Incidentally, if you have a program running that is connected to
 /dev/input/event0 (like X or wacdump for instance), it is possible that
