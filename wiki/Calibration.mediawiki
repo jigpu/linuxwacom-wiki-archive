@@ -13,6 +13,8 @@ Several calibration programs are available.  One such you can use is [[External 
   xinput_calibrator --list
 
 will return a list of devices xinput_calibrator thinks it can calibrate.  Using either the ID # or "device name" (in quotes) returned proceed to calibrate your device.  Four cross hairs will appear in sequence and on finishing xinput-calibrator will return output similar to the following.
+{{Warning|reason=This external program's output describes out-of-date information on how to configure your device.}}
+
 <pre>
 ~$ xinput_calibrator --device "9"
 Calibrating standard Xorg driver "Wacom BambooFun 2FG 4x5 Pen stylus"
