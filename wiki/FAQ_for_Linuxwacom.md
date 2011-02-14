@@ -13,8 +13,9 @@ LWP's [FAQ](/wiki/FAQ "wikilink"). Check there first** for answers to your
 questions.
 
 The Linuxwacom FAQ is based on the questions that we receive in email.
-If you have a question that is not answered here, send your email
-directly to the [mailing list](/wiki/Main_Page#Mailing_lists "wikilink").
+If you have a question that is not answered on the LWP FAQ or here, send
+your email directly to the [mailing
+list](/wiki/Main_Page#Mailing_lists "wikilink").
 
 How do I get the special features of my stylus to work?
 -------------------------------------------------------
