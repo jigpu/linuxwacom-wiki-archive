@@ -74,7 +74,7 @@ to obtain the coordinate values, in practice it is not that useful.  Evtest only
 If you have some experience you may want to eyeball the situation and plug in your "educated" guesses.  Probably not the best way to go as it usually requires some trial and error.
 
 == Apply the Coordinates ==
-Now that you have acquired your TopX & Y and BottomX & Y values you can implement them with [[xsetwacom]] commands.  Note the eraser and cursor coordinates are the same as the stylus coordinates.  For example the default values of a Cintiq look like the following.
+Now that you have acquired your TopX & Y and BottomX & Y values you can apply them with [[xsetwacom]].  Note the eraser and cursor coordinates are the same as the stylus coordinates.  For example the default values of a Cintiq look like the following.
 <pre>
 xsetwacom set "Wacom Cintiq 21UX2 stylus" topx "0"
 xsetwacom set "Wacom Cintiq 21UX2 stylus" topy "0"

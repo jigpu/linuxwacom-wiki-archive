@@ -140,9 +140,9 @@ Apply the Coordinates
 ---------------------
 
 Now that you have acquired your TopX & Y and BottomX & Y values you can
-implement them with [xsetwacom](xsetwacom "wikilink") commands. Note the
-eraser and cursor coordinates are the same as the stylus coordinates.
-For example the default values of a Cintiq look like the following.
+apply them with [xsetwacom](xsetwacom "wikilink"). Note the eraser and
+cursor coordinates are the same as the stylus coordinates. For example
+the default values of a Cintiq look like the following.
 
     xsetwacom set "Wacom Cintiq 21UX2 stylus" topx "0"
     xsetwacom set "Wacom Cintiq 21UX2 stylus" topy "0"
