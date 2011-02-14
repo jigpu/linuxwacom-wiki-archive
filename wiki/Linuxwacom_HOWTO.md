@@ -420,10 +420,10 @@ other for x86-64 systems.
 If you don't plan to change anything in the driver, following steps will
 install the prebuilt files for you:
 
-Note: Please remove the existing linuxwacom package if your distro has
-installed one for you. Use the command, such as yum remove or apt-get
-uninstall, provided by your distro. Please DO NOT remove the driver
-files manually by rm.
+**Note**: Please remove the existing linuxwacom package if your distro
+has installed one for you. Use the command, such as yum remove or
+apt-get uninstall, provided by your distro. Please DO NOT remove the
+driver files manually by rm.
 
 `   [jej@ayukawa jej]$ cd linuxwacom-0.8.8-10/prebuilt`  
 `   [jej@ayukawa prebuilt]$ su`  
@@ -439,11 +439,11 @@ months later than your tablet was first seen in market, you most
 probably can skip next section of this chapter and the whole chapter 4
 too. If you would like to make certain, continue to next section.
 
-Note:If the prebuilt driver doesn't work for you, you would probably end
-up building your own driver in the following sections. Kory Prince has
-provided a Python script, getwacom.py, to download, compile, and install
-the latest linuxwacom release. Please try Kory's script if you like to
-take a shortcut to install the driver.
+**Note**:If the prebuilt driver doesn't work for you, you would probably
+end up building your own driver in the following sections. Kory Prince
+has provided a Python script, getwacom.py, to download, compile, and
+install the latest linuxwacom release. Please try Kory's script if you
+like to take a shortcut to install the driver.
 
 ### Configuring the Package
 
