@@ -287,8 +287,12 @@ If you are interested, the following tables contain the package contents and rel
 | Support kernels from 2.6.16 to 2.6.35. Support Cintiq 21UX2, Intuos4 WL (USB Endpoint).
 |-
 | linuxwacom-0.8.5-12.tar.bz2
-| 2010-03-26 -
-| Support tablets 0xE2, 0xE3, and 0x9F. Support new serial ISDv4 Tablet PCs. Avoid duplicated and invalid devices and types for X server 1.4 and later. Support kernels up to 2.6.34. Add 5 new Bamboo devices.
+| 2010-03-26
+| Support tablets 0xE2, 0xE3, and 0x9F. Support new serial ISDv4 Tablet PCs. Avoid duplicated and invalid devices and types for X server 1.4
+|-
+| 
+| 
+| and later. Support kernels up to 2.6.34. Add 5 new Bamboo devices.
 |-
 | linuxwacom-0.8.3-6.tar.bz2
 | 2009-06-28
@@ -300,11 +304,19 @@ If you are interested, the following tables contain the package contents and rel
 |-
 | linuxwacom-0.7.9-11.tar.bz2
 | 2008-04-11
-| Support kernel 2.6.22 & 2.6.24. Temporary workaround for Xorg 7.3. Support Bamboo series and Cintiq 12WX & 20WSX. Updated wacomcpl for keystrokes. Support serial Tablet PC with touch.
+| Support kernel 2.6.22 & 2.6.24. Temporary workaround for Xorg 7.3. Support Bamboo series and Cintiq 12WX & 20WSX. Updated wacomcpl for
+|-
+| 
+| 
+| keystrokes. Support serial Tablet PC with touch.
 |-
 | linuxwacom-0.7.7-12.tar.bz2
-| 2007-06-15 -
-| Support Bamboo. Updated installer under prebuilt directory to install X driver as well as its associated utilities. Support non-overlapped multi-areas for same InputDevice. Support pad with button and keystroke events through xsetwacom
+| 2007-06-15
+| Support Bamboo. Updated installer under prebuilt directory to install X driver as well as its associated utilities. Support non-overlapped 
+|-
+| 
+| 
+| multi-areas for same InputDevice. Support pad with button and keystroke events through xsetwacom.
 |-
 | linuxwacom-0.7.5-4.tar.bz2
 | 2006-09-29
