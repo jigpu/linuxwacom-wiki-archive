@@ -25,13 +25,8 @@ See the LWP's
 Is hot plug supported for X intput devices?
 -------------------------------------------
 
-X Intput Device Hotplug is not fullly supported at Xorg yet. But, Wacom
-X driver has implemented a workaround for those who have to
-unplug/replug the tablet while X is running. To make your tablet work
-without restarting X server, please switch your virtual terminals after
-replug your tablet. That is, press Ctrl + Alt + F1 together then release
-them (screen turns to console); and press Ctrl + Alt + F7 together then
-release them (screen returns back to normal).
+See the LWP's
+[FAQ](/wiki/FAQ#Is_hot_plugging_supported_for_my_USB_tablet? "wikilink")
 
 Is my tablet supported? What about my special stylus?
 -----------------------------------------------------
