@@ -100,17 +100,6 @@ happens feel free to update and correct this linxwacom mediawiki page.
 
 If a xsetwacom command stops working your friend is the get command.
 
-    xsetwacom get "device name" Threshold
-
-Where Threshold in this example represents the non-functioning parameter
-you are investigating. Also useful are the following.
-
-    xsetwacom list dev
-
-    xsetwacom list param
-
-    xsetwacom list mod
-
 ### Installing the Script
 
 While you can change your settings on the fly using xsetwacom commands
