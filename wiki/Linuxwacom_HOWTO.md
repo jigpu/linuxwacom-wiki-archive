@@ -753,10 +753,10 @@ you are not using a newly released tablet model and you are running a
 recently released kernel version, chances are that you don't need to
 update your kernel driver from linuxwacom.
 
-Note: If your system is running on a 2.6.9 or older kernel and you want
-to use a new Wacom device, upgrading to a newer version (preferablely
-2.6.18 or later) is required since we do not support kernels older than
-2.6.9 any more.
+**Note:** If your system is running on a 2.6.9 or older kernel and you
+want to use a new Wacom device, upgrading to a newer version
+(preferablely 2.6.18 or later) is required since we do not support
+kernels older than 2.6.9 any more.
 
 ### Testing Tablet Detection
 
