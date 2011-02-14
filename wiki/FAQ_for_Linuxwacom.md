@@ -19,16 +19,8 @@ directly to the [mailing list](/wiki/Main_Page#Mailing_lists "wikilink").
 How do I get the special features of my stylus to work?
 -------------------------------------------------------
 
-There are many different types of styli, mice, and pucks. All of them
-work to varying degrees, so if you are running into trouble, send me
-email. Also, if you are having trouble with the stable build, try the
-beta. Many of the tools have been recently added and have not yet been
-moved to the production release.
-
-Note, tilt is only supported with protocol V tablets, which include
-Intuos series and Cintiq 21UX/20WSX/12WX to date (July. 31, 2009). Any
-other tablets don't have tilt no matter you have the tilt option in your
-xorg.conf or not.
+See the LWP's
+[FAQ](/wiki/FAQ#How_do_I_get_the_special_features_of_my_stylus_to_work? "wikilink")
 
 Is hot plug supported for X intput devices?
 -------------------------------------------
