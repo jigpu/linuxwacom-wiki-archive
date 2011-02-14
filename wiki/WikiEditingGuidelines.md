@@ -27,3 +27,31 @@ currently use the following categories:
 
 If you are adding or editing a page, please make sure it is part of the
 appropriate category.
+
+On adding code to this wiki
+===========================
+
+Do not add code to this wiki. This includes scripts as well as actual
+source code. Send the code snippets to the [linuxwacom-devel mailing
+list](mailing_lists "wikilink") first so it can be reviewed by a
+developer and only then add it.
+
+Many scripts and workarounds only work on certain combinations of the
+driver, a kernel, and X server. Adding a script to this website without
+taking this into account means users will not find the right solution if
+they don't have that exact same solution.
+
+On external programs
+====================
+
+This wiki is not a wiki for [external
+programs](/wiki/External_applications "wikilink"). If an external program is
+required or useful for configuration, feel free to add the
+wacom-specific part to this wiki. Do not add build instructions for the
+external program but instead link to the project-specific page where
+these build instructions are found. If the project doesn't have any,
+contact the developers of that project to add it to their website.
+External programs change and wiki content can go stale quickly.
+
+Always add the date and the version of the software you have been been
+using so users know how old information is.
