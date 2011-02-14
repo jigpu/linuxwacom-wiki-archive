@@ -1,3 +1,5 @@
+{{Unclear|reason=Why do we have a separate page here? What's wrong with the [[FAQ]]?}}
+
 This FAQ is based on the questions that we receive in email. If you have a question that is not answered here, send your email directly to the mailing list.
 
 
