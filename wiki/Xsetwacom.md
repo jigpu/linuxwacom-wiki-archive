@@ -139,8 +139,8 @@ say:
 ` xsetwacom set "device name" PressCurve 0 5 95 100`
 
 Note as long as the inner pair of values (y1 & x2) and the outer pair of
-values (x1 & y2) each equal 100 you've defined a valid Bezier curve. For
-a "firmer" touch (depressed curve), you could use:
+values (x1 & y2) each equal 100 you've defined a valid Bezier curve for
+xf86-input-wacom. For a "firmer" touch (depressed curve), you could use:
 
 ` xsetwacom set "device name" PressCurve 5 0 100 95`
 
@@ -155,6 +155,13 @@ Visually the *PressCurve* parameter covers the range:
 You can also combine changes to the inner and outer pairs simultaneously
 (altering the control points relative to each other) to achieve the feel
 you prefer with your stylus and eraser.
+
+A graphical javascript demo is available
+[here](http://linuxwacom.sourceforge.net/misc/bezier.html). It is more
+generalized than the implementation in xf86-input-wacom. But it is easy
+enough to only drag the two control points and follow the constraints
+described above to duplicate the effects of your *PressCurve* parameter
+settings.
 
 Rotate
 ------
