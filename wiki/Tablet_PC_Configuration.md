@@ -8,8 +8,8 @@ tags:
 
 This page is for Brand & model specific configuration issues & tips.
 
-The LWP project welcomes additions to its mediawiki so please join in if
-you have contributions.
+The linuxwacom project welcomes additions to its mediawiki so please
+join in if you have contributions.
 
 Currently [xf86-input-wacom](xf86-input-wacom "wikilink") does not have
 a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).
