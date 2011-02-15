@@ -20,8 +20,8 @@ Free Software Foundation; either version 2 of the License, or
 
 (at your option) any later version. A copy of the license is included in
 
-the section entitled [GNU Free Document
-License](/wiki/Linuxwacom_HOWTO#GNU_Free_Document_License "wikilink").</small>
+the section entitled [GNU GENERAL PUBLIC
+LICENSE](/wiki/Linuxwacom_HOWTO#GNU_GENERAL_PUBLIC_LICENSE "wikilink").</small>
 
 </center>
 Introduction
@@ -3694,9 +3694,7 @@ suspend/resume a Wacom tablet on a laptop are:
 
         -Thomas
 
-### GNU Free Document License
-
-<big>GNU GENERAL PUBLIC LICENSE</big>
+### GNU GENERAL PUBLIC LICENSE
 
 Version 2, June 1991
 

@@ -11,7 +11,7 @@ Free Software Foundation; either version 2 of the License, or
 
 (at your option) any later version. A copy of the license is included in
 
-the section entitled [[Linuxwacom HOWTO#GNU Free Document License|GNU Free Document License]].</small>
+the section entitled [[Linuxwacom HOWTO#GNU GENERAL PUBLIC LICENSE|GNU GENERAL PUBLIC LICENSE]].</small>
 </center>
 
 
@@ -3015,10 +3015,7 @@ The problem lies in the step that when unplugging tablet cable while the laptop 
     -Thomas
 </pre>
 
-=== GNU Free Document License ===
-
-<big>GNU GENERAL PUBLIC LICENSE</big>
-
+=== GNU GENERAL PUBLIC LICENSE ===
 Version 2, June 1991
 
 Copyright (C) 1989, 1991 Free Software Foundation, Inc.
