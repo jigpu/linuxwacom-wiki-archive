@@ -12,7 +12,7 @@ older kernels and X servers and is not part of any modern desktop
 distribution. Where *modern* is defined as kernel 2.6.36 (or later) and
 X.org X server 1.8 (or later).
 
-<small>The exception being the **Debian/Ubuntu** kernel 2.6.35. Because
+<small>The exception being the **Debian/Ubuntu** kernel 2.6.32. Because
 of their use of a *hybrid* X server 1.7 with it, they use the
 xf86-input-wacom X driver wacom\_drv.so and the linuxwacom usb kernel
 driver/module wacom.ko.</small>
