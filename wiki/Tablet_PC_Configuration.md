@@ -63,11 +63,9 @@ The Sample Xsetwacom Scripts
 The following scripts were authored by Favux. Where co-developed with
 others they are cited in the relevant script. All or almost all of the
 values are the defaults with the default stated and the appropriate
-range given. The exception being the pad (tablet buttons). Examples are
-shown of how to configure those for different uses in different
-applications. The scripts are intended to provide you with a framework
-to configure your settings in a text file rather than at the command
-line, with similar results to what the wacomcpl gui would have produced.
+range given. The scripts are intended to provide you with a framework to
+configure your settings in a text file rather than at the command line,
+with similar results to what the wacomcpl gui would have produced.
 
 In the example scripts below both "Device name" and ID \# are used. Be
 sure to check for yours using 'xinput list' (without the quotes) in a
