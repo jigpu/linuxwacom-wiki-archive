@@ -2632,7 +2632,7 @@ In this setup, we only support tablet to a specific screen mapping, that is, you
 :<span style="background:#00ffff">and putting wacomxrrd.desktop to /usr/share/gnome/autostart.</span>
 
 == Contacts ==
-Ping Cheng can be contacted at the following email address: pinglinux@gmail.com.
+Ping Cheng can be contacted at the following email address: [mailto:pinglinux@gmail.com pinglinux@gmail.com].
 
 == Appendix ==
 This section is for everything that is either not critical or simply too complex to describe in the document above without becoming overly distracting.

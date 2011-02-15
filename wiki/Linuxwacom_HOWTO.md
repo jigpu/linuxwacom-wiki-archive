@@ -3156,7 +3156,7 @@ Contacts
 --------
 
 Ping Cheng can be contacted at the following email address:
-pinglinux@gmail.com.
+<pinglinux@gmail.com>.
 
 Appendix
 --------
