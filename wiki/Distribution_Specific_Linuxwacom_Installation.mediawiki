@@ -249,17 +249,19 @@ generating symlinks into /usr/include/X11 at compilation
 time, and it's done." Nico said on Mar 21 2005.
 
 == Building wacom driver On Ubuntu 9.04 64-bit system ==
-The steps on this page are taken from the following posts:-
+The steps on this page are taken from the following posts:
 
-http://ubuntuforums.org/showthread.php?t=1215979&page=3 #22
-http://ubuntuforums.org/showthread.php?t=1038949&page=11 #104 Section 1
-http://ubuntuforums.org/showthread.php?t=967147&page=18 #176
+http://ubuntuforums.org/showthread.php?t=1215979&page=3#22
+
+http://ubuntuforums.org/showthread.php?t=1038949&page=11#104 Section 1
+
+http://ubuntuforums.org/showthread.php?t=967147&page=18#176
 
 
-Craig Stevens summarized the steps below for his Wacom Intuos4 M on a 64-bit Ubuntu 9.04 (Aug. 26, 2009). Craig also wanted to credit Favux and Eric Honaker for their help. If you have any problems or questions, please post them to linuxwacom-discuss@lists.sourceforge.net.
+Craig Stevens summarized the steps below for his Wacom Intuos4 M on a 64-bit Ubuntu 9.04 (Aug. 26, 2009). Craig also wanted to credit Favux and Eric Honaker for their help. If you have any problems or questions, please post them to [mailto:linuxwacom-discuss@lists.sourceforge.net linuxwacom-discuss@lists.sourceforge.net].
 
-Process from start to finish:-
-
+Process from start to finish:
+<pre>
    1. Installed "wacom-tools" and "xserver-xorg-input-wacom" using synaptic.
    2. "cd ./Desktop"
    3. "wget http://prdownloads.sourceforge.net/linuxwacom/linuxwacom-0.8.4.tar.bz2"
@@ -283,7 +285,7 @@ Process from start to finish:-
 		(just swapping out the file contents in a text editor, after backing up!)
   16. In a text editor added the line "wacom" to the end of the /etc/modules file
   17. Rebooted and it worked.
-
+</pre>
 This has got the tablet as far as working like a mouse in Ubuntu Gnome desktop and also working in Photoshop in XP on a VirtualBox VM. The Touch Ring zooms in Firefox.
 
 

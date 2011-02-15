@@ -326,42 +326,44 @@ compilation time, and it's done." Nico said on Mar 21 2005.
 Building wacom driver On Ubuntu 9.04 64-bit system
 --------------------------------------------------
 
-The steps on this page are taken from the following posts:-
+The steps on this page are taken from the following posts:
 
-<http://ubuntuforums.org/showthread.php?t=1215979&page=3> \#22
-<http://ubuntuforums.org/showthread.php?t=1038949&page=11> \#104 Section
-1 <http://ubuntuforums.org/showthread.php?t=967147&page=18> \#176
+<http://ubuntuforums.org/showthread.php?t=1215979&page=3#22>
+
+<http://ubuntuforums.org/showthread.php?t=1038949&page=11#104> Section 1
+
+<http://ubuntuforums.org/showthread.php?t=967147&page=18#176>
 
 Craig Stevens summarized the steps below for his Wacom Intuos4 M on a
 64-bit Ubuntu 9.04 (Aug. 26, 2009). Craig also wanted to credit Favux
 and Eric Honaker for their help. If you have any problems or questions,
-please post them to linuxwacom-discuss@lists.sourceforge.net.
+please post them to <linuxwacom-discuss@lists.sourceforge.net>.
 
-Process from start to finish:-
+Process from start to finish:
 
-`  1. Installed "wacom-tools" and "xserver-xorg-input-wacom" using synaptic.`  
-`  2. "cd ./Desktop"`  
-`  3. "wget `[`http://prdownloads.sourceforge.net/linuxwacom/linuxwacom-0.8.4.tar.bz2`](http://prdownloads.sourceforge.net/linuxwacom/linuxwacom-0.8.4.tar.bz2)`"`  
-`  4. "sudo apt-get update"`  
-`  5. "sudo apt-get install build-essential libx11-dev libxi-dev x11proto-input-dev xserver-xorg-dev tk8.4-dev tcl8.4-dev libncurses5-dev"`  
-`  6. "sudo apt-get upgrade"`  
-`  7. Then got the kernal version with: "uname -r" (needed in steps 8 and 14)`  
-`  8. I had the generic kernel so:`  
-`   "sudo apt-get install linux-headers-generic" `  
-`       (or it would have been: "sudo apt-get install linux-headers-rt for the rt kernel")`  
-`  9. "tar xjvf linuxwacom-0.8.4.tar.bz2"`  
-` 10. "cd linuxwacom-0.8.4"`  
-` 11. "./configure --enable-wacom"`  
-` 12. "make"`  
-` 13. "sudo make install"`  
-` 14. Then copied the wacom.ko built in step 12 over the existing one in lib/modules..., `  
-``    "sudo cp ./src/2.6.28/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko"  ``  
-``        where `uname -r` is the kernel version from step 7. ``  
-` 15. Changed /usr/share/hal/fdi/policy/20thirdparty/10-wacom.fdi for a new one attached to `  
-`   `[`http://ubuntuforums.org/showthread.php?t=967147&page=18`](http://ubuntuforums.org/showthread.php?t=967147&page=18)` #176 which clearly explains the procedure `  
-`       (just swapping out the file contents in a text editor, after backing up!)`  
-` 16. In a text editor added the line "wacom" to the end of the /etc/modules file`  
-` 17. Rebooted and it worked.`
+       1. Installed "wacom-tools" and "xserver-xorg-input-wacom" using synaptic.
+       2. "cd ./Desktop"
+       3. "wget http://prdownloads.sourceforge.net/linuxwacom/linuxwacom-0.8.4.tar.bz2"
+       4. "sudo apt-get update"
+       5. "sudo apt-get install build-essential libx11-dev libxi-dev x11proto-input-dev xserver-xorg-dev tk8.4-dev tcl8.4-dev libncurses5-dev"
+       6. "sudo apt-get upgrade"
+       7. Then got the kernal version with: "uname -r" (needed in steps 8 and 14)
+       8. I had the generic kernel so:
+        "sudo apt-get install linux-headers-generic" 
+            (or it would have been: "sudo apt-get install linux-headers-rt for the rt kernel")
+       9. "tar xjvf linuxwacom-0.8.4.tar.bz2"
+      10. "cd linuxwacom-0.8.4"
+      11. "./configure --enable-wacom"
+      12. "make"
+      13. "sudo make install"
+      14. Then copied the wacom.ko built in step 12 over the existing one in lib/modules..., 
+        "sudo cp ./src/2.6.28/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko" 
+            where `uname -r` is the kernel version from step 7.
+      15. Changed /usr/share/hal/fdi/policy/20thirdparty/10-wacom.fdi for a new one attached to 
+        http://ubuntuforums.org/showthread.php?t=967147&page=18 #176 which clearly explains the procedure 
+            (just swapping out the file contents in a text editor, after backing up!)
+      16. In a text editor added the line "wacom" to the end of the /etc/modules file
+      17. Rebooted and it worked.
 
 This has got the tablet as far as working like a mouse in Ubuntu Gnome
 desktop and also working in Photoshop in XP on a VirtualBox VM. The
