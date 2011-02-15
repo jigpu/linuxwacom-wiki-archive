@@ -230,24 +230,24 @@ Building wacom driver On RHEL 5 / CentOS 5
 The following documentation for building wacom x.org and kernel modules
 on RHEL 5 / CentOS 5 was written by Sylvain Giasson. If you have any
 problems or questions, go ahead and post them to
-linuxwacom-discuss@lists.sourceforge.net.
+<linuxwacom-discuss@lists.sourceforge.net>.
 
 Copyright (C) August 2009 Sylvain Giasson
 
-Summary
+**Summary**
 
 When installing a driver, you will not always get an rpm package to
 install it. You may have to compile it for the kernel and architecture
 you are using. This document will show you how to compile the wacom
 driver from source.
 
-Download the binaries
+**Download the binaries**
 
 You will need to download the source for the wacom driver. You need to
 go on the linux wacom web page: <http://linuxwacom.sourceforge.net>. In
 this example, you download it into /usr/tmp.
 
-Uncompress the binaries
+**Uncompress the binaries**
 
 Once downloaded, the wacom driver source package are TARed and
 compressed as bz2 archives. They must extracted and uncompressed unsing
@@ -260,7 +260,7 @@ the following commands.
 Note: tar options: x=extract; j=extract bz2 before tar; v=verbose; f=the
 file you are going to uncompress.
 
-Updating/installing pre-requisite packages with yum before compiling
+**Updating/installing pre-requisite packages with yum before compiling**
 
 Before compiling the driver for your workstation, you need to be sure to
 have some pre-requisites modules installed. The easiest way to install
@@ -277,11 +277,10 @@ workstation must have internet access).
 Once yum found everything it needs, press "y" to begin the installation
 process.
 
-Compiling the driver
+**Compiling the driver**
 
-`  1. Compiling the driver is simple.  You need to configure a custom installer, create it,  and `
-
-install it. Type the following commands:
+1. Compiling the driver is simple. You need to configure a custom
+installer, create it, and install it. Type the following commands:
 
 `     su - root`  
 `     cd /usr/tmp/linuxwacom-0.8.4`  
@@ -292,22 +291,25 @@ If some dependencies aren't resolved, the configure step will not be
 completed successfully. Once dependancies are resolved, run ./configure
 again.
 
-`  2. When the "configure" step succeeds, continue to the next steps. Type:`  
-`      `  
+2. When the "configure" step succeeds, continue to the next steps. Type:
+
 `     ./make`  
-`      `  
-`  3. This will create the actual installer using the configuration from the previous step. Type:`  
-`      `  
+`      `
+
+3. This will create the actual installer using the configuration from
+the previous step. Type:
+
 `     ./make install`  
 `      `  
 `     This will install the driver.`  
-`      `  
-`  4. Install kernel driver (create a backup copy)`  
-  
+`      `
+
+4. Install kernel driver (create a backup copy)
+
 ``      cp /lib/modules/`uname -r`/kernel/drivers/usb/input/wacom.ko  /lib/modules/`uname -r`/kernel/drivers/usb/input/wacom.ko.old.$$ ``  
 ``      cp src/`uname -r | cut -d- -f1`/wacom.ko /lib/modules/`uname -r`/kernel/drivers/usb/input/ ``
 
-`  5. Reboot the workstation `
+5. Reboot the workstation
 
 Building wacom driver On Suse 9.2
 ---------------------------------
