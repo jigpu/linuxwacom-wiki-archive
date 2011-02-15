@@ -2174,7 +2174,7 @@ The xsetwacom is a command-line Wacom driver configuration tool. It changes the 
 
 The basic usage and options can be viewed by issuing man xsetwacom.
 
-Note: The device identifiers (dev_name) are case sensitive. You should use the dev_name exactly the same as xsetwacom list shows. The examples below assume that Stylus, cursor, and pad are used.
+'''Note:''' The device identifiers (dev_name) are case sensitive. You should use the dev_name exactly the same as ''xsetwacom list'' shows. The examples below assume that Stylus, cursor, and pad are used.
 <pre>
     [jej@ayukawa linuxwacom]$xsetwacom
     Usage: xsetwacom [options] [command [arguments...]]
@@ -2193,11 +2193,11 @@ Note: The device identifiers (dev_name) are case sensitive. You should use the d
       get dev_name param [param...] - get current device parameter(s) value by name
       getdefault dev_name param [param...] - get device parameter(s) default value by name
 </pre>
-xsetwacom supports 3 forms of get/getdefault commands: xsetwacom get returns the parameter's raw value; xsetwacom -x get returns the value in Xorg.conf form; and xsetwacom -s get returns the value in shell command form.
+xsetwacom supports 3 forms of get/getdefault commands: ''xsetwacom get'' returns the parameter's raw value; ''xsetwacom -x get'' returns the value in Xorg.conf form; and ''xsetwacom -s'' get returns the value in shell command form.
 
-The most used xsetwacom command is xsetwacom set dev_name param [values...], where param is an option which will be set to values in wacom_drv.o after excuting xsetwacom. To better understand the use of this command, let's see some examples. Assume that you use Stylus as your Wacom tool's Identifier, which is considered as dev_name in xsetwacom command.
+The most used xsetwacom command is ''xsetwacom set dev_name param [values...]'', where param is an option which will be set to values in wacom_drv.o after executing xsetwacom. To better understand the use of this command, let's see some examples. Assume that you use ''Stylus'' as your Wacom tool's Identifier, which is considered as dev_name in xsetwacom command.
 
-If you want to change Stylus's mode from absolute (default) to relative, then:
+If you want to change ''Stylus's'' mode from absolute (default) to relative, then:
 <pre>
     [jej@ayukawa linuxwacom]$xsetwacom set Stylus mode relative
 </pre>
@@ -2234,19 +2234,19 @@ If you want the buttons behave the Tablet PC way, i.e., sending button event onl
 <pre>
     [jej@ayukawa linuxwacom]$xsetwacom set Stylus TPCButton on
 </pre>
-If you want to change pad's button 1 to ctrl alt F2, then:
+If you want to change ''pad's'' button 1 to ctrl alt F2, then:
 <pre>
     [jej@ayukawa linuxwacom]$xsetwacom set pad Button1 "core key ctrl alt F2"
 </pre>
-If you want to change pad's button 2 to ctrl alt backspace, then:
+If you want to change ''pad's'' button 2 to ctrl alt backspace, then:
 <pre>
     [jej@ayukawa linuxwacom]$xsetwacom set pad Button2 "core key ctrl alt backspace"
 </pre>
-Note: keystrokes and modifiers are only supported for Xorg 6.8 or later.
+<span style="background:#00ffff">'''Note:''' keystrokes and modifiers are only supported for Xorg 6.8 or later.</span>
 
-xsetwacom supported parameters
+'''xsetwacom supported parameters'''
 
-Below is a list of the parameters and their values used by xsetwacom command (a similar output can be viewed by xsetwacom list param. All functions apply to the associated tool unless explicitly stated otherwise):
+Below is a list of the parameters and their values used by xsetwacom command (a similar output can be viewed by ''xsetwacom list param''. All functions apply to the associated tool unless explicitly stated otherwise):
 {|
 ! param !! [values...] !! results
 |-
@@ -2446,7 +2446,7 @@ Event description format:
   CODE: Button number if emit a button event or specific keys and any other keys not listed as mod
 </pre>
 
-Associating parameters to physical devices
+'''Associating parameters to physical devices'''
 
 Following is a list of the parameters that are associated with the elements of devcies.
 <pre>
@@ -2464,7 +2464,7 @@ Following is a list of the parameters that are associated with the elements of d
     --------------------------------------------------------------------------
 </pre>
 
-Automatically excuting predefined xsetwacom commands at logging in
+'''Automatically excuting predefined xsetwacom commands at logging in'''
 
 The xsetwacom commands can be added to the .xinitrc under your home directory so next time when you login as yourself, the driver will be set to the options you choose.
 
@@ -2479,13 +2479,13 @@ Below is an example of my .xinitrc:
     # run the primary system script
     . /etc/X11/xinit/xinitrc
 </pre>
-To see what's under your home directory, use ls -al ~.
+To see what's under your home directory, use ''ls -al ~''.
 
-If your system doesn't execute .xinitrc at login, you can add those xsetwacom commands into the startup script (.bashrc, .cshrc, .profile, etc.) that your system launches, for example, you should use .Xsession instead of .xinitrc on Debian.
+:<span style="background:#00ffff">If your system doesn't execute .xinitrc at login, you can add those xsetwacom commands into the startup script (.bashrc, .cshrc, .profile, etc.) that your system launches, for example, you should use .Xsession instead of .xinitrc on Debian.</span>
 
-It has been reported that xsetwacom can not run on some older systems due to a XFree86 interface error. A generic solution to this issue is directly adding your configuration options to the /etc/X11/XF86Config file. Please refer to Configuring X11 for details.
+:<span style="background:#00ffff">It has been reported that xsetwacom can not run on some older systems due to a XFree86 interface error. A generic solution to this issue is directly adding your configuration options to the /etc/X11/XF86Config file. Please refer to Configuring X11 for details.</span>
 
-More examples
+'''More examples'''
 
 If you are confused with the usages above, let's see some more confusing examples.
 
@@ -2493,27 +2493,27 @@ If you are confused with the usages above, let's see some more confusing example
 
 keystroke and modifiers can be used through buttons, ExpressKeys, wheels, Touch Strips, and Touch Ring. A list of supported modifiers and special keys can be viewed through xsetwacom list mod. Special keys are symbols that go together to represent one XInput key event.
 
-In the following example, Up represents the up arrow key:
+In the following example, '''Up''' represents the '''up arrow''' key:
 <pre>
     [jej@ayukawa jej]$ xsetwacom set cursor button4 "key core Up"   
 </pre>
-When you press button4 on your Wacom puck, Xinput will receive an up arrow event.
+When you press button4 on your Wacom puck, Xinput will receive an '''up arrow''' event.
 
-If you want to send the Up keystroke, the universal escape character \ has to be used:
+If you want to send the '''Up''' keystroke, the universal escape character \ has to be used:
 <pre>
     [jej@ayukawa jej]$ xsetwacom set cursor button4 "key core \Up"   
 </pre>
-If you press button4 on your Wacom puck, Xinput will receive an U and a p events, i.e., Up would be displayed on your active console or application.
+If you press button4 on your Wacom puck, Xinput will receive an '''U''' and a '''p''' events, i.e., '''Up''' would be displayed on your active console or application.
 
-Sending down arrow event when button5 is pressed:
+Sending '''down arrow''' event when button5 is pressed:
 <pre>
     [jej@ayukawa jej]$ xsetwacom set cursor button5 "key core Down"  
 </pre>
-Sending PageUp event when tablet wheel scrolls up:
+Sending '''PageUp''' event when tablet wheel scrolls up:
 <pre>
     [jej@ayukawa jej]$ xsetwacom set pad RelWUp "key core pgup"   
 </pre>
-Sending PageDown event when tablet wheel scrolls down:
+Sending '''PageDown''' event when tablet wheel scrolls down:
 <pre>
     [jej@ayukawa jej]$ xsetwacom set pad RelWDn "key core pgdn"   
 </pre>
@@ -2539,7 +2539,7 @@ TwinView parameter sets the mapping of TwinView to horizontal/vertical/none. The
             Option  "TwinView"      "none"
     [jej@ayukawa jej]$ 
 </pre>
-which means device cursor was not set to TwinView display.
+which means device '''cursor''' was not set to TwinView display.
 
 Two other parameters, TVResolution0 and TVResolution1, made the change of MetaModes option in TwinView setup possible when system is running. TVResolution0 sets MetaModes option for TwinView Screen 0, while TVResolution1 sets MetaModes option for TwinView Screen 1. However, you need to make sure that the MetaModes you are going to set is the same as the TwinView setup in your xorg.conf for Nvidia Graphic card driver.
 

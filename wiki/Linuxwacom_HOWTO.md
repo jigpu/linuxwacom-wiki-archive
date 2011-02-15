@@ -2678,9 +2678,9 @@ XF86Config or xorg.conf file.
 
 The basic usage and options can be viewed by issuing man xsetwacom.
 
-Note: The device identifiers (dev\_name) are case sensitive. You should
-use the dev\_name exactly the same as xsetwacom list shows. The examples
-below assume that Stylus, cursor, and pad are used.
+**Note:** The device identifiers (dev\_name) are case sensitive. You
+should use the dev\_name exactly the same as *xsetwacom list* shows. The
+examples below assume that Stylus, cursor, and pad are used.
 
         [jej@ayukawa linuxwacom]$xsetwacom
         Usage: xsetwacom [options] [command [arguments...]]
@@ -2699,20 +2699,20 @@ below assume that Stylus, cursor, and pad are used.
           get dev_name param [param...] - get current device parameter(s) value by name
           getdefault dev_name param [param...] - get device parameter(s) default value by name
 
-xsetwacom supports 3 forms of get/getdefault commands: xsetwacom get
-returns the parameter's raw value; xsetwacom -x get returns the value in
-Xorg.conf form; and xsetwacom -s get returns the value in shell command
-form.
+xsetwacom supports 3 forms of get/getdefault commands: *xsetwacom get*
+returns the parameter's raw value; *xsetwacom -x get* returns the value
+in Xorg.conf form; and *xsetwacom -s* get returns the value in shell
+command form.
 
-The most used xsetwacom command is xsetwacom set dev\_name param
-\[values...\], where param is an option which will be set to values in
-wacom\_drv.o after excuting xsetwacom. To better understand the use of
-this command, let's see some examples. Assume that you use Stylus as
+The most used xsetwacom command is *xsetwacom set dev\_name param
+\[values...\]*, where param is an option which will be set to values in
+wacom\_drv.o after executing xsetwacom. To better understand the use of
+this command, let's see some examples. Assume that you use *Stylus* as
 your Wacom tool's Identifier, which is considered as dev\_name in
 xsetwacom command.
 
-If you want to change Stylus's mode from absolute (default) to relative,
-then:
+If you want to change *Stylus's* mode from absolute (default) to
+relative, then:
 
         [jej@ayukawa linuxwacom]$xsetwacom set Stylus mode relative
 
@@ -2751,20 +2751,21 @@ event only when button1 (the tip) is pressed, then:
 
         [jej@ayukawa linuxwacom]$xsetwacom set Stylus TPCButton on
 
-If you want to change pad's button 1 to ctrl alt F2, then:
+If you want to change *pad's* button 1 to ctrl alt F2, then:
 
         [jej@ayukawa linuxwacom]$xsetwacom set pad Button1 "core key ctrl alt F2"
 
-If you want to change pad's button 2 to ctrl alt backspace, then:
+If you want to change *pad's* button 2 to ctrl alt backspace, then:
 
         [jej@ayukawa linuxwacom]$xsetwacom set pad Button2 "core key ctrl alt backspace"
 
-Note: keystrokes and modifiers are only supported for Xorg 6.8 or later.
+<span style="background:#00ffff">**Note:** keystrokes and modifiers are
+only supported for Xorg 6.8 or later.</span>
 
-xsetwacom supported parameters
+**xsetwacom supported parameters**
 
 Below is a list of the parameters and their values used by xsetwacom
-command (a similar output can be viewed by xsetwacom list param. All
+command (a similar output can be viewed by *xsetwacom list param*. All
 functions apply to the associated tool unless explicitly stated
 otherwise):
 
@@ -2830,7 +2831,7 @@ otherwise):
       MODIFIERS: use "xsetwacom list mod" to see a list of modifiers and specific keys
       CODE: Button number if emit a button event or specific keys and any other keys not listed as mod
 
-Associating parameters to physical devices
+**Associating parameters to physical devices**
 
 Following is a list of the parameters that are associated with the
 elements of devcies.
@@ -2848,7 +2849,7 @@ elements of devcies.
         StripRUp/StripRUp   Right Touch Strip on Intuos3 and V5 Cintiq (Cintiq 21UX/12WX/20WSX) tablets
         --------------------------------------------------------------------------
 
-Automatically excuting predefined xsetwacom commands at logging in
+**Automatically excuting predefined xsetwacom commands at logging in**
 
 The xsetwacom commands can be added to the .xinitrc under your home
 directory so next time when you login as yourself, the driver will be
@@ -2865,19 +2866,24 @@ Below is an example of my .xinitrc:
         # run the primary system script
         . /etc/X11/xinit/xinitrc
 
-To see what's under your home directory, use ls -al ~.
+To see what's under your home directory, use *ls -al ~*.
 
-If your system doesn't execute .xinitrc at login, you can add those
-xsetwacom commands into the startup script (.bashrc, .cshrc, .profile,
-etc.) that your system launches, for example, you should use .Xsession
-instead of .xinitrc on Debian.
+  
+<span style="background:#00ffff">If your system doesn't execute .xinitrc
+at login, you can add those xsetwacom commands into the startup script
+(.bashrc, .cshrc, .profile, etc.) that your system launches, for
+example, you should use .Xsession instead of .xinitrc on Debian.</span>
 
-It has been reported that xsetwacom can not run on some older systems
-due to a XFree86 interface error. A generic solution to this issue is
-directly adding your configuration options to the /etc/X11/XF86Config
-file. Please refer to Configuring X11 for details.
+<!-- -->
 
-More examples
+  
+<span style="background:#00ffff">It has been reported that xsetwacom can
+not run on some older systems due to a XFree86 interface error. A
+generic solution to this issue is directly adding your configuration
+options to the /etc/X11/XF86Config file. Please refer to Configuring X11
+for details.</span>
+
+**More examples**
 
 If you are confused with the usages above, let's see some more confusing
 examples.
@@ -2889,31 +2895,31 @@ wheels, Touch Strips, and Touch Ring. A list of supported modifiers and
 special keys can be viewed through xsetwacom list mod. Special keys are
 symbols that go together to represent one XInput key event.
 
-In the following example, Up represents the up arrow key:
+In the following example, **Up** represents the **up arrow** key:
 
         [jej@ayukawa jej]$ xsetwacom set cursor button4 "key core Up"   
 
-When you press button4 on your Wacom puck, Xinput will receive an up
-arrow event.
+When you press button4 on your Wacom puck, Xinput will receive an **up
+arrow** event.
 
-If you want to send the Up keystroke, the universal escape character \\
-has to be used:
+If you want to send the **Up** keystroke, the universal escape character
+\\ has to be used:
 
         [jej@ayukawa jej]$ xsetwacom set cursor button4 "key core \Up"   
 
-If you press button4 on your Wacom puck, Xinput will receive an U and a
-p events, i.e., Up would be displayed on your active console or
-application.
+If you press button4 on your Wacom puck, Xinput will receive an **U**
+and a **p** events, i.e., **Up** would be displayed on your active
+console or application.
 
-Sending down arrow event when button5 is pressed:
+Sending **down arrow** event when button5 is pressed:
 
         [jej@ayukawa jej]$ xsetwacom set cursor button5 "key core Down"  
 
-Sending PageUp event when tablet wheel scrolls up:
+Sending **PageUp** event when tablet wheel scrolls up:
 
         [jej@ayukawa jej]$ xsetwacom set pad RelWUp "key core pgup"   
 
-Sending PageDown event when tablet wheel scrolls down:
+Sending **PageDown** event when tablet wheel scrolls down:
 
         [jej@ayukawa jej]$ xsetwacom set pad RelWDn "key core pgdn"   
 
@@ -2947,7 +2953,7 @@ the corresponding get command. For example:
                 Option  "TwinView"      "none"
         [jej@ayukawa jej]$ 
 
-which means device cursor was not set to TwinView display.
+which means device **cursor** was not set to TwinView display.
 
 Two other parameters, TVResolution0 and TVResolution1, made the change
 of MetaModes option in TwinView setup possible when system is running.
