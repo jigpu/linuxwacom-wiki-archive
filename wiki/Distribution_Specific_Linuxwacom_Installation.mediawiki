@@ -240,14 +240,13 @@ If some dependencies aren't resolved, the configure step will not be completed s
 5. Reboot the workstation
 
 == Building wacom driver On Suse 9.2 ==
-Nico Kadel-Garcia has provided a changed SPEC file for SuSE 9.2. You can download the spec here.
+Nico Kadel-Garcia has provided a changed SPEC file for SuSE 9.2. You can download the spec [https://sourceforge.net/tracker/index.php?func=detail&aid=1117278&group_id=69596&atid=525124 here].
 
 "There are only a few needed changes: use the new
 software, throw out an old patch, teach it to use the right 
 options for x86_64 compilation, and stop it from
 generating symlinks into /usr/include/X11 at compilation
-time, and it's done. ". Nico said on Mar 21 2005.
-
+time, and it's done." Nico said on Mar 21 2005.
 
 == Building wacom driver On Ubuntu 9.04 64-bit system ==
 The steps on this page are taken from the following posts:-
