@@ -3450,7 +3450,7 @@ Then I run configure with option --with-tcl=/usr/local/ActiveTcl:
                 wacom_drv.o - no
         ----------------------------------------
 
-Note: You may need to issue the following commands before running
+**Note:** You may need to issue the following commands before running
 wacomcpl:
 
         [jej@ayukawa linuxwacom]$export LD_LIBRARY_PATH=/usr/local/ActiveTcl/lib:$LD_LIBRARY_PATH
@@ -3472,9 +3472,9 @@ configuration and setup commands will be:
         [jej@ayukawa lib]#cd /usr/local/tk8.4/lib
         [jej@ayukawa lib]#ln -s libtk.8.4.so libtk.so.0
 
-Next, run make. The output will be stored in the linuxwacom package's
+Next, run *make*. The output will be stored in the linuxwacom package's
 src/wacomxi and src/wacomxi/.libs directories. They will be installed by
-running make install (you need to switch to superuser to run this
+running *make install* (you need to switch to superuser to run this
 command).
 
 ### Building wacom\_drv.o from Scratch
