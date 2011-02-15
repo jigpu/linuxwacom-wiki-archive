@@ -2888,27 +2888,28 @@ If your tcl and tk are installed on different paths, you'll need to specify them
 Next, run ''make''. The output will be stored in the linuxwacom package's src/wacomxi and src/wacomxi/.libs directories. They will be installed by running ''make install'' (you need to switch to superuser to run this command).
 
 ===  Building wacom_drv.o from Scratch ===
-Introduction
+'''Introduction'''
 
 I should tell you out-right that this is a time consuming process.
 
 Why would you want to do this? Two reasons. One, you are a developer and need to make changes to the source code directly. Two, your distribution uses c libraries or configuration options that are not compatible with the wacom_drv.o file that I provide. People running libc5 for instance, would need to build their own driver.
 
-    Timothy Klein has submitted a brief howto for compiling on Debian Stable which is still running XFree86 4.1 as of this writing. It covers steps one through four of this document, and a savvy developer should be able to figure out step five on his own. If someone solves step five and generates a patch to Makefile.am, I'll see what I can do about getting it into the configuration script. That document is on the Installing wacom driver On Debian page. 
+:<span style="background:#00ffff">Timothy Klein has submitted a brief howto for compiling on Debian Stable which is still running XFree86 4.1 as of this writing. It covers steps one through four of this document, and a savvy developer should be able to figure out step five on his own. If someone solves step five and generates a patch to Makefile.am, I'll see what I can do about getting it into the configuration script. That document is on the [[Distribution Specific Linuxwacom Installation#Installing wacom driver On Debian page|'''Installing wacom driver On Debian page''']]. 
 
 You will need the X source code to rebuild the wacom_drv.o driver. The build configuration for X generates a number of header files that are necessary but not installed by default on most distributions. Consequently, you will need to not only get the source, but build it, practically in its entirety. Then, after all that, the configure script can be instructed to hook into the X build tree and rebuild wacom_drv.o at any time without having to rebuild X again.
 
 Since I am running Redhat 8.0 and cannot really pull down the original XFree86 4.2.0 source code, compile it, and expect it to work on my system, I need to instead use the source RPM provided by Redhat. If you choose to go this route, I provide pretty detailed instructions for making this work. If your distribution works differently, or you are using Gentoo where most everything is source code by default, you'll need to handle this as best as possible according to your particular situation.
 
-Step One: Get The Source
+'''Step One: Get The Source'''
 
-On Redhat 8.0, I discovered the version number for my currently installed XFree86 packages by running rpm -q XFree86. This reported version 4.2.0-72, therefore the source package is XFree86-4.2.0-72.src.rpm. I downloaded the package from Redhat directly and installed it to the system as follows:
+On Redhat 8.0, I discovered the version number for my currently installed XFree86 packages by running ''rpm -q XFree86''. This reported version 4.2.0-72, therefore the source package is XFree86-4.2.0-72.src.rpm. I downloaded the package from Redhat directly and installed it to the system as follows:
 <pre>
     [root@sen src]# rpm -ivh XFree86-4.2.0-72.src.rpm
        1:XFree86                ########################################### [100%]
 </pre>
 This installs a number of files to the /usr/src/redhat directory, particularly in the SOURCES and SPECS subdirectories. Other distributions undoubtedly install elsewhere. Look for the XFree86.spec file which should be located in the SPECS directory. This file contains all the information necessary to patch the orginal XFree86-4.2.0 source code to the level that Redhat is distributing in their regular binary package. The source code and patch files are located in SOURCES.
-Step Two: Build the Source
+
+'''Step Two: Build the Source'''
 
 This step describes how to build the source from the RPM itself. If you are building from some other mechanism, I honestly cannot offer much assistance since I generally don't build my X system from scratch. If you'd like to write up a short section on building the server for your particular distribution, I would be happy to include it here.
 
@@ -2917,12 +2918,13 @@ Next, you don't actually have to build the entire thing. The point at which the 
     [root@sen root]# cd /usr/src/redhat
     [root@sen redhat]# rpmbuild -bc SPECS/XFree86.spec
 </pre>
-Not every distribution has rpmbuild; try using just rpm instead. At some point, Redhat split the build functionality into separate programs. If after looking through the rpm man page, you still cannot get this to work, send me some email, and I'll look into it.
+Not every distribution has ''rpmbuild''; try using just ''rpm'' instead. At some point, Redhat split the build functionality into separate programs. If after looking through the ''rpm man'' page, you still cannot get this to work, send me some email, and I'll look into it.
 
-The important item is the "-bc" option of rpmbuild which unpacks, patches, and builds the source without actually installing. While it is also possible to simply unpack and patch using the "-bp" option, there does not seem to be a way to just build. The "-bc" option simply deletes all the files provided by "-bp" and recreates them again. The downside of this is that if you wanted to simply unpack, patch, and then copy the new xf86Wacom.c file over the old one, you'll find that the build step deletes it and starts over again. I have gotten this to work by creating a new patch file, but this requires a bit more effort, so I don't recommend it right off.
-Step Three: Build the Original Driver
+The important item is the "-bc" option of ''rpmbuild'' which unpacks, patches, and builds the source without actually installing. While it is also possible to simply unpack and patch using the "-bp" option, there does not seem to be a way to just build. The "-bc" option simply deletes all the files provided by "-bp" and recreates them again. The downside of this is that if you wanted to simply unpack, patch, and then copy the new xf86Wacom.c file over the old one, you'll find that the build step deletes it and starts over again. I have gotten this to work by creating a new patch file, but this requires a bit more effort, so I don't recommend it right off.
 
-The xf86Wacom.c file is buried pretty deep in the X build tree. If it is in a different location than the one I have provided below, try using find . -name xf86Wacom.c from the BUILD directory.
+'''Step Three: Build the Original Driver'''
+
+The xf86Wacom.c file is buried pretty deep in the X build tree. If it is in a different location than the one I have provided below, try using find . ''-name xf86Wacom.c'' from the BUILD directory.
 <pre>
     [root@sen redhat]# cd BUILD/XFree86-4.2.0/xc/programs/Xserver/hw/xfree86/input/wacom
     [root@sen wacom]# ls
@@ -2936,7 +2938,8 @@ The "a25-update" file is the original xf86Wacom.c file before Redhat's patch. If
     gcc -O2 -march=i386 ... -c xf86Wacom.c
     ld -r xf86Wacom.o -o wacom_drv.o
 </pre>
-Step Four: Automating the Build Process
+
+'''Step Four: Automating the Build Process'''
 
 By configuring the package with the --with-xf86 option set to the XFree86 build tree, you can build the driver outside of the X build tree.
 <pre>
@@ -2975,7 +2978,7 @@ The makefile rule which builds the driver is contained within src/Makefile.am an
                     -DNARROWPROTO -DIN_MODULE -DXFree86Module -DLINUX_INPUT \
                     -o xf86Wacom.o -c xf86Wacom.c
 </pre>
-    similar rules apply to wcmSerial.c, wcmUSB.c, wcmISDV4.c, wcmCommon.c, wcmCompat.c, wcmConfig.c, and, wcmFilter.c. 
+<span style="background:#00ffff">Similar rules apply to wcmSerial.c, wcmUSB.c, wcmISDV4.c, wcmCommon.c, wcmCompat.c, wcmConfig.c, and, wcmFilter.c.</span>
 
 The options and directories specified come directly from the output of the make command in the previous step. All the root and parent directories have been replaced with the macro XF86_DIR which in this case is set by the configuration script to /usr/src/redhat/BUILD/XFree86-4.2.0/xc. If the options that you see in your build are identical to those above, then the default rule will work for you now. If not, you'll need to make some alterations. You can update the Makefile.am file and rerun automake, update the Makefile.in and rerun configure, or just update the Makefile directly.
 
