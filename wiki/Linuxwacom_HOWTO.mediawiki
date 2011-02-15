@@ -1836,7 +1836,7 @@ Lastly, if you would like more logging, the parameter "DebugLevel" (for individu
 If X server failed to start and you are running the prebuilt wacom_drv.(s)o, you may have to go back to [[Linuxwacom HOWTO#Configuring the Package|Configuring the Package]] page to build the driver on your system.
 
 === Check the Pointer Status ===
-You can check the XInput pointer status by using xsetpointer as below. The man page states that calling xsetpointer with the name of a particular device will set it as the primary pointing device.
+You can check the XInput pointer status by using ''xsetpointer'' as below. The man page states that calling xsetpointer with the name of a particular device will set it as the primary pointing device.
 <pre>
     [root@ayukawa log]# xsetpointer -l
     "eraser"        [XExtensionDevice]

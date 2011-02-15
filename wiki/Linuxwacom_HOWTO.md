@@ -2193,7 +2193,7 @@ build the driver on your system.
 
 ### Check the Pointer Status
 
-You can check the XInput pointer status by using xsetpointer as below.
+You can check the XInput pointer status by using *xsetpointer* as below.
 The man page states that calling xsetpointer with the name of a
 particular device will set it as the primary pointing device.
 
