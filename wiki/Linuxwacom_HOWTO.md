@@ -6,8 +6,6 @@ tags:
  - Linuxwacom
 ---
 
-**Import in Progress**
-
 <center>
 Copyright (C) 2002-2011 - LinuxWacom
 
