@@ -3242,7 +3242,7 @@ directory. It is installed by running *make install*.
 
 ### Building xsetwacom
 
-Building xsetwacom
+**Building xsetwacom**
 
 xsetwacom uses libwacomcfg.so to communicate with Wacom X (XFree86 or
 Xorg) driver, wacom\_drv.(s)o. So, libwacomcfg.so should be built and
@@ -3252,7 +3252,7 @@ libwacomcfg.so relies on Xlib. In the configure script, it will default
 the Xlib path to /usr/X11R6 or /usr/lib (/usr/X11R6/lib64 or /usr/lib64
 if --enable-xserver64 option is set) by checking the existence of
 xf86Version.h. If your Xlib is not installed under /usr/X11R6 or
-/usr/lib, you'll need to specify the path (dir) by --with-xlib=dir.
+/usr/lib, you'll need to specify the path (dir) by *--with-xlib=dir*.
 Let's see what we get from configure:
 
         [jej@ayukawa linuxwacom]$./configure
@@ -3292,12 +3292,12 @@ xsetwacom will be built. If not, then scroll back through the
 configuration to see if there are any errors or warnings that would
 explain the issue.
 
-Next, run make. The output will be stored in the linuxwacom package's
+Next, run *make*. The output will be stored in the linuxwacom package's
 src/util and src/util/.libs directory. They will be installed by running
-make install (you need to switch to superuser to run this command).
+*make install* (you need to switch to superuser to run this command).
 
 If wacom\_drv.(s)o was running while installing xsetwacom, xsetwacom can
-be launched immediately after make install and exit.
+be launched immediately after *make install* and *exit*.
 
 If wacom\_drv.o is installed by the same make install as xsetwacom is,
 restarting X server is required to use the newly built wacom\_drv.(s)o.
