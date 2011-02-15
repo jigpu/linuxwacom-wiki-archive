@@ -2636,31 +2636,37 @@ directory, will be updated locally each time you run wacomcpl. The
 wacomcpl for your next login. The goal is to give each user a chance to
 use his/her own preference on a shared system.
 
-If you want all users on one system to share some settings, you can copy
-those lines started with xsetwacom in ~/.xinitrc (or ~/.xsession) to
-/etc/X11/xinit/xinitrc (/etc/X11/xinit/Xsession).
+<span style="background:#00ffff">If you want all users on one system to
+share some settings, you can copy those lines started with xsetwacom in
+~/.xinitrc (or ~/.xsession) to /etc/X11/xinit/xinitrc
+(/etc/X11/xinit/Xsession).</span>
 
-If your system doesn't execute .xinitrc (or .xsession) at login, each
-time after exiting from wacomcpl, you will need to copy those xsetwacom
-lines in .xinitrc (or .xsession) to a startup script (.bashrc, .cshrc,
-.profile, etc.) that your system launches. You can also modify
-wacomcpl-exec to automate this step.
+  
+<span style="background:#00ffff">If your system doesn't execute .xinitrc
+(or .xsession) at login, each time after exiting from wacomcpl, you will
+need to copy those xsetwacom lines in .xinitrc (or .xsession) to a
+startup script (.bashrc, .cshrc, .profile, etc.) that your system
+launches. You can also modify wacomcpl-exec to automate this
+step.</span>
 
-However, it is reported that there are older systems on which can not
-run wacomcpl due to some XFree86 interface error. The workaround is to
-add the configuration options to your X config file, refer to
-Configuring X11 page for details.
+<!-- -->
 
-Running wacomcpl
+  
+<span style="background:#00ffff">However, it is reported that there are
+older systems on which can not run wacomcpl due to some XFree86
+interface error. The workaround is to add the configuration options to
+your X config file, refer to Configuring X11 page for details.</span>
+
+**Running wacomcpl**
 
 If wacom\_drv.(s)o was running while installing wacomcpl, wacomcpl can
-be launched immediately after make install and exit.
+be launched immediately after *make install* and *exit*.
 
-If wacom\_drv.(s)o is installed by the same make install as wacomcpl is,
-restarting X server is required to use the newly built wacom\_drv.(s)o.
-We strongly recommand to build and install the wacom\_drv.(s)o and
-wacomcpl from the same release package since the out of sync
-wacom\_drv.(s)o and wacomcpl may crash your X server.
+If wacom\_drv.(s)o is installed by the same *make install* as wacomcpl
+is, restarting X server is required to use the newly built
+wacom\_drv.(s)o. We strongly recommand to build and install the
+wacom\_drv.(s)o and wacomcpl from the same release package since the out
+of sync wacom\_drv.(s)o and wacomcpl may crash your X server.
 
 Command Line Configuration Interface (xsetwacom)
 ------------------------------------------------
