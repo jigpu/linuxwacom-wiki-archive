@@ -2215,14 +2215,14 @@ some luck, you may make it work on a server newer than 1.4.
 
 This may lead you think that hotplugging is a pure Xorg feature. No, it
 is not. It requires HAL (Hardware Abstraction Layer) daemon (for Xorg
-servers 1.8 and older?) or the udev-hotplug subsystem (for Xorg servers
-1.9 and later) being installed.
+servers 1.7 and older) or the udev-hotplug subsystem (for Xorg servers
+1.8 and later) being installed.
 
 To hotplug a Wacom device, you need to install an extra script,
 wacom.fdi, on your system. On most distros, the file should have been
 pre-installed for you:
 
-On Xorg servers older than 1.7
+**On Xorg servers older than 1.7**
 
         <?xml version="1.0" encoding="ISO-8859-1" ?>
         <!-- this is probably a bit imprecise -->
@@ -2273,7 +2273,7 @@ On Xorg servers older than 1.7
           </device>
         </deviceinfo>
 
-On Xorg servers 1.7 and later
+**On Xorg servers 1.7**
 
         <?xml version="1.0" encoding="ISO-8859-1" ?>
         <!-- this is probably a bit imprecise -->
@@ -2295,41 +2295,37 @@ On Xorg servers 1.7 and later
           </device>
         </deviceinfo>
 
-Note: If a Wacom device is defined in /etc/X11/xorg.conf, the same Wacom
-device that is also defined in the wacom.fdi will be ignored.
+**Note:** If a Wacom device is defined in /etc/X11/xorg.conf, the same
+Wacom device that is also defined in the wacom.fdi will be ignored.
 
-If you are running an Xorg server older than 1.4 or even an XFree86
+If you are running an **Xorg server older than 1.4** or even an XFree86
 server, you can try the following workaround to bring the device live
 without restarting your X server or the whole system:
 
-Switch virtual terminal from your current disply to another one then
-back. The following method works on most distros:
+    Switch virtual terminal from your current disply to another one then back. The following method works on most distros:
 
-pressing "Ctrl Alt F1", all three keys, the same time, then "Ctrl Alt
-F7".
+    pressing "Ctrl Alt F1", all three keys, the same time, then "Ctrl Alt F7".
 
-Edgar Fehlinger and Lars Michelsen have provided a solution on RHEL 5.3.
-We are very grateful that they have gave us the permission to share it
-here:
+    Edgar Fehlinger and Lars Michelsen have provided a solution on RHEL 5.3. We are very grateful that they have gave us the permission to share it here:
 
-`   First we had to add the following lines to the Xorg.conf ServerLayout section:`
+        First we had to add the following lines to the Xorg.conf ServerLayout section:
 
          Option "AutoAddDevices" "on"
          Option "AutoEnableDevices" "on"
          Option "AllowEmptyInput" "on"
 
-`   After restarting the X server the following procedure brought the display back again:`
+        After restarting the X server the following procedure brought the display back again:
 
-`    - Turn off display`  
-`    - Turn on display`  
-`    - Switch virtual terminal to 1 and back (CTRL+ALT+1 and then CTRL+ALT+2`  
-`    while the virtual terminal 2 has the X server running)`
+         - Turn off display
+         - Turn on display
+         - Switch virtual terminal to 1 and back (CTRL+ALT+1 and then CTRL+ALT+2
+         while the virtual terminal 2 has the X server running)
 
-`   After switching the terminals, the display can be used as usual.`
+        After switching the terminals, the display can be used as usual.
 
-`   Having this working we added the virtual terminal switch to udev `  
-`   /etc/udev/rules.d/60-wacom.rules to perform it automatically everytime the display `  
-`   is switched on:`
+        Having this working we added the virtual terminal switch to udev 
+        /etc/udev/rules.d/60-wacom.rules to perform it automatically everytime the display 
+        is switched on:
 
          --------------------------------------------------------------------------------
          # First set type
@@ -2339,10 +2335,10 @@ here:
          BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a",
          ENV{WACOM_TYPE}!="touch", RUN+="/usr/bin/wacom-display-recalibrate"
          --------------------------------------------------------------------------------
-    <pre>
+
         And this is the /usr/bin/wacom-display-recalibrate script which only runs the vt 
         toggle when the currently active vt is the number 2.
-    <pre>
+
          --------------------------------------------------------------------------------
          #!/bin/bash
          # +------------------------------------------------------------------+
@@ -2379,12 +2375,13 @@ here:
          fi
          --------------------------------------------------------------------------------
 
-RHEL 4.6+ and 5.1+ have included a workaround, called wdaemon
-(http://jake.ruivo.org/~aris/wdaemon). However, it doesn't work out of
-the box. You need to configure the daemon and turn it on to make it
-work. Please follow the guideline provided by Aristeu Rozanski, the
-author of the daemon, at
-<http://jake.ruivo.org/~aris/wdaemon/README.txt> for details.
+  
+<span style="background:#00ffff">**RHEL 4.6+ and 5.1+** have included a
+workaround, called wdaemon (http://jake.ruivo.org/~aris/wdaemon).
+However, it doesn't work out of the box. You need to configure the
+daemon and turn it on to make it work. Please follow the guideline
+provided by Aristeu Rozanski, the author of the daemon, at
+<http://jake.ruivo.org/~aris/wdaemon/README.txt> for details.</span>
 
 Viewing XInput Events (xidump)
 ------------------------------
