@@ -2006,7 +2006,7 @@ Edgar Fehlinger and Lars Michelsen have provided a solution on RHEL 5.3. We are 
      --------------------------------------------------------------------------------
 </pre>
 
-:<span style="background:#00ffff">'''RHEL 4.6+ and 5.1+''' have included a workaround, called wdaemon (http://jake.ruivo.org/~aris/wdaemon). However, it doesn't work out of the box. You need to configure the daemon and turn it on to make it work. Please follow the guideline provided by Aristeu Rozanski, the author of the daemon, at http://jake.ruivo.org/~aris/wdaemon/README.txt for details.</span>
+:<span style="background:#00ffff">'''RHEL 4.6+ and 5.1+''' have included a workaround, called [http://jake.ruivo.org/~aris/wdaemon '''wdaemon''']. However, it doesn't work out of the box. You need to configure the daemon and turn it on to make it work. Please follow the guideline provided by Aristeu Rozanski, the author of the daemon, at [http://jake.ruivo.org/~aris/wdaemon/README.txt '''README.txt'''] for details.</span>
 
 == Viewing XInput Events (xidump) ==
 The xidump program is similar to wacdump, but it parses and displays event data from the XFree86 XInput extension rather than from the tablet itself. This is useful for seeing what programs like gimp and gsumi are receiving from X.
