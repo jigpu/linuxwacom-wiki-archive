@@ -31,8 +31,8 @@ Installing from the tarball
 In the following, you need to replace the version number with the one
 from your downloaded tarball.
 
-    tar xjvf input-wacom-0.10.10-1.tar.bz2
-    cd input-wacom-0.10.10-1
+    tar xjvf input-wacom-0.10.10-2.tar.bz2
+    cd input-wacom-0.10.10-2
     ./autogen.sh --prefix=/usr
 
 The prefix of /usr is correct on most distributions (unfortunately, the

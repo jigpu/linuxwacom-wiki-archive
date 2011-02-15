@@ -9,8 +9,8 @@ Please download the latest release from the [https://sourceforge.net/projects/li
 == Installing from the tarball ==
 In the following, you need to replace the version number with the one from your downloaded tarball.
 <pre>
-tar xjvf input-wacom-0.10.10-1.tar.bz2
-cd input-wacom-0.10.10-1
+tar xjvf input-wacom-0.10.10-2.tar.bz2
+cd input-wacom-0.10.10-2
 ./autogen.sh --prefix=/usr
 </pre>
 The prefix of /usr is correct on most distributions (unfortunately, the default is still /usr/local which isn't used widely anymore).  If you're on a 64-bit machine, you may also need to add --libdir=/usr/lib64.  If unsure, search for evdev_drv.so.  If it is in /usr/lib/xorg/modules/input, then the prefix of /usr is enough.  If it is in /usr/lib64/xorg/modules/input, even if it is in /usr/lib/xorg/modules/input, then you need to specify --libdir=/usr/lib64.
