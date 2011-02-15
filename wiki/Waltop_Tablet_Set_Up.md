@@ -88,7 +88,8 @@ a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).
 However since **wacomcpl** stored its settings as a
 [xsetwacom](xsetwacom "wikilink") script in **.xinitrc** we can at least
 duplicate the .xinitrc, calling it say **.xsetwacom.sh**. Below is a
-sample script for your stylus.
+sample script for your stylus. **This is a temporary hack** while we
+wait on a replacement for wacomcpl.
 
 While doing things this way may seem a little strange at first you'll
 find yourself quickly adapting. And this allows you some of the finer
@@ -123,6 +124,13 @@ Once the script is executable you can double click on it to apply it's
 settings or reboot to check the auto-start set up.
 
 ### The Sample Waltop Xsetwacom Script
+
+The following script was authored by Favux and developed with
+stefan-koch as cited in the script. All of the values are the defaults
+with the default stated and the appropriate range given. The script is
+intended to provide you with a framework to configure your settings in a
+text file rather than at at the command line, with similar results to
+what the wacomcpl gui would have produced.
 
 In the example script below both "Device name" and ID \# are used. Be
 sure to check for yours using 'xinput list' (without the quotes) in a
