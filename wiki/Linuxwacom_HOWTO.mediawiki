@@ -3009,7 +3009,7 @@ The problem lies in the step that when unplugging tablet cable while the laptop 
     THEN you cannot recover the tablet functionalities after resuming the
     laptop and replugging the tablet, even if you replug the tablet before 
     resuming the laptop.
-
+</pre>
     Therefore, old airline operations apply: Extinguish LEDs before take-off!
 
     -Thomas
