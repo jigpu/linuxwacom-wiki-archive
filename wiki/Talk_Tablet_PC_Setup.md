@@ -4,13 +4,16 @@ permalink: wiki/Talk:Tablet_PC_Setup/
 layout: wiki
 ---
 
-Why do we have Tablet PC Configuration and Tablet PC Setup? The thought
-was that if you did not decide to delete the script pages I would add
-the individual models to Tablet PC Setup and link them to their sections
-of Tablet PC Configuration. They could be merged but I felt that would
-make Tablet PC Setup unwieldy. Same applies to Wacom Tablet. Waltop is
-the exception because there isn't much variability between models that I
-can see.
+Why do we have Tablet PC Configuration and Tablet PC Setup?
+
+The thought was that if you did not decide to delete the script pages I
+would add the individual models to Tablet PC Setup and link them to
+their sections of Tablet PC Configuration. They could be merged but I
+felt that would make Tablet PC Setup unwieldy. Same applies to Wacom
+Tablet. Waltop is the exception because there isn't much variability
+between models that I can see.
+
+Why is this not part of the Rotation page?
 
 Re: the tablet pc auto-rotation script. It's a case of general
 applicability. The xrandr match line in the tablet pc rotation script
