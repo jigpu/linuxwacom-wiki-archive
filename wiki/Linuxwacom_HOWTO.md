@@ -489,9 +489,9 @@ For 2.6.16 and 2.6.17 kernels, you need to configure the kernel modules
 linuxwacom.
 
 <span style="background:#00ffff">Note, for kernel 2.6.18 and later, no
-need to build hid any more. Refer to [Testing Tablet
-Detection](/wiki/Linuxwacom_HOWTO#Testing_Tablet_Detection "wikilink") to see
-if you need to build hid or not.</span>
+need to build hid any more. Refer to [**Testing Tablet
+Detection**](/wiki/Linuxwacom_HOWTO#Testing_Tablet_Detection "wikilink") to
+see if you need to build hid or not.</span>
 
 **Module Versioning - USB Only**
 
