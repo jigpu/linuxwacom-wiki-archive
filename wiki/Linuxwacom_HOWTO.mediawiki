@@ -2015,7 +2015,7 @@ Presently, xidump will display proximity and motion events for the stylus, curso
 
 Since xidump uses the same XInput interface that gimp and gsumi use to get tablet data, the values displayed in xidump should be identical to what they are receiving. If you are having trouble with pressure in gimp, chances are that xidump will demonstrate the same problem. xidump does not require root access to use.
 
-Running xidump
+'''Running xidump'''
 
 xidump takes one argument, the input device specified in your XF86Config/xorg.conf file. It is the Identifier entry in the InputDevice section. Normally they are either stylus, cursor, eraser, touch, or pad. You can get a complete list by running xidump with the list option '-l'. xidump has the additional feature of dumping all the device capabilities by specifying the verbose option '-v'. Both are demonstrated below.
 

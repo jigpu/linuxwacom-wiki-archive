@@ -2406,7 +2406,7 @@ what they are receiving. If you are having trouble with pressure in
 gimp, chances are that xidump will demonstrate the same problem. xidump
 does not require root access to use.
 
-Running xidump
+**Running xidump**
 
 xidump takes one argument, the input device specified in your
 XF86Config/xorg.conf file. It is the Identifier entry in the InputDevice
