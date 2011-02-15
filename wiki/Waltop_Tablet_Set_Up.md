@@ -132,10 +132,10 @@ intended to provide you with a framework to configure your settings in a
 text file rather than at at the command line, with similar results to
 what the wacomcpl gui would have produced.
 
-In the example script below both "Device name" and ID \# are used. Be
+In the example script below both "device name" and ID \# are used. Be
 sure to check for yours using 'xinput list' (without the quotes) in a
 terminal and use them. If you are hot plugging your tablet or other
-devices be sure to use "Device name" as the ID \# can change.
+devices be sure to use "device name" as the ID \# can change.
 
     ## Device names and ID numbers from 'xinput list' entered in a terminal.
     #
