@@ -36,3 +36,250 @@ message".
 
 Note: if the driver was built with *--disable-debug*, no debug messages
 can be printed.
+
+Using gdb
+=========
+
+In most cases, [gdb](http://www.gnu.org/software/gdb/) is the fastest
+and most comprehensive way to find an issue with the driver. The
+learning curve of getting to know gdb quickly pays off. However, because
+X is a windowing system **you need two machines to debug the driver**.
+Otherwise, whenever you halt the driver, you also halt the X server and
+thus lose control over any windows. The second machine doesn't need to
+be fancy, you just need it to ssh into the machine running the driver.
+In all the commands below, it is assumed that you are executing them
+from a separate machine, ssh'd into the first machine. Also, you need
+root/sudo rights to debug with gdb as the X server runs as root.
+
+This is not an exhaustive list of gdb commands but merely an overview of
+the basic commands needed to get information from the driver. Do spend
+the time to learn gdb, it pays off.
+
+Requirements
+------------
+
+The driver must be built with debugging symbols enabled. Make sure you
+have **-ggdb -O0** in your *CFLAGS* at configure time. If you are
+running the distribution-provided driver, install the debuginfo packages
+provided by your distribution.
+
+Attaching to a running process
+------------------------------
+
+In most cases, you will need to attach to the running X server. This can
+be done by providing the binary and the process ID (pid) of the X server
+to gdb. The binary is usually */usr/bin/Xorg*, the process ID can be
+found with *pidof Xorg* (or *pidof X* on some distributions).
+Alternatively, you can use the *ps* command. The example below uses the
+shorthand notation to get the pid and pass it to gdb.
+
+**Warning: use ssh! Do not do try to attach to the running X server from
+within the same server!**
+
+    $> sudo gdb /usr/bin/Xorg `pidof Xorg`
+    GNU gdb (GDB) Fedora (7.2-38.fc14)
+    Copyright (C) 2010 Free Software Foundation, Inc.
+    License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+    This is free software: you are free to change and redistribute it.
+    There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+    and "show warranty" for details.
+    This GDB was configured as "x86_64-redhat-linux-gnu".
+    For bug reporting instructions, please see:
+    <http://www.gnu.org/software/gdb/bugs/>...
+    Reading symbols from /usr/bin/Xorg...done.
+    Attaching to program: /usr/bin/Xorg, process 17306
+    Reading symbols from /lib64/libudev.so.0...(no debugging symbols found)...done.
+    Loaded symbols for /lib64/libudev.so.0
+    Reading symbols from /lib64/libgcrypt.so.11...(no debugging symbols found)...done.
+    Loaded symbols for /lib64/libgcrypt.so.11
+    Reading symbols from /lib64/libdl.so.2...(no debugging symbols found)...done.
+    Loaded symbols for /lib64/libdl.so.2
+    Reading symbols from /opt/xorg/lib/libpciaccess.so.0...done.
+    Loaded symbols for /opt/xorg/lib/libpciaccess.so.0
+    Reading symbols from /opt/xorg/lib/libpixman-1.so.0...done.
+    ...
+    Reading symbols from /opt/xorg/lib/xorg/modules/input/synaptics_drv.so...done.
+    Loaded symbols for /opt/xorg/lib/xorg/modules/input/synaptics_drv.so
+    Reading symbols from /lib64/libnss_files.so.2...(no debugging symbols found)...done.
+    Loaded symbols for /lib64/libnss_files.so.2
+    0x00000032748d9073 in __select_nocancel () from /lib64/libc.so.6
+    Missing separate debuginfos, use: debuginfo-install expat-2.0.1-10.fc13.x86_64 freetype-2.4.2-4.fc14.x86_64 glibc-2.13-1.x86_64 libgcc-4.5.1-4.fc14.x86_64 libgcrypt-1.4.5-4.fc13.x86_64 libgpg-error-1.9-1.fc14.x86_64 libstdc++-4.5.1-4.fc14.x86_64 libtalloc-2.0.1-1.fc13.x86_64 libudev-161-8.fc14.x86_64 zlib-1.2.5-2.fc14.x86_64
+    (gdb)
+
+You are now attached to the running X server, the process is halted and
+gdb awaits further instructions (you'll notice that the X server has
+stopped responding). When you're done with debugging, you simply detach
+from the process and quit gdb.
+
+    (gdb) det
+    Detaching from program: /usr/bin/Xorg, process 17306
+    (gdb) quit
+    $>
+
+Managing the control flow
+-------------------------
+
+To continue the process, type **continue**. If you want to interrupt
+while the server is running, **Ctrl+C** brings you back to the prompt.
+
+    (gdb) continue
+    Continuing.
+    ^C
+    Program received signal SIGINT, Interrupt.
+    0x00000032748d9073 in __select_nocancel () from /lib64/libc.so.6
+    (gdb)
+
+Note that if the server is started through gdb (with the **run**
+command) instead of attached at runtime, Ctrl+C may not work. In this
+case, sending a *SIGINT* to the process interrupts it for you.
+
+    $> sudo kill -SIGNIT `pidof Xorg`
+
+Breakpoints
+-----------
+
+Breakpoints can be set to any function or line in a file. Once set, gdb
+will automatically halt the process and provide you with the prompt
+whenever the control flow reaches a breakpoint.
+
+    (gdb) break wcmEvent
+    Breakpoint 1 at 0x7fcb8fe8c8d8: file ../src/wcmCommon.c, line 828.
+    (gdb) break wcmUSB.c:567
+    Breakpoint 2 at 0x7fcb8fe93382: file ../src/wcmUSB.c, line 567.
+    (gdb) info b
+    Num     Type           Disp Enb Address            What
+    1       breakpoint     keep y   0x00007fcb8fe8c8d8 in wcmEvent at ../src/wcmCommon.c:828
+    2       breakpoint     keep y   0x00007fcb8fe93382 in usbParse at ../src/wcmUSB.c:567
+    (gdb) continue
+    Continuing.
+
+In the example above, we set two breakpoints: one at function
+*wcmEvents()* and one at a specific line in *wcmUsb.c*. Any call to
+*wcmEvent()* will not halt the server and provide you with a prompt.
+
+    Breakpoint 1, wcmEvent (common=0x2946b10, channel=0, pState=0x2946c80) at ../src/wcmCommon.c:828
+    828             int suppress = 0;
+    (gdb) continue 
+
+Conditional breakpoints can be set on any value that is valid at the
+location of the breakpoint. For example, we may want to only stop at
+*wcmEvent()* if the channel is greater than 1.
+
+    (gdb) break wcmEvent if channel > 1
+    Note: breakpoint 1 also set at pc 0x7fcb8fe8c8d8.
+    Breakpoint 3 at 0x7fcb8fe8c8d8: file ../src/wcmCommon.c, line 828.
+    (gdb) disable 1
+    (gdb) continue
+
+Note that the first breakpoint needs to be disabled, otherwise we'd
+still stop at every call to *wcmEvent()*. Disabling a breakpoint simply
+means that gdb will not stop there but continue on until the breakpoint
+is enabled. You can enable it at any time again.
+
+Stepping through the code
+-------------------------
+
+Aside from the **continue** command that you already know, the four
+important commands to step through code are:
+
+-   **next**: execute the current line and stop again at the next one.
+-   **step**: step into the current function (if applicable)
+-   **until**: step until the current block is finished (useful for
+    quickly stepping over loops).
+-   **finish**: continue until the function exists and then stop at the
+    caller
+
+<!-- -->
+
+    Breakpoint 1, wcmEvent (common=0x2946b10, channel=0, pState=0x2946c80) at ../src/wcmCommon.c:828
+    828             int suppress = 0;
+    (gdb) n
+    829             WacomDevicePtr priv = common->wcmDevices;
+    (gdb) 
+    830             pChannel = common->wcmChannel + channel;
+    (gdb) 
+    831             pLast = &pChannel->valid.state;
+    (gdb) 
+    833             DBG(10, common, "channel = %d\n", channel);
+    (gdb) 
+    836             if (channel >= MAX_CHANNELS)
+
+Note that by just hitting enter, gdb will re-execute the previous
+command. Below is an example for stepping into a function.
+
+    Breakpoint 4, usbParseEvent (pInfo=0x2938910, event=0x29487c8) at ../src/wcmUSB.c:715
+    715             WacomDevicePtr priv = (WacomDevicePtr)pInfo->private;
+    (gdb) n
+    716             WacomCommonPtr common = priv->common;
+    (gdb) 
+    717             wcmUSBData* private = common->private;
+    (gdb) 
+    719             DBG(10, common, "\n");
+    (gdb) 
+    726             if (private->wcmEventCnt >= ARRAY_SIZE(private->wcmEvents))
+    (gdb) 
+    735             private->wcmEvents[private->wcmEventCnt++] = *event;
+    (gdb) 
+    737             if (event->type == EV_MSC || event->type == EV_SYN)
+    (gdb) 
+    738                     usbParseSynEvent(pInfo, event);
+    (gdb) s
+    usbParseSynEvent (pInfo=0x2938910, event=0x29487c8) at ../src/wcmUSB.c:750
+    750             WacomDevicePtr priv = (WacomDevicePtr)pInfo->private;
+    (gdb) n
+    751             WacomCommonPtr common = priv->common;
+    (gdb) 
+    752             wcmUSBData* private = common->private;
+
+Printing values and callstack information
+-----------------------------------------
+
+The two important commands here are **backtrace** and
+**print**/**display**. A backtrace will give you a full list of the
+callstack, so you can check how we got to this particular line of the
+code. In the example below, you can see that we got to
+*usbParseSynEvent()* in response to a SIGIO signal handled by the server
+- which then called wacom's read function *wcmDevReadInput()*. You can
+also see the values of various parameters, great for debugging
+segfaults.
+
+    (gdb) backtrace
+    #0  usbParseSynEvent (pInfo=0x2938910, event=0x29487c8) at ../src/wcmUSB.c:801
+    #1  0x00007fcb8fe937c6 in usbParseEvent (pInfo=0x2938910, event=0x29487c8) at ../src/wcmUSB.c:738
+    #2  0x00007fcb8fe93378 in usbParse (pInfo=0x2938910, data=0x29487c8 "`\354YM", len=48) at ../src/wcmUSB.c:565
+    #3  0x00007fcb8fe8a271 in wcmReadPacket (pInfo=0x2938910) at ../src/xf86Wacom.c:812
+    #4  0x00007fcb8fe89f64 in wcmDevReadInput (pInfo=0x2938910) at ../src/xf86Wacom.c:762
+    #5  0x000000000048ab82 in xf86SigioReadInput (fd=15, closure=0x2938910) at xf86Events.c:298
+    #6  0x00000000005936b1 in xf86SIGIO (sig=29) at ./../shared/sigio.c:109
+    #7  <signal handler called>
+    #8  0x00000032748d9073 in __select_nocancel () from /lib64/libc.so.6
+    #9  0x0000000000475138 in WaitForSomething (pClientsReady=0x29c2470) at WaitFor.c:232
+    #10 0x00000000004291f1 in Dispatch () at dispatch.c:367
+    #11 0x00000000004216ab in main (argc=8, argv=0x7fffa07de6d8, envp=0x7fffa07de720) at main.c:287
+
+Now, let's assume we want to know what's actually in pInfo and event. We
+use **print** for that:
+
+    (gdb) p pInfo->name
+    $1 = 0x2939800 "Wacom Intuos4 6x9 stylus"
+    (gdb) p event->value
+    $2 = -1719661677
+    (gdb) p event->code
+    $3 = 0
+
+The **display** command does the same but it keeps displaying the values
+every time you get a prompt (you can then remove this with
+**undisplay**).
+
+How to use all this information?
+--------------------------------
+
+The usual way to narrow down a bug is to attach the server, trigger the
+bug and then inspect what values led to the bug to trigger. Then work
+backwards and inspect the values before the bug is triggered. As you
+work backwards you will eventually hit a point where a value assignment
+is incorrect. Congratulations, you have now found the bug! Now it's just
+a matter of fixing it.
+
+**Note: while gdb can speed up triaging tremendously, it is not uncommon
+for bugs to take several days to identify.**
