@@ -3665,34 +3665,34 @@ careful; the dependency tree in X is huge.
 Thomas Netter (tnetter at iniDOTunizhDOTc) kindly provided a solution to
 the following problem:
 
-`   When laptop recovers from suspend/resume, XFree86/X.org no longer`  
-`   registers the tablet.  The laptop, however, receives all the tablet data `  
-`   (I can "cat /dev/input/event2" and see the data).`
+        When laptop recovers from suspend/resume, XFree86/X.org no longer
+        registers the tablet.  The laptop, however, receives all the tablet data 
+        (I can "cat /dev/input/event2" and see the data).
 
-`   The only way I know for X to recover the tablet is to restart X.`
+        The only way I know for X to recover the tablet is to restart X.
 
 The problem lies in the step that when unplugging tablet cable while the
 laptop is entering Suspend Mode. The proper steps to plug/unplug,
 suspend/resume a Wacom tablet on a laptop are:
 
-`   - Fold the laptop's screen`  
-`   - Wait 4 or 5 seconds for the tablet's orange LED to extinguish`  
-`   - Unplug the tablet's USB cable`
+        - Fold the laptop's screen
+        - Wait 4 or 5 seconds for the tablet's orange LED to extinguish
+        - Unplug the tablet's USB cable
 
-`   THEN you can recover the tablet functionalities after resuming the`  
-`   laptop and repluging the tablet.`
+        THEN you can recover the tablet functionalities after resuming the
+        laptop and repluging the tablet.
 
-`   However, If you:`  
-`   - Fold the laptop's screen`  
-`   - Immediately unplug the tablet's USB cable before the LED extinguishes`
+        However, If you:
+        - Fold the laptop's screen
+        - Immediately unplug the tablet's USB cable before the LED extinguishes
 
-`   THEN you cannot recover the tablet functionalities after resuming the`  
-`   laptop and replugging the tablet, even if you replug the tablet before `  
-`   resuming the laptop.`
+        THEN you cannot recover the tablet functionalities after resuming the
+        laptop and replugging the tablet, even if you replug the tablet before 
+        resuming the laptop.
 
-`   Therefore, old airline operations apply: Extinguish LEDs before take-off!`
+        Therefore, old airline operations apply: Extinguish LEDs before take-off!
 
-`   -Thomas`
+        -Thomas
 
 ### GNU Free Document License
 
