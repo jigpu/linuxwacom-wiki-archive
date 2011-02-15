@@ -1219,7 +1219,7 @@ The original driver was version 1.43. This version number is 1.43-0.8.8-10 so th
 === Building (usb)hid.ko ===
 In the [http://prdownloads.sourceforge.net/linuxwacom/linuxwacom-0.8.8-10.tar.bz2 linuxwacom-0.8.8-10.tar.bz2] file, you will find hid-core.c, which have special exceptions for wacom. This file is not built by default, so you will need to reconfigure the package and run make again.
 
-<span style="background:#00ffff">Note, for kernel 2.6.18 and later, no need to build hid any more. For other kernels, refer to [[Linuxwacom HOWTO#Testing Tablet Detection|Testing Tablet Detection]] to see if you need to build hid or not.</span>
+<span style="background:#00ffff">Note, for kernel 2.6.18 and later, no need to build hid any more. For other kernels, refer to [[Linuxwacom HOWTO#Testing Tablet Detection|'''Testing Tablet Detection''']] to see if you need to build hid or not.</span>
 
 You need to configure usbhid as a module under your kernel source tree before configuring linuxwacom.
 

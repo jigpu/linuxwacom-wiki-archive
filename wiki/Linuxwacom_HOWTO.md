@@ -1365,9 +1365,10 @@ This file is not built by default, so you will need to reconfigure the
 package and run make again.
 
 <span style="background:#00ffff">Note, for kernel 2.6.18 and later, no
-need to build hid any more. For other kernels, refer to [Testing Tablet
-Detection](/wiki/Linuxwacom_HOWTO#Testing_Tablet_Detection "wikilink") to see
-if you need to build hid or not.</span>
+need to build hid any more. For other kernels, refer to [**Testing
+Tablet
+Detection**](/wiki/Linuxwacom_HOWTO#Testing_Tablet_Detection "wikilink") to
+see if you need to build hid or not.</span>
 
 You need to configure usbhid as a module under your kernel source tree
 before configuring linuxwacom.
