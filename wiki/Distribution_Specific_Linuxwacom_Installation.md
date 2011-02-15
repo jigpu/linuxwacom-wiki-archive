@@ -25,9 +25,9 @@ I was completely unsuccessful when trying to configure and compile my
 own kernel: certainly I omitted some capital module, but I could not
 decide what it was. Thus, I chose the last pre-compiled kernel.
 
-`  1.   apt-get kernel-image-2.6.11-1-686`
+       1.   apt-get kernel-image-2.6.11-1-686
 
-`  2.   apt-get kernel-headers-2.6.11-1-686`
+       2.   apt-get kernel-headers-2.6.11-1-686
 
 If you use Lilo, configure your /etc/lilo.conf file, taking into account
 that this kernel needs an initrd= line.
@@ -37,55 +37,41 @@ that this kernel needs an initrd= line.
 If your case is irrelevant, please skip this section and the following
 one.
 
-`  1.      I Have a Broadcom NetXtreme BCM5751 Ethernet card, which needs `
+       1.      I Have a Broadcom NetXtreme BCM5751 Ethernet card, which needs the tigon3 driver, unavailable in Debian kernel 2.6.11. The solution is here.
 
-the tigon3 driver, unavailable in Debian kernel 2.6.11. The solution is
-here.
+          Thus I got the package:
 
-`     Thus I got the package:`
+             1.   cd /usr/src
+             2.   wget http://www.acm.rpi.edu/~dilinger/kernel-source-nonfree-2.6.11/kernel-nonfree-modules-2.6.11-1-686-2.6.11-1_i386.deb
 
-`        1.   cd /usr/src`  
-`        2.   wget `[`http://www.acm.rpi.edu/~dilinger/kernel-source-nonfree-2.6.11`](http://www.acm.rpi.edu/~dilinger/kernel-source-nonfree-2.6.11)
+       2.      I have an ATI X 300 video card, whose driver is not available in Debian kernel 2.6.11. The solution is here.
 
-/kernel-nonfree-modules-2.6.11-1-686-2.6.11-1\_i386.deb
+          Thus I got the packages:
 
-`  2.      I have an ATI X 300 video card, whose driver is not available `
-
-in Debian kernel 2.6.11. The solution is here.
-
-`     Thus I got the packages:`
-
-`        1.    for the driver:  wget `[`http://www.stanchina.net/~flavio/`](http://www.stanchina.net/~flavio/)
-
-debian-fglrx-xfree86/fglrx-driver\_8.12.10-1\_i386.deb
-
-`        2.    and for the kernel module:  wget `[`http://www.stanchina.net/~flavio`](http://www.stanchina.net/~flavio)
-
-/debian-fglrx-modules/fglrx-kernel-2.6.11-1-686-smp\_8.12.10-1+2.6.11-2\_i386.deb
+             1.    for the driver:  wget http://www.stanchina.net/~flavio/debian-fglrx-xfree86/fglrx-driver_8.12.10-1_i386.deb
+             2.    and for the kernel module:  wget http://www.stanchina.net/~flavio/debian-fglrx-modules/fglrx-kernel-2.6.11-1-686-smp_8.12.10-1+2.6.11-2_i386.deb
 
 **Install the optional packages**
 
-`  1.   cd /usr/src`
+       1.   cd /usr/src
 
-`  2.   dpkg -i kernel-nonfree-modules-2.6.11-1-686_2.6.11-1_i386.deb`
+       2.   dpkg -i kernel-nonfree-modules-2.6.11-1-686_2.6.11-1_i386.deb
 
-`  3.   dpkg -i fglrx-driver_8.12.10-1_i386.deb`
+       3.   dpkg -i fglrx-driver_8.12.10-1_i386.deb
 
-`  4.   dpkg -i fglrx-kernel-2.6.11-1-686_8.12.10-1+2.6.11-2_i386.deb`
+       4.   dpkg -i fglrx-kernel-2.6.11-1-686_8.12.10-1+2.6.11-2_i386.deb
 
 **Install the wacom tools package**
 
-`  1.   apt-get install wacom-tools`
+       1.   apt-get install wacom-tools
 
-`  2.   dpkg-reconfigure wacom-kernel-source`
+       2.   dpkg-reconfigure wacom-kernel-source
 
-`     Since your debconf configuration probably did not ask for the lowest `
-
+Since your debconf configuration probably did not ask for the lowest
 priority questions, this step is needed. You might also use it later if
 you update your kernel, for instance.
 
-`     When asked whether you want to build the modules, answer yes, and tell `
-
+When asked whether you want to build the modules, answer yes, and tell
 where the headers are located (normally
 /usr/src/kernel-headers-2.6.11-1-686).
 
@@ -93,8 +79,7 @@ where the headers are located (normally
 
 In /etc/udev/rules.d/10-wacom.rules, add the following line:
 
-KERNEL="event\*", SYSFS{idVendor}="056a", NAME="input/%k",
-SYMLINK="input/wacom%e"
+    KERNEL="event*", SYSFS{idVendor}="056a", NAME="input/%k", SYMLINK="input/wacom%e" 
 
 Thus the drivers will find the Wacom tablet, whatever its
 /dev/input/eventX address is.
@@ -103,86 +88,69 @@ Thus the drivers will find the Wacom tablet, whatever its
 
 The important sections are:
 
-`  1. The ServerLayout section:`
+       1. The ServerLayout section:
 
-Section "ServerLayout"
+    Section "ServerLayout"
+            [ ... ]
+        InputDevice    "stylus"    "SendCoreEvents"
+        InputDevice    "eraser"    "SendCoreEvents"
+        InputDevice    "cursor"    "SendCoreEvents"
+        InputDevice    "pad"
+    EndSection
 
-`       [ ... ]`  
-`   InputDevice    "stylus"    "SendCoreEvents"`  
-`   InputDevice    "eraser"    "SendCoreEvents"`  
-`   InputDevice    "cursor"    "SendCoreEvents"`  
-`   InputDevice    "pad"`
+       2. The InputDevice sections:
 
-EndSection
+    Section "InputDevice"
+        Identifier   "stylus"
+        Driver       "wacom"
+        Option       "Type" "stylus"
+        Option       "USB" "on"
+        Option       "Threshold" "10"
+        Option       "Device" "/dev/input/wacom"
+    EndSection
 
-`  2. The InputDevice sections:`
+    Section "InputDevice"
+        Identifier   "eraser"
+        Driver       "wacom"
+        Option       "Type" "eraser"
+        Option       "USB" "on"
+        Option       "Threshold" "10"
+        Option       "Device" "/dev/input/wacom"
+    EndSection
 
-Section "InputDevice"
+    Section "InputDevice"
+        Identifier   "cursor"
+        Driver       "wacom"
+        Option       "Type" "cursor"
+        Option       "USB" "on"
+        Option       "Threshold" "10"
+        Option       "Device" "/dev/input/wacom"
+    EndSection
 
-`   Identifier   "stylus"`  
-`   Driver       "wacom"`  
-`   Option       "Type" "stylus"`  
-`   Option       "USB" "on"`  
-`   Option       "Threshold" "10"`  
-`   Option       "Device" "/dev/input/wacom"`
+    Section "InputDevice"
+       Identifier "pad"
+       Driver "wacom"
+       Option "Device" "/dev/input/wacom"
+       Option "Type" "pad"
+       Option "USB" "on"
+    EndSection 
 
-EndSection
+       3. The section dealing with your normal mouse must be considered too. See [[Linuxwacom HOWTO#Mouse1 (for some 2.6 systems)|Mouse1 (for some 2.6 systems)]].  I didn't use /dev/psaux nor /dev/input/mice.
+          /dev/input/mouse0 works for a PS/2 mouse. For a USB mouse, there is a problem mentioned in the '''Remaining problems'''.
 
-Section "InputDevice"
-
-`   Identifier   "eraser"`  
-`   Driver       "wacom"`  
-`   Option       "Type" "eraser"`  
-`   Option       "USB" "on"`  
-`   Option       "Threshold" "10"`  
-`   Option       "Device" "/dev/input/wacom"`
-
-EndSection
-
-Section "InputDevice"
-
-`   Identifier   "cursor"`  
-`   Driver       "wacom"`  
-`   Option       "Type" "cursor"`  
-`   Option       "USB" "on"`  
-`   Option       "Threshold" "10"`  
-`   Option       "Device" "/dev/input/wacom"`
-
-EndSection
-
-Section "InputDevice"
-
-`  Identifier "pad"`  
-`  Driver "wacom"`  
-`  Option "Device" "/dev/input/wacom"`  
-`  Option "Type" "pad"`  
-`  Option "USB" "on"`
-
-EndSection
-
-`  3. The section dealing with your normal mouse must be considered too. See `[`Mouse1`` ``(for`` ``some`` ``2.6`` ``systems)`](/wiki/Linuxwacom_HOWTO#Mouse1_(for_some_2.6_systems) "wikilink")`. `
-
-I didn't use /dev/psaux nor /dev/input/mice. /dev/input/mouse0 works for
-a PS/2 mouse. For a USB mouse, there is a problem mentioned in the
-**Remaining problems**.
-
-`  4. If you use the ATI X300 card, you need to change also the Device section:`  
-`   `
-
-Section "Device"
-
-`       Identifier      "ATI"`  
-`       Driver          "fglrx"`  
-`       Option "VideoOverlay" "on"`  
-`       Option "OpenGLOverlay" "off"`  
-`       Option "UseInternalAGPGART" "no"`
-
-EndSection
+       4. If you use the ATI X300 card, you need to change also the Device section:
+        
+    Section "Device"
+            Identifier      "ATI"
+            Driver          "fglrx"
+            Option "VideoOverlay" "on"
+            Option "OpenGLOverlay" "off"
+            Option "UseInternalAGPGART" "no"
+    EndSection
 
 **Final steps**
 
-`  1.   Reboot. This will also restart the X server, of course.`  
-`  2.   Enjoy!`
+1. Reboot. This will also restart the X server, of course. 2. Enjoy!
 
 **If you want to use the expresskeys of your Intuos tablet**
 
@@ -205,26 +173,24 @@ computer, and then to plug it back later, problems begin.
 
 For the present, you must take care of the following things:
 
-`  1.  If you plug in the tablet again, the corresponding driver is not informed `
+1. If you plug in the tablet again, the corresponding driver is not
+informed of this, thus you must restart the X server.
 
-of this, thus you must restart the X server.
+2. If the tablet is plugged when you reboot, and you have an USB mouse,
+maybe the /dev/input address of this mouse is not the same as the
+previous time. Thus you will have to change this in your XF86Config-4
+file.
 
-`  2.  If the tablet is plugged when you reboot, and you have an USB mouse, maybe `
-
-the /dev/input address of this mouse is not the same as the previous
-time. Thus you will have to change this in your XF86Config-4 file.
-
-`  3.  If you use GDM or KDM or XDM, you should plug in the tablet after rebooting, `
-
-but before the X server starts, which is somewhat difficult! Thus you
-will be forced to restart the X server, i.e. kill it
-(Ctrl+Alt+Backspace) and not simply logging out.
+3. If you use GDM or KDM or XDM, you should plug in the tablet after
+rebooting, but before the X server starts, which is somewhat difficult!
+Thus you will be forced to restart the X server, i.e. kill it
+Ctrl+Alt+Backspace) and not simply logging out.
 
 **Final remarks**
 
-`     I would like to thank all persons who helped me, on the LinuxWacom or the `
-
-Gimp-user discussion lists, especially Carol Spears, Karine Delvare,
+  
+I would like to thank all persons who helped me, on the LinuxWacom or
+the Gimp-user discussion lists, especially Carol Spears, Karine Delvare,
 Ping Cheng, and Ron.
 
 Building wacom driver On Fedora 13
