@@ -1,5 +1,3 @@
-{{Unclear|reason=* Why do we have [[Tablet PC Configuration]] and [[Tablet PC Setup]]?}}
-
 This page is for general tablet pc issues & tips as well as Brand and model specific issues & tips.
 
 The linuxwacom project welcomes additions to its mediawiki so please join in if you have contributions.
@@ -24,7 +22,6 @@ See [[Rotation#Tablet PC Rotation Script|Tablet PC Rotation Script]].
 
 === Tablet PC Automatic Rotation Script ===
 
-{{Unclear | reason=Why is this not part of the Rotation page? }}
 The following script was developed for HP tablet pc's.  Lenovo ThinkPads (and very likely other tablet pc's) should be able to use it too with a minor modification.
 
 Determine your "Device names" with 'xinput list' entered in a terminal. Then substitute them for stylus, eraser, and touch (if you have it) in the following shell script using the quotes around the "Device names". Only use the [[xsetwacom]] commands for the devices you have.
