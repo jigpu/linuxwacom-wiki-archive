@@ -2983,10 +2983,10 @@ that is, it is global to all devices associated with the same tablet.
 Working With Gimp
 -----------------
 
-Note: Gtk does not handle extended devices in relative mode. Please
-don't use Gimp in relative mode.
+<span style="background:#00ffff">**Note:** Gtk does not handle extended
+devices in relative mode. Please don't use Gimp in relative mode.</span>
 
-Bring up gimp and select "File -&gt; Dialogs -&gt; Input Devices" if
+Bring up *gimp* and select "File -&gt; Dialogs -&gt; Input Devices" if
 using 1.x or "File -&gt; Preferences -&gt; Input Devices -&gt; Configure
 Extended Input Devices" if using 2.x. You will see a drop-down list with
 all devices present. After enabling them, you can see their respective

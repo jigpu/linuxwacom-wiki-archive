@@ -2552,9 +2552,9 @@ RawSample was originally introduced to smooth x/y coordinates to a certain degre
 Both Suppress and RawSample apply to the devices on the same tablet, that is, it is global to all devices associated with the same tablet.
 
 == Working With Gimp ==
-Note: Gtk does not handle extended devices in relative mode. Please don't use Gimp in relative mode.
+<span style="background:#00ffff">'''Note:''' Gtk does not handle extended devices in relative mode. Please don't use Gimp in relative mode.</span>
 
-Bring up gimp and select "File -> Dialogs -> Input Devices" if using 1.x or "File -> Preferences -> Input Devices -> Configure Extended Input Devices" if using 2.x. You will see a drop-down list with all devices present. After enabling them, you can see their respective statuses by calling up "File -> Dialogs -> Device Status". It has been recommended that the devices be set to "Screen" mode rather than "Window".
+Bring up ''gimp'' and select "File -> Dialogs -> Input Devices" if using 1.x or "File -> Preferences -> Input Devices -> Configure Extended Input Devices" if using 2.x. You will see a drop-down list with all devices present. After enabling them, you can see their respective statuses by calling up "File -> Dialogs -> Device Status". It has been recommended that the devices be set to "Screen" mode rather than "Window".
 
 I have successfully been able to use gimp with several different pens, including the tips and erasers. Tilt does not appear to be used by gimp at present, but pressure works fine. If the pressure is too coarse, or doesn't kick in until too late, you may need to lower your threshold value. The pressure curve setting can be changed through graphic tool, wacomcpl, and command line tool, xsetwacom.
 
