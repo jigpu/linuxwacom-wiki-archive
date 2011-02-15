@@ -2986,15 +2986,15 @@ So long as the X build tree exists, the include directories will point to the co
 
 === Laptop Suspend/Resume Tips ===
 Thomas Netter (tnetter at iniDOTunizhDOTc) kindly provided a solution to the following problem:
-
+<pre>
     When laptop recovers from suspend/resume, XFree86/X.org no longer
     registers the tablet.  The laptop, however, receives all the tablet data 
     (I can "cat /dev/input/event2" and see the data).
 
     The only way I know for X to recover the tablet is to restart X.
-
+</pre>
 The problem lies in the step that when unplugging tablet cable while the laptop is entering Suspend Mode. The proper steps to plug/unplug, suspend/resume a Wacom tablet on a laptop are:
-
+<pre>
     - Fold the laptop's screen
     - Wait 4 or 5 seconds for the tablet's orange LED to extinguish
     - Unplug the tablet's USB cable
@@ -3013,6 +3013,7 @@ The problem lies in the step that when unplugging tablet cable while the laptop 
     Therefore, old airline operations apply: Extinguish LEDs before take-off!
 
     -Thomas
+<pre>
 
 === GNU Free Document License ===
 GNU GENERAL PUBLIC LICENSE
