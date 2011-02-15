@@ -23,11 +23,31 @@ How do I get the special features of my stylus to work?
 See the LWP's
 [FAQ](/wiki/FAQ#How_do_I_get_the_special_features_of_my_stylus_to_work? "wikilink")
 
+I keep losing my wacomcpl (.xinitrc) settings. What can I do?
+-------------------------------------------------------------
+
+If you are losing your settings due to the screen saver or suspend you
+could try cyberfish's screen saver, suspend/resume *monitor\_wacom* C
+daemon. It uses HAL monitor's notification of DBus. Both it and Steven
+L. Seed's modification of *monitor\_wacom* for hot plugging are posted
+on this [linuxwacom-devel
+thread](https://sourceforge.net/mailarchive/forum.php?thread_name=20110127060441.GA7826%40barra.i.followtheflow.org&forum_name=linuxwacom-devel).
+
+**Note:** the LWP does not support these work arounds. The preference is
+for Desktops to integrate these functions. No guarantees are made.
+
 Is hot plug supported for X intput devices?
 -------------------------------------------
 
 See the LWP's
 [FAQ](/wiki/FAQ#Is_hot_plugging_supported_for_my_USB_tablet? "wikilink")
+
+A workaround for Xorg's that do not support hot plugging by Aristeu
+Rozanski's is *wdaemon* linked at the bottom of the [Tablet
+Hotplugging](/wiki/Linuxwacom_HOWTO#Hotplugging_the_device "wikilink") section
+in the [Linuxwacom HOWTO](/wiki/Linuxwacom_HOWTO "wikilink"). Last development
+on it was 9/08 so later models aren't included. This daemon is not
+supported by the LWP and no guarantees are made.
 
 Is my tablet supported? What about my special stylus?
 -----------------------------------------------------
@@ -36,10 +56,6 @@ Please see the [Devices supported
 table](/wiki/FAQ#Which_devices_are_supported? "wikilink") on the LWP FAQ. The
 Main page also contains a link to the table of all tablets that are
 known to be supported.
-
-Another workaround made by Aristeu is available at wdaemon. The email
-message related to this solution can be found at [Tablet
-Hotplugging](/wiki/Linuxwacom_HOWTO#Hotplugging_the_device "wikilink").
 
 Who is responsible for this code?
 ---------------------------------
