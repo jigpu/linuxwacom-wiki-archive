@@ -66,14 +66,14 @@ values are the defaults with the default stated and the appropriate
 range given. The exception being the pad (tablet buttons). Examples are
 shown of how to configure those for different uses in different
 applications. The scripts are intended to provide you with a framework
-to configure your settings in a text file rather than at at the command
+to configure your settings in a text file rather than at the command
 line, with similar results to what the wacomcpl gui would have produced.
 
 In the example scripts below both "Device name" and ID \# are used. Be
 sure to check for yours using 'xinput list' (without the quotes) in a
-terminal and use them. When you use a xorg.conf the "Device names" will
+terminal and use them. When you use a xorg.conf the "device names" will
 be stylus, eraser, touch, and pad. If you are hot plugging your tablet
-or other devices be sure to use "Device name" as the ID \# can change.
+or other devices be sure to use "device name" as the ID \# can change.
 
 ### Bamboo
 
