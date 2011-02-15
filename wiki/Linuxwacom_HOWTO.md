@@ -2531,10 +2531,11 @@ Tablet PC
 
 The Wacom digitizer that is embedded in the Tablet PCs can be a serial
 or USB tablet. The USB Tablet PCs follow the same configuration steps as
-the other Wacom USB tablets. This page is dedicated to serial Tablet
-PCs.
+the other Wacom [USB
+tablets](/wiki/Linuxwacom_HOWTO#The_USB_Kernel_Driver "wikilink"). This page
+is dedicated to serial Tablet PCs.
 
-The embedded serial Wacom digitizers utilitizes a special protocol IV,
+The embedded serial Wacom digitizers utilizes a special protocol IV,
 ISDV4. Similar to the conventional serial tablets, serial tablet PCs use
 a serial controller (UART). But, on older Linux kernels, they are not
 set to a logical serial port. They are effectively serial devices, but
@@ -2545,8 +2546,8 @@ need the setserial step anymore since the kernel is taking care of them
 now. However, you still need to figure out which serial port your tablet
 has been mapped to before update the xorg.conf.
 
-You can use xxd to see if your tablet has been mapped onto a serial port
-or not. To do so, follow the steps below:
+You can use *xxd* to see if your tablet has been mapped onto a serial
+port or not. To do so, follow the steps below:
 
         [jej@ayukawa ~]$su
         Password:
@@ -2554,10 +2555,11 @@ or not. To do so, follow the steps below:
 
 Move your pen on your tablet PC. If you see output from the terminal
 while you move the pen, your tablet has been mapped to port 1. Quit xxd
-by Ctrl+c. Then ignore the rest of this page and go to (see Configuring
-X11) page. Otherwise, apply xxd to port 1 to 4. If none of them show
-output, you need to manually map the tablet to a serial port or update
-your kernel serial driver.
+by Ctrl+c. Then ignore the rest of this page and go to (see [Configuring
+X11](/wiki/Linuxwacom_HOWTO#Configuring_X11 "wikilink")) page. Otherwise,
+apply xxd to port 1 to 4. If none of them show output, you need to
+manually map the tablet to a serial port or update your kernel serial
+driver.
 
 If you have installed the kernel source that your system was based on,
 check the source under drivers/serial to see if you have 8250\_pnp.c or
@@ -2598,13 +2600,17 @@ like:
 After installing wacom\_drv.o and other programs, such as wacomcpl and
 wacdump, restart X server. Now you can view raw tablet data by:
 
-        [jej@ayukawa util]$ ./wacdump -f tpc /dev/ttyS2       # Wacom digitizer on fake COM3
+`   [jej@ayukawa util]$ ./wacdump -f tpc /dev/ttyS2       # Wacom digitizer on fake COM3`
 
-`   If your wacdump is from linuxwacom version 0.7.5 or older, issue [jej@ayukawa util]$ ./wacdump -f c100 /dev/ttyS2`
+If your wacdump is from linuxwacom version 0.7.5 or older, issue
 
-If everything looks right from wacdump (see Using wacdump), you can
-update /etc/X11/XF86Config or /etc/X11/xorg.conf to load wacom X driver
-(see Configuring XFree86/X11R6).
+`   [jej@ayukawa util]$ ./wacdump -f c100 /dev/ttyS2`
+
+If everything looks right from wacdump (see [Using
+wacdump](/wiki/Linuxwacom_HOWTO#Viewing_Wacom_Data_(wacdump) "wikilink")), you
+can update /etc/X11/XF86Config or /etc/X11/xorg.conf to load wacom X
+driver (see [Configuring
+X11](/wiki/Linuxwacom_HOWTO#Configuring_X11 "wikilink")).
 
 Please note that in Wacom InputDevice section, the following 2 options
 are required for serial Tablet PC:
@@ -2612,7 +2618,9 @@ are required for serial Tablet PC:
           Option        "Device"        "/dev/ttyS2"          # SERIAL ONLY
           Option        "ForceDevice"   "ISDV4"               # Tablet PC ONLY
 
-Refer to Adding the InputDevices for more information.
+Refer to [Adding the
+InputDevices](/wiki/Linuxwacom_HOWTO#Adding_the_InputDevices "wikilink") for
+more information.
 
 GUI-Based (tcl/tk) Wacom Control Panel(wacomcpl)
 ------------------------------------------------

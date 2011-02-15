@@ -2099,19 +2099,19 @@ For completeness sake, here are the command line options:
 There are not many options, but the --list option is helpful for identifying devices, and the --ui option allows you to switch between curses and raw modes. Adding the --verbose option increases the amount of output, and when used in conjunction with --list, displays the device capabilities.
 
 == Tablet PC ==
-The Wacom digitizer that is embedded in the Tablet PCs can be a serial or USB tablet. The USB Tablet PCs follow the same configuration steps as the other Wacom USB tablets. This page is dedicated to serial Tablet PCs.
+The Wacom digitizer that is embedded in the Tablet PCs can be a serial or USB tablet. The USB Tablet PCs follow the same configuration steps as the other Wacom [[Linuxwacom HOWTO#The USB Kernel Driver|USB tablets]]. This page is dedicated to serial Tablet PCs.
 
-The embedded serial Wacom digitizers utilitizes a special protocol IV, ISDV4. Similar to the conventional serial tablets, serial tablet PCs use a serial controller (UART). But, on older Linux kernels, they are not set to a logical serial port. They are effectively serial devices, but require special configuration (setserial) under Linux.
+The embedded serial Wacom digitizers utilizes a special protocol IV, ISDV4. Similar to the conventional serial tablets, serial tablet PCs use a serial controller (UART). But, on older Linux kernels, they are not set to a logical serial port. They are effectively serial devices, but require special configuration (setserial) under Linux.
 
 The good news is on newer Linux kernels, most serial Tablet PCs don't need the setserial step anymore since the kernel is taking care of them now. However, you still need to figure out which serial port your tablet has been mapped to before update the xorg.conf.
 
-You can use xxd to see if your tablet has been mapped onto a serial port or not. To do so, follow the steps below:
+You can use ''xxd'' to see if your tablet has been mapped onto a serial port or not. To do so, follow the steps below:
 <pre>
     [jej@ayukawa ~]$su
     Password:
     [jej@ayukawa ~]# xxd /dev/ttyS0  
 </pre>
-Move your pen on your tablet PC. If you see output from the terminal while you move the pen, your tablet has been mapped to port 1. Quit xxd by Ctrl+c. Then ignore the rest of this page and go to (see Configuring X11) page. Otherwise, apply xxd to port 1 to 4. If none of them show output, you need to manually map the tablet to a serial port or update your kernel serial driver.
+Move your pen on your tablet PC. If you see output from the terminal while you move the pen, your tablet has been mapped to port 1. Quit xxd by Ctrl+c. Then ignore the rest of this page and go to (see [[Linuxwacom HOWTO#Configuring X11|Configuring X11]]) page. Otherwise, apply xxd to port 1 to 4. If none of them show output, you need to manually map the tablet to a serial port or update your kernel serial driver.
 
 If you have installed the kernel source that your system was based on, check the source under drivers/serial to see if you have 8250_pnp.c or not. If the file exists, please add:
 <pre>
@@ -2138,19 +2138,21 @@ You can add the command into one of your favorite start scripts. I normally add 
     setserial /dev/ttyS2 port 0x93f8 autoconfig 
 </pre>
 After installing wacom_drv.o and other programs, such as wacomcpl and wacdump, restart X server. Now you can view raw tablet data by:
-<pre>
-    [jej@ayukawa util]$ ./wacdump -f tpc /dev/ttyS2       # Wacom digitizer on fake COM3
-</pre>
-    If your wacdump is from linuxwacom version 0.7.5 or older, issue [jej@ayukawa util]$ ./wacdump -f c100 /dev/ttyS2
 
-If everything looks right from wacdump (see Using wacdump), you can update /etc/X11/XF86Config or /etc/X11/xorg.conf to load wacom X driver (see Configuring XFree86/X11R6).
+    [jej@ayukawa util]$ ./wacdump -f tpc /dev/ttyS2       # Wacom digitizer on fake COM3
+
+If your wacdump is from linuxwacom version 0.7.5 or older, issue
+
+    [jej@ayukawa util]$ ./wacdump -f c100 /dev/ttyS2
+
+If everything looks right from wacdump (see [[Linuxwacom HOWTO#Viewing Wacom Data (wacdump)|Using wacdump]]), you can update /etc/X11/XF86Config or /etc/X11/xorg.conf to load wacom X driver (see [[Linuxwacom HOWTO#Configuring X11|Configuring X11]]).
 
 Please note that in Wacom InputDevice section, the following 2 options are required for serial Tablet PC:
 <pre>
       Option        "Device"        "/dev/ttyS2"          # SERIAL ONLY
       Option        "ForceDevice"   "ISDV4"               # Tablet PC ONLY
 </pre>
-Refer to Adding the InputDevices for more information.
+Refer to [[Linuxwacom HOWTO#Adding the InputDevices|Adding the InputDevices]] for more information.
 
 == GUI-Based (tcl/tk) Wacom Control Panel(wacomcpl) ==
 wacomcpl is a simple graphic Wacom driver configuration tool. It changes the pressure sensitivity, click threshold, button functions, cursor mode, speed, mapping, etc. without having to manually modify XF86Config/xorg.conf file. For Cintiq and Tablet PC users, it is also a tool to calibrate the tablet. wacomcpl should be launched when you login as yourself since .xinitrc (or .xsession), a file under your home directory, will be updated locally each time you run wacomcpl. The .xinitrc (or .xsession) stores the preferences you selected through wacomcpl for your next login. The goal is to give each user a chance to use his/her own preference on a shared system.
