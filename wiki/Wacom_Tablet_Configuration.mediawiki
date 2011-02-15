@@ -2,9 +2,9 @@ This page is for model specific configuration issues & tips.
 
 The LWP project welcomes additions to its mediawiki so please join in if you have contributions.
 
-Currently [[xf86-input-wacom]] does not have a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).  However since '''wacomcpl''' stored its settings as a [[xsetwacom]] script in '''.xinitrc''' we can at least duplicate the .xinitrc, calling it say '''.xsetwacom.sh'''.  Below is a set of sample scripts for various tablets.  If yours is not among them noticed there is a high degree of overlap.  They're all Wacom tablets after all.  So it should be relatively straight forward to assemble one for your tablet.
+Currently [[xf86-input-wacom]] does not have a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).  However since '''wacomcpl''' stored its settings as a [[xsetwacom]] script in '''.xinitrc''' we can at least duplicate the .xinitrc, calling it say '''.xsetwacom.sh'''.  '''These are a temporary hack''' while we wait on a replacement for wacomcpl, see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
 
-While doing things this way may seem a little strange at first you'll find yourself quickly adapting.  And this allows you some of the finer control over your tablet's features wacomcpl gave you.
+Below is a set of sample scripts for various tablets.  If yours is not among them noticed there is a high degree of overlap.  They're all Wacom tablets after all.  So it should be relatively straight forward to assemble one for your tablet.  While doing things this way may seem a little strange at first you'll find yourself quickly adapting.  And this allows you some of the finer control over your tablet's features wacomcpl gave you.
 
 '''Note''' While these xsetwacom commands were working as of 2-1-11 be aware that the xsetwacom interface may change without notice.  If this happens feel free to update and correct this LWP mediawiki page.
 
