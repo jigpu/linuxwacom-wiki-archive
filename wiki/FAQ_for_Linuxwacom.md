@@ -8,9 +8,9 @@ tags:
 
 **This FAQ is intended only for questions relating to the linuxwacom
 drivers on legacy systems** not dealt with by the LWP's
-[FAQ](/wiki/FAQ "wikilink"). It is not intended to replace or duplicate **the
-LWP's [FAQ](/wiki/FAQ "wikilink"). Check there first** for answers to your
-questions.
+**[FAQ](/wiki/FAQ "wikilink")**. It is not intended to replace or duplicate
+**the [LWP's FAQ](/wiki/FAQ "wikilink"). Check there first** for answers to
+your questions.
 
 The Linuxwacom FAQ is based on the questions that we receive in email.
 If you have a question that is not answered on the LWP FAQ or here, send
