@@ -69,7 +69,7 @@ applications. The scripts are intended to provide you with a framework
 to configure your settings in a text file rather than at the command
 line, with similar results to what the wacomcpl gui would have produced.
 
-In the example scripts below both "Device name" and ID \# are used. Be
+In the example scripts below both "device name" and ID \# are used. Be
 sure to check for yours using 'xinput list' (without the quotes) in a
 terminal and use them. When you use a xorg.conf the "device names" will
 be stylus, eraser, touch, and pad. If you are hot plugging your tablet
