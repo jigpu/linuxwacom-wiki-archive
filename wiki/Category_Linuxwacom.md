@@ -9,7 +9,7 @@ This page compiles all information related to the
 [linuxwacom](linuxwacom "wikilink") driver. Note that the
 [linuxwacom](linuxwacom "wikilink") driver is a series of backports for
 older kernels and X servers and is not part of any modern desktop
-distribution. Where *modern* is defined as kernel 2.6.36 (or later) and
+distribution. Where *modern* is defined as ~kernel 2.6.36 (or later) and
 X.org X server 1.8 (or later).
 
 <small>The exception being the **Debian/Ubuntu** kernel 2.6.32. Because
