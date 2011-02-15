@@ -3169,7 +3169,7 @@ distracting.
 
 ### Building wacdump and xidump
 
-Building wacdump
+**Building wacdump**
 
 wacdump is enabled by default in the configure script, so let's do that
 now:
@@ -3189,11 +3189,11 @@ As shown above, the build options indicate that wacdump will be built.
 If not, then scroll back through the configuration to see if there
 aren't any errors or warnings that would explain this.
 
-Next, run make. The output will be a file called wacdump in the
-linuxwacom package's src/util directory. Running make install, will
+Next, run *make*. The output will be a file called wacdump in the
+linuxwacom package's src/util directory. Running *make install*, will
 install it under /usr/local/bin.
 
-Building xidump
+**Building xidump**
 
 xidump builds by default so if you've configured and built the project
 in previous steps, you probably have it already. If not, we can build it
@@ -3235,10 +3235,10 @@ will still build, but it will also warn you that ncurses will not be
 available. If you encounter warnings, it is most likely that your
 development environment is missing some packages.
 
-When you run make, the xidump program will be built along with any other
-programs that are specified in the build options. The output file is
-called 'xidump' and is located in the linuxwacom package's src/util
-directory. It is installed by running make install.
+When you run *make*, the xidump program will be built along with any
+other programs that are specified in the build options. The output file
+is called 'xidump' and is located in the linuxwacom package's src/util
+directory. It is installed by running *make install*.
 
 ### Building xsetwacom
 
