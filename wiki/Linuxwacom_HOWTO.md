@@ -3037,7 +3037,7 @@ you normally can move the cursor from one screen to the other, but you
 can not move an application window, such as a terminal, from one screen
 to the other.
 
-TwinView setup
+**TwinView setup**
 
 By TwinView setup, we used to represent the two screens are configured
 in such a way that X "thinks" it only has one screen. Starting from
@@ -3088,14 +3088,16 @@ Option "TwinView" "Xinerama"
 
 Option "ScreenNo" "theScreenNumber"
 
-I've seen displays with Xinerama in their xorg.conf files in fact fall
-into TwinView setup since the whole desktop is reported as one screen.
-Use xsetwacom get stylus NumScreen to see how many screen you have. You
-need to use this command without adding any screen mapping related
-options in your xorg.conf file for Wacom device. If the command only
-reports one screen but you actually have two screen on the system, you
-are running a TwinView setup. If it reports more than one screen, you
-are in Xinerama setup. Xinerama setup
+<span style="background:#00ffff">I've seen displays with Xinerama in
+their xorg.conf files in fact fall into TwinView setup since the whole
+desktop is reported as one screen. Use xsetwacom get stylus NumScreen to
+see how many screen you have. You need to use this command without
+adding any screen mapping related options in your xorg.conf file for
+Wacom device. If the command only reports one screen but you actually
+have two screen on the system, you are running a TwinView setup. If it
+reports more than one screen, you are in Xinerama setup.</span>
+
+**Xinerama setup**
 
 1. map the tablet to the whole desktop;
 
@@ -3118,27 +3120,37 @@ system mouse or another Wacom device which is not configured with
 Only option "ScreenNo" is needed to configure Wacom driver in this
 setting.
 
-non-TwinView and non-Xinerama setup
+**non-TwinView and non-Xinerama setup**
 
 In this setup, we only support tablet to a specific screen mapping, that
 is, you have to map the tablet to a specific screen by option
 "ScreenNo". Otherwise, your tablet may be mapped half on the first
 screen and the other half on the second screen.
 
-X11 InputDevices Options details all options for your Wacom device that
-we mentioned above.
+[X11 InputDevices
+Options](/wiki/Linuxwacom_HOWTO#Adding_the_InputDevices "wikilink") details
+all options for your Wacom device that we mentioned above.
 
-Xorg RandR
+**Xorg RandR**
 
-This support is provided by Novell developers. A daemon called wacomxrrd
-is added to src/util to map Wacom LCD tablet to its own screen under
-extended RandR mode. The daemon can be launched by "wacomxrrd $dev" and
-managed through your prefered desktop interfaces. On SLED 11, it is done
-by adding the following script, wacomxrrd-start, to /usr/bin
+  
+<span style="background:#00ffff">This support is provided by Novell
+developers. A daemon called wacomxrrd is added to src/util to map Wacom
+LCD tablet to its own screen under extended RandR mode. The daemon can
+be launched by "wacomxrrd $dev" and managed through your prefered
+desktop interfaces.</span>
 
-        #!/bin/sh grep -q -i wacf /sys/bus/pnp/devices/*/id && exec wacomxrrd -i touch exit 0 
+<!-- -->
 
-and putting wacomxrrd.desktop to /usr/share/gnome/autostart.
+  
+<span style="background:#00ffff">On SLED 11, it is done by adding the
+following script, wacomxrrd-start, to /usr/bin</span>
+
+`   #!/bin/sh grep -q -i wacf /sys/bus/pnp/devices/*/id && exec wacomxrrd -i touch exit 0 `
+
+  
+<span style="background:#00ffff">and putting wacomxrrd.desktop to
+/usr/share/gnome/autostart.</span>
 
 Contacts
 --------
