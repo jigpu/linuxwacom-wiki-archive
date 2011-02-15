@@ -2187,8 +2187,9 @@ same tablet) can be set to values between 1 and 12, with 12 being way
 too much, and 1 being fairly useful.
 
 If X server failed to start and you are running the prebuilt
-wacom\_drv.(s)o, you may have to go back to Configuring the Package page
-to build the driver on your system.
+wacom\_drv.(s)o, you may have to go back to [Configuring the
+Package](/wiki/Linuxwacom_HOWTO#Configuring_the_Package "wikilink") page to
+build the driver on your system.
 
 ### Check the Pointer Status
 
