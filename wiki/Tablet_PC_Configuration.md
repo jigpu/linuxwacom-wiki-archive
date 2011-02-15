@@ -16,14 +16,17 @@ a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).
 However since **wacomcpl** stored its settings as a
 [xsetwacom](xsetwacom "wikilink") script in **.xinitrc** we can at least
 duplicate the .xinitrc, calling it say **.xsetwacom.sh**. Below is a set
-of sample scripts for various tablet pc's. If yours is not among them
-noticed there is a high degree of overlap. They're all Wacom tablet pc's
-after all. So it should be relatively straight forward to assemble one
-for your tablet pc.
+of sample scripts for various tablet pc's. **These are a temporary
+hack** while we wait on a replacement for wacomcpl, see [Graphical
+Configuration
+Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
-While doing things this way may seem a little strange at first you'll
-find yourself quickly adapting. And this allows you some of the finer
-control over your tablet's features wacomcpl gave you.
+If yours is not among them noticed there is a high degree of overlap.
+They're all Wacom tablet pc's after all. So it should be relatively
+straight forward to assemble one for your tablet pc. While doing things
+this way may seem a little strange at first you'll find yourself quickly
+adapting. And this allows you some of the finer control over your
+tablet's features wacomcpl gave you.
 
 **Note** While these xsetwacom commands were working as of 2-1-11 be
 aware that the xsetwacom interface may change without notice. If this
@@ -56,6 +59,15 @@ settings or reboot to check the auto-start set up.
 
 The Sample Xsetwacom Scripts
 ----------------------------
+
+The following scripts were authored by Favux. Where co-developed with
+others they are cited in the relevant script. All or almost all of the
+values are the defaults with the default stated and the appropriate
+range given. The exception being the pad (tablet buttons). Examples are
+shown of how to configure those for different uses in different
+applications. The scripts are intended to provide you with a framework
+to configure your settings in a text file rather than at the command
+line, with similar results to what the wacomcpl gui would have produced.
 
 In the example scripts below both "Device name" and ID \# are used. Be
 sure to check for yours using 'xinput list' (without the quotes) in a
