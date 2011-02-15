@@ -38,6 +38,9 @@ proceed to calibrate your device. Four cross hairs will appear in
 sequence and on finishing xinput-calibrator will return output similar
 to the following.
 
+**Warning**: This external program's output describes out-of-date
+information on how to configure your device.
+
     ~$ xinput_calibrator --device "9"
     Calibrating standard Xorg driver "Wacom BambooFun 2FG 4x5 Pen stylus"
         current calibration values: min_x=0, max_x=14720 and min_y=0, max_y=9200
@@ -54,12 +57,14 @@ to the following.
 
     Change '!!Name_Of_TouchScreen!!' to your device's name in the config above.
 
-You can see the default values but the 4 values you are interested in
-are under the *Making the calibration permanent* heading. So minx =
-TopX, maxx = BottomX, miny = TopY, and maxy = BottomY. You'll want to
-repeat the calibration several times and use the smallest and largest
-values or perhaps an average if you see no trend. Then use the TopX & Y
-and BottomX & Y coordinate values in [Apply the
+Although xinput\_calibrator uses outdated HAL configuration we don't
+care because we just need the coordinate values it has determined. You
+can see the default values but the 4 values you are interested in are
+under the *Making the calibration permanent* heading. So minx = TopX,
+maxx = BottomX, miny = TopY, and maxy = BottomY. You'll want to repeat
+the calibration several times and use the smallest and largest values or
+perhaps an average if you see no trend. Then use the TopX & Y and
+BottomX & Y coordinate values in [Apply the
 Coordinates](/wiki/Calibration#Apply_the_Coordinates "wikilink") below.
 
 ### xinput test
