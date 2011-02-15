@@ -200,24 +200,26 @@ The following steps for building wacom driver on Fedora 13 were
 extracted from the emails of Jonathan R Young and Peter Hutterer. If you
 have any problems or questions, go ahead and post them to the list.
 
-`Build kernel driver wacom.ko `
+**Build kernel driver wacom.ko**
 
-yum-buildep linuxwacom wget
-<http://prdownloads.sourceforge.net/linuxwacom/linuxwacom-0.8.8-10.tar.bz2>
+    yum-buildep linuxwacom
+    wget http://prdownloads.sourceforge.net/linuxwacom/linuxwacom-0.8.8-10.tar.bz2
 
-tar -xf linuxwacom-0.8.8-10.tar.bz2 cd linuxwacom-0.8.8-10 ./configure
---enable-wacom su -c "cp src/2.6.30/wacom.ko /lib/modules/\`uname
--r\`/kernel/drivers/input/tablet"
+    tar -xf linuxwacom-0.8.8-10.tar.bz2
+    cd  linuxwacom-0.8.8-10
+    ./configure --enable-wacom
+    su -c "cp src/2.6.30/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet"
 
-`Build X driver wacom_drv.so `
+**Build X driver wacom\_drv.so**
 
 Refer to
 <http://sourceforge.net/apps/mediawiki/linuxwacom/index.php?title=Xf86-input-wacom>
 for details.
 
-wget
-<http://prdownloads.sourceforge.net/linuxwacom/xf86-input-wacom-0.10.8.tar.bz2>
-./configure --prefix=/usr make su -c "make install"
+    wget http://prdownloads.sourceforge.net/linuxwacom/xf86-input-wacom-0.10.8.tar.bz2
+    ./configure --prefix=/usr  
+    make
+    su -c "make install"
 
 Finally, plug the tablet in and restart the X server (or just restart
 your system).
