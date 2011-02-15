@@ -10,8 +10,7 @@ Installing wacom driver On Debian
 ---------------------------------
 
 The following documentation for building wacom driver on Debian was
-written by Olivier Lecarme. You can also refer to Olivier's page here
-for updates.
+written by Olivier Lecarme.
 
 Copyright (C) June 14, 2005 Olivier Lecarme.
 
@@ -20,7 +19,7 @@ distribution, recently become the stable one, already contains what is
 necessary. Version 2.6.11 of the kernel is the highly preferred one by
 people maintaining the Linux Wacom software.
 
-Download the 2.6.11 kernel
+**Download the 2.6.11 kernel**
 
 I was completely unsuccessful when trying to configure and compile my
 own kernel: certainly I omitted some capital module, but I could not
@@ -33,7 +32,7 @@ decide what it was. Thus, I chose the last pre-compiled kernel.
 If you use Lilo, configure your /etc/lilo.conf file, taking into account
 that this kernel needs an initrd= line.
 
-Optionally
+**Optionally**
 
 If your case is irrelevant, please skip this section and the following
 one.
@@ -64,7 +63,7 @@ debian-fglrx-xfree86/fglrx-driver\_8.12.10-1\_i386.deb
 
 /debian-fglrx-modules/fglrx-kernel-2.6.11-1-686-smp\_8.12.10-1+2.6.11-2\_i386.deb
 
-Install the optional packages
+**Install the optional packages**
 
 `  1.   cd /usr/src`
 
@@ -74,7 +73,7 @@ Install the optional packages
 
 `  4.   dpkg -i fglrx-kernel-2.6.11-1-686_8.12.10-1+2.6.11-2_i386.deb`
 
-Install the wacom tools package
+**Install the wacom tools package**
 
 `  1.   apt-get install wacom-tools`
 
@@ -90,7 +89,7 @@ you update your kernel, for instance.
 where the headers are located (normally
 /usr/src/kernel-headers-2.6.11-1-686).
 
-Prepare for the /dev/input/wacom link
+**Prepare for the /dev/input/wacom link**
 
 In /etc/udev/rules.d/10-wacom.rules, add the following line:
 
@@ -100,7 +99,7 @@ SYMLINK="input/wacom%e"
 Thus the drivers will find the Wacom tablet, whatever its
 /dev/input/eventX address is.
 
-Change your XF86Config-4 file
+**Change your XF86Config-4 file**
 
 The important sections are:
 
@@ -161,11 +160,11 @@ Section "InputDevice"
 
 EndSection
 
-`  3. The section dealing with your normal mouse must be considered too. See Mouse1 (for some 2.6 systems). `
+`  3. The section dealing with your normal mouse must be considered too. See `[`Mouse1`` ``(for`` ``some`` ``2.6`` ``systems)`](/wiki/Linuxwacom_HOWTO#Mouse1_(for_some_2.6_systems) "wikilink")`. `
 
 I didn't use /dev/psaux nor /dev/input/mice. /dev/input/mouse0 works for
 a PS/2 mouse. For a USB mouse, there is a problem mentioned in the
-Remaining problems.
+**Remaining problems**.
 
 `  4. If you use the ATI X300 card, you need to change also the Device section:`  
 `   `
@@ -180,12 +179,12 @@ Section "Device"
 
 EndSection
 
-Final steps
+**Final steps**
 
 `  1.   Reboot. This will also restart the X server, of course.`  
 `  2.   Enjoy!`
 
-If you want to use the expresskeys of your Intuos tablet
+**If you want to use the expresskeys of your Intuos tablet**
 
 If you do nothing more, the pad is not usable at all. However, you will
 find here a specific tool for having the pad available in various
@@ -198,7 +197,7 @@ other tools (stylus, eraser, and cursor). You can easily configure what
 the expresskeys send, according to your tastes, and use only them for
 the tasks that need a good control of the stylus or eraser.
 
-Remaining problems
+**Remaining problems**
 
 If your tablet is always plugged, everything works perfectly. If you
 want to plug it out, for example in order to move it onto another
@@ -221,7 +220,7 @@ but before the X server starts, which is somewhat difficult! Thus you
 will be forced to restart the X server, i.e. kill it
 (Ctrl+Alt+Backspace) and not simply logging out.
 
-Final remarks
+**Final remarks**
 
 `     I would like to thank all persons who helped me, on the LinuxWacom or the `
 
