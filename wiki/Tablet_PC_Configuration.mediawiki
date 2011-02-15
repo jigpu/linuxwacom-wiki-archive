@@ -1,6 +1,3 @@
-{{Unclear|reason=
-}}
-
 This page is for Brand & model specific configuration issues & tips.
 
 The linuxwacom project welcomes additions to its mediawiki so please join in if you have contributions.
