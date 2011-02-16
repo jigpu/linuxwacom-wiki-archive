@@ -1,3 +1,4 @@
+2-15-11
 So far Waltop's only need to configure the stylus and two stylus buttons.  Didn't see the point in overloading them with a lot of non-relevant Wacom script sections.
 
 Defaults are used on all the scripts except for pad.  The idea is a text file based framework to in effect duplicate wacomcpl's gui.

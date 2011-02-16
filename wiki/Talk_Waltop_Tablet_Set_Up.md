@@ -4,7 +4,7 @@ permalink: wiki/Talk:Waltop_Tablet_Set_Up/
 layout: wiki
 ---
 
-So far Waltop's only need to configure the stylus and two stylus
+2-15-11 So far Waltop's only need to configure the stylus and two stylus
 buttons. Didn't see the point in overloading them with a lot of
 non-relevant Wacom script sections.
 
