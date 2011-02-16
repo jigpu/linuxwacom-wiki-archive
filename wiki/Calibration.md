@@ -6,22 +6,71 @@ tags:
  - HOWTO
 ---
 
+Calibration is necessary when the pointer on the screen does not
+coincide with where the input tool is located on the tablet. This is
+usually most noticeable on a Wacom tablet pc, often after rotation. The
+pointer being more than a mm or two off can render using a tablet pc or
+Cintiq awkward, more so with the stylus than with touch (Cintiq's don't
+have to worry about touch). With a non-Cintiq Wacom tablet this may be
+seen as the input tool not reaching a particular monitor's edge or
+edges.
+
+There can be multiple causes of misalignment. It may come about if the
+video driver is not reporting the coordinates quite correctly or a
+hardware problem, e.g. video chipset (firmware) etc. Or even just from
+the parallax of your working postition. Parallax is present in tablet
+pc's and Cintiq's because the digitizer and LCD screen are two separate
+devices layered on each other, so there is some physical depth inherent
+in the combination of the devices.
+
 The default coordinate settings for your tablet or tablet pc that are
-supplied by [xf86-input-wacom](xf86-input-wacom "wikilink") are usually
-accurate. However depending on your hardware or setup you may need to do
-some fine tuning. The default coordinates are available in the
-Xorg.0.log file in /var/log and would look something like this.
+used by the Wacom drivers are usually accurate. The Wacom USB kernel
+driver supplies the default USB Wacom Tablet Area values for each model
+to the [xf86-input-wacom](xf86-input-wacom "wikilink") X driver. The X
+driver then scales the tablet's bottomX & Y to the screen if the tablet
+and screen do not have a 1:1 ratio. The X driver also handles
+translation into the resolution the X server uses (points/meter). With
+Wacom Serial tablet pc's (ISDV4 devices) it's a different story because
+there is only "one model" and querying the tablet (isdv4GetRanges)
+returns the Wacom Tablet Area values. In the previous driver
+([linuxwacom](linuxwacom "wikilink")) the Wacom Serial graphics tablet's
+Wacom Tablet Area values were defined in the X driver, like usb tablets
+in the kernel driver.
 
-` Wacom BambooFun 2FG 4x5 Pen stylus: top X=0 top Y=0 bottom X=14720 bottom Y=9200`
-
-If you have a serial or usb tablet pc it will also tell you what port or
-device input event the data is coming in on. Usually tty/S0 for serial
-tablet pc's.
+Fortunately the xf86-input-wacom X driver allows the user to over ride
+the default values with user specified settings when needed. Wacom USB
+graphics tablets also may want to use the
+[xsetwacom](xsetwacom "wikilink") or [static
+Options](/wiki/Configuring_X#Hotplugging_setup_with_udev "wikilink") TopX & Y
+and BottomX & Y settings described in [Apply the
+Coordinates](/wiki/Calibration#Apply_the_Coordinates "wikilink") below to
+correct an improper screen aspect ratio (tablet to monitor) especially
+with a wide screen monitor. Don't want ellipses when trying to draw
+circles!
 
 Find Your Actual Coordinates
 ----------------------------
 
 There are a few different ways to accomplish this.
+
+### Default Coordinates
+
+You can get your default coordinates several ways. One is to enter into
+a terminal:
+
+` xinput list-props "device name"`
+
+And in the output you should see a line similar to:
+
+` Wacom Tablet Area (270):  0, 0, 14720, 9200`
+
+Or you can look in the Xorg.0.log file in /var/log for something like:
+
+` Wacom BambooFun 2FG 4x5 Pen stylus: top X=0 top Y=0 bottom X=14720 bottom Y=9200`
+
+If you have a serial or usb tablet pc or usb tablet it will also tell
+you what port or device input event the data is coming in on. Usually
+tty/S0 for serial tablet pc's.
 
 ### Calibration Programs
 
@@ -36,10 +85,12 @@ will return a list of devices xinput\_calibrator thinks it can
 calibrate. Using either the ID \# or "device name" (in quotes) returned
 proceed to calibrate your device. Four cross hairs will appear in
 sequence and on finishing xinput-calibrator will return output similar
-to the following.
+to the following. **Be sure** to be in your normal working postition and
+to hold the stylus as you normally do, to take parallax into account,
+when calibrating.
 
-**Warning**: This external program's output describes out-of-date
-information on how to configure your device.
+**Warning**: Xinput\_calibrator's (a non-LWP external program) output
+describes out-of-date information on how to configure your device.
 
     ~$ xinput_calibrator --device "9"
     Calibrating standard Xorg driver "Wacom BambooFun 2FG 4x5 Pen stylus"
@@ -67,7 +118,7 @@ perhaps an average if you see no trend. Then use the TopX & Y and
 BottomX & Y coordinate values in [Apply the
 Coordinates](/wiki/Calibration#Apply_the_Coordinates "wikilink") below.
 
-### xinput test
+### xinput test (& evtest)
 
 If you have a usb tablet a convenient way to read your default values
 from Xorg.0.log is to first unplug your tablet's usb cable. Then enter
