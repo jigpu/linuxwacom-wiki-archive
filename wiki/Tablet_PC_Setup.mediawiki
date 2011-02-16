@@ -96,7 +96,7 @@ fi
 </pre>
 Enter the script in a file called .toggle-touch.sh (or whatever you want) and place it in your home directory. Remember it will be a hidden file because of the . in front. Also please remember you have to chmod it to make it executable, or right click on it and make it executable through Properties. Then you can place it in a launcher or  bind a key to the script.  If you drag the launcher into a panel it will execute with a single click.
 
-=== N-trig tablet pc's Script ===
+=== N-trig tablet pc Script ===
 N-Trigs can also have the issue of extra lines being drawn even when using the stylus if touch is on.  If you have the HP TX2z or Dell XT & XT2 you likely have your touch on the evdev driver rather than the Wacom driver.  In that case the Touch Toggle Script above will not work for you. You can use the following script  modified for the evdev driver.  This script works in a different manner from the one above.  When first toggled it issues the xinput touch disable command (0) and then creates a file called touch_off in the /tmp directory.  When toggled again it checks for the presence of the touch_off file and if present issues the xinput touch enabled (1) command, followed by the deletion of the file.
 
 <pre>

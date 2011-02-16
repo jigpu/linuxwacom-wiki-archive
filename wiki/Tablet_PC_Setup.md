@@ -153,7 +153,7 @@ through Properties. Then you can place it in a launcher or bind a key to
 the script. If you drag the launcher into a panel it will execute with a
 single click.
 
-### N-trig tablet pc's Script
+### N-trig tablet pc Script
 
 N-Trigs can also have the issue of extra lines being drawn even when
 using the stylus if touch is on. If you have the HP TX2z or Dell XT &
