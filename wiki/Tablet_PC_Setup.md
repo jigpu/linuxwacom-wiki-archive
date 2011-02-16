@@ -120,9 +120,11 @@ Touch Toggle Scripts
 Turning touch off can be convient when working in a graphics program, so
 you don't have to worry about accidentally issuing a command, or worse,
 drawing a line if you incidentally touch the tablet's screen when not
-holding the stylus. Additionally some serial tablet pc's have issues
-with extra lines being drawn in applications such as Xournal, when touch
-is on while writing with the stylus.
+holding the stylus. Additionally some serial & N-trig tablet pc's have
+issues with extra lines being drawn in applications such as Xournal,
+when touch is on while writing with the stylus.
+
+### Wacom tablet pc Script
 
 The following script depends on the [xsetwacom](xsetwacom "wikilink")
 get and set commands. The get command determines whether touch is on or
