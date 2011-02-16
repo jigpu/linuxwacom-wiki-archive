@@ -6,8 +6,8 @@ tags:
  - Linuxwacom
 ---
 
-Installing wacom driver On Debian
----------------------------------
+Building Linuxwacom driver On Debian
+------------------------------------
 
 The following documentation for building wacom driver on Debian was
 written by Olivier Lecarme.
@@ -193,8 +193,8 @@ I would like to thank all persons who helped me, on the LinuxWacom or
 the Gimp-user discussion lists, especially Carol Spears, Karine Delvare,
 Ping Cheng, and Ron.
 
-Building wacom driver On Fedora 13
-----------------------------------
+Building Linuxwacom driver On Fedora 13
+---------------------------------------
 
 The following steps for building wacom driver on Fedora 13 were
 extracted from the emails of Jonathan R Young and Peter Hutterer. If you
@@ -224,8 +224,8 @@ for details.
 Finally, plug the tablet in and restart the X server (or just restart
 your system).
 
-Building wacom driver On RHEL 5 / CentOS 5
-------------------------------------------
+Building Linuxwacom driver On RHEL 5 / CentOS 5
+-----------------------------------------------
 
 The following documentation for building wacom x.org and kernel modules
 on RHEL 5 / CentOS 5 was written by Sylvain Giasson. If you have any
@@ -311,8 +311,8 @@ the previous step. Type:
 
 5. Reboot the workstation
 
-Building wacom driver On Suse 9.2
----------------------------------
+Building Linuxwacom driver On Suse 9.2
+--------------------------------------
 
 Nico Kadel-Garcia has provided a changed SPEC file for SuSE 9.2. You can
 download the spec
@@ -323,8 +323,8 @@ old patch, teach it to use the right options for x86\_64 compilation,
 and stop it from generating symlinks into /usr/include/X11 at
 compilation time, and it's done." Nico said on Mar 21 2005.
 
-Building wacom driver On Ubuntu 9.04 64-bit system
---------------------------------------------------
+Building Linuxwacom driver On Ubuntu 9.04 64-bit system
+-------------------------------------------------------
 
 The steps on this page are taken from the following posts:
 
