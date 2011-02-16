@@ -4,6 +4,8 @@ permalink: wiki/Talk:Tablet_PC_Setup/
 layout: wiki
 ---
 
+2-15-11
+
 Why do we have Tablet PC Configuration and Tablet PC Setup?
 
 The thought was that if you did not decide to delete the script pages I
