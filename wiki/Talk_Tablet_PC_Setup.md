@@ -8,22 +8,28 @@ layout: wiki
 in a graphics program, so you don't have to worry about accidentally
 issuing a command, or worse, drawing a line if you incidentally touch
 the tablet's screen when not holding the stylus. Additionally some
-serial tablet pc's have issues with extra lines being drawn in
+serial & N-trig tablet pc's have issues with extra lines being drawn in
 applications such as Xournal, when touch is on while writing with the
 stylus.
+
+### Wacom tablet pc Script
 
 \[The following script depends on the xsetwacom get and set commands.\]
 The get command determines whether touch is on or off while the two set
 commands turn touch on or off. \[The "device name" for touch is found by
 using 'xsetwacom list' as mentioned in the script comments.\]
 
-For the N-trig: N-Trigs can also have the issue of extra lines being
-drawn even when using the stylus if touch is on. ... This script works
-in a different manner from the one above. When first toggled it issues
-the xinput touch disable command (0) and then creates a file called
-touch\_off in the /tmp directory. When toggled again it checks for the
-presence of the touch\_off file and if present issues the xinput touch
-enabled (1) command, followed by the deletion of the file.
+For the N-trig:
+
+### N-trig tablet pc Script
+
+N-Trigs can also have the issue of extra lines being drawn even when
+using the stylus if touch is on. ... This script works in a different
+manner from the one above. When first toggled it issues the xinput touch
+disable command (0) and then creates a file called touch\_off in the
+/tmp directory. When toggled again it checks for the presence of the
+touch\_off file and if present issues the xinput touch enabled (1)
+command, followed by the deletion of the file.
 
 2-15-11 Why do we have Tablet PC Configuration and Tablet PC Setup?
 
