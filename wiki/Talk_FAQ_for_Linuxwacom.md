@@ -4,4 +4,4 @@ permalink: wiki/Talk:FAQ_for_Linuxwacom/
 layout: wiki
 ---
 
-Have I addressed your concerns Peter? - Favux
+2-15-11 Have I addressed your concerns Peter? - Favux
