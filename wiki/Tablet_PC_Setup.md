@@ -114,12 +114,21 @@ you.
 Also see [Magick
 Rotation](/wiki/External_applications#Magick_Rotation "wikilink").
 
-Touch Toggle Script
--------------------
+Touch Toggle Scripts
+--------------------
+
+Turning touch off can be convient when working in a graphics program, so
+you don't have to worry about accidentally issuing a command, or worse,
+drawing a line if you incidentally touch the tablet's screen when not
+holding the stylus. Additionally some serial tablet pc's have issues
+with extra lines being drawn in applications such as Xournal, when touch
+is on while writing with the stylus.
 
 The following script depends on the [xsetwacom](xsetwacom "wikilink")
-get and set commands. The "Device name" for touch is found by using
-'xsetwacom list' as mentioned in the script comments.
+get and set commands. The get command determines whether touch is on or
+off while the two set commands turn touch on or off. The "device name"
+for touch is found by using 'xsetwacom list' as mentioned in the script
+comments.
 
     #!/bin/bash
 
@@ -144,12 +153,18 @@ through Properties. Then you can place it in a launcher or bind a key to
 the script. If you drag the launcher into a panel it will execute with a
 single click.
 
-### N-trig tablet pc's
+### N-trig tablet pc's Script
 
-If you have the HP TX2z or Dell XT & XT2 you likely have your touch on
-the evdev driver rather than the Wacom driver. In that case the Touch
-Toggle Script above will not work for you. You can use the following
-script modified for the evdev driver.
+N-Trigs can also have the issue of extra lines being drawn even when
+using the stylus if touch is on. If you have the HP TX2z or Dell XT &
+XT2 you likely have your touch on the evdev driver rather than the Wacom
+driver. In that case the Touch Toggle Script above will not work for
+you. You can use the following script modified for the evdev driver.
+This script works in a different manner from the one above. When first
+toggled it issues the xinput touch disable command (0) and then creates
+a file called touch\_off in the /tmp directory. When toggled again it
+checks for the presence of the touch\_off file and if present issues the
+xinput touch enabled (1) command, followed by the deletion of the file.
 
     #!/bin/bash
 
