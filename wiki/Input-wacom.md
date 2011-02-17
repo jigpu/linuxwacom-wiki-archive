@@ -33,16 +33,8 @@ from your downloaded tarball.
 
     tar xjvf input-wacom-0.10.10-2.tar.bz2
     cd input-wacom-0.10.10-2
-    ./autogen.sh --prefix=/usr
-
-The prefix of /usr is correct on most distributions (unfortunately, the
-default is still /usr/local which isn't used widely anymore). If you're
-on a 64-bit machine, you may also need to add --libdir=/usr/lib64. If
-unsure, search for evdev\_drv.so. If it is in
-/usr/lib/xorg/modules/input, then the prefix of /usr is enough. If it is
-in /usr/lib64/xorg/modules/input, even if it is in
-/usr/lib/xorg/modules/input, then you need to specify
---libdir=/usr/lib64.
+    ./autogen.sh --prefix=/usr --libdir=/usr/lib # on 32 bit machines
+    ./autogen.sh --prefix=/usr --libdir=/usr/lib64 # on 64 bit machines
 
 Then copy the wacom.ko module to the appropriate directory. Depending on
 your kernel you may need to locate the folder the compiled wacom.ko is
