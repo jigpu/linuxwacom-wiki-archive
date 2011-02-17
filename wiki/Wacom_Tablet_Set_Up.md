@@ -126,9 +126,6 @@ To configure all this, do the following:
     combination
 -   tablet button 1 should now toggle the touch between on and off
 
-**Tip** If you are using a xorg.conf the symlink for the Bamboo P&T pad
-is wacom-touch not wacom.
-
 **Tip** No one has yet reported trying a stylus with an eraser on the
 Bamboo Pen that I'm aware of. If anyone has and the eraser works please
 notify us at
