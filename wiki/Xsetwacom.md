@@ -44,13 +44,13 @@ commands. The device ID and device type is provided as well.
 
 </noinclude> The usual invocation to get a parameter is:
 
-` xsetwacom get "Wacom Intuos4 6x9 stylus" Button1`
+` xsetwacom get "Wacom Intuos4 6x9 stylus" Button 1`
 
 Replace the device name with the one applicable in your case. This will
 print the current value of the parameter, in this case the current
 mapping for button 1.
 
-` xsetwacom set "Wacom Intuos4 6x9 stylus" Button1 3`
+` xsetwacom set "Wacom Intuos4 6x9 stylus" Button 1 3`
 
 sets the button 1 to logical button 3 - a right click. Note that
 parameters are per-tool and you will need to set the parameter for each
