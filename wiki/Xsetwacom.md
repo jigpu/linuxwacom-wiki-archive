@@ -129,11 +129,12 @@ You can also combine changes to the inner and outer pairs simultaneously
 you prefer with your stylus and eraser.
 
 A graphical javascript demo is available
-[here](http://linuxwacom.sourceforge.net/misc/bezier.html). It is more
-generalized than the implementation in xf86-input-wacom. But it is easy
-enough to only drag the two control points and follow the constraints
-described above to duplicate the effects of your *PressCurve* parameter
-settings.
+[here](http://linuxwacom.sourceforge.net/misc/bezier.html). Drag the two
+control points and follow the constraints described above to duplicate
+the effects of your *PressCurve* parameter settings. Note that a valid
+pressure curve setting in
+[xf86-input-wacom](xf86-input-wacom "wikilink") must have all four
+values between 0 and 100.
 
 Rotate
 ------
