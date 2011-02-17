@@ -4,6 +4,7 @@ permalink: wiki/Xsetwacom/
 layout: wiki
 tags:
  - HOWTO
+ - DeveloperPages
 ---
 
 <noinclude> xsetwacom is a commandline utility to change wacom driver
