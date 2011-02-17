@@ -21,9 +21,7 @@ The Linux Wacom Project provides three mailing lists:
     is a list for general discussions and user problems.
 
 The archives for these lists are also useful for searching problems you
-are encountering.
-
-<noinclude>
+are encountering. <noinclude>
 
 Administrator interfaces
 ------------------------

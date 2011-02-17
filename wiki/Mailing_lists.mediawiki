@@ -4,9 +4,8 @@ The Linux Wacom Project provides three mailing lists:
 * [http://lists.sourceforge.net/mailman/listinfo/linuxwacom-discuss linuxwacom-discuss] ([http://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-discuss archives]) is a list for general discussions and user problems.
 
 The archives for these lists are also useful for searching problems you are encountering.
-
-
 <noinclude>
+
 == Administrator interfaces ==
 The admin interfaces for the three lists are:
 * https://lists.sourceforge.net/lists/admin/linuxwacom-announce
