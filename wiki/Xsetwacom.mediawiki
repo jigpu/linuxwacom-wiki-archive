@@ -5,7 +5,7 @@ Note that any setting changed by xsetwacom will be reset to default (or a
 [[Configuring X|statically configured setting]]) whenever the device is
 unplugged, disabled or the X Server is restarted.
 
-'''A note to developers: do not rely on xsetwacom, as it's UI will change without warning.'''
+'''A note to developers: do not rely on xsetwacom, as it's UI will change without warning.''' See also [[#Table of New Parameter Names]]
 
 = Usage =
 To list the applicable devices. 

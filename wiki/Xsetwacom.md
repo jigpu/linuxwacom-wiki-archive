@@ -21,7 +21,8 @@ a [statically configured setting](/wiki/Configuring_X "wikilink")) whenever
 the device is unplugged, disabled or the X Server is restarted.
 
 **A note to developers: do not rely on xsetwacom, as it's UI will change
-without warning.**
+without warning.** See also [\#Table of New Parameter
+Names](#Table_of_New_Parameter_Names "wikilink")
 
 Usage
 =====
