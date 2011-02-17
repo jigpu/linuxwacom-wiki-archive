@@ -105,9 +105,7 @@ The Tablet PC Button i.e. ''TPCButton'' parameter is "on" by default for tablet 
 Note that ''TPCButton'' parameter functionality was added to xsetwacom in the ''xf86-input-wacom-0.10.10+ tree''.  If you want to use this xsetwacom parameter, either clone the [[xf86-input-wacom]] git repository, or download a later tar.
 
 = Table of New Parameter Names =
-'''Information Pending''' - this entry posted in anticipation of upcoming changes, does not apply yet.
-
-Most of the new parameter names apply starting with [http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ xf86-input-wacom-0.10.11] released 2-17-11(?).  Some were changed or removed earlier.  Many of the parameter names were changed to make them more readable.  Some were changed or removed for code stream-lining purposes, such as adding the whitespace between Button and the number, i.e. Button5 becoming Button 5.
+Most of the new parameter names apply starting with [http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ xf86-input-wacom-0.10.11] released 2-16-11.  Some were changed or removed earlier.  Many of the parameter names were changed to make them more readable.  Some were changed or removed for code stream-lining purposes, such as adding the whitespace between Button and the number, i.e. Button5 becoming Button 5.
 {| border="1"
 |+ ''Table of New Parameter Name v.s. Old Parameter Name''
 ! New Parameter Name !! Old Parameter Name
