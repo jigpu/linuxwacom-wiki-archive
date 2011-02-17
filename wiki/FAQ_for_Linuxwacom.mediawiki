@@ -15,7 +15,7 @@ If you are losing your settings due to the screen saver or suspend you could try
 == Is hot plug supported for X intput devices? ==
 See the linuxwacom project [[FAQ#Is hot plugging supported for my USB tablet?|FAQ]]
 
-A workaround for Xorg's that do not support hot plugging by Aristeu Rozanski's is ''wdaemon'' linked at the bottom of the [[Linuxwacom HOWTO#Hotplugging the device|Tablet Hotplugging]] section in the [[Linuxwacom HOWTO]].  Last development on it was 9/08 so later model tablets aren't included.  This daemon is not supported by the linuxwacom project and no guarantees are made.
+A workaround for Xorg's that do not support hot plugging by Aristeu Rozanski is ''wdaemon'' linked at the bottom of the [[Linuxwacom HOWTO#Hotplugging the device|Tablet Hotplugging]] section in the [[Linuxwacom HOWTO]].  Last development on it was 9/08 so later model tablets aren't included.  This daemon is not supported by the linuxwacom project and no guarantees are made.
 
 == Is my tablet supported? What about my special stylus? ==
 Please see the [[FAQ#Which devices are supported?|Devices supported table]] on the linuxwacom project FAQ.  The Main page also contains a link to the table of all tablets that are known to be supported.

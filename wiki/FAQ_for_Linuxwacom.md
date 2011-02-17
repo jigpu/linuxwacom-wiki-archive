@@ -44,7 +44,7 @@ See the linuxwacom project
 [FAQ](/wiki/FAQ#Is_hot_plugging_supported_for_my_USB_tablet? "wikilink")
 
 A workaround for Xorg's that do not support hot plugging by Aristeu
-Rozanski's is *wdaemon* linked at the bottom of the [Tablet
+Rozanski is *wdaemon* linked at the bottom of the [Tablet
 Hotplugging](/wiki/Linuxwacom_HOWTO#Hotplugging_the_device "wikilink") section
 in the [Linuxwacom HOWTO](/wiki/Linuxwacom_HOWTO "wikilink"). Last development
 on it was 9/08 so later model tablets aren't included. This daemon is
