@@ -2,7 +2,7 @@
 {{Unclear | reason=
 * Missing explanation what this script does
 * Why would a user want to do this?}}
-Addressed with:  Turning touch off can be convient when working in a graphics program, so you don't have to worry about accidentally issuing a command, or worse, drawing a line if you incidentally touch the tablet's screen when not holding the stylus.  Additionally some serial & N-trig tablet pc's have issues with extra lines being drawn in applications such as Xournal, when touch is on while writing with the stylus.
+Addressed with:  Turning touch off can be convenient when working in a graphics program, so you don't have to worry about accidentally issuing a command, or worse, drawing a line if you incidentally touch the tablet's screen when not holding the stylus.  Additionally some serial & N-trig tablet pc's have issues with extra lines being drawn in applications such as Xournal, when touch is on while writing with the stylus.
 
 === Wacom tablet pc Script ===
 [The following script depends on the xsetwacom get and set commands.]  The get command determines whether touch is on or off while the two set commands turn touch on or off. [The "device name" for touch is found by using 'xsetwacom list' as mentioned in the script comments.] 

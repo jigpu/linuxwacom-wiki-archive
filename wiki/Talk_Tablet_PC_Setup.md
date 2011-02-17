@@ -4,7 +4,7 @@ permalink: wiki/Talk:Tablet_PC_Setup/
 layout: wiki
 ---
 
-2-16-11 Addressed with: Turning touch off can be convient when working
+2-16-11 Addressed with: Turning touch off can be convenient when working
 in a graphics program, so you don't have to worry about accidentally
 issuing a command, or worse, drawing a line if you incidentally touch
 the tablet's screen when not holding the stylus. Additionally some
