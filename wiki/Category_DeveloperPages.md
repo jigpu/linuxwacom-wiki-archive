@@ -15,7 +15,7 @@ X driver development
 [xf86-input-wacom](xf86-input-wacom "wikilink") is in a git repository.
 To develop, the following steps are required:
 
--   clone the source
+-   [clone](/wiki/Using_Git "wikilink") the source
 
 ` git clone `[`git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom`](git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom)
 

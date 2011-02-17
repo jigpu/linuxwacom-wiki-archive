@@ -4,7 +4,7 @@ For working tablet support, you need two vital pieces installed on your machine.
 
 = X driver development =
 [[xf86-input-wacom]] is in a git repository. To develop, the following steps are required:
-* clone the source
+* [[Using Git|clone]] the source
   git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom
 * build the source
   ./autogen.sh --prefix=/usr
