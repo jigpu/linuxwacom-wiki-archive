@@ -84,10 +84,10 @@ Mode
 
 The *Mode* parameter sets the device mode as either *Relative*, the
 default for cursor (the Wacom tablet mouse) and tablet touch or
-*Absolute*, the default for the stylus, eraser, and tablet pc touch.
+*Absolute*, the default for the stylus, eraser, and tablet PC touch.
 *Relative Mode* means pointer tracking for the device will function like
 a mouse, whereas *Absolute Mode* means the pointer corresponds to the
-device's actual position on the tablet or tablet pc screen. An example
+device's actual position on the tablet or tablet PC screen. An example
 of the command would be:
 
 ` xsetwacom set "device name" Mode "Absolute"`
