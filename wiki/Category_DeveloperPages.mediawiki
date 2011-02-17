@@ -6,7 +6,7 @@ For working tablet support, you need two vital pieces installed on your machine.
 [[xf86-input-wacom]] is in a git repository. To develop, the following steps are required:
 * [[Using Git|clone]] the source
   git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom
-* build the source
+* [[Building the driver|build]] the source
   ./autogen.sh --prefix=/usr
 * hack it!
 * create a patch with [[Using Git|git format-patch]]
@@ -14,7 +14,7 @@ For working tablet support, you need two vital pieces installed on your machine.
 
 For more information on these steps, see 
 * [[Using Git]]
-* [[Installing from source]]
+* [[Building the driver]]
 * [[Submitting Patches]]
 
 == Developing for linuxwacom ==

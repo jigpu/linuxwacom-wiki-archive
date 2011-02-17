@@ -19,7 +19,7 @@ To develop, the following steps are required:
 
 ` git clone `[`git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom`](git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom)
 
--   build the source
+-   [build](/wiki/Building_the_driver "wikilink") the source
 
 ` ./autogen.sh --prefix=/usr`
 
@@ -31,7 +31,7 @@ To develop, the following steps are required:
 For more information on these steps, see
 
 -   [Using Git](/wiki/Using_Git "wikilink")
--   [Installing from source](/wiki/Installing_from_source "wikilink")
+-   [Building the driver](/wiki/Building_the_driver "wikilink")
 -   [Submitting Patches](/wiki/Submitting_Patches "wikilink")
 
 Developing for linuxwacom
