@@ -1,0 +1,45 @@
+This page describes the coding style used in [[xf86-input-wacom]]. If you
+submit a patch please make sure the style adheres to this guideline or the
+patch may be rejected.
+
+= C coding style =
+
+* Tab is set to 8 characters
+* Default indentation is one tab
+* Indentation with tabs and remaining spaces to lign up code where necessary. Example below shows tabs with "''>----''" and spaces with "''.''".
+<pre>
+>-------if.(InitValuatorClassDeviceStruct(pInfo->dev, nbaxes,
+#if.GET_ABI_MAJOR(ABI_XINPUT_VERSION) >= 7
+>------->------->------->------->-------..axis_labels,
+#endif
+>-------				..GetMotionHistorySize(),
+>-------				..(is_absolute(pInfo) ?  Absolute : Relative) | OutOfProximity) == FALSE)
+</pre>
+* Opening curly braces { go on a new line. Closing curly braces } go on the same line as else. e.g.
+<pre>
+if (condition)
+{
+        do_something();
+} else {
+        do_something_else();
+}
+</pre>
+* Declarations ''should'' be aligned. e.g.
+<pre>
+int a   = 0;
+int foo = 10;
+int bar = 11;
+</pre>
+* No [http://en.wikipedia.org/wiki/Hungarian_notation hungarian notation]. There are a few exceptions for this (''pInfo'', ''pDev'' and some remainders of old code).
+* Use const for pointers where appropriate.
+
+
+Each new file requires the following line at the bottom of the file:
+
+  /* vim: set noexpandtab tabstop=8 shiftwidth=8: */
+
+
+{{Tip|text=The above line will cause vim to autoconfigure indentation and tab settings}}
+
+
+[[Category:DeveloperPages]]
