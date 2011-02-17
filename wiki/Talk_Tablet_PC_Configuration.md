@@ -19,4 +19,4 @@ at the command line, with similar results to what the wacomcpl gui would
 have produced.
 
 Similar entries also made to Wacom Tablet Configuration and Waltop
-Tablet Setup.
+Tablet Setup. - Favux
