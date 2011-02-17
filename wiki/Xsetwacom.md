@@ -20,10 +20,6 @@ encounter.
 [statically configured setting](/wiki/Configuring_X "wikilink")) whenever the
 device is unplugged, disabled or the X Server is restarted.
 
-**A note to developers: do not rely on xsetwacom, as it's UI will change
-without warning.** See also [\#Table of New Parameter
-Names](#Table_of_New_Parameter_Names "wikilink")
-
 Usage
 =====
 
@@ -185,9 +181,7 @@ Table of New Parameter Names
 several revisions (the biggest change happened in
 [xf86-input-wacom-0.10.11](http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/),
 released Feb 16, 2011). Reasons for changing parameters in xsetwacom
-include UI improvements or improved maintainability of the code. **Note
-to developers: do not rely on xsetwacom's output or input. It may change
-at any time.**
+include UI improvements or improved maintainability of the code.
 
 | Old Parameter Name                 | New Parameter Name                 |
 |------------------------------------|------------------------------------|

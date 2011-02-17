@@ -5,7 +5,7 @@ xsetwacom is a commandline utility to change wacom driver settings at runtime. T
 [[Configuring X|statically configured setting]]) whenever the device is
 unplugged, disabled or the X Server is restarted.
 
-'''A note to developers: do not rely on xsetwacom, as it's UI will change without warning.''' See also [[#Table of New Parameter Names]]
+{{Warning|reason=A note to developers: do not rely on xsetwacom, as it's UI will change without warning. See also [[#Table of New Parameter Names]]}}
 
 = Usage =
 To list the applicable devices. 
@@ -98,7 +98,9 @@ TPCButton is ''on''  by default for Tablet PCs and ''off'' for all other models.
 Note that the ''TPCButton'' parameter is only available in ''xf86-input-wacom-0.10.10'' or later.
 
 = Table of New Parameter Names =
-[[xsetwacom]]'s parameter names have changed over several revisions (the biggest change happened in [http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ xf86-input-wacom-0.10.11], released Feb 16, 2011). Reasons for changing parameters in xsetwacom include UI improvements or improved maintainability of the code. '''Note to developers: do not rely on xsetwacom's output or input. It may change at any time.'''
+[[xsetwacom]]'s parameter names have changed over several revisions (the biggest change happened in [http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ xf86-input-wacom-0.10.11], released Feb 16, 2011). Reasons for changing parameters in xsetwacom include UI improvements or improved maintainability of the code. 
+
+{{Warning|reason=A note to developers: do not rely on xsetwacom, as it's UI will change without warning.}}
 
 {| border="1"
 |+ ''Table of New Parameter Name v.s. Old Parameter Name''
