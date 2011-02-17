@@ -35,25 +35,27 @@ IDs](/wiki/Device_IDs "wikilink").
 
 Depending on your distribution's kernel the 5 original models may not be
 recognized because the default wacom.ko with the kernel may not have the
-models in it. If your distribution has not backported support and has no
-plans to you can use the linuxwacom-0.8.8-10's wacom.ko as it does have
-the models in it. See [Linuxwacom](/wiki/Linuxwacom "wikilink"). The wacom.ko
-will be created after the ./configure line, no need for the 'make &&
-sudo make install' line. Just copy it into place.
+models in it. If your distribution has not backported support, and has
+no plans to do so, it probably is a better idea to wait for a release
+that supports your tablet. However if you feel you can't wait and must
+be able to use your BambooPT now you could use linuxwacom-0.8.8-10's
+wacom.ko as it does have the models in it. Installing out-of-tree kernel
+patches is never a good idea, so give this some thought before
+proceeding. If you decide to proceed see
+[Linuxwacom](/wiki/Linuxwacom "wikilink").
 
-    sudo cp ./src/2.6.30/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko
+Note the location of the newly compiled wacom.ko will appear in the
+output after the ./configure line under the *BUILD OPTIONS:* header.
+Just copy it into place.
 
-Rebuild all of the module dependencies before rebooting with.
-
-    depmod -a
-
-The newer 5 models can either be manually added to linuxwacom's
-wacom\_wac.c in the source code before compiling or you could use
-[input-wacom](input-wacom "wikilink")-0.10.10-1, which already has the
+Keeping the cavets about out-of-tree kernel patches mentioned above in
+mind, the newer 5 models are supported by
+[input-wacom](input-wacom "wikilink")-0.10.10-2, which has all 10 of the
 models added.
 
-All 10 models have been added to [xf86-input-wacom-0.10.10 and
-later](xf86-input-wacom "wikilink") as of January 21, 2011.
+All 10 models have been added to
+[xf86-input-wacom-0.10.10+](xf86-input-wacom "wikilink") and later as of
+January 21, 2011.
 
 ### Bamboo P&T Touch Toggle Script
 

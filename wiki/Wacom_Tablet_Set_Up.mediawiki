@@ -10,22 +10,13 @@ In October of 2009 Wacom released a new series of 5 tablets we'll call generical
 To determine your product ID enter in a terminal 'lsusb' and look in the Wacom line.  The first 5 models are the 0xD0, 0xD1, 0xD2, 0xD3, & 0xD4.  The new models are the 0xD6, 0xD7, 0xD8, 0xDA, & 0xDB.  See [[Device IDs]].
 
 === Setup ===
-{{Unclear|reason=* do not re-write compilation instructions here, instead, link to linuxwacom kernel compilation page
-* recommending that users install out-of-tree kernel patches is not a good idea}}
-Depending on your distribution's kernel the 5 original models may not be recognized because the default wacom.ko with the kernel may not have the models in it.  If your distribution has not backported support and has no plans to you can use the linuxwacom-0.8.8-10's wacom.ko as it does have the models in it.  See [[Linuxwacom]].  The wacom.ko will be created after the ./configure line, no need for the 'make && sudo make install' line.  Just copy it into place.
-<pre>
-sudo cp ./src/2.6.30/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko
-</pre>
-Rebuild all of the module dependencies before rebooting with.
-<pre>
-depmod -a
-</pre>
+Depending on your distribution's kernel the 5 original models may not be recognized because the default wacom.ko with the kernel may not have the models in it.  If your distribution has not backported support, and has no plans to do so, it probably is a better idea to wait for a release that supports your tablet.  However if you feel you can't wait and must be able to use your BambooPT now you could use  linuxwacom-0.8.8-10's wacom.ko as it does have the models in it.  Installing out-of-tree kernel patches is never a good idea, so give this some thought before proceeding.  If you decide to proceed see [[Linuxwacom]].
 
-{{Unclear|reason=* this is a HOWTO. do not recommend users hack the kernel patches. if they don't have appropriate kernels, they have to wait, or refer them to the developer pages}}
+Note the location of the newly compiled wacom.ko will appear in the output after the ./configure line under the ''BUILD OPTIONS:'' header.  Just copy it into place.
 
-The newer 5 models can either be manually added to linuxwacom's wacom_wac.c in the source code before compiling or you could use [[input-wacom]]-0.10.10-1, which already has the models added.
+Keeping the cavets about out-of-tree kernel patches mentioned above in mind, the newer 5 models are supported by [[input-wacom]]-0.10.10-2, which has all 10 of the models added.
 
-All 10 models have been added to [[xf86-input-wacom|xf86-input-wacom-0.10.10 and later]] as of January 21, 2011.
+All 10 models have been added to [[xf86-input-wacom|xf86-input-wacom-0.10.10+]] and later as of January 21, 2011.
 
 === Bamboo P&T Touch Toggle Script ===
 Turning touch off helps to avoid accidental input if you touch the tablet when not holding the stylus (it also duplicates the function and button assignment in Windows).
