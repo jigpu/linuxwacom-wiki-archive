@@ -78,8 +78,6 @@ xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" Button1 "key ctrl t"
 
 {{Tip|text=If you are using a xorg.conf the symlink for the Bamboo P&T pad is wacom-touch not wacom.}}
 
-'''Tip''' No one has yet reported trying a stylus with an eraser on the Bamboo Pen that I'm aware of.  If anyone has and the eraser works please notify us at [https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss linuxwacom-discuss].
-
 == Intuos4 ==
 
 === Intuos4 Wireless ===
