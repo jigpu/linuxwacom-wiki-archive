@@ -54,7 +54,7 @@ mapping for button 1.
 
 sets the button 1 to logical button 3 - a right click. Note that
 parameters are per-tool and you will need to set the parameter for each
-tool if you want them to apply tablet-wide.
+tool if you want them to apply tablet-wide. <noinclude> </noinclude>
 
 Finally, to get a list of parameters just type
 
