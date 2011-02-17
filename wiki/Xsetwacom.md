@@ -16,9 +16,9 @@ page provides a general overview and describes some of the
 [quirks](#xsetwacom_Command_Parameter_Usage "wikilink") you may
 encounter.
 
-Note that any setting changed by xsetwacom will be reset to default (or
-a [statically configured setting](/wiki/Configuring_X "wikilink")) whenever
-the device is unplugged, disabled or the X Server is restarted.
+**Any setting changed by xsetwacom will be reset to default** (or a
+[statically configured setting](/wiki/Configuring_X "wikilink")) whenever the
+device is unplugged, disabled or the X Server is restarted.
 
 **A note to developers: do not rely on xsetwacom, as it's UI will change
 without warning.** See also [\#Table of New Parameter
