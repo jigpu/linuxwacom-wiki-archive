@@ -166,12 +166,6 @@ is fine with the default settings.
 
 This method is a little tedious but not too bad all in all.
 
-### Guestimate the Coordinate Values
-
-If you have some experience you may want to eyeball the situation and
-plug in your "educated" guesses. Probably not the best way to go as it
-usually requires some trial and error.
-
 Apply the Coordinates
 ---------------------
 
