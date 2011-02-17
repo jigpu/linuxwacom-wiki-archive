@@ -121,9 +121,7 @@ say:
 
 ` xsetwacom set "device name" PressCurve 0 5 95 100`
 
-Note as long as the inner pair of values (y1 & x2) and the outer pair of
-values (x1 & y2) each equal 100 you've defined a valid Bezier curve for
-xf86-input-wacom. For a "firmer" touch (depressed curve), you could use:
+For a "firmer" touch (depressed curve), you could use:
 
 ` xsetwacom set "device name" PressCurve 5 0 100 95`
 
