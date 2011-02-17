@@ -13,18 +13,55 @@ Hotplugging setup with udev
 ---------------------------
 
 X Servers 1.8 and later use udev as device enumeration backend on Linux.
-Note that ideally no X-related configuration is stored in udev itself,
-it is simply used for getting hotplug notifications and a list of
-available devices. The devices visible to the X server include all
-devices with the udev property *ID\_INPUT* set to 1 (see *udevadm info
---export-bd*).
+**Note that no X-related configuration is stored in udev itself**, it is
+simply used for getting hotplug notifications and device enumeration.
+The devices visible to the X server include all devices with the udev
+property *ID\_INPUT* set to 1 (see *udevadm info --export-bd*). X
+servers that use udev as a backend support [\#xorg.conf.d
+configuration](#xorg.conf.d_configuration "wikilink").
 
-Actual configuration is performed through [xorg.conf.d
+xorg.conf.d configuration
+-------------------------
+
+X Servers 1.8 and later recommend configuration through [xorg.conf.d
 snippets](http://who-t.blogspot.com/2010/01/new-configuration-world-order.html).
+Such snippets represent configurations for classes of devices and apply
+for already present devices and newly plugged in devices.
+
 The xf86-input-wacom git tree ships an example configuration file in
 [*/conf/50-wacom.conf*](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/xf86-input-wacom;a=blob;f=conf/50-wacom.conf;h=b1742bceb0f0abb033306adf68d4854ef438b288;hb=HEAD).
 Drop this into your local */etc/X11/xorg.conf.d* directory and you're
-good to go.
+good to go. An example for such a snippet is provided here for
+explanatory purposes. If in doubt, refer to the default provided with
+the driver.
+
+    $> cat /etc/X11/xorg.conf.d/50-wacom.conf
+    Section "InputClass"
+            # Choose any identifier, this is for human-readable purposes only
+            Identifier "Wacom class"
+            # Match all devices that have Wacom or WACOM in the device name
+            MatchProduct "Wacom|WACOM"
+            # AND match devices with a device path of /dev/input/eventX
+            MatchDevicePath "/dev/input/event*"
+            # Use the wacom driver for any matching device
+            Driver "wacom"
+
+            # Apply custom options to this device.
+            Option "Rotate" "half"
+    EndSection
+
+The above is an examle only. In your configuration, you will most likely
+need to apply different (or no) options.
+
+### Known bugs
+
+The wacom driver provides each tool as a separate device, with a naming
+scheme of "&lt;tablet model&gt; *stylus*", "&lt;tablet model&gt;
+*eraser*", etc.
+
+-   In X Servers up to including 1.8, only the first device could be
+    configured with an xorg.conf.d snippet. Matching on e.g. "eraser"
+    will not work.
 
 Hotplugging setup with HAL
 --------------------------
