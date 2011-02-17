@@ -28,7 +28,7 @@ The newer 5 models can either be manually added to linuxwacom's wacom_wac.c in t
 All 10 models have been added to [[xf86-input-wacom|xf86-input-wacom-0.10.10 and later]] as of January 21, 2011.
 
 === Bamboo P&T Touch Toggle Script ===
-Turning touch off helps to avoid accidental input if you touch the tablet when not holding the stylus (it alsoduplicates the function and button assignment in Windows).
+Turning touch off helps to avoid accidental input if you touch the tablet when not holding the stylus (it also duplicates the function and button assignment in Windows).
 
 The following script requires [[xsetwacom]].  The device name for touch is found by using ''xsetwacom list dev'' as mentioned in the script comments. 
 <pre>

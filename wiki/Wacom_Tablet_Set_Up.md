@@ -58,7 +58,7 @@ later](xf86-input-wacom "wikilink") as of January 21, 2011.
 ### Bamboo P&T Touch Toggle Script
 
 Turning touch off helps to avoid accidental input if you touch the
-tablet when not holding the stylus (it alsoduplicates the function and
+tablet when not holding the stylus (it also duplicates the function and
 button assignment in Windows).
 
 The following script requires [xsetwacom](xsetwacom "wikilink"). The
