@@ -29,7 +29,7 @@ manner from the one above. When first toggled it issues the xinput touch
 disable command (0) and then creates a file called touch\_off in the
 /tmp directory. When toggled again it checks for the presence of the
 touch\_off file and if present issues the xinput touch enabled (1)
-command, followed by the deletion of the file.
+command, followed by the deletion of the file. - Favux
 
 2-15-11 Why do we have Tablet PC Configuration and Tablet PC Setup?
 
