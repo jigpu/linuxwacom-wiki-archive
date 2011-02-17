@@ -180,7 +180,8 @@ Most of the new parameter names apply starting with [http://sourceforge.net/proj
 | TwinView
 |-
 |}
-</noinclude>
 
 [[Category:HOWTO]]
 [[Category:DeveloperPages]]
+
+</noinclude>
