@@ -10,6 +10,8 @@ In October of 2009 Wacom released a new series of 5 tablets we'll call generical
 To determine your product ID enter in a terminal 'lsusb' and look in the Wacom line.  The first 5 models are the 0xD0, 0xD1, 0xD2, 0xD3, & 0xD4.  The new models are the 0xD6, 0xD7, 0xD8, 0xDA, & 0xDB.  See [[Device IDs]].
 
 === Set Up ===
+{{Unclear|reason=* do not re-write compilation instructions here, instead, link to linuxwacom kernel compilation page
+* recommending that users install out-of-tree kernel patches is not a good idea}}
 Depending on your distribution's kernel the 5 original models may not be recognized because the default wacom.ko with the kernel may not have the models in it.  If your distribution has not backported support and has no plans to you can use the linuxwacom-0.8.8-10's wacom.ko as it does have the models in it.  See [[Linuxwacom]].  The wacom.ko will be created after the ./configure line, no need for the 'make && sudo make install' line.  Just copy it into place.
 <pre>
 sudo cp ./src/2.6.30/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko
