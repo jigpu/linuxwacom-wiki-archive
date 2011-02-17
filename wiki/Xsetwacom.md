@@ -213,7 +213,7 @@ Table of New Parameter Names
 
 Most of the new parameter names apply starting with
 [xf86-input-wacom-0.10.11](http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/)
-released 2-16-11. Some were changed or removed earlier. Many of the
+released Feb 16, 2011 Some were changed or removed earlier. Many of the
 parameter names were changed to make them more readable. Some were
 changed or removed for code stream-lining purposes, such as adding the
 whitespace between Button and the number, i.e. Button5 becoming Button
