@@ -81,13 +81,11 @@ mentioned in the script comments.
         xsetwacom set "$DEVICE" touch on
     fi
 
-Place the script in a file called .toggle-touch.sh (or whatever you
-want) and place it in your home directory. Remember it will be a hidden
-file because of the . in front. Also please remember you have to chmod
-it to make it executable, or right click on it and make it executable
-through Properties. Then you have to make a key binding for it in order
-to assign it to a tablet button. One way to do that is to install the
-CompizConfig Settings Manager (if you haven't already).
+Place the script in a file called *bin/toggle-touch.sh* in your home
+directory. Make the script executable with *chmod +x
+$HOME/bin/toggle-touch.sh*. Then you have to make a key binding for it
+in order to assign it to a tablet button. One way to do that is to
+install the CompizConfig Settings Manager (if you haven't already).
 
 -   click on the General option
 -   click on Commands
