@@ -8,8 +8,8 @@ tags:
 
 Calibration is necessary when the pointer on the screen does not
 coincide with where the input tool is located on the tablet. This is
-usually most noticeable on a Wacom tablet pc, often after rotation. The
-pointer being more than a mm or two off can render using a tablet pc or
+usually most noticeable on a Wacom tablet PC, often after rotation. The
+pointer being more than a mm or two off can render using a tablet PC or
 Cintiq awkward, more so with the stylus than with touch (Cintiq's don't
 have to worry about touch). With a non-Cintiq Wacom tablet this may be
 seen as the input tool not reaching a particular monitor's edge or
@@ -19,25 +19,25 @@ There can be multiple causes of misalignment. It may come about if the
 video driver is not reporting the coordinates quite correctly or a
 hardware problem, e.g. video chipset (firmware) etc. Or even just from
 the parallax of your working postition. Parallax is present in tablet
-pc's and Cintiq's because the digitizer and LCD screen are two separate
+PC's and Cintiq's because the digitizer and LCD screen are two separate
 devices layered on each other, so there is some physical depth inherent
 in the combination of the devices.
 
-The default coordinate settings for your tablet or tablet pc that are
+The default coordinate settings for your tablet or tablet PC that are
 used by the Wacom drivers are usually accurate. The Wacom USB kernel
 driver supplies the default USB Wacom Tablet Area values for each model
 to the [xf86-input-wacom](xf86-input-wacom "wikilink") X driver. The X
 driver then scales the tablet's bottomX & Y to the screen if the tablet
 and screen do not have a 1:1 ratio. The X driver also handles
 translation into the resolution the X server uses (points/meter). With
-Wacom Serial tablet pc's (ISDV4 devices) it's a different story because
+Wacom Serial tablet PC's (ISDV4 devices) it's a different story because
 there is only "one model" and querying the tablet (isdv4GetRanges)
 returns the Wacom Tablet Area values. In the previous driver
 ([linuxwacom](linuxwacom "wikilink")) the Wacom Serial graphics tablet's
 Wacom Tablet Area values were defined in the X driver, like usb tablets
 in the kernel driver.
 
-Fortunately the xf86-input-wacom X driver allows the user to over ride
+Fortunately the xf86-input-wacom X driver allows the user to override
 the default values with user specified settings when needed. Wacom USB
 graphics tablets also may want to use the
 [xsetwacom](xsetwacom "wikilink") or [static
@@ -68,9 +68,9 @@ Or you can look in the Xorg.0.log file in /var/log for something like:
 
 ` Wacom BambooFun 2FG 4x5 Pen stylus: top X=0 top Y=0 bottom X=14720 bottom Y=9200`
 
-If you have a serial or usb tablet pc or usb tablet it will also tell
+If you have a serial or usb tablet PC or usb tablet it will also tell
 you what port or device input event the data is coming in on. Usually
-tty/S0 for serial tablet pc's.
+tty/S0 for serial tablet PC's.
 
 ### Calibration Programs
 
@@ -89,9 +89,6 @@ to the following. **Be sure** to be in your normal working postition and
 to hold the stylus as you normally do, to take parallax into account,
 when calibrating.
 
-**Warning**: Xinput\_calibrator's (a non-LWP external program) output
-describes out-of-date information on how to configure your device.
-
     ~$ xinput_calibrator --device "9"
     Calibrating standard Xorg driver "Wacom BambooFun 2FG 4x5 Pen stylus"
         current calibration values: min_x=0, max_x=14720 and min_y=0, max_y=9200
@@ -108,12 +105,13 @@ describes out-of-date information on how to configure your device.
 
     Change '!!Name_Of_TouchScreen!!' to your device's name in the config above.
 
-Although xinput\_calibrator uses outdated HAL configuration we don't
-care because we just need the coordinate values it has determined. You
-can see the default values but the 4 values you are interested in are
-under the *Making the calibration permanent* heading. So minx = TopX,
-maxx = BottomX, miny = TopY, and maxy = BottomY. You'll want to repeat
-the calibration several times and use the smallest and largest values or
+Although xinput\_calibrator suggests the deprecated [HAL
+configuration](/wiki/Configuring_X#Hotplugging_setup_with_HAL "wikilink") we
+just need the coordinate values it has determined. You can see the
+default values but the 4 values you are interested in are under the
+*Making the calibration permanent* heading. So minx = TopX, maxx =
+BottomX, miny = TopY, and maxy = BottomY. You'll want to repeat the
+calibration several times and use the smallest and largest values or
 perhaps an average if you see no trend. Then use the TopX & Y and
 BottomX & Y coordinate values in [Apply the
 Coordinates](/wiki/Calibration#Apply_the_Coordinates "wikilink") below.
@@ -147,7 +145,7 @@ e.g.
 
 Using the *-proximity* switch will tell you when you've gone beyond the
 tablets edge. Then trace along the entire periphery of the tablet. This
-is easier if you have a bezel lip like tablet pc's do. When you have
+is easier if you have a bezel lip like tablet PC's do. When you have
 finished make sure the terminal is in focus and enter ctrl-z to shut
 *xinput test* down.
 
