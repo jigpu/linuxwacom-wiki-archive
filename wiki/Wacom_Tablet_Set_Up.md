@@ -84,8 +84,13 @@ mentioned in the script comments.
 Place the script in a file called *bin/toggle-touch.sh* in your home
 directory. Make the script executable with *chmod +x
 $HOME/bin/toggle-touch.sh*. Then you have to make a key binding for it
-in order to assign it to a tablet button. One way to do that is to
-install the CompizConfig Settings Manager (if you haven't already).
+in order to assign it to a tablet button. This depends on your window
+manager.
+
+### Compiz
+
+If your window manager is compiz, install the CompizConfig Settings
+Manager (if you haven't already).
 
 -   click on the General option
 -   click on Commands
