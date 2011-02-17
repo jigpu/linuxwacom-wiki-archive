@@ -29,7 +29,7 @@ Replace the device name with the one applicable in your case. This will print th
   xsetwacom set "Wacom Intuos4 6x9 stylus" Button 1 3
 sets the button 1 to logical button 3 - a right click. Note that parameters are per-tool and you will need to set the parameter for each tool if you want them to apply tablet-wide.
 <noinclude>
-{{Tip|text=The above example uses notiation from version 0.10.11 and later.
+{{Tip|text=The above example uses notation from version 0.10.11 and later.
 See [[#Table of New Parameter Names|Table of New Parameter Names]]}}
 </noinclude>
 
