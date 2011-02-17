@@ -50,4 +50,4 @@ X driver
 --------
 
 Please see [Xf86-input-wacom](/wiki/Xf86-input-wacom "wikilink") for the X
-driver required for X servers 1.7 and up.
+driver required for X servers 1.7 and later.

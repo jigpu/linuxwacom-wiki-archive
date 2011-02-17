@@ -25,6 +25,6 @@ depmod -a
 </pre>
 
 == X driver ==
-Please see [[Xf86-input-wacom]] for the X driver required for X servers 1.7 and up.
+Please see [[Xf86-input-wacom]] for the X driver required for X servers 1.7 and later.
 
 [[Category:DeveloperPages]]
