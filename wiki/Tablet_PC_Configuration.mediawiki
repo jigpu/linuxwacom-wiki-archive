@@ -10,7 +10,7 @@ If yours is not among them noticed there is a high degree of overlap.  They're a
 
 If a xsetwacom command stops working your friend is the get command.
 {{:Xsetwacom}}
-
+{{Warning|reason=With the advent of [https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ xf86-input-wacom-10.11] the xsetwacom parameter names have changed.  See [[Xsetwacom#Table of New Parameter Names|Table of New Parameter Names]]}}
 
 == Installing the Script ==
 While you can change your settings on the fly using xsetwacom commands in a terminal they only apply during the current session.  So you need to set it up to auto-start.  Create a file and copy & paste the contents of the script you want into it.  Rename it .xsetwacom.sh (or whatever you want) and place it in your home directory. Remember it will be a hidden file because of the . in front. To enable the xsetwacom commands in the .xsetwacom.sh file to apply to Xserver through a reboot you enter in a terminal.
