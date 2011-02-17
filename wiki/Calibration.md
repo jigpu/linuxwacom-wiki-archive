@@ -116,7 +116,7 @@ perhaps an average if you see no trend. Then use the TopX & Y and
 BottomX & Y coordinate values in [Apply the
 Coordinates](/wiki/Calibration#Apply_the_Coordinates "wikilink") below.
 
-### xinput test (& evtest)
+### xinput test
 
 If you have a usb tablet a convenient way to read your default values
 from Xorg.0.log is to first unplug your tablet's usb cable. Then enter
@@ -165,18 +165,6 @@ default 0,0 14720,9200. The conclusion is the tested Bamboo P & T tablet
 is fine with the default settings.
 
 This method is a little tedious but not too bad all in all.
-
-While you could also use *evtest* (event test) if you specify the
-device's event number,
-
-` sudo evtest /dev/input/event5`
-
-to obtain the coordinate values, in practice it is not that useful.
-Evtest only gives you the coordinates of your first touch of the screen
-immediately after you run the command. So you have to constantly shut it
-off with ctrl-z and restart it and touch the screen again and again with
-your stylus or finger, trying to zero in on the minumum and maximum
-coordinates.
 
 ### Guestimate the Coordinate Values
 
