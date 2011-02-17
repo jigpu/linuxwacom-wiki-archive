@@ -115,17 +115,8 @@ the anchor points,
 which means it is linear, i.e. reflecting the tablet's designed pressure
 response (e.g. 0-1023). Think of it as a 100x100 grid with the Bezier
 curve a straight line from the lower left corner (0,0) to the upper
-right corner (100,100). To get a "softer" feel (a raised curve) to your
-stylus or eraser, you can change the values of the control points to
-say:
-
-` xsetwacom set "device name" PressCurve 0 5 95 100`
-
-For a "firmer" touch (depressed curve), you could use:
-
-` xsetwacom set "device name" PressCurve 5 0 100 95`
-
-Visually the *PressCurve* parameter covers the range:
+right corner (100,100). To get a different feel, you can change the
+values of the control points. Example values are:
 
       0 100   0 100  # ridiculously soft
       0  50  50 100  # very soft
