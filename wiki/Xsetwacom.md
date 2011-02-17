@@ -181,13 +181,13 @@ Note that the *TPCButton* parameter is only available in
 Table of New Parameter Names
 ============================
 
-Most of the new parameter names apply starting with
-[xf86-input-wacom-0.10.11](http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/)
-released Feb 16, 2011 Some were changed or removed earlier. Many of the
-parameter names were changed to make them more readable. Some were
-changed or removed for code stream-lining purposes, such as adding the
-whitespace between Button and the number, i.e. Button5 becoming Button
-5.
+[xsetwacom](xsetwacom "wikilink")'s parameter names have changed over
+several revisions (the biggest change happened in
+[xf86-input-wacom-0.10.11](http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/),
+released Feb 16, 2011). Reasons for changing parameters in xsetwacom
+include UI improvements or improved maintainability of the code. **Note
+to developers: do not rely on xsetwacom's output or input. It may change
+at any time.**
 
 | Old Parameter Name                 | New Parameter Name                 |
 |------------------------------------|------------------------------------|
