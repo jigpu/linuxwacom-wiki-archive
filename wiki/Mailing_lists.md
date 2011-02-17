@@ -2,6 +2,8 @@
 title: Mailing lists
 permalink: wiki/Mailing_lists/
 layout: wiki
+tags:
+ - MaintainerPages
 ---
 
 The Linux Wacom Project provides three mailing lists:
@@ -20,3 +22,18 @@ The Linux Wacom Project provides three mailing lists:
 
 The archives for these lists are also useful for searching problems you
 are encountering.
+
+<noinclude>
+
+Administrator interfaces
+------------------------
+
+The admin interfaces for the three lists are:
+
+-   <https://lists.sourceforge.net/lists/admin/linuxwacom-announce>
+-   <https://lists.sourceforge.net/lists/admin/linuxwacom-devel>
+-   <https://lists.sourceforge.net/lists/admin/linuxwacom-discuss>
+
+All three are password-protected. Please contact a current maintainer if
+you need the password but note that we will not give the password out
+for anyone but future co-maintainers. </noinclude>
