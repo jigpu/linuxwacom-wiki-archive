@@ -30,7 +30,7 @@ Replace the device name with the one applicable in your case. This will print th
 sets the button 1 to logical button 3 - a right click. Note that parameters are per-tool and you will need to set the parameter for each tool if you want them to apply tablet-wide.
 <noinclude>
 {{Tip|text=The above example uses notiation from version 0.10.11 and later.
-See [[#Table of New Parameter Names]]}}
+See [[#Table of New Parameter Names|Table of New Parameter Names]]}}
 </noinclude>
 
 Finally, to get a list of parameters just type
