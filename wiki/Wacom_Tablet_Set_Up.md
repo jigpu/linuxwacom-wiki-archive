@@ -95,7 +95,7 @@ Manager (if you haven't already).
 -   click on the General option
 -   click on Commands
 -   in Command line 0 (or whatever line you want) add the path to
-    .toggle-touch.sh, e.g.: /home/yourusername/.toggle-touch.sh
+    toggle-touch.sh, e.g.: /home/yourusername/bin/toggle-touch.sh
 -   click on Key Bindings and then to edit the corresponding Run command
     0 click on the Disabled button.
 -   next use a key combination not already in use, e.g. <Control>t, by
