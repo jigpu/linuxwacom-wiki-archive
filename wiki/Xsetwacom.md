@@ -219,31 +219,31 @@ changed or removed for code stream-lining purposes, such as adding the
 whitespace between Button and the number, i.e. Button5 becoming Button
 5.
 
-| New Parameter Name                 | Old Parameter Name                 |
+| Old Parameter Name                 | New Parameter Name                 |
 |------------------------------------|------------------------------------|
-| AbsWheelUp                         | AbsWUp                             |
-| AbsWheelDown                       | AbsWDn                             |
-| Area x1 y1 x2 y2                   | TopX, TopY, BottomX, & BottomY     |
-| Button 1 ...                       | Button1 ...                        |
-| CursorProximity                    | CursorProx                         |
-| removed                            | GetTabletID                        |
-| MapToOutput                        | new                                |
-| removed                            | mmonitor                           |
-| PressureCurve                      | PressCurve                         |
-| RelWheelUp                         | RelWUp                             |
-| RelWheelDown                       | RelWDn                             |
-| ResetArea                          | xyDefault                          |
-| Rotate values: none, cw, ccw, half | Rotate values: NONE, CW, CCW, HALF |
-| removed                            | Rspeed                             |
-| removed                            | Screen\_No                         |
-| StripLeftUp                        | StripLUp                           |
-| StripLeftDown                      | StripLDn                           |
-| StripRightUp                       | StripRUp                           |
-| StripRightDown                     | StripRDn                           |
-| TabletPCButton                     | TPCButton                          |
-| Threshold                          | ClickForce                         |
-| removed                            | TVResolution                       |
-| removed                            | TwinView                           |
+| AbsWUp                             | AbsWheelUp                         |
+| AbsWDn                             | AbsWheelDown                       |
+| TopX, TopY, BottomX, & BottomY     | Area x1 y1 x2 y2                   |
+| Button1 ...                        | Button 1 ...                       |
+| CursorProx                         | CursorProximity                    |
+| GetTabletID                        | *removed*                          |
+| *no equivalent*                    | MapToOutput                        |
+| mmonitor                           | *removed*                          |
+| PressCurve                         | PressureCurve                      |
+| RelWUp                             | RelWheelUp                         |
+| RelWDn                             | RelWheelDown                       |
+| xyDefault                          | ResetArea                          |
+| Rotate values: NONE, CW, CCW, HALF | Rotate values: none, cw, ccw, half |
+| Rspeed                             | *removed*                          |
+| Screen\_No                         | *removed*                          |
+| StripLUp                           | StripLeftUp                        |
+| StripLDn                           | StripLeftDown                      |
+| StripRUp                           | StripRightUp                       |
+| StripRDn                           | StripRightDown                     |
+| TPCButton                          | TabletPCButton                     |
+| ClickForce                         | Threshold                          |
+| TVResolution                       | *removed*                          |
+| TwinView                           | *removed*                          |
 |                                    |                                    |
 
 </noinclude>

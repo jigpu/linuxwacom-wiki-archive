@@ -108,76 +108,76 @@ Note that ''TPCButton'' parameter functionality was added to xsetwacom in the ''
 Most of the new parameter names apply starting with [http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ xf86-input-wacom-0.10.11] released 2-16-11.  Some were changed or removed earlier.  Many of the parameter names were changed to make them more readable.  Some were changed or removed for code stream-lining purposes, such as adding the whitespace between Button and the number, i.e. Button5 becoming Button 5.
 {| border="1"
 |+ ''Table of New Parameter Name v.s. Old Parameter Name''
-! New Parameter Name !! Old Parameter Name
+! Old Parameter Name !! New Parameter Name
 |-
-| AbsWheelUp
 | AbsWUp
+| AbsWheelUp
 |-
-| AbsWheelDown
 | AbsWDn
+| AbsWheelDown
 |-
-| Area x1 y1 x2 y2
 | TopX, TopY, BottomX, & BottomY
+| Area x1 y1 x2 y2
 |-
-| Button 1 ...
 | Button1 ...
+| Button 1 ...
 |-
-| CursorProximity
 | CursorProx
+| CursorProximity
 |-
-| removed
 | GetTabletID
+| ''removed''
 |-
+| ''no equivalent''
 | MapToOutput
-| new
 |-
-| removed
 | mmonitor
+| ''removed''
 |-
-| PressureCurve
 | PressCurve
+| PressureCurve
 |-
-| RelWheelUp
 | RelWUp
+| RelWheelUp
 |-
-| RelWheelDown
 | RelWDn
+| RelWheelDown
 |-
-| ResetArea
 | xyDefault
+| ResetArea
 |-
-| Rotate values: none, cw, ccw, half
 | Rotate values: NONE, CW, CCW, HALF
+| Rotate values: none, cw, ccw, half
 |-
-| removed
 | Rspeed
+| ''removed''
 |-
-| removed
 | Screen_No
+| ''removed''
 |-
-| StripLeftUp
 | StripLUp
+| StripLeftUp
 |-
-| StripLeftDown
 | StripLDn
+| StripLeftDown
 |-
-| StripRightUp
 | StripRUp
+| StripRightUp
 |-
-| StripRightDown
 | StripRDn
+| StripRightDown
 |-
-| TabletPCButton
 | TPCButton
+| TabletPCButton
 |-
-| Threshold
 | ClickForce
+| Threshold
 |-
-| removed
 | TVResolution
+| ''removed''
 |-
-| removed
 | TwinView
+| ''removed''
 |-
 |}
 
