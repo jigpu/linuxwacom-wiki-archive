@@ -2,6 +2,8 @@ This page describes the coding style used in [[xf86-input-wacom]]. If you
 submit a patch please make sure the style adheres to this guideline or the
 patch may be rejected.
 
+{{Tip|text=Any coding style is incomplete. There are always edge cases that rely on personal taste or common sense overriding rules. Take all this with a grain of salt.}}
+
 = C coding style =
 
 * Tab is set to 8 characters
