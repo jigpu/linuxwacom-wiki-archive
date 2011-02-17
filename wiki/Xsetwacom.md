@@ -162,21 +162,21 @@ and one of the four valid settings. For more detail see
 TPCButton
 ---------
 
-The Tablet PC Button i.e. *TPCButton* parameter is "on" by default for
-tablet pc's. In order for the stylus buttons to work the stylus tip must
-be in contact with the screen. The default for tablets is "off" which
-enables the *hover* mode. In tablet or hover mode the stylus buttons
-will work with the stylus tip in proximity of the tablet, but the stylus
-tip does not actually have to be touching. So the values are on\|off
-(tablet pc mode\|tablet/hover mode) and apply only to the stylus.
+The Tablet PC Button behaviour.
+
+-   If TPCButton is **on**, the stylus must be in contact with the
+    screen for any stylus button to work.
+-   if TPCButton is **off**, stylus buttons will work once the stylus is
+    in proximity of the tablet (regardless of whether it is touching the
+    screen).
+
+TPCButton is *on* by default for Tablet PCs and *off* for all other
+models. An example xsetwacom command to set the behaviour is:
 
 ` xsetwacom set "device name" TPCButton "on"`
 
-Note that *TPCButton* parameter functionality was added to xsetwacom in
-the *xf86-input-wacom-0.10.10+ tree*. If you want to use this xsetwacom
-parameter, either clone the
-[xf86-input-wacom](xf86-input-wacom "wikilink") git repository, or
-download a later tar.
+Note that the *TPCButton* parameter is only available in
+*xf86-input-wacom-0.10.10* or later.
 
 Table of New Parameter Names
 ============================
