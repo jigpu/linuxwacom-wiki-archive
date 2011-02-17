@@ -88,8 +88,8 @@ I am left handed. How do I flip my tablet?
 See *Rotate* in [Xsetwacom](/wiki/Xsetwacom "wikilink") and also
 [Rotation](/wiki/Rotation "wikilink").
 
-Is hot plugging supported for my USB tablet?
---------------------------------------------
+Is hotplugging supported for my USB tablet?
+-------------------------------------------
 
 Yes, but only for devices configured via [HAL or
 xorg.conf.d](/wiki/Configuring_X "wikilink"). If you have your devices
