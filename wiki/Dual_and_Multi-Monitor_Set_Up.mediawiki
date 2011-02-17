@@ -1,12 +1,18 @@
+<!-- NOTE TO EDITORS: this page uses noinclude to allow simple MapToOutput
+instructions be included elsewhere -->
+
+<noinclude>
 '''Requirements'''
 * X Server 1.8 or later
 * xf86-input-wacom-0.10.9 or later
 
 == MapToOutput ==
+</noinclude>
 The ''MapToOutput'' parameter maps the wacom tablet to a specific screen. This only applies for [http://www.x.org/wiki/Projects/XRandR XRandR] configurations, not to NVIDIA TwinView. If you don't use the NVIDIA binary driver, you have a XRandR configuration and can go ahead. If you use the NVIDIA binary driver, you'll need to manually set the coordinate mapping.
 
 ''MapToOutput'' takes an output name as parameter and then adjusts the coordinate transformation matrix to the screen size of that output. The monitor names can be obtained with the ''xrandr'' tool.
 
+<noinclude>
 <pre>
 $ xrandr
 Screen 0: minimum 320 x 200, current 3360 x 1200, maximum 8192 x 8192
@@ -27,10 +33,14 @@ LVDS1 connected 1440x900+0+0 (normal left inverted right x axis y axis) 304mm x 
 DVI1 disconnected (normal left inverted right x axis y axis)
 </pre>
 
-In this example, the three available outputs are "VGA1", "LVDS1" and "DVI1". To map a tool to the VGA monitor, simply run
+In this example, the three available outputs are "VGA1", "LVDS1" and "DVI1". 
+</noinclude>
+
+To map a tool to the VGA monitor, simply run
 
   xsetwacom set "Wacom Intuos4 6x9 stylus" MapToOutput VGA1
 
+<noinclude>
 [[xsetwacom]] then goes off, gets the screen size for the given output (in relation to the total desktop) and calculates a 3x3 matrix that maps the tablet input range to the given output. This matrix is set as the server's "Device Transformation Matrix". You can check the matrix by running xinput and looking at the value of this property.
   xinput list-props "Wacom Intuos4 6x9 stylus"
 
@@ -199,6 +209,8 @@ So now the xinput commands to set the device to the desired monitor are these.
 
 == To Have the Settings Last Through a Reboot ==
 You have to apply the xinput or xsetwacom command with each restart or rotation.  You should be able to add it to your xsetwacom start up script, if you have one.  Otherwise run it from a convenient start up script.  Sample start up scripts are found in [[Wacom Tablet Configuration]] and [[Tablet PC Configuration]].  Add the appropriate command for each device (stylus, eraser, and cursor) to its section.
+
+</noinclude>
 
 
 [[Category:HOWTO]]
