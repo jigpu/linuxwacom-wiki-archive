@@ -52,16 +52,28 @@ Place the script in a file called ''bin/toggle-touch.sh'' in your home directory
 
 === Compiz ===
 If your window manager is compiz, install the CompizConfig Settings Manager (if you haven't already).
-*click on the General option
-*click on Commands
-*in Command line 0 (or whatever line you want) add the path to toggle-touch.sh, e.g.: /home/yourusername/bin/toggle-touch.sh
-*click on Key Bindings and then to edit the corresponding Run command 0 click on the Disabled button.
-*next use a key combination not already in use, e.g. <Control>t, by pressing the Grab key combination button and pressing the key combination. The ctrl-t combination is the one in the sample xsetwacom script bound to Button1. You can also just press ctrl-t.  If you use 'ctrl t' to add a new Tab to Firefox change the touch toggle key combination to say "key ctrl shift t".
-*assign it to a tablet button
+
+We are attempting the following setup: when you press button 1, you toggle between touch on or off.
+
+The setup for this is a bit roundabout though:
+* configure the tablet to send a key combination when button 1 is pressed.
+* the key combination triggers the window manager to run the script above
+* the script then toggles the button
+
+In the configuration example below, we will use button 1 and the key combination of Ctrl+T. If you chose a different button or key combination, replace the occurances accordingly.
+
+To configure all this, do the following:
+
+* first, configure the tablet to send the key combination
 <pre>
-xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" Button1 "key ctrl t"  # toggle touch script
+xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" Button1 "key ctrl t"
 </pre>
-*you're done
+* then, in the CompizConfig Settings Manager, click on the General option
+* click on Commands
+* in Command line 0 (or whatever line you want) add the path to toggle-touch.sh, e.g.: ''/home/yourusername/bin/toggle-touch.sh''
+* click on Key Bindings and then to edit the corresponding Run command 0 click on the Disabled button.
+* press the Grab key combination button and then press the key combination
+* tablet button 1 should now toggle the touch between on and off
 
 
 '''Tip''' If you are using a xorg.conf the symlink for the Bamboo P&T pad is wacom-touch not wacom.
