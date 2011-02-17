@@ -59,9 +59,17 @@ models have been added to xf86-input-wacom-0.10.10+ as of January 21,
 
 ### BambooPT Touch Toggle Script
 
+Turning touch off can be convenient when working in a graphics program,
+so you don't have to worry about accidentally issuing a command, or
+worse, drawing a line if you incidentally touch the tablet when not
+holding the stylus. Besides it duplicates the function and button
+assignment in Windows so you can have the same feature set available.
+
 The following script depends on the [xsetwacom](xsetwacom "wikilink")
-get and set commands. The "Device name" for touch is found by using
-'xinput list' as mentioned in the script comments.
+get and set commands. The get command determines whether touch is on or
+off while the two set commands turn touch on or off. The "device name"
+for touch is found by using 'xinput list' as mentioned in the script
+comments.
 
     #!/bin/bash
 
