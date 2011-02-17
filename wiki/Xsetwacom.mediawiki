@@ -37,7 +37,7 @@ Finally, to get a list of parameters just type
 Remember entering "man xsetwacom" (without the quotes) in a console will bring up the xsetwacom manual and give you a quick overview of xsetwacom.
 
 == MapToOutput ==
-The wacom driver does not support multi-monitor setups directly - handling of such setups is catered for by the X Server. [[xsetwacom]] does however provide a parameter to easily map a tablet to a screen.
+The wacom driver does not support multi-monitor setups directly - handling of such setups is handled by the X Server. [[xsetwacom]] does however provide a parameter to easily map a tablet to a screen.
 
 '''Requirements'''
 * X Server 1.8 or later

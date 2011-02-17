@@ -73,7 +73,7 @@ MapToOutput
 -----------
 
 The wacom driver does not support multi-monitor setups directly -
-handling of such setups is catered for by the X Server.
+handling of such setups is handled by the X Server.
 [xsetwacom](xsetwacom "wikilink") does however provide a parameter to
 easily map a tablet to a screen.
 
