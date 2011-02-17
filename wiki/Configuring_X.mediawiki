@@ -3,8 +3,7 @@ A guide to configuring your system so that X can detect the devices.
 == Hotplugging setup with udev ==
 X Servers 1.8 and later use udev as device enumeration backend on Linux. Note that ideally no X-related configuration is stored in udev itself, it is simply used for getting hotplug notifications and a list of available devices. The devices visible to the X server include all devices with the udev property ''ID_INPUT'' set to 1 (see ''udevadm info --export-bd'').
 
-Actual configuration is performed through [http://who-t.blogspot.com/2010/01/new-configuration-world-order.html xorg.conf.d snippets]. The xf86-input-wacom git tree ships an example configuration file in ''/conf/50-wacom.conf''. Drop this into your local ''/etc/X11/xorg.conf.d'' directory and you're good to go.
-
+Actual configuration is performed through [http://who-t.blogspot.com/2010/01/new-configuration-world-order.html xorg.conf.d snippets]. The xf86-input-wacom git tree ships an example configuration file in [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/xf86-input-wacom;a=blob;f=conf/50-wacom.conf;h=b1742bceb0f0abb033306adf68d4854ef438b288;hb=HEAD ''/conf/50-wacom.conf'']. Drop this into your local ''/etc/X11/xorg.conf.d'' directory and you're good to go.
 
 == Hotplugging setup with HAL ==
 

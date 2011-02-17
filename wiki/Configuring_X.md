@@ -22,8 +22,9 @@ devices with the udev property *ID\_INPUT* set to 1 (see *udevadm info
 Actual configuration is performed through [xorg.conf.d
 snippets](http://who-t.blogspot.com/2010/01/new-configuration-world-order.html).
 The xf86-input-wacom git tree ships an example configuration file in
-*/conf/50-wacom.conf*. Drop this into your local */etc/X11/xorg.conf.d*
-directory and you're good to go.
+[*/conf/50-wacom.conf*](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/xf86-input-wacom;a=blob;f=conf/50-wacom.conf;h=b1742bceb0f0abb033306adf68d4854ef438b288;hb=HEAD).
+Drop this into your local */etc/X11/xorg.conf.d* directory and you're
+good to go.
 
 Hotplugging setup with HAL
 --------------------------
