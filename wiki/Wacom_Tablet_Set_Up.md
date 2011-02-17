@@ -31,7 +31,7 @@ Wacom line. The first 5 models are the 0xD0, 0xD1, 0xD2, 0xD3, & 0xD4.
 The new models are the 0xD6, 0xD7, 0xD8, 0xDA, & 0xDB. See [Device
 IDs](/wiki/Device_IDs "wikilink").
 
-### Set Up
+### Setup
 
 Depending on your distribution's kernel the 5 original models may not be
 recognized because the default wacom.ko with the kernel may not have the
@@ -52,38 +52,33 @@ wacom\_wac.c in the source code before compiling or you could use
 [input-wacom](input-wacom "wikilink")-0.10.10-1, which already has the
 models added.
 
-To get a X driver for all 10 models you can clone the
-[xf86-input-wacom](xf86-input-wacom "wikilink") git repository. All 10
-models have been added to xf86-input-wacom-0.10.10+ as of January 21,
-2011.
+All 10 models have been added to [xf86-input-wacom-0.10.10 and
+later](xf86-input-wacom "wikilink") as of January 21, 2011.
 
-### BambooPT Touch Toggle Script
+### Bamboo P&T Touch Toggle Script
 
-Turning touch off can be convenient when working in a graphics program,
-so you don't have to worry about accidentally issuing a command, or
-worse, drawing a line if you incidentally touch the tablet when not
-holding the stylus. Besides it duplicates the function and button
-assignment in Windows so you can have the same feature set available.
+Turning touch off helps to avoid accidental input if you touch the
+tablet when not holding the stylus (it alsoduplicates the function and
+button assignment in Windows).
 
-The following script depends on the [xsetwacom](xsetwacom "wikilink")
-get and set commands. The get command determines whether touch is on or
-off while the two set commands turn touch on or off. The "device name"
-for touch is found by using 'xinput list' as mentioned in the script
-comments.
+The following script requires [xsetwacom](xsetwacom "wikilink"). The
+device name for touch is found by using *xsetwacom list dev* as
+mentioned in the script comments.
 
     #!/bin/bash
 
     ## Get the "Device name" or ID number
-    ## for touch from 'xinput list'.
+    ## for touch from 'xsetwacom list dev'
 
-    TOUCH_STATE=`xsetwacom get "Wacom BambooFun 2FG 4x5 Finger touch" touch`
+    DEVICE="Wacom BambooFun 2FG 4x5 Finger touch" 
+    TOUCH_STATE=`xsetwacom get "$DEVICE" touch`
     if [ "$TOUCH_STATE" == "on" ]
       then
         echo "Touch is ON, turning OFF."
-        xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" touch off
+        xsetwacom set "$DEVICE" touch off
       else
         echo "Touch is OFF, turning ON."
-        xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" touch on
+        xsetwacom set "$DEVICE" touch on
     fi
 
 Place the script in a file called .toggle-touch.sh (or whatever you
