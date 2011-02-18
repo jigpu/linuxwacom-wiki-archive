@@ -2240,7 +2240,7 @@ If you want to change ''pad's'' button 2 to ctrl alt backspace, then:
 <pre>
     [jej@ayukawa linuxwacom]$xsetwacom set pad Button2 "core key ctrl alt backspace"
 </pre>
-<span style="background:#00ffff">'''Note:''' keystrokes and modifiers are only supported for Xorg 6.8 or later.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">'''Note:''' keystrokes and modifiers are only supported for Xorg 6.8 or later.</span>
 
 '''xsetwacom supported parameters'''
 
@@ -2479,9 +2479,9 @@ Below is an example of my .xinitrc:
 </pre>
 To see what's under your home directory, use ''ls -al ~''.
 
-:<span style="background:#00ffff">If your system doesn't execute .xinitrc at login, you can add those xsetwacom commands into the startup script (.bashrc, .cshrc, .profile, etc.) that your system launches, for example, you should use .Xsession instead of .xinitrc on Debian.</span>
+:<span style="border:2px solid #00ffff; background:#00ffff">If your system doesn't execute .xinitrc at login, you can add those xsetwacom commands into the startup script (.bashrc, .cshrc, .profile, etc.) that your system launches, for example, you should use .Xsession instead of .xinitrc on Debian.</span>
 
-:<span style="background:#00ffff">It has been reported that xsetwacom can not run on some older systems due to a XFree86 interface error. A generic solution to this issue is directly adding your configuration options to the /etc/X11/XF86Config file. Please refer to Configuring X11 for details.</span>
+:<span style="border:2px solid #00ffff; background:#00ffff">It has been reported that xsetwacom can not run on some older systems due to a XFree86 interface error. A generic solution to this issue is directly adding your configuration options to the /etc/X11/XF86Config file. Please refer to Configuring X11 for details.</span>
 
 '''More examples'''
 
