@@ -18,6 +18,8 @@ Then run autogen.sh:
     ./autogen.sh --prefix=/usr --libdir=/usr/lib        # on 32-bit install
     ./autogen.sh --prefix=/usr --libdir=/usr/lib64      # on 64 bit install
 
+{{Warning|reason=If you are building from tarball, use ''./configure'' instead of ''./autogen.sh''. This will be fixed in the driver soon.}}
+
 Both commands cover the common Linux distributions but there is a small chance
 that your distribution needs different prefixes or libdirs. The easiest way to
 check is to search for a file named ''evdev_drv.so''. If it is in
