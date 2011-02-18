@@ -1270,7 +1270,7 @@ wacom.(k)o Will
 Load](/wiki/Linuxwacom_HOWTO#Testing_If_wacom.(k)o_Will_Load "wikilink").
 
   
-<span style="border:1px solid #00ffff; background:#00ffff">On some
+<span style="border:2px solid #00ffff; background:#00ffff">On some
 distributions, Mandriva (a.k.a Mandrake) included, the wacom.ko driver
 that appears in the kernel modules directory appears to be compressed.
 If you cannot find wacom.ko using the method below, try locating
