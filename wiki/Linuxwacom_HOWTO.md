@@ -2378,11 +2378,12 @@ without restarting your X server or the whole system:
          --------------------------------------------------------------------------------
 
   
-<span style="background:#00ffff">**RHEL 4.6+ and 5.1+** have included a
-workaround, called [**wdaemon**](http://jake.ruivo.org/~aris/wdaemon).
-However, it doesn't work out of the box. You need to configure the
-daemon and turn it on to make it work. Please follow the guideline
-provided by Aristeu Rozanski, the author of the daemon, at
+<span style="border:2px solid #00ffff; background:#00ffff">**RHEL 4.6+
+and 5.1+** have included a workaround, called
+[**wdaemon**](http://jake.ruivo.org/~aris/wdaemon). However, it doesn't
+work out of the box. You need to configure the daemon and turn it on to
+make it work. Please follow the guideline provided by Aristeu Rozanski,
+the author of the daemon, at
 [**README.txt**](http://jake.ruivo.org/~aris/wdaemon/README.txt) for
 details.</span>
 
