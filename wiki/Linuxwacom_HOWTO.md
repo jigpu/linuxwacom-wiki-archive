@@ -1327,8 +1327,8 @@ module versioning enabled and recompile.
 
 ### Loading the wacom Driver
 
-<span style="background:#00ffff">For Kernel 2.6.x, replace wacom.o with
-wacom.ko where it is used.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">For Kernel
+2.6.x, replace wacom.o with wacom.ko where it is used.</span>
 
 If you have installed the driver, now is the time to test whether it
 will load when needed. If you have not installed it, but are instead

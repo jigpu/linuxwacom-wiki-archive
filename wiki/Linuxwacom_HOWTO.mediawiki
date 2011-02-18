@@ -1194,7 +1194,7 @@ Finally, it is always a good thing to update the module dependencies. This is wh
 If you get no errors and no output, everything is fine, and the module was compiled, linked, and installed properly. If you received unresolved symbols like usb_set_idle or printk, then you need to reconfigure with module versioning enabled and recompile.
 
 === Loading the wacom Driver ===
-<span style="background:#00ffff">For Kernel 2.6.x, replace wacom.o with wacom.ko where it is used.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">For Kernel 2.6.x, replace wacom.o with wacom.ko where it is used.</span>
 
 If you have installed the driver, now is the time to test whether it will load when needed. If you have not installed it, but are instead using insmod, substitute ''insmod mydir/src/wacom.o'' where you see ''modprobe wacom'' below. It is important that you use the correct wacom.o file, the one you just built, since insmod may load the old driver if it cannot find the one you have specified.
 <pre>
