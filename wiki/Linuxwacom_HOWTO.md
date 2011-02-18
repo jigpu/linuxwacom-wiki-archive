@@ -3143,23 +3143,24 @@ all options for your Wacom device that we mentioned above.
 **Xorg RandR**
 
   
-<span style="background:#00ffff">This support is provided by Novell
-developers. A daemon called wacomxrrd is added to src/util to map Wacom
-LCD tablet to its own screen under extended RandR mode. The daemon can
-be launched by "wacomxrrd $dev" and managed through your prefered
-desktop interfaces.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">This support
+is provided by Novell developers. A daemon called wacomxrrd is added to
+src/util to map Wacom LCD tablet to its own screen under extended RandR
+mode. The daemon can be launched by "wacomxrrd $dev" and managed through
+your prefered desktop interfaces.</span>
 
 <!-- -->
 
   
-<span style="background:#00ffff">On SLED 11, it is done by adding the
-following script, wacomxrrd-start, to /usr/bin</span>
+<span style="border:2px solid #00ffff; background:#00ffff">On SLED 11,
+it is done by adding the following script, wacomxrrd-start, to
+/usr/bin</span>
 
 `   #!/bin/sh grep -q -i wacf /sys/bus/pnp/devices/*/id && exec wacomxrrd -i touch exit 0 `
 
   
-<span style="background:#00ffff">and putting wacomxrrd.desktop to
-/usr/share/gnome/autostart.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">and putting
+wacomxrrd.desktop to /usr/share/gnome/autostart.</span>
 
 Contacts
 --------
