@@ -7,12 +7,10 @@ tags:
  - DeveloperPages
 ---
 
-<noinclude>
-
-The [xinput](http://cgit.freedesktop.org/xorg/app/xinput) commandline
-tool is the most important tool to get information about X input devices
-and their properties. This page describes the most common usage patterns
-for xinput.
+<noinclude> The [xinput](http://cgit.freedesktop.org/xorg/app/xinput)
+commandline tool is the most important tool to get information about X
+input devices and their properties. This page describes the most common
+usage patterns for xinput.
 
 Listing devices
 ===============
