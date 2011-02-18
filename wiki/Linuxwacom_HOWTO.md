@@ -1680,14 +1680,15 @@ file for Wacom devices is required. You should add these devices to the
 XF86Config/xorg.conf file too.
 
 We assume you are running Either XFree86 4.2 or later Or Xorg.
-<span style="background:#00ffff">On some distributions, this file is
-called XF86Config-4. Notice that the serial and USB configurations are
-different, so only include the appropriate lines. The default serial
-devices are given. For serial Tablet PCs, options "ForceDevice" should
-be included. You should also change the device (e.g. ttyS0 or
-/dev/input/wacom) to the correct one for your tablet. Tablet PC and
-Cintiq/PL/DTF models don't support cursor type</span>. All the new
-driver options are listed in the manual page below.
+<span style="border:2px solid #00ffff; background:#00ffff">On some
+distributions, this file is called XF86Config-4. Notice that the serial
+and USB configurations are different, so only include the appropriate
+lines. The default serial devices are given. For serial Tablet PCs,
+options "ForceDevice" should be included. You should also change the
+device (e.g. ttyS0 or /dev/input/wacom) to the correct one for your
+tablet. Tablet PC and Cintiq/PL/DTF models don't support cursor
+type</span>. All the new driver options are listed in the manual page
+below.
 
         Section "InputDevice"
           Driver        "wacom"
