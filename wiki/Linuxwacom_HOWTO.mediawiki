@@ -2976,7 +2976,7 @@ The makefile rule which builds the driver is contained within src/Makefile.am an
                     -DNARROWPROTO -DIN_MODULE -DXFree86Module -DLINUX_INPUT \
                     -o xf86Wacom.o -c xf86Wacom.c
 </pre>
-<span style="background:#00ffff">Similar rules apply to wcmSerial.c, wcmUSB.c, wcmISDV4.c, wcmCommon.c, wcmCompat.c, wcmConfig.c, and, wcmFilter.c.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">Similar rules apply to wcmSerial.c, wcmUSB.c, wcmISDV4.c, wcmCommon.c, wcmCompat.c, wcmConfig.c, and, wcmFilter.c.</span>
 
 The options and directories specified come directly from the output of the make command in the previous step. All the root and parent directories have been replaced with the macro XF86_DIR which in this case is set by the configuration script to /usr/src/redhat/BUILD/XFree86-4.2.0/xc. If the options that you see in your build are identical to those above, then the default rule will work for you now. If not, you'll need to make some alterations. You can update the Makefile.am file and rerun automake, update the Makefile.in and rerun configure, or just update the Makefile directly.
 

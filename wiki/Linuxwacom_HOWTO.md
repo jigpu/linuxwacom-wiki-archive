@@ -3650,9 +3650,9 @@ generate a rule similar to this in src/Makefile:
                         -DNARROWPROTO -DIN_MODULE -DXFree86Module -DLINUX_INPUT \
                         -o xf86Wacom.o -c xf86Wacom.c
 
-<span style="background:#00ffff">Similar rules apply to wcmSerial.c,
-wcmUSB.c, wcmISDV4.c, wcmCommon.c, wcmCompat.c, wcmConfig.c, and,
-wcmFilter.c.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">Similar rules
+apply to wcmSerial.c, wcmUSB.c, wcmISDV4.c, wcmCommon.c, wcmCompat.c,
+wcmConfig.c, and, wcmFilter.c.</span>
 
 The options and directories specified come directly from the output of
 the make command in the previous step. All the root and parent
