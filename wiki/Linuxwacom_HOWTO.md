@@ -3498,13 +3498,14 @@ the wacom\_drv.o file that I provide. People running libc5 for instance,
 would need to build their own driver.
 
   
-<span style="background:#00ffff">Timothy Klein has submitted a brief
-howto for compiling on Debian Stable which is still running XFree86 4.1
-as of this writing. It covers steps one through four of this document,
-and a savvy developer should be able to figure out step five on his own.
-If someone solves step five and generates a patch to Makefile.am, I'll
-see what I can do about getting it into the configuration script. That
-document is on the [**Installing wacom driver On Debian
+<span style="border:2px solid #00ffff; background:#00ffff">Timothy Klein
+has submitted a brief howto for compiling on Debian Stable which is
+still running XFree86 4.1 as of this writing. It covers steps one
+through four of this document, and a savvy developer should be able to
+figure out step five on his own. If someone solves step five and
+generates a patch to Makefile.am, I'll see what I can do about getting
+it into the configuration script. That document is on the [**Installing
+wacom driver On Debian
 page**](/wiki/Distribution_Specific_Linuxwacom_Installation#Installing_wacom_driver_On_Debian_page "wikilink").
 
 You will need the X source code to rebuild the wacom\_drv.o driver. The
