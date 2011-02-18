@@ -12,3 +12,14 @@ libXrandr-devel
 libXext-devel
 libX11-devel
 </pre>
+
+== Ubuntu ==
+apt-get install the following packages
+<pre>
+xserver-xorg-dev
+xutils-dev
+libxi-dev
+libxrandr-dev
+libxext-dev
+libx11-dev
+</pre>

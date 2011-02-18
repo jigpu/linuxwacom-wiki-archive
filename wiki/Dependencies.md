@@ -18,3 +18,15 @@ yum install the following packages:
     libXrandr-devel
     libXext-devel
     libX11-devel
+
+Ubuntu
+------
+
+apt-get install the following packages
+
+    xserver-xorg-dev
+    xutils-dev
+    libxi-dev
+    libxrandr-dev
+    libxext-dev
+    libx11-dev
