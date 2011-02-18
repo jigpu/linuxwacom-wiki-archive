@@ -82,17 +82,18 @@ The following script depends on the [[xsetwacom]] get and set commands.  The get
 <pre>
 #!/bin/bash
 
-## Get the "Device name" or ID number
+## Get the "device name" or ID number
 ## for touch from 'xsetwacom list'
 
-TOUCH_STATE=`xsetwacom get "Wacom ISDv4 Finger touch" touch`
+DEVICE="Wacom ISDv4 Finger touch"
+TOUCH_STATE=`xsetwacom get "$DEVICE" touch`
 if [ "$TOUCH_STATE" == "on" ]
   then
     echo "Touch is ON, turning OFF."
-    xsetwacom set "Wacom ISDv4 Finger touch" touch off
+    xsetwacom set "$DEVICE" touch off
   else
     echo "Touch is OFF, turning ON."
-    xsetwacom set "Wacom ISDv4 Finger touch" touch on
+    xsetwacom set "$DEVICE" touch on
 fi
 </pre>
 Enter the script in a file called .toggle-touch.sh (or whatever you want) and place it in your home directory. Remember it will be a hidden file because of the . in front. Also please remember you have to chmod it to make it executable, or right click on it and make it executable through Properties. Then you can place it in a launcher or  bind a key to the script.  If you drag the launcher into a panel it will execute with a single click.

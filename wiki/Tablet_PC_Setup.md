@@ -134,17 +134,18 @@ comments.
 
     #!/bin/bash
 
-    ## Get the "Device name" or ID number
+    ## Get the "device name" or ID number
     ## for touch from 'xsetwacom list'
 
-    TOUCH_STATE=`xsetwacom get "Wacom ISDv4 Finger touch" touch`
+    DEVICE="Wacom ISDv4 Finger touch"
+    TOUCH_STATE=`xsetwacom get "$DEVICE" touch`
     if [ "$TOUCH_STATE" == "on" ]
       then
         echo "Touch is ON, turning OFF."
-        xsetwacom set "Wacom ISDv4 Finger touch" touch off
+        xsetwacom set "$DEVICE" touch off
       else
         echo "Touch is OFF, turning ON."
-        xsetwacom set "Wacom ISDv4 Finger touch" touch on
+        xsetwacom set "$DEVICE" touch on
     fi
 
 Enter the script in a file called .toggle-touch.sh (or whatever you
