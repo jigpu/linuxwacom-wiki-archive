@@ -1086,9 +1086,9 @@ Then, you need to configure the package with --enable-wacom option. Here's how t
 </pre>
 As shown above, the kernel directory was detected and the wacom kernel module will be built. If the kernel option shows "no", you will need to specify the --with-kernel option and the correct directory.
 
-<span style="background:#00ffff">For those who feel comfortable to build everything from the source tree, please skip the make and install steps below. Scroll down to the end of this page and see ''Manually Build the Wacom kernel driver''.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">For those who feel comfortable to build everything from the source tree, please skip the make and install steps below. Scroll down to the end of this page and see ''Manually Build the Wacom kernel driver''.</span>
 
-<span style="background:#00ffff">If you wanted to build the kernel driver and you do not see the '''yes''' after "wacom.o -" in the the "BUILD OPTIONS:", run 'make oldconfig; make prepare; make' on your kernel source should fix the issue.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">If you wanted to build the kernel driver and you do not see the '''yes''' after "wacom.o -" in the the "BUILD OPTIONS:", run 'make oldconfig; make prepare; make' on your kernel source should fix the issue.</span>
 
 To build the driver, just run ''make''.
 
