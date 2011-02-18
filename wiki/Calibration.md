@@ -187,6 +187,13 @@ them in instead.
     xsetwacom set "Wacom Cintiq 21UX2 stylus" bottomx "87064"
     xsetwacom set "Wacom Cintiq 21UX2 stylus" bottomy "65691"
 
+Starting with xf86-input-wacom-0.10.11 (released Feb 16, 2011) the four
+xsetwacom parameters *TopX*, *TopY*, *BottomX*, & *BottomY* have been
+consolidated into one xsetwacom parameter *Area x1 y1 x2 y2* for
+convenience. So the above becomes:
+
+` xsetwacom set "Wacom Cintiq 21UX2 stylus" Area -20 12 87064 65691`
+
 Notice negative TopX & Y values are allowed. You'll need add these
 commands to a startup script as they will not survive a reboot. And use
 the appropriate "device name" for each device you want to apply the
@@ -207,4 +214,7 @@ using:
 In the xorg.conf you would add the coordinates to each section required,
 such as stylus, eraser, and cursor. And for the wacom.conf in the
 appropriate usb or serial snippet below the *Driver "wacom"* line. Touch
-will have a different set of coordinates.
+will have a different set of coordinates. Note if you do use the above
+xsetwacom parameters or Options to correct an improper screen aspect
+ratio (tablet to monitor) you will lose some of the working surface of
+your tablet.
