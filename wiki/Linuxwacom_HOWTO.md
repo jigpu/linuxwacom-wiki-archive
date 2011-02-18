@@ -3096,14 +3096,15 @@ Option "TwinView" "Xinerama"
 
 Option "ScreenNo" "theScreenNumber"
 
-<span style="background:#00ffff">I've seen displays with Xinerama in
-their xorg.conf files in fact fall into TwinView setup since the whole
-desktop is reported as one screen. Use xsetwacom get stylus NumScreen to
-see how many screen you have. You need to use this command without
-adding any screen mapping related options in your xorg.conf file for
-Wacom device. If the command only reports one screen but you actually
-have two screen on the system, you are running a TwinView setup. If it
-reports more than one screen, you are in Xinerama setup.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">I've seen
+displays with Xinerama in their xorg.conf files in fact fall into
+TwinView setup since the whole desktop is reported as one screen. Use
+xsetwacom get stylus NumScreen to see how many screen you have. You need
+to use this command without adding any screen mapping related options in
+your xorg.conf file for Wacom device. If the command only reports one
+screen but you actually have two screen on the system, you are running a
+TwinView setup. If it reports more than one screen, you are in Xinerama
+setup.</span>
 
 **Xinerama setup**
 
