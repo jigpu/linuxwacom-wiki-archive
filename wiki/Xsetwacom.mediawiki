@@ -164,11 +164,17 @@ Note that the ''TPCButton'' parameter is only available in ''xf86-input-wacom-0.
 | StripRDn
 | StripRightDown
 |-
+| CommonDBG
+| TabletDebugLevel
+|-
 | TPCButton
 | TabletPCButton
 |-
 | ClickForce
 | Threshold
+|-
+| DebugLevel
+| ToolDebugLevel
 |-
 | TVResolution
 | ''removed''

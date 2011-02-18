@@ -204,8 +204,10 @@ include UI improvements or improved maintainability of the code.
 | StripLDn                           | StripLeftDown                      |
 | StripRUp                           | StripRightUp                       |
 | StripRDn                           | StripRightDown                     |
+| CommonDBG                          | TabletDebugLevel                   |
 | TPCButton                          | TabletPCButton                     |
 | ClickForce                         | Threshold                          |
+| DebugLevel                         | ToolDebugLevel                     |
 | TVResolution                       | *removed*                          |
 | TwinView                           | *removed*                          |
 |                                    |                                    |
