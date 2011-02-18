@@ -40,9 +40,9 @@ already, you can browse the document one page at a time, or you can
 click on the ALL link and view the entire thing in one long page.~~
 
   
-<span style="background:#00ffff">Where the guide differs between
-distributions or packages, I have added a comment which appears indented
-with an aqua background.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">Where the
+guide differs between distributions or packages, I have added a comment
+which appears indented with an aqua background.</span>
 
 Also, it bears mentioning since it's a detail often missed: there are
 two drivers in the Linux Wacom Project- wacom.o and wacom\_drv.o. The
