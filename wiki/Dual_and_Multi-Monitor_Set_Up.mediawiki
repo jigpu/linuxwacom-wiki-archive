@@ -1,6 +1,4 @@
-<!-- NOTE TO EDITORS: this page uses noinclude to allow simple MapToOutput
-instructions be included elsewhere -->
-
+<!-- NOTE TO EDITORS: this page uses noinclude to allow simple MapToOutput instructions be included elsewhere -->
 <noinclude>
 '''Requirements'''
 * X Server 1.8 or later
