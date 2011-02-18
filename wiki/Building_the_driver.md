@@ -52,10 +52,8 @@ dependencies, either from your distribution's packaging system or from
 the respective project's releases. Once installed, re-run *autogen.sh*
 as above.
 
-Dependencies include (this list may change as the driver is update):
-
--   the X server SDK
--   libX11, libXi and libXrandr development files
+Make sure you have all [Dependencies](/wiki/Dependencies "wikilink")
+installed.
 
 Building
 --------
