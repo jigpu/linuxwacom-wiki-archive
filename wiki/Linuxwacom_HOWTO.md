@@ -1097,12 +1097,12 @@ Below are examples from Debian GNU/Linux distribution:
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", ENV{WACOM_TYPE}=="touch", SYMLINK+="input/wacom-touch"
 
   
-<span style="background:#00ffff">Newer Mandriva Linux (Mandriva 2007
-Spring and later) has an application called mousedrake which takes care
-of the setup and configuration of linuxwacom driver. If you use Mandriva
-Linux and you see InputDevice sections for Wacom device in your
-Xorg.conf, chances are your Wacom tablet is ready for you to
-draw.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">Newer
+Mandriva Linux (Mandriva 2007 Spring and later) has an application
+called mousedrake which takes care of the setup and configuration of
+linuxwacom driver. If you use Mandriva Linux and you see InputDevice
+sections for Wacom device in your Xorg.conf, chances are your Wacom
+tablet is ready for you to draw.</span>
 
 ### Building wacom.c
 
