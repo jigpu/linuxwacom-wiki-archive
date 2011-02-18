@@ -2050,13 +2050,13 @@ This section largely deals with interaction problems between the mouse1
 device, PS/2 mouse, and USB tablets. Serial users can ignore this part.
 
   
-<span style="background:#00ffff">Starting from linuxwacom-0.7.1, this is
-not a problem for most kernel 2.6 systems. If you use kernel 2.6 and a
-driver newer than 0.7.1, you may ignore this page. However, it has been
-reported that on some vendors 2.6 systems, the information detailed on
-this page still applies. So, if you tried all the other steps and the
-tablet still has issues, you may want to apply this page to eliminate
-the /dev/input/mice issue.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">Starting from
+linuxwacom-0.7.1, this is not a problem for most kernel 2.6 systems. If
+you use kernel 2.6 and a driver newer than 0.7.1, you may ignore this
+page. However, it has been reported that on some vendors 2.6 systems,
+the information detailed on this page still applies. So, if you tried
+all the other steps and the tablet still has issues, you may want to
+apply this page to eliminate the /dev/input/mice issue.</span>
 
 If you have a USB mouse or PS/2 mouse and are also using a USB tablet,
 there are two solutions here for you: you may either change your mouse1
