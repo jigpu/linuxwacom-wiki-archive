@@ -2550,7 +2550,7 @@ RawSample was originally introduced to smooth x/y coordinates to a certain degre
 Both Suppress and RawSample apply to the devices on the same tablet, that is, it is global to all devices associated with the same tablet.
 
 == Working With Gimp ==
-<span style="background:#00ffff">'''Note:''' Gtk does not handle extended devices in relative mode. Please don't use Gimp in relative mode.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">'''Note:''' Gtk does not handle extended devices in relative mode. Please don't use Gimp in relative mode.</span>
 
 Bring up ''gimp'' and select "File -> Dialogs -> Input Devices" if using 1.x or "File -> Preferences -> Input Devices -> Configure Extended Input Devices" if using 2.x. You will see a drop-down list with all devices present. After enabling them, you can see their respective statuses by calling up "File -> Dialogs -> Device Status". It has been recommended that the devices be set to "Screen" mode rather than "Window".
 

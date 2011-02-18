@@ -2990,8 +2990,9 @@ that is, it is global to all devices associated with the same tablet.
 Working With Gimp
 -----------------
 
-<span style="background:#00ffff">**Note:** Gtk does not handle extended
-devices in relative mode. Please don't use Gimp in relative mode.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">**Note:** Gtk
+does not handle extended devices in relative mode. Please don't use Gimp
+in relative mode.</span>
 
 Bring up *gimp* and select "File -&gt; Dialogs -&gt; Input Devices" if
 using 1.x or "File -&gt; Preferences -&gt; Input Devices -&gt; Configure
