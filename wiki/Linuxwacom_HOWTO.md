@@ -1363,9 +1363,9 @@ file, you will find hid-core.c, which have special exceptions for wacom.
 This file is not built by default, so you will need to reconfigure the
 package and run make again.
 
-<span style="background:#00ffff">Note, for kernel 2.6.18 and later, no
-need to build hid any more. For other kernels, refer to [**Testing
-Tablet
+<span style="border:2px solid #00ffff; background:#00ffff">Note, for
+kernel 2.6.18 and later, no need to build hid any more. For other
+kernels, refer to [**Testing Tablet
 Detection**](/wiki/Linuxwacom_HOWTO#Testing_Tablet_Detection "wikilink") to
 see if you need to build hid or not.</span>
 
@@ -1373,10 +1373,11 @@ You need to configure usbhid as a module under your kernel source tree
 before configuring linuxwacom.
 
   
-<span style="background:#00ffff">On some distributions, Mandrake or
-Mandriva included, the (usb)hid.ko driver that located in the kernel
-modules directory appears to be compressed. You need to run gzip on the
-module and copy (usb)hid.ko.gz instead.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">On some
+distributions, Mandrake or Mandriva included, the (usb)hid.ko driver
+that located in the kernel modules directory appears to be compressed.
+You need to run gzip on the module and copy (usb)hid.ko.gz
+instead.</span>
 
 <!-- -->
 
@@ -1391,10 +1392,10 @@ are handled in src/2.6.16. Kernels 2.6.18/19/20/21/22 are in src/2.6.18.
 All the other kernels are processed in its own src/2.6.x. New 2.6
 directories will be created when compatibility issue occurs.
 
-<span style="background:#00ffff">For those who like to build everything
-from the source tree, please skip the make and install steps below.
-Scroll down to the end of this page to *Manually Build the kernel
-drivers*.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">For those who
+like to build everything from the source tree, please skip the make and
+install steps below. Scroll down to the end of this page to *Manually
+Build the kernel drivers*.</span>
 
 If everything works properly, you'll see the following from the make:
 
