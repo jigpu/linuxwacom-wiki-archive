@@ -2640,26 +2640,27 @@ directory, will be updated locally each time you run wacomcpl. The
 wacomcpl for your next login. The goal is to give each user a chance to
 use his/her own preference on a shared system.
 
-<span style="background:#00ffff">If you want all users on one system to
-share some settings, you can copy those lines started with xsetwacom in
-~/.xinitrc (or ~/.xsession) to /etc/X11/xinit/xinitrc
-(/etc/X11/xinit/Xsession).</span>
+<span style="border:2px solid #00ffff; background:#00ffff">If you want
+all users on one system to share some settings, you can copy those lines
+started with xsetwacom in ~/.xinitrc (or ~/.xsession) to
+/etc/X11/xinit/xinitrc (/etc/X11/xinit/Xsession).</span>
 
   
-<span style="background:#00ffff">If your system doesn't execute .xinitrc
-(or .xsession) at login, each time after exiting from wacomcpl, you will
-need to copy those xsetwacom lines in .xinitrc (or .xsession) to a
-startup script (.bashrc, .cshrc, .profile, etc.) that your system
-launches. You can also modify wacomcpl-exec to automate this
-step.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">If your
+system doesn't execute .xinitrc (or .xsession) at login, each time after
+exiting from wacomcpl, you will need to copy those xsetwacom lines in
+.xinitrc (or .xsession) to a startup script (.bashrc, .cshrc, .profile,
+etc.) that your system launches. You can also modify wacomcpl-exec to
+automate this step.</span>
 
 <!-- -->
 
   
-<span style="background:#00ffff">However, it is reported that there are
-older systems on which can not run wacomcpl due to some XFree86
-interface error. The workaround is to add the configuration options to
-your X config file, refer to Configuring X11 page for details.</span>
+<span style="border:2px solid #00ffff; background:#00ffff">However, it
+is reported that there are older systems on which can not run wacomcpl
+due to some XFree86 interface error. The workaround is to add the
+configuration options to your X config file, refer to Configuring X11
+page for details.</span>
 
 **Running wacomcpl**
 
