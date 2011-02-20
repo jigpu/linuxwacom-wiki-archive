@@ -44,7 +44,6 @@ To map a tool to the VGA monitor, simply run
   xinput list-props "Wacom Intuos4 6x9 stylus"
 
 == Coordinate Transformation Matrix ==
-{{Unclear|reason=* this information should be on the xorg.wiki}}
 If you use the NVIDIA binary driver or are running an earlier version of xf86-input-wacom, you can manually calculate the matrix and set the property with the ''xinput'' tool.  While the following may seem a little daunting if you look at the examples you'll find it is not that hard.  The code does the matrix multiplication for you.  You are determining the matrix values by solving fractions involving your monitors' dimensions.
 
 First determine the "device name" of what you want bound on a specific screen.  Your choices will be the stylus, eraser, or cursor (Wacom tablet mouse).  In a terminal enter the following.
