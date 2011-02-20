@@ -76,3 +76,9 @@ External programs change and wiki content can go stale quickly.
 
 Always add the date and the version of the software you have been been
 using so users know how old information is.
+
+Sections that need work
+=======================
+
+The [Category%3AFixme](/wiki/Category%3AFixme "wikilink") page has a list of
+all pages that require extra work.
