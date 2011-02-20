@@ -8,20 +8,18 @@ tags:
 
 Calibration is necessary when the pointer on the screen does not
 coincide with where the input tool is located on the tablet. This is
-usually most noticeable on a Wacom tablet PC, often after rotation. The
-pointer being more than a mm or two off can render using a tablet PC or
-Cintiq awkward, more so with the stylus than with touch (Cintiq's don't
-have to worry about touch). With a non-Cintiq Wacom tablet this may be
-seen as the input tool not reaching a particular monitor's edge or
-edges.
+usually most noticeable on a screen-mounted tablets (e.g. Tablet PCs or
+Cintiqs), often after rotation. Sometimes this may also be the cause of
+the input tool not reaching a particular monitor's edge or edges.
 
 There can be multiple causes of misalignment. It may come about if the
 video driver is not reporting the coordinates quite correctly or a
 hardware problem, e.g. video chipset (firmware) etc. Or even just from
-the parallax of your working postition. Parallax is present in tablet
-PC's and Cintiq's because the digitizer and LCD screen are two separate
-devices layered on each other, so there is some physical depth inherent
-in the combination of the devices.
+the [parallax](http://en.wikipedia.org/wiki/Parallax) of your working
+position. Parallax is present in tablet PC's and Cintiq's because the
+digitizer and LCD screen are two separate devices layered on each other,
+so there is some physical depth inherent in the combination of the
+devices.
 
 The default coordinate settings for your tablet or tablet PC that are
 used by the Wacom drivers are usually accurate. The Wacom USB kernel
