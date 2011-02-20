@@ -25,22 +25,21 @@ The default coordinate settings for your tablet or tablet PC that are
 used by the Wacom drivers are usually accurate. The Wacom USB kernel
 driver supplies the default USB Wacom Tablet Area values for each model
 to the [xf86-input-wacom](xf86-input-wacom "wikilink") X driver. The X
-driver then scales the tablet's bottomX & Y to the screen if the tablet
-and screen do not have a 1:1 ratio. The X driver also handles
-translation into the resolution the X server uses (points/meter). With
-Wacom Serial tablet PC's (ISDV4 devices) it's a different story because
-there is only "one model" and querying the tablet (isdv4GetRanges)
-returns the Wacom Tablet Area values. In the previous driver
-([linuxwacom](linuxwacom "wikilink")) the Wacom Serial graphics tablet's
-Wacom Tablet Area values were defined in the X driver, like usb tablets
-in the kernel driver.
+driver then scales the tablet's area into the screen's resolution. The X
+driver also handles translation into the resolution the X server uses
+(points/meter). With Wacom Serial tablet PC's (ISDV4 devices) it's a
+different story because there is only "one model" and querying the
+tablet (isdv4GetRanges) returns the Wacom Tablet Area values. In the
+previous driver ([linuxwacom](linuxwacom "wikilink")) the Wacom Serial
+graphics tablet's Wacom Tablet Area values were defined in the X driver,
+like usb tablets in the kernel driver.
 
 Fortunately the xf86-input-wacom X driver allows the user to override
 the default values with user specified settings when needed. Wacom USB
 graphics tablets also may want to use the
 [xsetwacom](xsetwacom "wikilink") or [static
-Options](/wiki/Configuring_X#Hotplugging_setup_with_udev "wikilink") TopX & Y
-and BottomX & Y settings described in [Apply the
+Options](/wiki/Configuring_X#Hotplugging_setup_with_udev "wikilink") area
+settings described in [Apply the
 Coordinates](/wiki/Calibration#Apply_the_Coordinates "wikilink") below to
 correct an improper screen aspect ratio (tablet to monitor) especially
 with a wide screen monitor. Don't want ellipses when trying to draw
@@ -107,12 +106,11 @@ Although xinput\_calibrator suggests the deprecated [HAL
 configuration](/wiki/Configuring_X#Hotplugging_setup_with_HAL "wikilink") we
 just need the coordinate values it has determined. You can see the
 default values but the 4 values you are interested in are under the
-*Making the calibration permanent* heading. So minx = TopX, maxx =
-BottomX, miny = TopY, and maxy = BottomY. You'll want to repeat the
+*Making the calibration permanent* heading. You'll want to repeat the
 calibration several times and use the smallest and largest values or
-perhaps an average if you see no trend. Then use the TopX & Y and
-BottomX & Y coordinate values in [Apply the
-Coordinates](/wiki/Calibration#Apply_the_Coordinates "wikilink") below.
+perhaps an average if you see no trend. Then use coordinate values in
+[Apply the Coordinates](/wiki/Calibration#Apply_the_Coordinates "wikilink")
+below.
 
 ### xinput test
 
@@ -151,10 +149,9 @@ You'll see 'motion' followed by 6 numbers. Since there is a continuous
 stream of motion events you end up with 6 columns of numbers. The first
 column is X and the second Y. Scan down the X column and write down the
 smallest and largest X value. Do the same with the Y column, writing
-down the smallest and largest Y value. The smallest X and Y are your
-TopX & Y and your largest are your BottomX & Y. For example with a
-Bamboo P & T the results were 1,1 and 14712,9195 which is pretty close
-to the default 0,0 14720,9200 in Xorg.0.log.
+down the smallest and largest Y value. For example with a Bamboo P & T
+the results were 1,1 and 14712,9195 which is pretty close to the default
+0,0 14720,9200 in Xorg.0.log.
 
 Using the *-proximity* switch can refine your values a little more,
 although because the columns do not line up it is a little harder to
@@ -167,28 +164,15 @@ This method is a little tedious but not too bad all in all.
 Apply the Coordinates
 ---------------------
 
-Now that you have acquired your TopX & Y and BottomX & Y values you can
-apply them with [xsetwacom](xsetwacom "wikilink"). Note the eraser and
-cursor coordinates are the same as the stylus coordinates. For example
-the default values of a Cintiq look like the following.
+Now that you have acquired your area values values you can apply them
+with [xsetwacom](xsetwacom "wikilink"). Note the eraser and cursor
+coordinates are the same as the stylus coordinates. For example the
+default values of a Cintiq look like the following.
 
-    xsetwacom set "Wacom Cintiq 21UX2 stylus" topx "0"
-    xsetwacom set "Wacom Cintiq 21UX2 stylus" topy "0"
-    xsetwacom set "Wacom Cintiq 21UX2 stylus" bottomx "87200"
-    xsetwacom set "Wacom Cintiq 21UX2 stylus" bottomy "65600"
+` xsetwacom set "Wacom Cintiq 21UX2 stylus" Area 0 0 87200 65600`
 
 But if calibration showed different coordinate values then substitute
 them in instead.
-
-    xsetwacom set "Wacom Cintiq 21UX2 stylus" topx "-20"
-    xsetwacom set "Wacom Cintiq 21UX2 stylus" topy "12"
-    xsetwacom set "Wacom Cintiq 21UX2 stylus" bottomx "87064"
-    xsetwacom set "Wacom Cintiq 21UX2 stylus" bottomy "65691"
-
-Starting with xf86-input-wacom-0.10.11 (released Feb 16, 2011) the four
-xsetwacom parameters *TopX*, *TopY*, *BottomX*, & *BottomY* have been
-consolidated into one xsetwacom parameter *Area x1 y1 x2 y2* for
-convenience. So the above becomes:
 
 ` xsetwacom set "Wacom Cintiq 21UX2 stylus" Area -20 12 87064 65691`
 
@@ -216,3 +200,14 @@ will have a different set of coordinates. Note if you do use the above
 xsetwacom parameters or Options to correct an improper screen aspect
 ratio (tablet to monitor) you will lose some of the working surface of
 your tablet.
+
+### Deprecated TopX/TopY/BottomX/BottomY runtime configuration
+
+The *Area* parameter is only available in xf86-input-wacom-0.10.11
+(released Feb 16, 2011) and later. For older releases, use *TopX*,
+*TopY*, *BottomX*, and *BottomY* instead:
+
+    xsetwacom set "Wacom Cintiq 21UX2 stylus" topx "-20"
+    xsetwacom set "Wacom Cintiq 21UX2 stylus" topy "12"
+    xsetwacom set "Wacom Cintiq 21UX2 stylus" bottomx "87064"
+    xsetwacom set "Wacom Cintiq 21UX2 stylus" bottomy "65691"
