@@ -1,0 +1,3 @@
+This site is an overview of those pages that need additional work. Please help out to address the issues specified in the pages.
+
+Pages included here have the [[:Category:Fixme]] tag applied. This tag is imported automatically with the [[:Template:Unclear]] template.
