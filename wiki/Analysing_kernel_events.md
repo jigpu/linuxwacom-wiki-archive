@@ -10,8 +10,7 @@ tags:
 This page describes how to view and analyse kernel events.
 
 The tool you will need is **evtest**. If it is not available in your
-distribution, grab it from
-[here](http://people.freedesktop.org/~whot/evtest/)
+distribution, grab it from [here](http://cgit.freedesktop.org/evtest/)
 
 **Note: this will not work while the wacom X driver is running. You need
 to disable the driver.** See [\#Disabling the X
