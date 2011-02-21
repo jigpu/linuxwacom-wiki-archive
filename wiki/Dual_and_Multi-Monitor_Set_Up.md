@@ -92,17 +92,15 @@ Transformation Matrix' for the device as the X server sees it.
     Coordinate Transformation Matrix (123):    1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
 
 Now let's do a quick overview of the math involved. Notice that while it
-is an Identity matrix,
-
-    [ 1 0 0 ]
-    [ 0 1 0 ]
-    [ 0 0 1 ]
-
-which has the effect of multiplying by 1, or in other words no
-transformation, the addition of a third vector value (beyond X & Y)
-makes it an affine transformation with homogeneous coordinates. We need
-to determine the transform matrix appropriate to the monitor you want to
-place the device on.
+is an Identity matrix, $\\bigl( \\begin{smallmatrix}
+1 & 0 & 0 \\\\
+0 & 1 & 0 \\\\
+0 & 0 & 1 \\\\
+\\end{smallmatrix} \\bigr)$ which has the effect of multiplying by 1, or
+in other words no transformation, the addition of a third vector value
+(beyond X & Y) makes it an affine transformation with homogeneous
+coordinates. We need to determine the transform matrix appropriate to
+the monitor you want to place the device on.
 
 What we will do with the transform is translate the currently assigned
 pixel coordinate vector X,Y of your tablet device to a new pixel
@@ -113,19 +111,39 @@ matrix read out row by row. Using an affine transformation means
 translation can be expressed with matrix multiplication. The equation we
 are looking at is in the form of:
 
-    [ x' ]   [ c0 c1 c2 ]   [ x ]
-    [ y' ] = [ c3 c4 c5 ] * [ y ]
-    [ 1  ]   [ c6 c7 c8 ]   [ w ]
+<center>
+$\\begin{pmatrix}
+x' \\\\
+y' \\\\
+1  \\\\
+\\end{pmatrix}
+= 
+\\begin{pmatrix}
+c0 & c1 & c2 \\\\
+c3 & c4 & c5 \\\\
+c6 & c7 & c8 \\\\
+\\end{pmatrix}
 
+\\begin{pmatrix}
+x \\\\
+y \\\\
+w \\\\
+\\end{pmatrix}$
+
+</center>
 The third vector value w (the row) 0 0 1, with c8 or w always equal to
 1, is what makes it affine.
 
 The associated linear equations would be:
 
-    x' = (c0x + c1y + c2) / w'
-    y' = (c3x + c4y + c5) / w'
-    w' = (c6x + c7y + c8) = 1
+<center>
+$\\begin{align}
+x' & = & (c0x + c1y + c2) / w'\\\\
+y' & = & (c3x + c4y + c5) / w'\\\\
+w' & = & (c6x + c7y + c8) = 1\\\\
+\\end{align}$
 
+</center>
 So c0 and c4 corresponds to the scaling on the X and Y axes, c2 and c5
 corresponds to the translation (X & Y offsets) on those axes, and c6,
 c7, and c8 are always 0, 0 and 1.
