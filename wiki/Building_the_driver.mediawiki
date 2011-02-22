@@ -1,6 +1,8 @@
 This page lists instructions for building the [[xf86-input-wacom]] driver.
 For [[linuxwacom]]-specific instructions, click [[Building linuxwacom|here]]
 
+{{Tip|text=The INSTALL file in the driver package provides detailed build instructions}}
+
 == Getting the source ==
 We recommend to use [[Using Git|git]] to get the source straight from the repository
     git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom
