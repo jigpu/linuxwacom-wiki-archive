@@ -57,10 +57,11 @@ made since your distribution's default version of
 hasn't been updating it you may want to consider cloning it from the git
 repository.
 
-**Tip** If you have problems with both stylus buttons giving the same
-response despite being set to different values please report your issue
-to
-[linuxwacom-discuss](https://lists.sourceforge.net/lists/listinfo/linuxwacom-discuss).
+**Note** that if you have both stylus buttons giving the same response
+despite being set to different values the issue is with the Waltop HID
+report descriptor for kernels 2.6.35 and 2.6.36. It is fixed in the
+2.6.37 kernel courtesy of Nikolai Kondrashov. See also his [DIGI*mend*
+project](http://digimend.sourceforge.net/#proj-kernel-patches) site.
 
 Calibration of Your Stylus
 --------------------------
