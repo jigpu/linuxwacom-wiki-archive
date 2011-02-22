@@ -1,8 +1,6 @@
 This page lists instructions for building the [[xf86-input-wacom]] driver.
 For [[linuxwacom]]-specific instructions, click [[Building linuxwacom|here]]
 
-{{Tip|text=The INSTALL file in the driver package provides detailed build instructions}}
-
 == Getting the source ==
 We recommend to use [[Using Git|git]] to get the source straight from the repository
     git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom
@@ -11,6 +9,8 @@ We recommend to use [[Using Git|git]] to get the source straight from the reposi
 Alternatively, grab the latest release from the [https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ downloads page] and unpack it with
     tar jxf xf86-input-wacom-<version number>.tar.bz2
     cd xf86-input-wacom-<version-number>
+
+{{Tip|text=The INSTALL file in the driver tarball provides detailed build instructions}}
 
 == Configuring the build ==
 We provide a helper script ''autogen.sh'' that wraps the [http://en.wikipedia.org/wiki/GNU_build_system autotools] steps.
