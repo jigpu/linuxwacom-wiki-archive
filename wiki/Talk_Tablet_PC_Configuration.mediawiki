@@ -1,7 +1,8 @@
 2-16-11 re:2-15-11 entries
-{{Unclear|reason=
-* Having model-specific scripts like .xsetwacom.sh is a temporary hack and needs to be stated as such}}
-Addressed with:  '''These are a temporary hack''' while we wait on a replacement for wacomcpl, see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
+
+* Template: Unclear "Having model-specific scripts like .xsetwacom.sh is a temporary hack and needs to be stated as such"
+** Addressed with:  '''These are a temporary hack''' while we wait on a replacement for wacomcpl, see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
+
 {{Unclear|reason=
 * Who wrote these scripts?
 * What values differ from the defaults?

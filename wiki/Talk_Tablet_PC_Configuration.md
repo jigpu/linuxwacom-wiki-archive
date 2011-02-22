@@ -4,10 +4,14 @@ permalink: wiki/Talk:Tablet_PC_Configuration/
 layout: wiki
 ---
 
-2-16-11 re:2-15-11 entries Addressed with: **These are a temporary
-hack** while we wait on a replacement for wacomcpl, see [Graphical
-Configuration
-Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
+2-16-11 re:2-15-11 entries
+
+-   Template: Unclear "Having model-specific scripts like .xsetwacom.sh
+    is a temporary hack and needs to be stated as such"
+    -   Addressed with: **These are a temporary hack** while we wait on
+        a replacement for wacomcpl, see [Graphical Configuration
+        Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
+
 Addressed issues with: The following scripts were authored by Favux.
 Where co-developed with others they are cited in the relevant script.
 All or almost all of the values are the defaults with the default stated
