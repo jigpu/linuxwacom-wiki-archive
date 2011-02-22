@@ -34,15 +34,22 @@ Configuring the build
 We provide a helper script *autogen.sh* that wraps the
 [autotools](http://en.wikipedia.org/wiki/GNU_build_system) steps. First
 make sure you have the following tools installed: gcc, automake,
-autoconf and make. Then run autogen.sh:
+autoconf and make.
+
+If you are **building from git**, then run autogen.sh:
 
 `   ./autogen.sh --prefix=/usr --libdir=/usr/lib        # on 32-bit install`  
 `   ./autogen.sh --prefix=/usr --libdir=/usr/lib64      # on 64 bit install`
 
-Both commands cover the common Linux distributions but there is a small
-chance that your distribution needs different prefixes or libdirs. The
-easiest way to check is to search for a file named *evdev\_drv.so*. If
-it is in */usr/lib64/xorg/modules/input* or
+If you are **building from a tarball**, then run configure instead:
+
+`   ./configure --prefix=/usr --libdir=/usr/lib        # on 32-bit install`  
+`   ./configure --prefix=/usr --libdir=/usr/lib64      # on 64 bit install`
+
+Both prefix and libdir options cover the common Linux distributions but
+there is a small chance that your distribution needs different prefixes
+or libdirs. The easiest way to check is to search for a file named
+*evdev\_drv.so*. If it is in */usr/lib64/xorg/modules/input* or
 */usr/lib/xorg/modules/input*, then the above commands will work for
 you.
 
