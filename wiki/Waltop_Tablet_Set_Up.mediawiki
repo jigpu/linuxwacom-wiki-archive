@@ -25,7 +25,7 @@ gksudo gedit /usr/share/X11/xorg.conf.d/50-wacom.conf
 
 It's possible additional changes to support your Waltop may have been made since your distribution's default version of [[xf86-input-wacom]].  If your distribution hasn't been updating it you may want to consider cloning it from the git repository.
 
-'''Note''' that if you have both stylus buttons giving the same response despite being set to different values the issue is with the Waltop HID report descriptor for kernels 2.6.35 and 2.6.36.  It is fixed in the 2.6.37 kernel courtesy of Nikolai Kondrashov.  See also his [http://digimend.sourceforge.net/#proj-kernel-patches DIGI''mend'' project] site.
+{{Tip|text=that if you have both stylus buttons giving the same response despite being set to different values the issue is with the Waltop HID report descriptor for kernels 2.6.35 and 2.6.36.  It is fixed in the 2.6.37 kernel courtesy of Nikolai Kondrashov.  See also his [http://digimend.sourceforge.net/#proj-kernel-patches DIGI''mend'' project] site.}}
 
 == Calibration of Your Stylus ==
 See the [[Calibration|Calibration HOWTO]].
