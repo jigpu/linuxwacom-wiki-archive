@@ -24,3 +24,8 @@ have produced.
 
 Similar entries also made to Wacom Tablet Configuration and Waltop
 Tablet Setup. - Favux
+
+  
+\- Favux, please collect these scripts (or a few of them anyway) and
+send them to the devel list. They seriously need review.
+[Whot](/wiki/User%3AWhot "wikilink") 05:08, 22 February 2011 (UTC)
