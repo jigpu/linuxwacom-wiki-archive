@@ -8,7 +8,7 @@ tags:
 
 Calibration is necessary when the pointer on the screen does not
 coincide with where the input tool is located on the tablet. This is
-usually most noticeable on a screen-mounted tablets (e.g. Tablet PCs or
+usually most noticeable on screen-mounted tablets (e.g. Tablet PCs or
 Cintiqs), often after rotation. Sometimes this may also be the cause of
 the input tool not reaching a particular monitor's edge or edges.
 
