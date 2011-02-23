@@ -27,6 +27,58 @@ By breaking the responsibility for the data into three distinct levels, the kern
 
 Refer to the [[Tablet PC]] page for detail.
 
+= Tools =
+All device types expose only a single kernel device to the
+[[xf86-input-wacom X driver]]. That driver splits the data coming from this
+kernel device into multiple X devices or ''tools''.
+
+X applications such as the [http://www.gimp.org GIMP]] can then detect which
+tool an event is coming from, assign different settings to different tools,
+etc.
+
+== Stylus ==
+This is the default tool all wacom tablets have. It is the tip of the physical
+pen plus (if available the buttons on the stylus itself).
+
+Styli usually support x, y, and pressure, with some models also supporting
+tilt. Styli have one, two or three buttons.
+
+== Eraser ==
+The back on some physical pens is a separate button. This button is provided
+as a separate X device.
+
+Erasers usually support x, y, and pressure, with some models also supporting
+tilt. Erasers have one button.
+
+Not all Wacom models provide a pen with an eraser.
+
+== Cursor ==
+The cursor tool is the mouse-like device compatible with some tablets.
+
+The cursor tool usually supports x, y and rotation.
+
+Not all Wacom models support a cursor tool.
+
+== Pad ==
+The pad tool is the physical tablet itself excluding the drawing area,
+including the buttons and the scroll ring or scroll strips (if applicable).
+
+{{Fixme|reason=Which axes do they export the data through?}}
+
+The pad tool usually provides a number of buttons, depending on the model.
+The pad also provides the coordinates of the scroll ring or scroll strips as
+raw data.
+
+
+== Touch ==
+The touch tool is the input caused by finger touches.
+
+{{Fixme|reason=
+* Is this correct?
+* What about 2FGT?}}
+The touch tool usually support x and y.
+
+Not all Wacom models support a touch tool.
 
 [[Category:HOWTO]]
 [[Category:DeveloperPages]]

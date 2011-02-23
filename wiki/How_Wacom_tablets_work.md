@@ -81,3 +81,64 @@ Embedded Devices - Tablet PC with Wacom Digitizer
 -------------------------------------------------
 
 Refer to the [Tablet PC](/wiki/Tablet_PC "wikilink") page for detail.
+
+Tools
+=====
+
+All device types expose only a single kernel device to the
+[xf86-input-wacom X driver](xf86-input-wacom_X_driver "wikilink"). That
+driver splits the data coming from this kernel device into multiple X
+devices or *tools*.
+
+X applications such as the [GIMP](http://www.gimp.org)\] can then detect
+which tool an event is coming from, assign different settings to
+different tools, etc.
+
+Stylus
+------
+
+This is the default tool all wacom tablets have. It is the tip of the
+physical pen plus (if available the buttons on the stylus itself).
+
+Styli usually support x, y, and pressure, with some models also
+supporting tilt. Styli have one, two or three buttons.
+
+Eraser
+------
+
+The back on some physical pens is a separate button. This button is
+provided as a separate X device.
+
+Erasers usually support x, y, and pressure, with some models also
+supporting tilt. Erasers have one button.
+
+Not all Wacom models provide a pen with an eraser.
+
+Cursor
+------
+
+The cursor tool is the mouse-like device compatible with some tablets.
+
+The cursor tool usually supports x, y and rotation.
+
+Not all Wacom models support a cursor tool.
+
+Pad
+---
+
+The pad tool is the physical tablet itself excluding the drawing area,
+including the buttons and the scroll ring or scroll strips (if
+applicable).
+
+The pad tool usually provides a number of buttons, depending on the
+model. The pad also provides the coordinates of the scroll ring or
+scroll strips as raw data.
+
+Touch
+-----
+
+The touch tool is the input caused by finger touches.
+
+The touch tool usually support x and y.
+
+Not all Wacom models support a touch tool.
