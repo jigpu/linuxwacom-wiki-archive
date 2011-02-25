@@ -1,0 +1,219 @@
+---
+title: Tablet Configuration
+permalink: wiki/Tablet_Configuration/
+layout: wiki
+tags:
+ - HOWTO
+---
+
+**In Progress**
+
+This page shows you how to assemble a runtime or static configuration
+for a specific tablet or tablet PC model. Additionally it demonstrates
+how to create profiles for various applications.
+
+The linuxwacom project welcomes additions to its mediawiki so please
+join in if you have contributions.
+
+Currently [xf86-input-wacom](xf86-input-wacom "wikilink") does not have
+a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).
+However since **wacomcpl** stored its settings as a
+[xsetwacom](xsetwacom "wikilink") script in **.xinitrc** you can
+essentially duplicate the .xinitrc, calling it say **.xsetwacom.sh**.
+**This can be considered a work around** while waiting for the
+development of a Tablet Configuration GUI, see [Graphical Configuration
+Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
+
+It should be relatively straight forward to assemble a configuration
+script for your tablet. Be sure to read *man wacom*, *man xsetwacom*,
+*xsetwacom list parameters*, and [Xsetwacom](/wiki/Xsetwacom "wikilink") to
+learn about the parameters or Options you may want to change. As you
+will see a script can give you some finer control over your tablet's
+features and also let you create profiles.
+
+**Note:** Be aware that the xsetwacom interface may change without
+notice. If this happens feel free to update and correct this linux wacom
+project mediawiki page.
+
+If a xsetwacom command stops working your friend is the get command.
+
+Runtime (xsetwacom) Configuration
+---------------------------------
+
+### Stylus, Eraser, Cursor, Touch
+
+The various sections below demonstrate most of the valid *xsetwacom set*
+command parameters that apply to a given input tool. The values shown
+are the defaults. Find the relevant "device name" by entering
+*[xinput](xinput "wikilink") list* in a console.
+
+*Stylus* section
+
+    xsetwacom set "device name" Suppress 4
+    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Threshold 27
+    xsetwacom set "device name" PressureCurve 0 0 100 100
+    xsetwacom set "device name" TabletPCButton on  # default for tablet PCs, it's off for tablets
+    xsetwacom set "device name" Mode Absolute
+    xsetwacom set "device name" Button 1 1
+    xsetwacom set "device name" Button 2 3
+    xsetwacom set "device name" Button 3 2
+    xsetwacom set "device name" Area 0 0 ?? ??
+
+*Eraser* section
+
+    xsetwacom set "device name" Suppress 4
+    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Threshold 27
+    xsetwacom set "device name" PressureCurve 0 0 100 100
+    xsetwacom set "device name" Mode Absolute
+    xsetwacom set "device name" Button 1 1
+    xsetwacom set "device name" Area 0 0 ?? ??
+
+*Cursor* section
+
+    xsetwacom set "device name" Suppress 4 
+    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" CursorProximity 10  # default depends on tablet
+    xsetwacom set "device name" Mode Relative
+    xsetwacom set "device name" Button 1 1
+    xsetwacom set "device name" Button 2 2
+    xsetwacom set "device name" Button 3 3
+    xsetwacom set "device name" Area 0 0 ?? ??
+
+*Touch, single finger* (1FGT) section
+
+    xsetwacom set "device name" Touch on
+    xsetwacom set "device name" Suppress 4
+    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Threshold 27
+    xsetwacom set "device name" Mode Absolute
+    xsetwacom set "device name" TapTime 250
+    xsetwacom set "device name" Button 1 1
+    xsetwacom set "device name" Area 0 0 ?? ??
+
+*Touch, two finger* (2FGT) section
+
+    xsetwacom set "device name" Touch on
+    xsetwacom set "device name" Gesture on
+    xsetwacom set "device name" Suppress 4
+    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Threshold 27
+    xsetwacom set "device name" Mode Relative
+    xsetwacom set "device name" TapTime 250
+    xsetwacom set "device name" Button 1 1
+    xsetwacom set "device name" ZoomDistance 50
+    xsetwacom set "device name" ScrollDistance 20
+    xsetwacom set "device name" TapTime 250
+    xsetwacom set "device name" Area 0 0 ?? ??
+
+### Pad
+
+The various sections below demonstrate a sample of the various tablets
+with tablet buttons or a *pad*. They are ordered to somewhat mimic the
+physical layout of the various pads.
+
+#### Bamboo Pen & Touch
+
+The following button values or assignments are the defaults.
+
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 1 1
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 2 2
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 3 3
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 4 4
+
+**Since the defaults are not very illuminating the following contains a
+hodgepodge of possible Button assignments to illustrate the
+possibilities. These assignments are just examples.**
+
+#### Bamboo
+
+### Sample Runtime Script
+
+Now say I have a Bamboo Pen and Touch tablet and I want to write a
+runtime script for it. I want to change the PressureCurve for the stylus
+and eraser, using a softer one for the stylus and a firmer one for the
+eraser. Also I have the GTK CPU utilization bug in Gimp so I want to
+adjust RawSample up to decrease the lag between where the stylus tip is
+and when the line is drawn in Gimp. On top of all that I noticed the
+stylus wasn't quite reaching the top and left screen edges so after
+[calibrating](/wiki/Calibration "wikilink") I have some new tablet area values
+I want to use. I'm a pretty quick double tapper who drinks a little too
+much caffeine and I want to decrease my TapTime a little. Plus I want my
+scrolling a little more sensitive. And I want my pad (tablet buttons) to
+have the default Windows XP setup, just because.
+
+I need to obtain my "device names" by running the [xinput
+list](xinput "wikilink") command in a terminal. Now I can proceed to
+assemble the following shell script.
+
+    #!/bin/sh
+
+    ## Stylus
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" RawSample 20
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" PressureCurve 0 10 90 100
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" Area -10 -20 14720 9200
+
+    ## Eraser
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" RawSample 20
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" PressureCurve 5 0 100 95
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" Area -10 -20 14720 9200
+
+    ## Touch (2FGT)
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" ScrollDistance 18
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" TapTime 220
+
+    ## Pad
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 1 "key ctrl t"  # key combination for toggle touch script
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 2 "key backspace"
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 3 3  # right mouse click
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 4 1  # left mouse click
+
+### Setting Up the Script to Run at Startup
+
+Now I want my new shell script configuration to apply even after a
+restart. While you can change your settings on the fly using xsetwacom
+commands in a terminal, because they are runtime commands they only
+apply during the current session. So you need to set a xsetwacom script
+to auto-start. Create a file and enter the contents of the script you
+want into it. Name it .xsetwacom.sh (or whatever you prefer).
+
+Place the script in a file called bin/.xsetwacom.sh in your home
+directory. You may need to create the bin directory in
+/home/yourusername/ first. Many distributions recommend placing user
+binaries and scripts in a user /bin directory rather than just in
+/home/yourusername/. Make the script executable with:
+
+` chmod +x $HOME/bin/.xsetwacom.sh`
+
+The . in front of xsetwacom makes it a hidden file. You don't have to do
+that although it helps prevent directory clutter. Then in Gnome go to
+System &gt; Preferences &gt; Startup Applications (or your
+distribution's equivalent) and click on Add and for the command write
+"sh /home/yourusername/bin/.xsetwacom.sh" (without the quotes).
+
+### Profiles
+
+A *Profile* contains the settings you prefer for an individual program
+you use your tablet in. Usually it consists of modifying the pad button
+assignments but can also involve changing the PressureCurve or Stylus
+button assignment or whatever else is useful for a given program. To
+select different pad button assignments you should become familiar with
+the keyboard shortcuts available in the program you are interested in.
+For e.g. with Gimp look in *Edit &gt; Keyboard Shortcuts* or *Edit &gt;
+Preferences &gt; Interface &gt; Configure Keyboard Shortcuts*. For
+Inkscape it's *Help &gt; Keys and Mouse reference* which takes you to
+the keyboard shortcuts online. Some of the pad sections above contained
+possible Gimp and Inkscape button assignments.
+
+So let's write a Gimp profile for a Bamboo Pen and Touch tablet.
+
+#### Launcher for Profile
+
+Static (xorg.conf.d or xorg.conf) Configuration
+-----------------------------------------------
+
+Entering *man wacom* in a terminal will bring up the Options you can
+enter into
+[/etc/udev/X11/52-wacom-options.conf](/wiki/Configuring_X "wikilink") or in
+the xorg.conf.
