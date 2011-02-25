@@ -26,10 +26,10 @@ Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
 It should be relatively straight forward to assemble a configuration
 script for your tablet. Be sure to read *man wacom*, *man xsetwacom*,
-*xsetwacom list parameters*, and [Xsetwacom](/wiki/Xsetwacom "wikilink") to
-learn about the parameters or Options you may want to change. As you
-will see a script can give you some finer control over your tablet's
-features and also let you create profiles.
+[Xsetwacom](/wiki/Xsetwacom "wikilink"), and enter *xsetwacom list
+parameters*in a terminal to learn about the parameters or Options you
+may want to change. As you will see a script can give you some finer
+control over your tablet's features and also let you create profiles.
 
 **Note:** Be aware that the xsetwacom interface may change without
 notice. If this happens feel free to update and correct this linux wacom
@@ -109,9 +109,10 @@ are the defaults. Find the relevant "device name" by entering
 
 ### Pad
 
-The various sections below demonstrate a sample of the various tablets
-with tablet buttons or a *pad*. They are ordered to somewhat mimic the
-physical layout of the various pads.
+The sections below demonstrate a sample of the various tablets with
+tablet buttons or a *pad*. They are ordered to somewhat mimic the
+physical layout of the various pads. Enter *xsetwacom list modifiers* in
+a console to see the modifiers and special keys available.
 
 #### Bamboo Pen & Touch
 
@@ -127,6 +128,89 @@ hodgepodge of possible Button assignments to illustrate the
 possibilities. These assignments are just examples.**
 
 #### Bamboo
+
+    xsetwacom set "Wacom BambooFun 4x5 pad" Button 1 "key esc"
+    xsetwacom set "Wacom BambooFun 4x5 pad" Button 2 "key F12 "
+    xsetwacom set "Wacom BambooFun 4x5 pad" AbsWDn "key ctrl shift s"
+    xsetwacom set "Wacom BambooFun 4x5 pad" AbsWUp "key ctrl shift s"
+    xsetwacom set "Wacom BambooFun 4x5 pad" Button 3 "key KP_Next"
+    xsetwacom set "Wacom BambooFun 4x5 pad" Button 4 "key KP_Prior"
+
+#### Intuos3
+
+Gimp pad button examples
+
+    xsetwacom set "Wacom Intuos3 6x8 pad" Button 1 "key r"  # rectangular selections
+    xsetwacom set "Wacom Intuos3 6x8 pad" Button 2 "key ctrl shift a"  # select none
+    xsetwacom set "Wacom Intuos3 6x8 pad" Button 3 "key p"  # paintbrush
+    xsetwacom set "Wacom Intuos3 6x8 pad" Button 4 "key tab"  # toggle docks
+    xsetwacom set "Wacom Intuos3 6x8 pad" StripLDn "key -"  # zoom out
+    xsetwacom set "Wacom Intuos3 6x8 pad" StripLUp "key +"  # zoom in
+
+    xsetwacom set "Wacom Intuos3 6x8 pad" StripRDn "key alt down"  # brush radius (must be mapped in GIMP)
+    xsetwacom set "Wacom Intuos3 6x8 pad" StripRUp "key alt up"
+    xsetwacom set "Wacom Intuos3 6x8 pad" Button 5 "key shift control left"  # prev/next brush (must be mapped in GIMP; disables float)
+    xsetwacom set "Wacom Intuos3 6x8 pad" Button 6 "key shift control right"
+    xsetwacom set "Wacom Intuos3 6x8 pad" Button 7 "key ctrl shift e"  # fit Image in window
+    xsetwacom set "Wacom Intuos3 6x8 pad" Button 8 "key F11"  # fullscreen
+
+Inkscape pad button examples
+
+    Button 1 "key F2"  # Node Tool
+    Button 2 "key h"  # Undo
+    Button 3 "key F1"  # Selection tool
+    Button 4 "key shift"
+    StripLDn "key Prior"  # page up
+    StripLUp "key Next"  # page down
+
+    StripRDn "key KP_Add"  # NumpadPlus
+    StripRUp "key KP_Subtract"  # NumpadMinus
+    Button 5 "key F6"  # Pencil Tool
+    Button 6 "key F8"  # Fill and Stroke Dialog
+    Button 7 "key F9"  # Toggle View Mode
+    Button 8 "key F12"  # Layers Dialog
+
+#### Intuos4
+
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 2 "key ctrl"
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 3 "key alt"
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 4 "key shift"
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 5 "key ctrl alt shift o"  # Gimp brush down
+
+    xsetwacom set "Wacom Intuos4 6x9 pad" AbsWDn "+ "
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button1 "key 1"  # button inside touchring, zoom 100%
+    xsetwacom set "Wacom Intuos4 6x9 pad" AbsWUp "- "
+
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 6 "key ctrl alt shift p"  # Gimp brush up
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 7 "key backspace"
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 8 "key ctrl s"  # save
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 9 "key ctrl z"  # Undo in Gimp
+
+#### Cintiq 21
+
+    xsetwacom set "Wacom Cintiq 21UX2 pad" StripLDn "key -"  # zoom out
+    xsetwacom set "Wacom Cintiq 21UX2 pad" StripLUp "key +"  # zoom in
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 1 "key r"  # rectangular selections
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 2 "key ctrl shift a"  # select none
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 3 "key p"  # paintbrush
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 4 "key tab"  # toggle docks
+    ## circle "button", need to figure out.
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 5 "key shift control left"  # prev/next brush (must be mapped in GIMP)
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 6 "key shift control right" 
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 7 "key ctrl shift e"  #  fit Image in window
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 8 "key F11"  # fullscreen
+
+    xsetwacom set "Wacom Cintiq 21UX2 pad" StripRDn "key alt down"  # brush radius (must be mapped in GIMP)
+    xsetwacom set "Wacom Cintiq 21UX2 pad" StripRUp "key alt up"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 9 "key ctrl"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 10 "key alt"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 11 "key shift"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 12 "key tab"
+    ## circle "button", need to figure out.
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 13 "key apostrophe"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 14 "key backspace"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 15 "key backslash"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" Button 16 "key ctrl z"  # Undo in Gimp
 
 ### Sample Runtime Script
 
