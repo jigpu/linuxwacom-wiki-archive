@@ -115,5 +115,4 @@ There are several ways to get around this:
 * Stop X. Usually this can be achieved by switching into runlevel 3 with ''sudo init 3''. Note that this will close your session.
 
 
-[[Category:DeveloperPages]] 
-[[Category:HOWTO]]
+[[Category:DeveloperPages]]

@@ -4,7 +4,6 @@ permalink: wiki/Analysing_kernel_events/
 layout: wiki
 tags:
  - DeveloperPages
- - HOWTO
 ---
 
 This page describes how to view and analyse kernel events.
