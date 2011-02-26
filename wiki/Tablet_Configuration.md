@@ -226,9 +226,10 @@ and when the line is drawn in Gimp. On top of all that I noticed the
 stylus wasn't quite reaching the top and left screen edges so after
 [calibrating](/wiki/Calibration "wikilink") I have some new tablet area values
 I want to use. I'm a pretty quick double tapper who drinks a little too
-much caffeine and I want to decrease my TapTime a little. Plus I want my
-scrolling a little more sensitive. And I want my pad (tablet buttons) to
-have the default Windows XP setup, just because.
+much caffeine and I want to decrease my TapTime a little. 250 msec is an
+eternity! Plus I want my scrolling a little more sensitive. And I want
+my pad (tablet buttons) to have the default Windows XP setup, just
+because.
 
 I need to obtain my "device names" by running the [xinput
 list](xinput "wikilink") command in a terminal. Now I can proceed to
