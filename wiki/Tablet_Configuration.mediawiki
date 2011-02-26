@@ -84,7 +84,7 @@ xsetwacom set "device name" Area 0 0 ?? ??
 </pre>
 
 === Pad ===
-The sections below demonstrate a sample of the various tablets with tablet buttons or a ''pad''.  They are ordered to somewhat mimic the physical layout of the various pads.  Enter ''xsetwacom list modifiers'' in a console to see the modifiers and special keys available.
+The sections below demonstrate a sample of the various tablets with tablet buttons or a ''pad''.  They are ordered to somewhat mimic the physical layout of the various pads.  Enter ''xsetwacom list modifiers'' in a console to see the modifiers and special keys available.  You can also use ''dumpkeys'' to check what keys are available on your system.  You need to be root to run it.  The commands with probably the two most useful switches are ''sudo dumpkeys --long-info'' and ''sudo dumpkeys --funcs-only'', if you have sudo installed.  See ''man dumpkeys''.
 
 ==== Bamboo Pen & Touch ====
 The following button values or assignments are the defaults.
@@ -115,8 +115,8 @@ xsetwacom set "Wacom Intuos3 6x8 pad" Button 1 "key r"  # rectangular selections
 xsetwacom set "Wacom Intuos3 6x8 pad" Button 2 "key ctrl shift a"  # select none
 xsetwacom set "Wacom Intuos3 6x8 pad" Button 3 "key p"  # paintbrush
 xsetwacom set "Wacom Intuos3 6x8 pad" Button 4 "key tab"  # toggle docks
-xsetwacom set "Wacom Intuos3 6x8 pad" StripLDn "key -"  # zoom out
-xsetwacom set "Wacom Intuos3 6x8 pad" StripLUp "key +"  # zoom in
+xsetwacom set "Wacom Intuos3 6x8 pad" StripLDn "key minus"  # zoom out
+xsetwacom set "Wacom Intuos3 6x8 pad" StripLUp "key shift plus"  # zoom in
 
 xsetwacom set "Wacom Intuos3 6x8 pad" StripRDn "key alt down"  # brush radius (must be mapped in GIMP)
 xsetwacom set "Wacom Intuos3 6x8 pad" StripRUp "key alt up"
@@ -149,9 +149,9 @@ xsetwacom set "Wacom Intuos4 6x9 pad" Button 3 "key alt"
 xsetwacom set "Wacom Intuos4 6x9 pad" Button 4 "key shift"
 xsetwacom set "Wacom Intuos4 6x9 pad" Button 5 "key ctrl alt shift o"  # Gimp brush down
 
-xsetwacom set "Wacom Intuos4 6x9 pad" AbsWDn "+ "
+xsetwacom set "Wacom Intuos4 6x9 pad" AbsWDn "key shift plus"
 xsetwacom set "Wacom Intuos4 6x9 pad" Button1 "key 1"  # button inside touchring, zoom 100%
-xsetwacom set "Wacom Intuos4 6x9 pad" AbsWUp "- "
+xsetwacom set "Wacom Intuos4 6x9 pad" AbsWUp "key minus"
 
 xsetwacom set "Wacom Intuos4 6x9 pad" Button 6 "key ctrl alt shift p"  # Gimp brush up
 xsetwacom set "Wacom Intuos4 6x9 pad" Button 7 "key backspace"
@@ -161,8 +161,8 @@ xsetwacom set "Wacom Intuos4 6x9 pad" Button 9 "key ctrl z"  # Undo in Gimp
 
 ==== Cintiq 21 ====
 <pre>
-xsetwacom set "Wacom Cintiq 21UX2 pad" StripLDn "key -"  # zoom out
-xsetwacom set "Wacom Cintiq 21UX2 pad" StripLUp "key +"  # zoom in
+xsetwacom set "Wacom Cintiq 21UX2 pad" StripLDn "key minus"  # zoom out
+xsetwacom set "Wacom Cintiq 21UX2 pad" StripLUp "key shift plus"  # zoom in
 xsetwacom set "Wacom Cintiq 21UX2 pad" Button 1 "key r"  # rectangular selections
 xsetwacom set "Wacom Cintiq 21UX2 pad" Button 2 "key ctrl shift a"  # select none
 xsetwacom set "Wacom Cintiq 21UX2 pad" Button 3 "key p"  # paintbrush
