@@ -76,7 +76,6 @@ xsetwacom set "device name" Suppress 4
 xsetwacom set "device name" RawSample 2
 xsetwacom set "device name" Threshold 27
 xsetwacom set "device name" Mode Relative
-xsetwacom set "device name" TapTime 250
 xsetwacom set "device name" Button 1 1
 xsetwacom set "device name" ZoomDistance 50
 xsetwacom set "device name" ScrollDistance 20

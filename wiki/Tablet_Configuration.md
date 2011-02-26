@@ -100,7 +100,6 @@ are the defaults. Find the relevant "device name" by entering
     xsetwacom set "device name" RawSample 2
     xsetwacom set "device name" Threshold 27
     xsetwacom set "device name" Mode Relative
-    xsetwacom set "device name" TapTime 250
     xsetwacom set "device name" Button 1 1
     xsetwacom set "device name" ZoomDistance 50
     xsetwacom set "device name" ScrollDistance 20
