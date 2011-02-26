@@ -54,7 +54,7 @@ tool if you want them to apply tablet-wide. <noinclude> </noinclude>
 
 Finally, to get a list of parameters just type
 
-` xsetwacom list param`
+` xsetwacom list parameters`
 
 <noinclude>
 

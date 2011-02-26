@@ -35,7 +35,7 @@ See [[#Table of New Parameter Names|Table of New Parameter Names]]}}
 </noinclude>
 
 Finally, to get a list of parameters just type
-  xsetwacom list param
+  xsetwacom list parameters
 <noinclude>
 
 = xsetwacom Command Parameter Usage =
