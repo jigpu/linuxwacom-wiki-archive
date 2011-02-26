@@ -289,9 +289,95 @@ Inkscape it's *Help &gt; Keys and Mouse reference* which takes you to
 the keyboard shortcuts online. Some of the pad sections above contained
 possible Gimp and Inkscape button assignments.
 
-So let's write a Gimp profile for a Bamboo Pen and Touch tablet.
+So let's write a Gimp profile for a Bamboo Pen and Touch tablet. If you
+plan on a long or multiple scripts for profiles the following script
+technique using variable assignment for your "device names" might make
+them a little easier to write. A Bamboo Pen & Touch is probably not the
+best example. With most tablets you would use just the DEVICE variable.
+But because the Bamboo P&T is seen by the system as 2 devices,
+stylus/eraser & touch/pad, it needs two DEVICE variables. Or you could
+use the vanilla xsetwacom commands like in the [Sample Runtime
+Script](#Sample_Runtime_Script "wikilink").
+
+Say the stylus and eraser are already set the way you prefer in Gimp by
+the startup script, so no need to modify them. Especially since the
+stylus Button 3 is already set to middle click (2). Which is the hand
+(grab) in Gimp. And right click (3) brings up the Menus which is fine.
+You want to turn touch off, because you don't want it on in Gimp and it
+also frees up a precious button. Then you assign the four pad buttons to
+commands you find useful in Gimp.
+
+    #!/bin/bash
+
+    DEVICE="Wacom BambooFun 2FG 4x5 Pen"
+    DEVTWO="Wacom BambooFun 2FG 4x5 Finger"
+
+    STYLUS="$DEVICE stylus"
+    ERASER="$DEVICE eraser"
+    TOUCH="$DEVTWO touch"
+    PAD="$DEVTWO pad"
+
+    ## Stylus
+
+    ## Eraser
+
+    ## Touch (2FGT)
+    xsetwacom set "$TOUCH" Touch off
+
+    ## Pad
+    xsetwacom set "$PAD" Button 1 "key shift ctrl n"  # New layer
+    xsetwacom set "$PAD" Button 2 "key minus"  # Zoom out
+    xsetwacom set "$PAD" Button 3 "key shift plus"  # Zoom in
+    xsetwacom set "$PAD" Button 4 "key control z"  # Undo
+
+Call it Gimp\_Profile.sh or .Gimp\_Profile.sh (or whatever you prefer)
+and Save. Remember you have to make the profile script executable. Now
+let's write an Inkscape profile. In Inkscape it turns out you prefer the
+stylus pressure softer and you want the eraser at the default (linear)
+pressure. Middle click is also grab, so that's good. Touch is again off
+for the same reasons. You also want a different set of pad commands,
+ones that are useful in Inkscape.
+
+    #!/bin/bash
+
+    DEVICE="Wacom BambooFun 2FG 4x5 Pen"
+    DEVTWO="Wacom BambooFun 2FG 4x5 Finger"
+
+    STYLUS="$DEVICE stylus"
+    ERASER="$DEVICE eraser"
+    TOUCH="$DEVTWO touch"
+    PAD="$DEVTWO pad"
+
+    ## Stylus
+    xsetwacom set "$STYLUS" PressureCurve 0 15 85 100
+
+    ## Eraser
+    xsetwacom set "$ERASER" PressureCurve 0 0 100 100
+
+    ## Touch (2FGT)
+    xsetwacom set "$TOUCH" Touch off
+
+    ## Pad
+    xsetwacom set "$PAD" Button 1 "key F2"  # Node tool
+    xsetwacom set "$PAD" Button 2 "key F1"  # Selection tool
+    xsetwacom set "$PAD" Button 3 "key F9"  # Toggle view mode
+    xsetwacom set "$PAD" Button 4 "key h"  # Undo
+
+Call it Inkscape\_Profile.sh or .Inkscape\_Profile.sh then Save and make
+it executable.
 
 #### Launcher for Profile
+
+In Gnome right click on your Desktop and chose *Create Launcher...* In
+your distribution do the equivalent. In the Launcher enter a name, such
+as Inkscape Profile. Then in the Command box add the entire path for the
+script. It's a good idea to select an icon also. Close and the profile
+script will now run when you double click on the Launcher.
+
+It's also a good idea to set up your general or start up configuration
+script in a Launcher. That way when you're done using the application a
+particular profile applied to, you can restore your general
+configuration.
 
 Static (xorg.conf.d or xorg.conf) Configuration
 -----------------------------------------------
