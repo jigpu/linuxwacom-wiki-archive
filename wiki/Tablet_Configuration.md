@@ -26,10 +26,10 @@ Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
 It should be relatively straight forward to assemble a configuration
 script for your tablet. Be sure to read *man wacom*, *man xsetwacom*,
-[Xsetwacom](/wiki/Xsetwacom "wikilink"), and enter *xsetwacom list
-parameters*in a terminal to learn about the parameters or Options you
-may want to change. As you will see a script can give you some finer
-control over your tablet's features and also let you create profiles.
+[Xsetwacom](/wiki/Xsetwacom "wikilink"), and enter *xsetwacom list parameters*
+in a terminal to learn about the parameters or Options you may want to
+change. As you will see a script can give you some finer control over
+your tablet's features and also let you create profiles.
 
 **Note:** Be aware that the xsetwacom interface may change without
 notice. If this happens feel free to update and correct this linux wacom
