@@ -257,6 +257,11 @@ assemble the following shell script.
     xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 3 3  # right mouse click
     xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 4 1  # left mouse click
 
+In the sample script above the "device names" were used because they
+don't change with hot plugging. The ID \# can be used for convience when
+using a get or set command during a session. However it can change after
+a hot plug of the tablet or another usb device.
+
 ### Setting Up the Script to Run at Startup
 
 Now I want my new shell script configuration to apply even after a
