@@ -27,6 +27,11 @@ Calibration of Your Tablet PC
 
 See the [Calibration HOWTO](/wiki/Calibration "wikilink").
 
+Configuration of Your Tablet PC
+-------------------------------
+
+See [Tablet Configuration](/wiki/Tablet_Configuration "wikilink")
+
 Dual and Multi-Monitor Set Up
 -----------------------------
 

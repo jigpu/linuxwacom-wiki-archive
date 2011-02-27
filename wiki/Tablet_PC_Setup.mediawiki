@@ -11,6 +11,9 @@ Be aware the Wacom drivers are rapidly evolving and some of this information may
 
 See the [[Calibration|Calibration HOWTO]].
 
+== Configuration of Your Tablet PC ==
+See [[Tablet Configuration]]
+
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
 
