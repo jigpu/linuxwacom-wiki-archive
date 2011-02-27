@@ -213,7 +213,7 @@ xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 4 1  # left mouse clic
 </pre>
 In the sample script above the "device names" were used because they don't change with hot plugging.  The ID # can be used for convience when using a get or set command during a session.  However it can change after a hot plug of the tablet or another usb device.
 
-==== Setting Up the Script to Run at Startup ====
+==== Running the Script at Startup ====
 Now I want my new shell script configuration to apply even after a restart.  While you can change your settings on the fly using xsetwacom commands in a terminal, because they are runtime commands they only apply during the current session.  So you need to set a xsetwacom script to auto-start.  Create a file and enter the contents of the script you want into it.  Name it .xsetwacom.sh (or whatever you prefer).
 
 Place the script in a file called bin/.xsetwacom.sh in your home directory.  You may need to create the bin directory in /home/yourusername/ first.  Many distributions recommend placing user binaries and scripts in a user /bin directory rather than just in /home/yourusername/.  Make the script executable with:

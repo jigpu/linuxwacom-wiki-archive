@@ -263,7 +263,7 @@ don't change with hot plugging. The ID \# can be used for convience when
 using a get or set command during a session. However it can change after
 a hot plug of the tablet or another usb device.
 
-#### Setting Up the Script to Run at Startup
+#### Running the Script at Startup
 
 Now I want my new shell script configuration to apply even after a
 restart. While you can change your settings on the fly using xsetwacom
