@@ -62,10 +62,14 @@ Into your new 52-wacom-options.conf file located in /etc/X11/xorg.conf.d
 to add a *PressureCurve* and *Area* Options enter:
 
     Section "InputClass"
+            # This is for human-readable purposes only.
         Identifier "Wacom class options"
+            # Match all Wacom input tools that have "BambooFun 2FG 4x5 Pen" in the "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Pen"
+            # AND match devices with a device path of /dev/input/eventX.
         MatchDevicePath "/dev/input/event*"
-        # Add Options below
+
+            # Apply custom Options to this device below.
         Option "PressCurve" "0 10 90 100"
         Option "TopX" "0"
         Option "TopY" "0"
@@ -75,9 +79,11 @@ to add a *PressureCurve* and *Area* Options enter:
 
     Section "InputClass"
         Identifier "Wacom class options"
+            # Match all Wacom input tools that have "BambooFun 2FG 4x5 Finger" in the "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Finger"
         MatchDevicePath "/dev/input/event*"
-        # Add Options below
+
+            # Apply custom Options to this device below.
         Option "TopX" "0"
         Option "TopY" "0"
         Option "BottomX" "480"
