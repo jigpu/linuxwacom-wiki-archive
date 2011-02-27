@@ -31,14 +31,15 @@ in a terminal to learn about the parameters or Options you may want to
 change. As you will see a script can give you some finer control over
 your tablet's features and also let you create profiles.
 
-**Note:** Be aware that the xsetwacom interface may change without
-notice. If this happens feel free to update and correct this linux wacom
-project mediawiki page.
-
-If a xsetwacom command stops working your friend is the get command.
-
 Runtime (xsetwacom) Configuration
 ---------------------------------
+
+A *xsetwacom set* command assigns a specified value to a parameter
+during runtime. The *xsetwacom get* command returns the current value
+the parameter is *set* to. To help with the new parameter names
+transition a table was added to the code. Now when using an old
+parameter name in a *get* or *set* command in a terminal the response
+will include the new parameter name.
 
 ### Stylus, Eraser, Cursor, Touch
 
