@@ -106,8 +106,8 @@ extra line to do a generic match to Wacom or whatever. Plus you can use
 more than one tablet as long as their "device names" are different,
 which you can't do using *eraser* or *cursor*, etc. In each snippet
 we'll enter the equivalent Option for the [Sample Runtime
-Script](/wiki/Sample_Runtime_Script "wikilink") configuration above just as an
-example. Notice again the wacom driver line is not used and we modify
+Script](#Sample_Runtime_Script "wikilink") configuration above just as
+an example. Notice again the wacom driver line is not used and we modify
 the Identifier.
 
 Into your new 52-wacom-options.conf file located in /etc/X11/xorg.conf.d
