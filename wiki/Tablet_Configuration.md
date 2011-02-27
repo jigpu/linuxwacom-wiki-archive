@@ -394,6 +394,20 @@ Static (xorg.conf.d or xorg.conf) Configuration
 -----------------------------------------------
 
 Entering *man wacom* in a terminal will bring up the Options you can
-enter into
-[/etc/udev/X11/52-wacom-options.conf](/wiki/Configuring_X "wikilink") or in
-the xorg.conf.
+enter into your
+[/etc/udev/X11/52-wacom-options.conf](/wiki/Configuring_X#Hotplugging_setup_with_udev "wikilink")
+or in the
+[xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink").
+
+### xorg.conf
+
+In your *xorg.conf* you can configure dependent devices but your
+configuration will likely not last through a hotplug. Start entering
+your Options for each input tool below the last Option line you use from
+the [Example
+xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink") in
+your xorg.conf. Unless you use the Nvidia binary video driver you are
+likely not to have an xorg.conf and would need to create one. Locate it
+in /etc/X11 as /etc/X11/xorg.conf. When you use a xorg.conf remember the
+"device names" in *xinput list* will be stylus, eraser, cursor, touch,
+and pad, depending on your input tools.
