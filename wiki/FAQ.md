@@ -41,10 +41,15 @@ Are there any graphical configuration tools?
 See [Graphical Configuration
 Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
-How do I calibrate my tablet or tablet pc?
+How do I calibrate my tablet or tablet PC?
 ------------------------------------------
 
 See the [Calibration HOWTO](/wiki/Calibration#Calibration "wikilink").
+
+How do I customize my tablet or tablet PC settings?
+---------------------------------------------------
+
+See the [Tablet Configuration HOWTO](/wiki/Tablet_Configuration "wikilink").
 
 How do I get the special features of my stylus to work?
 -------------------------------------------------------

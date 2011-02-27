@@ -18,8 +18,11 @@ See [[Building the driver]] and [[Configuring X]]
 == Are there any graphical configuration tools? ==
 See [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
 
-== How do I calibrate my tablet or tablet pc? ==
+== How do I calibrate my tablet or tablet PC? ==
 See the [[Calibration#Calibration|Calibration HOWTO]].
+
+== How do I customize my tablet or tablet PC settings? ==
+See the [[Tablet Configuration|Tablet Configuration HOWTO]].
 
 == How do I get the special features of my stylus to work? ==
 
