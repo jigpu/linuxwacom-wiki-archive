@@ -151,6 +151,11 @@ Calibration of Your Tablet
 
 See the [Calibration HOWTO](/wiki/Calibration "wikilink").
 
+Configuration of Your Tablet
+----------------------------
+
+See [Tablet Configuration](/wiki/Tablet_Configuration "wikilink").
+
 Dual and Multi-Monitor Set Up
 -----------------------------
 

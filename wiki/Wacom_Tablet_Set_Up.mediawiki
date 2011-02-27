@@ -81,6 +81,9 @@ Content Pending.
 == Calibration of Your Tablet ==
 See the [[Calibration|Calibration HOWTO]].
 
+== Configuration of Your Tablet ==
+See [[Tablet Configuration]].
+
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
 
