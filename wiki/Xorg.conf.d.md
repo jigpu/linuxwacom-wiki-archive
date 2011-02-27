@@ -121,10 +121,14 @@ Into your new 52-wacom-options.conf file located in /etc/X11/xorg.conf.d
 enter:
 
     Section "InputClass"
+            # This is for human-readable purposes only.
         Identifier "Wacom class options"
+            # Match the Wacom input tool that has this specific "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Pen stylus"
+            # AND match the device with a device path of /dev/input/eventX.
         MatchDevicePath "/dev/input/event*"
-        # Add Options below
+
+            # Apply custom Options to this device below.
         Option "RawSample" "20"
         Option "PressCurve" "0 10 90 100"
         Option "TopX" "-10"
@@ -135,9 +139,11 @@ enter:
 
     Section "InputClass"
         Identifier "Wacom class options"
+            # Match the Wacom input tool that has this specific "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Pen eraser"
         MatchDevicePath "/dev/input/event*"
-        # Add Options below
+
+            # Apply custom Options to this device below.
         Option "RawSample" "20"
         Option "PressCurve" "5 0 100 95"
         Option "TopX" "-10"
@@ -148,18 +154,22 @@ enter:
 
     Section "InputClass"
         Identifier "Wacom class options"
+            # Match the Wacom input tool that has this specific "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Finger touch"
         MatchDevicePath "/dev/input/event*"
-        # Add Options below
+
+            # Apply custom Options to this device below.
         Option "ScrollDistance" "18"
         Option "TapTime" "220"
     EndSection
 
     Section "InputClass"
         Identifier "Wacom class options"
+            # Match the Wacom input tool that has this specific "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Finger pad"
         MatchDevicePath "/dev/input/event*"
-        # Add Options below
+
+            # Apply custom Options to this device below.
         Option "Button1" "key ctrl t"
         Option "Button2" "key backspace"
         Option "Button3" "3"
