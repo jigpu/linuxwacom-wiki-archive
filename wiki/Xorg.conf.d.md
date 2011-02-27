@@ -32,9 +32,10 @@ is using. USB tablets or tablet PCs will use the USB snippet, which
 we'll use in the following examples. The N-Trig snippet is self evident.
 If your not sure what Serial snippet applies simply comment out the one
 you think is probably not needed by your serial tablet PC and reboot. If
-your digitizer is still working you were right. That is the snippet you
-need to add your Options to, or to use as the template for the snippet
-or snippets you will add to your 52-wacom-options.conf.
+your digitizer is still working you were right. The snippet being used
+by your device is the snippet you need to add your Options to, or to use
+as the template for the snippet or snippets you will add to your
+52-wacom-options.conf.
 
 ##### Sample Static Configuration
 
