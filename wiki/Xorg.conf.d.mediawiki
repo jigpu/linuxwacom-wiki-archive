@@ -1,4 +1,3 @@
-=== xorg.conf.d ===
 Static configuration in [[Configuring_X#xorg.conf.d configuration | xorg.conf.d snippets]] applies to hotplugged devices, as opposed to static configuration in the [[Configuring_X#Manual setup in the xorg.conf|xorg.conf]] or runtime configuration with [[xsetwacom]].  
 The X server scans several directories for ''.conf'' files on startup:
 * ''/usr/share/X11/xorg.conf.d''
@@ -15,7 +14,9 @@ We will create a new file in /usr/share/X11/ called 52-wacom-options.conf to add
 More than one configuration snippet may apply to any device. 
 Configuration settings are merged, but if the same setting is specified multiple times, only the last one is used.
 
-==== X server 1.8 & 1.9 ====
+
+
+= X server 1.8 & 1.9 =
 With X servers 1.8 & 1.9 you can only use Options that apply to the [[How_Wacom_tablets_work#Tools | parent device (stylus)]] and not dependent devices like the eraser, cursor, or touch (for serial tablet PCs).  In other words you can only set tablet wide settings.  To configure dependent devices you either have to use xorg.conf sections or xsetwacom commands.
 
 First you will need to determine which snippet your tablet or tablet PC is using.  USB tablets or tablet PCs will use the USB snippet, which we'll use in the following examples.  The N-Trig snippet is self evident.  If your not sure what Serial snippet applies simply comment out the one you think is probably not needed by your serial tablet PC and reboot.  If your digitizer is still working you were right.  The snippet being used by your device is the snippet you need to add your Options to, or to use as the template for the snippet or snippets you will add to your 52-wacom-options.conf.
@@ -58,10 +59,10 @@ EndSection
 </pre>
 '''Note''' the static configuration files still use the "old" parameter names.  This demonstrates you can configure Options that apply to both the parent & dependent devices, such as ''PressureCurve'' to stylus/eraser and the ''Area'' coordinates to stylus/eraser & touch.  The ''Area'' coordinates don't affect the pad of course.
 
-==== X server 1.10 ====
+= X server 1.10 =
 With ''X server 1.10'' you can configure dependent devices.  In other words you are able to set each input tool up in its own snippet like a section in the xorg.conf.  The advantage is that these settings will last through a hot plug.  How to do that follows.
 
-===== Sample Dependent Device Static Configuration =====
+== Sample Dependent Device Static Configuration ==
 Again identify each input tool's "device name" in [[xinput|xinput list]].  You'll use each in a match line for it's snippet.  That guarantees specificity and eliminates the need for an extra line to do a generic match to Wacom or whatever.  Plus you can use more than one tablet as long as their "device names" are different, which you can't do using ''eraser'' or ''cursor'', etc.  In each snippet we'll enter the Options equivalent to the xsetwacom parameters used in the [[Tablet Configuration#Sample Runtime Script|Sample Runtime Script]] configuration just as an example.  Notice again the wacom driver line is not used and we modify the Identifier.
 
 Into your new 52-wacom-options.conf file located in /etc/X11/xorg.conf.d enter:

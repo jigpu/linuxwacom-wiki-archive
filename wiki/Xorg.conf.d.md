@@ -4,8 +4,6 @@ permalink: wiki/Xorg.conf.d/
 layout: wiki
 ---
 
-### xorg.conf.d
-
 Static configuration in [ xorg.conf.d
 snippets](/wiki/Configuring_X#xorg.conf.d_configuration "wikilink") applies to
 hotplugged devices, as opposed to static configuration in the
@@ -34,7 +32,8 @@ More than one configuration snippet may apply to any device.
 Configuration settings are merged, but if the same setting is specified
 multiple times, only the last one is used.
 
-#### X server 1.8 & 1.9
+X server 1.8 & 1.9
+==================
 
 With X servers 1.8 & 1.9 you can only use Options that apply to the [
 parent device (stylus)](/wiki/How_Wacom_tablets_work#Tools "wikilink") and not
@@ -112,14 +111,16 @@ the parent & dependent devices, such as *PressureCurve* to stylus/eraser
 and the *Area* coordinates to stylus/eraser & touch. The *Area*
 coordinates don't affect the pad of course.
 
-#### X server 1.10
+X server 1.10
+=============
 
 With *X server 1.10* you can configure dependent devices. In other words
 you are able to set each input tool up in its own snippet like a section
 in the xorg.conf. The advantage is that these settings will last through
 a hot plug. How to do that follows.
 
-##### Sample Dependent Device Static Configuration
+Sample Dependent Device Static Configuration
+--------------------------------------------
 
 Again identify each input tool's "device name" in [xinput
 list](xinput "wikilink"). You'll use each in a match line for it's
