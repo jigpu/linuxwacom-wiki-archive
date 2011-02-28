@@ -134,6 +134,11 @@ The pad tool usually provides a number of buttons, depending on the
 model. The pad also provides the coordinates of the scroll ring or
 scroll strips as raw data.
 
+The buttons exported by the Pad tool are referred to as "Express Keys"
+on the [Wacom website](http://www.wacom.com). The buttons can be
+configured to send keys with configuration tools such as
+[xsetwacom](xsetwacom "wikilink").
+
 Touch
 -----
 
