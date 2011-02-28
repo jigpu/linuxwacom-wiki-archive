@@ -1,3 +1,5 @@
+{{Tip|text=The most up-to-date list of supported device IDs can be found in [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/xf86-input-wacom;a=blob;f=src/wcmUSB.c;h=9f327ba6b0210a04933da22861750d304d7edb86;hb=HEAD#l172 gitweb]}}
+
 {| border="1"
 |+ ''USB series''
 |-
