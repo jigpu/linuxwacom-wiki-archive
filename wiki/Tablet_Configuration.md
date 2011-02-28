@@ -399,7 +399,8 @@ enter into your
 or in the
 [xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink").
 
-### xorg.conf
+xorg.conf
+---------
 
 In your *xorg.conf* you can configure dependent devices but your
 configuration will likely not last through a hotplug. Start entering
