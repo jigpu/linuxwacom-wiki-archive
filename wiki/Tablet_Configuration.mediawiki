@@ -8,9 +8,7 @@ Currently [[xf86-input-wacom]] does not have a configuration gui like linuxwacom
 
 It should be relatively straight forward to assemble a configuration script for your tablet.  Be sure to read ''man wacom'', ''man xsetwacom'', [[Xsetwacom]], and enter ''xsetwacom list parameters'' in a terminal to learn about the parameters or Options you may want to change.  As you will see a script can give you some finer control over your tablet's features and also let you create profiles.
 
-__TOC__
-
-= Runtime (xsetwacom) Configuration =
+== Runtime (xsetwacom) Configuration ==
 A ''xsetwacom set'' command assigns a specified value to a parameter during runtime.  The ''xsetwacom get'' command returns the current value the parameter is ''set'' to.
 {{:Xsetwacom}}
 {{Warning|reason=With the advent of [https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ xf86-input-wacom-10.11] many of the xsetwacom parameter names have changed.  See [[Xsetwacom#Table of New Parameter Names|Table of New Parameter Names]].  Be aware that the xsetwacom interface may change without notice.}}
@@ -291,13 +289,13 @@ In Gnome right click on your Desktop and chose ''Create Launcher...''  In your d
 
 It's also a good idea to set up your general or start up configuration script in a Launcher.  That way when you're done using the application a particular profile applied to, you can restore your general configuration.
 
-= Static (xorg.conf.d or xorg.conf) Configuration =
+== Static (xorg.conf.d or xorg.conf) Configuration ==
 Entering ''man wacom'' in a terminal will bring up the Options you can enter into your [[Configuring X#Hotplugging setup with udev|/etc/udev/X11/52-wacom-options.conf]] or in the [[Configuring X#Manual setup in the xorg.conf|xorg.conf]].
 {{Warning|reason=Adding or altering any X configuration file runs the risk of breaking X.  Be sure to back up the current working 50-wacom.conf or xorg.conf and be prepared to restore it from the command line when booting into your distribution's Recovery mode.  If you are creating a 52-wacom-options.conf or xorg.conf and it breaks X be sure you know how to rename or remove it from the command line before you do so.  Once the new file is working do not forget to back it up.  And keep your backups current!}}
 
 {{:Xorg.conf.d}}
 
-= xorg.conf =
+== xorg.conf ==
 In your ''xorg.conf'' you can configure dependent devices but your configuration will likely not last through a hotplug.  Start entering your Options for each input tool below the last Option line you use from the [[Configuring X#Manual setup in the xorg.conf|Example xorg.conf]] in your xorg.conf.  Unless you use the Nvidia binary video driver you are likely not to have an xorg.conf and would need to create one.  Locate it in /etc/X11 as /etc/X11/xorg.conf.  When you use a xorg.conf remember the "device names" in ''xinput list'' will be stylus, eraser, cursor, touch, and pad, depending on your input tools.
 
 
