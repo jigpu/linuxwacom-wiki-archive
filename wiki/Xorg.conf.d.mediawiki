@@ -1,4 +1,4 @@
-== Overview ==
+__TOC__
 This page describes static device configuration through [[xorg.conf.d]]
 snippets. Such a configuration applies applies to hotplugged devices, as opposed to static configuration in the [[Configuring_X#Manual setup in the xorg.conf|xorg.conf]] or runtime configuration with [[xsetwacom]].  
 {{Tip|text=xorg.conf.d snippets are available since X server 1.8}}
