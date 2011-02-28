@@ -85,12 +85,11 @@ Refer to the [Tablet PC](/wiki/Tablet_PC "wikilink") page for detail.
 Tools
 =====
 
-All device types expose only a single kernel device to the
-[xf86-input-wacom X driver](xf86-input-wacom_X_driver "wikilink"). That
-driver splits the data coming from this kernel device into multiple X
-devices or *tools*.
+All device types expose only a single kernel device to the [X
+driver](xf86-input-wacom "wikilink"). That driver splits the data coming
+from this kernel device into multiple X devices or *tools*.
 
-X applications such as the [GIMP](http://www.gimp.org)\] can then detect
+X applications such as the [GIMP](http://www.gimp.org) can then detect
 which tool an event is coming from, assign different settings to
 different tools, etc.
 
