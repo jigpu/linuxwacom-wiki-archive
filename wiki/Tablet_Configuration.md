@@ -6,8 +6,6 @@ tags:
  - HOWTO
 ---
 
-**In Progress**
-
 This page shows you how to assemble a runtime or static configuration
 for a specific tablet or tablet PC model. Additionally it demonstrates
 how to create profiles for various applications.
