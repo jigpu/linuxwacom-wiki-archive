@@ -105,22 +105,26 @@ snippet, based on the one your device is using. Notice the *Driver
 "wacom"* line is not needed or included and that the *Identifier* has
 *options* added to it. That allows you to determine at a glance that
 your match lines worked and your Options are being applied in Xorg.0.log
-(in /var/log). Use the standard match line for your snippet, which would
-be *MatchProduct "Wacom\|WACOM\|WALTOP\|Hanwang"* in the USB snippet.
+(in /var/log). Identify each input tool's "device name" in [xinput
+list](xinput "wikilink"). This will let you determine what keyword(s)
+will be useful for a match. You could use one or more keywords from the
+*Sample of MatchProduct keywords* list above.
 
-Bamboo Pen & Touch tablets and USB tablet PCs appear to be the
-exception, but that is an illusion. That's because they are seen by the
-system as 2 devices, stylus/eraser & touch/pad for the Bamboo P&T and
-stylus/eraser & touch for USB tablet PCs. Because it is the most
-"complicated" case we will use the Bamboo P&T in the example. Identify
-each input tool's "device name" in [xinput list](xinput "wikilink").
-Since there are two devices to match, rather than using the standard USB
-match line, we'll use the *root* name for each parent and dependent
-device. In the Bamboo P & T case the *root* "device names" include *Pen*
-or *Finger*.
+Bamboo Pen & Touch tablets and USB tablet PCs appear to be the exception
+because they can have two snippets, but that is an illusion. The
+explanation is they are seen by the system as 2 devices, stylus/eraser &
+touch/pad for the Bamboo P&T and stylus/eraser & touch for USB tablet
+PCs. Because it is the most "complicated" case we will use the Bamboo
+P&T in the example. Again remember for tablets without touch and Serial
+tablet PCs only one snippet is needed.
 
-Into your new 52-wacom-options.conf file located in /etc/X11/xorg.conf.d
-to add a *PressureCurve* and *Area* Options enter:
+After identifying each input tool's "device name" in *xinput list* we
+see there are two devices to match. So rather than using a standard USB
+keyword for the match, we decide to use the *root* name for each parent
+and dependent device. In the Bamboo P & T case the *root* "device names"
+include *Pen* or *Finger*. Into your new 52-wacom-options.conf file
+located in /etc/X11/xorg.conf.d to add a *PressureCurve* and *Area*
+Options enter:
 
     Section "InputClass"
             # This is for human-readable purposes only.
