@@ -399,8 +399,16 @@ enter into your
 or in the
 [xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink").
 
-xorg.conf
----------
+### xorg.conf.d
+
+In *xorg.conf.d* you may not be able to configure dependent devices,
+depending on your X server version. However hot plugging is supported.
+To configure your devices you add a 52-wacom-options.conf to
+/etc/X11/xorg.conf.d and add the Options to it. See
+[Xorg.conf.d](/wiki/Xorg.conf.d "wikilink") for detailed explanation and
+examples on how to use it.
+
+### xorg.conf
 
 In your *xorg.conf* you can configure dependent devices but your
 configuration will likely not last through a hotplug. Start entering
