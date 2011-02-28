@@ -32,7 +32,7 @@ change. As you will see a script can give you some finer control over
 your tablet's features and also let you create profiles.
 
 Runtime (xsetwacom) Configuration
----------------------------------
+=================================
 
 A *xsetwacom set* command assigns a specified value to a parameter
 during runtime. The *xsetwacom get* command returns the current value
@@ -391,7 +391,7 @@ particular profile applied to, you can restore your general
 configuration.
 
 Static (xorg.conf.d or xorg.conf) Configuration
------------------------------------------------
+===============================================
 
 Entering *man wacom* in a terminal will bring up the Options you can
 enter into your
@@ -400,7 +400,7 @@ or in the
 [xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink").
 
 xorg.conf
----------
+=========
 
 In your *xorg.conf* you can configure dependent devices but your
 configuration will likely not last through a hotplug. Start entering
