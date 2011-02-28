@@ -30,6 +30,10 @@ We will create a new file in /usr/share/X11/ called
 ensures it will be run after the 50-wacom.conf in
 /usr/share/X11/xorg.conf.d/.
 
+More than one configuration snippet may apply to any device.
+Configuration settings are merged, but if the same setting is specified
+multiple times, only the last one is used.
+
 #### X server 1.8 & 1.9
 
 With X servers 1.8 & 1.9 you can only use Options that apply to the
