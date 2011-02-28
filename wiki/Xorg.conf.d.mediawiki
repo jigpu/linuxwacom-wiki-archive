@@ -1,5 +1,16 @@
 === xorg.conf.d ===
-Static configuration in [[Configuring_X#xorg.conf.d configuration | xorg.conf.d]] permits USB hotplugging, as opposed to static configuration in the [[Configuring_X#Manual setup in the xorg.conf|xorg.conf]] or runtime configuration with [[xsetwacom]].  Most, if not all, distributions recommend placing custom .conf files in /usr/share/X11/ rather than in /usr/share/X11/xorg.conf.d/.  This is because .conf files, such as the 50-wacom.conf, in /usr/share/X11/xorg.conf.d/ can be over written by distribution updates.  Since adding Options to the 50-wacom.conf file in /usr/share/X11/xorg.conf.d/ could be consider customizing it, we will create a new file in /usr/share/X11/ called 52-wacom-options.conf to add configuration Options to.  Numbering it 52 ensures it will be run after the 50-wacom.conf in /usr/share/X11/xorg.conf.d/.
+Static configuration in [[Configuring_X#xorg.conf.d configuration | xorg.conf.d snippets]] applies to hotplugged devices, as opposed to static configuration in the [[Configuring_X#Manual setup in the xorg.conf|xorg.conf]] or runtime configuration with [[xsetwacom]].  
+The X server scans several directories for ''.conf'' files on startup:
+* ''/usr/share/X11/xorg.conf.d''
+** Files here are the shipped by the distribution and may be overwritten at update time. It is not recommended to place any user-specific configuration files here.
+* ''/etc/X11/xorg.conf.d''
+** Files here are user-specific configurations. If there is no user-specific configuration, this directory may not exists - simply create it and store your configurations here.
+** Files here are read '''after''' the distribution-specific patches, so user-specific configuration always overrides the default configurations.
+
+{{Tip|text=The directories are distribution specific and may vary slightly. Check your Xorg.log for confirmation}}
+
+We will create a new file in /usr/share/X11/ called 52-wacom-options.conf to add configuration Options to.  Numbering it 52 ensures it will be run after the 50-wacom.conf in /usr/share/X11/xorg.conf.d/.
+{{Tip|text=Only filenames with the extension .conf are read by the X server.}}
 
 ==== X server 1.8 & 1.9 ====
 With X servers 1.8 & 1.9 you can only use Options that apply to the Master device (stylus) and not dependent devices like the eraser, cursor, or touch (for serial tablet PCs).  In other words you can only set tablet wide settings.  To configure dependent devices you either have to use xorg.conf sections or xsetwacom commands.

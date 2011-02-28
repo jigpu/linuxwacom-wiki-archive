@@ -6,20 +6,29 @@ layout: wiki
 
 ### xorg.conf.d
 
-Static configuration in [
-xorg.conf.d](/wiki/Configuring_X#xorg.conf.d_configuration "wikilink") permits
-USB hotplugging, as opposed to static configuration in the
+Static configuration in [ xorg.conf.d
+snippets](/wiki/Configuring_X#xorg.conf.d_configuration "wikilink") applies to
+hotplugged devices, as opposed to static configuration in the
 [xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink") or
-runtime configuration with [xsetwacom](xsetwacom "wikilink"). Most, if
-not all, distributions recommend placing custom .conf files in
-/usr/share/X11/ rather than in /usr/share/X11/xorg.conf.d/. This is
-because .conf files, such as the 50-wacom.conf, in
-/usr/share/X11/xorg.conf.d/ can be over written by distribution updates.
-Since adding Options to the 50-wacom.conf file in
-/usr/share/X11/xorg.conf.d/ could be consider customizing it, we will
-create a new file in /usr/share/X11/ called 52-wacom-options.conf to add
-configuration Options to. Numbering it 52 ensures it will be run after
-the 50-wacom.conf in /usr/share/X11/xorg.conf.d/.
+runtime configuration with [xsetwacom](xsetwacom "wikilink"). The X
+server scans several directories for *.conf* files on startup:
+
+-   */usr/share/X11/xorg.conf.d*
+    -   Files here are the shipped by the distribution and may be
+        overwritten at update time. It is not recommended to place any
+        user-specific configuration files here.
+-   */etc/X11/xorg.conf.d*
+    -   Files here are user-specific configurations. If there is no
+        user-specific configuration, this directory may not exists -
+        simply create it and store your configurations here.
+    -   Files here are read **after** the distribution-specific patches,
+        so user-specific configuration always overrides the default
+        configurations.
+
+We will create a new file in /usr/share/X11/ called
+52-wacom-options.conf to add configuration Options to. Numbering it 52
+ensures it will be run after the 50-wacom.conf in
+/usr/share/X11/xorg.conf.d/.
 
 #### X server 1.8 & 1.9
 
