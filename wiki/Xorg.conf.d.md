@@ -4,9 +4,10 @@ permalink: wiki/Xorg.conf.d/
 layout: wiki
 ---
 
-Static configuration in [ xorg.conf.d
-snippets](/wiki/Configuring_X#xorg.conf.d_configuration "wikilink") applies to
-hotplugged devices, as opposed to static configuration in the
+This page describes static device configuration through
+[xorg.conf.d](xorg.conf.d "wikilink") snippets. Such a configuration
+applies applies to hotplugged devices, as opposed to static
+configuration in the
 [xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink") or
 runtime configuration with [xsetwacom](xsetwacom "wikilink"). The X
 server scans several directories for *.conf* files on startup:
