@@ -69,7 +69,7 @@ then a separate snippet that selects options based on what driver is
 assigned.
 
 X servers 1.8 and 1.9
-=====================
+---------------------
 
 With X servers 1.8 and 1.9, [xorg.conf.d](xorg.conf.d "wikilink")
 configuration snippets apply only to the [ parent device
@@ -90,7 +90,7 @@ by your device is the snippet you need to add your Options to, or to use
 as the template for the snippet or snippets you will add to your
 52-wacom-options.conf.
 
-##### Sample Static Configuration
+### Sample Static Configuration
 
 Because you can not configure dependent devices you will just need one
 snippet, based on the one your device is using. Notice the *Driver
@@ -150,15 +150,14 @@ and the *Area* coordinates to stylus/eraser & touch. The *Area*
 coordinates don't affect the pad of course.
 
 X server 1.10
-=============
+-------------
 
 With *X server 1.10* you can configure dependent devices. In other words
 you are able to set each input tool up in its own snippet like a section
 in the xorg.conf. The advantage is that these settings will last through
 a hot plug. How to do that follows.
 
-Sample Dependent Device Static Configuration
---------------------------------------------
+### Sample Dependent Device Static Configuration
 
 Again identify each input tool's "device name" in [xinput
 list](xinput "wikilink"). You'll use each in a match line for it's
