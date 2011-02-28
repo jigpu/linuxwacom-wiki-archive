@@ -132,7 +132,15 @@ applicable).
 
 The pad tool usually provides a number of buttons, depending on the
 model. The pad also provides the coordinates of the scroll ring or
-scroll strips as raw data.
+scroll strips as raw data. Events on these will be exported as
+coordinates on axes 4 to 6. Because of limitations in X clients, the
+first three axes on the pad (x, y, and pressure) must be present but
+they will not send coordinate data. Any additional axes are for
+pad-specific features:
+
+-   Axis 4: strip x raw data
+-   Axis 5: strip y raw data
+-   Axis 6: scroll ring raw data
 
 The buttons exported by the Pad tool are referred to as "Express Keys"
 on the [Wacom website](http://www.wacom.com). The buttons can be

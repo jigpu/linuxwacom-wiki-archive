@@ -63,11 +63,14 @@ Not all Wacom models support a cursor tool.
 The pad tool is the physical tablet itself excluding the drawing area,
 including the buttons and the scroll ring or scroll strips (if applicable).
 
-{{Fixme|reason=Which axes do they export the data through?}}
-
 The pad tool usually provides a number of buttons, depending on the model.
 The pad also provides the coordinates of the scroll ring or scroll strips as
-raw data.
+raw data. Events on these will be exported as coordinates on axes 4 to 6. 
+Because of limitations in X clients, the first three axes on the pad (x, y, and pressure) must be present but they will not send coordinate data.
+Any additional axes are for pad-specific features:
+* Axis 4: strip x raw data
+* Axis 5: strip y raw data
+* Axis 6: scroll ring raw data
 
 The buttons exported by the Pad tool are referred to as "Express Keys" on the [http://www.wacom.com Wacom website]. The buttons can be configured to send keys with configuration tools such as [[xsetwacom]].
 
