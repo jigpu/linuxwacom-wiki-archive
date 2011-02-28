@@ -8,6 +8,8 @@ Currently [[xf86-input-wacom]] does not have a configuration gui like linuxwacom
 
 It should be relatively straight forward to assemble a configuration script for your tablet.  Be sure to read ''man wacom'', ''man xsetwacom'', [[Xsetwacom]], and enter ''xsetwacom list parameters'' in a terminal to learn about the parameters or Options you may want to change.  As you will see a script can give you some finer control over your tablet's features and also let you create profiles.
 
+__TOC__
+
 = Runtime (xsetwacom) Configuration =
 A ''xsetwacom set'' command assigns a specified value to a parameter during runtime.  The ''xsetwacom get'' command returns the current value the parameter is ''set'' to.
 {{:Xsetwacom}}
