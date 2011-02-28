@@ -4,6 +4,9 @@ permalink: wiki/Xorg.conf.d/
 layout: wiki
 ---
 
+Overview
+--------
+
 This page describes static device configuration through
 [xorg.conf.d](xorg.conf.d "wikilink") snippets. Such a configuration
 applies applies to hotplugged devices, as opposed to static
