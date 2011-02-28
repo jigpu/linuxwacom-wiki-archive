@@ -36,11 +36,12 @@ multiple times, only the last one is used.
 
 #### X server 1.8 & 1.9
 
-With X servers 1.8 & 1.9 you can only use Options that apply to the
-parent device (stylus) and not dependent devices like the eraser,
-cursor, or touch (for serial tablet PCs). In other words you can only
-set tablet wide settings. To configure dependent devices you either have
-to use xorg.conf sections or xsetwacom commands.
+With X servers 1.8 & 1.9 you can only use Options that apply to the [
+parent device (stylus)](/wiki/How_Wacom_tablets_work#Tools "wikilink") and not
+dependent devices like the eraser, cursor, or touch (for serial tablet
+PCs). In other words you can only set tablet wide settings. To configure
+dependent devices you either have to use xorg.conf sections or xsetwacom
+commands.
 
 First you will need to determine which snippet your tablet or tablet PC
 is using. USB tablets or tablet PCs will use the USB snippet, which
