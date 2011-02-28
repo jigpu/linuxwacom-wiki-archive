@@ -87,11 +87,15 @@ Tools
 
 All device types expose only a single kernel device to the [X
 driver](xf86-input-wacom "wikilink"). That driver splits the data coming
-from this kernel device into multiple X devices or *tools*.
-
-X applications such as the [GIMP](http://www.gimp.org) can then detect
+from this kernel device into multiple X devices or *tools*. X
+applications such as the [GIMP](http://www.gimp.org) can then detect
 which tool an event is coming from, assign different settings to
 different tools, etc.
+
+Usually, the first device that is initialised is the [
+stylus](#Stylus "wikilink"). This device is also referred to as the
+*parent device*, with all other devices being referred to as *dependent
+devices*.
 
 Stylus
 ------

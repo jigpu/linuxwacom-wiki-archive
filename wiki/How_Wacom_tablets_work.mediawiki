@@ -30,11 +30,11 @@ Refer to the [[Tablet PC]] page for detail.
 = Tools =
 All device types expose only a single kernel device to the
 [[xf86-input-wacom|X driver]]. That driver splits the data coming from this
-kernel device into multiple X devices or ''tools''.
-
-X applications such as the [http://www.gimp.org GIMP] can then detect which
+kernel device into multiple X devices or ''tools''. X applications such as the [http://www.gimp.org GIMP] can then detect which
 tool an event is coming from, assign different settings to different tools,
 etc.
+
+Usually, the first device that is initialised is the [[#Stylus | stylus]]. This device is also referred to as the ''parent device'', with all other devices being referred to as ''dependent devices''.
 
 == Stylus ==
 This is the default tool all wacom tablets have. It is the tip of the physical
