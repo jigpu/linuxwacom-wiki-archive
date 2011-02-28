@@ -4,8 +4,7 @@ permalink: wiki/Xorg.conf.d/
 layout: wiki
 ---
 
-Overview
---------
+\_TOC\_
 
 This page describes static device configuration through
 [xorg.conf.d](xorg.conf.d "wikilink") snippets. Such a configuration
