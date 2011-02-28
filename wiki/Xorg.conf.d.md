@@ -71,6 +71,21 @@ we can have one snippet that selects a driver for all our devices and
 then a separate snippet that selects options based on what driver is
 assigned.
 
+**Sample of MatchProduct keywords** - used in the 50-wacom.conf at one
+time or another
+
+-   **USB**: "Wacom", "WACOM", "WALTOP", "Hanwang"
+-   **Serial**: "Wacom serial class", "WACf", "FUJ02e5", "FUJ02e7"
+-   **N-Trig** (usb): "Wacom N-Trig class", "HID 1b96:0001\|N-Trig Pen"
+
+As demonstrated by the N-Trig keywords you can string keywords together
+using **\|** to separate them, another e.g. "Wacom\|WACOM\|Hanwang", as
+long as they are enclosed by quotes. As you would expect the
+50-wacom.conf keywords, with the exception of the second strung together
+N-Trig one, provide a fairly general match. Keep them in mind when you
+write a snippet to match your device(s). More specific matches will be
+shown below.
+
 X servers 1.8 and 1.9
 ---------------------
 
@@ -82,16 +97,6 @@ set tablet wide settings. To configure dependent devices you either have
 to use [
 xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink")
 sections or [xsetwacom](xsetwacom "wikilink") commands.
-
-First you will need to determine which snippet your tablet or tablet PC
-is using. USB tablets or tablet PCs will use the USB snippet, which
-we'll use in the following examples. The N-Trig snippet is self evident.
-If your not sure what Serial snippet applies simply comment out the one
-you think is probably not needed by your serial tablet PC and reboot. If
-your digitizer is still working you were right. The snippet being used
-by your device is the snippet you need to add your Options to, or to use
-as the template for the snippet or snippets you will add to your
-52-wacom-options.conf.
 
 ### Sample Static Configuration
 
