@@ -33,7 +33,7 @@ ensures it will be run after the 50-wacom.conf in
 #### X server 1.8 & 1.9
 
 With X servers 1.8 & 1.9 you can only use Options that apply to the
-Master device (stylus) and not dependent devices like the eraser,
+parent device (stylus) and not dependent devices like the eraser,
 cursor, or touch (for serial tablet PCs). In other words you can only
 set tablet wide settings. To configure dependent devices you either have
 to use xorg.conf sections or xsetwacom commands.
@@ -65,7 +65,7 @@ stylus/eraser & touch for USB tablet PCs. Because it is the most
 "complicated" case we will use the Bamboo P&T in the example. Identify
 each input tool's "device name" in [xinput list](xinput "wikilink").
 Since there are two devices to match, rather than using the standard USB
-match line, we'll use the *root* name for each Master and dependent
+match line, we'll use the *root* name for each parent and dependent
 device. In the Bamboo P & T case the *root* "device names" include *Pen*
 or *Finger*.
 
@@ -103,7 +103,7 @@ to add a *PressureCurve* and *Area* Options enter:
 
 **Note** the static configuration files still use the "old" parameter
 names. This demonstrates you can configure Options that apply to both
-the Master & dependent devices, such as *PressureCurve* to stylus/eraser
+the parent & dependent devices, such as *PressureCurve* to stylus/eraser
 and the *Area* coordinates to stylus/eraser & touch. The *Area*
 coordinates don't affect the pad of course.
 
