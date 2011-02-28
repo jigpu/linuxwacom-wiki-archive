@@ -32,6 +32,41 @@ More than one configuration snippet may apply to any device.
 Configuration settings are merged, but if the same setting is specified
 multiple times, only the last one is used.
 
+Matching a device
+-----------------
+
+[xorg.conf.d](xorg.conf.d "wikilink") snippets are based on several
+different Match keywords. The most common ones are to match on a product
+name (**MatchProduct**) or to match on a certain device path
+(**MatchDevicePath**). The example below shows a snippet that applies to
+any device with *either* the string "Wacom" *or* the string "Waltop" in
+the product name *and* that matches a certain device path:
+
+    Section "InputClass"
+            # This is for human-readable purposes only.
+        Identifier "Wacom class options"
+            # Match all devices with either Wacom or Waltop in their product name
+        MatchProduct "Wacom|Waltop"
+            # AND match devices with a device path of /dev/input/eventX.
+        MatchDevicePath "/dev/input/event*"
+    EndSection
+
+For the purpose of configuring Wacom devices, we will use the following
+match keywords:
+
+-   **MatchProduct**: matches when the device name contains the given
+    substring
+-   **MatchDevicePath**: matches when the device path matches the given
+    path (wildcards possible)
+-   **MatchDriver**: matches when the assigned device driver matches the
+    given one
+
+As mentioned above, configuration snippets can be stacked and combined.
+This is particularly interesting for the **MatchDriver** option because
+we can have one snippet that selects a driver for all our devices and
+then a separate snippet that selects options based on what driver is
+assigned.
+
 X servers 1.8 and 1.9
 =====================
 
