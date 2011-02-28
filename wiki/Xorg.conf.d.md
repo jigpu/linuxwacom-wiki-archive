@@ -101,14 +101,13 @@ sections or [xsetwacom](xsetwacom "wikilink") commands.
 ### Sample Static Configuration
 
 Because you can not configure dependent devices you will just need one
-snippet, based on the one your device is using. Notice the *Driver
-"wacom"* line is not needed or included and that the *Identifier* has
-*options* added to it. That allows you to determine at a glance that
-your match lines worked and your Options are being applied in Xorg.0.log
-(in /var/log). Identify each input tool's "device name" in [xinput
-list](xinput "wikilink"). This will let you determine what keyword(s)
-will be useful for a match. You could use one or more keywords from the
-*Sample of MatchProduct keywords* list above.
+snippet. Notice the *Driver "wacom"* line is not needed or included and
+that the *Identifier* has *options* added to it. That allows you to
+determine at a glance that your match lines worked and your Options are
+being applied in Xorg.0.log (in /var/log). Identify each input tool's
+"device name" in [xinput list](xinput "wikilink"). This will let you
+determine what keyword(s) will be useful for a match. You could use one
+or more keywords from the *Sample of MatchProduct keywords* list above.
 
 Bamboo Pen & Touch tablets and USB tablet PCs appear to be the exception
 because they can have two snippets, but that is an illusion. The
