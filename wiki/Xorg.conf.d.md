@@ -23,7 +23,7 @@ server scans several directories for *.conf* files on startup:
         so user-specific configuration always overrides the default
         configurations.
 
-We will create a new file in /usr/share/X11/ called
+We will create a new file in /etc/X11/xorg.conf.d called
 52-wacom-options.conf to add configuration Options to. Numbering it 52
 ensures it will be run after the 50-wacom.conf in
 /usr/share/X11/xorg.conf.d/.
