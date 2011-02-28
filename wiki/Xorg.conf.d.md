@@ -71,7 +71,7 @@ X servers 1.8 and 1.9
 =====================
 
 With X servers 1.8 and 1.9, [xorg.conf.d](xorg.conf.d "wikilink")
-configuration snippets applie only to the [ parent device
+configuration snippets apply only to the [ parent device
 (stylus)](/wiki/How_Wacom_tablets_work#Tools "wikilink") and not dependent
 devices like the eraser, cursor, or touch. In other words you can only
 set tablet wide settings. To configure dependent devices you either have
