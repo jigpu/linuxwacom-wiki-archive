@@ -32,15 +32,17 @@ More than one configuration snippet may apply to any device.
 Configuration settings are merged, but if the same setting is specified
 multiple times, only the last one is used.
 
-X server 1.8 & 1.9
-==================
+X servers 1.8 and 1.9
+=====================
 
-With X servers 1.8 & 1.9 you can only use Options that apply to the [
-parent device (stylus)](/wiki/How_Wacom_tablets_work#Tools "wikilink") and not
-dependent devices like the eraser, cursor, or touch (for serial tablet
-PCs). In other words you can only set tablet wide settings. To configure
-dependent devices you either have to use xorg.conf sections or xsetwacom
-commands.
+With X servers 1.8 and 1.9, [xorg.conf.d](xorg.conf.d "wikilink")
+configuration snippets applie only to the [ parent device
+(stylus)](/wiki/How_Wacom_tablets_work#Tools "wikilink") and not dependent
+devices like the eraser, cursor, or touch. In other words you can only
+set tablet wide settings. To configure dependent devices you either have
+to use [
+xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink")
+sections or [xsetwacom](xsetwacom "wikilink") commands.
 
 First you will need to determine which snippet your tablet or tablet PC
 is using. USB tablets or tablet PCs will use the USB snippet, which
