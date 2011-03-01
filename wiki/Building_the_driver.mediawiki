@@ -1,3 +1,4 @@
+__TOC__
 This page lists instructions for building the [[xf86-input-wacom]] driver.
 For [[linuxwacom]]-specific instructions, click [[Building linuxwacom|here]]
 
