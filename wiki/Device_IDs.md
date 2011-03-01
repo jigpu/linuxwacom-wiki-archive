@@ -12,7 +12,7 @@ tags:
 | Graphire 4                                         | 0x15, 0x16, 0x81                                                                                                    |
 | Bamboo Fun                                         | 0x17, 0x18, 0x65                                                                                                    |
 | Bamboo1 and LLC (low low cost)                     | 0x19, 0x60, 0x61, 0x62, 0x63, 0x64, 0x69                                                                            |
-| PL series                                          | 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x37, 0x38, 0x39, 0xC4, 0xC0, 0xC2, 0xC7                                        |
+| PL series                                          | 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x37, 0x38, 0x39, 0xC4, 0xC0, 0xC2, 0xC7, 0xCE, 0xF0                            |
 | Cap+                                               | 0x9F                                                                                                                |
 | PenPartner                                         | 0x03                                                                                                                |
 | Bamboo Pen (LLC similar to Earlier Graphire)       | 0xD4                                                                                                                |
