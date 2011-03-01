@@ -12,7 +12,7 @@ The tool you will need is **evtest**. If it is not available in your
 distribution, grab it from [here](http://cgit.freedesktop.org/evtest/)
 
 **Note: this will not work while the wacom X driver is running. You need
-to disable the driver.** See [\#Disabling the X
+to disable the driver.** See [Disabling the X
 driver](#Disabling_the_X_driver "wikilink")
 
 Detecting your Wacom device

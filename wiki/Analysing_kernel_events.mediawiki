@@ -1,9 +1,10 @@
+__TOC__
 This page describes how to view and analyse kernel events.
 
 The tool you will need is '''evtest'''. If it is not available in your
 distribution, grab it from [http://cgit.freedesktop.org/evtest/ here]
 
-'''Note: this will not work while the wacom X driver is running. You need to disable the driver.''' See [[#Disabling the X driver]]
+'''Note: this will not work while the wacom X driver is running. You need to disable the driver.''' See [[#Disabling the X driver|Disabling the X driver]]
 
 = Detecting your Wacom device =
 Plug the device in and have a look at ''/proc/bus/input/devices''. You'll find something like this:
