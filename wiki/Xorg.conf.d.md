@@ -83,6 +83,9 @@ exception of the second strung together N-Trig one, provide a fairly
 general match. Keep them in mind when you write a snippet to match your
 device(s). More specific matches will be shown below.
 
+-   **X server version**: if you don't know your version number enter
+    *Xorg -version* in a terminal.
+
 X servers 1.8 and 1.9
 ---------------------
 
