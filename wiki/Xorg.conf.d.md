@@ -187,7 +187,7 @@ enter:
 
     Section "InputClass"
             # This is for human-readable purposes only.
-        Identifier "Wacom class options"
+        Identifier "Wacom stylus options"
             # Match the Wacom input tool that has this specific "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Pen stylus"
             # AND match the device with a device path of /dev/input/eventX.
@@ -203,7 +203,7 @@ enter:
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom class options"
+        Identifier "Wacom eraser options"
             # Match the Wacom input tool that has this specific "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Pen eraser"
         MatchDevicePath "/dev/input/event*"
@@ -218,7 +218,7 @@ enter:
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom class options"
+        Identifier "Wacom touch options"
             # Match the Wacom input tool that has this specific "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Finger touch"
         MatchDevicePath "/dev/input/event*"
@@ -229,7 +229,7 @@ enter:
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom class options"
+        Identifier "Wacom pad options"
             # Match the Wacom input tool that has this specific "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Finger pad"
         MatchDevicePath "/dev/input/event*"
