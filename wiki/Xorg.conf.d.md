@@ -31,7 +31,11 @@ We will create a new file in /etc/X11/xorg.conf.d called
 
 More than one configuration snippet may apply to any device.
 Configuration settings are merged, but if the same setting is specified
-multiple times, only the last one is used.
+multiple times, only the last one is used. Usually, your distribution
+ships with a number of *.conf* files that will pick the right driver for
+your device. Thus, if you want to configure a particular device through
+[xorg.conf.d](xorg.conf.d "wikilink") snippets, you can usually skip the
+driver assignment - it's already done for you.
 
 Matching a device
 -----------------
@@ -66,22 +70,23 @@ As mentioned above, configuration snippets can be stacked and combined.
 This is particularly interesting for the **MatchDriver** option because
 we can have one snippet that selects a driver for all our devices and
 then a separate snippet that selects options based on what driver is
-assigned.
+assigned. As shown in the example above, multiple **Match\*** lines
+constitute a [logical
+AND](http://en.wikipedia.org/wiki/Logical_conjunction) match (i.e. both
+must apply), wherase using a **\|** separator in a single **Match\***
+line is a [logical OR](http://en.wikipedia.org/wiki/Logical_conjunction)
+match. The match strings are case sensitive.
 
-**Sample of MatchProduct keywords** - used in the 50-wacom.conf at one
+**Examples of MatchProduct keywords** - used in the 50-wacom.conf at one
 time or another
 
 -   **USB**: "Wacom", "WACOM", "WALTOP", "Hanwang"
 -   **Serial**: "Wacom serial class", "WACf", "FUJ02e5", "FUJ02e7"
 -   **N-Trig** (usb): "Wacom N-Trig class", "HID 1b96:0001\|N-Trig Pen"
 
-The match strings are case sensitive. As demonstrated by the N-Trig
-keywords you can string keywords together using **\|** to separate them,
-another e.g. "Wacom\|WACOM\|Hanwang", as long as they are enclosed by
-quotes. As you would expect the 50-wacom.conf keywords, with the
-exception of the second strung together N-Trig one, provide a fairly
-general match. Keep them in mind when you write a snippet to match your
-device(s). More specific matches will be shown below.
+These examples provide a fairly general match. Keep them in mind when
+you write a snippet to match your device(s). More specific matches will
+be shown below.
 
 X servers 1.8 and 1.9
 ---------------------
@@ -95,42 +100,28 @@ to use [
 xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink")
 sections or [xsetwacom](xsetwacom "wikilink") commands.
 
-### Sample Static Configuration
+### Example Configuration
 
-Because you can not configure dependent devices you will just need one
-snippet. Notice the *Driver "wacom"* line is not needed or included and
-that the *Identifier* has *options* added to it. That allows you to
-determine at a glance that your match lines worked and your Options are
-being applied in Xorg.0.log (in /var/log). Identify each input tool's
-"device name" in [xinput list](xinput "wikilink"). This will let you
-determine what keyword(s) will be useful for a match. You could use one
-or more keywords from the *Sample of MatchProduct keywords* list above.
+Only one snippet is enough as you cannot configure dependent devices.
+Notice the *Driver "wacom"* line is not used (we rely on the
+distribution-wide configuration). Always pick a suitable *Identifier*.
+Identifiers of matching input classes are printed into the Xorg.log and
+allows you to determine at a glance whether your match lines worked and
+your Options are being applied). Identify each input tool's device name
+with [xsetwacom list](xsetwacom "wikilink"). This will let you determine
+what keyword(s) will be useful for a match.
 
-Bamboo Pen & Touch tablets and USB tablet PCs appear to be the exception
-because they can have two snippets, but that is an illusion. The
-explanation is they are seen by the system as 2 devices, stylus/eraser &
-touch/pad for the Bamboo P&T and stylus/eraser & touch for USB tablet
-PCs. Because it is the most "complicated" case we will use the Bamboo
-P&T in the example. Again remember for tablets without touch and Serial
-tablet PCs only one snippet is needed.
-
-After identifying each input tool's "device name" in *xinput list* we
-see there are two devices to match. So rather than using a standard USB
-keyword for the match, we decide to use the *root* name for each parent
-and dependent device. In the Bamboo P & T case the *root* "device names"
-include *Pen* or *Finger*. Into your new 52-wacom-options.conf file
-located in /etc/X11/xorg.conf.d to add a *PressureCurve* and *Area*
-Options enter:
-
+    # Because Bamboos provide two separate kernel devices, we can 
+    # actually have two snippets for two different devices here.
     Section "InputClass"
-            # This is for human-readable purposes only.
-        Identifier "Wacom class options"
+        Identifier "Wacom Bamboo Presscurve and Area configurations"
             # Match all Wacom input tools that have "BambooFun 2FG 4x5 Pen" in the "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Pen"
-            # AND match devices with a device path of /dev/input/eventX.
         MatchDevicePath "/dev/input/event*"
 
-            # Apply custom Options to this device below.
+            # Apply a custom configuration options. Any option will also apply to
+            # all dependent devices, if applicable. So e.g. the pressure curve will
+            # be available on the stylus and the eraser (but not on the pad).
         Option "PressCurve" "0 10 90 100"
         Option "TopX" "0"
         Option "TopY" "0"
@@ -139,7 +130,7 @@ Options enter:
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom class options"
+        Identifier "Wacom Bamboo Finger Area configuration"
             # Match all Wacom input tools that have "BambooFun 2FG 4x5 Finger" in the "device name".
         MatchProduct "Wacom BambooFun 2FG 4x5 Finger"
         MatchDevicePath "/dev/input/event*"
@@ -151,12 +142,6 @@ Options enter:
         Option "BottomY" "320"
     EndSection
 
-**Note** the static configuration files still use the "old" parameter
-names. This demonstrates you can configure Options that apply to both
-the parent & dependent devices, such as *PressureCurve* to stylus/eraser
-and the *Area* coordinates to stylus/eraser & touch. The *Area*
-coordinates don't affect the pad of course.
-
 X server 1.10
 -------------
 
@@ -165,29 +150,19 @@ you are able to set each input tool up in its own snippet like a section
 in the xorg.conf. The advantage is that these settings will last through
 a hot plug. How to do that follows.
 
-### Sample Dependent Device Static Configuration
+### Example Dependent Device Static Configuration
 
-Again identify each input tool's "device name" in [xinput
-list](xinput "wikilink"). You'll use each in a match line for it's
-snippet. That guarantees specificity and eliminates the need for an
-extra line to do a generic match to Wacom or whatever. Plus you can use
-more than one tablet as long as their "device names" are different,
-which you can't do using *eraser* or *cursor*, etc. In each snippet
-we'll enter the Options equivalent to the xsetwacom parameters used in
-the [Sample Runtime
+Identify each input tool's device name with [xsetwacom
+list](xsetwacom "wikilink"). In the examples below, we match against the
+full device name. In each snippet we'll enter the Options equivalent to
+the xsetwacom parameters used in the [Sample Runtime
 Script](/wiki/Tablet_Configuration#Sample_Runtime_Script "wikilink")
 configuration just as an example. Notice again the wacom driver line is
 not used and we modify the Identifier.
 
-Into your new 52-wacom-options.conf file located in /etc/X11/xorg.conf.d
-enter:
-
     Section "InputClass"
-            # This is for human-readable purposes only.
-        Identifier "Wacom stylus options"
-            # Match the Wacom input tool that has this specific "device name".
+        Identifier "Wacom Bamboo stylus options"
         MatchProduct "Wacom BambooFun 2FG 4x5 Pen stylus"
-            # AND match the device with a device path of /dev/input/eventX.
         MatchDevicePath "/dev/input/event*"
 
             # Apply custom Options to this device below.
@@ -200,8 +175,7 @@ enter:
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom eraser options"
-            # Match the Wacom input tool that has this specific "device name".
+        Identifier "Wacom Bamboo eraser options"
         MatchProduct "Wacom BambooFun 2FG 4x5 Pen eraser"
         MatchDevicePath "/dev/input/event*"
 
@@ -215,8 +189,7 @@ enter:
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom touch options"
-            # Match the Wacom input tool that has this specific "device name".
+        Identifier "Wacom Bamboo touch options"
         MatchProduct "Wacom BambooFun 2FG 4x5 Finger touch"
         MatchDevicePath "/dev/input/event*"
 
@@ -226,8 +199,7 @@ enter:
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom pad options"
-            # Match the Wacom input tool that has this specific "device name".
+        Identifier "Wacom Bamboo pad options"
         MatchProduct "Wacom BambooFun 2FG 4x5 Finger pad"
         MatchDevicePath "/dev/input/event*"
 
