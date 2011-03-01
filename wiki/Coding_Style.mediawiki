@@ -8,7 +8,7 @@ patch may be rejected.
 
 * Tab is set to 8 characters
 * Default indentation is one tab
-* Indentation with tabs and remaining spaces to lign up code where necessary. Example below shows tabs with "''>----''" and spaces with "''.''".
+* Indentation with tabs and remaining spaces to align up code where necessary. Example below shows tabs with "''>----''" and spaces with "''.''".
 <pre>
 >-------if.(InitValuatorClassDeviceStruct(pInfo->dev, nbaxes,
 #if.GET_ABI_MAJOR(ABI_XINPUT_VERSION) >= 7

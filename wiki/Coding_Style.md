@@ -16,7 +16,7 @@ C coding style
 
 -   Tab is set to 8 characters
 -   Default indentation is one tab
--   Indentation with tabs and remaining spaces to lign up code where
+-   Indentation with tabs and remaining spaces to align up code where
     necessary. Example below shows tabs with "*&gt;----*" and spaces
     with "*.*".
 
