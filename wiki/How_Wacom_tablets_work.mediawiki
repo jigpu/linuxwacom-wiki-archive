@@ -1,3 +1,4 @@
+__TOC__
 Wacom tablets are available in serial and USB configurations. They are also sold as embedded products in certain tablet PC's. I will cover all three types, but the serial case is the most straightforward, so we'll start there.
 
 = Tablet types =
