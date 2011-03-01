@@ -75,13 +75,13 @@ time or another
 -   **Serial**: "Wacom serial class", "WACf", "FUJ02e5", "FUJ02e7"
 -   **N-Trig** (usb): "Wacom N-Trig class", "HID 1b96:0001\|N-Trig Pen"
 
-As demonstrated by the N-Trig keywords you can string keywords together
-using **\|** to separate them, another e.g. "Wacom\|WACOM\|Hanwang", as
-long as they are enclosed by quotes. As you would expect the
-50-wacom.conf keywords, with the exception of the second strung together
-N-Trig one, provide a fairly general match. Keep them in mind when you
-write a snippet to match your device(s). More specific matches will be
-shown below.
+The match strings are case sensitive. As demonstrated by the N-Trig
+keywords you can string keywords together using **\|** to separate them,
+another e.g. "Wacom\|WACOM\|Hanwang", as long as they are enclosed by
+quotes. As you would expect the 50-wacom.conf keywords, with the
+exception of the second strung together N-Trig one, provide a fairly
+general match. Keep them in mind when you write a snippet to match your
+device(s). More specific matches will be shown below.
 
 X servers 1.8 and 1.9
 ---------------------
