@@ -1,3 +1,4 @@
+__TOC__
 This page is for general tablet issues & tips as well as model specific issues & tips.
 
 The LWP project welcomes additions to its mediawiki so please join in if you have contributions.
