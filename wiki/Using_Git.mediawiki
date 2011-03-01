@@ -1,3 +1,4 @@
+__TOC__
 This page gives you a very basic outline of the git commands you will
 need to get the driver, hack and commit as well as to generate patches for
 submission. Treat this page as a quick reference only, it is strongly
