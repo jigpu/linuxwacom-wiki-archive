@@ -45,7 +45,7 @@ As mentioned above, configuration snippets can be stacked and combined. This is 
 
 The match strings are case sensitive.  As demonstrated by the N-Trig keywords you can string keywords together using '''|''' to separate them, another e.g. "Wacom|WACOM|Hanwang", as long as they are enclosed by quotes.  As you would expect the 50-wacom.conf keywords, with the exception of the second strung together N-Trig one, provide a fairly general match.  Keep them in mind when you write a snippet to match your device(s).  More specific matches will be shown below.
 
-* '''X server version''':  if you don't know your version number enter ''Xorg -version'' in a terminal.
+{{Tip|text=You can find out your X server version by typing <code>Xorg -version</code> in a terminal.}}
 
 == X servers 1.8 and 1.9 ==
 With X servers 1.8 and 1.9, [[xorg.conf.d]] configuration snippets apply only to the [[How_Wacom_tablets_work#Tools | parent device (stylus)]] and not dependent devices like the eraser, cursor, or touch.  In other words you can only set tablet wide settings.  To configure dependent devices you either have to use [[Configuring_X#Manual setup in the xorg.conf | xorg.conf]] sections or [[xsetwacom]] commands.
