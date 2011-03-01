@@ -1,3 +1,4 @@
+__TOC__
 The xf86-input-wacom driver is the wacom-specific X11 input driver for the X.Org X Server version 1.7 and later (X11R7.5 or later).
 The following distributions ship xf86-input-wacom:
 * Arch Linux
