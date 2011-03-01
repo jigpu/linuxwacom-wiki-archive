@@ -1,3 +1,4 @@
+__TOC__
 Calibration is necessary when the pointer on the screen does not coincide with where the input tool is located on the tablet.  This is usually most noticeable on screen-mounted tablets (e.g. Tablet PCs or Cintiqs), often after rotation.  Sometimes this may also be the cause of the input tool not reaching a particular monitor's edge or edges.
 
 There can be multiple causes of misalignment.  It may come about if the video driver is not reporting the coordinates quite correctly or a hardware problem, e.g. video chipset (firmware) etc.  Or even just from the [http://en.wikipedia.org/wiki/Parallax parallax] of your working position.  Parallax is present in tablet PC's and Cintiq's because the digitizer and LCD screen are two separate devices layered on each other, so there is some physical depth inherent in the combination of the devices.
