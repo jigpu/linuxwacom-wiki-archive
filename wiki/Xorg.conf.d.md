@@ -244,8 +244,8 @@ Now let's use a different approach to matching. Starting with X server
 1.10 *MatchDriver* became available. This is very useful because the
 50-wacom.conf has already matched the Wacom device(s) and device input
 events to the *wacom* driver. All we need to do in the
-52-wacom-options.conf is match to the wacom driver and pick up the
-devices already on it. This allows us to have a general xorg.conf.d
+52-wacom-options.conf is match to the wacom driver and pick up the input
+tools already on it. This allows us to have a general xorg.conf.d
 template, like we do with the [xorg.conf](xorg.conf "wikilink").
 
     Section "InputClass"
