@@ -90,7 +90,7 @@ With X servers 1.8 and 1.9, [xorg.conf.d](xorg.conf.d "wikilink")
 configuration snippets apply only to the [ parent device
 (stylus)](/wiki/How_Wacom_tablets_work#Tools "wikilink") and not dependent
 devices like the eraser, cursor, or touch. In other words you can only
-set tablet wide settings. To configure dependent devices you either have
+set tablet-wide settings. To configure dependent devices you either have
 to use [
 xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink")
 sections or [xsetwacom](xsetwacom "wikilink") commands.

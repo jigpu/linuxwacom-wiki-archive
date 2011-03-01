@@ -48,7 +48,7 @@ The match strings are case sensitive.  As demonstrated by the N-Trig keywords yo
 {{Tip|text=You can find out your X server version by typing <code>Xorg -version</code> in a terminal.}}
 
 == X servers 1.8 and 1.9 ==
-With X servers 1.8 and 1.9, [[xorg.conf.d]] configuration snippets apply only to the [[How_Wacom_tablets_work#Tools | parent device (stylus)]] and not dependent devices like the eraser, cursor, or touch.  In other words you can only set tablet wide settings.  To configure dependent devices you either have to use [[Configuring_X#Manual setup in the xorg.conf | xorg.conf]] sections or [[xsetwacom]] commands.
+With X servers 1.8 and 1.9, [[xorg.conf.d]] configuration snippets apply only to the [[How_Wacom_tablets_work#Tools | parent device (stylus)]] and not dependent devices like the eraser, cursor, or touch.  In other words you can only set tablet-wide settings.  To configure dependent devices you either have to use [[Configuring_X#Manual setup in the xorg.conf | xorg.conf]] sections or [[xsetwacom]] commands.
 
 === Sample Static Configuration ===
 Because you can not configure dependent devices you will just need one snippet.  Notice the ''Driver "wacom"'' line is not needed or included and that the ''Identifier'' has ''options'' added to it.  That allows you to determine at a glance that your match lines worked and your Options are being applied in Xorg.0.log (in /var/log).  Identify each input tool's "device name" in [[xinput|xinput list]].  This will let you determine what keyword(s) will be useful for a match.  You could use one or more keywords from the ''Sample of MatchProduct keywords'' list above.
