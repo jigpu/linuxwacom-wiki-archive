@@ -147,23 +147,21 @@ X server 1.10
 
 With *X server 1.10* you can configure dependent devices. In other words
 you are able to set each input tool up in its own snippet like a section
-in the xorg.conf. The advantage is that these settings will last through
-a hot plug. How to do that follows.
+in the xorg.conf. The advantage is that these settings will be reapplied
+to each device when the device is plugged in at run-time.
 
 ### Example Dependent Device Static Configuration
 
 Identify each input tool's device name with [xsetwacom
-list](xsetwacom "wikilink"). In the examples below, we match against the
-full device name. In each snippet we'll enter the Options equivalent to
-the xsetwacom parameters used in the [Sample Runtime
-Script](/wiki/Tablet_Configuration#Sample_Runtime_Script "wikilink")
-configuration just as an example. Notice again the wacom driver line is
-not used and we modify the Identifier.
+list](xsetwacom "wikilink"). We use the **MatchDriver** tag her to
+simplify device selection. This way, we rely on the distribution-wide
+match tags to apply the right driver to our device and then only match
+on those devices that have the wacom driver applied to them.
 
     Section "InputClass"
         Identifier "Wacom Bamboo stylus options"
-        MatchProduct "Wacom BambooFun 2FG 4x5 Pen stylus"
-        MatchDevicePath "/dev/input/event*"
+            MatchDriver "wacom"
+            MatchProduct "stylus"
 
             # Apply custom Options to this device below.
         Option "RawSample" "20"
@@ -176,8 +174,8 @@ not used and we modify the Identifier.
 
     Section "InputClass"
         Identifier "Wacom Bamboo eraser options"
-        MatchProduct "Wacom BambooFun 2FG 4x5 Pen eraser"
-        MatchDevicePath "/dev/input/event*"
+            MatchDriver "wacom"
+            MatchProduct "eraser"
 
             # Apply custom Options to this device below.
         Option "RawSample" "20"
@@ -190,8 +188,8 @@ not used and we modify the Identifier.
 
     Section "InputClass"
         Identifier "Wacom Bamboo touch options"
-        MatchProduct "Wacom BambooFun 2FG 4x5 Finger touch"
-        MatchDevicePath "/dev/input/event*"
+            MatchDriver "wacom"
+            MatchProduct "touch"
 
             # Apply custom Options to this device below.
         Option "ScrollDistance" "18"
@@ -200,8 +198,8 @@ not used and we modify the Identifier.
 
     Section "InputClass"
         Identifier "Wacom Bamboo pad options"
-        MatchProduct "Wacom BambooFun 2FG 4x5 Finger pad"
-        MatchDevicePath "/dev/input/event*"
+            MatchDriver "wacom"
+            MatchProduct "pad"
 
             # Apply custom Options to this device below.
         Option "Button1" "key ctrl t"
@@ -210,65 +208,7 @@ not used and we modify the Identifier.
         Option "Button4" "1"
     EndSection
 
-### 52-wacom-options.conf Template for xorg.conf.d
-
-Now let's use a different approach to matching. Starting with X server
-1.10 *MatchDriver* became available. This is very useful because the
-50-wacom.conf has already matched the Wacom device(s) and device input
-events to the *wacom* driver. All we need to do in the
-52-wacom-options.conf is match to the wacom driver and pick up the input
-tools already on it. This allows us to have a general xorg.conf.d
-template, like we do with the [xorg.conf](xorg.conf "wikilink").
-
-    Section "InputClass"
-            # This is for human-readable purposes only.
-        Identifier "Wacom stylus options"
-            # Match to this Wacom input tool on the wacom driver.
-        MatchDriver "wacom|stylus"
-
-            # Apply custom Options to this device below.
-
-    EndSection
-
-    Section "InputClass"
-        Identifier "Wacom eraser options"
-            # Match to this Wacom input tool on the wacom driver.
-        MatchDriver "wacom|eraser"
-
-            # Apply custom Options to this device below.
-
-    EndSection
-
-    Section "InputClass"
-        Identifier "Wacom cursor options"
-            # Match to this Wacom input tool on the wacom driver.
-        MatchDriver "wacom|cursor"
-
-            # Apply custom Options to this device below.
-
-    EndSection
-
-    Section "InputClass"
-        Identifier "Wacom touch options"
-            # Match to this Wacom input tool on the wacom driver.
-        MatchDriver "wacom|touch"
-
-            # Apply custom Options to this device below.
-
-    EndSection
-
-    Section "InputClass"
-        Identifier "Wacom pad options"
-            # Match to this Wacom input tool on the wacom driver.
-        MatchDriver "wacom|pad"
-
-            # Apply custom Options to this device below.
-
-    EndSection
-
 You would only use the snippets corresponding to the input tools you
 have, of course. Clearly if you are plugging in two or more tablets they
-will have the same Option settings. That can be problematic for the pad,
-since unless they are the same model the tablet buttons (pads) are
-likely different. In which case you will need to develop specific
-matches for each model's pad.
+will have the same Option settings and more specific matches may be
+required.
