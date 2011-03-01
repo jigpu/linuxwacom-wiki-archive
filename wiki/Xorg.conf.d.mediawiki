@@ -153,3 +153,5 @@ EndSection
 </pre>
 
 You would only use the snippets corresponding to the input tools you have, of course.  Clearly if you are plugging in two or more tablets they will have the same Option settings and more specific matches may be required.
+
+[[Category:HOWTO]]

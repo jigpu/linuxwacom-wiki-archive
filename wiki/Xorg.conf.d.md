@@ -2,6 +2,8 @@
 title: Xorg.conf.d
 permalink: wiki/Xorg.conf.d/
 layout: wiki
+tags:
+ - HOWTO
 ---
 
 This page describes static device configuration through
