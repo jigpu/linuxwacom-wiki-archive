@@ -1,3 +1,4 @@
+__TOC__
 <!-- NOTE TO EDITORS: this page uses noinclude to allow simple MapToOutput instructions be included elsewhere -->
 <noinclude>
 '''Requirements'''
