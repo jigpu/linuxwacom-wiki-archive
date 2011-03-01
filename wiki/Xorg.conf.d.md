@@ -253,7 +253,7 @@ template, like we do with the [xorg.conf](xorg.conf "wikilink").
 
     Section "InputClass"
             # This is for human-readable purposes only.
-        Identifier "Wacom class options"
+        Identifier "Wacom stylus options"
             # Match to this Wacom input tool on the wacom driver.
         MatchDriver "wacom|stylus"
 
@@ -262,7 +262,7 @@ template, like we do with the [xorg.conf](xorg.conf "wikilink").
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom class options"
+        Identifier "Wacom eraser options"
             # Match to this Wacom input tool on the wacom driver.
         MatchDriver "wacom|eraser"
 
@@ -271,7 +271,7 @@ template, like we do with the [xorg.conf](xorg.conf "wikilink").
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom class options"
+        Identifier "Wacom cursor options"
             # Match to this Wacom input tool on the wacom driver.
         MatchDriver "wacom|cursor"
 
@@ -280,7 +280,7 @@ template, like we do with the [xorg.conf](xorg.conf "wikilink").
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom class options"
+        Identifier "Wacom touch options"
             # Match to this Wacom input tool on the wacom driver.
         MatchDriver "wacom|touch"
 
@@ -289,7 +289,7 @@ template, like we do with the [xorg.conf](xorg.conf "wikilink").
     EndSection
 
     Section "InputClass"
-        Identifier "Wacom class options"
+        Identifier "Wacom pad options"
             # Match to this Wacom input tool on the wacom driver.
         MatchDriver "wacom|pad"
 
