@@ -1,3 +1,4 @@
+__TOC__
 == Simple/Generic Tablet Input Event Overview ==
 
 There are simple 1 tool tablets supported by Linux Kernel.  The Wacom tablets never fall in to this category but its useful to understand them first. These generic tablets will report events over standard Linux /dev/input/eventX interfaces.  
