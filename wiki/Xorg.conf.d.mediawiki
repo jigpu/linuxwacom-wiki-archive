@@ -150,3 +150,54 @@ Section "InputClass"
 	Option "Button4" "1"
 EndSection
 </pre>
+
+=== 52-wacom-options.conf Template for xorg.conf.d ===
+Now let's use a different approach to matching.  Starting with X server 1.10 ''MatchDriver'' became available.  This is very useful because the 50-wacom.conf has already matched the Wacom device(s) and device input events to the ''wacom'' driver.  All we need to do in the 52-wacom-options.conf is match to the wacom driver and pick up the devices already on it.  This allows us to have a general xorg.conf.d template, like we do with the [[xorg.conf]].
+<pre>
+Section "InputClass"
+        # This is for human-readable purposes only.
+	Identifier "Wacom class options"
+        # Match to this Wacom input tool on the wacom driver.
+	MatchDriver "wacom|stylus"
+
+        # Apply custom Options to this device below.
+
+EndSection
+
+Section "InputClass"
+	Identifier "Wacom class options"
+        # Match to this Wacom input tool on the wacom driver.
+	MatchDriver "wacom|eraser"
+
+        # Apply custom Options to this device below.
+
+EndSection
+
+Section "InputClass"
+	Identifier "Wacom class options"
+        # Match to this Wacom input tool on the wacom driver.
+	MatchDriver "wacom|cursor"
+
+        # Apply custom Options to this device below.
+
+EndSection
+
+Section "InputClass"
+	Identifier "Wacom class options"
+        # Match to this Wacom input tool on the wacom driver.
+	MatchDriver "wacom|touch"
+
+        # Apply custom Options to this device below.
+
+EndSection
+
+Section "InputClass"
+	Identifier "Wacom class options"
+        # Match to this Wacom input tool on the wacom driver.
+	MatchDriver "wacom|pad"
+
+        # Apply custom Options to this device below.
+
+EndSection
+</pre>
+You would only use the snippets corresponding to the input tools you have, of course.  Clearly if you are plugging in two or more tablets they will have the same Option settings.  That can be problematic for the pad, since unless they are the same model the tablet buttons (pads) are likely different.  In which case you will need to develop specific matches for each model's pad.
