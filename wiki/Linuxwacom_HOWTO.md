@@ -948,11 +948,11 @@ Below are examples from Debian GNU/Linux distribution:
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="009a", SYMLINK="input/wacom-tablets/tpc9a-$env{WACOM_TYPE}"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00e2", SYMLINK="input/wacom-tablets/tpce2-$env{WACOM_TYPE}"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00e3", SYMLINK="input/wacom-tablets/tpce3-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d0", SYMLINK="input/tablet-bamboo2fg-$env{WACOM_TYPE}-%b"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d1", SYMLINK="input/tablet-bamboo2fg-4x5-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d2", SYMLINK="input/tablet-bamboo-craft-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d3", SYMLINK="input/tablet-bamboo2fg-6x8-$env{WACOM_TYPE}"
-        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d4", SYMLINK="input/tablet-bamboo-4x5-$env{WACOM_TYPE}"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d0", SYMLINK="input/tablet-bamboo2fg-touch-4x5-$env{WACOM_TYPE}"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d1", SYMLINK="input/tablet-bamboo2fg-pt-4x5-$env{WACOM_TYPE}"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d2", SYMLINK="input/tablet-bamboo2fg-craft-4x5-$env{WACOM_TYPE}"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d3", SYMLINK="input/tablet-bamboo2fg-fun-6x8-$env{WACOM_TYPE}"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d4", SYMLINK+="input/tablet-bamboo-p-4x5"
 
         # Convenience links for the common case of a single tablet.  We could do just this:
         #SYSFS{idVendor}=="056a", SYMLINK+="input/wacom-$env{WACOM_TYPE}"
