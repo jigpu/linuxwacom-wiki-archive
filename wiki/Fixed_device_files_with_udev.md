@@ -13,11 +13,6 @@ the following rules in */etc/udev/rules.d/60-wacom.rules*. Some
 distributions use a different number for the file name. Please look for
 proper one with wacom under */etc/udev/rules.d*.
 
-**Note: there is little reason to do this.** The most common consumer of
-Wacom events, the X server, will automatically detect the correct device
-files. This setup is only needed if you are planning to have a static
-[xorg.conf](xorg.conf "wikilink") setup.
-
 Below are examples from Debian GNU/Linux distribution: </noinclude>
 Systems with only one Wacom device:
 
