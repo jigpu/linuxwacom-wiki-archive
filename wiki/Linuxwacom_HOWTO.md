@@ -845,18 +845,7 @@ number for the file name. Please look for proper one with wacom under
 
 Below are examples from Debian GNU/Linux distribution:
 
-**60-wacom.rules on systems using ATTRS** In older systems you may want
-to have check\_driver run if it is installed. Insert it into the rules
-like so:
-
-        ATTRS{idVendor}=="056a", ENV{WACOM_TYPE}!="touch", SYMLINK+="input/wacom"
-        ATTRS{idVendor}=="056a", ENV{WACOM_TYPE}=="touch", SYMLINK+="input/wacom-touch"
-
-        # Check and repossess the device if a module other than the wacom one
-        # is already bound to it.
-        ATTRS{idVendor}=="056a", ACTION=="add", RUN+="check_driver wacom $devpath $env{ID_BUS}"
-
-        LABEL="wacom_end"
+**60-wacom.rules on systems using ATTRS**
 
 **60-wacom.rules on systems using SYSFS**
 
