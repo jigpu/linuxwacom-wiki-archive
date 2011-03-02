@@ -393,8 +393,8 @@ Static (xorg.conf.d or xorg.conf) Configuration
 
 Entering *man wacom* in a terminal will bring up the Options you can
 enter into your
-[/etc/X11/xorg.conf.d/52-wacom-options.conf](/wiki/Configuring_X#Hotplugging_setup_with_udev "wikilink")
-or in the
+[/etc/X11/xorg.conf.d/52-wacom-options.conf](/wiki/Xorg.conf.d "wikilink") or
+in the
 [xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink").
 
 ### xorg.conf.d

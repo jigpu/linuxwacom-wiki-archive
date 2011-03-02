@@ -289,7 +289,7 @@ In Gnome right click on your Desktop and chose ''Create Launcher...''  In your d
 It's also a good idea to set up your general or start up configuration script in a Launcher.  That way when you're done using the application a particular profile applied to, you can restore your general configuration.
 
 == Static (xorg.conf.d or xorg.conf) Configuration ==
-Entering ''man wacom'' in a terminal will bring up the Options you can enter into your [[Configuring X#Hotplugging setup with udev|/etc/X11/xorg.conf.d/52-wacom-options.conf]] or in the [[Configuring X#Manual setup in the xorg.conf|xorg.conf]].
+Entering ''man wacom'' in a terminal will bring up the Options you can enter into your [[Xorg.conf.d|/etc/X11/xorg.conf.d/52-wacom-options.conf]] or in the [[Configuring X#Manual setup in the xorg.conf|xorg.conf]].
 {{Warning|reason=Adding or altering any X configuration file runs the risk of breaking X.  Be sure to back up the current working 50-wacom.conf or xorg.conf and be prepared to restore it from the command line when booting into your distribution's Recovery mode.  If you are creating a 52-wacom-options.conf or xorg.conf and it breaks X be sure you know how to rename or remove it from the command line before you do so.  Once the new file is working do not forget to back it up.  And keep your backups current!}}
 
 === xorg.conf.d ===
