@@ -794,10 +794,9 @@ The USB Wacom tablet may be assigned to a different /dev/input/event# after each
 
 Below are examples from Debian GNU/Linux distribution:
 
-'''60-wacom.rules on systems using ATTRS'''
+==== 60-wacom.rules on systems using ATTRS ====
 {{:Fixed device files with udev}}
-
-'''60-wacom.rules on systems using SYSFS'''
+==== 60-wacom.rules on systems using SYSFS ====
 
 1. Systems with only one Wacom device
 <pre>

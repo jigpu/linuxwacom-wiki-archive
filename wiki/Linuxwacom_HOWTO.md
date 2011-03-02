@@ -845,9 +845,9 @@ number for the file name. Please look for proper one with wacom under
 
 Below are examples from Debian GNU/Linux distribution:
 
-**60-wacom.rules on systems using ATTRS**
+#### 60-wacom.rules on systems using ATTRS
 
-**60-wacom.rules on systems using SYSFS**
+#### 60-wacom.rules on systems using SYSFS
 
 1. Systems with only one Wacom device
 
