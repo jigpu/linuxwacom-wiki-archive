@@ -140,7 +140,7 @@ Systems with more than one Wacom devices:
     LABEL="wacom_end"
 
 </pre>
-</noinclude>
+<noinclude>
 
 Newer Mandriva Linux (Mandriva 2007 Spring and later) has an application called mousedrake which takes care of the setup and configuration of linuxwacom driver. If you use Mandriva Linux and you see InputDevice sections for Wacom device in your Xorg.conf, chances are your Wacom tablet is ready for you to draw.
 

@@ -148,7 +148,7 @@ Systems with more than one Wacom devices:
 
         LABEL="wacom_end"
 
-</noinclude>
+<noinclude>
 
 Newer Mandriva Linux (Mandriva 2007 Spring and later) has an application
 called mousedrake which takes care of the setup and configuration of
