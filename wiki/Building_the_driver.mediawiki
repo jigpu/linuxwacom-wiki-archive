@@ -11,11 +11,12 @@ Alternatively, grab the latest release from the [https://sourceforge.net/project
     tar jxf xf86-input-wacom-<version number>.tar.bz2
     cd xf86-input-wacom-<version-number>
 
-{{Tip|text=The INSTALL file in the driver tarball provides detailed build instructions}}
-
 == Configuring the build ==
 We provide a helper script ''autogen.sh'' that wraps the [http://en.wikipedia.org/wiki/GNU_build_system autotools] steps.
 First make sure you have the following tools installed: gcc, automake, autoconf and make.
+
+{{Tip|text=The INSTALL file in the driver tarball provides detailed build instructions}}
+
 
 If you are '''building from git''', then run autogen.sh:
 
