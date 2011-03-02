@@ -4,6 +4,7 @@ The USB Wacom tablet may be assigned to a different ''/dev/input/event#'' after 
 
 {{Tip|text=There is little reason to do this. The most common consumer of Wacom events, the X server, will automatically detect the correct device files. This setup is only needed if you are planning to have a static [[xorg.conf]] setup.}}
 
+{{Fixme|reason=These scripts should explain what they are doing instead of just providing the solution}}
 Below are examples from Debian GNU/Linux distribution:
 </noinclude>
 Systems with only one Wacom device:
