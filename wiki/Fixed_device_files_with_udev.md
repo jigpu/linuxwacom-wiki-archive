@@ -130,12 +130,12 @@ Systems with more than one Wacom devices:
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00c5", SYMLINK+="input/tablet-cintiq20wsx"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00c6", SYMLINK+="input/tablet-cintiq12wx"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00c7", ENV{WACOM_TYPE}!="touch", SYMLINK+="input/tablet-dtu1931"
-        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d0", SYMLINK="input/tablet-bamboo2fg-$env{WACOM_TYPE}"
-        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d1", SYMLINK="input/tablet-bamboo2fg-4x5-$env{WACOM_TYPE}"
-        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d2", SYMLINK="input/tablet-bamboo-craft-$env{WACOM_TYPE}"
-        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d3", SYMLINK="input/tablet-bamboo2fg-6x8-$env{WACOM_TYPE}"
-        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d4", SYMLINK="input/tablet-bamboo-4x5-$env{WACOM_TYPE}"
-         
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d0", SYMLINK="input/tablet-bamboo2fg-touch-4x5-$env{WACOM_TYPE}"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d1", SYMLINK="input/tablet-bamboo2fg-pt-4x5-$env{WACOM_TYPE}"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d2", SYMLINK="input/tablet-bamboo2fg-craft-4x5-$env{WACOM_TYPE}"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d3", SYMLINK="input/tablet-bamboo2fg-fun-6x8-$env{WACOM_TYPE}"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d4", SYMLINK+="input/tablet-bamboo-p-4x5"    
+
         # Convenience links for the common case of a single tablet.  We could do just this:
         #ATTRS{idVendor}=="056a", SYMLINK+="input/wacom-$env{WACOM_TYPE}"
         # but for legacy reasons, we keep the input/wacom link as the generic stylus device.
