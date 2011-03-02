@@ -281,7 +281,7 @@ xsetwacom set "$PAD" Button 3 "key F9"  # Toggle view mode
 xsetwacom set "$PAD" Button 4 "key h"  # Undo
 </pre>
 Call it Inkscape_Profile.sh or .Inkscape_Profile.sh then Save and make it executable.
-{{Tip|text=Ubuntu users can also add a notification to their script.  First install libnotify ''sudo apt-get install libnotify-bin''.  Then add as the last line of the script e.g. ''notify-send -t 1500 "Gimp Profile Ran"'', choosing the appropriate name for the profile of course.  This may also work for Ubuntu derivatives like Mint.}}
+{{Tip|text=Ubuntu users can also add a notification to their script.  First install libnotify <code>sudo apt-get install libnotify-bin</code>.  Then add as the last line of the script <code>notify-send -t 1500 "Gimp Profile Ran"</code>, choosing the appropriate name for the profile.  This may also work for Ubuntu derivatives like Mint.}}
 
 ==== Launcher for Profile ====
 In Gnome right click on your Desktop and chose ''Create Launcher...''  In your distribution do the equivalent.  In the Launcher enter a name, such as Inkscape Profile.  Then in the Command box add the entire path for the script.  It's a good idea to select an icon also.  Close and the profile script will now run when you double click on the Launcher.
