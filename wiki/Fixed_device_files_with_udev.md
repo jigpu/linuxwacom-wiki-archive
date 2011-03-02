@@ -6,20 +6,19 @@ tags:
  - HOWTO
 ---
 
-The USB Wacom tablet may be assigned to a different */dev/input/event\#*
-after each reboot. To resolve this issue, you can link Wacom USB tablet
-to */dev/input/wacom*. It can be done by adding the following rules in
-*/etc/udev/rules.d/60-wacom.rules*. Some distributions use a different
-number for the file name. Please look for proper one with wacom under
-*/etc/udev/rules.d*.
+<noinclude> The USB Wacom tablet may be assigned to a different
+*/dev/input/event\#* after each reboot. To resolve this issue, you can
+link Wacom USB tablet to */dev/input/wacom*. It can be done by adding
+the following rules in */etc/udev/rules.d/60-wacom.rules*. Some
+distributions use a different number for the file name. Please look for
+proper one with wacom under */etc/udev/rules.d*.
 
 **Note: there is little reason to do this.** The most common consumer of
 Wacom events, the X server, will automatically detect the correct device
 files. This setup is only needed if you are planning to have a static
 [xorg.conf](xorg.conf "wikilink") setup.
 
-Below are examples from Debian GNU/Linux distribution:
-
+Below are examples from Debian GNU/Linux distribution: </noinclude>
 Systems with only one Wacom device:
 
         # udev rules for wacom tablets.
@@ -149,8 +148,12 @@ Systems with more than one Wacom devices:
 
         LABEL="wacom_end"
 
+</noinclude>
+
 Newer Mandriva Linux (Mandriva 2007 Spring and later) has an application
 called mousedrake which takes care of the setup and configuration of
 linuxwacom driver. If you use Mandriva Linux and you see InputDevice
 sections for Wacom device in your Xorg.conf, chances are your Wacom
 tablet is ready for you to draw.
+
+</noinclude>
