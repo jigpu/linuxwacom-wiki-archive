@@ -96,5 +96,11 @@ device found and its configuration.
 
 The actual text of the log depends on the device but it looks similar. 
 
+== Pre-built versions of the driver ==
+Some pre-built version of the git repository may be available for your
+distribution. If you just want to test a newer driver but not mess around
+with building it yourself, try these.
+* Ubuntu [https://launchpad.net/ubuntu/+ppas PPA]: https://launchpad.net/~doctormo/+archive/wacom-plus
+
 [[Category:HOWTO]]
 [[Category:DeveloperPages]]

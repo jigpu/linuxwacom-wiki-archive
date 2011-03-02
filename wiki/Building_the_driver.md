@@ -121,3 +121,13 @@ listing the actual device found and its configuration.
     (II) Wacom Intuos4 6x9: hotplugging completed.
 
 The actual text of the log depends on the device but it looks similar.
+
+Pre-built versions of the driver
+--------------------------------
+
+Some pre-built version of the git repository may be available for your
+distribution. If you just want to test a newer driver but not mess
+around with building it yourself, try these.
+
+-   Ubuntu [PPA](https://launchpad.net/ubuntu/+ppas):
+    <https://launchpad.net/~doctormo/+archive/wacom-plus>
