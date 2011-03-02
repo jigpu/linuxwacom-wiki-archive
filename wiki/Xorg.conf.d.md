@@ -155,7 +155,7 @@ to each device when the device is plugged in at run-time.
 ### Example Dependent Device Static Configuration
 
 Identify each input tool's device name with [xsetwacom
-list](xsetwacom "wikilink"). We use the **MatchDriver** tag her to
+list](xsetwacom "wikilink"). We use the **MatchDriver** tag here to
 simplify device selection. This way, we rely on the distribution-wide
 match tags to apply the right driver to our device and then only match
 on those devices that have the wacom driver applied to them.
