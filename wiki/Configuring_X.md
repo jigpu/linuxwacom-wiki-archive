@@ -17,7 +17,7 @@ X Servers 1.8 and later use udev as device enumeration backend on Linux.
 simply used for getting hotplug notifications and device enumeration.
 The devices visible to the X server include all devices with the udev
 property *ID\_INPUT* set to 1 (see *udevadm info --export-bd*). X
-servers that use udev as a backend support [\#xorg.conf.d
+servers that use udev as a backend support [xorg.conf.d
 configuration](#xorg.conf.d_configuration "wikilink").
 
 xorg.conf.d configuration
@@ -50,8 +50,9 @@ the driver.
             Option "Rotate" "half"
     EndSection
 
-The above is an examle only. In your configuration, you will most likely
-need to apply different (or no) options.
+The above is an example only. In your configuration, you will most
+likely need to apply different (or no) options. For further explanation
+on adding static options see [xorg.conf.d](xorg.conf.d "wikilink").
 
 ### Known bugs
 
@@ -59,7 +60,7 @@ The wacom driver provides each tool as a separate device, with a naming
 scheme of "&lt;tablet model&gt; *stylus*", "&lt;tablet model&gt;
 *eraser*", etc.
 
--   In X Servers up to including 1.8, only the first device could be
+-   In X Servers up to including 1.9, only the first device could be
     configured with an xorg.conf.d snippet. Matching on e.g. "eraser"
     will not work.
 
