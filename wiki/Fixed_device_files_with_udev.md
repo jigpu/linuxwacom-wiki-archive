@@ -11,7 +11,7 @@ tags:
 link Wacom USB tablet to */dev/input/wacom*. It can be done by adding
 the following rules in */etc/udev/rules.d/60-wacom.rules*. Some
 distributions use a different number for the file name. Please look for
-proper one with wacom under */etc/udev/rules.d*.
+proper one with wacom under */etc/udev/rules.d* or */lib/udev/rules.d*.
 
 In other words the two versions of 60-wacom.rules below provide you with
 USB symlinks to use in your xorg.conf. Two symlinks are supported,
