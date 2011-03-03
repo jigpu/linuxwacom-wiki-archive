@@ -181,14 +181,14 @@ the symlinks.
 
 When you examine the longer 60-wacom.rules you'll see a similar script
 being run, with a large table of specific tablet/tablet PC matches
-embedded in it. As you can see a rule first matches the Wacom vendor ID
-056a, and to provide a unique match, matches the tablet/tablet PC
-product ID. The rule then goes on to create the symlink for that unique
-tablet. So if you have more than one tablet on your system, or your
-system already has a 60-wacom.rules (the number and name varies
-depending on the distribution) then the *Systems with more than one
-Wacom devices* is the 60-wacom.rules you need. If your model isn't in
-it, it is not difficult to add it.
+embedded in it. As you can see a rule in the table first matches the
+Wacom vendor ID 056a, and to provide a unique match, matches the
+tablet/tablet PC product ID. The rule then goes on to create the symlink
+for that unique tablet. So if you have more than one tablet on your
+system, or your system already has a 60-wacom.rules (the number and name
+varies depending on the distribution) then the *Systems with more than
+one Wacom devices* is the 60-wacom.rules you need. If your model isn't
+in it, it is not difficult to add it.
 
 Enter *lsusb* in a terminal and examine the Wacom line. That will
 contain the tablet's product ID. Simply duplicate a line in the table
