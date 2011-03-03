@@ -109,7 +109,7 @@ Notice the *Driver "wacom"* line is not used (we rely on the
 distribution-wide configuration). Always pick a suitable *Identifier*.
 Identifiers of matching input classes are printed into the Xorg.log and
 allows you to determine at a glance whether your match lines worked and
-your Options are being applied). Identify each input tool's device name
+your Options are being applied. Identify each input tool's device name
 with [xsetwacom list](xsetwacom "wikilink"). This will let you determine
 what keyword(s) will be useful for a match.
 
