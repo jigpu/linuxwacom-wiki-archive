@@ -165,4 +165,41 @@ your Wacom tablet is ready for you to draw.
 Writing Wacom udev rules
 ------------------------
 
+["Writing udev rules"](http://reactivated.net/writing_udev_rules.html)
+by Daniel Drake is a good review on how to write a udev rule.
+Additionally the udev manual (*man udev* entered in a terminal) will
+provide you with a quick overview. The udevadm manual (*man udev* in a
+console) will show you how to do an attributes walk on a device to find
+appropriate matches.
+
+However writing a Wacom udev rule is easier because the wacom.rules
+above provide you with templates of the "best" matches to use. If you
+have a single tablet for your system all you need is the first short
+version *Systems with only one Wacom device*. It makes a generic match
+to any Wacom USB tablet/tablet PC and runs a little script to generate
+the symlinks.
+
+When you examine the longer 60-wacom.rules you'll see a similar script
+being run, with a large table of specific tablet/tablet PC matches
+embedded in it. So if you have more than one tablet on your system, or
+your system already has a 60-wacom.rules (the number and name varies
+depending on the distribution) then the *Systems with more than one
+Wacom devices* is the 60-wacom.rules you need. If your model isn't in
+it, it is not difficult to add it.
+
+Enter *lsusb* in a terminal and examine the Wacom line. That will
+contain the tablet's product ID. Simply duplicate a line in the table
+similar to your model tablet, adding it below the last entry in the
+table of matches. Or if you don't recognize which is the last entry,
+above the line:
+
+` # Convenience links for the common case of a single tablet.  We could do just this:`
+
+There's a slight change as the *lusb* will ouput the product ID as 0xd1
+while the table uses 00d1, for example. Then enter a short distinctive
+description of your tablet to *SYMLINK+="input/tablet-* closing with a
+quote and not using any spaces. If you have a touch device then you use
+the *SYMLINK="input/tablet-* version, closing with
+*-$env{WACOM\_TYPE}"*. Not very complicated is it?
+
 </noinclude>
