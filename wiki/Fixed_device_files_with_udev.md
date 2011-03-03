@@ -13,6 +13,11 @@ the following rules in */etc/udev/rules.d/60-wacom.rules*. Some
 distributions use a different number for the file name. Please look for
 proper one with wacom under */etc/udev/rules.d*.
 
+In other words the two versions of 60-wacom.rules below provide you with
+USB symlinks to use in your xorg.conf. Two symlinks are supported,
+*/dev/input/wacom* for stylus, eraser, cursor, and pad. And
+*/dev/input/wacom-touch* for touch and the Bamboo Pen & Touch pad.
+
 60-wacom.rules
 --------------
 
