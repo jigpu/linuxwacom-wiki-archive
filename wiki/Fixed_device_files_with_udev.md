@@ -13,6 +13,9 @@ the following rules in */etc/udev/rules.d/60-wacom.rules*. Some
 distributions use a different number for the file name. Please look for
 proper one with wacom under */etc/udev/rules.d*.
 
+60-wacom.rules
+--------------
+
 Below are examples from Debian GNU/Linux distribution: </noinclude>
 Systems with only one Wacom device:
 
@@ -148,12 +151,13 @@ Systems with more than one Wacom devices:
 
         LABEL="wacom_end"
 
-<noinclude>
+<noinclude> Newer Mandriva Linux (Mandriva 2007 Spring and later) has an
+application called mousedrake which takes care of the setup and
+configuration of linuxwacom driver. If you use Mandriva Linux and you
+see InputDevice sections for Wacom device in your Xorg.conf, chances are
+your Wacom tablet is ready for you to draw.
 
-Newer Mandriva Linux (Mandriva 2007 Spring and later) has an application
-called mousedrake which takes care of the setup and configuration of
-linuxwacom driver. If you use Mandriva Linux and you see InputDevice
-sections for Wacom device in your Xorg.conf, chances are your Wacom
-tablet is ready for you to draw.
+Writing Wacom udev rules
+------------------------
 
 </noinclude>
