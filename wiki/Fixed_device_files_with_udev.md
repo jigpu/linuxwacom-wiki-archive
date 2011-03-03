@@ -168,9 +168,9 @@ Writing Wacom udev rules
 ["Writing udev rules"](http://reactivated.net/writing_udev_rules.html)
 by Daniel Drake is a good review on how to write a udev rule.
 Additionally the udev manual (*man udev* entered in a terminal) will
-provide you with a quick overview. The udevadm manual (*man udev* in a
-console) will show you how to do an attributes walk on a device to find
-appropriate matches.
+provide you with a quick overview. The udevadm manual (*man udevadm* in
+a console) will show you how to do an attributes walk on a device to
+find appropriate matches.
 
 However writing a Wacom udev rule is easier because the wacom.rules
 above provide you with templates of the "best" matches to use. If you

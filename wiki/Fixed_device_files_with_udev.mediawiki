@@ -152,7 +152,7 @@ Systems with more than one Wacom devices:
 Newer Mandriva Linux (Mandriva 2007 Spring and later) has an application called mousedrake which takes care of the setup and configuration of linuxwacom driver. If you use Mandriva Linux and you see InputDevice sections for Wacom device in your Xorg.conf, chances are your Wacom tablet is ready for you to draw.
 
 == Writing Wacom udev rules ==
-[http://reactivated.net/writing_udev_rules.html "Writing udev rules"] by Daniel Drake is a good review on how to write a udev rule.  Additionally the udev manual (''man udev'' entered in a terminal) will provide you with a quick overview.  The udevadm manual (''man udev'' in a console) will show you how to do an attributes walk on a device to find appropriate matches.
+[http://reactivated.net/writing_udev_rules.html "Writing udev rules"] by Daniel Drake is a good review on how to write a udev rule.  Additionally the udev manual (''man udev'' entered in a terminal) will provide you with a quick overview.  The udevadm manual (''man udevadm'' in a console) will show you how to do an attributes walk on a device to find appropriate matches.
 
 However writing a Wacom udev rule is easier because the wacom.rules above provide you with templates of the "best" matches to use.  If you have a single tablet for your system all you need is the first short version ''Systems with only one Wacom device''.  It makes a generic match to any Wacom USB tablet/tablet PC and runs a little script to generate the symlinks.
 
