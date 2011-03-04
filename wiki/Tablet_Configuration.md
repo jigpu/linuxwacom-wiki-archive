@@ -159,7 +159,7 @@ Gimp pad button examples
 Inkscape pad button examples
 
     Button 1 "key F2"  # Node Tool
-    Button 2 "key h"  # Undo
+    Button 2 "key h"  # Flip horizontal
     Button 3 "key F1"  # Selection tool
     Button 4 "key shift"
     StripLDn "key Prior"  # page up
