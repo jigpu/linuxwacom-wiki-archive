@@ -37,7 +37,8 @@ To see which driver is driving the tablet, issuing *more
 where *Vendor=056a* indicates a Wacom device. *Driver=wacom* means the
 Wacom driver is in control of the tablet. If you see anything other than
 wacom after *Driver=*, your model is not supported in your current
-kernel and the kernel driver/module needs to be updated.
+kernel and the kernel driver/module wacom.ko needs to be updated. See
+below.
 
 Alternatively, *more /proc/bus/input/devices* gives you
 
@@ -55,7 +56,12 @@ Alternatively, *more /proc/bus/input/devices* gives you
 where, again, *Vendor=056a* indicates a Wacom device. *Name="Wacom
 Intuos2 6x8"* means an Intuos2 6x8 tablet reported to
 */dev/input/event3*. If there is no Wacom after *Name=*, you need to
-update the kernel driver.
+update the kernel driver. Check if your distribution offers an updated
+wacom.ko through kernel module backports or other distribution package.
+For example Ubuntu users could try [Martin Owens'
+PPA](https://launchpad.net/~doctormo/+archive/wacom-plus). If no newer
+wacom.ko is available in your distribution see
+[input-wacom](input-wacom "wikilink").
 
 On older 2.6 kernel systems, unplug then replug your tablet after
 issuing tail -f /var/log/messages, you should see a flurry of activity.
