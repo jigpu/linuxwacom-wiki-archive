@@ -57,8 +57,8 @@ where, again, *Vendor=056a* indicates a Wacom device. *Name="Wacom
 Intuos2 6x8"* means an Intuos2 6x8 tablet reported to
 */dev/input/event3*. If there is no Wacom after *Name=*, you need to
 update the kernel driver. Check if your distribution offers an updated
-wacom.ko through kernel module backports or other distribution package.
-For example Ubuntu users could try [Martin Owens'
+wacom.ko through kernel module backports from upstream kernels or other
+distribution package. For example Ubuntu users could try [Martin Owens'
 PPA](https://launchpad.net/~doctormo/+archive/wacom-plus). If no newer
 wacom.ko is available in your distribution see
 [input-wacom](input-wacom "wikilink").

@@ -37,7 +37,7 @@ Alternatively, ''more /proc/bus/input/devices'' gives you
     B: MSC=1
 </pre>
 
-where, again, ''Vendor=056a'' indicates a Wacom device. ''Name="Wacom Intuos2 6x8"'' means an Intuos2 6x8 tablet reported to ''/dev/input/event3''. If there is no Wacom after ''Name='', you need to update the kernel driver.  Check if your distribution offers an updated wacom.ko through kernel module backports or other distribution package.  For example Ubuntu users could try [https://launchpad.net/~doctormo/+archive/wacom-plus Martin Owens' PPA].  If no newer wacom.ko is available in your distribution see [[input-wacom]].
+where, again, ''Vendor=056a'' indicates a Wacom device. ''Name="Wacom Intuos2 6x8"'' means an Intuos2 6x8 tablet reported to ''/dev/input/event3''. If there is no Wacom after ''Name='', you need to update the kernel driver.  Check if your distribution offers an updated wacom.ko through kernel module backports from upstream kernels or other distribution package.  For example Ubuntu users could try [https://launchpad.net/~doctormo/+archive/wacom-plus Martin Owens' PPA].  If no newer wacom.ko is available in your distribution see [[input-wacom]].
 
 On older 2.6 kernel systems, unplug then replug your tablet after issuing tail -f /var/log/messages, you should see a flurry of activity. The exact output depends a lot on your particular kernel and distribution.
 
