@@ -155,23 +155,23 @@ the complete tablet, rotate all tools. To rotate a tool use:
 and one of the four valid settings. For more detail see
 [Rotation](/wiki/Rotation "wikilink").
 
-TPCButton
----------
+TabletPCButton
+--------------
 
 The Tablet PC Button behaviour.
 
--   If TPCButton is **on**, the stylus must be in contact with the
+-   If TabletPCButton is **on**, the stylus must be in contact with the
     screen for any stylus button to work.
--   if TPCButton is **off**, stylus buttons will work once the stylus is
-    in proximity of the tablet (regardless of whether it is touching the
-    screen).
+-   if TabletPCButton is **off**, stylus buttons will work once the
+    stylus is in proximity of the tablet (regardless of whether it is
+    touching the screen).
 
-TPCButton is *on* by default for Tablet PCs and *off* for all other
-models. An example xsetwacom command to set the behaviour is:
+*TabletPCButton* is *on* by default for Tablet PCs and *off* for all
+other models. An example xsetwacom command to set the behaviour is:
 
-` xsetwacom set "device name" TPCButton "on"`
+` xsetwacom set "device name" TabletPCButton "on"`
 
-Note that the *TPCButton* parameter is only available in
+Note that the *TabletPCButton* parameter is only available in
 *xf86-input-wacom-0.10.10* or later.
 
 Table of New Parameter Names
