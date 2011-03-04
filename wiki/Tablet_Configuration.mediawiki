@@ -278,7 +278,7 @@ xsetwacom set "$TOUCH" Touch off
 xsetwacom set "$PAD" Button 1 "key F2"  # Node tool
 xsetwacom set "$PAD" Button 2 "key F1"  # Selection tool
 xsetwacom set "$PAD" Button 3 "key F9"  # Toggle view mode
-xsetwacom set "$PAD" Button 4 "key h"  # Undo
+xsetwacom set "$PAD" Button 4 "key ctrl z"  # Undo
 </pre>
 Call it Inkscape_Profile.sh or .Inkscape_Profile.sh then Save and make it executable.
 {{Tip|text=Ubuntu users can also add a notification to their script.  First install libnotify <code>sudo apt-get install libnotify-bin</code>.  Then add as the last line of the script <code>notify-send -t 1500 "Gimp Profile Ran"</code>, choosing the appropriate name for the profile.  This may also work for Ubuntu derivatives like Mint.}}

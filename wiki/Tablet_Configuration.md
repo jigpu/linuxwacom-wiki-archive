@@ -370,7 +370,7 @@ ones that are useful in Inkscape.
     xsetwacom set "$PAD" Button 1 "key F2"  # Node tool
     xsetwacom set "$PAD" Button 2 "key F1"  # Selection tool
     xsetwacom set "$PAD" Button 3 "key F9"  # Toggle view mode
-    xsetwacom set "$PAD" Button 4 "key h"  # Undo
+    xsetwacom set "$PAD" Button 4 "key ctrl z"  # Undo
 
 Call it Inkscape\_Profile.sh or .Inkscape\_Profile.sh then Save and make
 it executable.
