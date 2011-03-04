@@ -54,12 +54,12 @@ The ''Mode'' parameter sets the device mode as either ''Relative'', the default 
 
 Note that using the ''Mode'' parameter in an xsetwacom command will prevent you from pulling a ''Guideline'' in Gimp with your mouse due to a long standing GTK bug.
 
-== PressCurve ==
-The ''PressCurve'' parameter used by xsetwacom is a [http://en.wikipedia.org/wiki/B%C3%A9zier_curve Bezier curve] of third order or a Bezier Cubic Spline.  So it is a cubic equation with four points, composed of two endpoints or anchor points (0,0 & 100,100) and two control points (x1,y1 & x2,y2) that define the curve's shape.  What that all means is [[xf86-input-wacom]]'s X driver offers you superb control over your stylus and eraser's feel.
+== PressureCurve ==
+The ''PressureCurve'' parameter used by xsetwacom is a [http://en.wikipedia.org/wiki/B%C3%A9zier_curve Bezier curve] of third order or a Bezier Cubic Spline.  So it is a cubic equation with four points, composed of two endpoints or anchor points (0,0 & 100,100) and two control points (x1,y1 & x2,y2) that define the curve's shape.  What that all means is [[xf86-input-wacom]]'s X driver offers you superb control over your stylus and eraser's feel.
 
 With the default curve the two control points have the same values as the anchor points,
 
-  xsetwacom set "device name" PressCurve 0 0 100 100
+  xsetwacom set "device name" PressureCurve 0 0 100 100
 
 which means it is linear, i.e. reflecting the tablet's designed pressure response (e.g. 0-1023).  Think of it as a 100x100 grid with the Bezier curve a straight line from the lower left corner (0,0) to the upper right corner (100,100).  To get a different feel, you can change the values of the control points. Example values are:
 <pre>
@@ -71,7 +71,7 @@ which means it is linear, i.e. reflecting the tablet's designed pressure respons
 </pre>
 You can also combine changes to the inner and outer pairs simultaneously (altering the control points relative to each other) to achieve the feel you prefer with your stylus and eraser.
 
-A graphical javascript demo is available [http://linuxwacom.sourceforge.net/misc/bezier.html here].  Drag the two control points and follow the constraints described above to duplicate the effects of your ''PressCurve'' parameter settings. Note that a valid pressure curve setting in [[xf86-input-wacom]] must have all four values between 0 and 100.
+A graphical javascript demo is available [http://linuxwacom.sourceforge.net/misc/bezier.html here].  Drag the two control points and follow the constraints described above to duplicate the effects of your ''PressureCurve'' parameter settings. Note that a valid pressure curve setting in [[xf86-input-wacom]] must have all four values between 0 and 100.
 
 == Rotate ==
 The wacom driver supports rotation by 90 degree angles. The ''Rotate'' parameter can be applied at runtime with xsetwacom or statically (through the [[Configuring X|configuration files]]).  The four valid settings are:
