@@ -2,8 +2,6 @@
 title: Tablet PC Configuration
 permalink: wiki/Tablet_PC_Configuration/
 layout: wiki
-tags:
- - HOWTO
 ---
 
 This page is for Brand & model specific configuration issues & tips.

@@ -493,6 +493,3 @@ xsetwacom set "N-Trig Pen stylus" Button3 "2"  # middle mouse click; Button3 onl
 
 ## Developed with brettpim & markginter24 @ Ubuntu forums
 </pre>
-
-
-[[Category:HOWTO]]
