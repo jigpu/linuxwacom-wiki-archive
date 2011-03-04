@@ -199,8 +199,8 @@ above the line:
 ` # Convenience links for the common case of a single tablet.  We could do just this:`
 
 There's a slight change as the *lusb* will ouput the product ID as 0xd1
-while the table uses 00d1, for example. Use your product ID. Then enter
-a short distinctive description of your tablet to
+while the table uses 00d1, for example. Use your tablet's product ID.
+Then enter a short distinctive description of your tablet to
 *SYMLINK+="input/tablet-* closing with a quote and not using any spaces.
 If you have a touch device then you use the *SYMLINK="input/tablet-*
 version, closing with *-$env{WACOM\_TYPE}"*. Not very complicated is it?
