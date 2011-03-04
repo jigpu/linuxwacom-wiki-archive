@@ -83,7 +83,8 @@ match. The match strings are case sensitive.
 time or another
 
 -   **USB**: "Wacom", "WACOM", "WALTOP", "Hanwang"
--   **Serial**: "Wacom serial class", "WACf", "FUJ02e5", "FUJ02e7"
+-   **Serial**: "Wacom serial class", "WACf", "FUJ02e5", "FUJ02e7",
+    "FUJ02e9"
 -   **N-Trig** (usb): "Wacom N-Trig class", "HID 1b96:0001\|N-Trig Pen"
 
 These examples provide a fairly general match. Keep them in mind when
