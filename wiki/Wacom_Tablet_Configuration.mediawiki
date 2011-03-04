@@ -400,6 +400,3 @@ xsetwacom set "Wacom Intuos4 6x9 pad" Button9 "key ctrl z"
 
 ## Developed with sebastian0000000 & sanette @ Ubuntu forums
 </pre>
-
-
-[[Category:HOWTO]]

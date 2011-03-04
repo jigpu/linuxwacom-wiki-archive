@@ -2,8 +2,6 @@
 title: Wacom Tablet Configuration
 permalink: wiki/Wacom_Tablet_Configuration/
 layout: wiki
-tags:
- - HOWTO
 ---
 
 This page is for model specific configuration issues & tips.
