@@ -59,7 +59,7 @@ InputDevice section and will appear as its own input device in X.
       Driver        "wacom"
       Identifier    "touch"
       Option        "Device"        "/dev/ttyS0"          # SERIAL ONLY
-      Option        "Device"        "/dev/input/wacom"    # USB ONLY
+      Option        "Device"        "/dev/input/wacom-touch"   # USB ONLY
       Option        "Type"          "touch"
       Option        "ForceDevice"   "ISDV4"               # Serial Tablet PC ONLY
       Option        "USB"           "on"                  # USB ONLY
