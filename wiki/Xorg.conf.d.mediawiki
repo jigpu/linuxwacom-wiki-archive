@@ -1,4 +1,6 @@
+<noinclude>
 __TOC__
+<!--- NOTE TO EDITORS: This page makes use of the noinclude tag and the wacom.rules content outside the noinclude tags is included in other pages. When editing, ensure that the content outside the tags is appropriate --->
 This page describes static device configuration through [[xorg.conf.d]]
 snippets. Such a configuration applies applies to hotplugged devices, as opposed to static configuration in the [[Configuring_X#Manual setup in the xorg.conf|xorg.conf]] or runtime configuration with [[xsetwacom]].  
 {{Tip|text=xorg.conf.d snippets are available since X server 1.8}}
@@ -99,7 +101,7 @@ With ''X server 1.10'' you can configure dependent devices.  In other words you 
 === Example Dependent Device Static Configuration ===
 Identify each input tool's device name with [[xsetwacom|xsetwacom list]]. We
 use the '''MatchDriver''' tag here to simplify device selection. This way, we rely on the distribution-wide match tags to apply the right driver to our device and then only match on those devices that have the wacom driver applied to them.
-
+</noinclude>
 <pre>
 Section "InputClass"
 	Identifier "Wacom Bamboo stylus options"
@@ -151,7 +153,9 @@ Section "InputClass"
 	Option "Button4" "1"
 EndSection
 </pre>
-
+<noinclude>
 You would only use the snippets corresponding to the input tools you have, of course.  Clearly if you are plugging in two or more tablets they will have the same Option settings and more specific matches may be required.
 
+
 [[Category:HOWTO]]
+</noinclude>
