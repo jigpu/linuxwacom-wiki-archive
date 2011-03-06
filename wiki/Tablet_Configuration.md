@@ -180,7 +180,7 @@ Inkscape pad button examples
     xsetwacom set "Wacom Intuos4 6x9 pad" Button 5 "key ctrl alt shift o"  # Gimp brush down
 
     xsetwacom set "Wacom Intuos4 6x9 pad" AbsWDn "key shift plus"
-    xsetwacom set "Wacom Intuos4 6x9 pad" Button1 "key 1"  # button inside touchring, zoom 100%
+    xsetwacom set "Wacom Intuos4 6x9 pad" Button 1 "key 1"  # button inside touchring, zoom 100%
     xsetwacom set "Wacom Intuos4 6x9 pad" AbsWUp "key minus"
 
     xsetwacom set "Wacom Intuos4 6x9 pad" Button 6 "key ctrl alt shift p"  # Gimp brush up
