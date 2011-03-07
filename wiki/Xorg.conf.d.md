@@ -18,6 +18,7 @@ server scans several directories for *.conf* files on startup:
     -   Files here are the shipped by the distribution and may be
         overwritten at update time. It is not recommended to place any
         user-specific configuration files here.
+
 -   */etc/X11/xorg.conf.d*
     -   Files here are user-specific configurations. If there is no
         user-specific configuration, this directory may not exists -

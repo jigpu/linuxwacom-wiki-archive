@@ -7,11 +7,10 @@ snippets. Such a configuration applies applies to hotplugged devices, as opposed
 The X server scans several directories for ''.conf'' files on startup:
 * ''/usr/share/X11/xorg.conf.d''
 ** Files here are the shipped by the distribution and may be overwritten at update time. It is not recommended to place any user-specific configuration files here.
+{{Tip|text=The directories are distribution specific and may vary slightly. Check your Xorg.log for confirmation}}
 * ''/etc/X11/xorg.conf.d''
 ** Files here are user-specific configurations. If there is no user-specific configuration, this directory may not exists - simply create it and store your configurations here.
 ** Files here are read '''after''' the distribution-specific patches, so user-specific configuration always overrides the default configurations.
-
-{{Tip|text=The directories are distribution specific and may vary slightly. Check your Xorg.log for confirmation}}
 
 We will create a new file in /etc/X11/xorg.conf.d called 52-wacom-options.conf to add configuration Options to it.  Numbering it 52 ensures it will be run after the 50-wacom.conf in /usr/share/X11/xorg.conf.d/.
 {{Tip|text=Only filenames with the extension .conf are read by the X server.}}
