@@ -48,25 +48,21 @@ As shown in the example above, multiple '''Match*''' lines constitute a [http://
 These examples provide a fairly general match. Keep them in mind when you write a snippet to match your device(s). More specific matches will be shown below.
 
 == X servers 1.8 and 1.9 ==
-With X servers 1.8 and 1.9, [[xorg.conf.d]] configuration snippets apply only to the [[How_Wacom_tablets_work#Tools | parent device (stylus)]] and not dependent devices like the eraser, cursor, or touch.  In other words you can only set tablet-wide settings.  To configure dependent devices you either have to use [[Configuring_X#Manual setup in the xorg.conf | xorg.conf]] sections or [[xsetwacom]] commands.
 {{Tip|text=You can find out your X server version by typing <code>Xorg -version</code> in a terminal.}}
-
+With X servers 1.8 and 1.9, [[xorg.conf.d]] configuration snippets apply only to the [[How_Wacom_tablets_work#Tools | parent device (stylus)]] and not dependent devices like the eraser, cursor, or touch.  In other words you can only set tablet-wide settings.  To configure dependent devices you either have to use [[Configuring_X#Manual setup in the xorg.conf | xorg.conf]] sections or [[xsetwacom]] commands.
 
 === Example Configuration ===
 Only one snippet is enough as you cannot configure dependent devices.
 Notice the ''Driver "wacom"'' line is not used (we rely on the distribution-wide configuration). Always pick a suitable ''Identifier''. Identifiers of matching input classes are printed into the Xorg.log and allows you to determine at a glance whether your match lines worked and your Options are being applied.  Identify each input tool's device name with [[xsetwacom|xsetwacom list]].  This will let you determine what keyword(s) will be useful for a match.
 
-{{Tip|text=Bamboo Pen & Touch tablets and USB tablet PCs are exported as two separate kernel devices and can be configured independently}}
-
-{{Fixme|reason=We should really have a separate page for the Bamboo, it is rather special}}
-
+{{Tip|text=Bamboo Pen & Touch tablets and USB tablet PCs are exported as two separate kernel devices and can be configured independently.  See [[USB Tablets with Touch]]}}
 <pre>
 # Because Bamboos provide two separate kernel devices, we can 
 # actually have two snippets for two different devices here.
 Section "InputClass"
 	Identifier "Wacom Bamboo Presscurve and Area configurations"
-        # Match all Wacom input tools that have "BambooFun 2FG 4x5 Pen" in the "device name".
-	MatchProduct "Wacom BambooFun 2FG 4x5 Pen"
+        # Match all Wacom input tools that have "BambooFun 6x8" in the "device name".
+	MatchProduct "Wacom BambooFun 6x8"
 	MatchDevicePath "/dev/input/event*"
 
         # Apply a custom configuration options. Any option will also apply to
@@ -75,21 +71,8 @@ Section "InputClass"
 	Option "PressCurve" "0 10 90 100"
 	Option "TopX" "0"
 	Option "TopY" "0"
-	Option "BottomX" "14720"
-	Option "BottomY" "9200"
-EndSection
-
-Section "InputClass"
-	Identifier "Wacom Bamboo Finger Area configuration"
-        # Match all Wacom input tools that have "BambooFun 2FG 4x5 Finger" in the "device name".
-	MatchProduct "Wacom BambooFun 2FG 4x5 Finger"
-	MatchDevicePath "/dev/input/event*"
-
-        # Apply custom Options to this device below.
-	Option "TopX" "0"
-	Option "TopY" "0"
-	Option "BottomX" "480"
-	Option "BottomY" "320"
+	Option "BottomX" "21648"
+	Option "BottomY" "13530"
 EndSection
 </pre>
 {{Warning|reason=Configuration file parameter names are not necessarily the same as [[xsetwacom]] parameter names}}

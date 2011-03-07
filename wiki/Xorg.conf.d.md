@@ -119,8 +119,8 @@ what keyword(s) will be useful for a match.
     # actually have two snippets for two different devices here.
     Section "InputClass"
         Identifier "Wacom Bamboo Presscurve and Area configurations"
-            # Match all Wacom input tools that have "BambooFun 2FG 4x5 Pen" in the "device name".
-        MatchProduct "Wacom BambooFun 2FG 4x5 Pen"
+            # Match all Wacom input tools that have "BambooFun 6x8" in the "device name".
+        MatchProduct "Wacom BambooFun 6x8"
         MatchDevicePath "/dev/input/event*"
 
             # Apply a custom configuration options. Any option will also apply to
@@ -129,21 +129,8 @@ what keyword(s) will be useful for a match.
         Option "PressCurve" "0 10 90 100"
         Option "TopX" "0"
         Option "TopY" "0"
-        Option "BottomX" "14720"
-        Option "BottomY" "9200"
-    EndSection
-
-    Section "InputClass"
-        Identifier "Wacom Bamboo Finger Area configuration"
-            # Match all Wacom input tools that have "BambooFun 2FG 4x5 Finger" in the "device name".
-        MatchProduct "Wacom BambooFun 2FG 4x5 Finger"
-        MatchDevicePath "/dev/input/event*"
-
-            # Apply custom Options to this device below.
-        Option "TopX" "0"
-        Option "TopY" "0"
-        Option "BottomX" "480"
-        Option "BottomY" "320"
+        Option "BottomX" "21648"
+        Option "BottomY" "13530"
     EndSection
 
 X server 1.10
