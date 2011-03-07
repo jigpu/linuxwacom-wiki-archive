@@ -30,7 +30,9 @@ See the [Calibration HOWTO](/wiki/Calibration "wikilink").
 Configuration of Your Tablet PC
 -------------------------------
 
-See [Tablet Configuration](/wiki/Tablet_Configuration "wikilink").
+See [Tablet Configuration](/wiki/Tablet_Configuration "wikilink"). USB tablet
+PCs with touch see also [USB Tablets with
+Touch](/wiki/USB_Tablets_with_Touch "wikilink").
 
 Dual and Multi-Monitor Set Up
 -----------------------------

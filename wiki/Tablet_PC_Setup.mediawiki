@@ -13,7 +13,7 @@ Be aware the Wacom drivers are rapidly evolving and some of this information may
 See the [[Calibration|Calibration HOWTO]].
 
 == Configuration of Your Tablet PC ==
-See [[Tablet Configuration]].
+See [[Tablet Configuration]].  USB tablet PCs with touch see also [[USB Tablets with Touch]].
 
 == Dual and Multi-Monitor Set Up ==
 See [[Dual and Multi-Monitor Set Up]].
