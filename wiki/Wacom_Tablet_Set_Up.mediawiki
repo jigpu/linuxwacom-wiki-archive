@@ -67,8 +67,9 @@ xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" Button1 "key ctrl t"
 * press the Grab key combination button and then press the key combination
 * tablet button 1 should now toggle the touch between on and off
 
-
 {{Tip|text=If you are using a xorg.conf the symlink for the Bamboo P&T pad is wacom-touch not wacom.}}
+
+Please also see [[USB Tablets with Touch]] for some configuration idiosyncrasies.
 
 == Intuos4 ==
 

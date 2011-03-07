@@ -128,6 +128,10 @@ To configure all this, do the following:
     combination
 -   tablet button 1 should now toggle the touch between on and off
 
+Please also see [USB Tablets with
+Touch](/wiki/USB_Tablets_with_Touch "wikilink") for some configuration
+idiosyncrasies.
+
 Intuos4
 -------
 
