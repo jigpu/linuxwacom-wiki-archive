@@ -57,8 +57,6 @@ Notice the ''Driver "wacom"'' line is not used (we rely on the distribution-wide
 
 {{Tip|text=Bamboo Pen & Touch tablets and USB tablet PCs are exported as two separate kernel devices and can be configured independently.  See [[USB Tablets with Touch]].}}
 <pre>
-# Because Bamboos provide two separate kernel devices, we can 
-# actually have two snippets for two different devices here.
 Section "InputClass"
 	Identifier "Wacom Bamboo Presscurve and Area configurations"
         # Match all Wacom input tools that have "BambooFun 6x8" in the "device name".

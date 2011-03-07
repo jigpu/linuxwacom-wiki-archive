@@ -115,8 +115,6 @@ your Options are being applied. Identify each input tool's device name
 with [xsetwacom list](xsetwacom "wikilink"). This will let you determine
 what keyword(s) will be useful for a match.
 
-    # Because Bamboos provide two separate kernel devices, we can 
-    # actually have two snippets for two different devices here.
     Section "InputClass"
         Identifier "Wacom Bamboo Presscurve and Area configurations"
             # Match all Wacom input tools that have "BambooFun 6x8" in the "device name".
