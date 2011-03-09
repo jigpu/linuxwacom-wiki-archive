@@ -6,6 +6,9 @@ tags:
  - DeveloperPages
 ---
 
+Basic usage
+===========
+
 This page gives you a very basic outline of the git commands you will
 need to get the driver, hack and commit as well as to generate patches
 for submission. Treat this page as a quick reference only, it is
@@ -106,3 +109,86 @@ Recommended reading
 -   <http://www.freedesktop.org/wiki/Infrastructure/git/Developers>
     freedesktop.org's git tutorial provides the same use-cases that
     apply to xf86-input-wacom development.
+
+Advanced topics
+===============
+
+The following are advanced topic for using git. Before attemping any of
+these, we recommend reading the
+[tutorials](#Recommended_reading "wikilink") first and getting familiar
+with git. This section is more a quick reminder and an outline of how we
+handle things in the linuxwacom project than a real tutorial.
+
+Using branches
+--------------
+
+If you are working on a specific feature-set, we recommend the use of
+feature branches. This way, feature-specific patches are contained and
+easy to review. Plus, branches make it easier for the maintainer to pull
+a swath of patches into the main repository. To create a branch from the
+current HEAD, use
+
+` git checkout -b myfeature`
+
+Note that your branch is currently identicial with your previous HEAD,
+it only starts diverging once you commit to it.
+
+Hack and commit as you would otherwise. You can create patches from the
+branch normally. The few differences you need to be aware of are when
+you rebase, pull or push.
+
+### Rebasing a branch
+
+When rebasing, you need to specify which branch you want to rebase onto:
+
+` git fetch origin`  
+` git rebase origin/master`
+
+This simply reshuffles your *myfeature*-branch patches on top of the
+current *master* branch in the *origin* remote. Rebasing is a good idea
+while your feature branch is still in development.
+
+### Pushing to a remote
+
+When pushing, you should **always** specify the branch, regardless which
+branch you are on. For our example here the right git push command is
+
+` git push origin myfeature`
+
+Now anyone who clones, pulls or fetches from the remote will see your
+*myfeature* branch. If you have pushed your branch once and then rebase
+it (past the pushed sha's), you need to force-push to overwrite the
+remote again.
+
+` git push -f origin myfeature`
+
+### Pulling two branches together
+
+Usually, you need to merge a local branch into your current checked out
+one.
+
+` git pull . branchname`
+
+If you're merging someone else's branch, replace the . with the remote:
+
+` git pull `[`git://someserver.org/path/to/repo.git`](git://someserver.org/path/to/repo.git)` branchname`
+
+In both cases, git merges your currently checked out branch with the one
+specified and creates a merge commit.
+
+If you always rebase on top of the other branch, pulling in your feature
+branch into *master* is no different to applying all patches on top of
+master and you won't get that merge commit.
+
+When pulling a branch, the branch's sha1 will show up in your history.
+Since you now have the other branch but that branch doesn't have your
+history, you now need to get the other branch to pull from you if the
+other branch doesn't have any more patches since you pulled, git will
+simply rebase. Otherwise, you get another merge commit, etc.
+
+### Sending a pull request
+
+The git-request pull command creates a template email that you can send
+to someone else to request a pull from them.
+
+` git request-pull origin/master `[`git://myserver.org/path/to/repo.git`](git://myserver.org/path/to/repo.git)` myfeature`
