@@ -11,6 +11,9 @@ old website is still available
 [here](http://linuxwacom.sourceforge.net/index_old.php).
 
 </div>
+Our sourceforge project page can be found at
+<https://sourceforge.net/projects/linuxwacom>.
+
 The Linux Wacom Project
 =======================
 

@@ -4,6 +4,9 @@ During the transition period, the old website is still available
 [http://linuxwacom.sourceforge.net/index_old.php here].
 </div>
 
+__TOC__
+
+Our sourceforge project page can be found at https://sourceforge.net/projects/linuxwacom.
 
 = The Linux Wacom Project =
 
