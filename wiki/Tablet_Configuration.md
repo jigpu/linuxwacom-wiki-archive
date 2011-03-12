@@ -129,6 +129,13 @@ The following button values or assignments are the defaults.
 hodgepodge of possible Button assignments to illustrate the
 possibilities. These assignments are just examples.**
 
+#### Graphire4
+
+    xsetwacom set "Wacom Graphire4 4x5 pad" Button 1 "key p"  # Paintbrush
+    xsetwacom set "Wacom Graphire4 4x5 pad" AbsWDn "key minus"  # Zoom out
+    xsetwacom set "Wacom Graphire4 4x5 pad" AbsWUp "key plus"  # Zoom in
+    xsetwacom set "Wacom Graphire4 4x5 pad" Button 2 "key ctrl z"  # Undo
+
 #### Bamboo
 
     xsetwacom set "Wacom BambooFun 4x5 pad" Button 1 "key esc"

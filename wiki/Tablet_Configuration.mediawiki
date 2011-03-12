@@ -94,6 +94,13 @@ xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 4 4
 </pre>
 
 '''Since the defaults are not very illuminating the following contains a hodgepodge of possible Button assignments to illustrate the possibilities.  These assignments are just examples.'''
+==== Graphire4 ====
+<pre>
+xsetwacom set "Wacom Graphire4 4x5 pad" Button 1 "key p"  # Paintbrush
+xsetwacom set "Wacom Graphire4 4x5 pad" AbsWDn "key minus"  # Zoom out
+xsetwacom set "Wacom Graphire4 4x5 pad" AbsWUp "key plus"  # Zoom in
+xsetwacom set "Wacom Graphire4 4x5 pad" Button 2 "key ctrl z"  # Undo
+</pre>
 
 ==== Bamboo ====
 <pre>
