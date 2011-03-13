@@ -48,8 +48,8 @@ are the defaults. Find the relevant "device name" by entering
 
 *Stylus* section
 
-    xsetwacom set "device name" Suppress 4
-    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Suppress 2
+    xsetwacom set "device name" RawSample 4
     xsetwacom set "device name" Threshold 27
     xsetwacom set "device name" PressureCurve 0 0 100 100
     xsetwacom set "device name" TabletPCButton on  # default for tablet PCs, it's off for tablets
@@ -61,8 +61,8 @@ are the defaults. Find the relevant "device name" by entering
 
 *Eraser* section
 
-    xsetwacom set "device name" Suppress 4
-    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Suppress 2
+    xsetwacom set "device name" RawSample 4
     xsetwacom set "device name" Threshold 27
     xsetwacom set "device name" PressureCurve 0 0 100 100
     xsetwacom set "device name" Mode Absolute
@@ -71,8 +71,8 @@ are the defaults. Find the relevant "device name" by entering
 
 *Cursor* section
 
-    xsetwacom set "device name" Suppress 4 
-    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Suppress 2 
+    xsetwacom set "device name" RawSample 4
     xsetwacom set "device name" CursorProximity 10  # default depends on tablet
     xsetwacom set "device name" Mode Relative
     xsetwacom set "device name" Button 1 1
@@ -83,8 +83,8 @@ are the defaults. Find the relevant "device name" by entering
 *Touch, single finger* (1FGT) section
 
     xsetwacom set "device name" Touch on
-    xsetwacom set "device name" Suppress 4
-    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Suppress 2
+    xsetwacom set "device name" RawSample 4
     xsetwacom set "device name" Threshold 27
     xsetwacom set "device name" Mode Absolute
     xsetwacom set "device name" TapTime 250
@@ -95,8 +95,8 @@ are the defaults. Find the relevant "device name" by entering
 
     xsetwacom set "device name" Touch on
     xsetwacom set "device name" Gesture on
-    xsetwacom set "device name" Suppress 4
-    xsetwacom set "device name" RawSample 2
+    xsetwacom set "device name" Suppress 2
+    xsetwacom set "device name" RawSample 4
     xsetwacom set "device name" Threshold 27
     xsetwacom set "device name" Mode Relative
     xsetwacom set "device name" Button 1 1
