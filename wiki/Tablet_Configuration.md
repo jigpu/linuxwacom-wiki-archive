@@ -153,11 +153,11 @@ Gimp pad button examples
     xsetwacom set "Wacom Intuos3 6x8 pad" Button 2 "key ctrl shift a"  # select none
     xsetwacom set "Wacom Intuos3 6x8 pad" Button 3 "key p"  # paintbrush
     xsetwacom set "Wacom Intuos3 6x8 pad" Button 4 "key tab"  # toggle docks
-    xsetwacom set "Wacom Intuos3 6x8 pad" StripLDn "key minus"  # zoom out
-    xsetwacom set "Wacom Intuos3 6x8 pad" StripLUp "key shift plus"  # zoom in
+    xsetwacom set "Wacom Intuos3 6x8 pad" StripLeftDown "key minus"  # zoom out
+    xsetwacom set "Wacom Intuos3 6x8 pad" StripLeftUp "key shift plus"  # zoom in
 
-    xsetwacom set "Wacom Intuos3 6x8 pad" StripRDn "key alt down"  # brush radius (must be mapped in GIMP)
-    xsetwacom set "Wacom Intuos3 6x8 pad" StripRUp "key alt up"
+    xsetwacom set "Wacom Intuos3 6x8 pad" StripRightDown "key alt down"  # brush radius (must be mapped in GIMP)
+    xsetwacom set "Wacom Intuos3 6x8 pad" StripRightUp "key alt up"
     xsetwacom set "Wacom Intuos3 6x8 pad" Button 5 "key shift control left"  # prev/next brush (must be mapped in GIMP; disables float)
     xsetwacom set "Wacom Intuos3 6x8 pad" Button 6 "key shift control right"
     xsetwacom set "Wacom Intuos3 6x8 pad" Button 7 "key ctrl shift e"  # fit Image in window
@@ -169,11 +169,11 @@ Inkscape pad button examples
     Button 2 "key h"  # Flip horizontal
     Button 3 "key F1"  # Selection tool
     Button 4 "key shift"
-    StripLDn "key Prior"  # page up
-    StripLUp "key Next"  # page down
+    StripLeftDown "key Prior"  # page up
+    StripLeftUp "key Next"  # page down
 
-    StripRDn "key KP_Add"  # NumpadPlus
-    StripRUp "key KP_Subtract"  # NumpadMinus
+    StripRightDown "key KP_Add"  # NumpadPlus
+    StripRightUp "key KP_Subtract"  # NumpadMinus
     Button 5 "key F6"  # Pencil Tool
     Button 6 "key F8"  # Fill and Stroke Dialog
     Button 7 "key F9"  # Toggle View Mode
