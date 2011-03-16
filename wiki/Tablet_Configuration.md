@@ -203,8 +203,8 @@ Inkscape pad button examples
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 2 "key ctrl shift a"  # select none
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 3 "key p"  # paintbrush
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 4 "key tab"  # toggle docks
-    xsetwacom set "Wacom Cintiq 21UX2 pad" AbsWDn "key shift plus"
-    xsetwacom set "Wacom Cintiq 21UX2 pad" AbsWUp "key minus"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" AbsWheelDown "key shift plus"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" AbsWheelUp "key minus"
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 5 "key shift control left"  # prev/next brush (must be mapped in GIMP)
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 6 "key shift control right" 
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 7 "key ctrl shift e"  #  fit Image in window
@@ -216,8 +216,8 @@ Inkscape pad button examples
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 10 "key alt"
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 11 "key shift"
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 12 "key tab"
-    xsetwacom set "Wacom Cintiq 21UX2 pad" AbsWDn "key alt up"  # Increase brush radius (must be mapped in GIMP)
-    xsetwacom set "Wacom Cintiq 21UX2 pad" AbsWUp "key alt down"  # Decrease brush radius (must be mapped in GIMP)
+    xsetwacom set "Wacom Cintiq 21UX2 pad" AbsWheelDown "key alt up"  # Increase brush radius (must be mapped in GIMP)
+    xsetwacom set "Wacom Cintiq 21UX2 pad" AbsWheelUp "key alt down"  # Decrease brush radius (must be mapped in GIMP)
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 13 "key apostrophe"
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 14 "key backspace"
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 15 "key backslash"
