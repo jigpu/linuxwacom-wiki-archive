@@ -197,8 +197,8 @@ Inkscape pad button examples
 
 #### Cintiq 21
 
-    xsetwacom set "Wacom Cintiq 21UX2 pad" StripLDn "key minus"  # zoom out
-    xsetwacom set "Wacom Cintiq 21UX2 pad" StripLUp "key shift plus"  # zoom in
+    xsetwacom set "Wacom Cintiq 21UX2 pad" StripLeftDown "key minus"  # zoom out
+    xsetwacom set "Wacom Cintiq 21UX2 pad" StripLeftUp "key shift plus"  # zoom in
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 1 "key r"  # rectangular selections
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 2 "key ctrl shift a"  # select none
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 3 "key p"  # paintbrush
@@ -210,8 +210,8 @@ Inkscape pad button examples
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 7 "key ctrl shift e"  #  fit Image in window
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 8 "key F11"  # fullscreen
 
-    xsetwacom set "Wacom Cintiq 21UX2 pad" StripRDn "key alt down"  # brush radius (must be mapped in GIMP)
-    xsetwacom set "Wacom Cintiq 21UX2 pad" StripRUp "key alt up"
+    xsetwacom set "Wacom Cintiq 21UX2 pad" StripRightDown "key alt down"  # brush radius (must be mapped in GIMP)
+    xsetwacom set "Wacom Cintiq 21UX2 pad" StripRightUp "key alt up"
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 9 "key ctrl"
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 10 "key alt"
     xsetwacom set "Wacom Cintiq 21UX2 pad" Button 11 "key shift"
