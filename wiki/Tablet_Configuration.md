@@ -140,8 +140,8 @@ possibilities. These assignments are just examples.**
 
     xsetwacom set "Wacom BambooFun 4x5 pad" Button 1 "key esc"
     xsetwacom set "Wacom BambooFun 4x5 pad" Button 2 "key F12 "
-    xsetwacom set "Wacom BambooFun 4x5 pad" AbsWDn "key ctrl shift s"
-    xsetwacom set "Wacom BambooFun 4x5 pad" AbsWUp "key ctrl shift s"
+    xsetwacom set "Wacom BambooFun 4x5 pad" AbsWheelDown "key ctrl shift s"
+    xsetwacom set "Wacom BambooFun 4x5 pad" AbsWheelUp "key ctrl shift s"
     xsetwacom set "Wacom BambooFun 4x5 pad" Button 3 "key KP_Next"
     xsetwacom set "Wacom BambooFun 4x5 pad" Button 4 "key KP_Prior"
 
