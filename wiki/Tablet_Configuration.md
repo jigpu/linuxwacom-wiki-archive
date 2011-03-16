@@ -334,8 +334,8 @@ in Gimp.
     ## Pad
     xsetwacom set "$PAD" Button 1 "key shift ctrl n"  # New layer
     xsetwacom set "$PAD" Button 2 "key p"  # Paintbrush
-    xsetwacom set "$PAD" AbsWDn "key minus"  # Zoom out
-    xsetwacom set "$PAD" AbsWUp "key shift plus"  # Zoom in
+    xsetwacom set "$PAD" AbsWheelDown "key minus"  # Zoom out
+    xsetwacom set "$PAD" AbsWheelUp "key shift plus"  # Zoom in
     xsetwacom set "$PAD" Button 3 "key a"  # Airbrush
     xsetwacom set "$PAD" Button 4 "key control z"  # Undo
 
@@ -364,8 +364,8 @@ want a different set of pad commands, ones that are useful in Inkscape.
     ## Pad
     xsetwacom set "$PAD" Button 1 "key F2"  # Node tool
     xsetwacom set "$PAD" Button 2 "key F1"  # Selection tool
-    xsetwacom set "$PAD" AbsWDn "key minus"  # Zoom out
-    xsetwacom set "$PAD" AbsWUp "key shift plus"  # Zoom in
+    xsetwacom set "$PAD" AbsWheelDown "key minus"  # Zoom out
+    xsetwacom set "$PAD" AbsWheelUp "key shift plus"  # Zoom in
     xsetwacom set "$PAD" Button 3 "key F9"  # Toggle view mode
     xsetwacom set "$PAD" Button 4 "key ctrl z"  # Undo
 
