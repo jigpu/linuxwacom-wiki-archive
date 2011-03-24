@@ -33,8 +33,8 @@ Installing from the tarball
 In the following, you need to replace the version number with the one
 from your downloaded tarball.
 
-    tar xjvf input-wacom-0.10.10-2.tar.bz2
-    cd input-wacom-0.10.10-2
+    tar xjvf input-wacom-0.10.11.tar.bz2
+    cd input-wacom-0.10.11
     ./autogen.sh --prefix=/usr --libdir=/usr/lib # on 32 bit machines
     ./autogen.sh --prefix=/usr --libdir=/usr/lib64 # on 64 bit machines
 
