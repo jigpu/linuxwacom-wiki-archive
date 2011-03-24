@@ -4,7 +4,7 @@ The input-wacom driver is the usb kernel driver/module paired with [[xf86-input-
 
 == Download ==
 
-Please download the latest release from the [https://sourceforge.net/projects/linuxwacom/files/ sourceforge download section].  The input-wacom folder is in the xf86-input-wacom folder.
+Please download the latest release from the [https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/input-wacom/ sourceforge download section].  The input-wacom folder is in the xf86-input-wacom folder.  Additionally input-wacom has been moved to a git repository [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/input-wacom;a=summary input-wacom summary].
 
 == Installing from the tarball ==
 In the following, you need to replace the version number with the one from your downloaded tarball.
