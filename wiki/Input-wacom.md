@@ -23,9 +23,9 @@ Download
 
 Please download the latest release from the [sourceforge download
 section](https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/input-wacom/).
-The input-wacom folder is in the xf86-input-wacom folder. Additionally
-input-wacom has been moved to a git repository [input-wacom
-summary](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/input-wacom;a=summary).
+The input-wacom folder is in the xf86-input-wacom folder. There is a git
+repository for
+[input-wacom](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/input-wacom;a=summary).
 
 Installing from the tarball
 ---------------------------
