@@ -63,6 +63,29 @@ EndSection
 </pre>
 As you can see, we use the udev tag assigned by the rules file to disable Ignore, which causes the device to be added again.
 
+For finer-grained matching (e.g. on a specific tablet), adjust the MatchProduct line in the first part accordingly. Once adjusted, the X server will hotplug all devices but the matched ones, hence providing both real hotplugging and wdaemon-style hotplugging.
+
+== HAL configuration ==
+wdaemon ships with a configuration example for HAL configuration (X Servers 1.5 to 1.7). The approach used is the same as for the [[#xorg.conf.d configuration snippets|xorg.conf.d snippet]] above.
+
+<pre>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<deviceinfo version="0.2">
+  <device>
+    <match key="info.category" contains="input">
+      <match key="info.product" contains_outof="Wacom;WALTOP;WACOM">
+         <remove key="input.x11_driver" />
+      </match>
+      <!-- enable wacom driver for all wdaemon devices -->
+      <match key="info.product" contains="wdaemon">
+        <merge key="input.x11_driver" type="string">wacom</merge>
+      </match>
+    </match>
+  </device>
+</deviceinfo>            
+</pre>
+Here we rely on wdaemon to prefix all devices names with ''"wdaemon"'' (we can't match on the udev tag with HAL). Again, for finer-grained matching adjust the ''info.product'' line above. Once adjusted, save this file in ''/etc/fdi/hal/policy'' and restart HAL. It is recommended that you check for correct configuration with <code>lshal</code>. If correctly configured, the <code>input.x11_driver</code> is only set to wacom on the wdaemon devices, but not on the physical devices (wdaemon should be running to see this).
+
 = Running wdaemon =
 In the simplest case, you run wdaemon with the numeric type of the device and the device path to monitor. Note that wdaemon usually needs to run as root for the appropriate permissions.
   wdaemon -t 56 -p /dev/input/event12 
