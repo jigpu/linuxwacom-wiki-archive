@@ -179,3 +179,30 @@ More lines may be added for additional tablets. wdaemon can then be
 started with the configuration file (and backkgrounded)
 
 ` wdaemon -f -c path/to/config.file`
+
+Emulating unknown and new devices
+=================================
+
+wdaemon can emulate tablets without the physical tablet being present.
+To do this, wdaemon must know the properties of each device. Information
+about most tablets is built into wdaemon but newer devices may not be
+supported. If wdaemon needs to emulate a new device, it must first
+gather a device description from this device. To get such a description,
+use the *-x* flag (for "extract").
+
+` wdaemon -x newdevice.desc -p /dev/input/event12`
+
+This will save the device description of the device on
+*/dev/input/event12* in the file *newdevice.desc*. To re-use this
+description, simply load the device description.
+
+` wdaemon -l newdevice.desc -p /dev/input/event12`
+
+This command will re-create the device described by the file and link it
+to the device at */dev/input/event12*. This line may also be specified
+in the configuration file as
+
+` description = path/to/newfile.desc,/dev/input/event12`
+
+X.Org configuration is not affected if wdaemon does not natively know a
+device. The above guidelines still apply.
