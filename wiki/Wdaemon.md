@@ -146,6 +146,17 @@ for correct configuration with `lshal`. If correctly configured, the
 `input.x11_driver` is only set to wacom on the wdaemon devices, but not
 on the physical devices (wdaemon should be running to see this).
 
+A note on xorg.conf.d and HAL configuration
+-------------------------------------------
+
+In the case of xorg.conf.d or HAL configuration, we still use the
+hotplugging facilities of the X server. wdaemon does not need to be
+running at server startup. The X server will hotplug the virtual devices
+when wdaemon is started up. The devices added will use a
+*/dev/input/eventX* device path, hence only the *60-wacom.rules* udev
+rule is required for such a configuration. No uinput symlinks are
+required.
+
 Running wdaemon
 ===============
 

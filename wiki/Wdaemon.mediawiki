@@ -86,6 +86,10 @@ wdaemon ships with a configuration example for HAL configuration (X Servers 1.5 
 </pre>
 Here we rely on wdaemon to prefix all devices names with ''"wdaemon"'' (we can't match on the udev tag with HAL). Again, for finer-grained matching adjust the ''info.product'' line above. Once adjusted, save this file in ''/etc/fdi/hal/policy'' and restart HAL. It is recommended that you check for correct configuration with <code>lshal</code>. If correctly configured, the <code>input.x11_driver</code> is only set to wacom on the wdaemon devices, but not on the physical devices (wdaemon should be running to see this).
 
+
+== A note on xorg.conf.d and HAL configuration ==
+In the case of xorg.conf.d or HAL configuration, we still use the hotplugging facilities of the X server. wdaemon does not need to be running at server startup. The X server will hotplug the virtual devices when wdaemon is started up. The devices added will use a ''/dev/input/eventX'' device path, hence only the ''60-wacom.rules'' udev rule is required for such a configuration. No uinput symlinks are required.
+
 = Running wdaemon =
 In the simplest case, you run wdaemon with the numeric type of the device and the device path to monitor. Note that wdaemon usually needs to run as root for the appropriate permissions.
   wdaemon -t 56 -p /dev/input/event12 
