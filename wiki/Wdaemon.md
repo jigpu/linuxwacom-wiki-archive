@@ -78,6 +78,38 @@ device.
         # add other options here
     EndSection
 
+For static configuration, it is necessary that wdaemon is running
+*before* the X server starts up.
+
+xorg.conf.d configuration snippets
+----------------------------------
+
+wdaemon ships with a configuration examples for xorg.conf.d (X server
+1.8 and later). The approach these examples use is:
+
+1.  disable the wacom driver for all physical wacom tablets
+2.  enable the wacom driver for all wdaemon devices
+
+The example xorg.conf.d snippet:
+
+    Section "InputClass"
+            Identifier "wdaemon ignore all devices"
+            MatchProduct "Wacom|WACOM"
+            MatchDevicePath "/dev/input/event*"
+            Option "Ignore" "on"
+    EndSection
+
+    Section "InputClass"
+            Identifier "wdaemon unignore uinput devices"
+            # the wdaemon udev rules tag the device
+            MatchTag "wdaemon-device"
+            Driver "wacom"
+            Option "Ignore" "off"
+    EndSection
+
+As you can see, we use the udev tag assigned by the rules file to
+disable Ignore, which causes the device to be added again.
+
 Running wdaemon
 ===============
 
