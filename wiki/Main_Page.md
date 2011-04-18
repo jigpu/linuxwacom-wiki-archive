@@ -30,8 +30,8 @@ operating system. For your tablet to work, you need two pieces:
     distributions, you need the
     [xf86-input-wacom](xf86-input-wacom "wikilink") package. If you are
     required to run an [X server of
-    1.7](http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html)
-    or later, you may need to get your X driver from the
+    1.6](http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html)
+    or earlier, you may need to get your X driver from the
     [linuxwacom](linuxwacom "wikilink") package.
 
 Please read [Wacom Support in
