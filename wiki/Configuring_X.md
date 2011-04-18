@@ -16,7 +16,7 @@ X Servers 1.8 and later use udev as device enumeration backend on Linux.
 **Note that no X-related configuration is stored in udev itself**, it is
 simply used for getting hotplug notifications and device enumeration.
 The devices visible to the X server include all devices with the udev
-property *ID\_INPUT* set to 1 (see *udevadm info --export-bd*). X
+property *ID\_INPUT* set to 1 (see *udevadm info --export-db*). X
 servers that use udev as a backend support [xorg.conf.d
 configuration](#xorg.conf.d_configuration "wikilink").
 
