@@ -10,12 +10,12 @@ patch may be rejected.
 * Default indentation is one tab
 * Indentation with tabs and remaining spaces to align up code where necessary. Example below shows tabs with "''>----''" and spaces with "''.''".
 <pre>
->-------if.(InitValuatorClassDeviceStruct(pInfo->dev, nbaxes,
+>-------if (InitValuatorClassDeviceStruct(pInfo->dev, nbaxes,
 #if.GET_ABI_MAJOR(ABI_XINPUT_VERSION) >= 7
 >------->------->------->------->-------..axis_labels,
 #endif
->-------				..GetMotionHistorySize(),
->-------				..(is_absolute(pInfo) ?  Absolute : Relative) | OutOfProximity) == FALSE)
+>------->------->------->------->-------..GetMotionHistorySize(),
+>------->------->------->------->-------..(is_absolute(pInfo) ?  Absolute : Relative) | OutOfProximity) == FALSE)
 </pre>
 * Opening curly braces { go on a new line. Closing curly braces } go on the same line as else. e.g.
 <pre>

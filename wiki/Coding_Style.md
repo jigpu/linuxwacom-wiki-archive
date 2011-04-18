@@ -22,12 +22,12 @@ C coding style
 
 <!-- -->
 
-    >-------if.(InitValuatorClassDeviceStruct(pInfo->dev, nbaxes,
+    >-------if (InitValuatorClassDeviceStruct(pInfo->dev, nbaxes,
     #if.GET_ABI_MAJOR(ABI_XINPUT_VERSION) >= 7
     >------->------->------->------->-------..axis_labels,
     #endif
-    >-------                ..GetMotionHistorySize(),
-    >-------                ..(is_absolute(pInfo) ?  Absolute : Relative) | OutOfProximity) == FALSE)
+    >------->------->------->------->-------..GetMotionHistorySize(),
+    >------->------->------->------->-------..(is_absolute(pInfo) ?  Absolute : Relative) | OutOfProximity) == FALSE)
 
 -   Opening curly braces { go on a new line. Closing curly braces } go
     on the same line as else. e.g.
