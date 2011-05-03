@@ -11,6 +11,10 @@ An xorg.conf is only needed in special cases.
 = Example xorg.conf =
 Each device type (stylus, erasor, etc.) needs to be added as a separate InputDevice section and will appear as its own input device in X.
 
+{{Tip|text=For older X servers, devices that should also control the cursor need to send core events. To do so, add the following line to the "InputDevice" section of the device.
+  Option "SendCoreEvents" "on"
+In newer X servers, this option is on by default.
+}}
 <pre>
 Section "InputDevice"
   Driver        "wacom"
