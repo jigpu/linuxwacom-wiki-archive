@@ -148,7 +148,7 @@ valid settings are:
 
 Note that rotation is a tablet-wide option. If you rotate one input tool
 all other tools associated with the same tablet are rotated to the same
-orientation.
+orientation. To rotate a tool use:
 
 ` xsetwacom set "device name" Rotate half`
 

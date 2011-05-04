@@ -82,7 +82,7 @@ The wacom driver supports rotation by 90 degree angles. The ''Rotate'' parameter
 * '''cw''': the tablet is rotated 90 degrees clockwise
 * '''ccw''': the tablet is rotated 90 degrees counter-clockwise
 
-Note that rotation is a tablet-wide option.  If you rotate one input tool all other tools associated with the same tablet are rotated to the same orientation.
+Note that rotation is a tablet-wide option.  If you rotate one input tool all other tools associated with the same tablet are rotated to the same orientation.  To rotate a tool use:
 
   xsetwacom set "device name" Rotate half
 
