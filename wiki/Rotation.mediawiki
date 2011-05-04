@@ -40,28 +40,28 @@ rotation="$(xrandr -q --verbose | grep 'connected' | egrep -o  '\) (normal|left|
 
 case "$rotation" in
     normal)
-#    -rotate to the left
+    # rotate to the left
     xrandr -o left
     xsetwacom set stylus rotate ccw
     xsetwacom set eraser rotate ccw
     xsetwacom set touch rotate ccw
     ;;
     left)
-#    -rotate to inverted
+    # rotate to inverted
     xrandr -o inverted
     xsetwacom set stylus rotate half
     xsetwacom set eraser rotate half
     xsetwacom set touch rotate half
     ;;
     inverted)
-#    -rotate to the right
+    # rotate to the right
     xrandr -o right
     xsetwacom set stylus rotate cw
     xsetwacom set eraser rotate cw
     xsetwacom set touch rotate cw
     ;;
     right)
-#    -rotate to normal
+    # rotate to normal
     xrandr -o normal
     xsetwacom set stylus rotate none
     xsetwacom set eraser rotate none
