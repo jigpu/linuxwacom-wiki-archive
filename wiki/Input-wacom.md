@@ -33,10 +33,10 @@ Installing from the tarball
 In the following, you need to replace the version number with the one
 from your downloaded tarball.
 
-    tar xjvf input-wacom-0.10.11.tar.bz2
-    cd input-wacom-0.10.11
-    ./autogen.sh --prefix=/usr --libdir=/usr/lib # on 32 bit machines
-    ./autogen.sh --prefix=/usr --libdir=/usr/lib64 # on 64 bit machines
+    tar xjvf input-wacom-0.11.0.tar.bz2
+    cd input-wacom-0.11.0
+    ./autogen.sh --prefix=/usr --libdir=/usr/lib  # on 32 bit machines
+    ./autogen.sh --prefix=/usr --libdir=/usr/lib64  # on 64 bit machines
 
 Then copy the wacom.ko module to the appropriate directory. Depending on
 your kernel you may need to locate the folder the compiled wacom.ko is
