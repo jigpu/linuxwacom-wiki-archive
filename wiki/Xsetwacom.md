@@ -146,9 +146,9 @@ valid settings are:
 -   **cw**: the tablet is rotated 90 degrees clockwise
 -   **ccw**: the tablet is rotated 90 degrees counter-clockwise
 
-Note that rotation is tool-specific. If you rotate the stylus tool, the
-eraser tool and all others still have the original rotation. To rotate
-the complete tablet, rotate all tools. To rotate a tool use:
+Note that rotation is a tablet-wide option. If you rotate one input tool
+all other tools associated with the same tablet are rotated to the same
+orientation.
 
 ` xsetwacom set "device name" Rotate half`
 
