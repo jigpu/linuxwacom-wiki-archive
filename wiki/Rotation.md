@@ -9,9 +9,7 @@ tags:
 The wacom driver supports rotation by 90 degree angles. The rotation can
 be either applied statically (through the [configuration
 files](/wiki/Configuring_X "wikilink")) or at runtime (e.g. through
-[xsetwacom](xsetwacom "wikilink")).
-
-The four valid settings are:
+[xsetwacom](xsetwacom "wikilink")). The four valid settings are:
 
 -   **none**: the tablet is not rotated in software and uses its natural
     rotation.
@@ -19,9 +17,9 @@ The four valid settings are:
 -   **cw**: the tablet is rotated 90 degrees clockwise
 -   **ccw**: the tablet is rotated 90 degrees counter-clockwise
 
-Note that rotation is tool-specific. If you rotate the stylus tool, the
-eraser tool and all others still have the original rotation. To rotate
-the complete tablet, rotate all tools.
+Note that rotation is a tablet-wide option. If you rotate one input tool
+all other tools associated with the same tablet are rotated to the same
+orientation.
 
 Examples
 --------
