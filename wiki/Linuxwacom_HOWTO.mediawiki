@@ -288,6 +288,10 @@ If you are interested, the following tables contain the package contents and rel
 {|
 ! File !! Date !! Comment
 |-
+| [http://sourceforge.net/projects/linuxwacom/files/linuxwacom/0.8.9/linuxwacom-0.8.9.tar.bz2/download linuxwacom-0.8.9.tar.bz2]
+| 2011-05-04
+| Put wacom_ioctl back for Intuous4 OLED. Fixed error path in wacom_probe. Updated wacomcfg.c for touch device. Some minor kernel updates.
+|-
 | [http://sourceforge.net/projects/linuxwacom/files/linuxwacom-dev/0.8.7-2/linuxwacom-0.8.7-2.tar.bz2/download linuxwacom-0.8.7-2.tar.bz2]
 | 2010-05-21
 | Support kernels from 2.6.16 to 2.6.35. Support Cintiq 21UX2, Intuos4 WL (USB Endpoint).
