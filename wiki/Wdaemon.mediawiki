@@ -1,5 +1,3 @@
-{{Warning|reason=This content does not apply yet. [[wdaemon]] is not yet part of the linuxwacom project}}
-
 [[wdaemon]] is a daemon to hide physical tablet unplugging. When it was originally written, the X server did not have input device hotplugging support. Input devices added at runtime could thus not be used. wdaemon worked around this by providing a permanent virtual kernel device that looked exactly like the physical tablet to userspace. The X server was then configured to use the wdaemon device. Whenever a physical tablet was plugged in, wdaemon would then forward the events from this device through the virtual device.
 
 Now the X server ''does'' support input device hotplugging. From a technical point of view, wdaemon works exactly as before. From a practical perspective however it works the other way round - it ''disables'' device hotplugging. A device that would otherwise appear and disappear as X input device now looks like a permanent device to X. Thus, run-time settings applied to this device remain permanent.
