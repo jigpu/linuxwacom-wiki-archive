@@ -6,6 +6,7 @@ __TOC__
 * xf86-input-wacom-0.10.9 or later
 
 == MapToOutput ==
+{{Tip|text=The '''MapToOutput''' [[xsetwacom]] parameter will not work with the NVIDIA binary driver. See [[#Coordinate_Transformation_Matrix]] instead}}
 </noinclude>
 
 The wacom driver does not support multi-monitor setups directly - handling of such setups is handled by the X Server. [[xsetwacom]] does however provide a parameter to easily map a tablet to a screen
