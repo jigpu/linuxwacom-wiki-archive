@@ -21,29 +21,26 @@ The Linux Wacom Project manages the drivers, libraries, and
 documentation for configuring and running Wacom tablets under the Linux
 operating system. For your tablet to work, you need two pieces:
 
--   **kernel drivers:** usually these are included in your distribution
-    kernel. If you are required to run a specific kernel, you may need
-    to get your kernel patches from the
-    [input-wacom](input-wacom "wikilink") or the
-    [linuxwacom](linuxwacom "wikilink") package.
--   **[X.Org X11](http://www.x.org) driver:** for most modern
-    distributions, you need the
-    [xf86-input-wacom](xf86-input-wacom "wikilink") package. If you are
-    required to run an [X server of
-    1.6](http://who-t.blogspot.com/2009/10/x11r75-released-but-what-is-it.html)
-    or earlier, you may need to get your X driver from the
-    [linuxwacom](linuxwacom "wikilink") package.
+-   **kernel drivers:** The kernel driver converts the hardware-specific
+    protocol (serial or USB) into the standard kernel events. These
+    events can then easily be read by user-space applications without
+    requiring (too much) hardware-specific knowledge. We try to upstream
+    our kernel drivers as quickly as possible and hence these drivers
+    are usually included in your distribution kernel. We have
+    alternative kernel patches available for those that are bound to a
+    specific kernel version (see [Downloads](/wiki/Downloads "wikilink")).
 
-Please read [Wacom Support in
-Linux](http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html)
-first for a better understanding of the difference between
-[linuxwacom](linuxwacom "wikilink") and
-[xf86-input-wacom](xf86-input-wacom "wikilink"). We also have a list of
-[Supported Devices](/wiki/Supported_Devices "wikilink"). Distributions usually
-already ship a version of
-[xf86-input-wacom](xf86-input-wacom "wikilink") in their repositories.
-Kernel patches for Wacom devices, if they have been submitted upstream,
-will also usually feed back into your distribution's kernel.
+<!-- -->
+
+-   **[X.Org X11](http://www.x.org) driver:** The X driver splits the
+    device into multiple subdevices, usually one for the stylus, one for
+    the eraser, one for touch, etc. These devices then allow
+    applications like the [GIMP](http://www.gimp.org) to access extended
+    functionality like pressure and high-resolution coordinates. The [ X
+    drivers](xf86-input-wacom "wikilink") are released often and usually
+    packaged by distributions. If you require a newer version (or you
+    are stuck with an old X server), please see our
+    [Downloads](/wiki/Downloads "wikilink") page for other options.
 
 Downloads
 ---------
