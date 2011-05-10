@@ -6,6 +6,17 @@ tags:
  - HOWTO
 ---
 
+Please read [Wacom Support in
+Linux](http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html)
+first for a better understanding of the difference between
+[linuxwacom](linuxwacom "wikilink") and
+[xf86-input-wacom](xf86-input-wacom "wikilink"). We also have a list of
+[Supported Devices](/wiki/Supported_Devices "wikilink"). Distributions usually
+already ship a version of
+[xf86-input-wacom](xf86-input-wacom "wikilink") in their repositories.
+Kernel patches for Wacom devices, if they have been submitted upstream,
+will also usually feed back into your distribution's kernel.
+
 All downloads are available through our [Sourceforge
 page](http://sourceforge.net/projects/linuxwacom/files/).
 
