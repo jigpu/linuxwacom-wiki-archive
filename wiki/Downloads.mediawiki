@@ -2,6 +2,8 @@
 
 All downloads are available through our [http://sourceforge.net/projects/linuxwacom/files/ Sourceforge page].
 
+{{Tip|text=On modern desktop distributions, you do '''not''' need the kernel or X drivers in the linuxwacom tarball.}}
+
 = Kernel drivers =
 * [[input-wacom]], kernel backports for kernels 2.6.30 and 2.6.36:  http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/input-wacom/
 * [[linuxwacom]], kernel backports for kernels 2.6.16, 2.6.18, 2.6.24, and 2.6.30: http://sourceforge.net/projects/linuxwacom/files/linuxwacom/
