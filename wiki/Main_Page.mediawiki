@@ -19,6 +19,9 @@ For your tablet to work, you need two pieces:
 
 Please read [http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html Wacom Support in Linux] first for a better understanding of the difference between [[linuxwacom]] and [[xf86-input-wacom]]. We also have a list of [[Supported Devices]]. Distributions usually already ship a version of [[xf86-input-wacom]] in their repositories. Kernel patches for Wacom devices, if they have been submitted upstream, will also usually feed back into your distribution's kernel.
 
+== Downloads ==
+For a list of files available, please visit the [[Downloads]] page.
+
 == User help ==
 Click '''[[:Category:HOWTO|here]]''' for a list of '''HOWTOs'''.
 

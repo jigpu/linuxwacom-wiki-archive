@@ -45,6 +45,12 @@ already ship a version of
 Kernel patches for Wacom devices, if they have been submitted upstream,
 will also usually feed back into your distribution's kernel.
 
+Downloads
+---------
+
+For a list of files available, please visit the
+[Downloads](/wiki/Downloads "wikilink") page.
+
 User help
 ---------
 
