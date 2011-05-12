@@ -32,3 +32,6 @@ tarball called [input-wacom](input-wacom "wikilink"). Both of these
 package include kernel *backports* for certain kernel versions. Desktop
 distribution users usually do not need either tarball and should rely on
 their distribution packages instead.
+
+Some more information is available here:
+<http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html>

@@ -4,3 +4,6 @@ The main (and long-term) contributor to [[linuxwacom]] is still Ping Cheng, a Wa
 In August 2009, Peter Hutterer split out the X11 driver from the linuxwacom package and imported it into a git repository called [[xf86-input-wacom]]. This driver has seen quite a bit of rework, dropping of some features (e.g. XFree86-4 support) and gaining others (e.g. input device properties). All modern distributions now ship [[xf86-input-wacom]] as their X driver for Wacom tablets. Kernel-level device support is developed upstream on the [http://lkml.org Linux Kernel Mailing List].
 
 However, some (mainly enterprise) users need to run specific kernels or X server versions. For these, the Linux Wacom Project provides ongoing support for the [[linuxwacom]] tarballs and a newer tarball called [[input-wacom]]. Both of these package include kernel ''backports'' for certain kernel versions. Desktop distribution users usually do not need either tarball and should rely on their distribution packages instead.
+
+
+Some more information is available here: http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html
