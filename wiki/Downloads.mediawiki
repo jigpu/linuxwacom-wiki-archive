@@ -13,3 +13,6 @@ All downloads are available through our [http://sourceforge.net/projects/linuxwa
 = X drivers =
 * [[xf86-input-wacom]] for X servers 1.7 and later: http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/
 * [[linuxwacom]] for X servers up to 1.6: http://sourceforge.net/projects/linuxwacom/files/linuxwacom/
+
+= wdaemon =
+* [[wdaemon]]: http://sourceforge.net/projects/linuxwacom/files/wdaemon

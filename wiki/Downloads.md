@@ -37,3 +37,9 @@ X drivers
     <http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/>
 -   [linuxwacom](linuxwacom "wikilink") for X servers up to 1.6:
     <http://sourceforge.net/projects/linuxwacom/files/linuxwacom/>
+
+wdaemon
+=======
+
+-   [wdaemon](wdaemon "wikilink"):
+    <http://sourceforge.net/projects/linuxwacom/files/wdaemon>
