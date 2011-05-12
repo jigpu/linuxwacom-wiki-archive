@@ -16,6 +16,8 @@ For your tablet to work, you need two pieces:
 
 * '''[http://www.x.org X.Org X11] driver:''' The X driver splits the device into multiple subdevices, usually one for the stylus, one for the eraser, one for touch, etc. These devices then allow applications like the [http://www.gimp.org GIMP] to access extended functionality like pressure and high-resolution coordinates. The [[xf86-input-wacom | X drivers]] are released often and usually packaged by distributions. If you require a newer version (or you are stuck with an old X server), please see our [[Downloads]] page for other options.
 
+For more information about the bits and pieces provided, read the [[History|History of the Linux Wacom Project]]
+
 == Downloads ==
 For a list of files available, please visit the [[Downloads]] page.
 

@@ -42,6 +42,9 @@ operating system. For your tablet to work, you need two pieces:
     are stuck with an old X server), please see our
     [Downloads](/wiki/Downloads "wikilink") page for other options.
 
+For more information about the bits and pieces provided, read the
+[History of the Linux Wacom Project](/wiki/History "wikilink")
+
 Downloads
 ---------
 
