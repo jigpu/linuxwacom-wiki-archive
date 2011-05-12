@@ -6,9 +6,8 @@ tags:
  - HOWTO
 ---
 
-Please read [Wacom Support in
-Linux](http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html)
-first for a better understanding of the difference between
+Please read our [History](/wiki/History "wikilink") first for a better
+understanding of the difference between
 [linuxwacom](linuxwacom "wikilink") and
 [xf86-input-wacom](xf86-input-wacom "wikilink"). We also have a list of
 [Supported Devices](/wiki/Supported_Devices "wikilink"). Distributions usually
