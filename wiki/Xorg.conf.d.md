@@ -195,15 +195,20 @@ on those devices that have the wacom driver applied to them.
             MatchProduct "pad"
 
             # Apply custom Options to this device below.
-        Option "Button1" "key ctrl t"
-        Option "Button2" "key backspace"
-        Option "Button3" "3"
-        Option "Button4" "1"
+        Option "Button1" "1"
+        Option "Button2" "3"
+        Option "Button3" "2"
+        Option "Button4" "0"
     EndSection
 
 <noinclude> You would only use the snippets corresponding to the input
 tools you have, of course. Clearly if you are plugging in two or more
 tablets they will have the same Option settings and more specific
 matches may be required.
+
+Also notice in static configuration files pad Buttons may only be
+assigned integer values as described in *man wacom*. To set key strokes
+to pad Buttons xsetwacom runtime commands must be used as described in
+[Tablet Configuration](/wiki/Tablet_Configuration "wikilink").
 
 </noinclude>
