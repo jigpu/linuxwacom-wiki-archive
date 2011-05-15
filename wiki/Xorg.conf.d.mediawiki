@@ -18,6 +18,8 @@ We will create a new file in /etc/X11/xorg.conf.d called 52-wacom-options.conf t
 More than one configuration snippet may apply to any device. 
 Configuration settings are merged, but if the same setting is specified multiple times, only the last one is used. Usually, your distribution ships with a number of ''.conf'' files that will pick the right driver for your device. Thus, if you want to configure a particular device through [[xorg.conf.d]] snippets, you can usually skip the driver assignment - it's already done for you.
 
+Available static '''configuration Options''' are listed in the Wacom manual (''man wacom'' entered in a console).
+
 == Matching a device ==
 [[xorg.conf.d]] snippets are based on several different Match keywords. The most common ones are to match on a product name ('''MatchProduct''') or to match on a certain device path ('''MatchDevicePath''').
 The example below shows a snippet that applies to any device with ''either'' the string "Wacom" ''or'' the string "Waltop" in the product name ''and'' that matches a certain device path:

@@ -40,6 +40,9 @@ your device. Thus, if you want to configure a particular device through
 [xorg.conf.d](xorg.conf.d "wikilink") snippets, you can usually skip the
 driver assignment - it's already done for you.
 
+Available static **configuration Options** are listed in the Wacom
+manual (*man wacom* entered in a console).
+
 Matching a device
 -----------------
 
