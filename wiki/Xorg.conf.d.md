@@ -208,7 +208,7 @@ matches may be required.
 
 Also notice in static configuration files pad Buttons may only be
 assigned integer values as described in *man wacom*. To set key strokes
-to pad Buttons xsetwacom runtime commands must be used as described in
+to pad Buttons xsetwacom runtime commands must be used as shown in
 [Tablet Configuration](/wiki/Tablet_Configuration "wikilink").
 
 </noinclude>
