@@ -155,7 +155,7 @@ on those devices that have the wacom driver applied to them.
 
             # Apply custom Options to this device below.
         Option "RawSample" "20"
-        Option "PressCurve" "0 10 90 100"
+        Option "PressCurve" "0,10,90,100"
         Option "TopX" "-10"
         Option "TopY" "-20"
         Option "BottomX" "14720"
@@ -169,7 +169,7 @@ on those devices that have the wacom driver applied to them.
 
             # Apply custom Options to this device below.
         Option "RawSample" "20"
-        Option "PressCurve" "5 0 100 95"
+        Option "PressCurve" "5,0,100,95"
         Option "TopX" "-10"
         Option "TopY" "-20"
         Option "BottomX" "14720"
