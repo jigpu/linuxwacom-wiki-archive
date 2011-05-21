@@ -38,8 +38,59 @@ EndSection
 The Wacom Tablet Area settings for touch have no effect of course on the pad.
 
 === X server 1.10 ===
-Since X server 1.10 supports dependent device configuration we see it is no longer really relevant that there are two devices.  The distinction essentially disappears since specifying unique input tool keywords will pick up both device's input tools just like multiple input tools on one device.
-{{:Xorg.conf.d}}
+Since X server 1.10 supports dependent device configuration we see it is no longer really relevant that there are two devices.  The distinction essentially disappears since specifying unique input tool keywords will pick up both device's input tools just like multiple input tools on one device.  And because the kernel is exporting the parent devices as Pen and Finger, the parent device matching limitation of X server 1.10 (brought about by the xf86-input-wacom driver appending the type after the match has been applied), can apparently be avoided.  Provided the match is made to Pen and Finger rather than stylus and touch.
+<pre>
+Section "InputClass"
+	Identifier "Wacom Bamboo stylus options"
+        MatchDriver "wacom"
+        MatchProduct "Pen"
+
+        # Apply custom Options to this device below.
+	Option "RawSample" "20"
+	Option "PressCurve" "0,10,90,100"
+	Option "TopX" "-10"
+	Option "TopY" "-20"
+	Option "BottomX" "14720"
+	Option "BottomY" "9200"
+EndSection
+
+Section "InputClass"
+	Identifier "Wacom Bamboo eraser options"
+        MatchDriver "wacom"
+        MatchProduct "eraser"
+
+        # Apply custom Options to this device below.
+	Option "RawSample" "20"
+	Option "PressCurve" "5,0,100,95"
+	Option "TopX" "-10"
+	Option "TopY" "-20"
+	Option "BottomX" "14720"
+	Option "BottomY" "9200"
+EndSection
+
+Section "InputClass"
+	Identifier "Wacom Bamboo touch options"
+        MatchDriver "wacom"
+        MatchProduct "Finger"
+
+        # Apply custom Options to this device below.
+	Option "ScrollDistance" "18"
+	Option "TapTime" "220"
+EndSection
+
+Section "InputClass"
+	Identifier "Wacom Bamboo pad options"
+        MatchDriver "wacom"
+        MatchProduct "pad"
+
+        # Apply custom Options to this device below.
+	Option "Button1" "1"
+	Option "Button2" "3"
+	Option "Button3" "2"
+	Option "Button4" "0"
+EndSection
+</pre>
+
 === xorg.conf ===
 See [[Configuring X#Manual setup in the xorg.conf|Manual setup in the xorg.conf]] for further explanation.
 <pre>
