@@ -85,7 +85,7 @@ The sections below demonstrate a sample of the various tablets with tablet butto
 
 ==== Bamboo Pen & Touch ====
 The following button values or assignments are the defaults.
-{{Tip|text=Bamboo P & Ts if ''Button 4'' is not working change it to ''Button 8''.  The issue is due to esoteric key mapping reasons resolved in recent kernels.}}
+{{Tip|text=Bamboo P & Ts if ''Button 4'' is not working change it to ''Button 8''.  The issue is because Xinput reserves buttons 4, 5, 6, and 7 for vertical and horizontal scrolling.}}
 <pre>
 xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 1 1
 xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 2 2
@@ -94,6 +94,7 @@ xsetwacom set "Wacom BambooFun 2FG 4x5 Finger pad" Button 4 4
 </pre>
 
 '''Since the defaults are not very illuminating the following contains a hodgepodge of possible Button assignments to illustrate the possibilities.  These assignments are just examples.'''
+
 ==== Graphire4 ====
 <pre>
 xsetwacom set "Wacom Graphire4 4x5 pad" Button 1 "key p"  # Paintbrush
