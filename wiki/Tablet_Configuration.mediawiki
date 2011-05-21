@@ -148,7 +148,7 @@ Button 8 "key F12"  # Layers Dialog
 </pre>
 
 ==== Intuos4 ====
-{{Tip|text=Similar to the Bamboo P & Ts above, with the 2.6.32 kernel, key mapping for the Intuos4 buttons may be 1 2 3 8 9 10 11 12 13.  Again the issue is due to esoteric key mapping reasons resolved in recent kernels, 2.6.37(?) and later.}}
+{{Tip|text=Similar to the Bamboo P & Ts above, with the 2.6.32 kernel, key mapping for the Intuos4 buttons may be 1 2 3 8 9 10 11 12 13.  Again the issue is due to Xinput button mapping reserving 4, 5, 6, and 7 as described above.}}
 <pre>
 xsetwacom set "Wacom Intuos4 6x9 pad" Button 2 "key ctrl"
 xsetwacom set "Wacom Intuos4 6x9 pad" Button 3 "key alt"
