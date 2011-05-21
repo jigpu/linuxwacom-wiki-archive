@@ -6,7 +6,7 @@ tags:
  - HOWTO
 ---
 
-<noinclude> This page describes static device configuration through
+This page describes static device configuration through
 [xorg.conf.d](xorg.conf.d "wikilink") snippets. Such a configuration
 applies applies to hotplugged devices, as opposed to static
 configuration in the
@@ -149,7 +149,6 @@ list](xsetwacom "wikilink"). We use the **MatchDriver** tag here to
 simplify device selection. This way, we rely on the distribution-wide
 match tags to apply the right driver to our device and then only match
 on those devices that have the wacom driver applied to them.
-</noinclude>
 
     Section "InputClass"
         Identifier "Wacom Bamboo stylus options"
@@ -201,14 +200,12 @@ on those devices that have the wacom driver applied to them.
         Option "Button4" "0"
     EndSection
 
-<noinclude> You would only use the snippets corresponding to the input
-tools you have, of course. Clearly if you are plugging in two or more
-tablets they will have the same Option settings and more specific
-matches may be required.
+You would only use the snippets corresponding to the input tools you
+have, of course. Clearly if you are plugging in two or more tablets they
+will have the same Option settings and more specific matches may be
+required.
 
 Also notice in static configuration files pad Buttons may only be
 assigned integer values as described in *man wacom*. To set key strokes
 to pad Buttons xsetwacom runtime commands must be used as shown in
 [Tablet Configuration](/wiki/Tablet_Configuration "wikilink").
-
-</noinclude>
