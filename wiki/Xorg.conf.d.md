@@ -149,11 +149,12 @@ list](xsetwacom "wikilink"). We use the **MatchDriver** tag here to
 simplify device selection. This way, we rely on the distribution-wide
 match tags to apply the right driver to our device and then only match
 on those devices that have the wacom driver applied to them. However
-because the xf86-input-wacom driver appends the type of input tool after
-the match has been applied we can not use the same match method for the
-parent device (stylus). Instead stylus (tablet wide) options must be
-applied to the appropriate snippet in the 50-wacom.conf file or a match
-similar to that used in the 52-wacom-options.conf file as shown below.
+because the xf86-input-wacom driver appends the input tool type after
+the server has made the MatchProduct match we can not use the same match
+method for the parent device (stylus). Instead stylus (tablet wide)
+options must be applied to the appropriate snippet in the 50-wacom.conf
+file or a match similar to that used in the 52-wacom-options.conf file
+as shown below.
 
     Section "InputClass"
         Identifier "Wacom Bamboo stylus options"
