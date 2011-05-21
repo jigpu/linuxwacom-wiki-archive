@@ -80,52 +80,56 @@ With ''X server 1.10'' you can configure dependent devices.  In other words you 
 
 === Example Dependent Device Static Configuration ===
 Identify each input tool's device name with [[xsetwacom|xsetwacom list]]. We
-use the '''MatchDriver''' tag here to simplify device selection. This way, we rely on the distribution-wide match tags to apply the right driver to our device and then only match on those devices that have the wacom driver applied to them.  However because the xf86-input-wacom driver appends the type of input tool after the match has been applied we can not use the same match method for the parent device (stylus).  Instead stylus (tablet wide) options must be applied to the appropriate snippet in the 50-wacom.conf file or a match similar to that used in the 52-wacom-options.conf file as shown below.
+use the '''MatchDriver''' tag here to simplify device selection. This way, we rely on the distribution-wide match tags to apply the right driver to our device and then only match on those devices that have the wacom driver applied to them.
 <pre>
 Section "InputClass"
 	Identifier "Wacom Bamboo stylus options"
-	MatchProduct "Wacom|WACOM"
-	MatchDevicePath "/dev/input/event*"
-	Driver "wacom"
+        MatchDriver "wacom"
+        MatchProduct "stylus"
 
-	# Apply custom Options to this device below.
-	Option "Button2" "3"
-	Option "Button3" "2"
+        # Apply custom Options to this device below.
+	Option "RawSample" "20"
 	Option "PressCurve" "0,10,90,100"
+	Option "TopX" "-10"
+	Option "TopY" "-20"
+	Option "BottomX" "14720"
+	Option "BottomY" "9200"
 EndSection
 
 Section "InputClass"
 	Identifier "Wacom Bamboo eraser options"
-	MatchDriver "wacom"
-	MatchProduct "eraser"
+        MatchDriver "wacom"
+        MatchProduct "eraser"
 
-	# Apply custom Options to this device below.
+        # Apply custom Options to this device below.
+	Option "RawSample" "20"
 	Option "PressCurve" "5,0,100,95"
+	Option "TopX" "-10"
+	Option "TopY" "-20"
+	Option "BottomX" "14720"
+	Option "BottomY" "9200"
 EndSection
 
 Section "InputClass"
-	Identifier "Wacom Bamboo cursor options"
-	MatchDriver "wacom"
-	MatchProduct "cursor"
+	Identifier "Wacom Bamboo touch options"
+        MatchDriver "wacom"
+        MatchProduct "touch"
 
-	# Apply custom Options to this device below.
-	Option "Button1" "1"
-	Option "Button2" "2"
-	Option "Button3" "3"
+        # Apply custom Options to this device below.
+	Option "ScrollDistance" "18"
+	Option "TapTime" "220"
 EndSection
 
 Section "InputClass"
 	Identifier "Wacom Bamboo pad options"
-	MatchDriver "wacom"
-	MatchProduct "pad"
+        MatchDriver "wacom"
+        MatchProduct "pad"
 
-	# Apply custom Options to this device below.
+        # Apply custom Options to this device below.
 	Option "Button1" "1"
 	Option "Button2" "3"
 	Option "Button3" "2"
 	Option "Button4" "0"
-	Option "AbsWheelUp" "5"
-	Option "AbsWheelDown" "4"
 EndSection
 </pre>
 You would only use the snippets corresponding to the input tools you have, of course.  Clearly if you are plugging in two or more tablets they will have the same Option settings and more specific matches may be required.
