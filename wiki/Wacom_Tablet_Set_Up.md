@@ -172,3 +172,53 @@ Graphical Configuration GUI
 Work is proceeding on a replacement for wacomcpl. See [Graphical
 Configuration
 Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
+
+Pad Physical Button to X Button Transpositions
+----------------------------------------------
+
+The pad or tablet physical button order does not necessarily correspond
+to the button numbers used for xsetwacom commands. You may need to use a
+transposition. This depends on several things including what defaults
+the kernel is reporting and whether xf86-input-wacom is respecting
+Xinput's button mapping. For one example versions of Xinput reserve
+buttons 4, 5, 6, and 7 for vertical and horizontal scroll.
+
+So for some kernels (e.g. 2.6.32 and 2.6.35) you find that while:
+
+    Physical Button 1 = X Button 1
+    Physical Button 2 = X Button 2
+    Physical Button 3 = X Button 3
+
+because of the reserve of 4 through 7 for scroll:
+
+    Physical Button 4 = X Button 8
+
+If you want a *xsetwacom set* command to apply to Button 4 you would
+need to call it Button 8. And this offset of 4 would continue to apply,
+to say an Intuos4, as follows:
+
+    Physical Button 4 = X Button 8
+    Physical Button 5 = X Button 9
+    Physical Button 6 = X Button 10
+    etc.
+
+Keeping in mind for the Intuos4 the button inside the touchring is
+Button 1.
+
+Another example is the BambooPT's button transpostions with the 2.6.38
+kernel due to the changed kernel defaults.
+
+    Physical Button 1 = BTN_RIGHT   = X Button 3
+    Physical Button 2 = BTN_BACK    = X Button 8
+    Physical Button 3 = BTN_FORWARD = X Button 9
+    Physical Button 4 = BTN_LEFT    = X Button 1
+
+The transpositions aren't randomn, although admittedly they may seem
+that way without a pre-existing knowledge of the kernel changes.
+
+Since this also means the *xsetwacom get* command won't return the
+current assigned value, until you have determined the correct button
+number to use, you're in a bit of a circular bind. If you are unable to
+determine what the defaults are set to by testing the buttons, you may
+need to run through the available button numbers starting with 1 to find
+your current transpositions.
