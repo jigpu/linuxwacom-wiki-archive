@@ -293,6 +293,14 @@ System &gt; Preferences &gt; Startup Applications (or your
 distribution's equivalent) and click on Add and for the command write
 "sh /home/yourusername/bin/.xsetwacom.sh" (without the quotes).
 
+#### Script Survival after a Hotplug
+
+Just as the runtime xsetwacom commands do not survive a restart of the
+current session they will not apply after a hotplug event either. You
+could simply rerun the script after the hotplug or you can use another
+solution such as [Wdaemon](/wiki/Wdaemon "wikilink"). The wdaemon tar is
+available on the [Downloads](/wiki/Downloads "wikilink") page.
+
 ### Profiles
 
 A *Profile* contains the settings you prefer for an individual program

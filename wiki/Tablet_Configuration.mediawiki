@@ -232,6 +232,9 @@ Place the script in a file called bin/.xsetwacom.sh in your home directory.  You
 
 The . in front of xsetwacom makes it a hidden file.  You don't have to do that although it helps prevent directory clutter.  Then in Gnome go to System > Preferences > Startup Applications (or your distribution's equivalent) and click on Add and for the command write "sh /home/yourusername/bin/.xsetwacom.sh" (without the quotes).
 
+==== Script Survival after a Hotplug ====
+Just as the runtime xsetwacom commands do not survive a restart of the current session they will not apply after a hotplug event either.  You could simply rerun the script after the hotplug or you can use another solution such as [[Wdaemon]].  The wdaemon tar is available on the [[Downloads]] page.
+
 === Profiles ===
 A ''Profile'' contains the settings you prefer for an individual program you use your tablet in.  Usually it consists of modifying the pad button assignments but can also involve changing the PressureCurve or Stylus button assignment or whatever else is useful for a given program.  To select different pad button assignments you should become familiar with the keyboard shortcuts available in the program you are interested in.  For e.g. with Gimp look in ''Edit > Keyboard Shortcuts'' or ''Edit > Preferences > Interface > Configure Keyboard Shortcuts''.  For Inkscape it's ''Help > Keys and Mouse reference'' which takes you to the keyboard shortcuts online.  Some of the pad sections above contained possible Gimp and Inkscape button assignments.
 
