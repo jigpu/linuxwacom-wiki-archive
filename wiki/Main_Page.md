@@ -11,18 +11,23 @@ old website is still available
 [here](http://linuxwacom.sourceforge.net/index_old.php).
 
 </div>
-Our sourceforge project page can be found at
-<https://sourceforge.net/projects/linuxwacom>.
-
-The Linux Wacom Project
-=======================
-
-The Linux Wacom Project manages the drivers, libraries, and
+**The Linux Wacom Project** manages the drivers, libraries, and
 documentation for configuring and running Wacom tablets under the Linux
-operating system. For your tablet to work, you need two pieces:
+operating system.
 
--   **kernel drivers:** The kernel driver converts the hardware-specific
-    protocol (serial or USB) into the standard kernel events. These
+|                                                                     |                       |                                                            |                          |                                         |                                   |
+|---------------------------------------------------------------------|-----------------------|------------------------------------------------------------|--------------------------|-----------------------------------------|-----------------------------------|
+| \[\[<File:Document-save.png>                                        | link=Downloads\]\]    | \[\[<File:Help-browser.png>                                | link=:Category:HOWTO\]\] | \[\[<File:Applications-development.png> | link=:Category:DeveloperPages\]\] |
+| \[\[Downloads                                                       | Get the Drivers\]\]   | \[\[Category%3AHOWTO                                       | HOWTOs\]\]               | \[\[Category%3ADeveloperPages           | Developer Pages\]\]               |
+| [Legacy Drivers](http://sourceforge.net/projects/linuxwacom/files/) | [FAQ](/wiki/FAQ "wikilink") | [Trackers](http://sourceforge.net/tracker/?group_id=69596) |                          |                                         |                                   |
+|                                                                     | \[\[:Mailing lists    | Mailing List\]\]                                           |                          |                                         |                                   |
+|                                                                     | [IRC](/wiki/IRC "wikilink") |                                                            |                          |                                         |                                   |
+
+For your tablet to work, two pieces are required. Both of these pieces
+are available through this project:
+
+-   **Kernel Driver:** The kernel driver converts the hardware-specific
+    protocol (serial or USB) into standard kernel input events. These
     events can then easily be read by user-space applications without
     requiring (too much) hardware-specific knowledge. We try to upstream
     our kernel drivers as quickly as possible and hence these drivers
@@ -32,7 +37,7 @@ operating system. For your tablet to work, you need two pieces:
 
 <!-- -->
 
--   **[X.Org X11](http://www.x.org) driver:** The X driver splits the
+-   **[X.Org X11](http://www.x.org) Driver:** The X driver splits the
     device into multiple subdevices, usually one for the stylus, one for
     the eraser, one for touch, etc. These devices then allow
     applications like the [GIMP](http://www.gimp.org) to access extended
@@ -42,61 +47,15 @@ operating system. For your tablet to work, you need two pieces:
     are stuck with an old X server), please see our
     [Downloads](/wiki/Downloads "wikilink") page for other options.
 
+Legacy [linuxwacom](linuxwacom "wikilink") drivers are still maintained,
+but have been phased out in preference of the new
+[xf86-input-wacom](xf86-input-wacom "wikilink") and upstream kernel
+drivers. Help for legacy drivers may be found
+[here](/wiki/Category%3ALinuxwacom "wikilink"). If you run a modern
+distribution, you will not need this.
+
 For more information about the bits and pieces provided, read the
-[History of the Linux Wacom Project](/wiki/History "wikilink")
-
-Downloads
----------
-
-For a list of files available, please visit the
-[Downloads](/wiki/Downloads "wikilink") page.
-
-User help
----------
-
-Click **[here](/wiki/Category%3AHOWTO "wikilink")** for a list of
-**[HOWTOs](/wiki/Category%3AHOWTO "wikilink")**.
-
-HOWTOs that apply to the legacy [linuxwacom](linuxwacom "wikilink")
-driver and [tarballs](http://sourceforge.net/projects/linuxwacom/files/)
-are available separately **[here](/wiki/Category%3ALinuxwacom "wikilink")**.
-If you run a modern distribution, you will not need this.
-
-The most commonly asked questions and the best answers available to date
-are in the **[FAQ](/wiki/FAQ "wikilink")**. If you still have problem, please
-check [Trackers](http://sourceforge.net/tracker/?group_id=69596) to see
-if someone else has reported the issue or has a patch for the problem.
-
-Mailing lists
--------------
-
-IRC
----
-
-The official linuxwacom [IRC](/wiki/IRC "wikilink") channel is
-**\#linuxwacom** on **irc.freenode.net**. It is recommended if you ask
-questions there that you also ask them on the mailing list. Please be
-patient if you ask a question on IRC. People are not always watching the
-channel.
-
-Development
------------
-
-Please see the [DeveloperPages](/wiki/Category%3ADeveloperPages "wikilink")
-for development-related information.
+[History of the Linux Wacom Project](/wiki/History "wikilink").
 
 News
 ----
-
-FAQ
----
-
-Please see the **[FAQ](/wiki/FAQ "wikilink")** for more details.
-
-Editing the wiki
-----------------
-
-If you want to edit this wiki, please create a user account and email
-*peter.hutterer at who-t net* to be assigned editor rights. User rights
-management is unfortunately manual. When editing, please follow the
-[WikiEditingGuidelines](/wiki/WikiEditingGuidelines "wikilink").
