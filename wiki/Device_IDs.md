@@ -20,7 +20,7 @@ tags:
 | Bamboo P & T (penabled with 2FGT or 4FGT)          | 0xD1, 0xD2, 0xD3, 0xD6, 0xD7, 0xD8, 0xDA, 0xDB. 3&4FGT for 0xDA & 0xDB not supported.                               |
 | TabletPC (penabled and no touch, no mouse)         | 0x90                                                                                                                |
 | TabletPC (penabled with 1FGT, no mouse)            | 0x93, 0x9A                                                                                                          |
-| TabletPC ( penabled with 2FGT)                     | 0xE2                                                                                                                |
+| TabletPC ( penabled with 2FGT)                     | 0xE2, 0xE6                                                                                                          |
 | TabletPC (2FGT only)                               | 0xE3                                                                                                                |
 | Protocol 5 series                                  |                                                                                                                     |
 | Intuos                                             | 0x20, 0x21, 0x22, 0x23, 0x24                                                                                        |

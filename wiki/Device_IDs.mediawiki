@@ -42,7 +42,7 @@
 | 0x93, 0x9A
 |-
 | TabletPC ( penabled with 2FGT)
-| 0xE2
+| 0xE2, 0xE6
 |-
 | TabletPC (2FGT only)
 | 0xE3
