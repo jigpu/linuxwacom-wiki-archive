@@ -24,6 +24,15 @@ Example xorg.conf
 Each device type (stylus, erasor, etc.) needs to be added as a separate
 InputDevice section and will appear as its own input device in X.
 
+The usb symlinks `/dev/input/wacom` and `/dev/input/wacom-touch` will
+only work if you have the correct wacom.rules file in your
+distribution's appropriate udev rules.d directory. See "Updated wacom.c"
+in [USB Kernel driver](/wiki/USB_Kernel_driver "wikilink").
+
+**NOTE: `Option "ForceDevice" "ISDV4"` was deprecated starting with
+xf86-input-wacom-0.10.8.** You can remove it from your xorg.conf
+sections if using 0.10.8 or later.
+
     Section "InputDevice"
       Driver        "wacom"
       Identifier    "stylus"
