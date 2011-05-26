@@ -4,49 +4,47 @@ permalink: wiki/Linuxwacom/
 layout: wiki
 ---
 
-linuxwacom is a combined kernel + X driver package for X servers up to
-including 1.6. Note that the kernel patches provided here are backports,
-including new device support for kernels. If you run a reasonably modern
-desktop distribution, you do not need the linuxwacom tarballs. A
-separate package for distributions with X servers 1.7 and backports for
-older kernels is available with [input-wacom](input-wacom "wikilink").
+**linuxwacom** is a legacy driver package containing both an X driver
+and Linux kernel driver. It supports X servers from 1.4 to 1.6 and
+provides backports for Linux kernels from 2.6.16 to 2.6.25. **If you run
+a reasonably modern desktop distribution, you do not need this
+package.** All linuxwacom-related pages can be found in this wiki's
+[linuxwacom category](/wiki/Category%3ALinuxwacom "wikilink").
 
-All linuxwacom-related pages are compiled in the
-[Category%3ALinuxwacom](/wiki/Category%3ALinuxwacom "wikilink").
+Getting the Source
+------------------
 
-Download
---------
+linuxwacom provides two types of packages - stable and development
+versions. Please download the latest release from the [sourceforge
+download section](https://sourceforge.net/projects/linuxwacom/files/)
+and unpack it with:
 
-Please download the latest release from the [sourceforge download
-section](https://sourceforge.net/projects/linuxwacom/files/). linuxwacom
-provides two types of packages - stable and development versions.
+    tar jxf linuxwacom-<version number>.tar.bz2
+    cd linuxwacom-<version number>
 
 Building the code
 -----------------
 
-In the following, you need to replace the version number with the one
-from your downloaded tarball.
+Once you have the package downloaded, you can build it with the commands
+below. A more exhaustive description of the build process is avaiable in
+[building linuxwacom](building_linuxwacom "wikilink").
 
-    tar jxf linuxwacom-0.8.4-4.tar.bz2
-    cd linuxwacom-0.8.4-4
+The `--enable-wacom` flag enables the build of the wacom kernel driver;
+if you do not want to build it, simply leave out this flag. The prefix
+of /usr is correct on most distributions (unfortunately, the default is
+still /usr/local which isn't used widely anymore).
+
     ./configure --prefix=/usr --enable-wacom
-    make && sudo make install
+    make
+    make install   # may require sudo/root
 
---enable-wacom enables the build of the wacom kernel driver. If you do
-not want to build it, simply leave out this flag. The prefix of /usr is
-correct on most distributions (unfortunately, the default is still
-/usr/local which isn't used widely anymore).
-
-A more exhaustive description of the build process is avaiable in
-[Building linuxwacom](/wiki/Building_linuxwacom "wikilink").
-
-linuxwacom xdrv
----------------
+linuxwacom X Driver
+-------------------
 
 The linuxwacom tarball includes an X driver for X servers up to
 including the 1.6.x series. For newer X servers, please use
-[xf86-input-wacom](xf86-input-wacom "wikilink") instead, the linuxwacom
+[xf86-input-wacom](xf86-input-wacom "wikilink") instead: the linuxwacom
 X driver will not build. Note that if you run a kernel that requires
 linuxwacom backports, you may still do so. Install the kernel patches
-provided in the tarball and the
+provided in the tarball and then the
 [xf86-input-wacom](xf86-input-wacom "wikilink") X driver.
