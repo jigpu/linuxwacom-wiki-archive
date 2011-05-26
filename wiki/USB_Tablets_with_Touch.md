@@ -125,9 +125,9 @@ match is made to Pen and Finger rather than stylus and touch.
 
 ### xorg.conf
 
-See [Manual setup in the
-xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink") for
-further explanation.
+See [Static xorg.conf
+Setup](/wiki/Configuring_X#Static_xorg.conf_Setup "wikilink") for further
+explanation.
 
     Section "InputDevice"
       Driver        "wacom"

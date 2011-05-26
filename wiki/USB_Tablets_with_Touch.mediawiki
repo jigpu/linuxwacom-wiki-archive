@@ -92,7 +92,7 @@ EndSection
 </pre>
 
 === xorg.conf ===
-See [[Configuring X#Manual setup in the xorg.conf|Manual setup in the xorg.conf]] for further explanation.
+See [[Configuring X#Static xorg.conf Setup|Static xorg.conf Setup]] for further explanation.
 <pre>
 Section "InputDevice"
   Driver        "wacom"
