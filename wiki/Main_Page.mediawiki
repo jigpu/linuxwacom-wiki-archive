@@ -29,15 +29,5 @@ During the transition period, the old website is still available
 |
 |}
 
-For your tablet to work, two pieces are required. Both of these pieces are available through this project:
-
-* '''Kernel Driver:''' The kernel driver converts the hardware-specific protocol (serial or USB) into standard kernel input events. These events can then easily be read by user-space applications without requiring (too much) hardware-specific knowledge. We try to upstream our kernel drivers as quickly as possible and hence these drivers are usually included in your distribution kernel. We have alternative kernel patches available for those that are bound to a specific kernel version (see [[Downloads]]).
-
-* '''[http://www.x.org X.Org X11] Driver:''' The X driver splits the device into multiple subdevices, usually one for the stylus, one for the eraser, one for touch, etc. These devices then allow applications like the [http://www.gimp.org GIMP] to access extended functionality like pressure and high-resolution coordinates. The [[xf86-input-wacom | X drivers]] are released often and usually packaged by distributions. If you require a newer version (or you are stuck with an old X server), please see our [[Downloads]] page for other options.
-
-Legacy [[linuxwacom]] drivers are still maintained, but have been phased out in preference of the new [[xf86-input-wacom]] and upstream kernel drivers. Help for legacy drivers may be found [[:Category:Linuxwacom|here]]. If you run a modern distribution, you will not need this.
-
-For more information about the bits and pieces provided, read the [[History|History of the Linux Wacom Project]].
-
 == News ==
 {{:News}}

@@ -23,39 +23,5 @@ operating system.
 |                                                                     | \[\[:Mailing lists    | Mailing List\]\]                                           |                          |                                         |                                   |
 |                                                                     | [IRC](/wiki/IRC "wikilink") |                                                            |                          |                                         |                                   |
 
-For your tablet to work, two pieces are required. Both of these pieces
-are available through this project:
-
--   **Kernel Driver:** The kernel driver converts the hardware-specific
-    protocol (serial or USB) into standard kernel input events. These
-    events can then easily be read by user-space applications without
-    requiring (too much) hardware-specific knowledge. We try to upstream
-    our kernel drivers as quickly as possible and hence these drivers
-    are usually included in your distribution kernel. We have
-    alternative kernel patches available for those that are bound to a
-    specific kernel version (see [Downloads](/wiki/Downloads "wikilink")).
-
-<!-- -->
-
--   **[X.Org X11](http://www.x.org) Driver:** The X driver splits the
-    device into multiple subdevices, usually one for the stylus, one for
-    the eraser, one for touch, etc. These devices then allow
-    applications like the [GIMP](http://www.gimp.org) to access extended
-    functionality like pressure and high-resolution coordinates. The [ X
-    drivers](xf86-input-wacom "wikilink") are released often and usually
-    packaged by distributions. If you require a newer version (or you
-    are stuck with an old X server), please see our
-    [Downloads](/wiki/Downloads "wikilink") page for other options.
-
-Legacy [linuxwacom](linuxwacom "wikilink") drivers are still maintained,
-but have been phased out in preference of the new
-[xf86-input-wacom](xf86-input-wacom "wikilink") and upstream kernel
-drivers. Help for legacy drivers may be found
-[here](/wiki/Category%3ALinuxwacom "wikilink"). If you run a modern
-distribution, you will not need this.
-
-For more information about the bits and pieces provided, read the
-[History of the Linux Wacom Project](/wiki/History "wikilink").
-
 News
 ----
