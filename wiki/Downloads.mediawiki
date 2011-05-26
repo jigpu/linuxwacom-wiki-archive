@@ -1,18 +1,49 @@
 [[Category:HOWTO]]
 
-Please read our [[History]] first for a better understanding of the difference between [[linuxwacom]] and [[xf86-input-wacom]]. We also have a list of [[Supported Devices]]. Distributions usually already ship a version of [[xf86-input-wacom]] in their repositories. Kernel patches for Wacom devices, if they have been submitted upstream, will also usually feed back into your distribution's kernel.
-
-All downloads are available through our [http://sourceforge.net/projects/linuxwacom/files/ Sourceforge page].
+For your tablet to work, two pieces are needed: a '''kernel driver''' and a '''X11 driver'''. Please read our [[History]] for a better understanding of the difference between [[xf86-input-wacom]] and the legacy [[linuxwacom]].
 
 {{Tip|text=On modern desktop distributions, you do '''not''' need the kernel or X drivers in the linuxwacom tarball.}}
 
 = Kernel drivers =
-* [[input-wacom]], kernel backports for kernels 2.6.30 and 2.6.36:  http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/input-wacom/
-* [[linuxwacom]], kernel backports for kernels 2.6.16, 2.6.18, 2.6.24, and 2.6.30: http://sourceforge.net/projects/linuxwacom/files/linuxwacom/
+Our patches to support Wacom devices are provided upstream to the Linux kernel developers. These changes will usually feed back into your distribution's kernel. We recommend that you first try to update your kernel through your distribution's mechanisms. If you already have the newest kernel available for your distribution, backported kernel drivers are below.
+
+To determine your kernel version, open a terminal and run the following command: <code>uname -r</code>
+
+{| border="1" cellpadding="2"
+|-
+! Linux Kernel
+! Download
+|-
+| 2.6.37 - CURRENT
+| Please update through your distribution.
+|-
+| 2.6.26 - 2.6.36
+| [[input-wacom]]
+|-
+| 2.6.16 - 2.6.25
+| [[linuxwacom]]
+|}
 
 = X drivers =
-* [[xf86-input-wacom]] for X servers 1.7 and later: http://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/
-* [[linuxwacom]] for X servers up to 1.6: http://sourceforge.net/projects/linuxwacom/files/linuxwacom/
+Distributions usually already ship a version of the X11 driver in their repositories. We recommend that you first try to update through your distribution's mechanisms. If you require an even more up-to-date version, the latest X11 drivers are below.
 
-= wdaemon =
-* [[wdaemon]]: http://sourceforge.net/projects/linuxwacom/files/wdaemon
+To determine your XOrg server version, open a terminal and run the following command: <code>X -version</code>
+
+{| border="1" cellpadding="2"
+|-
+! XOrg Server
+! Download
+|-
+| 1.7 - CURRENT
+| [[xf86-input-wacom]]
+|-
+| 1.4 - 1.6
+| [[linuxwacom]]
+|}
+
+= Miscellaneous =
+The following links may be of interest to some users. Please be aware that some links may be to projects which are neither developed nor supported by the Linux Wacom Project.
+
+* [[wdaemon]]: Linux Wacom Hotplug Daemon
+* [http://hub.opensolaris.org/bin/view/Community+Group+device_drivers/wacomtablet OpenSolaris STREAMS module]
+* [http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309 Wacom Control Panel]
