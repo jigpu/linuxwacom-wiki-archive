@@ -15,6 +15,12 @@ better understanding of the difference between
 Kernel drivers
 ==============
 
+The kernel driver is responsible for understanding hardware-specific
+protocols and translating their data into standard kernel input events.
+These events can then easily be read by user-space applications (such as
+our X11 driver, or [evtest](evtest "wikilink")) without requiring much
+hardware-specific knowledge.
+
 Our patches to support Wacom devices are provided upstream to the Linux
 kernel developers. These changes will usually feed back into your
 distribution's kernel. We recommend that you first try to update your
@@ -31,8 +37,16 @@ command: `uname -r`
 | 2.6.26 - 2.6.36  | [input-wacom](input-wacom "wikilink")    |
 | 2.6.16 - 2.6.25  | [linuxwacom](linuxwacom "wikilink")      |
 
-X drivers
-=========
+X11 drivers
+===========
+
+The X driver is responsible for translating the input events generated
+by the kernel driver into XInput events that the X server can understand
+and relay to running applications. It is also responsible for
+virtualizing the single hardware device to appear as multiple logical
+devices (e.g. stylus, eraser, touch). This grants applications like GIMP
+access to extended functionality like pressure and high-resolution
+coordinates.
 
 Distributions usually already ship a version of the X11 driver in their
 repositories. We recommend that you first try to update through your
