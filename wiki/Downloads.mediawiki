@@ -1,6 +1,6 @@
 [[Category:HOWTO]]
 
-For your tablet to work, two pieces are needed: a '''kernel driver''' and a '''X11 driver'''. Please read our [[History]] for a better understanding of the difference between [[xf86-input-wacom]] and the legacy [[linuxwacom]].
+For your tablet to work, two pieces are needed: a '''kernel driver''' and a '''X11 driver'''. Please read our [[history]] for a better understanding of the difference between [[xf86-input-wacom]] and the legacy [[linuxwacom]].
 
 {{Tip|text=On modern desktop distributions, you do '''not''' need the kernel or X drivers in the linuxwacom tarball.}}
 

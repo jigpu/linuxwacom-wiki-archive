@@ -7,7 +7,7 @@ tags:
 ---
 
 For your tablet to work, two pieces are needed: a **kernel driver** and
-a **X11 driver**. Please read our [History](/wiki/History "wikilink") for a
+a **X11 driver**. Please read our [history](history "wikilink") for a
 better understanding of the difference between
 [xf86-input-wacom](xf86-input-wacom "wikilink") and the legacy
 [linuxwacom](linuxwacom "wikilink").
