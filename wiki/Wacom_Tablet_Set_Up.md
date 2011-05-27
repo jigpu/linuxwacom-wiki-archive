@@ -18,7 +18,7 @@ configuration set according to your liking. The tablet's initial
 configuration is dictated by configuration files, and may be changed
 on-the-fly with configuration utilities.
 
-### Initial Configuration
+### Default Configuration
 
 Under a modern X server using udev for hotplugging,
 [xorg.conf.d](xorg.conf.d "wikilink") is responsible for defining a
