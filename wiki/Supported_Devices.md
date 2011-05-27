@@ -4,7 +4,8 @@ permalink: wiki/Supported_Devices/
 layout: wiki
 ---
 
-Devices supported by the Linux Wacom Project:
+Devices supported by the Linux Wacom Project are listed below. See the
+[Device IDs](/wiki/Device_IDs "wikilink") page for additional detail.
 
 <b>Serial devices:</b>
 
