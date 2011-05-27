@@ -1,24 +1,33 @@
-__TOC__
-This page is a list of external applications that interface with the wacom driver in one way or another.
+This page is a list of external applications that can make use of Wacom tablets or TabletPCs under Linux. Please keep this list short and representitive of the best programs in their respective fields.
 
-= Utilities =
-== CellWriter ==
-CellWriter is a grid-entry natural handwriting input panel. As you write characters into the cells, your writing is instantly recognized at the character level. When you press Enter on the panel, the input you entered is sent to the currently focused application as if typed on the keyboard.  It also toggles to an on-screen keyboard.  You distribution should offer it in its package manager.  Located at:  http://risujin.org/cellwriter/  and at:  http://code.google.com/p/cellwriter/
+== Graphics ==
+* '''[http://www.gimp.org/ GIMP]''': A freely distributed program for such tasks as photo retouching, image composition and image authoring. Brushes support pressure, tilt, and rotation.
 
-== Magick Rotation ==
-Magick Rotation is a Python GTK app. that supports automatic rotation for Dell, HP, and Lenovo tablet PCs.  It's located on Launchpad at:  https://launchpad.net/magick-rotation
+* '''[http://inkscape.org/ Inkscape]''': A vector graphics editor with capabilities similar to Illustrator, CorelDraw, or Xara X. Calligraphy tool supports pressure and tilt.
 
-== xinput_calibrator ==
-The xinput_calibrator is a generic touchscreen calibration program for X.Org.  It's located at freedesktop.org:  http://www.freedesktop.org/wiki/Software/xinput_calibrator
+== Handwriting ==
+* '''[http://code.google.com/p/cellwriter/ CellWriter]''': A grid-entry natural handwriting input panel. As you write characters into the cells, your writing is instantly recognized at the character level. When you press Enter on the panel, the input you entered is sent to the currently focused application as if typed on the keyboard.  It also toggles to an on-screen keyboard.  Also available at [http://risujin.org/cellwriter/]
 
-= Graphical Configuration Tools =
-== GNOME ==
-* [http://git.gnome.org/browse/gnome-settings-daemon/commit/?id=9863ccf9d99fdd712778b31197365723b9caa0behttp://git.gnome.org/browse/gnome-settings-daemon/commit/?id=9863ccf9d99fdd712778b31197365723b9caa0be gnome-settings-daemon] already supports several wacom-related [http://library.gnome.org/devel/gio/2.25/GSettings.html gsettings] keys for configuration. This includes hotplugging support so that the configuration options are applied both after login and whenever a tablet is plugged in.
+* '''[http://xournal.sourceforge.net/ Xournal]''': An application for notetaking, sketching, or keeping a journal using a stylus.
 
-* A [http://git.gnome.org/browse/gnome-control-center GNOME control-center] applet is currently under development. See [https://bugzilla.gnome.org/show_bug.cgi?id=640981 GNOME Bug 640981].
+* '''[http://jarnal.wikispaces.com/ jarnal]''': An application for individual or collaborative notetaking, sketching, etc.
 
-== wacomcpl ==
-wacomcpl was a Tcl/Tk-based GUI tool shipped as part of the [[linuxwacom]] tarball. It is now unsupported and '''does not work''' with [[xf86-input-wacom]]. The design of wacomcpl is not suited to hotplugging and it will not be updated. Since wacomcpl does not integrate with any desktop environment, any work on wacomcpl is a dead end. '''Do not work on wacomcpl, invest your efforts on integrating wacom support in your desktop environment instead.'''
+== Utilities ==
+=== Graphical Configuration Tools ===
+* '''[http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309 Wacom Control Panel]''': This utility allows you to automatically detect and configure a wide range of wacom products. Automatically remembers and reapplies settings on startup.
 
+* '''[http://git.gnome.org/browse/gnome-control-center gnome-control-center]''': An applet to support tablet configuration from the GNOME control center is under development. See [https://bugzilla.gnome.org/show_bug.cgi?id=640981 GNOME Bug 640981].
+
+* '''wacomcpl''': A Tcl/Tk-based GUI tool shipped as part of the [[linuxwacom]] tarball. It is now unsupported and '''does not work''' with [[xf86-input-wacom]]. The design of wacomcpl is not suited to hotplugging and it will not be updated. Since wacomcpl does not integrate with any desktop environment, any work on wacomcpl is a dead end. '''Do not work on wacomcpl, invest your efforts on integrating wacom support in your desktop environment instead.'''
+
+=== Other Utilities ===
+* '''[https://launchpad.net/magick-rotation Magick Rotation]''': An application that will help Dell, HP, and Lenovo tablet pc's automatically rotate screen orientation and devices that use the Wacom or evdev drivers.
+
+* '''[http://www.freedesktop.org/wiki/Software/xinput_calibrator xinput_calibrator]''': A generic touchscreen calibration program for X.Org.
+
+* '''[https://sourceforge.net/apps/trac/easystroke/ easystroke]''': A gesture-recognition application for X11. Gestures can be made to emulate key presses, execute shell commands, hold down modifiers and emulate a scroll wheel.
+
+== Libraries / Toolkits / Frameworks ==
+* '''[http://git.gnome.org/browse/gnome-settings-daemon/commit/?id=9863ccf9d99fdd712778b31197365723b9caa0behttp://git.gnome.org/browse/gnome-settings-daemon/commit/?id=9863ccf9d99fdd712778b31197365723b9caa0be gnome-settings-daemon]''' already supports several wacom-related [http://library.gnome.org/devel/gio/2.25/GSettings.html gsettings] keys for configuration. This includes hotplugging support so that the configuration options are applied both after login and whenever a tablet is plugged in.
 
 [[Category:HOWTO]]
