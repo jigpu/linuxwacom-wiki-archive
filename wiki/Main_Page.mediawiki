@@ -16,7 +16,7 @@ During the transition period, the old website is still available
 | [[FAQ]]
 | [https://sourceforge.net/tracker/?atid=525124&group_id=69596 Submit A Bug Report]
 |-
-| [[Wacom Tablet Set Up|Configure Your Tablet]]
+| [[Wacom Tablet Set Up|Set-Up Your Tablet]]
 | [[:Category:HOWTO|HOWTOs]]
 | [[:Category:DeveloperPages|Get Involved]]
 |-
