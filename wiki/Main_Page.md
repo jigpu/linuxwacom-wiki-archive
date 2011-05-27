@@ -13,7 +13,9 @@ old website is still available
 </div>
 **The Linux Wacom Project** manages the drivers, libraries, and
 documentation for configuring and running Wacom tablets under the Linux
-operating system.
+operating system. Our drivers are included in several major
+distributions and provide out-of-the box support for a wide variety of
+Wacom tablets and TabletPCs.
 
 |                              |                        |                             |                                                                                    |                                                     |                                   |
 |------------------------------|------------------------|-----------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------|-----------------------------------|
