@@ -1,3 +1,4 @@
+__TOC__
 A guide to configuring your system so that X can detect the devices.
 
 == Hotplugging Setup ==
