@@ -1,3 +1,4 @@
+__TOC__
 This page is a list of external applications that can make use of Wacom tablets or TabletPCs under Linux. Please keep this list short and representitive of the best programs in their respective fields.
 
 == Graphics ==
