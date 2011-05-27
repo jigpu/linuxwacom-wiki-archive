@@ -1,23 +1,35 @@
-__TOC__
-This page is for general tablet issues & tips as well as model specific issues & tips.
+This page details the general process of setting up your tablet to your needs. Many of the steps will have links to more detailed instructions if you are interested in knowing more.
 
-The LWP project welcomes additions to its mediawiki so please join in if you have contributions.
+== Configuration of Your Tablet ==
+The first step in setting up your tablet is to get the general configuration set according to your liking. The tablet's initial configuration is dictated by configuration files, and may be changed on-the-fly with configuration utilities.
 
-Be aware the Wacom drivers are rapidly evolving and some of this information may become dated.  If so feel free to update and correct the mediawiki.
+=== Initial Configuration ===
+Under a modern X server using udev for hotplugging, [[xorg.conf.d]] is responsible for defining a tablet's default settings. Older servers may use [[HAL]], and in rare cases an [[xorg.conf]] file is necessary. Regardless of which backend performs the setup, these are the ideal place to set system-wide defaults. For example, one could adjust the default rotation property for a Cintiq or TabletPC which is often used in a particular orentation. Perhaps you have a lot of electromagnetic interference near your workstation and feel that increasing the default "Suppress" value for all tablets would be useful. Developers may prefer to have debug information turned up by default, in order to log the events which occur as X starts up.
 
-== Bamboo Pen & Touch ==
-In October of 2009 Wacom released a new series of 5 tablets we'll call generically the Bamboo Pen & Touch's.  The Bamboo Pen had a stylus (with no eraser), the Bamboo Touch had 2FG touch only, and the Bamboo Pen & Touch's came with a stylus/eraser and touch(2FG)/pad(4 tablet buttons).  This was followed in October of 2010 by the release of 5 new Bamboo Pen & Touch's with two of them being "Special Editions" with 4FGT.
+=== Run-Time Configuration ===
+Our driver includes the command-line driven [[xsetwacom]] utility which is capable of modifying the configuration of your tablet on-the-fly. This can be useful for allowing per-user settings, temporarily adjusting the current settings, or gaining an understanding of how particular options affect the tablet's operation.
 
-To determine your product ID enter in a terminal 'lsusb' and look in the Wacom line.  The first 5 models are the 0xD0, 0xD1, 0xD2, 0xD3, & 0xD4.  The new models are the 0xD6, 0xD7, 0xD8, 0xDA, & 0xDB.  See [[Device IDs]].
+For example, suppose you wish to have the ExpressKeys perform certian keyboard actions to make image manipulation in GIMP easier. Your particular preference for ExpressKey behavior may not be the same as another user using the same workstation. By calling xsetwacom in a login script, you can customize the system-wide defaults to your own liking. As another example, suppose that you feel GIMP's paintbrush needs a more-firm feel and the airbrush a less-firm feel. By using xsetwacom, you can change the PressureCurve property of your stylus on-the-fly as you swap back and forth between paintbrush and airbrush.
 
-=== Setup ===
-Depending on your distribution's kernel the 5 original models may not be recognized because the default wacom.ko with the kernel may not have the models in it.  If your distribution has not backported support, and has no plans to do so, it probably is a better idea to wait for a release that supports your tablet.  However if you feel you can't wait and must be able to use your BambooPT now you could use  linuxwacom-0.8.8-10's wacom.ko as it does have the models in it.  Installing out-of-tree kernel patches is never a good idea, so give this some thought before proceeding.  If you decide to proceed see [[Linuxwacom]].
+=== Application Configuration ===
+[[external applications|Third-party applications]] may also benefit from configuration. For example, some GTK-based applications such as GIMP and Inkscape require that you enable your tablet as an "extended input device" before they will use data like pressure. You may also wish to configure certian tablet buttons to run programs; while xsetwacom is incapable of this, window managers like Compiz may provide the necessary options.
 
-Note the location of the newly compiled wacom.ko will appear in the output after the ./configure line under the ''BUILD OPTIONS:'' header.  Just copy it into place.
+== Dual and Multi-Monitor Set Up ==
+For systems set up with multiple monitors, the X server maps the tablet's area to the entire desktop by default. Oftentimes this is the desired behavior, but in some cases (particularly for TabletPCs or Cintiqs) you will want to have the stylus be mapped to a single output. To do this, X must be notified to change its tablet-to-display mapping. The xsetwacom utility includes a handy "MapToOutput" parameter which allows you to specify which particular output you would like the tablet to be mapped to. To use find the names of available outputs, you can use the <code>xrandr</code> command.
 
-Keeping the cavets about out-of-tree kernel patches mentioned above in mind, the newer 5 models are supported by [[input-wacom]]-0.10.10-2, which has all 10 of the models added.
+While the legacy [[linuxwacom]] driver supports the TwinView extension used by the binary "nvidia" driver, the new [[xf86-input-wacom]] driver relies on RandR and is no longer compatible. While we work on remedying this, it is still possible to manually calculate and notify the X server of the correct tablet-to-display mapping. See [[Dual and Multi-Monitor Set Up]] for additional details.
 
-All 10 models have been added to [[xf86-input-wacom|xf86-input-wacom-0.10.10+]] and later as of January 21, 2011.
+== Calibration of Your Tablet ==
+Calibration is necessary when the pointer on the screen does not coincide with where the input tool is located on the tablet. This is usually most noticeable on screen-mounted tablets (e.g. Tablet PCs or Cintiqs), often after rotation. There can be multiple causes of misalignment, though [http://en.wikipedia.org/wiki/Parallax parallax] from your working position is the most common cause. "Opaque" tablets also may suffer to a less noticible extent when they have a different aspect ratio than the display. This particular kind of miscalibration results in drawn cicles appearing on-screen as ellipses.
+
+The easiest way to calibrate a screen-mounted tablets like a TabletPC or Cintiq is to use the 3rd-party [[external applications|xinput-calibrator]] utility. By tapping the displayed crosshairs while holding your stylus normally and in your normal working position (so the utility can correct for parallax), it will calculate the necessary modifications. It should provide you with a set of four numbers corresponding to the top-left and bottom-right coordinates of the tablet. These numbers can then be fed into xsetwacom's "Area" parameter to be applied.
+
+For opaque tablets suffering from aspect ratio mismatch, you will need to determine the tablet's starting Area from xsetwacom and then calculate the necessary reduction so the Area's aspect ratio matches your desktop. 
+
+See the [[calibration]] page for more information.
+
+== Tablet-Specific Suggestions ==
+Any sort of configuration suggestions which are fairly tablet-specific may appear here.
 
 === Bamboo P&T Touch Toggle Script ===
 Turning touch off helps to avoid accidental input if you touch the tablet when not holding the stylus (it also duplicates the function and button assignment in Windows).
@@ -40,90 +52,8 @@ if [ "$TOUCH_STATE" == "on" ]
     xsetwacom set "$DEVICE" touch on
 fi
 </pre>
-Place the script in a file called ''bin/toggle-touch.sh'' in your home directory. Make the script executable with ''chmod +x $HOME/bin/toggle-touch.sh''. Then you have to make a key binding for it in order to assign it to a tablet button. This depends on your window manager.
 
-=== Compiz ===
-If your window manager is compiz, install the CompizConfig Settings Manager (if you haven't already).
-
-We are attempting the following setup: when you press button 1, you toggle between touch on or off.
-
-The setup for this is a bit roundabout though:
-* configure the tablet to send a key combination when button 1 is pressed.
-* the key combination triggers the window manager to run the script above
-* the script then toggles the button
-
-In the configuration example below, we will use button 1 and the key combination of Ctrl+T. If you chose a different button or key combination, replace the occurances accordingly.
-
-To configure all this, do the following:
-
-* first, configure the tablet to send the key combination
-<pre>
-xsetwacom set "Wacom BambooFun 2FG 4x5 Finger touch" Button1 "key ctrl t"
-</pre>
-* then, in the CompizConfig Settings Manager, click on the General option
-* click on Commands
-* in Command line 0 (or whatever line you want) add the path to toggle-touch.sh, e.g.: ''/home/yourusername/bin/toggle-touch.sh''
-* click on Key Bindings and then to edit the corresponding Run command 0 click on the Disabled button.
-* press the Grab key combination button and then press the key combination
-* tablet button 1 should now toggle the touch between on and off
-
-{{Tip|text=If you are using a xorg.conf the symlink for the Bamboo P&T pad is wacom-touch not wacom.}}
-
-Please also see [[USB Tablets with Touch]] for some configuration idiosyncrasies.
-
-== Intuos4 ==
-
-=== Intuos4 Wireless ===
-Unfortunately the Intuos 4 Wireless is not currently supported by the Bluez stack.  It is not simply a matter of adding the Vendor ID 0x56a and Product ID 0xBD alongside the Graphire Bluetooth Wireless' 0x56a & 0x81.  This is because the Graphire Bluetooth Wireless is a Protocol 4 device (tool serial numbers are not reported) while the Intuos 4 Wireless is Protocol 5 (serial numbers reported).  So code for Protocol 5 support needs to be added to the Bluez stack.  In the meantime you will need to use your usb "charging" cable for your tablet to work in linux.
-
-=== OLED's ===
-Content Pending.
-
-
-== Calibration of Your Tablet ==
-See the [[Calibration|Calibration HOWTO]].
-
-== Configuration of Your Tablet ==
-See [[Tablet Configuration]].
-
-== Dual and Multi-Monitor Set Up ==
-See [[Dual and Multi-Monitor Set Up]].
-
-== Graphical Configuration GUI ==
-Work is proceeding on a replacement for wacomcpl.  See [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
-
-== Pad Physical Button to X Button Transpositions ==
-The pad or tablet physical button order does not necessarily correspond to the button numbers used for xsetwacom commands.  You may need to use a transposition.  This depends on several things including what defaults the kernel is reporting and whether xf86-input-wacom is respecting Xinput's button mapping.  For one example versions of Xinput reserve buttons 4, 5, 6, and 7 for vertical and horizontal scroll.
-
-So for some kernels (e.g. 2.6.32 and 2.6.35) you find that while:
-<pre>
-Physical Button 1 = X Button 1
-Physical Button 2 = X Button 2
-Physical Button 3 = X Button 3
-</pre>
-because of the reserve of 4 through 7 for scroll:
-<pre>
-Physical Button 4 = X Button 8
-</pre>
-If you want a ''xsetwacom set'' command to apply to Button 4 you would need to call it Button 8.  And this offset of 4 would continue to apply, to say an Intuos4, as follows:
-<pre>
-Physical Button 4 = X Button 8
-Physical Button 5 = X Button 9
-Physical Button 6 = X Button 10
-etc.
-</pre>
-Keeping in mind for the Intuos4 the button inside the touchring is Button 1.
-
-Another example is the BambooPT's button transpostions with the 2.6.38 kernel due to the changed kernel defaults.
-<pre>
-Physical Button 1 = BTN_RIGHT   = X Button 3
-Physical Button 2 = BTN_BACK    = X Button 8
-Physical Button 3 = BTN_FORWARD = X Button 9
-Physical Button 4 = BTN_LEFT    = X Button 1
-</pre>
-The transpositions aren't randomn, although admittedly they may seem that way without a pre-existing knowledge of the kernel changes.
-
-Since this also means the ''xsetwacom get'' command won't return the current assigned value, until you have determined the correct button number to use, you're in a bit of a circular bind.  If you are unable to determine what the defaults are set to by testing the buttons, you may need to run through the available button numbers starting with 1 to find your current transpositions.
+Place the script in a file called ''bin/toggle-touch.sh'' in your home directory. Make the script executable with ''chmod +x $HOME/bin/toggle-touch.sh''. By binding a tablet button to execute the script (likely through your window manager) you can easily toggle touch on and off.
 
 
 [[Category:HOWTO]]
