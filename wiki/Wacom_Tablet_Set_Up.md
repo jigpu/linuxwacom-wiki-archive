@@ -58,7 +58,7 @@ you swap back and forth between paintbrush and airbrush.
 benefit from configuration. For example, some GTK-based applications
 such as GIMP and Inkscape require that you enable your tablet as an
 "extended input device" before they will use data like pressure. You may
-also wish to configure certian tablet buttons to run programs; while
+also wish to configure certain tablet buttons to run programs; while
 xsetwacom is incapable of this, window managers like Compiz may provide
 the necessary options.
 
