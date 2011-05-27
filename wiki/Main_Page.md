@@ -15,13 +15,12 @@ old website is still available
 documentation for configuring and running Wacom tablets under the Linux
 operating system.
 
-|                                                                     |                       |                                                            |                          |                                         |                                   |
-|---------------------------------------------------------------------|-----------------------|------------------------------------------------------------|--------------------------|-----------------------------------------|-----------------------------------|
-| \[\[<File:Document-save.png>                                        | link=Downloads\]\]    | \[\[<File:Help-browser.png>                                | link=:Category:HOWTO\]\] | \[\[<File:Applications-development.png> | link=:Category:DeveloperPages\]\] |
-| \[\[Downloads                                                       | Get the Drivers\]\]   | \[\[Category%3AHOWTO                                       | HOWTOs\]\]               | \[\[Category%3ADeveloperPages           | Developer Pages\]\]               |
-| [Legacy Drivers](http://sourceforge.net/projects/linuxwacom/files/) | [FAQ](/wiki/FAQ "wikilink") | [Trackers](http://sourceforge.net/tracker/?group_id=69596) |                          |                                         |                                   |
-|                                                                     | \[\[:Mailing lists    | Mailing List\]\]                                           |                          |                                         |                                   |
-|                                                                     | [IRC](/wiki/IRC "wikilink") |                                                            |                          |                                         |                                   |
+|                              |                           |                             |                                                                                    |                                                     |                                   |
+|------------------------------|---------------------------|-----------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------|-----------------------------------|
+| \[\[<File:Document-save.png> | link=Downloads\]\]        | \[\[<File:Help-browser.png> | link=:Category:HOWTO\]\]                                                           | \[\[<File:Applications-development.png>             | link=:Category:DeveloperPages\]\] |
+| \[\[Downloads                | Get the Drivers\]\]       | [FAQ](/wiki/FAQ "wikilink")       | [Submit A Bug Report](https://sourceforge.net/tracker/?atid=525124&group_id=69596) |                                                     |                                   |
+| \[\[Wacom Tablet Set Up      | Configure Your Tablet\]\] | \[\[Category%3AHOWTO        | HOWTOs\]\]                                                                         | \[\[Category%3ADeveloperPages                       | Get Involved\]\]                  |
+| \[\[external applications    | Find Applications\]\]     | \[\[:Mailing lists          | Mailing List\]\] / [IRC](/wiki/IRC "wikilink")                                           | [Submitting Patches](Submitting_Patches "wikilink") |                                   |
 
 News
 ----

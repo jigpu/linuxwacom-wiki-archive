@@ -13,20 +13,16 @@ During the transition period, the old website is still available
 | [[File:Applications-development.png|link=:Category:DeveloperPages]]
 |-
 | [[Downloads|Get the Drivers]]
-| [[:Category:HOWTO|HOWTOs]]
-| [[:Category:DeveloperPages|Developer Pages]]
-|-
-| [http://sourceforge.net/projects/linuxwacom/files/ Legacy Drivers]
 | [[FAQ]]
-| [http://sourceforge.net/tracker/?group_id=69596 Trackers]
+| [https://sourceforge.net/tracker/?atid=525124&group_id=69596 Submit A Bug Report]
 |-
-|
-| [[:Mailing lists|Mailing List]]
-|
+| [[Wacom Tablet Set Up|Configure Your Tablet]]
+| [[:Category:HOWTO|HOWTOs]]
+| [[:Category:DeveloperPages|Get Involved]]
 |-
-|
-| [[IRC]]
-|
+| [[external applications|Find Applications]]
+| [[:Mailing lists|Mailing List]] / [[IRC]]
+| [[Submitting Patches]]
 |}
 
 == News ==
