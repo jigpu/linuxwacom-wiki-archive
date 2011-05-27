@@ -41,10 +41,8 @@ still /usr/local which isn't used widely anymore).
 linuxwacom X Driver
 -------------------
 
-The linuxwacom tarball includes an X driver for X servers up to
-including the 1.6.x series. For newer X servers, please use
-[xf86-input-wacom](xf86-input-wacom "wikilink") instead: the linuxwacom
-X driver will not build. Note that if you run a kernel that requires
-linuxwacom backports, you may still do so. Install the kernel patches
-provided in the tarball and then the
-[xf86-input-wacom](xf86-input-wacom "wikilink") X driver.
+Building the code with the above instructions will build the X driver if
+it detects you are using a sufficiently old X server. After installing
+the driver, you'll need to restart X by logging out. In addition, it may
+be necessary to configure X before you can use your tablet. See the
+[configuring X](configuring_X "wikilink") page for more information.
