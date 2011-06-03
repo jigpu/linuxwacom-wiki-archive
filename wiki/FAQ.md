@@ -56,7 +56,7 @@ How do I get a xsetwacom configuration to survive a hotplug event?
 
 In order to have your tablet configuration, set by run-time xsetwacom
 commands, survive the use of a KVM switch or other hotplug event the
-Linux Wacom Project hosts [Wdaemon](/wiki/Wdaemon "wikilink"). This is an
+Linux Wacom Project hosts [wdaemon](wdaemon "wikilink"). This is an
 update by Peter Hutterer of the original *wdaemon* by Aristeu Rozanski.
 The original wdaemon is linked at the bottom of the section [Tablet
 Hotplugging](/wiki/Linuxwacom_HOWTO#Hotplugging_the_device "wikilink").
