@@ -39,9 +39,6 @@ Note, tilt is only supported with protocol V tablets, which includes the Intuos 
 == How do I rotate the screen and/or stylus on my tablet pc? ==
 See [[Tablet PC Setup#Screen Rotation|Screen Rotation]].
 
-== How do I set up my Bamboo Pen & Touch? ==
-See [[Wacom Tablet Set Up#Bamboo Pen & Touch|Bamboo Pen & Touch]].
-
 == How do I set up my tablet with Dual or Multi-Monitors? ==
 See [[Dual and Multi-Monitor Set Up]].
 

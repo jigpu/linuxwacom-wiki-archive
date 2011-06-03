@@ -90,12 +90,6 @@ How do I rotate the screen and/or stylus on my tablet pc?
 
 See [Screen Rotation](/wiki/Tablet_PC_Setup#Screen_Rotation "wikilink").
 
-How do I set up my Bamboo Pen & Touch?
---------------------------------------
-
-See [Bamboo Pen &
-Touch](/wiki/Wacom_Tablet_Set_Up#Bamboo_Pen_&_Touch "wikilink").
-
 How do I set up my tablet with Dual or Multi-Monitors?
 ------------------------------------------------------
 
