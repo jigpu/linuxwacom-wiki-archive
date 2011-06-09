@@ -22,8 +22,9 @@ on-the-fly with configuration utilities.
 
 Under a modern X server using udev for hotplugging,
 [xorg.conf.d](xorg.conf.d "wikilink") is responsible for defining a
-tablet's default settings. Older servers may use [HAL](/wiki/HAL "wikilink"),
-and in rare cases an [xorg.conf](xorg.conf "wikilink") file is
+tablet's default settings. Older servers may use
+[HAL](/wiki/Configuring_X#Hotplugging_With_HAL "wikilink"), and in rare cases
+an [xorg.conf](/wiki/Configuring_X#Static_xorg.conf_Setup "wikilink") file is
 necessary. Regardless of which backend performs the setup, these are the
 ideal place to set system-wide defaults. For example, one could adjust
 the default rotation property for a Cintiq or TabletPC which is often
