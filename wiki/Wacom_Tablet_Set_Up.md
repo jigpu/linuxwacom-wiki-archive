@@ -28,7 +28,7 @@ an [xorg.conf](/wiki/Configuring_X#Static_xorg.conf_Setup "wikilink") file is
 necessary. Regardless of which backend performs the setup, these are the
 ideal place to set system-wide defaults. For example, one could adjust
 the default rotation property for a Cintiq or TabletPC which is often
-used in a particular orentation. Perhaps you have a lot of
+used in a particular orientation. Perhaps you have a lot of
 electromagnetic interference near your workstation and feel that
 increasing the default "Suppress" value for all tablets would be useful.
 Developers may prefer to have [debug
