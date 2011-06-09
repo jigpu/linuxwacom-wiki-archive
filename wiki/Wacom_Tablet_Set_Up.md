@@ -31,8 +31,10 @@ the default rotation property for a Cintiq or TabletPC which is often
 used in a particular orentation. Perhaps you have a lot of
 electromagnetic interference near your workstation and feel that
 increasing the default "Suppress" value for all tablets would be useful.
-Developers may prefer to have debug information turned up by default, in
-order to log the events which occur as X starts up.
+Developers may prefer to have [debug
+information](/wiki/Debugging#Enabling_in-driver_debugging_statements "wikilink")
+turned up by default, in order to log the events which occur as X starts
+up.
 
 ### Run-Time Configuration
 
