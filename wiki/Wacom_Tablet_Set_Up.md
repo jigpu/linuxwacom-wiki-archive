@@ -45,7 +45,7 @@ allowing per-user settings, temporarily adjusting the current settings,
 or gaining an understanding of how particular options affect the
 tablet's operation.
 
-For example, suppose you wish to have the ExpressKeys perform certian
+For example, suppose you wish to have the ExpressKeys perform certain
 keyboard actions to make image manipulation in GIMP easier. Your
 particular preference for ExpressKey behavior may not be the same as
 another user using the same workstation. By calling xsetwacom in a login
