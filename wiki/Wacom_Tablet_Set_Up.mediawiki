@@ -1,3 +1,4 @@
+__TOC__
 This page details the general process of setting up your tablet to your needs. Many of the steps will have links to more detailed instructions if you are interested in knowing more.
 
 == Configuration of Your Tablet ==
