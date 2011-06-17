@@ -293,13 +293,13 @@ again.
 
 2. When the "configure" step succeeds, continue to the next steps. Type:
 
-`     ./make`  
+`     make`  
 `      `
 
 3. This will create the actual installer using the configuration from
 the previous step. Type:
 
-`     ./make install`  
+`     make install`  
 `      `  
 `     This will install the driver.`  
 `      `
