@@ -186,3 +186,6 @@ The previous text is the print out of the lspci command showing my Lava DSerial-
 </pre>
 
 The above examples should give you an idea of how to check and modify the serial port values regardless of which distribution of linux you are using. If the values are correct, matching the information given in the BIOS, or the information printed by programs such as lspci, you can check this section off the list, moving on.
+
+
+[[Category:Linuxwacom]]

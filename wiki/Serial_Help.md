@@ -2,6 +2,8 @@
 title: Serial Help
 permalink: wiki/Serial_Help/
 layout: wiki
+tags:
+ - Linuxwacom
 ---
 
 ### Scope
