@@ -146,9 +146,9 @@ below, will need to be added to the existing ServerLayout section.
     EndSection
 
     Section "ServerLayout"
-            InputDevice     "stylus" 
-            InputDevice     "eraser" 
-            InputDevice     "cursor" 
+            InputDevice     "stylus"        "SendCoreEvents"
+            InputDevice     "eraser"        "SendCoreEvents"
+            InputDevice     "cursor"        "SendCoreEvents"
     EndSection
 
 ### Serial Port Configuration

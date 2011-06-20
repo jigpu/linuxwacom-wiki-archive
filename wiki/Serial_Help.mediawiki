@@ -104,9 +104,9 @@ Section "InputDevice"
 EndSection
 
 Section "ServerLayout"
-        InputDevice     "stylus" 
-        InputDevice     "eraser" 
-        InputDevice     "cursor" 
+        InputDevice     "stylus"        "SendCoreEvents"
+        InputDevice     "eraser"        "SendCoreEvents"
+        InputDevice     "cursor"        "SendCoreEvents"
 EndSection
 </pre>
 
