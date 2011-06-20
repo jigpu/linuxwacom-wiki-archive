@@ -223,6 +223,10 @@ If you are interested, the following tables contain the package contents and rel
 {|
 ! File !! Date !! Comment
 |-
+| [http://sourceforge.net/projects/linuxwacom/files/linuxwacom/0.9.0/linuxwacom-0.9.0.tar.bz2/download linuxwacom-0.9.0.tar.bz2]
+| 2011-06-20
+| 
+|-
 | [http://sourceforge.net/projects/linuxwacom/files/linuxwacom/0.8.8-10/linuxwacom-0.8.8-11.tar.bz2/download linuxwacom-0.8.8-11.tar.bz2]
 | 2011-03-04
 | Maintenance: fixes a race condition that crashes the X server.  Kernel regression bug for Cintiq fixed for kernels 2.6.16 - 2.6.18.
@@ -284,6 +288,7 @@ If you are interested, the following tables contain the package contents and rel
 | Updated wacomcpl and support 16 buttons for all tools.
 |-
 |}
+
 ==== Beta Packages by Version and Date: ====
 {|
 ! File !! Date !! Comment
