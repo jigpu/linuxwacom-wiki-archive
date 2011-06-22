@@ -76,6 +76,11 @@ Utilities
 
 ### Other Utilities
 
+-   **[wdaemon](wdaemon "wikilink")**: A hotplugging daemon for wacom
+    devices.
+
+<!-- -->
+
 -   **[Magick Rotation](https://launchpad.net/magick-rotation)**: An
     application that will help Dell, HP, and Lenovo tablet pc's
     automatically rotate screen orientation and devices that use the

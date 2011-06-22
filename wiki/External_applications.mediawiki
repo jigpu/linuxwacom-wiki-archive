@@ -22,6 +22,8 @@ This page is a list of external applications that can make use of Wacom tablets 
 * '''wacomcpl''': A Tcl/Tk-based GUI tool shipped as part of the [[linuxwacom]] tarball. It is now unsupported and '''does not work''' with [[xf86-input-wacom]]. The design of wacomcpl is not suited to hotplugging and it will not be updated. Since wacomcpl does not integrate with any desktop environment, any work on wacomcpl is a dead end. '''Do not work on wacomcpl, invest your efforts on integrating wacom support in your desktop environment instead.'''
 
 === Other Utilities ===
+* '''[[wdaemon]]''': A hotplugging daemon for wacom devices.
+
 * '''[https://launchpad.net/magick-rotation Magick Rotation]''': An application that will help Dell, HP, and Lenovo tablet pc's automatically rotate screen orientation and devices that use the Wacom or evdev drivers.
 
 * '''[http://www.freedesktop.org/wiki/Software/xinput_calibrator xinput_calibrator]''': A generic touchscreen calibration program for X.Org.
