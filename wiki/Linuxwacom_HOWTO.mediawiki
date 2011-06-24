@@ -225,7 +225,11 @@ If you are interested, the following tables contain the package contents and rel
 |-
 | [http://sourceforge.net/projects/linuxwacom/files/linuxwacom/0.9.0/linuxwacom-0.9.0.tar.bz2/download linuxwacom-0.9.0.tar.bz2]
 | 2011-06-20
+| Adds "ignore the first two USB motion events" back to prevent cursor jump at first proximity and "-lc" to src/xdrv/Makefile.am for
+|-
 | 
+| 
+| SLED11, required when "AutoAddDevices" option is true in xorg.conf.
 |-
 | [http://sourceforge.net/projects/linuxwacom/files/linuxwacom/0.8.8-10/linuxwacom-0.8.8-11.tar.bz2/download linuxwacom-0.8.8-11.tar.bz2]
 | 2011-03-04
