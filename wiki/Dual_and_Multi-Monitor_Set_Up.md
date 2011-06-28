@@ -62,11 +62,17 @@ value of this property.
 
 ` xinput list-props "Wacom Intuos4 6x9 stylus"`
 
+### NVIDIA binary driver
+
+Provided you have the latest git version, you can also use *MapToOutput*
+with the NVIDIA binary driver. In this case, the monitor must be
+specified with "*HEAD-0*", "*HEAD-1*", etc.
+
 Coordinate Transformation Matrix
 --------------------------------
 
-If you use the NVIDIA binary driver or are running an earlier version of
-xf86-input-wacom, you can manually calculate the matrix and set the
+If you use the NVIDIA binary driver and are running an earlier version
+of xf86-input-wacom, you can manually calculate the matrix and set the
 property with the *xinput* tool. While the following may seem a little
 daunting if you look at the examples you'll find it is not that hard.
 The code does the matrix multiplication for you. You are determining the
