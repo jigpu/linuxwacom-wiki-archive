@@ -15,8 +15,8 @@ account](https://sourceforge.net/user/registration) and notify the
 [Maintainers](/wiki/Maintainers "wikilink") of this project to [give you
 editor rights](/wiki/AddingWikiUsers "wikilink") on the wiki.
 
-What to add?
-============
+What to add
+===========
 
 We use a wiki to make it easy to add and maintain information on the
 wiki. But information on websites goes stale fast when the codebase
@@ -26,8 +26,8 @@ the purpose of having the wiki. Be conservative in what you add and make
 sure that the information is correct and will remain correct for the
 immediate future.
 
-What not to add?
-================
+What not to add
+===============
 
 -   Do not add hacks or other tricks that happen to work on your
     computer. Chances are high the hack isn't upstream because it only
