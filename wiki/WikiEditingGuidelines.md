@@ -7,6 +7,14 @@ layout: wiki
 This page lists a set of guidelines for how to edit the wiki to keep it
 informative and easy-to navigate.
 
+How to get involved
+===================
+
+In order to edit this wiki, you need a [sourceforge
+account](https://sourceforge.net/user/registration) and notify the
+[Maintainers](/wiki/Maintainers "wikilink") of this project to [give you
+editor rights](/wiki/AddingWikiUsers "wikilink") on the wiki.
+
 What to add?
 ============
 

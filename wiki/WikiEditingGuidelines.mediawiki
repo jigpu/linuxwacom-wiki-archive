@@ -1,5 +1,8 @@
 This page lists a set of guidelines for how to edit the wiki to keep it informative and easy-to navigate.
 
+= How to get involved =
+In order to edit this wiki, you need a [https://sourceforge.net/user/registration sourceforge account] and notify the [[Maintainers]] of this project to [[AddingWikiUsers|give you editor rights]] on the wiki.
+
 = What to add? =
 We use a wiki to make it easy to add and maintain information on the wiki. But information on websites goes stale fast when the codebase moves (and the wacom drivers move fast). Stale information means users won't find what they need or what they find won't work. And that defeats the purpose of having the wiki.
 Be conservative in what you add and make sure that the information is correct and will remain correct for the immediate future.
