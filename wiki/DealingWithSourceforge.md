@@ -20,4 +20,6 @@ ssh, you need to create a shell for your username and the project.
 ` ssh -t `<user>`,linuxwacom@shell.sourceforge.net create`
 
 Once the shell is created, it will exist for 4 hours unless closed
-earlier by the user.
+earlier by the user. Note that multiple logins in short succession can
+yield authentication errors. Simply waiting 30s between logins usually
+works around this.
