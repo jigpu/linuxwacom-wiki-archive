@@ -32,14 +32,14 @@ identifier for the match line) enter in a terminal the following.
 
 You should see WALTOP (capitalized) in the tablet/stylus line. If you
 see another tablet name in the line you do not have a Waltop. Use the
-version of Waltop you see in the match line for the following usb
-snippet in 50-wacom.conf. The usb snippet is easy to identify because it
-has a couple of comment lines discussing Waltops. Just change the
-snippet to look like the following.
+version of Waltop you see as the key word in the match line for the
+following usb snippet. Place the snippet in a new file you'll create in
+/etc/X11/xorg.conf.d called 52-waltop-on-wacom.conf. The snippet should
+look like the following.
 
     Section "InputClass"
-        Identifier "Wacom class"
-        MatchProduct "Wacom|WACOM|Hanwang|WALTOP"
+        Identifier "Waltop on wacom class"
+        MatchProduct "WALTOP"
         MatchDevicePath "/dev/input/event*"
         Driver "wacom"
     EndSection
@@ -47,9 +47,18 @@ snippet to look like the following.
 And that should be it. After a reboot your Waltop should now be using
 the Wacom X driver [xf86-input-wacom](xf86-input-wacom "wikilink").
 Since it is a system file you need root privileges. If your system has
-sudo installed you can use
+gnome and sudo installed you can use:
 
-    gksudo gedit /usr/share/X11/xorg.conf.d/50-wacom.conf
+    gksudo gedit /etc/X11/xorg.conf.d/52-waltop-on-wacom.conf
+
+You would use whatever text editor and root privilege access your
+distribution supplies of course.
+
+You're using the /etc/X11/xorg.conf.d directory because that is where
+user specific changes are suppose to go. The /usr/share/X11/xorg.conf.d
+directory is for distribution configuration files and may be overwritten
+by a distribution update. Using /etc/X11/xorg.conf.d avoids this
+possibility.
 
 It's possible additional changes to support your Waltop may have been
 made since your distribution's default version of
