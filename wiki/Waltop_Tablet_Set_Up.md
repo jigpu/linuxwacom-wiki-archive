@@ -44,10 +44,11 @@ look like the following.
         Driver "wacom"
     EndSection
 
-And that should be it. After a reboot your Waltop should now be using
-the Wacom X driver [xf86-input-wacom](xf86-input-wacom "wikilink").
-Since it is a system file you need root privileges. If your system has
-gnome and sudo installed you can use:
+And that is all that is needed. After a reboot your Waltop will now be
+using the Wacom X driver
+[xf86-input-wacom](xf86-input-wacom "wikilink"). Since it is a system
+file you need root privileges. If your system has gnome and sudo
+installed you can use:
 
     gksudo gedit /etc/X11/xorg.conf.d/52-waltop-on-wacom.conf
 
