@@ -33,3 +33,5 @@ The final communication protocol in use is what I'll call USB HID-Wacom. When se
 can make use of a lot of the OS's HID infrastructure for both static and dynamic configuration options.  Once configured, the device does not return data packets in standard HID format.  Instead, it returns data in a format that looks like original Protocol 4/5 Event Data Packets.
 
 I've not compared like serial devices to like USB devices but their is a good change they share exact same data packet formats.
+
+[[Category:DeveloperPages]]

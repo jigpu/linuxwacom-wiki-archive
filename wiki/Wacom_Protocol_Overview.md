@@ -2,6 +2,8 @@
 title: Wacom Protocol Overview
 permalink: wiki/Wacom_Protocol_Overview/
 layout: wiki
+tags:
+ - DeveloperPages
 ---
 
 Note: The original author of this page was late to the tablet party.
