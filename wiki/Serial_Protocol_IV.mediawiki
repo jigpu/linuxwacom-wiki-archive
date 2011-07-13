@@ -114,7 +114,7 @@ where A? is a hexadecimal integer of unknown purpose, B? and C? are decimal inte
 
 Event packets start with the MSB of the first byte set (1), and the MSB of each subsequent byte unset (0).  The basic protocol IV packet is as follows: (bytes and bits will be zero-indexed to make reading the associated code easier)
 
-{|
+{| border=1
 ! Byte !! Bits !! Description
 |-
 | 0 || 7 || Always 1 -- marks beginning of packet
@@ -165,7 +165,7 @@ Event packets start with the MSB of the first byte set (1), and the MSB of each 
 
 According to xf86wacom, enabling tilt mode adds the following two bytes:
 
-{|
+{| border=1
 ! Byte !! Bits !! Description
 |-
 | 7 || 7 || Always 0
