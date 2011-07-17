@@ -2,7 +2,7 @@ This information was derived from reading xf86-input-wacom source code and linux
 
 == Command/Request Format ==
 
-Compared to the Serial Protocol 4/5 communication protocol, the ISDV4 protocol supports a much smaller set of commands and request.  Also, all commands and requests are 1 character in length with no termination character (specifically, no carriage return used). In the case that a response is expected, the response begins with FIXME.
+Compared to the Serial Protocol 4/5 communication protocol, the ISDV4 protocol supports a much smaller set of commands and request.  Also, all commands and requests are 1 character in length with no termination character (specifically, no carriage return used). In the case that a response is expected, the response will have the 2 MSB (bits 6 and 7) set in the first byte of the response.
 
 === Summary of Known Command/Requests ===
 
