@@ -41,7 +41,7 @@ This sequence assumes attachdevice has already been executed to set
 baudrate correctly to either 38400 or 19200.
 
 1.  Send STOP command to the tablet (ISDV4\_STOP)
-2.  Wait 250 mS
+2.  Wait 250 ms
 3.  Read and discard any old data on line
 4.  Send query command (ISDV4\_QUERY)
 5.  Wait for query response
@@ -57,7 +57,7 @@ Format of Packets
 Response and Event packets start with the bit 7 (MSB) of the first byte
 set (1) and the MSB of each subsequent byte unset (0).
 
-Response and Event packets are diferentiated by the Control bit (bit 6)
+Response and Event packets are differentiated by the Control bit (bit 6)
 in the first bit. It will be set (1) for Responses and will be unset (0)
 for Events.
 
@@ -180,39 +180,49 @@ model. Length of multi-touch packets are 13 bytes. The packet format is
 the same up to length of packet.
 
 Packets of length 5 means single touch device that does not support
-reporting capacitence while a length 7 means single touch device that
-does support reporting capacitence. In these cases, bit 1 of byte 0 zero
+reporting capacitance while a length 7 means single touch device that
+does support reporting capacitance. In these cases, bit 1 of byte 0 zero
 should be ignored.
 
-| Byte | Bits | Description                                   |
-|------|------|-----------------------------------------------|
-| 0    | 7    | Always 1 -- marks beginning of packet         |
-|      | 6    | Always 0 - indicates event packet             |
-|      | 0-5  | Reserved                                      |
-|      | 1    | 2nd finger touch                              |
-|      | 0    | 1st finger touch                              |
-| 1    | 7    | Always 0                                      |
-|      | 0-6  | X (bits 7-13 of X coordinate)                 |
-| 2    | 7    | Always 0                                      |
-|      | 0-6  | X (bits 0-6 of X coordinate)                  |
-| 3    | 7    | Always 0                                      |
-|      | 0-6  | Y (bits 7-13 of Y coordinate)                 |
-| 4    | 7    | Always 0                                      |
-|      | 0-6  | Y (bits 0-6 of Y coordinate)                  |
-| 5    | 7    | Always 0                                      |
-|      | 0-6  | Capacitence (bits 7-13 of ouch capacitence)   |
-| 6    | 7    | Always 0                                      |
-|      | 0-6  | Capacitence (bits 0-6 of Touch capacientence) |
-| 7    | 7    | Always 0                                      |
-|      | 0-6  | X (bits 7-13 of X coordinate)                 |
-| 8    | 7    | Always 0                                      |
-|      | 0-6  | X (bits 0-6 of X coordinate)                  |
-| 9    | 7    | Always 0                                      |
-|      | 0-6  | Y (bits 7-13 of Y coordinate)                 |
-| 10   | 7    | Always 0                                      |
-|      | 0-6  | Y (bits 0-6 of Y coordinate)                  |
-| 11   | 7    | Always 0                                      |
-|      | 0-6  | Capacitence (bits 7-13 of ouch capacitence)   |
-| 12   | 7    | Always 0                                      |
-|      | 0-6  | Capacitence (bits 0-6 of Touch capacientence) |
-|      |      |                                               |
+Capacitance is not currently used by any drivers. It could be used as an
+approximation for pressure in same way to width of touch in other
+devices is used as pressure approximation. In my limited experience with
+capacitance reports, they have the following issues: They don't scale
+linearly with actual pressure, they report higher values during fast
+movements, and they report high values during multitouch. In practice,
+these limitations aren't so bad. The only real application of pressure
+reports with touch that I know of is very low resolution drawings with 1
+finger.
+
+| Byte | Bits | Description                                 |
+|------|------|---------------------------------------------|
+| 0    | 7    | Always 1 -- marks beginning of packet       |
+|      | 6    | Always 0 - indicates event packet           |
+|      | 0-5  | Reserved                                    |
+|      | 1    | 2nd finger touch                            |
+|      | 0    | 1st finger touch                            |
+| 1    | 7    | Always 0                                    |
+|      | 0-6  | X (bits 7-13 of X coordinate)               |
+| 2    | 7    | Always 0                                    |
+|      | 0-6  | X (bits 0-6 of X coordinate)                |
+| 3    | 7    | Always 0                                    |
+|      | 0-6  | Y (bits 7-13 of Y coordinate)               |
+| 4    | 7    | Always 0                                    |
+|      | 0-6  | Y (bits 0-6 of Y coordinate)                |
+| 5    | 7    | Always 0                                    |
+|      | 0-6  | Capacitance (bits 7-13 of ouch capacitance) |
+| 6    | 7    | Always 0                                    |
+|      | 0-6  | Capacitance (bits 0-6 of Touch capacitance) |
+| 7    | 7    | Always 0                                    |
+|      | 0-6  | X (bits 7-13 of X coordinate)               |
+| 8    | 7    | Always 0                                    |
+|      | 0-6  | X (bits 0-6 of X coordinate)                |
+| 9    | 7    | Always 0                                    |
+|      | 0-6  | Y (bits 7-13 of Y coordinate)               |
+| 10   | 7    | Always 0                                    |
+|      | 0-6  | Y (bits 0-6 of Y coordinate)                |
+| 11   | 7    | Always 0                                    |
+|      | 0-6  | Capacitance (bits 7-13 of ouch capacitance) |
+| 12   | 7    | Always 0                                    |
+|      | 0-6  | Capacitance (bits 0-6 of Touch capacitance) |
+|      |      |                                             |
