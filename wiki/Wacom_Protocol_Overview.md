@@ -96,6 +96,9 @@ Depending on the hardware, this protocol can support 2 different Event
 Data Packets. One is used for typical stylus data while the other is
 used for touchscreen touch data.
 
+See the [ISDV4 Protocol](/wiki/ISDV4_Protocol "wikilink") page for further
+information.
+
 HID-Wacom Protocol
 ------------------
 

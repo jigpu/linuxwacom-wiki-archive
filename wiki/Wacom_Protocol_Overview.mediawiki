@@ -37,6 +37,8 @@ A communication protocol still in use is for wacom devices that communicate over
 
 Depending on the hardware, this protocol can support 2 different Event Data Packets.  One is used for typical stylus data while the other is used for touchscreen touch data.
 
+See the [[ISDV4 Protocol]] page for further information.
+
 == HID-Wacom Protocol ==
 
 The final communication protocol in use is what I'll call USB HID-Wacom. When serial tablets were replace with USB tablets, the designers leaned on the USB HID standard to declare itself. When communicating, the tablet
