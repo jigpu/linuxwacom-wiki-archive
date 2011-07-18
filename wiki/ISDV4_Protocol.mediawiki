@@ -72,7 +72,7 @@ Response and Event packets are differentiated by the Control bit (bit 6) in the 
 |-
 | 5 || 7 || Always 0
 |-
-|   || 0-6 || Max Pressure (bits 0-6 of Pressure) FIXME: Looks like bug in xf86-input-wacom. It forgot to shift byte 6 up.
+|   || 0-6 || Max Pressure (bits 0-6 of Pressure).
 |-
 | 6 || 7 || Always 0 
 |-

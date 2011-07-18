@@ -64,34 +64,34 @@ for Events.
 
 ### Format of Stylus Query Response
 
-| Byte | Bits | Description                                                                                                  |
-|------|------|--------------------------------------------------------------------------------------------------------------|
-| 0    | 7    | Always 1 -- marks beginning of packet                                                                        |
-|      | 6    | Always 1 - indicates control packet                                                                          |
-|      | 0-5  | Data ID                                                                                                      |
-| 1    | 7    | Always 0                                                                                                     |
-|      | 0-6  | Max X (bits 7-13 of X coordinate)                                                                            |
-| 2    | 7    | Always 0                                                                                                     |
-|      | 2-6  | Max X (bits 2-6 of X coordinate)                                                                             |
-| 3    | 7    | Always 0                                                                                                     |
-|      | 0-6  | Max Y (bits 7-13 of Y coordinate)                                                                            |
-| 4    | 7    | Always 0                                                                                                     |
-|      | 2-6  | Max Y (bits 2-6 of Y coordinate)                                                                             |
-| 5    | 7    | Always 0                                                                                                     |
-|      | 0-6  | Max Pressure (bits 0-6 of Pressure) FIXME: Looks like bug in xf86-input-wacom. It forgot to shift byte 6 up. |
-| 6    | 7    | Always 0                                                                                                     |
-|      | 5-6  | Max X (bits 0-1 of X coordinate)                                                                             |
-|      | 3-4  | Max Y (bits 0-1 of Y coordinate)                                                                             |
-|      | 0-2  | Max Pressure (bits 7-9 of Pressure)                                                                          |
-| 7    | 7    | Always 0                                                                                                     |
-|      | 0-6  | Max Y Tilt                                                                                                   |
-| 8    | 7    | Always 0                                                                                                     |
-|      | 0-6  | Max X Tilt                                                                                                   |
-| 9    | 7    | Always 0                                                                                                     |
-|      | 0-6  | Version (bits 14-7)                                                                                          |
-| 10   | 7    | Always 0                                                                                                     |
-|      | 0-6  | Version (bits 0-6)                                                                                           |
-|      |      |                                                                                                              |
+| Byte | Bits | Description                           |
+|------|------|---------------------------------------|
+| 0    | 7    | Always 1 -- marks beginning of packet |
+|      | 6    | Always 1 - indicates control packet   |
+|      | 0-5  | Data ID                               |
+| 1    | 7    | Always 0                              |
+|      | 0-6  | Max X (bits 7-13 of X coordinate)     |
+| 2    | 7    | Always 0                              |
+|      | 2-6  | Max X (bits 2-6 of X coordinate)      |
+| 3    | 7    | Always 0                              |
+|      | 0-6  | Max Y (bits 7-13 of Y coordinate)     |
+| 4    | 7    | Always 0                              |
+|      | 2-6  | Max Y (bits 2-6 of Y coordinate)      |
+| 5    | 7    | Always 0                              |
+|      | 0-6  | Max Pressure (bits 0-6 of Pressure).  |
+| 6    | 7    | Always 0                              |
+|      | 5-6  | Max X (bits 0-1 of X coordinate)      |
+|      | 3-4  | Max Y (bits 0-1 of Y coordinate)      |
+|      | 0-2  | Max Pressure (bits 7-9 of Pressure)   |
+| 7    | 7    | Always 0                              |
+|      | 0-6  | Max Y Tilt                            |
+| 8    | 7    | Always 0                              |
+|      | 0-6  | Max X Tilt                            |
+| 9    | 7    | Always 0                              |
+|      | 0-6  | Version (bits 14-7)                   |
+| 10   | 7    | Always 0                              |
+|      | 0-6  | Version (bits 0-6)                    |
+|      |      |                                       |
 
 Tilt support is optional. It is supported by device when both Tilt X and
 Tilt Y values are non-zero.
