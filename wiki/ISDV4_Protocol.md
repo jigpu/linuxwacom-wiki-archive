@@ -59,8 +59,8 @@ Response and Event packets start with the bit 7 (MSB) of the first byte
 set (1) and the MSB of each subsequent byte unset (0).
 
 Response and Event packets are differentiated by the Control bit (bit 6)
-in the first bit. It will be set (1) for Responses and will be unset (0)
-for Events.
+in the first byte. It will be set (1) for Responses and will be unset
+(0) for Events.
 
 ### Format of Stylus Query Response
 
