@@ -3,6 +3,7 @@ A patch that is suitable for merging has to meet a number of formal requirements
 * it must be signed off
 * it must have a single-line subject (less than 72 characters)
 * it must have a meaningful commit message
+* The driver must pass [[TestSuite|''make check'']]
 
 Any patch that meets these requirements can be sent to the [https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel linuxwacom-devel] mailing list for review and merging. Below is more information on each of these three points.
 

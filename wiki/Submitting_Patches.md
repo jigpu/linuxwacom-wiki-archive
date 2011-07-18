@@ -13,6 +13,7 @@ requirements:
 -   it must be signed off
 -   it must have a single-line subject (less than 72 characters)
 -   it must have a meaningful commit message
+-   The driver must pass [*make check*](/wiki/TestSuite "wikilink")
 
 Any patch that meets these requirements can be sent to the
 [linuxwacom-devel](https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel)
