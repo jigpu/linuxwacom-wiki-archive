@@ -17,12 +17,10 @@ However, the disadvantage is that we cannot use the ''static'' keyword in tests,
 
 {{Tip|text=Writing tests can be painful but they beat restarting X for quick input/output testing. Over time, the time spent writing tests pays off easily.}}
 
-To write a new test, look at <code>test/wacom-tests.c</code> and take guidance from there. The basic approach is to add a call to a test function to <code>main()</code> in the form of
-  g_test_add_func("/common/refcounting", test_common_ref);
+To write a new test, look at <code>test/wacom-tests.c</code> and take guidance from there. The basic approach is to add simply call the test function from <code>main()</code>.
+Prefix all test functions with ''test''.
 
-The first argument is simply a human-readable path printed out when testing. The second argument is your test function. Prefix all of them with ''test''.
-
-The test function itself must set up the required environment and then call the actual functions to test. Afterwards, use <code>g_assert</code> to ensure the right values are returned.
+The test function itself must set up the required environment and then call the actual functions to test. Afterwards, use <code>assert</code> to ensure the right values are returned.
 <pre>
 static void
 test_wcm_some_function(void)
@@ -31,8 +29,8 @@ test_wcm_some_function(void)
   ... do some setup here
 
   othervalue = wcm_some_function(somevalue);
-  g_assert(somevalue > othervalue);
-  g_assert(othervalue >= 0);
+  assert(somevalue > othervalue);
+  assert(othervalue >= 0);
   ...
 }
 </pre>

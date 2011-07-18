@@ -31,17 +31,11 @@ Writing a test
 --------------
 
 To write a new test, look at `test/wacom-tests.c` and take guidance from
-there. The basic approach is to add a call to a test function to
-`main()` in the form of
-
-` g_test_add_func("/common/refcounting", test_common_ref);`
-
-The first argument is simply a human-readable path printed out when
-testing. The second argument is your test function. Prefix all of them
-with *test*.
+there. The basic approach is to add simply call the test function from
+`main()`. Prefix all test functions with *test*.
 
 The test function itself must set up the required environment and then
-call the actual functions to test. Afterwards, use `g_assert` to ensure
+call the actual functions to test. Afterwards, use `assert` to ensure
 the right values are returned.
 
     static void
@@ -51,7 +45,7 @@ the right values are returned.
       ... do some setup here
 
       othervalue = wcm_some_function(somevalue);
-      g_assert(somevalue > othervalue);
-      g_assert(othervalue >= 0);
+      assert(somevalue > othervalue);
+      assert(othervalue >= 0);
       ...
     }
