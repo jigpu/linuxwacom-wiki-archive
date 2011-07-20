@@ -212,17 +212,7 @@ have any problems or questions, go ahead and post them to the list.
 
 **Build X driver wacom\_drv.so**
 
-Refer to
-<http://sourceforge.net/apps/mediawiki/linuxwacom/index.php?title=Xf86-input-wacom>
-for details.
-
-    wget http://prdownloads.sourceforge.net/linuxwacom/xf86-input-wacom-0.10.8.tar.bz2
-    ./configure --prefix=/usr  
-    make
-    su -c "make install"
-
-Finally, plug the tablet in and restart the X server (or just restart
-your system).
+Refer to [ this page](/wiki/Xf86-input-wacom "wikilink") for details.
 
 Building Linuxwacom driver On RHEL 5 / CentOS 5
 -----------------------------------------------
