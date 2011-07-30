@@ -64,6 +64,14 @@ Utilities
 
 <!-- -->
 
+-   **[Wacom
+    Tablet](http://kde-apps.org/content/show.php/wacom+tablet?content=114856)**:
+    A KDE 4 KCModule. This KDE system tool implements a GUI for the
+    Wacom Linux Drivers and extends it with profile support to handle
+    different button/pen layouts per profile.
+
+<!-- -->
+
 -   **wacomcpl**: A Tcl/Tk-based GUI tool shipped as part of the
     [linuxwacom](linuxwacom "wikilink") tarball. It is now unsupported
     and **does not work** with
