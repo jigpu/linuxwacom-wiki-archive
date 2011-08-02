@@ -17,7 +17,7 @@ In other words the two versions of 60-wacom.rules below provide you with
 USB symlinks to use in your xorg.conf. Two symlinks are supported,
 */dev/input/wacom* for stylus, eraser, cursor, and pad. And
 */dev/input/wacom-touch* for touch and the Bamboo Pen & Touch pad. Rules
-for serial Wacom tablet are also shown.
+for serial Wacom tablets are also shown.
 
 60-wacom.rules
 --------------
