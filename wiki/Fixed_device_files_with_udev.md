@@ -16,7 +16,8 @@ proper one with wacom under */etc/udev/rules.d* or */lib/udev/rules.d*.
 In other words the two versions of 60-wacom.rules below provide you with
 USB symlinks to use in your xorg.conf. Two symlinks are supported,
 */dev/input/wacom* for stylus, eraser, cursor, and pad. And
-*/dev/input/wacom-touch* for touch and the Bamboo Pen & Touch pad.
+*/dev/input/wacom-touch* for touch and the Bamboo Pen & Touch pad. Rules
+for serial Wacom tablet are also shown.
 
 60-wacom.rules
 --------------
@@ -161,6 +162,21 @@ application called mousedrake which takes care of the setup and
 configuration of linuxwacom driver. If you use Mandriva Linux and you
 see InputDevice sections for Wacom device in your Xorg.conf, chances are
 your Wacom tablet is ready for you to draw.
+
+Serial Wacom tablet rules
+-------------------------
+
+    ACTION!="add|change", GOTO="wacom_end"
+
+    # Match all serial wacom tablets with a serial ID starting with WACf
+    # Notes: We assign NAME though we shouldn't, but currently the server requires it.
+    #        We assign the lot to subsystem pnp too because server reads NAME from
+    #        the parent device. Once all that's fixed, a simple SUBSYSTEM="tty"
+    #        will do and the ENV{NAME} can be removed.
+    SUBSYSTEM=="tty|pnp", SUBSYSTEMS=="pnp", ATTRS{id}=="WACf*", ENV{ID_MODEL}="Serial Wacom Tablet $attr{id}", ENV{ID_INPUT}="1", ENV{ID_INPUT_TABLET}="1", ENV{NAME}="Serial Wacom Tablet $attr{id}"
+    SUBSYSTEM=="tty|pnp", SUBSYSTEMS=="pnp", ATTRS{id}=="FUJ*", ENV{ID_MODEL}="Serial Wacom Tablet $attr{id}", ENV{ID_INPUT}="1", ENV{ID_INPUT_TABLET}="1", ENV{NAME}="Serial Wacom Tablet $attr{id}"
+
+    LABEL="wacom_end"
 
 Writing Wacom udev rules
 ------------------------

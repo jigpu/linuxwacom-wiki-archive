@@ -4,7 +4,7 @@ __TOC__
 The USB Wacom tablet may be assigned to a different ''/dev/input/event#'' after each reboot. To resolve this issue, you can link Wacom USB tablet to ''/dev/input/wacom''. It can be done by adding the following rules in ''/etc/udev/rules.d/60-wacom.rules''. Some distributions use a different number for the file name. Please look for proper one with wacom under ''/etc/udev/rules.d'' or ''/lib/udev/rules.d''.
 
 {{Tip|text=There is little reason to do this. The most common consumer of Wacom events, the X server, will automatically detect the correct device files. This setup is only needed if you are planning to have a static [[xorg.conf]] setup.}}
-In other words the two versions of 60-wacom.rules below provide you with USB symlinks to use in your xorg.conf.  Two symlinks are supported, ''/dev/input/wacom'' for stylus, eraser, cursor, and pad.  And ''/dev/input/wacom-touch'' for touch and the Bamboo Pen & Touch pad.
+In other words the two versions of 60-wacom.rules below provide you with USB symlinks to use in your xorg.conf.  Two symlinks are supported, ''/dev/input/wacom'' for stylus, eraser, cursor, and pad.  And ''/dev/input/wacom-touch'' for touch and the Bamboo Pen & Touch pad.  Rules for serial Wacom tablet are also shown.
 
 == 60-wacom.rules ==
 Below are examples from Debian GNU/Linux distribution:
@@ -150,6 +150,21 @@ Systems with more than one Wacom devices:
 </pre>
 <noinclude>
 Newer Mandriva Linux (Mandriva 2007 Spring and later) has an application called mousedrake which takes care of the setup and configuration of linuxwacom driver. If you use Mandriva Linux and you see InputDevice sections for Wacom device in your Xorg.conf, chances are your Wacom tablet is ready for you to draw.
+
+== Serial Wacom tablet rules ==
+<pre>
+ACTION!="add|change", GOTO="wacom_end"
+
+# Match all serial wacom tablets with a serial ID starting with WACf
+# Notes: We assign NAME though we shouldn't, but currently the server requires it.
+#        We assign the lot to subsystem pnp too because server reads NAME from
+#        the parent device. Once all that's fixed, a simple SUBSYSTEM="tty"
+#        will do and the ENV{NAME} can be removed.
+SUBSYSTEM=="tty|pnp", SUBSYSTEMS=="pnp", ATTRS{id}=="WACf*", ENV{ID_MODEL}="Serial Wacom Tablet $attr{id}", ENV{ID_INPUT}="1", ENV{ID_INPUT_TABLET}="1", ENV{NAME}="Serial Wacom Tablet $attr{id}"
+SUBSYSTEM=="tty|pnp", SUBSYSTEMS=="pnp", ATTRS{id}=="FUJ*", ENV{ID_MODEL}="Serial Wacom Tablet $attr{id}", ENV{ID_INPUT}="1", ENV{ID_INPUT_TABLET}="1", ENV{NAME}="Serial Wacom Tablet $attr{id}"
+
+LABEL="wacom_end"
+</pre>
 
 == Writing Wacom udev rules ==
 [http://reactivated.net/writing_udev_rules.html "Writing udev rules"] by Daniel Drake is a good review on how to write a udev rule.  Additionally the udev manual (''man udev'' entered in a terminal) will provide you with a quick overview.  The udevadm manual (''man udevadm'' in a console) will show you how to do an attributes walk on a device to find appropriate matches.
