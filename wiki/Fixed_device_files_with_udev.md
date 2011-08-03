@@ -114,9 +114,12 @@ Systems with more than one Wacom devices:
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0064", SYMLINK+="input/tablet-penpartner2"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0065", SYMLINK+="input/tablet-bamboo"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0069", SYMLINK+="input/tablet-bamboo1"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="006A", SYMLINK+="input/tablet-bamboo1-4x6"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="006B", SYMLINK+="input/tablet-bamboo1-5x8"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0081", SYMLINK+="input/tablet-graphire_bt-6x8"
-        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0090", SYMLINK="input/tablet-tpc90"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0090", SYMLINK+="input/tablet-tpc90"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0093", SYMLINK="input/tablet-tpc93-$env{WACOM_TYPE}"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0097", SYMLINK+="input/tablet-tpc97"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="009a", SYMLINK="input/tablet-tpc9a-$env{WACOM_TYPE}"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00b0", SYMLINK+="input/tablet-intuos3-4x5"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00b1", SYMLINK+="input/tablet-intuos3-6x8"
@@ -144,6 +147,9 @@ Systems with more than one Wacom devices:
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d8", SYMLINK="input/tablet-bamboo2fg-comic-6x8-$env{WACOM_TYPE}"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00dA", SYMLINK="input/tablet-bamboo4fg-se-4x5-$env{WACOM_TYPE}"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00dB", SYMLINK="input/tablet-bamboo4fg-se-6x8-$env{WACOM_TYPE}"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00e2", SYMLINK="input/tablet-tpcE2-$env{WACOM_TYPE}"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00e3", SYMLINK="input/tablet-tpcE3-$env{WACOM_TYPE}"
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00e6", SYMLINK="input/tablet-tpcE6-$env{WACOM_TYPE}"
 
         # Convenience links for the common case of a single tablet.  We could do just this:
         #ATTRS{idVendor}=="056a", SYMLINK+="input/wacom-$env{WACOM_TYPE}"
