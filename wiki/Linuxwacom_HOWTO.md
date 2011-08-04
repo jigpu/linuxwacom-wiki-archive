@@ -946,9 +946,12 @@ Below are examples from Debian GNU/Linux distribution:
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00f0", ENV{WACOM_TYPE}!="touch", SYMLINK+="input/wacom-tablets/dtu1631 input/wacom-tablets/dtu1631-%b"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00ce", ENV{WACOM_TYPE}!="touch", SYMLINK+="input/wacom-tablets/dtu2231 input/wacom-tablets/dtu2231-%b"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0069", SYMLINK+="input/wacom-tablets/bamboo1 input/wacom-tablets/bamboo1-%b"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="006A", SYMLINK+="input/wacom-tablets/bamboo1 input/wacom-tablets/bamboo1-4x6-%b"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="006B", SYMLINK+="input/wacom-tablets/bamboo1 input/wacom-tablets/bamboo1-5x8-%b"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0081", SYMLINK+="input/wacom-tablets/graphire_bt-6x8 input/wacom-tablets/graphire_bt-6x8-%b"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0090", SYMLINK="input/wacom-tablets/tpc90"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0093", SYMLINK="input/wacom-tablets/tpc93-$env{WACOM_TYPE}"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="0097", SYMLINK="input/wacom-tablets/tpc97"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="009a", SYMLINK="input/wacom-tablets/tpc9a-$env{WACOM_TYPE}"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00e2", SYMLINK="input/wacom-tablets/tpce2-$env{WACOM_TYPE}"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00e3", SYMLINK="input/wacom-tablets/tpce3-$env{WACOM_TYPE}"
@@ -962,6 +965,7 @@ Below are examples from Debian GNU/Linux distribution:
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00d8", SYMLINK="input/tablet-bamboo2fg-comic-6x8-$env{WACOM_TYPE}"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00dA", SYMLINK="input/tablet-bamboo4fg-se-4x5-$env{WACOM_TYPE}"
         BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00dB", SYMLINK="input/tablet-bamboo4fg-se-6x8-$env{WACOM_TYPE}"
+        BUS=="usb", KERNEL=="event*", SYSFS{idVendor}=="056a", SYSFS{idProduct}=="00e6", SYMLINK="input/wacom-tablets/tpcE6-$env{WACOM_TYPE}"
 
         # Convenience links for the common case of a single tablet.  We could do just this:
         #SYSFS{idVendor}=="056a", SYMLINK+="input/wacom-$env{WACOM_TYPE}"
