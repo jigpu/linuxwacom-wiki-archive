@@ -246,12 +246,12 @@ assemble the following shell script.
     #!/bin/sh
 
     ## Stylus
-    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" RawSample 20
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" RawSample 8
     xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" PressureCurve 0 10 90 100
     xsetwacom set "Wacom BambooFun 2FG 4x5 Pen stylus" Area -10 -20 14720 9200
 
     ## Eraser
-    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" RawSample 20
+    xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" RawSample 8
     xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" PressureCurve 5 0 100 95
     xsetwacom set "Wacom BambooFun 2FG 4x5 Pen eraser" Area -10 -20 14720 9200
 
