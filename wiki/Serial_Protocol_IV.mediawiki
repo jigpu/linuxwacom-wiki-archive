@@ -1,3 +1,4 @@
+__TOC__
 This information was derived from reading various versions of the linuxwacom source and predecessors thereof.  In this document:
 ; wcmSerial : refers to the serial implementation in the linuxwacom 0.9.0 source, primarily:wcmSerial.c and wcmSerial.h but possibly other files
 ; xf86wacom : refers to a much older form of the driver, as can be browsed [http://cvsweb.xfree86.org/cvsweb/xc/programs/Xserver/hw/xfree86/common/Attic/xf86Wacom.c here].
