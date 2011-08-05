@@ -112,7 +112,7 @@ standard HID format. Instead, it returns data in a format that looks
 like the original Protocol 4/5 Event Data Packets.
 
 I've not compared like serial devices to like USB devices but their is a
-good change they share exact same data packet formats.
+good chance they share exact same data packet formats.
 
 Recently, several Tablet PC's that used to use serial ISDV4 links are
 now using USB links and sometimes have ISD V4 in their name. This can
