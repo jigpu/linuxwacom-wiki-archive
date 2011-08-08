@@ -111,7 +111,7 @@ Libraries / Toolkits / Frameworks
 
 -   **[gnome-settings-daemon](http://git.gnome.org/browse/gnome-settings-daemon/commit/?id=9863ccf9d99fdd712778b31197365723b9caa0behttp://git.gnome.org/browse/gnome-settings-daemon/commit/?id=9863ccf9d99fdd712778b31197365723b9caa0be)**
     already supports several wacom-related
-    [gsettings](http://library.gnome.org/devel/gio/2.25/GSettings.html)
+    [gsettings](http://library.gnome.org/devel/gio/2.28/GSettings.html)
     keys for configuration. This includes hotplugging support so that
     the configuration options are applied both after login and whenever
     a tablet is plugged in.
