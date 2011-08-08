@@ -393,8 +393,10 @@ script in a Launcher. That way when you're done using the application a
 particular profile applied to, you can restore your general
 configuration.
 
-Static (xorg.conf.d or xorg.conf) Configuration
------------------------------------------------
+Static Configuration
+--------------------
+
+### xorg.conf / xorg.conf.d
 
 Entering *man wacom* in a terminal will bring up the Options you can
 enter into your
@@ -402,16 +404,12 @@ enter into your
 in the
 [xorg.conf](/wiki/Configuring_X#Manual_setup_in_the_xorg.conf "wikilink").
 
-### xorg.conf.d
-
 In *xorg.conf.d* you may not be able to configure dependent devices,
 depending on your X server version. However hot plugging is supported.
 To configure your devices you add a 52-wacom-options.conf file to
 /etc/X11/xorg.conf.d and add the Options to it. See
 **[Xorg.conf.d](/wiki/Xorg.conf.d "wikilink")** for detailed explanation and
 examples on how to use it.
-
-### xorg.conf
 
 In your *xorg.conf* you can configure dependent devices but your
 configuration will likely not last through a hotplug. Start entering
@@ -423,3 +421,20 @@ not to have an xorg.conf and would need to create one. Locate it in
 /etc/X11 as /etc/X11/xorg.conf. When you use a xorg.conf remember the
 "device names" in *xinput list* will be stylus, eraser, cursor, touch,
 and pad, depending on your input tools.
+
+### gnome-settings-daemon
+
+The *gnome-settings-daemon* is responsible for setting the parameters
+associated with a Gnome session. Beginning with Gnome 3, the daemon can
+detect when a tablet is plugged in and configure several settings:
+
+-   Area
+-   PressureCurve
+-   Mode
+-   TabletPCButton
+-   Touch
+-   Rotate
+
+Configuration can be set through the *gsettings* CLI program or the
+*dconf-config* GUI. Keys are present under
+**org.gnome.settings-daemon.peripherals.wacom**
