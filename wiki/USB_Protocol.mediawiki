@@ -42,11 +42,13 @@ The Bamboo Stylus Event Packet has been used by all versions of USB Bamboo table
 {| border=1
 ! Byte !! Bits !! Description
 |-
-| 0 || 7-0 || Unknown
+| 0 || 7-0 || Wacom Report ID - Always 0x02
 |-
-| 1 || 7-6 || Unknown
+| 1 || 7 || Reserved - Always 1
 |-
-|   || 5-4 || Tool ID - Should always be 0x3
+|   || 6 || Unknown - Should always be 0x1 when in proximity.  Probably combine with next.
+|-
+|   || 5-4 || Tool ID - Should always be 0x3 when in proximity
 |-
 |   || 3 || Tool Type - 0x0 = Pen 0x1 = Eraser
 |-
