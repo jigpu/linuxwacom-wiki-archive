@@ -137,7 +137,7 @@ calculation during 2 touches or maybe a corner of a bounding box.
 | Byte | Bits | Description                                         |
 |------|------|-----------------------------------------------------|
 | 0    | 7-0  | Wacom Report ID - Always 0x2                        |
-| 1    | 7-4  | Unknown                                             |
+| 1    | 7-4  | Reserved - Always 0                                 |
 |      | 3    | Tablet Button 4                                     |
 |      | 2    | Tablet Button 3                                     |
 |      | 1    | Tablet Button 2                                     |

@@ -89,7 +89,7 @@ The "Phantom" touch described below is always reported when 1 or more touches is
 |-
 | 0 || 7-0 || Wacom Report ID - Always 0x2
 |-
-| 1 || 7-4 || Unknown
+| 1 || 7-4 || Reserved - Always 0
 |-
 |   || 3 || Tablet Button 4
 |-
