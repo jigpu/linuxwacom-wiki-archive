@@ -95,23 +95,22 @@ packets.
 The Bamboo Stylus Event Packet has been used by all versions of USB
 Bamboo tablets. The packet's length is 9.
 
-| Byte | Bits | Description                                      |
-|------|------|--------------------------------------------------|
-| 0    | 7-0  | Wacom Report ID - Always 0x02                    |
-| 1    | 7    | Reserved - Always 1                              |
-|      | 6    | Proximity - 1 when in proximity                  |
-|      | 5-4  | Tool ID - Should always be 0x3 when in proximity |
-|      | 3    | Tool Type - 0x0 = Pen 0x1 = Eraser               |
-|      | 2    | Stylus Rocker Button 2                           |
-|      | 1    | Stylus Rocker Button 1                           |
-|      | 0    | Pen Tip                                          |
-| 2    | 7-0  | X (bits 7-0 of X coordinate)                     |
-| 3    | 7-0  | X (bits 13-8 of X coordinate)                    |
-| 4    | 7-0  | Y (bits 7-0 of Y coordinate)                     |
-| 5    | 7-0  | Y (bits 13-8 of Y coordinate)                    |
-| 6    | 7-0  | Pressure (bits 7-0 of Pressure)                  |
-| 7    | 7-0  | Pressure (bits 13-8 of Pressure)                 |
-|      |      |                                                  |
+| Byte | Bits | Description                                                                                                                                                        |
+|------|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0    | 7-0  | Wacom Report ID - Always 0x02                                                                                                                                      |
+| 1    | 7    | Reserved - Always 1                                                                                                                                                |
+|      | 6-4  | Proximity - Kernel looks only at 5-4 bits. I see all set to 1 while in proximity though. Most likely part represents Tool ID like other Wacom Stylus packets have. |
+|      | 3    | Tool Type - 0x0 = Pen 0x1 = Eraser                                                                                                                                 |
+|      | 2    | Stylus Rocker Button 2                                                                                                                                             |
+|      | 1    | Stylus Rocker Button 1                                                                                                                                             |
+|      | 0    | Pen Tip                                                                                                                                                            |
+| 2    | 7-0  | X (bits 7-0 of X coordinate)                                                                                                                                       |
+| 3    | 7-0  | X (bits 13-8 of X coordinate)                                                                                                                                      |
+| 4    | 7-0  | Y (bits 7-0 of Y coordinate)                                                                                                                                       |
+| 5    | 7-0  | Y (bits 13-8 of Y coordinate)                                                                                                                                      |
+| 6    | 7-0  | Pressure (bits 7-0 of Pressure)                                                                                                                                    |
+| 7    | 7-0  | Pressure (bits 13-8 of Pressure)                                                                                                                                   |
+|      |      |                                                                                                                                                                    |
 
 ### Bamboo Touch Event Packets
 
