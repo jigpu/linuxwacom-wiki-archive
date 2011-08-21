@@ -48,4 +48,6 @@ I've not compared like serial devices to like USB devices but there is a good ch
 
 Recently, several Tablet PC's that used to use serial ISDV4 links are now using USB links and sometimes have ISD V4 in their name.  This can cause some confusion to end users since this devices do not use the serial ISDV4 Communication Protocol nor does their Event Data Packet formats look anything like ISDV4 packets.  The ISDV4 name in this case is only indicating that its a Tablet PC using the HID-Wacom Communication Protocol along with the Tablet PC Event Packet format.
 
+See the [[USB Protocol]] page for further information.
+
 [[Category:DeveloperPages]]

@@ -121,3 +121,6 @@ serial ISDV4 Communication Protocol nor does their Event Data Packet
 formats look anything like ISDV4 packets. The ISDV4 name in this case is
 only indicating that its a Tablet PC using the HID-Wacom Communication
 Protocol along with the Tablet PC Event Packet format.
+
+See the [USB Protocol](/wiki/USB_Protocol "wikilink") page for further
+information.
