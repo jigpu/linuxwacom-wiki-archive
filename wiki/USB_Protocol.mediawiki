@@ -46,7 +46,7 @@ The Bamboo Stylus Event Packet has been used by all versions of USB Bamboo table
 |-
 | 1 || 7 || Reserved - Always 1
 |-
-|   || 6 || Unknown - Should always be 0x1 when in proximity.  Probably combine with next.
+|   || 6 || Proximity - 1 when in proximity
 |-
 |   || 5-4 || Tool ID - Should always be 0x3 when in proximity
 |-
