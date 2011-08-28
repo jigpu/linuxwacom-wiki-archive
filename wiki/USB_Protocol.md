@@ -192,40 +192,40 @@ driver when we get lucky and 1 finger touch lands in Slot 1. Since the
 packet shifted Slot 2 down a byte (took away pressure), two finger
 touches will not work with v1 driver.
 
-| Byte | Bits | Description                                                                              |
-|------|------|------------------------------------------------------------------------------------------|
-| 0    | 7-0  | Wacom Report ID - Always 0x2                                                             |
-| 1    | 7    | Always 1 to indicate v2.                                                                 |
-| 1    | 6-4  | Reserved - Always 1 to indicate v2.                                                      |
-|      | 3    | Tablet Button 4                                                                          |
-|      | 2    | Tablet Button 3                                                                          |
-|      | 1    | Tablet Button 2                                                                          |
-|      | 1    | Tablet Button 1                                                                          |
-| 2    | 7-0  | Unknown - 0x40 seems to alternate. 0x18 seems fixed.                                     |
-| 3    | 7    | Touch Slot 1 Detected                                                                    |
-|      | 6-3  | Reserved - Always 0                                                                      |
-|      | 2-0  | Touch Slot 1 X (bits 10-8 of X coordinate)                                               |
-| 4    | 7-0  | Touch Slot 1 X (bits 7-0 of X coordinate)                                                |
-| 5    | 7-3  | Reserved - Always 0                                                                      |
-|      | 2-0  | Touch Slot 1 Y (bits 10-8 of Y coordinate)                                               |
-| 6    | 7-0  | Touch Slot 1 Y (bits 7-0 of Y coordinate)                                                |
-| 7    | 7    | Touch Phantom Detected                                                                   |
-|      | 6-3  | Reserved - Always 0                                                                      |
-|      | 2-0  | Touch Phantom X (bits 10-8 of X coordinate)                                              |
-| 8    | 7-0  | Touch Phantom X (bits 7-0 of X coordinate)                                               |
-| 9    | 7-3  | Reserved - Always 0                                                                      |
-|      | 2-0  | Touch Phantom (bits 10-8 of Y coordinate)                                                |
-| 10   | 7-0  | Touch Phantom (bits 7-0 of Y coordinate)                                                 |
-| 11   | 7    | Touch Slot 2 Detected                                                                    |
-|      | 6-3  | Reserved - Always 0                                                                      |
-|      | 2-0  | Touch Slot 2 X (bits 10-8 of X coordinate)                                               |
-| 12   | 7-0  | Touch Slot 2 X (bits 7-0 of X coordinate)                                                |
-| 13   | 7-3  | Reserved - Always 0                                                                      |
-|      | 2-0  | Touch Slot 2 Y (bits 10-8 of Y coordinate)                                               |
-| 14   | 7-0  | Touch Slot 2 Y (bits 7-0 of Y coordinate)                                                |
-| 15   | 7-0  | Unknown - 1 when one or more touch. 0x01 seems fixed. 0x30 seems related to touch count. |
-| 16   | 7-0  | Unknown                                                                                  |
-| 17   | 7-0  | Unknown                                                                                  |
-| 18   | 7-0  | Unknown                                                                                  |
-| 19   | 7-0  | Unknown                                                                                  |
-|      |      |                                                                                          |
+| Byte | Bits | Description                                                    |
+|------|------|----------------------------------------------------------------|
+| 0    | 7-0  | Wacom Report ID - Always 0x2                                   |
+| 1    | 7    | Always 1 to indicate v2.                                       |
+| 1    | 6-4  | Reserved - Always 1 to indicate v2.                            |
+|      | 3    | Tablet Button 4                                                |
+|      | 2    | Tablet Button 3                                                |
+|      | 1    | Tablet Button 2                                                |
+|      | 1    | Tablet Button 1                                                |
+| 2    | 7-0  | Unknown - 0x40 seems to alternate. 0x18 seems fixed.           |
+| 3    | 7    | Touch Slot 1 Detected                                          |
+|      | 6-3  | Reserved - Always 0                                            |
+|      | 2-0  | Touch Slot 1 X (bits 10-8 of X coordinate)                     |
+| 4    | 7-0  | Touch Slot 1 X (bits 7-0 of X coordinate)                      |
+| 5    | 7-3  | Reserved - Always 0                                            |
+|      | 2-0  | Touch Slot 1 Y (bits 10-8 of Y coordinate)                     |
+| 6    | 7-0  | Touch Slot 1 Y (bits 7-0 of Y coordinate)                      |
+| 7    | 7    | Touch Phantom Detected                                         |
+|      | 6-3  | Reserved - Always 0                                            |
+|      | 2-0  | Touch Phantom X (bits 10-8 of X coordinate)                    |
+| 8    | 7-0  | Touch Phantom X (bits 7-0 of X coordinate)                     |
+| 9    | 7-3  | Reserved - Always 0                                            |
+|      | 2-0  | Touch Phantom (bits 10-8 of Y coordinate)                      |
+| 10   | 7-0  | Touch Phantom (bits 7-0 of Y coordinate)                       |
+| 11   | 7    | Touch Slot 2 Detected                                          |
+|      | 6-3  | Reserved - Always 0                                            |
+|      | 2-0  | Touch Slot 2 X (bits 10-8 of X coordinate)                     |
+| 12   | 7-0  | Touch Slot 2 X (bits 7-0 of X coordinate)                      |
+| 13   | 7-3  | Reserved - Always 0                                            |
+|      | 2-0  | Touch Slot 2 Y (bits 10-8 of Y coordinate)                     |
+| 14   | 7-0  | Touch Slot 2 Y (bits 7-0 of Y coordinate)                      |
+| 15   | 7-0  | Unknown - 0x01 seems fixed. 0x30 seems related to touch count. |
+| 16   | 7-0  | Unknown                                                        |
+| 17   | 7-0  | Unknown                                                        |
+| 18   | 7-0  | Unknown                                                        |
+| 19   | 7-0  | Unknown                                                        |
+|      |      |                                                                |

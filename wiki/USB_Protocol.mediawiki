@@ -238,7 +238,7 @@ The format is still not well understood and no Linux kernel driver exists.  For 
 |-
 | 14 || 7-0 || Touch Slot 2 Y (bits 7-0 of Y coordinate)
 |-
-| 15 || 7-0 || Unknown - 1 when one or more touch.  0x01 seems fixed.  0x30 seems related to touch count.
+| 15 || 7-0 || Unknown - 0x01 seems fixed.  0x30 seems related to touch count.
 |-
 | 16 || 7-0 || Unknown
 |-
