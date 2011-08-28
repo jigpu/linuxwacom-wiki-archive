@@ -112,11 +112,10 @@ Bamboo tablets. The packet's length is 9.
 | 7    | 7-0  | Pressure (bits 13-8 of Pressure)                                                                                                                                   |
 |      |      |                                                                                                                                                                    |
 
-### Bamboo Touch Event Packets
+### Bamboo Touch v1 Event Packets
 
 The Bamboo Touch Event Packets are used by Bamboo devices that support
-touch and has a packet length of 22. Unfortunately, there are multiple
-versions of Bamboo Touch packets.
+touch and has a packet length of 22.
 
 The format documented below is used by Bamboo Touches with product ID's
 between 0xD0 and 0xD4.
@@ -177,3 +176,54 @@ calculation during 2 touches or maybe a corner of a bounding box.
 | 18   | 7-0  | Reserved - Always 0                                 |
 | 19   | 7-0  | Reserved - Always 0                                 |
 |      |      |                                                     |
+
+### Bamboo Touch v2 Event Packets
+
+The Bamboo Touch v2 Event Packets are used by later Bamboo devices that
+support touch and has a packet length of 22.
+
+The format documented below is used by Bamboo Touches with product ID's
+greater than 0xD4.
+
+The format is still not well understood and no Linux kernel driver
+exists. For example, its not know how to tell how many touches exist and
+which slot the touches are reported in. Its somewhat useable with v2
+driver when we get lucky and 1 finger touch lands in Slot 1.
+
+| Byte | Bits | Description                                                                              |
+|------|------|------------------------------------------------------------------------------------------|
+| 0    | 7-0  | Wacom Report ID - Always 0x2                                                             |
+| 1    | 7    | Always 1 to indicate v2.                                                                 |
+| 1    | 6-4  | Reserved - Always 1 to indicate v2.                                                      |
+|      | 3    | Tablet Button 4                                                                          |
+|      | 2    | Tablet Button 3                                                                          |
+|      | 1    | Tablet Button 2                                                                          |
+|      | 1    | Tablet Button 1                                                                          |
+| 2    | 7-0  | Unknown - 0x40 seems to alternate. 0x18 seems fixed.                                     |
+| 3    | 7    | Touch Slot 1 Detected                                                                    |
+|      | 6-3  | Reserved - Always 0                                                                      |
+|      | 2-0  | Touch Slot 1 X (bits 10-8 of X coordinate)                                               |
+| 4    | 7-0  | Touch Slot 1 X (bits 7-0 of X coordinate)                                                |
+| 5    | 7-3  | Reserved - Always 0                                                                      |
+|      | 2-0  | Touch Slot 1 Y (bits 10-8 of Y coordinate)                                               |
+| 6    | 7-0  | Touch Slot 1 Y (bits 7-0 of Y coordinate)                                                |
+| 7    | 7    | Touch Slot 2 Detected                                                                    |
+|      | 6-3  | Reserved - Always 0                                                                      |
+|      | 2-0  | Touch Slot 2 X (bits 10-8 of X coordinate)                                               |
+| 8    | 7-0  | Touch Slot 2 X (bits 7-0 of X coordinate)                                                |
+| 9    | 7-3  | Reserved - Always 0                                                                      |
+|      | 2-0  | Touch Slot 2 (bits 10-8 of Y coordinate)                                                 |
+| 10   | 7-0  | Touch Slot 2 (bits 7-0 of Y coordinate)                                                  |
+| 11   | 7    | Touch Slot 3 Detected                                                                    |
+|      | 6-3  | Reserved - Always 0                                                                      |
+|      | 2-0  | Touch Slot 3 X (bits 10-8 of X coordinate)                                               |
+| 12   | 7-0  | Touch Slot 3 X (bits 7-0 of X coordinate)                                                |
+| 13   | 7-3  | Reserved - Always 0                                                                      |
+|      | 2-0  | Touch Slot 3 Y (bits 10-8 of Y coordinate)                                               |
+| 14   | 7-0  | Touch Slot 3 Y (bits 7-0 of Y coordinate)                                                |
+| 15   | 7-0  | Unknown - 1 when one or more touch. 0x01 seems fixed. 0x30 seems related to touch count. |
+| 16   | 7-0  | Unknown                                                                                  |
+| 17   | 7-0  | Unknown                                                                                  |
+| 18   | 7-0  | Unknown                                                                                  |
+| 19   | 7-0  | Unknown                                                                                  |
+|      |      |                                                                                          |
