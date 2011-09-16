@@ -436,5 +436,5 @@ detect when a tablet is plugged in and configure several settings:
 -   Rotate
 
 Configuration can be set through the *gsettings* CLI program or the
-*dconf-config* GUI. Keys are present under
+*dconf-editor* GUI. Keys are present under
 **org.gnome.settings-daemon.peripherals.wacom**
