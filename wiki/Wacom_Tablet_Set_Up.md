@@ -156,14 +156,15 @@ on and off.
 
 ### Intuos4 LED and OLED
 
-Eduard Hasenleithner is submitting patch sets for LED and OLED support
-to the kernel's linux-input mailing list. The fourth patch set
-[(PATCHv2) Wacom Intuos4 LED and OLED
-control](https://patchwork.kernel.org/patch/765792/) submitted May 8,
-2011 is awaiting review. Binary sysfs attributes are used to provide
-manipulation of the LEDs and OLEDs. Impatient users have already applied
-the patch set and compiled their own custom wacom.ko. They report they
-can choose which one of the 4 small LEDs to light up, make the intensity
-of the LED change when the stylus is touching the tablet, and send
-images to the OLEDs. The plan is, once support is implemented in the
-kernel, to add userland support through xsetwacom.
+Eduard Hasenleithner's patch set for LED and OLED support [Input: wacom
+- add Intuos4 LED and OLED
+control](https://github.com/dtor/input/commit/5d7e7d479856f23eebc272128905a7ecada367fb)
+has been accepted into the 3.1 kernel. Binary sysfs attributes are used
+to provide manipulation of the LEDs and OLEDs. He has begun work
+implementing support for the new sysfs "wacom\_led" attribute group
+through xf86-input-wacom's xsetwacom.
+
+Impatient users have already applied the patch set and compiled their
+own custom wacom.ko. They report they can choose which one of the 4
+small LEDs to light up, make the intensity of the LED change when the
+stylus is touching the tablet, and send images to the OLEDs.
