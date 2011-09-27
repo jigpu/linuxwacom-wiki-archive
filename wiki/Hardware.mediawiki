@@ -30,7 +30,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | Touch
 | CTT460
 | ???
-| Small
+| 147.2mm x 92mm (Small)
 | rowspan="5" | 2450
 | rowspan="5" | 1024
 | rowspan="5" | N/A
@@ -47,25 +47,25 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | Pen
 | CTL460
 | ???
-| Small
+| 147.2mm x 92mm (Small)
 | No touch digitizer
 |-
 | Pen & Touch
 | CTH460
 | ???
-| Small
+| 147.2mm x 92mm (Small)
 |
 |-
 | Craft
 | CTH461
 | ???
-| Small
+| 147.2mm x 92mm (Small)
 |
 |-
 | Fun
 | CTH661
 | ???
-| Medium
+| 216.48mm x 137mm (Medium)
 |
 |-
 | rowspan="4" | Cintiq
