@@ -34,12 +34,12 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | rowspan="5" | 1024
 | rowspan="5" | N/A
 | rowspan="5" | N/A
-| rowspan="5" | ???
+| rowspan="5" | 480
 | rowspan="5" | 16
-| rowspan="5" | ???
-| rowspan="5" | ???
-| rowspan="5" | ???
-| rowspan="5" | ???
+| rowspan="5" | 4
+| rowspan="5" | 0
+| rowspan="5" | 0
+| rowspan="5" | 0
 | No pen digitizer
 |-
 | Pen
