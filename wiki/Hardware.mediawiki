@@ -8,7 +8,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 ! rowspan="2" | Model#
 ! rowspan="2" | USB ID
 ! rowspan="2" | Dimensions
-! colspan="4" | Pen
+! colspan="5" | Pen
 ! colspan="2" | Touch
 ! colspan="4" | Pad
 ! rowspan="2" | Notes
@@ -17,6 +17,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 ! Pressure
 ! Tilt
 ! Rotation
+! Distance
 ! Resolution
 ! Pressure
 ! ExpressKeys
@@ -34,6 +35,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | rowspan="5" | 1024
 | rowspan="5" | N/A
 | rowspan="5" | N/A
+| rowspan="5" | 32
 | rowspan="5" | 480
 | rowspan="5" | 16
 | rowspan="5" | 4
@@ -71,6 +73,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | ???
 | ???
 | ???
+| rowspan="4" | ???
 | rowspan="4" | ???
 | rowspan="4" | ???
 | rowspan="4" | ???
@@ -120,6 +123,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | rowspan="4" | 512
 | rowspan="4" | N/A
 | rowspan="4" | N/A
+| rowspan="4" | ???
 | rowspan="4" colspan="2" | N/A
 | rowspan="4" | 2
 | rowspan="4" | 0
@@ -146,6 +150,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | rowspan="4" | 2048
 | rowspan="4" | ± 60°
 | rowspan="4" | Y
+| rowspan="4" | ???
 | rowspan="4" colspan="2" | N/A
 | 6
 | rowspan="4" | ModeCycle
