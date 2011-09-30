@@ -7,9 +7,8 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 ! rowspan="2" | Model
 ! rowspan="2" | Model#
 ! rowspan="2" | USB ID
-! rowspan="2" | Dimensions
 ! colspan="5" | Pen
-! colspan="2" | Touch
+! colspan="1" | Touch
 ! colspan="4" | Pad
 ! rowspan="2" | Notes
 |-
@@ -19,25 +18,49 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 ! Rotation
 ! Distance
 ! Resolution
-! Pressure
 ! ExpressKeys
 ! Fn Buttons
 ! Strips
 ! Wheels
 |-
-| rowspan="17" | Wacom
-| rowspan="5" | Bamboo
+| rowspan="20" | Wacom
+| rowspan="8" | Bamboo
+| Connect
+| CTL-470
+| 056a:00dd
+| rowspan = "2" | 14720 x 9220
+| rowspan = "3" | 1024
+| rowspan = "3" | N/A
+| rowspan = "3" | N/A
+| rowspan = "3" | N/A
+| rowspan = "2" | 1470 x 920
+| rowspan = "3" | 4
+| rowspan = "3" | 0
+| rowspan = "3" | 0
+| rowspan = "3" | 0
+| No touch
+|-
+| Capture
+| CTH-470
+| 056a:00de
+|
+|-
+| Create
+| CTH-670
+| 056a:00df
+| 21648 x 13700
+| 2164 x 1370
+|
+|-
 | Touch
-| CTT460
-| ???
-| 147.2mm x 92mm (Small)
-| rowspan="5" | 2450
+| CTT-460
+| 056a:00d9
+| rowspan="4" | 14720 x 9225
 | rowspan="5" | 1024
 | rowspan="5" | N/A
 | rowspan="5" | N/A
-| rowspan="5" | 32
-| rowspan="5" | 480
-| rowspan="5" | 16
+| rowspan="5" | N/A
+| rowspan="4" | 480 x 320
 | rowspan="5" | 4
 | rowspan="5" | 0
 | rowspan="5" | 0
@@ -45,27 +68,25 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | No pen digitizer
 |-
 | Pen
-| CTL460
-| ???
-| 147.2mm x 92mm (Small)
+| CTL-460
+| 056a:00d4
 | No touch digitizer
 |-
 | Pen & Touch
-| CTH460
-| ???
-| 147.2mm x 92mm (Small)
+| CTH-460
+| 056a:00d6
 |
 |-
 | Craft
-| CTH461
-| ???
-| 147.2mm x 92mm (Small)
+| CTH-461
+| 056a:00d7
 |
 |-
 | Fun
-| CTH661
-| ???
-| 216.48mm x 137mm (Medium)
+| CTH-661
+| 056a:00d8
+| 21648 x 13530
+| 740 x 480
 |
 |-
 | rowspan="4" | Cintiq
