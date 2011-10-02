@@ -142,6 +142,7 @@ Systems with more than one Wacom devices:
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d2", SYMLINK="input/tablet-bamboo2fg-craft-4x5-$env{WACOM_TYPE}"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d3", SYMLINK="input/tablet-bamboo2fg-fun-6x8-$env{WACOM_TYPE}"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d4", SYMLINK+="input/tablet-bamboo-p-4x5"    
+        ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d5", SYMLINK+="input/tablet-bamboo-p-6x8"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d6", SYMLINK="input/tablet-bamboo2fg-newpt-4x5-$env{WACOM_TYPE}"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d7", SYMLINK="input/tablet-bamboo2fg-fun-4x5-$env{WACOM_TYPE}"
         ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d8", SYMLINK="input/tablet-bamboo2fg-comic-6x8-$env{WACOM_TYPE}"
