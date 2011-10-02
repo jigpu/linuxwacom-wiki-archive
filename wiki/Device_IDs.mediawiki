@@ -27,7 +27,7 @@
 | 0x03
 |-
 | Bamboo Pen (LLC similar to Earlier Graphire)
-| 0xD4
+| 0xD4, 0xD5
 |-
 | Bamboo Touch (2FGT only)
 | 0xD0
