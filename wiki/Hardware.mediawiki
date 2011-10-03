@@ -65,12 +65,12 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | rowspan="5" | 0
 | rowspan="5" | 0
 | rowspan="5" | 0
-| No pen digitizer
+| No pen
 |-
 | Pen
 | CTL-460
 | 056a:00d4
-| No touch digitizer
+| No touch
 |-
 | Pen & Touch
 | CTH-460
@@ -98,10 +98,18 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | rowspan="4" | ???
 | rowspan="4" | ???
 | rowspan="4" | ???
-| rowspan="4" | ???
-| rowspan="4" colspan="2" | N/A
+| rowspan="4" | N/A
 | 10
-| Mode1L, Mode2L, Mode3L, Mode1R, Mode2R, Mode3R, Info, ???, Settings
+|
+* Mode1L
+* Mode2L
+* Mode3L
+* Mode1R
+* Mode2R
+* Mode3R
+* Info
+* Keyboard
+* Settings
 | 0
 | 2
 |
@@ -120,7 +128,9 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | ???
 | ???
 | 16
-| ModeCycleL, ModeCycleR
+|
+* ModeCycleL
+* ModeCycleR
 | 2
 | 0
 |
@@ -139,13 +149,12 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | 4x5
 | rowspan="2" | CTE-440
 | rowspan="2" | ???
-| rowspan="2" | ???
 | rowspan="4" | 2032
 | rowspan="4" | 512
 | rowspan="4" | N/A
 | rowspan="4" | N/A
 | rowspan="4" | ???
-| rowspan="4" colspan="2" | N/A
+| rowspan="4" | N/A
 | rowspan="4" | 2
 | rowspan="4" | 0
 | rowspan="4" | 0
@@ -157,7 +166,6 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | 6x8
 | rowspan="2" | CTE-640
 | rowspan="2" | ???
-| rowspan="2" | 223.2mm x 139.7mm
 |
 |-
 | A5
@@ -166,15 +174,15 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | Small
 | ???
 | ???
-| 157.5mm x 98.4mm
 | rowspan="4" | 5080
 | rowspan="4" | 2048
 | rowspan="4" | ± 60°
 | rowspan="4" | Y
 | rowspan="4" | ???
-| rowspan="4" colspan="2" | N/A
+| rowspan="4" | N/A
 | 6
-| rowspan="4" | ModeCycle
+| rowspan="4" |
+* ModeCycle
 | rowspan="4" | 0
 | rowspan="4" | 1
 | rowspan="4" |
@@ -182,16 +190,13 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | Medium
 | ???
 | ???
-| 223.2mm x 139.7mm
 | rowspan="3" | 8
 |-
 | Intuos 4 Large
 | ???
 | ???
-| 325.1mm x 203.2mm
 |-
 | Extra Large
 | ???
 | ???
-| 462mm x 304.8mm
 |}

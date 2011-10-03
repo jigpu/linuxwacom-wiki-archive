@@ -9,26 +9,189 @@ tabulate the hardware features of the tablets out there. **Don't** rely
 on the data contained -- its random copy/paste that is more than likely
 wrong after all the editing that's going on ;)
 
-| Manufacturer   | Family   | Model     | Model\#            | USB ID                 | Pen           | Touch        | Pad           | Notes     |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-|----------------|----------|-----------|--------------------|------------------------|---------------|--------------|---------------|-----------|---------------|-----|---------------|---------------------------------------------------------------------|------------------|-----|---------------|------------|---------------|-----|---------------|-----|---------------|-----|---------------|-----|----------|
-| Resolution     | Pressure | Tilt      | Rotation           | Distance               | Resolution    | ExpressKeys  | Fn Buttons    | Strips    | Wheels        |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Wacom          | Bamboo   | Connect   | CTL-470            | 056a:00dd              | rowspan = "2" | 14720 x 9220 | rowspan = "3" | 1024      | rowspan = "3" | N/A | rowspan = "3" | N/A                                                                 | rowspan = "3"    | N/A | rowspan = "2" | 1470 x 920 | rowspan = "3" | 4   | rowspan = "3" | 0   | rowspan = "3" | 0   | rowspan = "3" | 0   | No touch |
-| Capture        | CTH-470  | 056a:00de |                    |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Create         | CTH-670  | 056a:00df | 21648 x 13700      | 2164 x 1370            |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Touch          | CTT-460  | 056a:00d9 | 14720 x 9225       | 1024                   | N/A           | N/A          | N/A           | 480 x 320 | 4             | 0   | 0             | 0                                                                   | No pen digitizer |     |               |            |               |     |               |     |               |     |               |     |          |
-| Pen            | CTL-460  | 056a:00d4 | No touch digitizer |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Pen & Touch    | CTH-460  | 056a:00d6 |                    |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Craft          | CTH-461  | 056a:00d7 |                    |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Fun            | CTH-661  | 056a:00d8 | 21648 x 13530      | 740 x 480              |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Cintiq         | 24HD     | ???       | ???                | ???                    | ???           | ???          | ???           | ???       | ???           | N/A | 10            | Mode1L, Mode2L, Mode3L, Mode1R, Mode2R, Mode3R, Info, ???, Settings | 0                | 2   |               |            |               |     |               |     |               |     |               |     |          |
-| 21UX           | ???      | ???       | ???                | 8                      | 0             | 2            | 0             |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| ???            | ???      | ???       | 16                 | ModeCycleL, ModeCycleR | 2             | 0            |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| 12WX           | ???      | ???       | ???                | 10                     | 0             | 2            | 0             |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Graphire4      | 4x5      | CTE-440   | ???                | ???                    | 2032          | 512          | N/A           | N/A       | ???           | N/A | 2             | 0                                                                   | 0                | 1   |               |            |               |     |               |     |               |     |               |     |          |
-| A6             |          |           |                    |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| 6x8            | CTE-640  | ???       | 223.2mm x 139.7mm  |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| A5             |          |           |                    |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Intuos4        | Small    | ???       | ???                | 157.5mm x 98.4mm       | 5080          | 2048         | ± 60°         | Y         | ???           | N/A | 6             | ModeCycle                                                           | 0                | 1   |               |            |               |     |               |     |               |     |               |     |          |
-| Medium         | ???      | ???       | 223.2mm x 139.7mm  | 8                      |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Intuos 4 Large | ???      | ???       | 325.1mm x 203.2mm  |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
-| Extra Large    | ???      | ???       | 462mm x 304.8mm    |                        |               |              |               |           |               |     |               |                                                                     |                  |     |               |            |               |     |               |     |               |     |               |     |          |
+<table>
+<thead>
+<tr class="header">
+<th><p>Manufacturer</p></th>
+<th><p>Family</p></th>
+<th><p>Model</p></th>
+<th><p>Model#</p></th>
+<th><p>USB ID</p></th>
+<th><p>Pen</p></th>
+<th><p>Touch</p></th>
+<th><p>Pad</p></th>
+<th><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Resolution</p></td>
+<td><p>Pressure</p></td>
+<td><p>Tilt</p></td>
+<td><p>Rotation</p></td>
+<td><p>Distance</p></td>
+<td><p>Resolution</p></td>
+<td><p>ExpressKeys</p></td>
+<td><p>Fn Buttons</p></td>
+<td><p>Strips</p></td>
+</tr>
+<tr class="even">
+<td><p>Wacom</p></td>
+<td><p>Bamboo</p></td>
+<td><p>Connect</p></td>
+<td><p>CTL-470</p></td>
+<td><p>056a:00dd</p></td>
+<td><p>rowspan = &quot;2&quot;</p></td>
+<td><p>14720 x 9220</p></td>
+<td><p>rowspan = &quot;3&quot;</p></td>
+<td><p>1024</p></td>
+</tr>
+<tr class="odd">
+<td><p>Capture</p></td>
+<td><p>CTH-470</p></td>
+<td><p>056a:00de</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>Create</p></td>
+<td><p>CTH-670</p></td>
+<td><p>056a:00df</p></td>
+<td><p>21648 x 13700</p></td>
+<td><p>2164 x 1370</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>Touch</p></td>
+<td><p>CTT-460</p></td>
+<td><p>056a:00d9</p></td>
+<td><p>14720 x 9225</p></td>
+<td><p>1024</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>480 x 320</p></td>
+</tr>
+<tr class="even">
+<td><p>Pen</p></td>
+<td><p>CTL-460</p></td>
+<td><p>056a:00d4</p></td>
+<td><p>No touch</p></td>
+</tr>
+<tr class="odd">
+<td><p>Pen &amp; Touch</p></td>
+<td><p>CTH-460</p></td>
+<td><p>056a:00d6</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>Craft</p></td>
+<td><p>CTH-461</p></td>
+<td><p>056a:00d7</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>Fun</p></td>
+<td><p>CTH-661</p></td>
+<td><p>056a:00d8</p></td>
+<td><p>21648 x 13530</p></td>
+<td><p>740 x 480</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>Cintiq</p></td>
+<td><p>24HD</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+</tr>
+<tr class="odd">
+<td><p>21UX</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>8</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>0</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>16</p></td>
+<td><ul>
+<li>ModeCycleL</li>
+<li>ModeCycleR</li>
+</ul></td>
+<td><p>2</p></td>
+<td><p>0</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>12WX</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>0</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>Graphire4</p></td>
+<td><p>4x5</p></td>
+<td><p>CTE-440</p></td>
+<td><p>???</p></td>
+<td><p>2032</p></td>
+<td><p>512</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>???</p></td>
+</tr>
+<tr class="odd">
+<td><p>A6</p></td>
+</tr>
+<tr class="even">
+<td><p>6x8</p></td>
+<td><p>CTE-640</p></td>
+<td><p>???</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>A5</p></td>
+</tr>
+<tr class="even">
+<td><p>Intuos4</p></td>
+<td><p>Small</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>5080</p></td>
+<td><p>2048</p></td>
+<td><p>± 60°</p></td>
+<td><p>Y</p></td>
+<td><p>???</p></td>
+</tr>
+<tr class="odd">
+<td><p>Medium</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="even">
+<td><p>Intuos 4 Large</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+</tr>
+<tr class="odd">
+<td><p>Extra Large</p></td>
+<td><p>???</p></td>
+<td><p>???</p></td>
+</tr>
+</tbody>
+</table>
