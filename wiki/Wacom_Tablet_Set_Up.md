@@ -159,10 +159,13 @@ on and off.
 Eduard Hasenleithner's patch set for LED and OLED support [Input: wacom
 - add Intuos4 LED and OLED
 control](https://github.com/dtor/input/commit/5d7e7d479856f23eebc272128905a7ecada367fb)
-has been accepted into the 3.1 kernel. Binary sysfs attributes are used
-to provide manipulation of the LEDs and OLEDs. He has begun work
-implementing support for the new sysfs "wacom\_led" attribute group
-through xf86-input-wacom's xsetwacom.
+has been accepted into the 3.2 kernel. Binary sysfs attributes are used
+to provide manipulation of the LEDs and OLEDs. Also posted on
+linuxwacom-devel is a [backport for earlier
+kernels](http://sourceforge.net/mailarchive/forum.php?thread_name=CAF8JNhLzLkFfc6fnORxnZ_V-T4UUKbTr0SsU8AyqxWpS4DNAsQ%40mail.gmail.com&forum_name=linuxwacom-devel)
+which has been committed to the [input-wacom](input-wacom "wikilink")
+git repository. He has begun work implementing support for the new sysfs
+"wacom\_led" attribute group through xf86-input-wacom's xsetwacom.
 
 Impatient users have already applied the patch set and compiled their
 own custom wacom.ko. They report they can choose which one of the 4

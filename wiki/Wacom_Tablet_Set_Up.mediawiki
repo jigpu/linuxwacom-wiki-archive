@@ -57,7 +57,7 @@ fi
 Place the script in a file called ''bin/toggle-touch.sh'' in your home directory. Make the script executable with ''chmod +x $HOME/bin/toggle-touch.sh''. By binding a tablet button to execute the script (likely through your window manager) you can easily toggle touch on and off.
 
 ===Intuos4 LED and OLED===
-Eduard Hasenleithner's patch set for LED and OLED support [https://github.com/dtor/input/commit/5d7e7d479856f23eebc272128905a7ecada367fb Input: wacom - add Intuos4 LED and OLED control] has been accepted into the 3.1 kernel.  Binary sysfs attributes are used to provide manipulation of the LEDs and OLEDs.  He has begun work implementing support for the new sysfs "wacom_led" attribute group through xf86-input-wacom's xsetwacom.
+Eduard Hasenleithner's patch set for LED and OLED support [https://github.com/dtor/input/commit/5d7e7d479856f23eebc272128905a7ecada367fb Input: wacom - add Intuos4 LED and OLED control] has been accepted into the 3.2 kernel.  Binary sysfs attributes are used to provide manipulation of the LEDs and OLEDs.  Also posted on linuxwacom-devel is a [http://sourceforge.net/mailarchive/forum.php?thread_name=CAF8JNhLzLkFfc6fnORxnZ_V-T4UUKbTr0SsU8AyqxWpS4DNAsQ%40mail.gmail.com&forum_name=linuxwacom-devel backport for earlier kernels] which has been committed to the [[input-wacom]] git repository.   He has begun work implementing support for the new sysfs "wacom_led" attribute group through xf86-input-wacom's xsetwacom.
 
 Impatient users have already applied the patch set and compiled their own custom wacom.ko.  They report they can choose which one of the 4 small LEDs to light up, make the intensity of the LED change when the stylus is touching the tablet, and send images to the OLEDs.
 
