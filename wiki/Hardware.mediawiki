@@ -30,9 +30,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | 056a:00dd
 | rowspan = "2" | 14720 x 9220
 | rowspan = "3" | 1024
-| rowspan = "3" | N/A
-| rowspan = "3" | N/A
-| rowspan = "3" | N/A
+| rowspan = "8" colspan = "3" | N/A
 | rowspan = "2" | 1470 x 920
 | rowspan = "3" | 4
 | rowspan = "3" | 0
@@ -57,9 +55,6 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | 056a:00d9
 | rowspan="4" | 14720 x 9225
 | rowspan="5" | 1024
-| rowspan="5" | N/A
-| rowspan="5" | N/A
-| rowspan="5" | N/A
 | rowspan="4" | 480 x 320
 | rowspan="5" | 4
 | rowspan="5" | 0
@@ -90,7 +85,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 |
 |-
 | rowspan="4" | Cintiq
-| 24HD
+| [[Cintiq 24HD|24HD]]
 | DTK-2400
 | 056a:00f4
 | 104480 x 65600
@@ -116,7 +111,9 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | 056a:00cc
 | rowspan="2" | 87200 x 65600
 | 8
-| 0
+|
+* ModeCycleL
+* ModeCycleR
 | 2
 | 0
 |
@@ -126,8 +123,6 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | rowspan="2" | 1024
 | 16
 |
-* ModeCycleL
-* ModeCycleR
 | 2
 | 0
 |
