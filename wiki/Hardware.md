@@ -100,19 +100,19 @@ wrong after all the editing that's going on ;)
 <tr class="even">
 <td><p>Cintiq</p></td>
 <td><p>24HD</p></td>
-<td><p>???</p></td>
-<td><p>???</p></td>
-<td><p>???</p></td>
-<td><p>???</p></td>
-<td><p>???</p></td>
-<td><p>???</p></td>
+<td><p>DTK-2400</p></td>
+<td><p>056a:00f4</p></td>
+<td><p>104480 x 65600</p></td>
+<td><p>2048</p></td>
+<td><p>±60° @ 1°</p></td>
+<td><p>±180° @ 0.2°</p></td>
 <td><p>???</p></td>
 </tr>
 <tr class="odd">
 <td><p>21UX</p></td>
 <td><p>???</p></td>
-<td><p>???</p></td>
-<td><p>???</p></td>
+<td><p>056a:00cc</p></td>
+<td><p>87200 x 65600</p></td>
 <td><p>8</p></td>
 <td><p>0</p></td>
 <td><p>2</p></td>
@@ -121,8 +121,8 @@ wrong after all the editing that's going on ;)
 </tr>
 <tr class="even">
 <td><p>???</p></td>
-<td><p>???</p></td>
-<td><p>???</p></td>
+<td><p>056a:003f</p></td>
+<td><p>1024</p></td>
 <td><p>16</p></td>
 <td><ul>
 <li>ModeCycleL</li>
@@ -135,8 +135,8 @@ wrong after all the editing that's going on ;)
 <tr class="odd">
 <td><p>12WX</p></td>
 <td><p>???</p></td>
-<td><p>???</p></td>
-<td><p>???</p></td>
+<td><p>056a:00c6</p></td>
+<td><p>53020 x 33440</p></td>
 <td><p>10</p></td>
 <td><p>0</p></td>
 <td><p>2</p></td>

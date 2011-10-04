@@ -91,12 +91,12 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 |-
 | rowspan="4" | Cintiq
 | 24HD
-| ???
-| ???
-| ???
-| rowspan="4" | ???
-| rowspan="4" | ???
-| rowspan="4" | ???
+| DTK-2400
+| 056a:00f4
+| 104480 x 65600
+| rowspan="2" | 2048
+| rowspan="4" | ±60° @ 1°
+| rowspan="4" | ±180° @ 0.2°
 | rowspan="4" | ???
 | rowspan="4" | N/A
 | 10
@@ -107,17 +107,14 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 * Mode1R
 * Mode2R
 * Mode3R
-* Info
-* Keyboard
-* Settings
-| 0
+| 1
 | 2
-|
+| The three "hardware control buttons" are actually a touchstrip, the "top" of the strip on the left
 |-
 | rowspan="2" | 21UX
 | ???
-| ???
-| ???
+| 056a:00cc
+| rowspan="2" | 87200 x 65600
 | 8
 | 0
 | 2
@@ -125,8 +122,8 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 |
 |-
 | ???
-| ???
-| ???
+| 056a:003f
+| rowspan="2" | 1024
 | 16
 |
 * ModeCycleL
@@ -137,8 +134,8 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 |-
 | 12WX
 | ???
-| ???
-| ???
+| 056a:00c6
+| 53020 x 33440
 | 10
 | 0
 | 2
