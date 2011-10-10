@@ -110,7 +110,7 @@ wrong after all the editing that's going on ;)
 </tr>
 <tr class="odd">
 <td><p>21UX</p></td>
-<td><p>???</p></td>
+<td><p>DTK-2231</p></td>
 <td><p>056a:00cc</p></td>
 <td><p>87200 x 65600</p></td>
 <td><p>8</p></td>
@@ -123,7 +123,7 @@ wrong after all the editing that's going on ;)
 <td></td>
 </tr>
 <tr class="even">
-<td><p>???</p></td>
+<td><p>DTZ-2231</p></td>
 <td><p>056a:003f</p></td>
 <td><p>1024</p></td>
 <td><p>16</p></td>
@@ -192,6 +192,45 @@ wrong after all the editing that's going on ;)
 <td><p>Extra Large</p></td>
 <td><p>???</p></td>
 <td><p>???</p></td>
+</tr>
+<tr class="even">
+<td><p>rowspan = &quot;6&quot;</p></td>
+<td><p>Interactive Pen Display</p></td>
+<td><p>rowspan = &quot;6&quot;</p></td>
+<td></td>
+<td><p>DTU-2231</p></td>
+<td><p>rowspan = &quot;2&quot;</p></td>
+<td><p>056a:00ce</p></td>
+<td><p>rowspan = &quot;2&quot;</p></td>
+<td><p>47864 x 27011</p></td>
+</tr>
+<tr class="odd">
+<td><p>PL-2200</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>DTU-1631</p></td>
+<td><p>rowspan = &quot;2&quot;</p></td>
+<td><p>056a:00f0</p></td>
+<td><p>rowspan = &quot;2&quot;</p></td>
+<td><p>34623 x 19553</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>PL-1600</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>DTF-720</p></td>
+<td><p>rowspan = &quot;2&quot;</p></td>
+<td><p>056a:00c0</p></td>
+<td><p>rowspan = &quot;2&quot;</p></td>
+<td><p>6858 x 5506</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>PL-720</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
