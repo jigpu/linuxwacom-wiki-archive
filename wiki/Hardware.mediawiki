@@ -23,7 +23,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 ! Strips
 ! Wheels
 |-
-| rowspan="20" | Wacom
+| rowspan="26" | Wacom
 | rowspan="8" | Bamboo
 | Connect
 | CTL-470
@@ -107,7 +107,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | The three "hardware control buttons" are actually a touchstrip, the "top" of the strip on the left
 |-
 | rowspan="2" | 21UX
-| ???
+| DTK-2231
 | 056a:00cc
 | rowspan="2" | 87200 x 65600
 | 8
@@ -118,7 +118,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | 0
 |
 |-
-| ???
+| DTZ-2231
 | 056a:003f
 | rowspan="2" | 1024
 | 16
@@ -191,4 +191,37 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | Extra Large
 | ???
 | ???
-|}
+|-
+| rowspan = "6" | Interactive Pen Display
+| rowspan = "6" | 
+| DTU-2231
+| rowspan = "2" | 056a:00ce
+| rowspan = "2" | 47864 x 27011
+| rowspan = "2" | 512
+| rowspan = "6" colspan = "3" | N/A
+| rowspan = "6" | N/A
+| rowspan = "6" colspan = "4" | N/A
+| 
+|-
+| PL-2200
+|
+|-
+| DTU-1631
+| rowspan = "2" | 056a:00f0
+| rowspan = "2" | 34623 x 19553
+| rowspan = "2" | 512
+| 
+|-
+| PL-1600
+|
+|-
+| DTF-720
+| rowspan = "2" | 056a:00c0
+| rowspan = "2" | 6858 x 5506
+| rowspan = "2" | 512
+| 
+|-
+| PL-720
+|
+|-
+}
