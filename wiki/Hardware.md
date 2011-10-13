@@ -43,7 +43,7 @@ wrong after all the editing that's going on ;)
 <td><p>056a:00dd</p></td>
 <td><p>rowspan = &quot;2&quot;</p></td>
 <td><p>14720 x 9220</p></td>
-<td><p>rowspan = &quot;3&quot;</p></td>
+<td><p>rowspan = &quot;8&quot;</p></td>
 <td><p>1024</p></td>
 </tr>
 <tr class="odd">
@@ -65,11 +65,8 @@ wrong after all the editing that's going on ;)
 <td><p>CTT-460</p></td>
 <td><p>056a:00d9</p></td>
 <td><p>14720 x 9225</p></td>
-<td><p>1024</p></td>
 <td><p>480 x 320</p></td>
-<td><p>4</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
+<td><p>No pen</p></td>
 </tr>
 <tr class="even">
 <td><p>Pen</p></td>

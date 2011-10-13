@@ -29,13 +29,13 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | CTL-470
 | 056a:00dd
 | rowspan = "2" | 14720 x 9220
-| rowspan = "3" | 1024
+| rowspan = "8" | 1024
 | rowspan = "8" colspan = "3" | N/A
 | rowspan = "2" | 1470 x 920
-| rowspan = "3" | 4
-| rowspan = "3" | 0
-| rowspan = "3" | 0
-| rowspan = "3" | 0
+| rowspan = "8" | 4
+| rowspan = "8" | 0
+| rowspan = "8" | 0
+| rowspan = "8" | 0
 | No touch
 |-
 | Capture
@@ -54,12 +54,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | CTT-460
 | 056a:00d9
 | rowspan="4" | 14720 x 9225
-| rowspan="5" | 1024
 | rowspan="4" | 480 x 320
-| rowspan="5" | 4
-| rowspan="5" | 0
-| rowspan="5" | 0
-| rowspan="5" | 0
 | No pen
 |-
 | Pen
