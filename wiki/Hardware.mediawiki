@@ -102,9 +102,12 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 * Mode1R
 * Mode2R
 * Mode3R
-| 1
+* "i"
+* Keyboard
+* Wrench
+| 0
 | 2
-| The three "hardware control buttons" are actually a touchstrip, the "top" of the strip on the left
+| The "i", Keyboard, and Wrench buttons are physically implemented with a touchstrip, the "top" of the strip on the left
 |-
 | rowspan="2" | 21UX
 | DTK-2231
