@@ -107,7 +107,7 @@ wrong after all the editing that's going on ;)
 </tr>
 <tr class="odd">
 <td><p>21UX</p></td>
-<td><p>DTK-2231</p></td>
+<td><p>DTK-2100</p></td>
 <td><p>056a:00cc</p></td>
 <td><p>87200 x 65600</p></td>
 <td><p>8</p></td>
@@ -124,12 +124,23 @@ wrong after all the editing that's going on ;)
 <td><p>056a:003f</p></td>
 <td><p>1024</p></td>
 <td><p>16</p></td>
-<td></td>
+<td><p>0</p></td>
 <td><p>2</p></td>
 <td><p>0</p></td>
 <td></td>
 </tr>
 <tr class="odd">
+<td><p>20WSX</p></td>
+<td><p>DTZ-2000W</p></td>
+<td><p>056a:00c5</p></td>
+<td><p>86680 x 54180</p></td>
+<td><p>14</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>0</p></td>
+<td></td>
+</tr>
+<tr class="even">
 <td><p>12WX</p></td>
 <td><p>???</p></td>
 <td><p>056a:00c6</p></td>
@@ -140,7 +151,7 @@ wrong after all the editing that's going on ;)
 <td><p>0</p></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Graphire4</p></td>
 <td><p>4x5</p></td>
 <td><p>CTE-440</p></td>
@@ -151,19 +162,19 @@ wrong after all the editing that's going on ;)
 <td><p>N/A</p></td>
 <td><p>???</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>A6</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>6x8</p></td>
 <td><p>CTE-640</p></td>
 <td><p>???</p></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>A5</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Intuos4</p></td>
 <td><p>Small</p></td>
 <td><p>???</p></td>
@@ -174,23 +185,23 @@ wrong after all the editing that's going on ;)
 <td><p>Y</p></td>
 <td><p>???</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Medium</p></td>
 <td><p>???</p></td>
 <td><p>???</p></td>
 <td><p>8</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Intuos 4 Large</p></td>
 <td><p>???</p></td>
 <td><p>???</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Extra Large</p></td>
 <td><p>???</p></td>
 <td><p>???</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>rowspan = &quot;6&quot;</p></td>
 <td><p>Interactive Pen Display</p></td>
 <td><p>rowspan = &quot;6&quot;</p></td>
@@ -201,11 +212,11 @@ wrong after all the editing that's going on ;)
 <td><p>rowspan = &quot;2&quot;</p></td>
 <td><p>47864 x 27011</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>PL-2200</p></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>DTU-1631</p></td>
 <td><p>rowspan = &quot;2&quot;</p></td>
 <td><p>056a:00f0</p></td>
@@ -213,11 +224,11 @@ wrong after all the editing that's going on ;)
 <td><p>34623 x 19553</p></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>PL-1600</p></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>DTF-720</p></td>
 <td><p>rowspan = &quot;2&quot;</p></td>
 <td><p>056a:00c0</p></td>
@@ -225,7 +236,7 @@ wrong after all the editing that's going on ;)
 <td><p>6858 x 5506</p></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>PL-720</p></td>
 <td></td>
 </tr>

@@ -23,7 +23,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 ! Strips
 ! Wheels
 |-
-| rowspan="26" | Wacom
+| rowspan="27" | Wacom
 | rowspan="8" | Bamboo
 | Connect
 | CTL-470
@@ -79,16 +79,16 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | 740 x 480
 |
 |-
-| rowspan="4" | Cintiq
+| rowspan="5" | Cintiq
 | [[Cintiq 24HD|24HD]]
 | DTK-2400
 | 056a:00f4
 | 104480 x 65600
 | rowspan="2" | 2048
-| rowspan="4" | ±60° @ 1°
-| rowspan="4" | ±180° @ 0.2°
-| rowspan="4" | ???
-| rowspan="4" | N/A
+| rowspan="5" | ±60° @ 1°
+| rowspan="5" | ±180° @ 0.2°
+| rowspan="5" | ???
+| rowspan="5" | N/A
 | 10
 |
 * Mode1L
@@ -105,7 +105,7 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 | The "i", Keyboard, and Wrench buttons are physically implemented with a touchstrip, the "top" of the strip on the left
 |-
 | rowspan="2" | 21UX
-| DTK-2231
+| DTK-2100
 | 056a:00cc
 | rowspan="2" | 87200 x 65600
 | 8
@@ -118,9 +118,19 @@ This page is under heavy revision trying to find the best way to clearly tabulat
 |-
 | DTZ-2231
 | 056a:003f
-| rowspan="2" | 1024
+| rowspan="3" | 1024
 | 16
+| 0
+| 2
+| 0
 |
+|-
+| 20WSX
+| DTZ-2000W
+| 056a:00c5
+| 86680 x 54180
+| 14
+| 0
 | 2
 | 0
 |
