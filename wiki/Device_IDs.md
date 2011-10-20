@@ -15,8 +15,8 @@ tags:
 | PL series                                          | 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x37, 0x38, 0x39, 0xC4, 0xC0, 0xC2, 0xC7, 0xCE, 0xF0                            |
 | Cap+                                               | 0x9F                                                                                                                |
 | PenPartner                                         | 0x03                                                                                                                |
-| Bamboo Pen (LLC similar to Earlier Graphire)       | 0xD4, 0xD5, 0xDD                                                                                                    |
 | Bamboo Touch (2FGT only)                           | 0xD0                                                                                                                |
+| Bamboo Pen (LLC similar to Earlier Graphire)       | 0xD4, 0xD5, 0xDD                                                                                                    |
 | Bamboo P & T (penabled with 2FGT or 4FGT)          | 0xD1, 0xD2, 0xD3, 0xD6, 0xD7, 0xD8, 0xDA, 0xDB, 0xDE, 0xDF. 3&4FGT for 0xDA & 0xDB not supported.                   |
 | TabletPC (penabled and no touch, no mouse)         | 0x90, 0x97                                                                                                          |
 | TabletPC (penabled with 1FGT, no mouse)            | 0x93, 0x9A                                                                                                          |
