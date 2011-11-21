@@ -287,7 +287,7 @@ xsetwacom set "$PAD" AbsWheelUp "key shift plus"  # Zoom in
 xsetwacom set "$PAD" Button 3 "key F9"  # Toggle view mode
 xsetwacom set "$PAD" Button 4 "key ctrl z"  # Undo
 </pre>
-{{Tip|text=Ubuntu users can also add a notification to their script.  First install libnotify <code>sudo apt-get install libnotify-bin</code>.  Then add as the last line of the script <code>notify-send -t 1500 "Gimp Profile Ran"</code>, choosing the appropriate name for the profile.  This may also work for Ubuntu derivatives like Mint.}}
+{{Tip|text=You can also add a notification to your script if your distribution supports libnotify.  For example to install libnotify in Ubuntu <code>sudo apt-get install libnotify-bin</code>; in Fedora <code>su -C yum install libnotify</code>.  Then as the last line of the script add <code>notify-send -t 1500 "Gimp Profile Ran"</code>, choosing the appropriate name for the profile.  See ''man libnotify'' for more details.}}
 Call it Inkscape_Profile.sh or .Inkscape_Profile.sh then Save and make it executable.
 
 ==== Launcher for Profile ====
