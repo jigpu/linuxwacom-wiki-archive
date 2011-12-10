@@ -53,12 +53,12 @@ in place of the wacom.o kernel driver or visa-versa, things generally
 won't work.
 
 Next, this document was written with the assumption that you are
-starting from scratch with a relatively recent distribution of the Linux
-kernel. Also, if you have already added lines to your XFree86/Xorg
-configuration file (XF86Config/XF86Config-4 or xorg.conf), you should
-comment them out and restart X. Since we'll be stepping through the
-entire process, we need X to ignore the tablet until we're ready.
-Otherwise, X will just get in the way.
+starting from scratch with a ~~relatively recent~~ legacy distribution
+of the Linux kernel. Also, if you have already added lines to your
+XFree86/Xorg configuration file (XF86Config/XF86Config-4 or xorg.conf),
+you should comment them out and restart X. Since we'll be stepping
+through the entire process, we need X to ignore the tablet until we're
+ready. Otherwise, X will just get in the way.
 
 Finally, if you know what you're doing, you can leave your X settings
 intact, print this out, switch to runlevel 3, and follow along from the
