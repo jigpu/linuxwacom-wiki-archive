@@ -30,6 +30,7 @@ tags:
 | Cintiq 21UX                                        | 0x3F                                                                                                                |
 | Cintiq 12SWX and 20SWX                             | 0xC5, 0xC6,                                                                                                         |
 | Cintiq 21UX2                                       | 0xCC                                                                                                                |
+| Cintiq 24HD                                        | 0xF4                                                                                                                |
 | ISDv4 series                                       |                                                                                                                     |
 | WACf000 - WACf007                                  | penabled (IDs translated into 0x90)                                                                                 |
 | WACf008 - WACf00A                                  | penabled with 1FGT (IDs translated into 0x93)                                                                       |

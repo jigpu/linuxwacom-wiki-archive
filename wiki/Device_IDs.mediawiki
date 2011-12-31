@@ -70,6 +70,9 @@
 | Cintiq 21UX2
 | 0xCC
 |-
+| Cintiq  24HD
+| 0xF4
+|-
 ! colspan="2" | ISDv4 series
 |-
 | WACf000 - WACf007
