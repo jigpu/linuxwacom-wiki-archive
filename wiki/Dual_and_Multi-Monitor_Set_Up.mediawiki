@@ -238,7 +238,7 @@ So now the xinput commands to set the device to the desired monitor are these.
 '''Note''' The xinput command does not last through a restart.  See below.
 
 == To Have the Settings Last Through a Reboot ==
-You have to apply the xinput or xsetwacom command with each restart or rotation.  You should be able to add it to your xsetwacom start up script, if you have one.  Otherwise run it from a convenient start up script.  Sample start up scripts are found in [[Wacom Tablet Configuration]] and [[Tablet PC Configuration]].  Add the appropriate command for each device (stylus, eraser, and cursor) to its section.
+You have to apply the xinput or xsetwacom command with each restart or rotation.  You should be able to add it to your xsetwacom start up script, if you have one.  Otherwise run it from a convenient start up script.  A sample start up/runtime script is shown in [[Tablet_Configuration#Sample_Runtime_Script|Sample Runtime Script]].  Add the appropriate command for each device (stylus, eraser, and cursor) to its section.
 
 </noinclude>
 
