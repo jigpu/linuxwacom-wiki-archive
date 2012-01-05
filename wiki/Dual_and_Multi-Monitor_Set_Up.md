@@ -327,7 +327,7 @@ To Have the Settings Last Through a Reboot
 You have to apply the xinput or xsetwacom command with each restart or
 rotation. You should be able to add it to your xsetwacom start up
 script, if you have one. Otherwise run it from a convenient start up
-script. A sample start up/runtime script is shown in [Sample Runtime
+script. A sample start up script is shown in [Sample Runtime
 Script](/wiki/Tablet_Configuration#Sample_Runtime_Script "wikilink"). Add the
 appropriate command for each device (stylus, eraser, and cursor) to its
 section.

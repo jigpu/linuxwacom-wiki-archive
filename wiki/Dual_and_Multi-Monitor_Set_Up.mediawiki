@@ -6,7 +6,7 @@ __TOC__
 * xf86-input-wacom-0.10.9 or later
 
 == MapToOutput ==
-{{Tip|text=The '''MapToOutput''' [[xsetwacom]] parameter requires at least xf86-input-wacom-0.11.99.1 to work with the NVIDIA binary driver. See [[Dual_and_Multi-Monitor_Set_Up#Coordinate_Transformation_Matrix|Coordinate Transformation Matrix]] instead}}
+{{Tip|text=The '''MapToOutput''' [[xsetwacom]] parameter requires at least xf86-input-wacom-0.11.99.1 to work with the NVIDIA binary driver. See [[Dual_and_Multi-Monitor_Set_Up#Coordinate_Transformation_Matrix|Coordinate Transformation Matrix]] instead.}}
 </noinclude>
 
 The wacom driver does not support multi-monitor setups directly - handling of such setups is handled by the X Server. [[xsetwacom]] does however provide a parameter to easily map a tablet to a screen
@@ -238,7 +238,7 @@ So now the xinput commands to set the device to the desired monitor are these.
 '''Note''' The xinput command does not last through a restart.  See below.
 
 == To Have the Settings Last Through a Reboot ==
-You have to apply the xinput or xsetwacom command with each restart or rotation.  You should be able to add it to your xsetwacom start up script, if you have one.  Otherwise run it from a convenient start up script.  A sample start up/runtime script is shown in [[Tablet_Configuration#Sample_Runtime_Script|Sample Runtime Script]].  Add the appropriate command for each device (stylus, eraser, and cursor) to its section.
+You have to apply the xinput or xsetwacom command with each restart or rotation.  You should be able to add it to your xsetwacom start up script, if you have one.  Otherwise run it from a convenient start up script.  A sample start up script is shown in [[Tablet_Configuration#Sample_Runtime_Script|Sample Runtime Script]].  Add the appropriate command for each device (stylus, eraser, and cursor) to its section.
 
 </noinclude>
 
