@@ -80,10 +80,13 @@ the `xrandr` command.
 
 While the legacy [linuxwacom](linuxwacom "wikilink") driver supports the
 TwinView extension used by the binary "nvidia" driver, the new
-[xf86-input-wacom](xf86-input-wacom "wikilink") driver relies on RandR
-and is no longer compatible. While we work on remedying this, it is
-still possible to manually calculate and notify the X server of the
-correct tablet-to-display mapping. See [Dual and Multi-Monitor Set
+[xf86-input-wacom](xf86-input-wacom "wikilink") driver had TwinView
+support added with the 0.11.99.1 release. Earlier versions of
+xf86-input-wacom relied on RandR and were not compatible with TwinView.
+Rather than using the xsetwacom "MapToOutput" parameter it is still
+possible to manually calculate and notify the X server of the correct
+tablet-to-display mapping with those earlier versions of
+xf86-input-wacom. See [Dual and Multi-Monitor Set
 Up](/wiki/Dual_and_Multi-Monitor_Set_Up "wikilink") for additional details.
 
 Calibration of Your Tablet
