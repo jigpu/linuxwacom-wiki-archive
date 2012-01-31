@@ -57,14 +57,48 @@ explanations of the requested data and its format.
 The definition file **intuos4-6x9-wl.tablet** demonstrates a "completed"
 one:
 
+    # Wacom
+    # Intuos4 Wireless
+    # PTK-540WL
+    #
+    # Button Map:
+    # (A=1, B=2, C=3, ...)
+    #
+    #    *-----------------------*
+    #    |                       |
+    #  B |                       |
+    #  C |                       |
+    #  D |                       |
+    #  E |                       |
+    #  A |        TABLET         |
+    #  F |                       |
+    #  G |                       |
+    #  H |                       |
+    #  I |                       |
+    #    |                       |
+    #    *-----------------------*
+    #
+    # LED Map:
+    # (XY=Bank X, LED Y)
+    #
+    #     *-----------------------*
+    #     |                       |
+    #  00 |                       |
+    #  01 |                       |
+    #  02 |        TABLET         |
+    #  03 |                       |
+    #     |                       |
+    #     *-----------------------*
+    #
+
     [Device]
-    Name=Wacom Intuos 4 WL 6x9
+    Name=Wacom Intuos4 WL
     # FIXME add missing bluetooth match
     DeviceMatch=usb:056a:00bc
     Class=Intuos4
-    Width=9
-    Height=6
-    Styli=0x802;0x804;0x40802;0x80c;0x80a;0x4080a;0x90a;0x20802;0x902;
+    Width=8
+    Height=5
+    Styli=0x802;0x80c;0x804;0x80a;0x40802;0x4080a;0x902;0x90a;0x20802;0x806;
 
     [Features]
     Reversible=true
