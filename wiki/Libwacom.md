@@ -129,19 +129,7 @@ To clone the git repository use: clone
 tar files are [located
 here](http://sourceforge.net/projects/linuxwacom/files/libwacom/).
 
-Contributors (Partial list)
----------------------------
+Maintainer
+----------
 
-Peter Hutterer made the original Wacom panel for GNOME 3.2, and the
-first version of libwacom.
-
-Jason Gerecke, from Wacom, who did most of the initial work on
-calibration support for GNOME 3.4, is working on the related
-display-mapping. This will allow choosing whether a tablet's working
-area is the whole desktop, or a single monitor when in multiple monitors
-are used.
-
-Bastien Nocera (the libwacom maintainer) fixed the layout bugs in the
-settings panel and is starting work on tablet button mapping. Soon
-goodies like the LEDs on the tablet matching up with the selected
-keyboard shortcut should be available!
+Bastien Nocera is the current libwacom maintainer.
