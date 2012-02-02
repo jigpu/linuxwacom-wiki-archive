@@ -109,13 +109,6 @@ one:
     Buttons=9
     BuiltIn=false
 
-The **Name** is the parent device name exported from the kernel
-(wacom\_wac.c) with *xinput list*, minus the Pen and Finger seen with
-USB tablets that have touch. Be sure you are using a recent kernel, say
-3.0 or up and not input-wacom's wacom.ko. Then to obtain the above file
-name remove the Wacom and using small case string the name together with
-hyphens and add the suffix **.tablet**.
-
 Submit your [git patch](/wiki/Submitting_Patches "wikilink") to
 [linuxwacom-devel](https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel).
 
