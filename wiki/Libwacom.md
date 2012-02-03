@@ -54,12 +54,12 @@ configuring it because they can then access the metadata in libwacom
 about your device. See the **wacom.example** file in libwacom/data for
 explanations of the requested data and its format.
 
-The definition file **intuos4-6x9-wl.tablet** demonstrates a "completed"
+The definition file **intuos4-8x13.tablet** demonstrates a "completed"
 one:
 
     # Wacom
-    # Intuos4 Wireless
-    # PTK-540WL
+    # Intuos4 Large
+    # PTK-840
     #
     # Button Map:
     # (A=1, B=2, C=3, ...)
@@ -92,13 +92,12 @@ one:
     #
 
     [Device]
-    Name=Wacom Intuos4 WL
-    # FIXME add missing bluetooth match
-    DeviceMatch=usb:056a:00bc
+    Name=Wacom Intuos4 8x13
+    DeviceMatch=usb:056a:00ba
     Class=Intuos4
-    Width=8
-    Height=5
-    Styli=0x802;0x80c;0x804;0x80a;0x40802;0x4080a;0x902;0x90a;0x20802;0x806;
+    Width=13
+    Height=8
+    Styli=0x802;0x80c;0x804;0x80a;0x40802;0x4080a;0x902;0x90a;0x20802;0x806;0x006;
 
     [Features]
     Reversible=true
