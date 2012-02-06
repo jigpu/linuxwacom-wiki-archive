@@ -70,3 +70,6 @@ Maintainer
 ----------
 
 The repository is maintained by Przemo Firszt.
+
+Please do not send email regarding bugs or feature requests to the
+maintainer. Use the [mailing lists](mailing_lists "wikilink") instead.
