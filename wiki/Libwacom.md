@@ -125,3 +125,6 @@ Maintainer
 ----------
 
 Bastien Nocera is the current libwacom maintainer.
+
+Please do not send email regarding bugs or feature requests to the
+maintainer. Use the [mailing lists](mailing_lists "wikilink") instead.

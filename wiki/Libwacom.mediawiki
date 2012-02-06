@@ -81,4 +81,7 @@ The tar files are [http://sourceforge.net/projects/linuxwacom/files/libwacom/ lo
 == Maintainer ==
 Bastien Nocera is the current libwacom maintainer.
 
+Please do not send email regarding bugs or feature requests to the maintainer. Use the [[mailing lists]] instead.
+
+
 [[Category:DeveloperPages]]
