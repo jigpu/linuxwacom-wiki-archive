@@ -57,11 +57,11 @@ A possible workflow could consist of the following:
 1.  Make changes to the module code.
 2.  Add the changed file with *git add* and sometimes do a *git commit*.
 3.  Then cd to wacom-kernel (use separate terminal for that) and *make
-    modules* (might use the alternative *make bmodules* if working on
+    modules* (might use the alternative *make btmodules* if working on
     hid-wacom).
 4.  If the compilation goes OK do a *make install* from a separate
     terminal with root account. (could use *make btinstall* if you used
-    *make bmodules* in 3).
+    *make btmodules* in 3).
 5.  Now *rmmod* the new module and after restarting the tablet the new
     module is loaded.
 6.  Test if the changes worked.
