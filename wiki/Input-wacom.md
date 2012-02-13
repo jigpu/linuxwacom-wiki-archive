@@ -38,12 +38,24 @@ repository](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/in
 Building the Driver
 -------------------
 
-We provide a helper script *autogen.sh* that wraps the autotools steps.
-First make sure you have the following tools installed: gcc, automake,
-autoconf and make.
+When compiling from a released version of input-wacom, gcc needs to be
+installed as well as linux kernel development headers. Examples of
+installing kernel headers for a couple of system types:
 
-    ./autogen.sh --prefix=/usr --libdir=/usr/lib    # on 32 bit machines
-    ./autogen.sh --prefix=/usr --libdir=/usr/lib64  # on 64 bit machines
+    apt-get install linux-headers-$(uname -r)  # on Debian machines
+    yum install kernel-devel                   # on Fedora machines
+
+Configuring and compiling the input driver is accomplished with a single
+command.
+
+    ./configure
+
+If compiling from a git clone, the configure script will not exist and
+you will need autoconf and automake tools to be installed to generate
+the support files. We provide a helper script *autogen.sh* that wraps
+executing the autotools steps as well as executing the configure step.
+
+    ./autogen.sh
 
 Installing the Driver
 ---------------------
