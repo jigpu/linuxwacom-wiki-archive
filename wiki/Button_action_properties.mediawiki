@@ -9,6 +9,8 @@ The properties that configure these actions are:
 == Property layout ==
 The three properties work in the same manner. Each property is a list of Atoms that represent the matching physical button (or move action for strips/wheels). The Atom must refer to a property on the same device and contains the sequence of events. The actual events are encoded in the following format:
 
+{{Tip|text=The button number is the ''physical'' button number. Any logical button mapping (e.g. left-handedness) applies on top of the action.}}
+
 * key press of keycode n: <code>AC_KEY | AC_KEYBTNPRESS | n</code>
 * key release of keycode n: <code>AC_KEY |  n</code>
 * button press of button n: <code>AC_BUTTON | AC_KEYBTNPRESS | n</code>
