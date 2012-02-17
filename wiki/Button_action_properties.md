@@ -18,6 +18,9 @@ configure these actions are:
 -   "Wacom Strip Buttons" defines the actions for the strips (if any) on
     the tool
 
+Property layout
+---------------
+
 The three properties work in the same manner. Each property is a list of
 Atoms that represent the matching physical button (or move action for
 strips/wheels). The Atom must refer to a property on the same device and
@@ -33,8 +36,14 @@ Thus, to set the first button on the pad to send a button 10 event, one
 must first create a property (e.g. "button 1 action") and set it to the
 value `AC_KEY | AC_KEYBTNPRESS | 10`. Let's say this property has the
 Atom 234. The *first* value of the "Wacom Button Actions" property must
-then be set to the value 234. To manually do this, the following
-commands can be used:
+then be set to the value 234. The driver keeps track of which buttons
+were not released at the end of the action sequence and releases those
+buttons whenever the physical button is released.
+
+Example
+-------
+
+To manually do this, the following commands can be used:
 
      $> xinput set-prop "Wacom ISDv4 E6 Pen stylus" "button 1 action" --format=32 --type=int 1572874 # AC_BUTTON|AC_KEYBTNPRESS|10
      $> xinput list-props "Wacom ISDv4 E6 Pen stylus" | grep "button 1 action"
@@ -43,7 +52,3 @@ commands can be used:
 
 [xsetwacom](xsetwacom "wikilink") provides a convenience interface that
 does not require manual property creation.
-
-The driver keeps track of which buttons were not released at the end of
-the action sequence and releases those buttons whenever the physical
-button is released.
