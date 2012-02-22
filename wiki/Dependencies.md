@@ -18,6 +18,8 @@ yum install the following packages:
     libXrandr-devel
     libXext-devel
     libX11-devel
+    libXinerama-devel
+    libudev-devel
 
 Ubuntu
 ------

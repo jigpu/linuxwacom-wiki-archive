@@ -11,6 +11,8 @@ libXi-devel
 libXrandr-devel
 libXext-devel
 libX11-devel
+libXinerama-devel
+libudev-devel
 </pre>
 
 == Ubuntu ==
