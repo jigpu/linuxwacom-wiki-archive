@@ -24,4 +24,6 @@ libxi-dev
 libxrandr-dev
 libxext-dev
 libx11-dev
+libxinerama-dev
+libudev-dev
 </pre>

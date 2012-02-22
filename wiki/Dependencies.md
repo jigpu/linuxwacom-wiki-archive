@@ -32,3 +32,5 @@ apt-get install the following packages
     libxrandr-dev
     libxext-dev
     libx11-dev
+    libxinerama-dev
+    libudev-dev
