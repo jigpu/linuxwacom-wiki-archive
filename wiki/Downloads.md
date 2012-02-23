@@ -22,11 +22,12 @@ our X11 driver, or [evtest](evtest "wikilink")) without requiring much
 hardware-specific knowledge.
 
 Our patches to support Wacom devices are provided upstream to the Linux
-kernel developers. These changes will usually feed back into your
-distribution's kernel. We recommend that you first try to update your
-kernel through your distribution's mechanisms. If you already have the
-newest kernel available for your distribution, backported kernel drivers
-are below.
+kernel developers for integration into the official releases at
+[kernel.org](http://www.kernel.org). These changes will usually feed
+back into your distribution's kernel. We recommend that you first try to
+update your kernel through your distribution's mechanisms. If you
+already have the newest kernel available for your distribution,
+backported kernel drivers are below.
 
 To determine your kernel version, open a terminal and run the following
 command: `uname -r`
