@@ -48,13 +48,13 @@ The '''wacom.ko''' kernel driver provides hardware support for Wacom tablets whi
 The '''wacom-hid.ko''' kernel driver provides support for Wacom tablets that communicate over Bluetooth. At the moment, this is limited to the Graphire4 Wireless and the Intuos4 Wireless. Despite the appearance, the "Wireless Accessory Kit" available for use with some Bamboo-series tablets is '''not''' a Bluetooth adapter and is handled by the [[#wacom.ko|wacom.ko]] driver.
 
 === wacom_w8001.ko ===
-The '''wacom_w8001.ko''' kernel driver provides support for Wacom digitizers which communicate over a serial bus and use the [[ISDv4 protocol]]. The ISDv4 protocol is used exclusively by digitizers integrated into 3rd-party products (e.g. Tablet PCs). While most ISDv4 digitizers use the serial bus for communication, there are a few which use USB and are handled by [[#wacom.ko|wacom.ko]].
+The '''wacom_w8001.ko''' kernel driver provides support for Wacom digitizers which communicate over a serial bus and use the [[ISDv4 Protocol]]. The ISDv4 protocol is used exclusively by digitizers integrated into 3rd-party products (e.g. Tablet PCs). While most ISDv4 digitizers use the serial bus for communication, there are a few which use USB and are handled by [[#wacom.ko|wacom.ko]].
 
 === wacom_serial.ko ===
-The '''wacom_serial.ko''' kernel driver provides support for Wacom tablets that communicate over a serial bus and use [[Protocol 4]]. This protocol was used by the Digitizer II (UD series), PenPartner, Graphire, and Cintiq series of Wacom serial tablets.
+The '''wacom_serial.ko''' kernel driver provides support for Wacom tablets that communicate over a serial bus and use [[Serial Protocol IV|Protocol IV]]. This protocol was used by the Digitizer II (UD series), PenPartner, Graphire, and Cintiq series of Wacom serial tablets.
 
 === wacom_serial5.ko ===
-The '''wacom_serial5.ko''' kernel driver provides support for Wacom tablets that communicate over a serial bus and use [[Protocol 5]]. This protocol was used by the Intuos and Intuos2 serial tablets.
+The '''wacom_serial5.ko''' kernel driver provides support for Wacom tablets that communicate over a serial bus and use [[Serial Protocol IV|Protocol V]]. This protocol was used by the Intuos and Intuos2 serial tablets.
 
 === wacom_i2c.ko ===
 The '''wacom_i2c.ko''' kernel driver provides support for Wacom digitizers that communicate over an I2C bus. At present, there is little known hardware that uses this bus. The Samsung Galaxy Note does, but uses a custom kernel driver whose code differs from the patches posted to the input-wacom mailinglist.

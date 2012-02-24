@@ -38,7 +38,7 @@ tablets is **not** a Bluetooth adapter and is handled by the
 
 The **wacom\_w8001.ko** kernel driver provides support for Wacom
 digitizers which communicate over a serial bus and use the [ISDv4
-protocol](/wiki/ISDv4_protocol "wikilink"). The ISDv4 protocol is used
+Protocol](/wiki/ISDv4_Protocol "wikilink"). The ISDv4 protocol is used
 exclusively by digitizers integrated into 3rd-party products (e.g.
 Tablet PCs). While most ISDv4 digitizers use the serial bus for
 communication, there are a few which use USB and are handled by
@@ -48,16 +48,16 @@ communication, there are a few which use USB and are handled by
 
 The **wacom\_serial.ko** kernel driver provides support for Wacom
 tablets that communicate over a serial bus and use [Protocol
-4](/wiki/Protocol_4 "wikilink"). This protocol was used by the Digitizer II
-(UD series), PenPartner, Graphire, and Cintiq series of Wacom serial
-tablets.
+IV](/wiki/Serial_Protocol_IV "wikilink"). This protocol was used by the
+Digitizer II (UD series), PenPartner, Graphire, and Cintiq series of
+Wacom serial tablets.
 
 ### wacom\_serial5.ko
 
 The **wacom\_serial5.ko** kernel driver provides support for Wacom
 tablets that communicate over a serial bus and use [Protocol
-5](/wiki/Protocol_5 "wikilink"). This protocol was used by the Intuos and
-Intuos2 serial tablets.
+V](/wiki/Serial_Protocol_IV "wikilink"). This protocol was used by the Intuos
+and Intuos2 serial tablets.
 
 ### wacom\_i2c.ko
 
