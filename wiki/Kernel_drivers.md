@@ -38,7 +38,7 @@ tablets is **not** a Bluetooth adapter and is handled by the
 
 The **wacom\_w8001.ko** kernel driver provides support for Wacom
 digitizers which communicate over a serial bus and use the [ISDv4
-Protocol](/wiki/ISDv4_Protocol "wikilink"). The ISDv4 protocol is used
+protocol](/wiki/ISDV4_Protocol "wikilink"). The ISDv4 protocol is used
 exclusively by digitizers integrated into 3rd-party products (e.g.
 Tablet PCs). While most ISDv4 digitizers use the serial bus for
 communication, there are a few which use USB and are handled by
