@@ -56,7 +56,7 @@ Wacom serial tablets.
 
 The **wacom\_serial5.ko** kernel driver provides support for Wacom
 tablets that communicate over a serial bus and use [Protocol
-V](/wiki/Serial_Protocol_IV "wikilink"). This protocol was used by the Intuos
+V](/wiki/Serial_Protocol_V "wikilink"). This protocol was used by the Intuos
 and Intuos2 serial tablets.
 
 ### wacom\_i2c.ko
