@@ -95,6 +95,35 @@ A possible workflow could consist of the following:
     module is loaded.
 6.  Test if the changes worked.
 
+A more concrete example is Prezmo's typical workflow for the Intous4 W
+(he does all work from the main kernel directory).
+
+1.  Make changes to drivers/hid/hid-wacom.c:
+    -   vim drivers/hid/hid-wacom.c
+2.  Commit the changes:
+    -   git commit -a -s -m "HID: wacom: My patch"
+
+      
+    -a all files,
+
+    -s my signature,
+
+    -m name of the patch
+
+3.  Switch off the tablet.
+4.  Run "make btmodules && sudo rmmod hid-wacom && sudo btinstall".
+5.  Turn on the tablet - setting up bluetooth connection triggers
+    loading of the hid-wacom.ko module.
+6.  Test changes.
+7.  If the changes aren't good go back to 1.
+8.  If the changes are good enough to be submitted generate a patch:
+    -   git format-patch HEAD~1
+9.  Check if the patch is OK:
+    -   scripts/checkpatch.pl 0001-HID-wacom-My-patch.patch
+10. Submit patch to linuxwacom-devel list:
+    -   git send-email --to linuxwacom-devel@lists.sourceforge.net
+        0001-HID-wacom-My-patch.patch
+
 Maintainer
 ----------
 
