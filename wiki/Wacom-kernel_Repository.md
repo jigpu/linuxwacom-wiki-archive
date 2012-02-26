@@ -95,7 +95,7 @@ A possible workflow could consist of the following:
     module is loaded.
 6.  Test if the changes worked.
 
-A more concrete example is Prezmo's typical workflow for the Intous4 W
+A more concrete example is Przemo's typical workflow for the Intous4 W
 (he does all work from the main kernel directory).
 
 1.  Make changes to drivers/hid/hid-wacom.c:

@@ -63,7 +63,7 @@ A possible workflow could consist of the following:
 # Now ''rmmod'' the new module and after restarting the tablet the new module is loaded.
 # Test if the changes worked.
 
-A more concrete example is Prezmo's typical workflow for the Intous4 W (he does all work from the main kernel directory).
+A more concrete example is Przemo's typical workflow for the Intous4 W (he does all work from the main kernel directory).
 {{Tip|text=Step 4 may fail if module hid-wacom isn't loaded, which can happen with the very first load. Instead try "make btmodules && sudo make btinstall".  Also if compilation fails "sudo rmmod ..." is not executed.}}
 # Make changes to drivers/hid/hid-wacom.c:
 #* vim drivers/hid/hid-wacom.c
