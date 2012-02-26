@@ -44,10 +44,39 @@ directory.
 
 Make your changes. There is a Makefile in the wacom-kernel/wacom-kernel
 directory that makes it a bit easier to compile & install the wacom
-modules. Change directory to /wacom-kernel and use:
+modules. See Makefile Options below.
 
-    make modules
-    make install
+Makefile Options
+----------------
+
+Selected Wacom modules can be built and installed with the different
+wacom-kernel/wacom-kernel/Makefile options.
+
+### Current Module Build and Install Options
+
+1.  **"make"**:
+    -   builds all modules
+2.  **modules**
+    1.  **"make modules"** - builds:
+        -   drivers/input/tablet/wacom.ko
+    2.  **"make install"** - installs:
+        -   drivers/input/tablet/wacom.ko
+3.  **btmodules**
+    1.  **"make btmodules"** - builds:
+        -   drivers/hid/hid-wacom.ko
+        -   drivers/hid/hid.ko
+        -   drivers/hid/usbhid/usbhid.ko
+    2.  **"make btinstall"** - installs:
+        -   drivers/hid/hid-wacom.ko
+        -   drivers/hid/hid.ko
+        -   drivers/hid/usbhid/usbhid.ko
+4.  **tsmodules**
+    1.  **"make tsmodules"** - builds:
+        -   drivers/input/touchscreen/wacom\_w8001.ko
+    2.  **"make tsinstall"** - installs:
+        -   drivers/input/touchscreen/wacom\_w8001.ko
+5.  **"make clean"**:
+    -   deletes all wacom related modules and build files
 
 Sample Workflow
 ---------------
