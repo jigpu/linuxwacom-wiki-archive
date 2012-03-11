@@ -90,3 +90,12 @@ Waltop Tablet Configuration
 Please see the [Tablet Configuration
 HOWTO](/wiki/Tablet_Configuration "wikilink"). Just concentrate on the
 material discussing the stylus, which is fairly brief.
+
+DIGI*mend* project
+------------------
+
+Further information on Waltop tablets is available at the [DIGI*mend*
+project](https://sourceforge.net/apps/mediawiki/digimend/index.php?title=DIGImend)
+site. This includes Waltop USB kernel driver patches for tablet support
+on older kernels and using the xf86-input-evdev instead of
+xf86-input-wacom as the X driver.
