@@ -11,6 +11,7 @@ If you have at least the 2.6.35 kernel, particularly the more recent versions, y
 xinput list
 </pre>
 You should see WALTOP (capitalized) in the tablet/stylus line.  If you see another tablet name in the line you do not have a Waltop.  Use the version of Waltop you see as the key word in the match line for the following usb snippet.  Place the snippet in a new file you'll create in /etc/X11/xorg.conf.d called 52-waltop-on-wacom.conf.  The snippet should look like the following.
+{{Tip|text=A kernel bug in 2.6.35 and 2.6.36 causes both stylus buttons to emit the same button number despite being set to different values. This is fixed in 2.6.37, courtesy of the [http://digimend.sourceforge.net/#proj-kernel-patches DIGI''mend'' project] site.}}
 <pre>
 Section "InputClass"
 	Identifier "Waltop on wacom class"
@@ -28,8 +29,6 @@ You would use whatever text editor and root privilege access your distribution s
 You're using the /etc/X11/xorg.conf.d directory because that is where user specific changes are suppose to go.  The /usr/share/X11/xorg.conf.d directory is for distribution configuration files and may be overwritten by a distribution update.  Using /etc/X11/xorg.conf.d avoids this possibility.
 
 It's possible additional changes to support your Waltop may have been made since your distribution's default version of [[xf86-input-wacom]].  If your distribution hasn't been updating it you may want to consider cloning it from the git repository.
-
-{{Tip|text=A kernel bug in 2.6.35 and 2.6.36 causes both stylus buttons to emit the same button number despite being set to different values. This is fixed in 2.6.37, courtesy of Nikolai Kondrashov.  See also his [http://digimend.sourceforge.net/#proj-kernel-patches DIGI''mend'' project] site.}}
 
 == Calibration of Your Stylus ==
 See the [[Calibration|Calibration HOWTO]].
