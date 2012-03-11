@@ -38,7 +38,7 @@ See the [[Calibration|Calibration HOWTO]].
 See [[Dual and Multi-Monitor Set Up]].
 
 == Graphical Configuration GUI ==
-Work is proceeding on a replacement for wacomcpl.  See [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
+Several are now available, see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
 
 ==  Waltop Tablet Configuration ==
 Please see the [[Tablet Configuration|Tablet Configuration HOWTO]].  Just concentrate on the material discussing the stylus, which is fairly brief.

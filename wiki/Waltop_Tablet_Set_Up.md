@@ -81,8 +81,7 @@ Up](/wiki/Dual_and_Multi-Monitor_Set_Up "wikilink").
 Graphical Configuration GUI
 ---------------------------
 
-Work is proceeding on a replacement for wacomcpl. See [Graphical
-Configuration
+Several are now available, see [Graphical Configuration
 Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
 Waltop Tablet Configuration
