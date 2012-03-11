@@ -34,19 +34,23 @@ Devices supported by the Linux Wacom Project are listed below. See the
 -   Intuos4 Wireless\*
 
 NOTE: Only ISDV4 serial devices (TabletPC's) are currently supported by
-xf86-input-wacom (Xserver 1.7 or later). A [patch
-set](http://sourceforge.net/mailarchive/forum.php?thread_name=4BEB198B.9030809%40sleif.de&forum_name=linuxwacom-discuss)
-by John Tsiombikas & Sebastian Berthold for the serial tablets needs
-further development before inclusion into xf86-input-wacom.
+xf86-input-wacom (Xserver 1.7 or later). For legacy serial graphics
+tablets a pair of serio kernel drivers are being developed, that in
+conjunction with inputattach, provide support on xf86-input-wacom. They
+are both currently working and near completion and submission to the
+kernel. The protocol IV tablet's (including the Digitizer II,
+PenPartner, Graphire, and Cintiq tablets) latest wacom\_serial.ko is
+available
+[here](http://cipht.net/releases/wacom_serial-120301-1.tar.bz2). The
+protocol V tablet's (Intuos and Instuos2) wacom\_serial5.ko is available
+[here](https://github.com/RoaldFre/wacom_serial5).
 
-NOTE: Intuos 4 Wireless is not currently supported by the Bluez stack.
-It is not simply a matter of adding the Vendor ID 0x56a and Product ID
-0xBD alongside the Graphire Bluetooth Wireless' 0x56a & 0x81. This is
-because the Graphire Bluetooth Wireless is a Protocol 4 device (tool
-serial numbers are not reported) while the Intuos 4 Wireless is Protocol
-5 (serial numbers reported). So code for Protocol 5 support needs to be
-added to the Bluez stack. In the meantime you will need to use your usb
-"charging" cable for your tablet to work in linux.
+NOTE: The Intuos 4 Wireless is not currently supported by the Bluez
+stack. However patches for support are actively being developed. See the
+[wacom-kernel](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/wacom-kernel;a=shortlog;h=refs/heads/devel)
+repository and the [linuxwacom-devel
+archive](https://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-devel).
+In the meantime you can use your usb "charging" cable.
 
 NOTE: A FreeBSD Wacom driver is available through the
 [FreeBSD](http://www.freshports.org/x11-drivers/input-wacom) ports
