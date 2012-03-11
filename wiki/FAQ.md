@@ -115,6 +115,15 @@ returns back to normal). On some distributions (e.g. Fedora), the
 original X session runs on VT1, hence substitute the commands with Ctrl
 + Alt + F2 and Ctrl + Alt + F1.
 
+My tablet isn't a Wacom. Will it still work?
+--------------------------------------------
+
+The xf86-input-wacom driver does support some non-wacom tablets
+including those by Hanwang, N-Trig, and Waltop. For KYE and UC-Logic
+graphics tablet support and additional Waltop information see the
+[DIGI*mend*
+project](https://sourceforge.net/apps/mediawiki/digimend/index.php?title=DIGImend).
+
 Where is wacomcpl (the Wacom Control Panel)?
 --------------------------------------------
 

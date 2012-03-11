@@ -48,6 +48,9 @@ See ''Rotate'' in [[Xsetwacom]] and also [[Rotation]].
 == Is hotplugging supported for my USB tablet? ==
 Yes, but only for devices configured via [[Configuring X|HAL or xorg.conf.d]]. If you have your devices configured in the [[Xorg.conf|xorg.conf]], you can work around this by switching virtual terminals after replugging your tablet. That is, press Ctrl + Alt + F1 together then release them (screen turns to console); and press Ctrl + Alt + F7 together then release them (screen returns back to normal). On some distributions (e.g. Fedora), the original X session runs on VT1, hence substitute the commands with Ctrl + Alt + F2 and Ctrl + Alt + F1.
 
+== My tablet isn't a Wacom.  Will it still work? ==
+The xf86-input-wacom driver does support some non-wacom tablets including those by Hanwang, N-Trig, and Waltop.  For KYE and UC-Logic graphics tablet support and additional Waltop information see the [https://sourceforge.net/apps/mediawiki/digimend/index.php?title=DIGImend DIGI''mend'' project].
+
 == Where is wacomcpl (the Wacom Control Panel)? ==
 Wacomcpl is not packaged with [[xf86-input-wacom]] and will not work with it.  Work is proceeding on a replacement integrated into the GNOME Desktop environment.  For links and an explanation see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
 
