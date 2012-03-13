@@ -231,7 +231,7 @@ If you are interested, the following tables contain the package contents and rel
 | 2011-10-27
 | Remove the old LED usbfs defines.  Tilt2R applies to I4 mouse.
 |-
-| [http://sourceforge.net/projects/linuxwacom/files/linuxwacom/0.9.1/linuxwacom-0.9.0.tar.bz2/download linuxwacom-0.9.1.tar.bz2]
+| [http://sourceforge.net/projects/linuxwacom/files/linuxwacom/0.9.1/linuxwacom-0.9.1.tar.bz2/download linuxwacom-0.9.1.tar.bz2]
 | 2011-10-19
 | Adds LED support for Cintiq21UX2 and Intuos4.
 |-
