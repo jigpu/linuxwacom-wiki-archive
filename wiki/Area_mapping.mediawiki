@@ -27,7 +27,7 @@ The short Python program below can be copy/pasted and run to determine the corre
 
 from __future__ import division
 def main():
-    tablet = Device("87200x65600")         # Replace with the resolution of your tablet
+    tablet = Device("60960x45720")         # Replace with the resolution of your tablet
 
     monitor_0 = Device("1600x1200")        # Replace with the resolution of your left screen
     monitor_1 = Device("1920x1080")        # Replace with the resolution of your right screen
@@ -118,18 +118,6 @@ def map_tablet_onto(tablet, desktop, monitor):
     rect.setSize(tablet.size / norm.size)
     rect.setOrigin ( tablet.origin - (tablet.size * norm.origin) )
     return rect
-
-def matrix(input, output):
-    matrix = [[0,0,0],[0,0,0],[0,0,1]]
-    matrix[0][0], matrix[1][1] = output.size / input.size
-    matrix[0][2], matrix[1][2] = output.origin - input.origin
-    return matrix
-
-def norm_matrix(desktop, monitor):
-    norm_monitor = normalize(desktop, monitor)
-    unit = Rectangle((0,0), (1,1))
-    return matrix(unit, norm_monitor)
-
 
 
 if __name__=="__main__":
