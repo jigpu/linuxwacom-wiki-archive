@@ -48,7 +48,7 @@ To find the origin of our "virtual" tablet, we need to know the fraction
 of the desktop the right monitor is offset from the desktop's origin.
 The fractional monitor X origin will be
 (1600/(1600 + 1920)) = 0.45454545, and the fractional monitor Y origin
-will be (0/1200) = 0. We'll offset the tablet's origin by these
+will be (0/1200) = 0. We'll offset the virtual tablet's origin by these
 fractional amounts, for a virtual X origin of
 ( − (111760 \* 0.45454545)) =  − 50800 and a virtual Y origin of
 ( − (50800 \* 0)) = 0
