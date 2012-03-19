@@ -50,18 +50,18 @@ The fractional monitor X origin will be
 (1600/(1600 + 1920)) = 0.45454545, and the fractional monitor Y origin
 will be (0/1200) = 0. We'll offset the tablet's origin by these
 fractional amounts, for a virtual X origin of
-( − (60960 \* 0.45454545)) =  − 27709 and a virtual Y origin of
-( − (45720 \* 0)) = 0
+( − (111760 \* 0.45454545)) =  − 50800 and a virtual Y origin of
+( − (50800 \* 0)) = 0
 
 Finally, using the origin and the width of our virtual tablet, we need
 to obtain the location of it's bottom-right coordinate (since xsetwacom
 uses these two points to define the area). The bottom-right x coordinate
-will be ( − 27709 + 111760) = 84051, and the bottom-right y-coordinate
+will be ( − 50800 + 111760) = 60960, and the bottom-right y-coordinate
 will be (0 + 50800) = 50800. We'll set this area using xsetwacom as
 follows:
 
-` xsetwacom set `<stylus id>` area -27709 0 84051 50800`  
-` xsetwacom set `<eraser id>` area -27709 0 84051 50800`
+` xsetwacom set `<stylus id>` area -50800 0 60960 50800`  
+` xsetwacom set `<eraser id>` area -50800 0 60960 50800`
 
 Python implementation
 ---------------------
@@ -163,7 +163,7 @@ resolutions to match your own setup.
         norm = normalize(desktop, monitor)
         rect = Rectangle()
         rect.setSize(tablet.size / norm.size)
-        rect.setOrigin ( tablet.origin - (tablet.size * norm.origin) )
+        rect.setOrigin ( tablet.origin - (rect.size * norm.origin) )
         return rect
 
 

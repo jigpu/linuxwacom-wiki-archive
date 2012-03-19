@@ -12,18 +12,19 @@ Lets assume I want to constrain my tablet to the right monitor in the following 
 
 To find the necessary "virtual" tablet width and height, we must first know the fraction of the desktop width and height the right monitor takes up. The fractional monitor width will be <math>(1920/(1600+1920)) = 0.54545454</math>, and the fractional monitor height will be <math>(1080/1200) = 0.9</math>. To make the tablet appear larger than it actually is to the driver, we'll need to divide the physical resolution by these fractions to obtain the "virtual" resolution. In this case, we'd have a virtual width of <math>(60960 / 0.54545454) = 111760</math>, and a virtual height of <math>(45720 / 0.9) = 50800</math>.
 
-To find the origin of our "virtual" tablet, we need to know the fraction of the desktop the right monitor is offset from the desktop's origin. The fractional monitor X origin will be <math>(1600/(1600+1920)) = 0.45454545</math>, and the fractional monitor Y origin will be <math>(0 / 1200) = 0</math>. We'll offset the tablet's origin by these fractional amounts, for a virtual X origin of <math>(-(60960 * 0.45454545)) = -27709</math> and a virtual Y origin of <math>(-(45720*0)) = 0</math>
+To find the origin of our "virtual" tablet, we need to know the fraction of the desktop the right monitor is offset from the desktop's origin. The fractional monitor X origin will be <math>(1600/(1600+1920)) = 0.45454545</math>, and the fractional monitor Y origin will be <math>(0 / 1200) = 0</math>. We'll offset the tablet's origin by these fractional amounts, for a virtual X origin of <math>(-(111760 * 0.45454545)) = -50800</math> and a virtual Y origin of <math>(-(50800*0)) = 0</math>
 
-Finally, using the origin and the width of our virtual tablet, we need to obtain the location of it's bottom-right coordinate (since xsetwacom uses these two points to define the area). The bottom-right x coordinate will be <math>(-27709 + 111760) = 84051</math>, and the bottom-right y-coordinate will be <math>(0 + 50800) = 50800</math>. We'll set this area using xsetwacom as follows:
+Finally, using the origin and the width of our virtual tablet, we need to obtain the location of it's bottom-right coordinate (since xsetwacom uses these two points to define the area). The bottom-right x coordinate will be <math>(-50800 + 111760) = 60960</math>, and the bottom-right y-coordinate will be <math>(0 + 50800) = 50800</math>. We'll set this area using xsetwacom as follows:
 
-  xsetwacom set <stylus id> area -27709 0 84051 50800
-  xsetwacom set <eraser id> area -27709 0 84051 50800
+  xsetwacom set <stylus id> area -50800 0 60960 50800
+  xsetwacom set <eraser id> area -50800 0 60960 50800
 
 
 == Python implementation ==
 The short Python program below can be copy/pasted and run to determine the correct numbers. You'll need to set the tablet and monitor resolutions to match your own setup.
 
-<pre>#!/usr/bin/env python
+<pre>
+#!/usr/bin/env python
 
 from __future__ import division
 def main():
@@ -116,11 +117,10 @@ def map_tablet_onto(tablet, desktop, monitor):
     norm = normalize(desktop, monitor)
     rect = Rectangle()
     rect.setSize(tablet.size / norm.size)
-    rect.setOrigin ( tablet.origin - (tablet.size * norm.origin) )
+    rect.setOrigin ( tablet.origin - (rect.size * norm.origin) )
     return rect
 
 
 if __name__=="__main__":
     main()
-
 </pre>
