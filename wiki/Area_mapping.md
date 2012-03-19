@@ -4,9 +4,6 @@ permalink: wiki/Area_mapping/
 layout: wiki
 ---
 
-Area mapping
-------------
-
 Some old versions of GTK+ are known to have a bug which results in an
 offset between the pointer and the pen location when running in a
 multi-head Xinerama setup. In such cases, it may be possible to work
