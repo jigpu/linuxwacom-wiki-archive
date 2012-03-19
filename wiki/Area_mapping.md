@@ -2,13 +2,16 @@
 title: Area mapping
 permalink: wiki/Area_mapping/
 layout: wiki
+tags:
+ - HOWTO
 ---
 
 Some old versions of GTK+ are known to have a bug which results in an
 offset between the pointer and the pen location when running in a
 multi-head Xinerama setup. In such cases, it may be possible to work
-around the bug by modifying the 'Area' (TopX, TopY, BottomX, BottomY) of
-the stylus and eraser tools.
+around the bug by modifying the 'Area' (or, for old versions of
+linuxwacom, the TopX, TopY, BottomX, and BottomY) property of the stylus
+and eraser tools.
 
 Walkthrough
 -----------
@@ -21,11 +24,21 @@ instead.
 
 For this to work, you will need to know the resolution of your desktop,
 the resolution of the target monitor, and the resolution of your tablet.
-To get the third, run the command "xsetwacom get <id> area". The four
-numbers "a b c d" printed out are the points (a,b) and (c,d)
+To get the third, run the following command:
+
+` xsetwacom get `<id>` area`
+
+The four numbers "a b c d" printed out are the points (a,b) and (c,d)
 corresponding to the top-left and bottom-right of your tablet. The
 resolution will be (c-a) by (d-b) (e.g. "0 0 60960 45720" would be a
-resolution of 60960x45720)
+resolution of 60960x45720). If you're running an old version of
+linuxwacom, you may need to run the following four commands to get the
+same data instead:
+
+` xsetwacom get `<id>` topx`  
+` xsetwacom get `<id>` topy`  
+` xsetwacom get `<id>` bottomx`  
+` xsetwacom get `<id>` bottomy`
 
 Lets assume I want to constrain my tablet to the right monitor in the
 following setup:
@@ -62,6 +75,20 @@ follows:
 
 ` xsetwacom set `<stylus id>` area -50800 0 60960 50800`  
 ` xsetwacom set `<eraser id>` area -50800 0 60960 50800`
+
+Again, if you're running an old version of linuxwacom, you may need to
+use 'set' with each of TopX, TopY, BottomX, and BottomY instead to save
+your user-defined area.
+
+### To Have the Settings Last Through a Reboot
+
+You have to apply the xsetwacom command with each restart or rotation.
+You should be able to add it to your xsetwacom start up script, if you
+have one. Otherwise run it from a convenient start up script. A sample
+start up script is shown in [Sample Runtime
+Script](/wiki/Tablet_Configuration#Sample_Runtime_Script "wikilink"). Add the
+appropriate command for each device (stylus, eraser, and cursor) to its
+section.
 
 Python implementation
 ---------------------
