@@ -10,7 +10,8 @@ multi-head Xinerama setup. In such cases, it may be possible to work
 around the bug by modifying the 'Area' (TopX, TopY, BottomX, BottomY) of
 the stylus and eraser tools.
 
-### Walkthrough
+Walkthrough
+-----------
 
 The wacom driver scales and translates the raw tablet coordinates to fit
 onto your desktop. To work around the mapping issue, we can choose a
@@ -62,7 +63,8 @@ follows:
 ` xsetwacom set `<stylus id>` area -27709 0 84051 50800`  
 ` xsetwacom set `<eraser id>` area -27709 0 84051 50800`
 
-### Python implementation
+Python implementation
+---------------------
 
 The short Python program below can be copy/pasted and run to determine
 the correct numbers. You'll need to set the tablet and monitor

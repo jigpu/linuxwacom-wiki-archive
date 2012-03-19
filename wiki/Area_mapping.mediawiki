@@ -1,6 +1,6 @@
 Some old versions of GTK+ are known to have a bug which results in an offset between the pointer and the pen location when running in a multi-head Xinerama setup. In such cases, it may be possible to work around the bug by modifying the 'Area' (TopX, TopY, BottomX, BottomY) of the stylus and eraser tools.
 
-=== Walkthrough ===
+== Walkthrough ==
 The wacom driver scales and translates the raw tablet coordinates to fit onto your desktop. To work around the mapping issue, we can choose a very specific value for 'Area' which will result in the driver scaling and translating the tablet coordinates to fit onto a single monitor instead.
 
 For this to work, you will need to know the resolution of your desktop, the resolution of the target monitor, and the resolution of your tablet. To get the third, run the command "xsetwacom get <id> area". The four numbers "a b c d" printed out are the points (a,b) and (c,d) corresponding to the top-left and bottom-right of your tablet. The resolution will be (c-a) by (d-b) (e.g. "0 0 60960 45720" would be a resolution of 60960x45720)
@@ -20,7 +20,7 @@ Finally, using the origin and the width of our virtual tablet, we need to obtain
   xsetwacom set <eraser id> area -27709 0 84051 50800
 
 
-=== Python implementation ===
+== Python implementation ==
 The short Python program below can be copy/pasted and run to determine the correct numbers. You'll need to set the tablet and monitor resolutions to match your own setup.
 
 <pre>#!/usr/bin/env python
