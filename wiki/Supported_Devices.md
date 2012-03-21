@@ -50,7 +50,9 @@ stack. However patches for support are actively being developed. See the
 [wacom-kernel](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/wacom-kernel;a=shortlog;h=refs/heads/devel)
 repository and the [linuxwacom-devel
 archive](https://sourceforge.net/mailarchive/forum.php?forum_name=linuxwacom-devel).
-In the meantime you can use your usb "charging" cable.
+In the meantime you can use your usb "charging" cable. Basic support
+included in kernel 3.3. Full functional support will be provided in
+kernel 3.4.
 
 NOTE: A FreeBSD Wacom driver is available through the
 [FreeBSD](http://www.freshports.org/x11-drivers/input-wacom) ports
