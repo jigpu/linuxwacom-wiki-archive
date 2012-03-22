@@ -11,16 +11,19 @@ If you have at least the 2.6.35 kernel, particularly the more recent versions, y
 xinput list
 </pre>
 You should see WALTOP (capitalized) in the tablet/stylus line.  If you see another tablet name in the line you do not have a Waltop.  Use the version of Waltop you see as the key word in the match line for the following usb snippet.  Place the snippet in a new file you'll create in /etc/X11/xorg.conf.d called 52-waltop-on-wacom.conf.  The snippet should look like the following.
-{{Tip|text=A kernel bug in 2.6.35 and 2.6.36 causes both stylus buttons to emit the same button number despite being set to different values. This is fixed in 2.6.37, courtesy of the [http://digimend.sourceforge.net/#proj-kernel-patches DIGI''mend'' project] site.}}
+{{Tip|text=A kernel bug in 2.6.35 and 2.6.36 causes both stylus buttons to emit the same button number despite being set to different values. This is fixed in 2.6.37 with backport patches available on the [http://sourceforge.net/apps/mediawiki/digimend/index.php?title=Kernel_patches DIGI''mend'' project] site.}}
 <pre>
 Section "InputClass"
 	Identifier "Waltop on wacom class"
 	MatchProduct "WALTOP"
+	MatchIsTablet "on"
 	MatchDevicePath "/dev/input/event*"
 	Driver "wacom"
+
+        # Apply custom Options below.
 EndSection
 </pre>
-And that is all that is needed.  After a reboot your Waltop will now be using the Wacom X driver [[xf86-input-wacom]].  Since it is a system file you need root privileges.  If your system has gnome and sudo installed you can use:
+The MatchIsTablet match is used so only the Waltop's digitizer/stylus is matched, not its pad buttons.  This is because the pad buttons are not supported by xf86-input-wacom and should instead be on xf86-input-evdev.  After a reboot your Waltop will now be using the Wacom X driver [[xf86-input-wacom]].  Since it is a system file you need root privileges.  If your system has gnome and sudo installed you can use:
 <pre>
 gksudo gedit /etc/X11/xorg.conf.d/52-waltop-on-wacom.conf
 </pre>

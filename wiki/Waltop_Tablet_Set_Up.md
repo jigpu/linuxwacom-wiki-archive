@@ -40,12 +40,17 @@ look like the following.
     Section "InputClass"
         Identifier "Waltop on wacom class"
         MatchProduct "WALTOP"
+        MatchIsTablet "on"
         MatchDevicePath "/dev/input/event*"
         Driver "wacom"
+
+            # Apply custom Options below.
     EndSection
 
-And that is all that is needed. After a reboot your Waltop will now be
-using the Wacom X driver
+The MatchIsTablet match is used so only the Waltop's digitizer/stylus is
+matched, not its pad buttons. This is because the pad buttons are not
+supported by xf86-input-wacom and should instead be on xf86-input-evdev.
+After a reboot your Waltop will now be using the Wacom X driver
 [xf86-input-wacom](xf86-input-wacom "wikilink"). Since it is a system
 file you need root privileges. If your system has gnome and sudo
 installed you can use:
