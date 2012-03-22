@@ -14,7 +14,7 @@ You should see WALTOP (capitalized) in the tablet/stylus line.  If you see anoth
 {{Tip|text=A kernel bug in 2.6.35 and 2.6.36 causes both stylus buttons to emit the same button number despite being set to different values. This is fixed in 2.6.37 with backport patches available on the [http://sourceforge.net/apps/mediawiki/digimend/index.php?title=Kernel_patches DIGI''mend'' project] site.}}
 <pre>
 Section "InputClass"
-	Identifier "Waltop on wacom class"
+	Identifier "Waltop custom class"
 	MatchProduct "WALTOP"
 	MatchIsTablet "on"
 	MatchDevicePath "/dev/input/event*"

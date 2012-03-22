@@ -38,7 +38,7 @@ following usb snippet. Place the snippet in a new file you'll create in
 look like the following.
 
     Section "InputClass"
-        Identifier "Waltop on wacom class"
+        Identifier "Waltop custom class"
         MatchProduct "WALTOP"
         MatchIsTablet "on"
         MatchDevicePath "/dev/input/event*"
