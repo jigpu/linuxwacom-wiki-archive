@@ -84,7 +84,8 @@ follows:
 
 The response to the model query ("~\#") is formed as follows:
 
-` ~#`<Tablet model>` V`<Rom version>
+` ~#`<Tablet model>` V`<Rom version>`  (Digitizer II)`  
+` ~#`<Tablet model>`,V`<Rom version>`, (PenPartner)`
 
 The original code states:
 
@@ -92,10 +93,10 @@ The original code states:
 "look for the first V from the end of the string; this seems to be the
 better way to find the version of the ROM."
 
-The ROM versions, at least as observed for Digitizer II devices, are of
-the form
+The ROM versions, as observed presently, are of the form
 
-` `<decimal integer>`.`<decimal integer>
+` `<decimal integer>`.`<decimal integer>  
+` `<decimal integer>`.`<decimal integer>`-`<decimal integer>
 
 The original code uses the first two bytes after ~\# in the response to
 identify the model.
