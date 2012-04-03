@@ -31,7 +31,10 @@ Request Format
 
 Requests to the device are sent as carriage return (0x0d)-terminated
 ASCII strings (no linefeed). In the case that a response is expected,
-the response begins with the first two characters of the request.
+the response begins with the first two characters of the request. Note
+that the PenPartner seems to be exceptional in that it does not wait for
+a carriage return when sent ~\#, and more importantly, it does not
+terminate its response with a carriage return.
 
 ### Summary of Known Requests
 
