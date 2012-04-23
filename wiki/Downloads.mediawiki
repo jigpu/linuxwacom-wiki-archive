@@ -50,4 +50,4 @@ The following links may be of interest to some users. Please be aware that some 
 
 * [[wdaemon]]: Linux Wacom Hotplug Daemon
 * [http://hub.opensolaris.org/bin/view/Community+Group+device_drivers/wacomtablet OpenSolaris STREAMS module]
-* [http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309 Wacom Control Panel]
+* [http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309 Wacom Control Panel] (GNOME 2.x only, GNOME 3 has a wacom-specific control panel applet)

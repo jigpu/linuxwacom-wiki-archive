@@ -74,3 +74,4 @@ supported by the Linux Wacom Project.
     module](http://hub.opensolaris.org/bin/view/Community+Group+device_drivers/wacomtablet)
 -   [Wacom Control
     Panel](http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309)
+    (GNOME 2.x only, GNOME 3 has a wacom-specific control panel applet)
