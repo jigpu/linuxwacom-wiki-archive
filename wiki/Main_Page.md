@@ -6,9 +6,9 @@ layout: wiki
 
 <div style="padding:5px; border:1px solid #ffcc00; text-align:center; background:#FFFDDF; width:100%; margin-bottom:.2em;">
 We switched from the old website to a
-[MediaWiki](http://www.mediawiki.org). During the transition period, the
-old website is still available
-[here](http://linuxwacom.sourceforge.net/index_old.php).
+[MediaWiki](http://www.mediawiki.org). If you are running on kernels
+older than 2.6.30 or X servers older than 1.7, the old website is still
+available [here](http://linuxwacom.sourceforge.net/index_old.php).
 
 </div>
 **The Linux Wacom Project** manages the drivers, libraries, and

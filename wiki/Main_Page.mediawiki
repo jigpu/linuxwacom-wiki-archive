@@ -1,6 +1,6 @@
 <div style="padding:5px; border:1px solid #ffcc00; text-align:center; background:#FFFDDF; width:100%; margin-bottom:.2em;">
 We switched from the old website to a [http://www.mediawiki.org MediaWiki].
-During the transition period, the old website is still available
+If you are running on kernels older than 2.6.30 or X servers older than 1.7, the old website is still available
 [http://linuxwacom.sourceforge.net/index_old.php here].
 </div>
 
