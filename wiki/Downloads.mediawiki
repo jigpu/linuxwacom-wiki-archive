@@ -16,10 +16,10 @@ To determine your kernel version, open a terminal and run the following command:
 ! Linux Kernel
 ! Download
 |-
-| 2.6.37 - CURRENT
+| 3.0 - CURRENT
 | Please update through your distribution.
 |-
-| 2.6.26 - 2.6.36
+| 2.6.26 - 2.6.40
 | [[input-wacom]]
 |-
 | 2.6.16 - 2.6.25

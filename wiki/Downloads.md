@@ -32,11 +32,11 @@ backported kernel drivers are below.
 To determine your kernel version, open a terminal and run the following
 command: `uname -r`
 
-| Linux Kernel     | Download                                 |
-|------------------|------------------------------------------|
-| 2.6.37 - CURRENT | Please update through your distribution. |
-| 2.6.26 - 2.6.36  | [input-wacom](input-wacom "wikilink")    |
-| 2.6.16 - 2.6.25  | [linuxwacom](linuxwacom "wikilink")      |
+| Linux Kernel    | Download                                 |
+|-----------------|------------------------------------------|
+| 3.0 - CURRENT   | Please update through your distribution. |
+| 2.6.26 - 2.6.40 | [input-wacom](input-wacom "wikilink")    |
+| 2.6.16 - 2.6.25 | [linuxwacom](linuxwacom "wikilink")      |
 
 X11 drivers
 ===========
