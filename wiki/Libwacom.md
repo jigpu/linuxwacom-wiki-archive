@@ -122,7 +122,7 @@ Git Repository and Tar Files
 
 The git repository is [located
 here](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/libwacom;a=summary).
-To clone the git repository use: clone
+To clone the git repository use: git clone
 <git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/libwacom> The
 tar files are [located
 here](http://sourceforge.net/projects/linuxwacom/files/libwacom/).
