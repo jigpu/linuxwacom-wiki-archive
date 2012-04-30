@@ -65,10 +65,16 @@ Styli=0x802;0x80c;0x804;0x80a;0x40802;0x4080a;0x902;0x90a;0x20802;0x806;0x006;
 Reversible=true
 Stylus=true
 Ring=true
-VStrip=false
-HStrip=false
 Buttons=9
 BuiltIn=false
+
+[Buttons]
+Left=A;B;C;D;E;F;G;H;I
+
+OLEDs=B;C;D;E;F;G;H;I
+
+Ring=A
+RingNumModes=4
 </pre>
 
 Submit your [[Submitting Patches|git patch]] to [https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel linuxwacom-devel].

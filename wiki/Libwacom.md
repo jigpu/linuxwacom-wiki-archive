@@ -103,10 +103,16 @@ one:
     Reversible=true
     Stylus=true
     Ring=true
-    VStrip=false
-    HStrip=false
     Buttons=9
     BuiltIn=false
+
+    [Buttons]
+    Left=A;B;C;D;E;F;G;H;I
+
+    OLEDs=B;C;D;E;F;G;H;I
+
+    Ring=A
+    RingNumModes=4
 
 Submit your [git patch](/wiki/Submitting_Patches "wikilink") to
 [linuxwacom-devel](https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel).
