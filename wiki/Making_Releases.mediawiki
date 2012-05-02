@@ -1,4 +1,5 @@
-This page describes how to do a new xf86-input-wacom release. VERSION stands for the new version (e.g. 0.10.3), OLDVERSION for the previous version (e.g. 0.10.2).
+= xf86-input-wacom =
+This section describes how to do a new xf86-input-wacom release. VERSION stands for the new version (e.g. 0.10.3), OLDVERSION for the previous version (e.g. 0.10.2).
 
 # Change configure.ac to reflect the new version number and commit: '''git commit -sm "wacom VERSION" configure.ac''' You ''must not'' have uncommitted changes when releasing a new version.
 # Run '''autoreconf -iv''' or '''autogen.sh''', build and install the driver. Verify that the new version shows in the Xorg.log.
@@ -7,6 +8,22 @@ This page describes how to do a new xf86-input-wacom release. VERSION stands for
 # Push to the remote: '''git push origin master'''
 # Run the release script: '''sh release.sh'''. This script will push the tag and upload the tarballs to the remote.
 # Type up a short announce email summarising the new features in this version and append the git shortlog: '''git shortlog xf86-input-wacom-OLDVERSION..xf86-input-wacom-VERSION'''
+# '''Sign off the email''' and send it to the [[Mailing lists | linuxwacom-announce list]]
+
+Note that it may take a while until the uploaded tarballs are available through the download links.
+
+
+= libwacom =
+This section describes how to do a new [[libwacom]] release.  
+
+# Update <code>NEWS</code> with an outline of changes since the last version
+# Change configure.ac to reflect the new version number and commit: '''git commit -sm "libwacom VERSION" configure.ac NEWS''' You ''must not'' have uncommitted changes when releasing a new version.
+# Run '''autoreconf -iv''' or '''autogen.sh''', build and install the library. Verify that ''' pkg-config --modversion libwacom''' shows the new version
+# Run '''make distcheck'''. Verify the name of the tarball (libwacom-VERSION.tar.bz2).
+# Tag the module: '''git tag -m "libwacom VERSION" -s libwacom-VERSION
+# Push to the remote: '''git push origin master'''
+# Scp the tarball to sourceforge. [[DealingWithSourceforge|Create a shell]] and then run '''scp libwacom-VERSION.tar.bz2 USER@shell.sourceforge.net:/home/frs/project/l/li/linuxwacom/libwacom/'''
+# Generate the git shortlog with '''git log --no-merges libwacom-0.4..libwacom-0.5 | git shortlog''', then add the NEWS section you added above.
 # '''Sign off the email''' and send it to the [[Mailing lists | linuxwacom-announce list]]
 
 Note that it may take a while until the uploaded tarballs are available through the download links.
