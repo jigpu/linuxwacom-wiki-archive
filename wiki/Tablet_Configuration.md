@@ -132,8 +132,8 @@ possibilities. These assignments are just examples.**
 #### Graphire4
 
     xsetwacom set "Wacom Graphire4 4x5 pad" Button 1 "key p"  # Paintbrush
-    xsetwacom set "Wacom Graphire4 4x5 pad" AbsWheelDown "key minus"  # Zoom out
-    xsetwacom set "Wacom Graphire4 4x5 pad" AbsWheelUp "key plus"  # Zoom in
+    xsetwacom set "Wacom Graphire4 4x5 pad" RelWheelDown "key minus"  # Zoom out
+    xsetwacom set "Wacom Graphire4 4x5 pad" RelWheelUp "key plus"  # Zoom in
     xsetwacom set "Wacom Graphire4 4x5 pad" Button 2 "key ctrl z"  # Undo
 
 #### Bamboo
