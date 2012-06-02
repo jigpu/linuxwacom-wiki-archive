@@ -6,32 +6,39 @@ The linuxwacom project welcomes additions to its mediawiki so please join in if 
 Be aware the Wacom drivers are rapidly evolving and some of this information may become dated.  If so feel free to update and correct the mediawiki.
 
 == Set Up ==
-If you have at least the 2.6.35 kernel, particularly the more recent versions, you should be able to get your tablet working on the Wacom driver.  Patches have been submitted by Nikolai Kondrashov to the kernel that should improve Waltop tablet compatibility with the Wacom driver starting in the 2.6.36 or 2.6.37 kernels. Waltop tablets are often re-branded and will carry another OEM's name.  To verify that your tablet/stylus is indeed identified as a WALTOP (and to determine the identifier for the match line) enter in a terminal the following.
+Starting with the 2.6.35 kernel some Waltop tablets were again supported by the Wacom X driver, [[xf86-input-wacom]].   Ongoing work on the kernel continues to add more  Waltop models and improve Waltop support, including compatibility with the Wacom X driver.  Nikolai Kondrashov from the DIGI''mend'' project is involved in much of this work.
+
+Waltop tablets are often re-branded and will carry another OEM's name.  To verify that your tablet/stylus is indeed identified as a WALTOP (and to check the keyword for the match line) enter in a terminal the following.
 <pre>
 xinput list
 </pre>
-You should see WALTOP (capitalized) in the tablet/stylus line.  If you see another tablet name in the line you do not have a Waltop.  Use the version of Waltop you see as the key word in the match line for the following usb snippet.  Place the snippet in a new file you'll create in /etc/X11/xorg.conf.d called 52-waltop-on-wacom.conf.  The snippet should look like the following.
-{{Tip|text=A kernel bug in 2.6.35 and 2.6.36 causes both stylus buttons to emit the same button number despite being set to different values. This is fixed in 2.6.37 with backport patches available on the [http://sourceforge.net/apps/mediawiki/digimend/index.php?title=Kernel_patches DIGI''mend'' project] site.}}
+You should see WALTOP (capitalized) in the tablet/stylus line(s).  If you see another tablet name in the line you do not have a Waltop.
+
+=== 52-waltop.conf ===
+To use static options for your tablet's pen place the following snippet in a new file you'll create in /etc/X11/xorg.conf.d called '''52-waltop.conf'''.  The snippet should look like the following.
+{{Tip|text=A kernel bug in 2.6.35 and 2.6.36 causes both stylus buttons to emit the same button number despite being set to different values. This is fixed in 2.6.37 with backport patches available for 2.6.35 and 2.6.36 on the [http://sourceforge.net/apps/mediawiki/digimend/index.php?title=Kernel_patches DIGI''mend'' project] site.}}
 <pre>
 Section "InputClass"
-	Identifier "Waltop custom class"
+	Identifier "Waltop pen"
 	MatchProduct "WALTOP"
 	MatchIsTablet "on"
 	MatchDevicePath "/dev/input/event*"
 	Driver "wacom"
-
         # Apply custom Options below.
+
 EndSection
 </pre>
-The MatchIsTablet match is used so only the Waltop's digitizer/stylus is matched, not its pad buttons.  This is because the pad buttons are not supported by xf86-input-wacom and should instead be on xf86-input-evdev.  After a reboot your Waltop will now be using the Wacom X driver [[xf86-input-wacom]].  Since it is a system file you need root privileges.  If your system has gnome and sudo installed you can use:
+The MatchIsTablet match is used so only the Waltop's digitizer/stylus is matched, not its pad buttons.  This is because the pad buttons are not supported by xf86-input-wacom and should instead be on xf86-input-evdev.  Since it is a system file you need root privileges.  If your system has gnome and sudo installed you can use:
 <pre>
 gksudo gedit /etc/X11/xorg.conf.d/52-waltop-on-wacom.conf
 </pre>
 You would use whatever text editor and root privilege access your distribution supplies of course.
 
+If your tablet has a multifunction dial (jog wheel) and you would like to enable the scroll function see [http://sourceforge.net/apps/mediawiki/digimend/index.php?title=Tablet_setup_with_xf86-input-wacom#52-waltop.conf 52-waltop.conf] on the DIGI''mend'' mediawiki site.
+
 You're using the /etc/X11/xorg.conf.d directory because that is where user specific changes are suppose to go.  The /usr/share/X11/xorg.conf.d directory is for distribution configuration files and may be overwritten by a distribution update.  Using /etc/X11/xorg.conf.d avoids this possibility.
 
-It's possible additional changes to support your Waltop may have been made since your distribution's default version of [[xf86-input-wacom]].  If your distribution hasn't been updating it you may want to consider cloning it from the git repository.
+It's possible additional changes to support your Waltop may have been made since your distribution's default version of xf86-input-wacom.  If your distribution hasn't been updating it you may want to consider cloning it from the git repository.
 
 == Calibration of Your Stylus ==
 See the [[Calibration|Calibration HOWTO]].
