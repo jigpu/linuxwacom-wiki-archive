@@ -58,7 +58,7 @@ supported by xf86-input-wacom and should instead be on xf86-input-evdev.
 Since it is a system file you need root privileges. If your system has
 gnome and sudo installed you can use:
 
-    gksudo gedit /etc/X11/xorg.conf.d/52-waltop-on-wacom.conf
+    gksudo gedit /etc/X11/xorg.conf.d/52-waltop.conf
 
 You would use whatever text editor and root privilege access your
 distribution supplies of course.

@@ -30,7 +30,7 @@ EndSection
 </pre>
 The MatchIsTablet match is used so only the Waltop's digitizer/stylus is matched, not its pad buttons.  This is because the pad buttons are not supported by xf86-input-wacom and should instead be on xf86-input-evdev.  Since it is a system file you need root privileges.  If your system has gnome and sudo installed you can use:
 <pre>
-gksudo gedit /etc/X11/xorg.conf.d/52-waltop-on-wacom.conf
+gksudo gedit /etc/X11/xorg.conf.d/52-waltop.conf
 </pre>
 You would use whatever text editor and root privilege access your distribution supplies of course.
 
