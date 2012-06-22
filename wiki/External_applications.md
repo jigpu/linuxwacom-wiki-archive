@@ -90,7 +90,7 @@ Utilities
 <!-- -->
 
 -   **[Magick Rotation](https://launchpad.net/magick-rotation)**: An
-    application that will help Dell, HP, and Lenovo tablet pc's
+    application that will help Dell, Fujitsu, HP, and Lenovo tablet PC's
     automatically rotate screen orientation and devices that use the
     Wacom or evdev drivers.
 
