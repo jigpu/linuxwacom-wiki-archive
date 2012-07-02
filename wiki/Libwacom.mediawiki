@@ -1,5 +1,5 @@
 __TOC__
-Libwacom is a new library to help implement Wacom tablet settings.  It is intended to be used by both the xf86-input-wacom driver and client-programs that need model identification. It is already being used by the gnome-settings-daemon and the GNOME 3.4 Control Center Wacom tablet applet.
+Libwacom is a new library to help implement Wacom tablet settings.  It is intended to be used by client-programs that need model identification. It is already being used by the gnome-settings-daemon and the GNOME 3.4 Control Center Wacom tablet applet. In the future, the [[xf86-input-wacom]] driver may use it as well.
 
 == Purpose ==
 Libwacom supplies metadata about Wacome tablets including whether or not they are connected to your system, the list of styli it supports, as well as information about the styli themselves.  In the past this information was only available within the drivers (as comments), exported in different ways (sysfs attributes), non-machine readable in public documentation, or, worst of all, hidden in Wacom's internal drivers for OS X or Windows.

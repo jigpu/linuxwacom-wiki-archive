@@ -7,10 +7,11 @@ tags:
 ---
 
 Libwacom is a new library to help implement Wacom tablet settings. It is
-intended to be used by both the xf86-input-wacom driver and
-client-programs that need model identification. It is already being used
-by the gnome-settings-daemon and the GNOME 3.4 Control Center Wacom
-tablet applet.
+intended to be used by client-programs that need model identification.
+It is already being used by the gnome-settings-daemon and the GNOME 3.4
+Control Center Wacom tablet applet. In the future, the
+[xf86-input-wacom](xf86-input-wacom "wikilink") driver may use it as
+well.
 
 Purpose
 -------
