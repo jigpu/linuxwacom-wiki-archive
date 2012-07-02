@@ -52,7 +52,8 @@ release.
 4.  Run **make distcheck**. Verify the name of the tarball
     (libwacom-VERSION.tar.bz2).
 5.  Tag the module: '''git tag -m "libwacom VERSION" -s libwacom-VERSION
-6.  Push to the remote: **git push origin master**
+6.  Push to the remote: **git push origin master** and for the tag **git
+    push origin libwacom-VERSION**
 7.  Scp the tarball to sourceforge. [Create a
     shell](/wiki/DealingWithSourceforge "wikilink") and then run **scp
     libwacom-VERSION.tar.bz2
