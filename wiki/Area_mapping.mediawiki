@@ -1,4 +1,4 @@
-Some old versions of GTK+ are known to have a bug which results in an offset between the pointer and the pen location when running in a multi-head Xinerama setup. In such cases, it may be possible to work around the bug by modifying the 'Area' (or, for old versions of linuxwacom, the TopX, TopY, BottomX, and BottomY) property of the stylus and eraser tools.
+GTK+ is known to have a bug which can result in an offset between the pointer and the pen location when running in a multi-head Xinerama setup. In such cases, it is sometimes possible to work around the bug by modifying the 'Area' (or, for old versions of linuxwacom, the TopX, TopY, BottomX, and BottomY) property of the stylus and eraser tools.
 
 == Walkthrough ==
 The wacom driver scales and translates the raw tablet coordinates to fit onto your desktop. To work around the mapping issue, we can choose a very specific value for 'Area' which will result in the driver scaling and translating the tablet coordinates to fit onto a single monitor instead.
