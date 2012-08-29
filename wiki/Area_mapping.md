@@ -6,11 +6,13 @@ tags:
  - HOWTO
 ---
 
-GTK+ is known to have a bug which can result in an offset between the
-pointer and the pen location when running in a multi-head Xinerama
-setup. In such cases, it is sometimes possible to work around the bug by
-modifying the 'Area' (or, for old versions of linuxwacom, the TopX,
-TopY, BottomX, and BottomY) property of the stylus and eraser tools.
+GTK+ is known to have a bug (see [Bug
+602733](https://bugzilla.gnome.org/show_bug.cgi?id=602733)) which can
+result in an offset between the pointer and the pen location when
+running in a multi-head Xinerama setup. Until patches are merged
+upstream, it may be possible to work around this bug by modifying the
+'Area' (or, for old versions of linuxwacom, the TopX, TopY, BottomX, and
+BottomY) property of the stylus and eraser tools.
 
 Walkthrough
 -----------
