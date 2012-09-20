@@ -38,7 +38,8 @@ See [Building the driver](/wiki/Building_the_driver "wikilink") and
 Are there any graphical configuration tools?
 --------------------------------------------
 
-See [Graphical Configuration
+Both GNOME and KDE configuration GUIs are available. See [Graphical
+Configuration
 Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
 How do I calibrate my tablet or tablet PC?

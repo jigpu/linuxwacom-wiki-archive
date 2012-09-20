@@ -16,7 +16,7 @@ xf86-input-wacom is the preferred driver for X Servers 1.7 and later. linuxwacom
 See [[Building the driver]] and [[Configuring X]]
 
 == Are there any graphical configuration tools? ==
-See [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
+Both GNOME and KDE configuration GUIs are available.  See [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
 
 == How do I calibrate my tablet or tablet PC? ==
 See the [[Calibration#Calibration|Calibration HOWTO]].
