@@ -130,9 +130,7 @@ Where is wacomcpl (the Wacom Control Panel)?
 
 Wacomcpl is not packaged with
 [xf86-input-wacom](xf86-input-wacom "wikilink") and will not work with
-it. Work is proceeding on a replacement integrated into the GNOME
-Desktop environment. For links and an explanation see [Graphical
-Configuration
+it. For an explanation see [Graphical Configuration
 Tools](/wiki/External_applications#Graphical_Configuration_Tools "wikilink").
 
 Who is responsible for this code?

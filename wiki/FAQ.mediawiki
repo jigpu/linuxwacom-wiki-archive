@@ -52,7 +52,7 @@ Yes, but only for devices configured via [[Configuring X|HAL or xorg.conf.d]]. I
 The xf86-input-wacom driver does support some non-wacom tablets including those by Hanwang, N-Trig, and Waltop.  For KYE and UC-Logic graphics tablet support and additional Waltop information see the [https://sourceforge.net/apps/mediawiki/digimend/index.php?title=DIGImend DIGI''mend'' project].
 
 == Where is wacomcpl (the Wacom Control Panel)? ==
-Wacomcpl is not packaged with [[xf86-input-wacom]] and will not work with it.  Work is proceeding on a replacement integrated into the GNOME Desktop environment.  For links and an explanation see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
+Wacomcpl is not packaged with [[xf86-input-wacom]] and will not work with it.  For an explanation see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
 
 == Who is responsible for this code? ==
 You are. Linux Wacom is an open source project and driven by Linux users with Wacom tablets such as yourself. John Joganic took up the code in November of 2002 and created this project. The source code was written by at least two dozen individuals, most of them are not directly involved in the project any more. Ping Cheng has assumed the project administrator since 2003. You can help out by testing, reporting bugs, documentation on this wiki and of course by writing patches (see the [[mailing lists]]).
