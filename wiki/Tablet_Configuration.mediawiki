@@ -1,11 +1,13 @@
 __TOC__
 This page shows you how to assemble a runtime or static configuration for a specific tablet or tablet PC model.  Additionally it demonstrates how to create profiles for various applications.
 
+Currently [[xf86-input-wacom]] has both a GNOME and a KDE configuration GUI, see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].  ''If you know of another configuration GUI please notify us of it.''  The GUI appropriate to your Desktop may satisfy all of your configuration needs.
+
+This HOWTO should help for configuration requirements beyond the current GUIs feature set or to delve into the nuts and bolts of the configuration options offered by xf86-input-wacom.  First runtime xsetwacom commands, scripts, and profiles are explored.  And then static options for the xorg.conf.d and xorg.conf are briefly discussed.
+
+The legacy linuxwacom package included '''wacomcpl''' as a tablet configuration GUI and it stored its settings as a [[xsetwacom]] script in '''.xinitrc'''.  It is relatively straightforward to duplicate the .xinitrc runtime script, calling it say '''.xsetwacom.sh'''.  Be sure to read ''man wacom'', ''man xsetwacom'', [[Xsetwacom|xsetwacom]], and enter ''xsetwacom list parameters'' in a terminal to learn about the parameters or Options you may want to change.  As you will see a script can give you some finer control over your tablet's features and also let you create profiles.
+
 The linuxwacom project welcomes additions to its mediawiki so please join in if you have contributions.
-
-Currently [[xf86-input-wacom]] does not have a configuration gui like linuxwacom's Wacom Control Panel (wacomcpl).  However since '''wacomcpl''' stored its settings as a [[xsetwacom]] script in '''.xinitrc''' you can essentially duplicate the .xinitrc, calling it say '''.xsetwacom.sh'''.  '''This can be considered a work around''' while waiting for the development of a Tablet Configuration GUI, see [[External applications#Graphical Configuration Tools|Graphical Configuration Tools]].
-
-It should be relatively straight forward to assemble a configuration script for your tablet.  Be sure to read ''man wacom'', ''man xsetwacom'', [[Xsetwacom]], and enter ''xsetwacom list parameters'' in a terminal to learn about the parameters or Options you may want to change.  As you will see a script can give you some finer control over your tablet's features and also let you create profiles.
 
 == Runtime (xsetwacom) Configuration ==
 A ''xsetwacom set'' command assigns a specified value to a parameter during runtime.  The ''xsetwacom get'' command returns the current value the parameter is ''set'' to.
