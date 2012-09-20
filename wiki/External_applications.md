@@ -49,38 +49,46 @@ Utilities
 
 ### Graphical Configuration Tools
 
--   **[Wacom Control
-    Panel](http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309)**:
-    This utility allows you to automatically detect and configure a wide
-    range of wacom products. Automatically remembers and reapplies
-    settings on startup.
+-   for xf86-input-wacom
+    -   **[Wacom Graphics
+        Tablet](http://git.gnome.org/browse/gnome-control-center/tree/panels/wacom)**:
+        A [GNOME control
+        center](http://git.gnome.org/browse/gnome-control-center)
+        applet. Using both the gnome-settings-daemon [wacom
+        plugin](http://git.gnome.org/browse/gnome-settings-daemon/tree/plugins/wacom)
+        and [libwacom](/wiki/Libwacom "wikilink") the applet is gaining a full
+        [feature
+        set](http://blogs.gnome.org/cosimoc/2012/09/11/wacom-3-6/).
+    -   **[Wacom
+        Tablet](http://kde-apps.org/content/show.php/wacom+tablet?content=114856)**:
+        A KDE 4 KCModule. This KDE system tool implements a GUI for the
+        Wacom Linux Drivers and extends it with profile support to
+        handle different button/pen layouts per profile.
 
 <!-- -->
 
--   **[gnome-control-center](http://git.gnome.org/browse/gnome-control-center)**:
-    An applet to support tablet configuration from the GNOME control
-    center is under development. See [GNOME Bug
-    640981](https://bugzilla.gnome.org/show_bug.cgi?id=640981).
+-   for linuxwacom
+    -   **[wacomcpl](/wiki/Linuxwacom_HOWTO#Building_wacomcpl "wikilink")**: A
+        Tcl/Tk-based GUI tool shipped as part of the
+        [linuxwacom](linuxwacom "wikilink") tarball. It is now
+        unsupported and **does not work** with
+        [xf86-input-wacom](xf86-input-wacom "wikilink"). The design of
+        wacomcpl is not suited to hotplugging and it will not be
+        updated. Since wacomcpl does not integrate with any desktop
+        environment, any work on wacomcpl is a dead end. **Do not work
+        on wacomcpl, invest your efforts on integrating wacom support in
+        your desktop environment instead.**
 
 <!-- -->
 
--   **[Wacom
-    Tablet](http://kde-apps.org/content/show.php/wacom+tablet?content=114856)**:
-    A KDE 4 KCModule. This KDE system tool implements a GUI for the
-    Wacom Linux Drivers and extends it with profile support to handle
-    different button/pen layouts per profile.
-
-<!-- -->
-
--   **wacomcpl**: A Tcl/Tk-based GUI tool shipped as part of the
-    [linuxwacom](linuxwacom "wikilink") tarball. It is now unsupported
-    and **does not work** with
-    [xf86-input-wacom](xf86-input-wacom "wikilink"). The design of
-    wacomcpl is not suited to hotplugging and it will not be updated.
-    Since wacomcpl does not integrate with any desktop environment, any
-    work on wacomcpl is a dead end. **Do not work on wacomcpl, invest
-    your efforts on integrating wacom support in your desktop
-    environment instead.**
+-   development halted - developer willing to hand off project
+    -   **[Wacom Control
+        Panel](http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309)**:
+        This utility allows you to automatically detect and configure a
+        wide range of Wacom products. Automatically remembers and
+        reapplies settings on startup. Both linuxwacom and
+        xf86-input-wacom versions available. Last updated to support
+        Ubuntu Maverick (10.10) Jun 2 2011.
 
 ### Other Utilities
 
