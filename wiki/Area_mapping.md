@@ -6,20 +6,19 @@ tags:
  - HOWTO
 ---
 
-The GTK+ toolkit is known to have have a problem working with tablets in
-a multi-head Xinerama setup. If the tablet is mapped to less than the
-full desktop, an offset can appear between the position of the pointer
-(as drawn by the X server) and the position of the brush (as interpreted
-by e.g. GIMP). Several bugs related to this behavior exist in the GNOME
-bugzilla (see [Bug
+The GTK+ toolkit is known to have have problems working with tablets in
+a multi-head Xinerama setup. These bugs manifest themselves as an offset
+between the position of the pointer (as drawn by the X server) and the
+position of the brush (as interpreted by e.g. GIMP). Several bugs exist
+in the GNOME bugzilla (see [Bug
 68813](https://bugzilla.gnome.org/show_bug.cgi?id=66813), [Bug
 634977](https://bugzilla.gnome.org/show_bug.cgi?id=634977), and [Bug
 602733](https://bugzilla.gnome.org/show_bug.cgi?id=602733)) but no
 solution has yet been accepted upstream.
 
-In some cases, it is possible to work around this issue by modifying the
-'Area' property of the stylus/eraser instead of using 'MapToOutput'.
-This page describes the process in detail.
+In some cases, it is possible to work around offset issues triggered by
+using 'MapToOutput'. This page describes the process of using the 'Area'
+property to achieve the same effect.
 
 Walkthrough
 -----------
