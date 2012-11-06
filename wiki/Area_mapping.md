@@ -6,13 +6,20 @@ tags:
  - HOWTO
 ---
 
-GTK+ is known to have a bug (see [Bug
-602733](https://bugzilla.gnome.org/show_bug.cgi?id=602733)) which can
-result in an offset between the pointer and the pen location when
-running in a multi-head Xinerama setup. Until patches are merged
-upstream, it may be possible to work around this bug by modifying the
-'Area' (or, for old versions of linuxwacom, the TopX, TopY, BottomX, and
-BottomY) property of the stylus and eraser tools.
+The GTK+ toolkit is known to have have a problem working with tablets in
+a multi-head Xinerama setup. If the tablet is mapped to less than the
+full desktop, an offset can appear between the position of the pointer
+(as drawn by the X server) and the position of the brush (as interpreted
+by e.g. GIMP). Several bugs related to this behavior exist in the GNOME
+bugzilla (see [Bug
+68813](https://bugzilla.gnome.org/show_bug.cgi?id=66813), [Bug
+634977](https://bugzilla.gnome.org/show_bug.cgi?id=634977), and [Bug
+602733](https://bugzilla.gnome.org/show_bug.cgi?id=602733)) but no
+solution has yet been accepted upstream.
+
+In some cases, it is possible to work around this issue by modifying the
+'Area' property of the stylus/eraser instead of using 'MapToOutput'.
+This page describes the process in detail.
 
 Walkthrough
 -----------
