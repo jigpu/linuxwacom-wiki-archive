@@ -65,3 +65,25 @@ release.
 
 Note that it may take a while until the uploaded tarballs are available
 through the download links.
+
+input-wacom
+===========
+
+This section describes how to do a new
+[input-wacom](input-wacom "wikilink") release.
+
+1.  Change configure.ac to reflect the new version number and commit:
+    **git commit -sm "input-wacom VERSION" configure.ac** You *must not*
+    have uncommitted changes when releasing a new version.
+2.  Run **make dist**. Verify the name of the tarball
+    (input-wacom-VERSION.tar.bz2).
+3.  Build, install, and test the driver from the tarball
+4.  Tag the module: '''git tag -m "input-wacom VERSION" -s
+    input-wacom-VERSION
+5.  Run the release script: **sh release.sh**. This script will push the
+    tag and upload the tarball to the remote.
+6.  Type up a short announce email summarising the new features in this
+    version and append the git shortlog: **git shortlog
+    input-wacom-OLDVERSION..input-wacom-VERSION**
+7.  **Sign off the email** and send it to the [ linuxwacom-announce
+    list](/wiki/Mailing_lists "wikilink")
