@@ -28,7 +28,7 @@ This page is a list of external applications that can make use of Wacom tablets 
 === Other Utilities ===
 * '''[[wdaemon]]''': A hotplugging daemon for wacom devices.
 
-* '''[https://launchpad.net/magick-rotation Magick Rotation]''': An application that will help Dell, Fujitsu, HP, and Lenovo tablet PC's automatically rotate screen orientation and devices that use the Wacom or evdev drivers.
+* '''[https://launchpad.net/magick-rotation Magick Rotation]''': An application that will help Dell, Fujitsu, HP, and Lenovo convertible tablet PC's automatically rotate screen orientation and devices that use the Wacom or evdev drivers.
 
 * '''[http://www.freedesktop.org/wiki/Software/xinput_calibrator xinput_calibrator]''': A generic touchscreen calibration program for X.Org.
 
