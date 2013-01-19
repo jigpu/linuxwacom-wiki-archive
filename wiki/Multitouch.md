@@ -270,8 +270,8 @@ scrolling in Mouse and Touchpad for the application to see the X Server
 one and two finger touches. This is explained on the wiki page [Touchpad
 Support](https://wiki.ubuntu.com/Multitouch/TouchpadSupport).
 
-The Synaptics driver has a many configuration options. See \[b\]man
-synaptics\[/b\] and \[b\]man synclient\[/b\] in a terminal.
+The Synaptics driver has a many configuration options. See **man
+synaptics** and **man synclient** in a terminal.
 
 #### Gesture Engines for GNOME Shell, KDE, MATE, and Cinnamon Desktops
 
