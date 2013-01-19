@@ -303,8 +303,8 @@ wishes.xml file in /usr/share located at /usr/share/ginn.
 
 Ginn, once installed from the repository, works in Kubuntu Precise
 (12.04) with xf86-input-wacom-0.18.0 or higher as soon as the xsetwacom
-command \[b\]Gesture off\[/b\] is run. Presumably it will also work with
-the Gnome Shell Desktop and Mint 13 Maya's Cinnamon or MATE Desktops.
+command **Gesture off** is run. Presumably it will also work with the
+Gnome Shell Desktop and Mint 13 Maya's Cinnamon or MATE Desktops.
 
 ##### Touchégg
 

@@ -125,7 +125,7 @@ In addition to the one built into the Unity Desktop Ubuntu has two gesture engin
 ===== Ginn =====
 Ginn is an acronym for Gesture Injector: No-GEIS, No-Toolkits.  Available at this [https://launchpad.net/ginn launchpad site].  Instructions for editing the ginn configuration file wishes.xml (located at /etc/ginn/wishes.xml) to add custom gestures is available in '''man ginn''' entered in a terminal.  Also see the [https://wiki.ubuntu.com/Multitouch/Ginn ginn wiki page].  There is a duplicate wishes.xml file in /usr/share located at /usr/share/ginn.
 
-Ginn, once installed from the repository, works in Kubuntu Precise (12.04) with xf86-input-wacom-0.18.0 or higher as soon as the xsetwacom command [b]Gesture off[/b] is run.  Presumably it will also work with the Gnome Shell Desktop and Mint 13 Maya's Cinnamon or MATE Desktops.
+Ginn, once installed from the repository, works in Kubuntu Precise (12.04) with xf86-input-wacom-0.18.0 or higher as soon as the xsetwacom command '''Gesture off''' is run.  Presumably it will also work with the Gnome Shell Desktop and Mint 13 Maya's Cinnamon or MATE Desktops.
 
 ===== Touchégg =====
 Downloads available at the [http://code.google.com/p/touchegg/ touchegg site] along with a wiki with instructions.  [http://task3.cc/1068/os-x-like-multitouch-gestures-for-macbook-pro-running-ubuntu-12-10/ "OS X-like multitouch gestures for Macbook Pro running Ubuntu 12.10"] appears to be a good tutorial.
