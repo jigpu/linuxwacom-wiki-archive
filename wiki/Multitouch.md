@@ -285,8 +285,7 @@ through Precise. However Ginn appears incompatible with the version of
 the Unity Desktop in Precise and later. See the launchpad bug report
 [\#985121](https://bugs.launchpad.net/ubuntu/+source/ginn/+bug/985121).
 Because Ginn is no longer installed by default after Precise and has
-been moved to the Universe repository
-[Touchégg](http://code.google.com/p/touchegg/) is probably the way to go
+been moved to the Universe repository Touchégg is probably the way to go
 for Quantal and later. Especially since there is now a gesture
 configuration gui for it. The Touchégg in Precise's repository is broken
 and a newer version needs to be compiled to get it working in Precise, a
