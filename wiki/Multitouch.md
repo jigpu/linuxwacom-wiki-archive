@@ -341,7 +341,7 @@ The touchegg.conf file appears at ~/.config/touchegg after a reboot.
 Like ginn there is a duplicate example .conf file in /usr/share at
 /usr/share/touchegg. The Touchegg-gce gui edits the .conf file at
 ~/.config/touchegg/touchegg.conf and presumably that is the active one.
-To install the gui on Maya/Precise I did the following.
+To install the gui on Maya/Precise run the following.
 
     cd Desktop
     git clone https://github.com/Raffarti/Touchegg-gce.git
