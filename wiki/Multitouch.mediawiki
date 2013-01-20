@@ -64,7 +64,7 @@ Because the multitouch Xorg patches were posted and merged to master before GTK+
 Already much of the [http://fedoraproject.org/wiki/Features/Multitouch_support multitouch plumbing] is in place.  Fedora 19 is scheduled for May 21,2013 and will have Gnome 3.8.
 
 === KDE Desktop ===
-"Qt has had multitouch for quite some time and KDE also makes use of it already on X11. E.g. Plasma Active on Mer supports multi touch, but Plasma Active on openSUSE does not."
+"Qt has had multitouch for quite some time and KDE also makes use of it already on X11. E.g. [http://en.wikipedia.org/wiki/Mer_%28operating_system%29 Plasma Active on Mer] supports multi touch, but Plasma Active on openSUSE does not."
 
 ==== Qt ====
 Qt5.0 uses a different method to define the beginning and end of a touch "gesture" compared to XI 2.2.  Qt's current method will be retained and perhaps enhanced.

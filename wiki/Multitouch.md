@@ -168,8 +168,9 @@ in place. Fedora 19 is scheduled for May 21,2013 and will have Gnome
 ### KDE Desktop
 
 "Qt has had multitouch for quite some time and KDE also makes use of it
-already on X11. E.g. Plasma Active on Mer supports multi touch, but
-Plasma Active on openSUSE does not."
+already on X11. E.g. [Plasma Active on
+Mer](http://en.wikipedia.org/wiki/Mer_%28operating_system%29) supports
+multi touch, but Plasma Active on openSUSE does not."
 
 #### Qt
 
