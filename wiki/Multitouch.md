@@ -56,8 +56,8 @@ or using xsetwacom.
 
 Of course you would use your touch <device name> from **xinput list**.
 
-Two Finger Gestures
--------------------
+In-driver Two Finger Gestures
+-----------------------------
 
 When first using a Wacom tablet's "touchpad" features you have to be
 patient because there is somewhat of a learning curve. It does not have
@@ -66,11 +66,12 @@ direction is reversed from Synaptic touchpad scrolling. Visualize it as
 grabbing the page with two fingers then sliding it up or down or left
 and right.
 
-Once you've developed a feel for Wacom touch you can slowly try varying
-some of the xsetwacom parameters, see **man xsetwacom**. In addition you
-can also change the "feel" of your tablet's touch by adjusting the
-xinput Acceleration Profile algorithm and its Device Acceleration
-parameters. Details are available in this FreeDesktop wiki article
+Once you've developed a feel for Wacom touch you can try varying the
+default values of the parameters ZoomDistance, ScrollDistance, and
+TapTime. In addition you can also change the "feel" of your tablet's
+touch by adjusting the xinput Acceleration Profile algorithm and its
+Device Acceleration parameters. Details are available in this
+FreeDesktop wiki article
 [PointerAcceleration](http://xorg.freedesktop.org/wiki/Development/Documentation/PointerAcceleration).
 
 ### Gesture List
