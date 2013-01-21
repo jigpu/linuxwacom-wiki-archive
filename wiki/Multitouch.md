@@ -155,9 +155,14 @@ Because the multitouch Xorg patches were posted and merged to master
 before GTK+ 3.4 came out, a minimal touch-related API was included in
 GTK+ 3.4 to provide [basic touch
 support](http://blogs.gnome.org/mclasen/2012/03/02/gtk-hackfest-aftermath/).
-Carlos Garnacho on his blog has demonstration code, the
+Carlos Garnacho on [his
+blog](http://blogs.gnome.org/carlosg/2012/01/20/multitouch-is-near/) has
+demonstration code, the
 [gtkgesturesinterpreter.c](http://git.gnome.org/browse/gtk+/tree/gtk/gtkgesturesinterpreter.c?h=multitouch#n1332)
-along with a demo video.
+along with a demo video. And his [gestures
+branch](http://git.gnome.org/browse/gtk+/commit/?h=gestures) with a
+simple gestures demo was committed to [GTK+
+1-17-13](http://git.gnome.org/browse/gtk+/?h=multitouch).
 
 #### Fedora
 
