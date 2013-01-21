@@ -115,10 +115,11 @@ Device Accel Profile of 0, consider runtime xinput commands using the
 appropriate "Device Accel" parameters to compensate. Over acceleration
 can be caused by a couple of things. When the tablet is initialised as
 relative device, the X server doesn't have an axis range to help in
-scaling the movement. Also Wacom touch has a higher resolution than the
-average mouse/synaptic touchpad, so it sends more events (a higher data
-rate). So it can be too fast for the default mouse settings, which is
-why increasing Constant Deceleration makes sense.
+scaling the movement. Also because Wacom touch has a higher resolution
+than the average mouse/synaptic touchpad it sends more events (a higher
+data rate). So the event stream can be faster than the default
+mouse/synaptic settings expect, which is why increasing Constant
+Deceleration makes sense.
 
 The defaults are 1, 1, and 10 for *Constant Deceleration*, *Adaptive
 Deceleration*, and *Velocity Scaling*. For an example let's use a Wacom
