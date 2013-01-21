@@ -116,7 +116,10 @@ BambooPT button functions in xf86-input-synaptics as set by the kernel driver wa
 
 Note that one and two finger touch is being processed in the synaptics driver and so a X Server multitouch aware application would not see the one and two finger touches.  In that case you have to disable "Enable mouse clicks with touchpad" and either disable scrolling or select Edge scrolling in Mouse and Touchpad for the application to see the X Server one and two finger touches.  This is explained on the wiki page [https://wiki.ubuntu.com/Multitouch/TouchpadSupport Touchpad Support].
 
-The Synaptics driver has a many configuration options.  See '''man synaptics''' and '''man synclient''' in a terminal.
+The Synaptics driver has many configuration options.  See '''man synaptics''' and '''man synclient''' in a terminal.
+
+==== Turning Unity Gestures Off ====
+For UI consistency reasons Unity makes no provision for modifying its stock gestures or adding gestures.  Also by design Unity does not allow disabling its system gestures which is necessary to use another gesture engine to customize gestures.  See [https://docs.google.com/document/d/1WJF8YdphrorvHiB5FFVxsitL5Pz-tpZ5-kmtzoD3tFc/edit# "Unity Gesture UI Guidelines"].  On askubuntu [http://askubuntu.com/questions/57586/how-can-i-disable-arbitrary-default-multitouch-gestures-in-unity "How can I disable arbitrary default multitouch gestures in Unity?"] is a good discussion of what's needed.  The gesture code has to be disabled and then Unity re-compiled.
 
 ==== Gesture Engines for GNOME Shell, KDE, MATE, and Cinnamon Desktops ====
 In addition to the one built into the Unity Desktop Ubuntu has two gesture engines.  Ginn was the original one and is being replaced by Touchégg.  If you don't use the Unity Desktop you'll need Ginn or Touchégg for 2, 3, and 4 finger gestures.  Ginn is installed by default through Precise.  However Ginn appears incompatible with the version of the Unity Desktop in Precise and later.  See the launchpad bug report [https://bugs.launchpad.net/ubuntu/+source/ginn/+bug/985121 #985121].  Because Ginn is no longer installed by default after Precise and has been moved to the Universe repository Touchégg is probably the way to go for Quantal and later.  Especially since there is now a gesture configuration gui for it.  The Touchégg in Precise's repository is broken and a newer version needs to be compiled to get it working in Precise, a possible reason to stick with Ginn for Precise (without the Unity Desktop) and earlier.
@@ -148,9 +151,6 @@ make</pre>
 Didn't need any new dependencies beyond what were already installed for Touchégg.  There is no install so run the touchegg-gce binary in the Touchegg-gce folder.  Can use a launcher if you want to use the gui.
 
 Touchégg, once compiled and installed, works in Kubuntu Precise (12.04) with xf86-input-wacom-0.18.0 or higher as soon as the xsetwacom command '''Gesture off''' is run.  Presumably it will also work in Gnome Shell and Mint 13 Maya with Cinnamon and MATE.
-
-==== Turning Unity Gestures Off ====
-For UI consistency reasons Unity makes no provision for modifying its stock gestures or adding gestures.  Also by design Unity does not allow disabling its system gestures which is necessary to use another gesture engine to customize gestures.  See [https://docs.google.com/document/d/1WJF8YdphrorvHiB5FFVxsitL5Pz-tpZ5-kmtzoD3tFc/edit# "Unity Gesture UI Guidelines"].  On askubuntu [http://askubuntu.com/questions/57586/how-can-i-disable-arbitrary-default-multitouch-gestures-in-unity "How can I disable arbitrary default multitouch gestures in Unity?"] is a good discussion of what's needed.  The gesture code has to be disabled and then Unity re-compiled.
 
 
 [[Category:HOWTO]]

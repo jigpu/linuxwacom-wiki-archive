@@ -272,8 +272,21 @@ scrolling in Mouse and Touchpad for the application to see the X Server
 one and two finger touches. This is explained on the wiki page [Touchpad
 Support](https://wiki.ubuntu.com/Multitouch/TouchpadSupport).
 
-The Synaptics driver has a many configuration options. See **man
+The Synaptics driver has many configuration options. See **man
 synaptics** and **man synclient** in a terminal.
+
+#### Turning Unity Gestures Off
+
+For UI consistency reasons Unity makes no provision for modifying its
+stock gestures or adding gestures. Also by design Unity does not allow
+disabling its system gestures which is necessary to use another gesture
+engine to customize gestures. See ["Unity Gesture UI
+Guidelines"](https://docs.google.com/document/d/1WJF8YdphrorvHiB5FFVxsitL5Pz-tpZ5-kmtzoD3tFc/edit#).
+On askubuntu ["How can I disable arbitrary default multitouch gestures
+in
+Unity?"](http://askubuntu.com/questions/57586/how-can-i-disable-arbitrary-default-multitouch-gestures-in-unity)
+is a good discussion of what's needed. The gesture code has to be
+disabled and then Unity re-compiled.
 
 #### Gesture Engines for GNOME Shell, KDE, MATE, and Cinnamon Desktops
 
@@ -357,16 +370,3 @@ Touchégg, once compiled and installed, works in Kubuntu Precise (12.04)
 with xf86-input-wacom-0.18.0 or higher as soon as the xsetwacom command
 **Gesture off** is run. Presumably it will also work in Gnome Shell and
 Mint 13 Maya with Cinnamon and MATE.
-
-#### Turning Unity Gestures Off
-
-For UI consistency reasons Unity makes no provision for modifying its
-stock gestures or adding gestures. Also by design Unity does not allow
-disabling its system gestures which is necessary to use another gesture
-engine to customize gestures. See ["Unity Gesture UI
-Guidelines"](https://docs.google.com/document/d/1WJF8YdphrorvHiB5FFVxsitL5Pz-tpZ5-kmtzoD3tFc/edit#).
-On askubuntu ["How can I disable arbitrary default multitouch gestures
-in
-Unity?"](http://askubuntu.com/questions/57586/how-can-i-disable-arbitrary-default-multitouch-gestures-in-unity)
-is a good discussion of what's needed. The gesture code has to be
-disabled and then Unity re-compiled.
