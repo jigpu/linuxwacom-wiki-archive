@@ -335,22 +335,22 @@ Ubuntu
 12.10"](http://task3.cc/1068/os-x-like-multitouch-gestures-for-macbook-pro-running-ubuntu-12-10/)
 appears to be a good tutorial.
 
-The instructions on the site to compile touchegg did not work. Using
-**sudo apt-get build-dep touchegg** installed **libgeis-dev libqt4-dev
-libqt4-qt3support qt4-linguist-tools qt4-qmake**. An error is generated
-on make which required installing **libutouch-geis-dev**. Touchégg then
-compiles and installs. However the dependencies pulled in by build-dep
-did not overlap much with the instructions alternate **sudo apt-get
-install build-essential libqt4-dev utouch libx11-6 libxtst-dev**. The
-touchegg-1.1 CHANGELOG says:
+The default **touchégg in the Precise repositories does not work**, it
+seg faults. The touchegg-1.1 CHANGELOG says:
 
     [+] Touchégg v1.1 (2012/07/22)
      - Added Ubuntu Precise compatibility
 
+The instructions on the site to compile touchegg in Precise (12.04) did
+not work. Using **sudo apt-get build-dep touchegg** installed
+**libgeis-dev libqt4-dev libqt4-qt3support qt4-linguist-tools
+qt4-qmake**. An error is generated on make which required installing
+**libutouch-geis-dev**. Touchégg then compiles and installs.
+
 So to compile touchegg in Maya/Precise the following should work.
 Download Touchégg v1.1 onto your Desktop and extract it. Then:
 
-    sudo apt-get install build-essential libqt4-dev utouch libx11-6 libxtst-dev libgeis-dev libqt4-qt3support qt4-linguist-tools qt4-qmake libutouch-geis-dev
+    sudo apt-get install build-essential libgeis-dev libutouch-geis-dev libqt4-dev libqt4-qt3support qt4-linguist-tools qt4-qmake
     cd Desktop/touchegg-1.1
     qmake
     make
@@ -368,12 +368,11 @@ To install the gui on Maya/Precise run the following.
     qmake
     make
 
-Didn't need any new dependencies beyond what were already installed for
-Touchégg. There is no install so run the touchegg-gce binary in the
-Touchegg-gce folder. Can use a launcher if you want to use the gui.
+There is no install so run the touchegg-gce binary in the Touchegg-gce
+folder. Can use a launcher if you want to use the gui.
 
 Touchégg once compiled and installed works in Kubuntu Precise (12.04),
 Gnome Shell Quantal (12.10), and Mint 14 Cinnamon with
 xf86-input-wacom-0.18.0 or higher, as soon as the xsetwacom command
-**Gesture off** is run. Presumably it will also work with other release
-and Desktop combinations.
+**Gesture off** is run. Presumably it will also work with other Ubuntu
+release and Desktop combinations.
