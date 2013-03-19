@@ -372,7 +372,8 @@ Didn't need any new dependencies beyond what were already installed for
 Touchégg. There is no install so run the touchegg-gce binary in the
 Touchegg-gce folder. Can use a launcher if you want to use the gui.
 
-Touchégg, once compiled and installed, works in Kubuntu Precise (12.04)
-with xf86-input-wacom-0.18.0 or higher as soon as the xsetwacom command
-**Gesture off** is run. Presumably it will also work in Gnome Shell and
-Mint 13 Maya with Cinnamon and MATE.
+Touchégg once compiled and installed works in Kubuntu Precise (12.04),
+Gnome Shell Quantal (12.10), and Mint 14 Cinnamon with
+xf86-input-wacom-0.18.0 or higher, as soon as the xsetwacom command
+**Gesture off** is run. Presumably it will also work with other release
+and Desktop combinations.
