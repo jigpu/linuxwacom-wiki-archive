@@ -358,9 +358,9 @@ Download Touchégg v1.1 onto your Desktop and extract it. Then:
 
 The touchegg.conf file appears at ~/.config/touchegg after a reboot.
 Like ginn there is a duplicate example .conf file in /usr/share at
-/usr/share/touchegg. The Touchegg-gce gui edits the .conf file at
-~/.config/touchegg/touchegg.conf and presumably that is the active one.
-To install the gui on Maya/Precise run the following.
+/usr/share/touchegg. The Touchegg-gce gui edits the active .conf file at
+~/.config/touchegg/touchegg.conf. To install the gui on Maya/Precise run
+the following.
 
     cd Desktop
     git clone https://github.com/Raffarti/Touchegg-gce.git
@@ -371,8 +371,8 @@ To install the gui on Maya/Precise run the following.
 There is no install so run the touchegg-gce binary in the Touchegg-gce
 folder. Can use a launcher if you want to use the gui.
 
-Touchégg once compiled and installed works in Kubuntu Precise (12.04),
-Gnome Shell Quantal (12.10), and Mint 14 Cinnamon with
-xf86-input-wacom-0.18.0 or higher, as soon as the xsetwacom command
-**Gesture off** is run. Presumably it will also work with other Ubuntu
-release and Desktop combinations.
+Touchégg once installed works in Kubuntu Precise (12.04), Gnome Shell
+Quantal (12.10), and Mint 14 Cinnamon with xf86-input-wacom-0.18.0 or
+higher, as soon as the xsetwacom command **Gesture off** is run.
+Presumably it will also work with other Ubuntu release and Desktop
+combinations.
