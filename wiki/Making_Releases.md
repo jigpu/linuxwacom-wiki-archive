@@ -31,6 +31,8 @@ version (e.g. 0.10.2).
     xf86-input-wacom-OLDVERSION..xf86-input-wacom-VERSION**
 8.  **Sign off the email** and send it to the [ linuxwacom-announce
     list](/wiki/Mailing_lists "wikilink")
+9.  Change the default download on Sourceforge to be the newly-uploaded
+    tarball
 
 Note that it may take a while until the uploaded tarballs are available
 through the download links.

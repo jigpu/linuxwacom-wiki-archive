@@ -9,6 +9,7 @@ This section describes how to do a new xf86-input-wacom release. VERSION stands 
 # Run the release script: '''sh release.sh'''. This script will push the tag and upload the tarball to the remote.
 # Type up a short announce email summarising the new features in this version and append the git shortlog: '''git shortlog xf86-input-wacom-OLDVERSION..xf86-input-wacom-VERSION'''
 # '''Sign off the email''' and send it to the [[Mailing lists | linuxwacom-announce list]]
+# Change the default download on Sourceforge to be the newly-uploaded tarball
 
 Note that it may take a while until the uploaded tarballs are available through the download links.
 
