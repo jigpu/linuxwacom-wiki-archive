@@ -49,5 +49,5 @@ To determine your XOrg server version, open a terminal and run the following com
 The following links may be of interest to some users. Please be aware that some links may be to projects which are neither developed nor supported by the Linux Wacom Project.
 
 * [[wdaemon]]: Linux Wacom Hotplug Daemon
-* [http://hub.opensolaris.org/bin/view/Community+Group+device_drivers/wacomtablet OpenSolaris STREAMS module]
+* [[wacomtablet]]: Solaris Driver
 * [http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309 Wacom Control Panel] (GNOME 2.x only, GNOME 3 has a wacom-specific control panel applet)

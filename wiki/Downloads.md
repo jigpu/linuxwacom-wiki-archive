@@ -70,8 +70,7 @@ that some links may be to projects which are neither developed nor
 supported by the Linux Wacom Project.
 
 -   [wdaemon](wdaemon "wikilink"): Linux Wacom Hotplug Daemon
--   [OpenSolaris STREAMS
-    module](http://hub.opensolaris.org/bin/view/Community+Group+device_drivers/wacomtablet)
+-   [wacomtablet](wacomtablet "wikilink"): Solaris Driver
 -   [Wacom Control
     Panel](http://gtk-apps.org/content/show.php/Wacom+Control+Panel?content=104309)
     (GNOME 2.x only, GNOME 3 has a wacom-specific control panel applet)
