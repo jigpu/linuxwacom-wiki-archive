@@ -1,5 +1,7 @@
 The OpenSolaris project used to have [http://web.archive.org/web/20120829201957/http://hub.opensolaris.org/bin/view/Community+Group+device_drivers/wacomtablet a wiki page] that included a set of patches to get our X11 driver working with their STREAMS kernel module (ported from the FreeBSD uwacom driver). With the demise of OpenSolaris, this wiki was taken offline, rendering the patches inaccessible. While this project's primary concern is supporting the Linux operating system, it is a disservice to users of OpenSolaris/Illumos to have these patches simply disappear. To remedy this, 'solaris' branches for these patches have added to both the [[linuxwacom]] and [[xf86-input-wacom]] repositories.
 
+== Solaris Support ==
+
 '''Status'''
 * Kernel STREAMS module was integrated into snv_132.
 * X.org Wacom Tablet driver and tools (see http://linuxwacom.sf.net )

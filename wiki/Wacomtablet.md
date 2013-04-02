@@ -16,6 +16,9 @@ this, 'solaris' branches for these patches have added to both the
 [linuxwacom](linuxwacom "wikilink") and
 [xf86-input-wacom](xf86-input-wacom "wikilink") repositories.
 
+Solaris Support
+---------------
+
 **Status**
 
 -   Kernel STREAMS module was integrated into snv\_132.
