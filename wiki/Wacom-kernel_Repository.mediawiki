@@ -2,11 +2,11 @@ __TOC__
 The wacom-kernel git repository is a recent reflection of the current [http://kernel.org/ linux kernel], and is intended to be used to assist Wacom kernel module development.  To check how closely synchronized wacom-kernel is with the '''mainline''' kernel select ''Gitweb'' to browse the kernel's git repository.
 
 == wacom-kernel ==
-The git repository is available to [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/wacom-kernel browse here].  It consists of 3 branches:  devel, master, and tested.
+The git repository is available to [http://sourceforge.net/p/linuxwacom/wacom-kernel/ref/master~/ browse here].  It consists of 3 branches:  devel, master, and tested.
 
 To clone the wacom-kernel git repository use:
 <pre>
-git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/wacom-kernel
+git clone git://git.code.sf.net/p/linuxwacom/wacom-kernel
 </pre>
 
 == Working with a Wacom Module ==

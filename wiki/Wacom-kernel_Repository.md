@@ -16,12 +16,12 @@ wacom-kernel
 ------------
 
 The git repository is available to [browse
-here](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/wacom-kernel).
-It consists of 3 branches: devel, master, and tested.
+here](http://sourceforge.net/p/linuxwacom/wacom-kernel/ref/master~/). It
+consists of 3 branches: devel, master, and tested.
 
 To clone the wacom-kernel git repository use:
 
-    git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/wacom-kernel
+    git clone git://git.code.sf.net/p/linuxwacom/wacom-kernel
 
 Working with a Wacom Module
 ---------------------------
