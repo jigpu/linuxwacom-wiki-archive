@@ -10,11 +10,11 @@ tar xjvf input-wacom-<version number>.tar.bz2
 cd input-wacom-<version number>
 </pre>
 
-Alternatively, pre-release code is available at the [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/input-wacom;a=summary input-wacom git repository].
+Alternatively, pre-release code is available at the [http://sourceforge.net/p/linuxwacom/input-wacom/ci/master/tree/ input-wacom git repository].
 
 <pre>
-git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/input-wacom
-cd input-wacom
+git clone git://git.code.sf.net/p/linuxwacom/input-wacom linuxwacom-input-wacom
+cd linuxwacom-input-wacom
 </pre>
 
 == Building the Driver ==

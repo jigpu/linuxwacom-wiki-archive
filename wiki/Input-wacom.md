@@ -30,10 +30,10 @@ and unpack it with:
     cd input-wacom-<version number>
 
 Alternatively, pre-release code is available at the [input-wacom git
-repository](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/input-wacom;a=summary).
+repository](http://sourceforge.net/p/linuxwacom/input-wacom/ci/master/tree/).
 
-    git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/input-wacom
-    cd input-wacom
+    git clone git://git.code.sf.net/p/linuxwacom/input-wacom linuxwacom-input-wacom
+    cd linuxwacom-input-wacom
 
 Building the Driver
 -------------------
