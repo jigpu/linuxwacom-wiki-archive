@@ -8,13 +8,13 @@ tar jxf linuxwacom-<version number>.tar.bz2
 cd linuxwacom-<version number>
 </pre>
 
-<!-- Add instructions that work before uncommenting this (or verify 'building the code' works as-is)
 Alternatively, pre-release code is available at the [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/linuxwacom;a=summary linuxwacom git repository]:
 <pre>
 git clone git://git.code.sf.net/p/linuxwacom/code linuxwacom
 cd linuxwacom
+./bootstrap
 </pre>
--->
+
 == Building the code ==
 Once you have the package downloaded, you can build it with the commands below. A more exhaustive description of the build process is avaiable in [[building linuxwacom]].
 

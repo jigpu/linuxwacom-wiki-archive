@@ -21,6 +21,13 @@ and unpack it with:
     tar jxf linuxwacom-<version number>.tar.bz2
     cd linuxwacom-<version number>
 
+Alternatively, pre-release code is available at the [linuxwacom git
+repository](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/linuxwacom;a=summary):
+
+    git clone git://git.code.sf.net/p/linuxwacom/code linuxwacom
+    cd linuxwacom
+    ./bootstrap
+
 Building the code
 -----------------
 
