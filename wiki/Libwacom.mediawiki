@@ -80,8 +80,8 @@ RingNumModes=4
 Submit your [[Submitting Patches|git patch]] to [https://lists.sourceforge.net/lists/listinfo/linuxwacom-devel linuxwacom-devel].
 
 == Git Repository and Tar Files ==
-The git repository is [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/libwacom;a=summary located here].
-To clone the git repository use:  git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/libwacom
+The git repository is [https://sourceforge.net/p/linuxwacom/libwacom/ci/master/tree/ located here].
+To clone the git repository use:  git clone git://git.code.sf.net/p/linuxwacom/libwacom
 The tar files are [http://sourceforge.net/projects/linuxwacom/files/libwacom/ located here].
 
 == Maintainer ==
