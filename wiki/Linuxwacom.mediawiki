@@ -1,7 +1,7 @@
 '''linuxwacom''' is a legacy driver package containing both an X driver and Linux kernel driver. It supports X servers from 1.4 to 1.6 and provides backports for Linux kernels from 2.6.16 to 2.6.25. '''If you run a reasonably modern desktop distribution, you do not need this package.''' All linuxwacom-related pages can be found in this wiki's [[:Category:Linuxwacom|linuxwacom category]].
 
 == Getting the Source ==
-linuxwacom provides two types of packages - stable and development versions. Please download the latest release from the [https://sourceforge.net/projects/linuxwacom/files/ sourceforge download section] and unpack it with:
+Please download the latest release from the [https://sourceforge.net/projects/linuxwacom/files/linuxwacom/ sourceforge download section] and unpack it with:
 
 <pre>
 tar jxf linuxwacom-<version number>.tar.bz2
@@ -11,7 +11,7 @@ cd linuxwacom-<version number>
 <!-- Add instructions that work before uncommenting this (or verify 'building the code' works as-is)
 Alternatively, pre-release code is available at the [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/linuxwacom;a=summary linuxwacom git repository]:
 <pre>
-git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/linuxwacom
+git clone git://git.code.sf.net/p/linuxwacom/code linuxwacom
 cd linuxwacom
 </pre>
 -->

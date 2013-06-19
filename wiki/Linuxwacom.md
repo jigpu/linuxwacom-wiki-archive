@@ -14,9 +14,8 @@ package.** All linuxwacom-related pages can be found in this wiki's
 Getting the Source
 ------------------
 
-linuxwacom provides two types of packages - stable and development
-versions. Please download the latest release from the [sourceforge
-download section](https://sourceforge.net/projects/linuxwacom/files/)
+Please download the latest release from the [sourceforge download
+section](https://sourceforge.net/projects/linuxwacom/files/linuxwacom/)
 and unpack it with:
 
     tar jxf linuxwacom-<version number>.tar.bz2
