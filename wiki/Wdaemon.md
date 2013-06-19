@@ -31,10 +31,12 @@ Getting wdaemon
 
 The git repository is available at
 
-` `[`git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/wdaemon`](git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/wdaemon)
+` `[`git://git.code.sf.net/p/linuxwacom/wdaemon`](git://git.code.sf.net/p/linuxwacom/wdaemon)
 
-wdaemon can be built and installed with the usual
+wdaemon can be downloaded, built, and installed with the usual
 
+`  git clone `[`git://git.code.sf.net/p/linuxwacom/wdaemon`](git://git.code.sf.net/p/linuxwacom/wdaemon)  
+`  cd wdaemon`  
 `  ./autogen.sh --prefix=/usr`  
 `  make && make install`
 
