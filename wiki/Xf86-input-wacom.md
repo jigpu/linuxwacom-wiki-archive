@@ -42,7 +42,7 @@ Getting the Source
 We recommend to use [git](/wiki/Using_Git "wikilink") to get the source
 straight from the repository
 
-    git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom
+    git clone git://git.code.sf.net/p/linuxwacom/xf86-input-wacom
     cd xf86-input-wacom
 
 Alternatively, grab the latest release from the [downloads

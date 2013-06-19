@@ -15,7 +15,7 @@ In addition, some pre-built snapshots of the git repository may be available for
 == Getting the Source ==
 We recommend to use [[Using Git|git]] to get the source straight from the repository
 <pre>
-git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom
+git clone git://git.code.sf.net/p/linuxwacom/xf86-input-wacom
 cd xf86-input-wacom
 </pre>
 
