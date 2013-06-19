@@ -22,7 +22,7 @@ and unpack it with:
     cd linuxwacom-<version number>
 
 Alternatively, pre-release code is available at the [linuxwacom git
-repository](http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/linuxwacom;a=summary):
+repository](https://sourceforge.net/p/linuxwacom/code/ci/master/tree):
 
     git clone git://git.code.sf.net/p/linuxwacom/code linuxwacom
     cd linuxwacom
