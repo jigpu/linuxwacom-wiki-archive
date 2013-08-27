@@ -18,7 +18,7 @@ utilities are available.
 
 Because Tizen is so similar to other Linux distributions under the hood,
 the standard kernel and X11 drivers can be used to provide support for
-Wacom digitizers. While Tizen can RPMs packages, there are a few minor
+Wacom digitizers. While Tizen uses RPM packages, there are a few minor
 dependency hiccups preventing you from just downloading and installing a
 package from Red Hat. Instead, it is necessary to build an RPM from
 source.
