@@ -43,7 +43,7 @@ installed as well as linux kernel development headers. Examples of
 installing kernel headers for a couple of system types:
 
     apt-get install linux-headers-$(uname -r)  # on Debian machines
-    yum install kernel-devel                   # on Fedora machines
+    yum install gcc kernel-devel               # on Fedora machines
 
 Configuring and compiling the input driver is accomplished with a single
 command.
