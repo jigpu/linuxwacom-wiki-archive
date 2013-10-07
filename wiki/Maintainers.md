@@ -10,8 +10,10 @@ tags:
 
 The current maintainers of the linuxwacom project are:
 
+-   **Jason Gerecke** (*killertofu* on gmail): Maintainer for
+    [xf86-input-wacom](xf86-input-wacom "wikilink")
 -   **Peter Hutterer** (*peter.hutterer* at the domain *who-t.net*):
-    Maintainer for [xf86-input-wacom](xf86-input-wacom "wikilink"),
+    Maintainer for [libwacom](libwacom "wikilink"),
     [wdaemon](wdaemon "wikilink") and this wiki
 -   **Ping Cheng** (*pinglinux* on gmail): Maintainer for
     [linuxwacom](linuxwacom "wikilink")
