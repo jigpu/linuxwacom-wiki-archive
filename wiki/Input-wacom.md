@@ -72,6 +72,13 @@ module dependencies:
 
     depmod -a
 
+Finally, you'll need to have the module loaded by the kernel so that it
+can be used by the rest of the system. The easiest way to do this is to
+simply reboot; the kernel will automatically load the newly-installed
+module when necessary. Alternatively, you can use the commands
+`modprobe -r wacom` and `insmod /path/to/wacom.ko` to force the running
+kernel to reload the module without rebooting.
+
 X driver
 --------
 
