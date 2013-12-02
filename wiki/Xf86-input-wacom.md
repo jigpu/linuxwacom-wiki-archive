@@ -58,7 +58,7 @@ Configuring the Build
 We provide a helper script *autogen.sh* that wraps the
 [autotools](http://en.wikipedia.org/wiki/GNU_build_system) steps. First
 make sure you have the following tools installed: gcc, automake,
-autoconf and make.
+autoconf, libtool and make.
 
 If you are **building from git**, then run autogen.sh:
 

@@ -28,7 +28,7 @@ cd xf86-input-wacom-<version-number>
 == Configuring the Build ==
 {{Tip|text=The INSTALL file in the driver tarball provides detailed build instructions}}
 
-We provide a helper script ''autogen.sh'' that wraps the [http://en.wikipedia.org/wiki/GNU_build_system autotools] steps. First make sure you have the following tools installed: gcc, automake, autoconf and make.
+We provide a helper script ''autogen.sh'' that wraps the [http://en.wikipedia.org/wiki/GNU_build_system autotools] steps. First make sure you have the following tools installed: gcc, automake, autoconf, libtool and make.
 
 If you are '''building from git''', then run autogen.sh:
 <pre>
@@ -48,7 +48,7 @@ Both prefix and libdir options cover the common Linux distributions but there is
 
 Note that if you configured with a prefix of ''/usr'' you will overwrite your distribution's install. We recommend that  use the same build flags as your distribution does if you are trying to replace the distribution-installed version of the driver with the version from git.
 
-* [http://koji.fedoraproject.org/koji/packageinfo?packageID=9537 Fedora]: select the latest build for your version and look at the build.log. Search for the configure line and copy everything from that line. 
+* [http://koji.fedoraproject.org/koji/packageinfo?packageID=9537 Fedora]: select the latest build for your version and look at the build.log. Search for the configure line and copy everything from that line.
 
 == Building the Driver ==
 When the step above has finished, you can build and install the driver with the following commands.
