@@ -9,21 +9,18 @@ The kernel driver is responsible for understanding hardware-specific protocols a
 
 Our patches to support Wacom devices are provided upstream to the Linux kernel developers for integration into the official releases at [http://www.kernel.org kernel.org]. These changes will usually feed back into your distribution's kernel. We recommend that you first try to update your kernel through your distribution's mechanisms. If you already have the newest kernel available for your distribution, backported kernel drivers are below.
 
-To determine your kernel version, open a terminal and run the following command: <code>uname -r</code>
+To determine your kernel version, open a terminal and run the followin command: <code>uname -r</code>
 
 {| border="1" cellpadding="2"
 |-
 ! Linux Kernel
-! Download
+! Download (if your distribution does not support the device)
 |-
-| 3.0 - CURRENT
-| Please update through your distribution.
+| 2.6.26 - Current
+| [[input-wacom]] (running Xorg server 1.7 or later)
 |-
-| 2.6.26 - 2.6.40
-| [[input-wacom]]
-|-
-| 2.6.16 - 2.6.25
-| [[linuxwacom]]
+| 2.6.16 - 2.6.30
+| [[linuxwacom]] (running Xorg server older than 1.7)
 |}
 
 = X11 drivers =

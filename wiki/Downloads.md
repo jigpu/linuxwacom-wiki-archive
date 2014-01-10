@@ -29,14 +29,13 @@ update your kernel through your distribution's mechanisms. If you
 already have the newest kernel available for your distribution,
 backported kernel drivers are below.
 
-To determine your kernel version, open a terminal and run the following
+To determine your kernel version, open a terminal and run the followin
 command: `uname -r`
 
-| Linux Kernel    | Download                                 |
-|-----------------|------------------------------------------|
-| 3.0 - CURRENT   | Please update through your distribution. |
-| 2.6.26 - 2.6.40 | [input-wacom](input-wacom "wikilink")    |
-| 2.6.16 - 2.6.25 | [linuxwacom](linuxwacom "wikilink")      |
+| Linux Kernel     | Download (if your distribution does not support the device)              |
+|------------------|--------------------------------------------------------------------------|
+| 2.6.26 - Current | [input-wacom](input-wacom "wikilink") (running Xorg server 1.7 or later) |
+| 2.6.16 - 2.6.30  | [linuxwacom](linuxwacom "wikilink") (running Xorg server older than 1.7) |
 
 X11 drivers
 ===========
