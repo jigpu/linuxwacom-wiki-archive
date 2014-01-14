@@ -15,12 +15,6 @@ Why linuxwacom and xf86-input-wacom?
     server version since XFree86-4.
 -   xf86-input-wacom is an X11-only driver, the kernel driver is not
     part of xf86-input-wacom.
--   Ping has expressed a desire to keep linuxwacom in CVS, in part to
-    avoid disruption for current users of the linuxwacom releases.
--   The use of git as SCM should encourage more outside participation,
-    so far Ping has done most of the heavy lifting in the driver. A more
-    community-driven development model is desirable. We have already
-    seen numerous patches from others and are very happy about this.
 
 xf86-input-wacom is the preferred driver for X Servers 1.7 and later.
 linuxwacom will <b>not</b> compile against these servers without
@@ -78,8 +72,7 @@ You may want to try the latest
 [xf86-input-wacom](xf86-input-wacom "wikilink") release to see if
 support for your device has been added. If you are using a build of the
 [linuxwacom](linuxwacom "wikilink") backports, try the highest release
-number, whether linuxwacom or linuxwacom-devel (beta). The latest
-release is likely to support more tools.
+number. The latest release is likely to support more tools.
 
 Note, tilt is only supported with protocol V tablets, which includes the
 Intuos series and Cintiq 21UX/20WSX/12WX/21UX2. Any other tablets don't
