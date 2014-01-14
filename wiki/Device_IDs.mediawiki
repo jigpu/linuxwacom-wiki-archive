@@ -1,4 +1,4 @@
-{{Tip|text=The most up-to-date list of supported device IDs can be found in [http://linuxwacom.git.sourceforge.net/git/gitweb.cgi?p=linuxwacom/xf86-input-wacom;a=blob;f=src/wcmUSB.c;h=9f327ba6b0210a04933da22861750d304d7edb86;hb=HEAD#l172 gitweb]}}
+{{Tip|text=The most up-to-date list of supported device IDs can be found in [https://sourceforge.net/p/linuxwacom/input-wacom/ci/master/tree/3.7/wacom_wac.c wacom_ids]}}
 
 {| border="1"
 |+ ''USB series''
@@ -62,7 +62,10 @@
 | 0xB8, 0xB9, 0xBA, 0xBB, 0xBC, 0xBD
 |-
 | Intuos5
-| 0x26, 0x27, 0x28, 0x29, 0x2A
+| 0x26, 0x27, 0x28, 0x29 (no touch), 0x2A (no touch)
+|-
+| Intuos pro
+| 0x314, 0x315, 0x317
 |-
 | Cintiq 21UX
 | 0x3F
@@ -73,8 +76,14 @@
 | Cintiq 21UX2
 | 0xCC
 |-
-| Cintiq  24HD
-| 0xF4
+| Cintiq 13HD, 22HD, and 24HD
+| 0x304, 0xFA, 0xF4
+|-
+| Cintiq 22HD Touch
+| 0x5B (pen interface), 0x5E (touch interface)
+|-
+| Cintiq 24HD Touch
+| 0xF8 (pen interface), 0xF6 (touch interface)
 |-
 ! colspan="2" | ISDv4 series
 |-

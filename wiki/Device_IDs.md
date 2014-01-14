@@ -27,11 +27,14 @@ tags:
 | Intuos2                                            | 0x41, 0x42, 0x43, 0x44, 0x45                                                                                        |
 | Intuos3                                            | 0xB0, 0xB1, 0xB2, 0xB3, 0xB4, 0xB5, 0xB7                                                                            |
 | Intuos4                                            | 0xB8, 0xB9, 0xBA, 0xBB, 0xBC, 0xBD                                                                                  |
-| Intuos5                                            | 0x26, 0x27, 0x28, 0x29, 0x2A                                                                                        |
+| Intuos5                                            | 0x26, 0x27, 0x28, 0x29 (no touch), 0x2A (no touch)                                                                  |
+| Intuos pro                                         | 0x314, 0x315, 0x317                                                                                                 |
 | Cintiq 21UX                                        | 0x3F                                                                                                                |
 | Cintiq 12SWX and 20SWX                             | 0xC5, 0xC6,                                                                                                         |
 | Cintiq 21UX2                                       | 0xCC                                                                                                                |
-| Cintiq 24HD                                        | 0xF4                                                                                                                |
+| Cintiq 13HD, 22HD, and 24HD                        | 0x304, 0xFA, 0xF4                                                                                                   |
+| Cintiq 22HD Touch                                  | 0x5B (pen interface), 0x5E (touch interface)                                                                        |
+| Cintiq 24HD Touch                                  | 0xF8 (pen interface), 0xF6 (touch interface)                                                                        |
 | ISDv4 series                                       |                                                                                                                     |
 | WACf000 - WACf007                                  | penabled (IDs translated into 0x90)                                                                                 |
 | WACf008 - WACf00A                                  | penabled with 1FGT (IDs translated into 0x93)                                                                       |
