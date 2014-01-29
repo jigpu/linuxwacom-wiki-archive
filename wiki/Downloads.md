@@ -2,72 +2,33 @@
 title: Downloads
 permalink: wiki/Downloads/
 layout: wiki
-tags:
- - HOWTO
 ---
 
-For your tablet to work, two pieces are needed: a **kernel driver** and
-a **X11 driver**. Please read our [history](history "wikilink") for a
-better understanding of the difference between
-[xf86-input-wacom](xf86-input-wacom "wikilink") and the legacy
-[linuxwacom](linuxwacom "wikilink").
+Many distributions come with our driver pre-installed. Oftentimes, you
+can simply plug in your tablet and start working. However, in some cases
+a model may be too new (or obscure) to be supported out of the box. It
+may also be that your system is missing the necessary drivers for some
+reason. In these cases, our three packages below may help. Each serves a
+different purpose and not all are necessary. Please click on the links
+to get information on how to install each. Our current drivers are
+compatible with most distributions released since 2010.
 
-Kernel drivers
-==============
+**Before proceeding, please use your distribution's package manager to
+perform a system update.** This will ensure the latest drivers and
+utilities are installed and in some cases may be sufficient on its own
+to get a new tablet working.
 
-The kernel driver is responsible for understanding hardware-specific
-protocols and translating their data into standard kernel input events.
-These events can then easily be read by user-space applications (such as
-our X11 driver, or [evtest](evtest "wikilink")) without requiring much
-hardware-specific knowledge.
-
-Our patches to support Wacom devices are provided upstream to the Linux
-kernel developers for integration into the official releases at
-[kernel.org](http://www.kernel.org). These changes will usually feed
-back into your distribution's kernel. We recommend that you first try to
-update your kernel through your distribution's mechanisms. If you
-already have the newest kernel available for your distribution,
-backported kernel drivers are below.
-
-To determine your kernel version, open a terminal and run the followin
-command: `uname -r`
-
-| Linux Kernel     | Download (if your distribution does not support the device)              |
-|------------------|--------------------------------------------------------------------------|
-| 2.6.26 - Current | [input-wacom](input-wacom "wikilink") (running Xorg server 1.7 or later) |
-| 2.6.16 - 2.6.30  | [linuxwacom](linuxwacom "wikilink") (running Xorg server older than 1.7) |
-
-X11 drivers
-===========
-
-The X driver is responsible for translating the input events generated
-by the kernel driver into XInput events that the X server can understand
-and relay to running applications. It is also responsible for
-virtualizing the single hardware device to appear as multiple logical
-devices (e.g. stylus, eraser, touch). This grants applications like GIMP
-access to extended functionality like pressure and high-resolution
-coordinates.
-
-Distributions usually already ship a version of the X11 driver in their
-repositories. We recommend that you first try to update through your
-distribution's mechanisms. If you require an even more up-to-date
-version, the latest X11 drivers are below.
-
-To determine your XOrg server version, open a terminal and run the
-following command: `X -version`
-
-| XOrg Server   | Download                                        |
-|---------------|-------------------------------------------------|
-| 1.7 - CURRENT | [xf86-input-wacom](xf86-input-wacom "wikilink") |
-| 1.4 - 1.6     | [linuxwacom](linuxwacom "wikilink")             |
-
-Miscellaneous
-=============
+| Kernel Driver                                                                                                                                                                                                                                                                             | X Driver                                                                                                                                                                                                                                                                                                  | libwacom                                                                                                                                                                                                                                        |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| A kernel driver is necessary to initalize the tablet and translate hardware-specific protocols into standard input events. We contribute patches directly to the Linux kernel, as well as maintain an out-of-tree kernel module that enables old kernels to work with many newer tablets. | An X driver is responsible for translating kernel events into XInput events that can be used by applications such as GIMP. We provide an X driver that virtualizes the tablet into logical devices (e.g. stylus, eraser, touch) which report extended data like pressure and high-resolution coordinates. | The **libwacom** library provides applications with a way to get information about any tablets that are currently connected. It may be used by control panels to better support devices and provide only relevant options or defaults for each. |
+| *Install **[input-wacom](input-wacom "wikilink")** if your tablet is not recognized as an input device by the system.*                                                                                                                                                                    | *Install **[xf86-input-wacom](xf86-input-wacom "wikilink")** if your tablet is recognized but missing functionality.*                                                                                                                                                                                     | *Install **[libwacom](libwacom "wikilink")** if your tablet is not recognized by the control panel.*                                                                                                                                            |
 
 The following links may be of interest to some users. Please be aware
 that some links may be to projects which are neither developed nor
 supported by the Linux Wacom Project.
 
+-   [linuxwacom](linuxwacom "wikilink"): Legacy all-in-one driver for
+    systems using Linux &lt; 2.6.30 or xorg-server &lt; 1.7
 -   [wdaemon](wdaemon "wikilink"): Linux Wacom Hotplug Daemon
 -   [wacomtablet](wacomtablet "wikilink"): Solaris Driver
 -   [Wacom Control
