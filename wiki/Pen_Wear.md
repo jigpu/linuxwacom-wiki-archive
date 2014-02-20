@@ -1,0 +1,34 @@
+---
+title: Pen Wear
+permalink: wiki/Pen_Wear/
+layout: wiki
+---
+
+Pen Wear
+--------
+
+Pressure sensors in styluses and erasers are subject to wear: after
+heavy use the resistance strip which measures the pressure exerted on
+the device may not entirely return to its original shape. Thus its
+resistance indicates a non-zero pressure even when the device does not
+touch anything.
+
+The driver is able to compensate for this: It uses the pressure data
+sent when the device comes into proximity as a bias value which will be
+subtract from any measured pressure value while in proximity. I will
+also rescale the remaining range to the full range of the specific
+device. Therefore the granularity of the pressure readings will get
+higher. Thus the Wacom Xserver driver will warn when this pressure bias
+is higher than 20 percent of the maximum value. These warnings will
+appear in the Xserver logs.
+
+Should you see repeated warning messages about this it is an indication
+of a worn out pen and you should consider replacing it.
+
+**Please note** that if you move a device into proximity and onto the
+tablet very quickly the first event sent from it may also have a
+non-zero pressure reading. It thus will be taken as a pressure bias by
+the driver even though the device isn't worn. The driver attempts to
+compensate for this by adapting the bias value if it sees pressure
+values lower than the bias comint from the device. It is still possible
+that you may lose events (ie 'clicks') on button 1.
