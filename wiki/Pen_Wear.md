@@ -2,6 +2,8 @@
 title: Pen Wear
 permalink: wiki/Pen_Wear/
 layout: wiki
+tags:
+ - HOWTO
 ---
 
 Pen Wear

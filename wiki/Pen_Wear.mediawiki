@@ -1,3 +1,4 @@
+[[Category:HOWTO]]
 == Pen Wear ==
 
 Pressure sensors in styluses and erasers are subject to wear: after heavy use the resistance strip which measures the pressure exerted on the device may not entirely return to its original shape. Thus its resistance indicates a non-zero pressure even when the device does not touch anything. 
