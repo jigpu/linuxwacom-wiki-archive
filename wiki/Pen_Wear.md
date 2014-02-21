@@ -30,5 +30,5 @@ tablet very quickly the first event sent from it may also have a
 non-zero pressure reading. It thus will be taken as a pressure bias by
 the driver even though the device isn't worn. The driver attempts to
 compensate for this by adapting the bias value if it sees pressure
-values lower than the bias comint from the device. It is still possible
+values lower than the bias coming from the device. It is still possible
 that you may lose events (ie 'clicks') on button 1.

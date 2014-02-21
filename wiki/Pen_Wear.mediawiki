@@ -6,4 +6,4 @@ The driver is able to compensate for this: It uses the pressure data sent when t
 
 Should you see repeated warning messages about this it is an indication of a worn out pen and you should consider replacing it.
 
-'''Please note''' that if you move a device into proximity and onto the tablet very quickly the first event sent from it may also have a non-zero pressure reading. It thus will be taken as a pressure bias by the driver even though the device isn't worn. The driver attempts to compensate for this by adapting the bias value if it sees pressure values lower than the bias comint from the device. It is still possible that you may lose events (ie 'clicks') on button 1.
+'''Please note''' that if you move a device into proximity and onto the tablet very quickly the first event sent from it may also have a non-zero pressure reading. It thus will be taken as a pressure bias by the driver even though the device isn't worn. The driver attempts to compensate for this by adapting the bias value if it sees pressure values lower than the bias coming from the device. It is still possible that you may lose events (ie 'clicks') on button 1.
