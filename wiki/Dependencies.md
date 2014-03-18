@@ -21,8 +21,8 @@ yum install the following packages:
     libXinerama-devel
     libudev-devel
 
-Ubuntu
-------
+Debian, Ubuntu, Mint
+--------------------
 
 apt-get install the following packages
 

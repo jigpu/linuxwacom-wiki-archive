@@ -15,7 +15,7 @@ libXinerama-devel
 libudev-devel
 </pre>
 
-== Ubuntu ==
+== Debian, Ubuntu, Mint ==
 apt-get install the following packages
 <pre>
 xserver-xorg-dev
