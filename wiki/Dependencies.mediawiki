@@ -2,7 +2,7 @@ This page is a list of dependencies required to build [[xf86-input-wacom]] from 
 
 {{Warning|reason=You may need a newer version of a dependency than what is provided by the distribution}}
 
-== Fedora ==
+== Fedora, RHEL, CentOS ==
 yum install the following packages:
 <pre>
 xorg-x11-server-devel

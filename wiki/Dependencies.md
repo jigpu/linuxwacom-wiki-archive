@@ -7,8 +7,8 @@ layout: wiki
 This page is a list of dependencies required to build
 [xf86-input-wacom](xf86-input-wacom "wikilink") from source.
 
-Fedora
-------
+Fedora, RHEL, CentOS
+--------------------
 
 yum install the following packages:
 
