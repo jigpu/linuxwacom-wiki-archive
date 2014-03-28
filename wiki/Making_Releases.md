@@ -84,8 +84,9 @@ This section describes how to do a new
 3.  Build, install, and test the driver from the tarball
 4.  Tag the module: '''git tag -m "input-wacom VERSION" -s
     input-wacom-VERSION
-5.  Run the release script: **sh release.sh**. This script will push the
-    tag and upload the tarball to the remote.
+5.  Run the release script: **sh release.sh** with the correct
+    arguments. This script will push the tag and upload the tarball to
+    the remote.
 6.  Type up a short announce email summarising the new features in this
     version and append the git shortlog: **git shortlog
     input-wacom-OLDVERSION..input-wacom-VERSION**
