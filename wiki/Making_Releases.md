@@ -86,7 +86,10 @@ This section describes how to do a new
     input-wacom-VERSION
 5.  Run the release script: **sh release.sh** with the correct
     arguments. This script will push the tag and upload the tarball to
-    the remote.
+    the remote. (To use this script, make sure $USER equals your
+    username on sourceforge. You may just want to edit the user ID in
+    the ssh section of the script and --ignore-local-changes to
+    release.sh.)
 6.  Type up a short announce email summarising the new features in this
     version and append the git shortlog: **git shortlog
     input-wacom-OLDVERSION..input-wacom-VERSION**

@@ -35,7 +35,7 @@ This section describes how to do a new [[input-wacom]] release.
 # Run '''make dist'''. Verify the name of the tarball (input-wacom-VERSION.tar.bz2). If this is a clean clone of the repository, you will need to first run autogen.sh to generate the Makefile.
 # Build, install, and test the driver from the tarball
 # Tag the module: '''git tag -m "input-wacom VERSION" -s input-wacom-VERSION
-# Run the release script: '''sh release.sh''' with the correct arguments. This script will push the tag and upload the tarball to the remote.
+# Run the release script: '''sh release.sh''' with the correct arguments. This script will push the tag and upload the tarball to the remote. (To use this script, make sure $USER equals your username on sourceforge. You may just want to edit the user ID in the ssh section of the script and --ignore-local-changes to release.sh.)
 # Type up a short announce email summarising the new features in this version and append the git shortlog: '''git shortlog input-wacom-OLDVERSION..input-wacom-VERSION'''
 # '''Sign off the email''' and send it to the [[Mailing lists | linuxwacom-announce list]]
 
