@@ -78,7 +78,9 @@ This section describes how to do a new
     **git commit -sm "input-wacom VERSION" configure.ac** You *must not*
     have uncommitted changes when releasing a new version.
 2.  Run **make dist**. Verify the name of the tarball
-    (input-wacom-VERSION.tar.bz2).
+    (input-wacom-VERSION.tar.bz2). If this is a clean clone of the
+    repository, you will need to first run autogen.sh to generate the
+    Makefile.
 3.  Build, install, and test the driver from the tarball
 4.  Tag the module: '''git tag -m "input-wacom VERSION" -s
     input-wacom-VERSION
