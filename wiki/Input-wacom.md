@@ -80,7 +80,7 @@ force the running kernel to reload the module without rebooting:
 <code>
 
 `sudo modprobe -r wacom`  
-`sudo modprobe -r w8001`  
+`sudo modprobe -r wacom_w8001`  
 `` sudo insmod /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko ``  
 `` sudo insmod /lib/modules/`uname -r`/kernel/drivers/input/touchscreen/wacom_w8001.ko ``
 
