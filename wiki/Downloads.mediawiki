@@ -13,9 +13,9 @@ Many distributions come with our driver pre-installed. Oftentimes, you can simpl
 | style="border: solid gray; border-width: 0 1px; padding: 0.5em 1.5em" | An X driver is responsible for translating kernel events into XInput events that can be used by applications such as GIMP. We provide an X driver that virtualizes the tablet into logical devices (e.g. stylus, eraser, touch) which report extended data like pressure and high-resolution coordinates.
 | style="border: solid gray; border-width: 0 1px; padding: 0.5em 1.5em" | The '''libwacom''' library provides applications with a way to get information about any tablets that are currently connected. It may be used by control panels to better support devices and provide only relevant options or defaults for each.
 |- style="text-align: center"
-| style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install '''[[input-wacom]]''' if your tablet is not recognized as an input device by the system.''
-| style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install '''[[xf86-input-wacom]]''' if your tablet is recognized but missing functionality.''
-| style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install '''[[libwacom]]''' if your tablet is not recognized by the control panel.''
+| style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install or update '''[[input-wacom]]''' if the system does not recognize your tablet and move the mouse pointer.''
+| style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install or update '''[[xf86-input-wacom]]''' if applications do not recognize the tablet and provide pressure-sensitivity.''
+| style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install or update '''[[libwacom]]''' if the control panel does not recognize your tablet and provide appropriate options.''
 |}
 
 
