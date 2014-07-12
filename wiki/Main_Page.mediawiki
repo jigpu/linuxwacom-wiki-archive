@@ -6,11 +6,11 @@ If you are running on kernels older than 2.6.30 or X servers older than 1.7, the
 
 '''The Linux Wacom Project''' manages the drivers, libraries, and documentation for configuring and running Wacom tablets under the Linux operating system. Our drivers are included in several major distributions and provide out-of-the box support for a wide variety of Wacom tablets and TabletPCs.
 
-{| class="wikitable" align="center" style="text-align:center;vertical-align:top"
+{| class="wikitable" align="center" style="text-align:center;vertical-align:top;margin:0 auto;border:none"
 |-
-| [[File:Document-save.png|link=Downloads]]
-| [[File:Help-browser.png|link=:Category:HOWTO]]
-| [[File:Applications-development.png|link=:Category:DeveloperPages]]
+! style="padding: 0 3em; border-width: 0; background-color: white" | [[File:Document-save.png|link=Downloads]]
+! style="padding: 0 3em; border-width: 0; background-color: white" | [[File:Help-browser.png|link=:Category:HOWTO]]
+! style="padding: 0 3em; border-width: 0; background-color: white" | [[File:Applications-development.png|link=:Category:DeveloperPages]]
 |-
 | [[Downloads|Get the Drivers]]
 | [[FAQ]]
