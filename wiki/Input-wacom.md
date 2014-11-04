@@ -69,6 +69,8 @@ for you to use for copying.
 
 </code>
 
+Note: If installing from git, use ./autogen.sh instead of ./configure.
+
 ### Module Loading
 
 Finally, you'll need to have the module loaded by the kernel so that it
