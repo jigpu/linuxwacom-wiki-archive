@@ -91,3 +91,16 @@ Please do not send email regarding bugs or feature requests to the maintainer. U
 
 
 [[Category:DeveloperPages]]
+
+== Building ==
+To build on Ubuntu enter the following:
+
+<code>
+sudo apt-get build-dep libwacom
+</code>
+
+If buidling from git, run 
+
+<code>
+./autogen.sh
+</code>
