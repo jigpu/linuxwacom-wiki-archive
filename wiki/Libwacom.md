@@ -141,7 +141,3 @@ Building
 To build on Ubuntu enter the following:
 
 `sudo apt-get build-dep libwacom`
-
-If buidling from git, run
-
-`./autogen.sh`
