@@ -93,7 +93,7 @@ Please do not send email regarding bugs or feature requests to the maintainer. U
 [[Category:DeveloperPages]]
 
 == Building ==
-To build on Ubuntu enter the following:
+Beforre building on Ubuntu enter the following:
 
 <code>
 sudo apt-get build-dep libwacom

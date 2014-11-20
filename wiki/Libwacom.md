@@ -138,6 +138,6 @@ maintainer. Use the [mailing lists](mailing_lists "wikilink") instead.
 Building
 --------
 
-To build on Ubuntu enter the following:
+Beforre building on Ubuntu enter the following:
 
 `sudo apt-get build-dep libwacom`
