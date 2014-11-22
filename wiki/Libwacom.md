@@ -134,3 +134,24 @@ Bastien Nocera is the current libwacom maintainer.
 
 Please do not send email regarding bugs or feature requests to the
 maintainer. Use the [mailing lists](mailing_lists "wikilink") instead.
+
+Building
+--------
+
+Before building from git with ./autogen.sh:
+
+On Ubuntu:
+
+<code>
+
+sudo apt-get build-dep libwacom
+
+</code>
+
+On Fedora:
+
+<code>
+
+sudo yum-builddep libwacom
+
+</code>
