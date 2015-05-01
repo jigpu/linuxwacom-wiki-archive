@@ -1,62 +1,48 @@
-The '''xf86-input-wacom''' driver is the wacom-specific X11 input driver for the X.Org X Server version 1.7 and later (X11R7.5 or later). To work properly, it requires that a Wacom kernel driver is installed (from either [[input-wacom]] or [[linuxwacom]]).
+The '''xf86-input-wacom''' driver provides desktop support for Wacom tablets, touchscreens, and similar hardware. It is responsible for relaying events from the kernel to the X server where applications like GIMP, Krita, and Xournal can make use of them. Additionally, it provides services like palm rejection that improve the experience of using a tablet.
 
-== Distribution Support ==
-Many distributions include xf86-input-wacom and a properly patched kernel out of the box. In many cases, you can upgrade xf86-input-wacom without needing to build anything. The following distributions ship xf86-input-wacom:
-* Arch Linux
-* Debian Squeeze and later
-* Fedora 12 and later
-* Gentoo
-* OpenSuse 10.3 and later
-* Ubuntu 10.04 and later
+== Get the Drivers ==
+The easiest (and recomended) way to get support for Wacom hardware is to install the packages provided by your distribution. Our drivers are provided out of the box with most distributions, but can be updated or installed with the following commands:
 
-In addition, some pre-built snapshots of the git repository may be available for your distribution. If you just want to test a newer driver than is available in your distribution's official repository without building anything yourself, try these:
-* Ubuntu [https://launchpad.net/ubuntu/+ppas PPA]: https://launchpad.net/~doctormo/+archive/wacom-plus
+{|
+|-
+! Fedora, Red Hat, Mageia
+| <code>$ sudo -s 'yum makecache && yum install xorg-x11-drv-wacom'</code>
+|- 
+! Ubuntu, Mint, Debian
+| <code>$ sudo -s 'apt-get update && apt-get install xserver-xorg-input-wacom'</code>
+|-
+! SUSE
+| <code>$ sudo -s 'zypper update && zypper install xf86-input-wacom'</code>
+|-
+! Arch Linux
+| <code>$ sudo -s 'pacman -Sy && pacman -S xf86-input-wacom'</code>
+|-
+! Gentoo
+| <code>$ sudo -s 'emerge --sync && emerge xf86-input-wacom'</code>
+|}
 
-== Getting the Source ==
-We recommend to use [[Using Git|git]] to get the source straight from the repository
-<pre>
-git clone git://git.code.sf.net/p/linuxwacom/xf86-input-wacom
-cd xf86-input-wacom
-</pre>
+== Building from Source ==
+If the drivers provided by your distribution are out of date, you can also compile and install the driver from source. Before proceeding, you'll need to first install some required software:
 
-Alternatively, grab the latest release from the [https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/ downloads page] and unpack it with:
-<pre>
-tar jxf xf86-input-wacom-<version number>.tar.bz2
-cd xf86-input-wacom-<version-number>
-</pre>
-
-== Configuring the Build ==
-{{Tip|text=The INSTALL file in the driver tarball provides detailed build instructions}}
-
-We provide a helper script ''autogen.sh'' that wraps the [http://en.wikipedia.org/wiki/GNU_build_system autotools] steps. First make sure you have the following tools installed: gcc, automake, autoconf, libtool and make.
-
-If you are '''building from git''', then run autogen.sh:
-<pre>
-./autogen.sh --prefix=/usr --libdir=/usr/lib        # on 32-bit install
-./autogen.sh --prefix=/usr --libdir=/usr/lib64      # on 64 bit install
-</pre>
-
-If you are '''building from a tarball''', then run configure instead:
-<pre>
-./configure --prefix=/usr --libdir=/usr/lib        # on 32-bit install
-./configure --prefix=/usr --libdir=/usr/lib64      # on 64 bit install
-</pre>
-
-The scripts check whether the [[dependencies|required dependencies]] are installed. If any are missing, you need to install the dependencies, either from your distribution's packaging system or from the respective project's releases. Once installed, re-run the command.
-
-Both prefix and libdir options cover the common Linux distributions but there is a small chance that your distribution needs different prefixes or libdirs. The easiest way to check is to search for a file named ''evdev_drv.so''. If it is in ''/usr/lib64/xorg/modules/input'' or ''/usr/lib/xorg/modules/input'', then the above commands should work for you. If you have an X server tree outside of your system tree, adjust the prefix accordingly.
-
-Note that if you configured with a prefix of ''/usr'' you will overwrite your distribution's install. We recommend that  use the same build flags as your distribution does if you are trying to replace the distribution-installed version of the driver with the version from git.
-
-* [http://koji.fedoraproject.org/koji/packageinfo?packageID=9537 Fedora]: select the latest build for your version and look at the build.log. Search for the configure line and copy everything from that line.
-
-== Building the Driver ==
-When the step above has finished, you can build and install the driver with the following commands.
+{|
+|-
+! Fedora, Red Hat, Mageia
+| <code>$ sudo yum install gcc xorg-x11-util-macros xorg-x11-server-devel libXext-devel libXi-devel libXrandr-devel libXinerama-devel libudev-devel</code>
+|- 
+! Ubuntu, Mint, Debian
+| <code>$ sudo apt-get install xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev</code>
+|}
 
 <pre>
-make
-make install # may require sudo/root
+$ wget https://sourceforge.net/projects/linuxwacom/files/latest/download -O xf86-input-wacom.tar.bz2
+$ tar xvjf xf86-input-wacom.tar.bz2
+$ cd xf86-input-wacom-*
+$ ./configure --prefix=/usr
+$ make
+$ sudo make install
 </pre>
+
+Developers also have the option of cloning our git repository from <code>git://git.code.sf.net/p/linuxwacom/xf86-input-wacom</code>. In addition to the dependencies listed above, the 'automake', 'autoconf', and 'git' packages for your distribution will need to be installed. As with other autotools-based projects, the <code>./automake.sh</code> command should be run after cloning to create the Makefile.
 
 == Post-Install ==
 After installing the driver, you'll need to restart the driver by logging out. In addition, it may be necessary to configure X before you can use your tablet. See the [[configuring X]] page for more information.

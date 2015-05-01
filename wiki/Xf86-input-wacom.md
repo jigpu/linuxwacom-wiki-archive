@@ -7,100 +7,52 @@ tags:
  - DeveloperPages
 ---
 
-The **xf86-input-wacom** driver is the wacom-specific X11 input driver
-for the X.Org X Server version 1.7 and later (X11R7.5 or later). To work
-properly, it requires that a Wacom kernel driver is installed (from
-either [input-wacom](input-wacom "wikilink") or
-[linuxwacom](linuxwacom "wikilink")).
+The **xf86-input-wacom** driver provides desktop support for Wacom
+tablets, touchscreens, and similar hardware. It is responsible for
+relaying events from the kernel to the X server where applications like
+GIMP, Krita, and Xournal can make use of them. Additionally, it provides
+services like palm rejection that improve the experience of using a
+tablet.
 
-Distribution Support
+Get the Drivers
+---------------
+
+The easiest (and recomended) way to get support for Wacom hardware is to
+install the packages provided by your distribution. Our drivers are
+provided out of the box with most distributions, but can be updated or
+installed with the following commands:
+
+| Fedora, Red Hat, Mageia | `$ sudo -s 'yum makecache && yum install xorg-x11-drv-wacom'`            |
+|-------------------------|--------------------------------------------------------------------------|
+| Ubuntu, Mint, Debian    | `$ sudo -s 'apt-get update && apt-get install xserver-xorg-input-wacom'` |
+| SUSE                    | `$ sudo -s 'zypper update && zypper install xf86-input-wacom'`           |
+| Arch Linux              | `$ sudo -s 'pacman -Sy && pacman -S xf86-input-wacom'`                   |
+| Gentoo                  | `$ sudo -s 'emerge --sync && emerge xf86-input-wacom'`                   |
+
+Building from Source
 --------------------
 
-Many distributions include xf86-input-wacom and a properly patched
-kernel out of the box. In many cases, you can upgrade xf86-input-wacom
-without needing to build anything. The following distributions ship
-xf86-input-wacom:
+If the drivers provided by your distribution are out of date, you can
+also compile and install the driver from source. Before proceeding,
+you'll need to first install some required software:
 
--   Arch Linux
--   Debian Squeeze and later
--   Fedora 12 and later
--   Gentoo
--   OpenSuse 10.3 and later
--   Ubuntu 10.04 and later
+| Fedora, Red Hat, Mageia | `$ sudo yum install gcc xorg-x11-util-macros xorg-x11-server-devel libXext-devel libXi-devel libXrandr-devel libXinerama-devel libudev-devel` |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Ubuntu, Mint, Debian    | `$ sudo apt-get install xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev`                   |
 
-In addition, some pre-built snapshots of the git repository may be
-available for your distribution. If you just want to test a newer driver
-than is available in your distribution's official repository without
-building anything yourself, try these:
+    $ wget https://sourceforge.net/projects/linuxwacom/files/latest/download -O xf86-input-wacom.tar.bz2
+    $ tar xvjf xf86-input-wacom.tar.bz2
+    $ cd xf86-input-wacom-*
+    $ ./configure --prefix=/usr
+    $ make
+    $ sudo make install
 
--   Ubuntu [PPA](https://launchpad.net/ubuntu/+ppas):
-    <https://launchpad.net/~doctormo/+archive/wacom-plus>
-
-Getting the Source
-------------------
-
-We recommend to use [git](/wiki/Using_Git "wikilink") to get the source
-straight from the repository
-
-    git clone git://git.code.sf.net/p/linuxwacom/xf86-input-wacom
-    cd xf86-input-wacom
-
-Alternatively, grab the latest release from the [downloads
-page](https://sourceforge.net/projects/linuxwacom/files/xf86-input-wacom/)
-and unpack it with:
-
-    tar jxf xf86-input-wacom-<version number>.tar.bz2
-    cd xf86-input-wacom-<version-number>
-
-Configuring the Build
----------------------
-
-We provide a helper script *autogen.sh* that wraps the
-[autotools](http://en.wikipedia.org/wiki/GNU_build_system) steps. First
-make sure you have the following tools installed: gcc, automake,
-autoconf, libtool and make.
-
-If you are **building from git**, then run autogen.sh:
-
-    ./autogen.sh --prefix=/usr --libdir=/usr/lib        # on 32-bit install
-    ./autogen.sh --prefix=/usr --libdir=/usr/lib64      # on 64 bit install
-
-If you are **building from a tarball**, then run configure instead:
-
-    ./configure --prefix=/usr --libdir=/usr/lib        # on 32-bit install
-    ./configure --prefix=/usr --libdir=/usr/lib64      # on 64 bit install
-
-The scripts check whether the [required
-dependencies](dependencies "wikilink") are installed. If any are
-missing, you need to install the dependencies, either from your
-distribution's packaging system or from the respective project's
-releases. Once installed, re-run the command.
-
-Both prefix and libdir options cover the common Linux distributions but
-there is a small chance that your distribution needs different prefixes
-or libdirs. The easiest way to check is to search for a file named
-*evdev\_drv.so*. If it is in */usr/lib64/xorg/modules/input* or
-*/usr/lib/xorg/modules/input*, then the above commands should work for
-you. If you have an X server tree outside of your system tree, adjust
-the prefix accordingly.
-
-Note that if you configured with a prefix of */usr* you will overwrite
-your distribution's install. We recommend that use the same build flags
-as your distribution does if you are trying to replace the
-distribution-installed version of the driver with the version from git.
-
--   [Fedora](http://koji.fedoraproject.org/koji/packageinfo?packageID=9537):
-    select the latest build for your version and look at the build.log.
-    Search for the configure line and copy everything from that line.
-
-Building the Driver
--------------------
-
-When the step above has finished, you can build and install the driver
-with the following commands.
-
-    make
-    make install # may require sudo/root
+Developers also have the option of cloning our git repository from
+[`git://git.code.sf.net/p/linuxwacom/xf86-input-wacom`](git://git.code.sf.net/p/linuxwacom/xf86-input-wacom).
+In addition to the dependencies listed above, the 'automake',
+'autoconf', and 'git' packages for your distribution will need to be
+installed. As with other autotools-based projects, the `./automake.sh`
+command should be run after cloning to create the Makefile.
 
 Post-Install
 ------------
