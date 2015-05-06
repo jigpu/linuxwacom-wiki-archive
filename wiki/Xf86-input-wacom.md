@@ -32,27 +32,23 @@ installed with the following commands:
 Building from Source
 --------------------
 
-If the drivers provided by your distribution are out of date, you can
-also compile and install the driver from source. Before proceeding,
-you'll need to first install some required software:
+There is also the option of building and installing the driver from
+source. Before doing so, you'll need to install a number of build
+dependencies. Use the appropriate command below.
 
 | Fedora, Red Hat, Mageia | `$ sudo yum install gcc xorg-x11-util-macros xorg-x11-server-devel libXext-devel libXi-devel libXrandr-devel libXinerama-devel libudev-devel` |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | Ubuntu, Mint, Debian    | `$ sudo apt-get install xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev`                   |
 
-    $ wget https://sourceforge.net/projects/linuxwacom/files/latest/download -O xf86-input-wacom.tar.bz2
-    $ tar xvjf xf86-input-wacom.tar.bz2
-    $ cd xf86-input-wacom-*
+With all the build dependencies installed, you should now [download the
+latest xf86-input-wacom
+release](https://sourceforge.net/projects/linuxwacom/files/latest/download)
+and extract it to a convenient location. Open a terminal, navigate to
+the directory you extracted, and run the following commands:
+
     $ ./configure --prefix=/usr
     $ make
     $ sudo make install
-
-Developers also have the option of cloning our git repository from
-[`git://git.code.sf.net/p/linuxwacom/xf86-input-wacom`](git://git.code.sf.net/p/linuxwacom/xf86-input-wacom).
-In addition to the dependencies listed above, the 'automake',
-'autoconf', and 'git' packages for your distribution will need to be
-installed. As with other autotools-based projects, the `./automake.sh`
-command should be run after cloning to create the Makefile.
 
 Post-Install
 ------------
