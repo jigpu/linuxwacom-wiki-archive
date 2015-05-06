@@ -14,16 +14,16 @@ particularly apparent for users of older kernels. Because of this, we
 recommend upgrading your kernel if possible and only installing this
 driver when absolutely necessary.
 
-This driver builds two seperate kernel modules:
+This driver builds two separate kernel modules:
 [wacom.ko](wacom.ko "wikilink") and
-[wacom\_w8001.ko](wacom_w8001.ko "wikilink"). The former is used with
-tablets that interface over the USB bus, which accounts for the vast
-majority of tablets. The latter is used for older tablet PCs whose
-digitizers are connected via a serial interface. The
-[hid-wacom.ko](hid-wacom.ko "wikilink") and
-[wacom\_i2c.ko](wacom_i2c.ko "wikilink") modules (for Bluetooth and I2C
-tablets, respectively) are *not* included with this driver -- updates to
-these are only available through kernel updates.
+[wacom\_w8001.ko](wacom_w8001.ko "wikilink"). The former is used for the
+vast majority of tablets (USB-attached for 2.6.30 - 3.16;
+USB/Bluetooth/I2C-attached for 3.17+), while the latter is used for
+older tablet PCs whose digitizers are connected via an internal serial
+interface. The [hid-wacom.ko](hid-wacom.ko "wikilink") and
+[wacom\_i2c.ko](wacom_i2c.ko "wikilink") modules (legacy modules for
+Bluetooth and I2C tablets, respectively) are *not* included with this
+driver.
 
 Installation
 ------------
@@ -57,14 +57,13 @@ and unpack it with:
 
 From within the extracted input-wacom directory, run the following
 commands to build the driver and install it where your system can find
-it. The output from the **configure** step will provide the exact path
-for you to use for copying.
+it:
 
 <code>
 
 `./configure`  
-`sudo cp ./`<kernel version>`` /wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet ``  
-`sudo cp ./`<kernel version>`` /wacom_w8001.ko /lib/modules/`uname -r`/kernel/drivers/input/touchscreen ``  
+`make`  
+`sudo make install`  
 `sudo depmod -a`
 
 </code>
@@ -83,8 +82,8 @@ force the running kernel to reload the module without rebooting:
 
 `sudo modprobe -r wacom`  
 `sudo modprobe -r wacom_w8001`  
-`` sudo insmod /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko ``  
-`` sudo insmod /lib/modules/`uname -r`/kernel/drivers/input/touchscreen/wacom_w8001.ko ``
+`sudo insmod */wacom.ko`  
+`sudo insmod */wacom_w8001.ko`
 
 </code>
 
