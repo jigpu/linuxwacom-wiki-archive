@@ -445,3 +445,18 @@ detect when a tablet is plugged in and configure several settings:
 Configuration can be set through the *gsettings* CLI program or the
 *dconf-editor* GUI. Keys are present under
 **org.gnome.settings-daemon.peripherals.wacom**
+
+In some cases it may be desirable to prevent gnome-settings-daemon from
+controlling the tablet. For example, GNOME Control Center provides no
+option for users to map ExpressKeys to mouse button events, but
+*xsetwacom* does. While disabling the daemon as outlined below will
+allow other configuration methods like [xsetwacom](xsetwacom "wikilink")
+or [xorg.conf.d](xorg.conf.d "wikilink") to work, it also prevents any
+of the settings stored in the GNOME Control Center (e.g. Cintiq
+calibration or pen preferences) from being applied after login.
+
+`# Disable the Wacom plugin of gnome-settings-daemon`  
+`gsettings set org.gnome.settings-daemon.plugins.gsdwacom active false`  
+  
+`# Enable the Wacom plugin of gnome-settings-daemon`  
+`gsettings set org.gnome.settings-daemon.plugins.gsdwacom active true`
