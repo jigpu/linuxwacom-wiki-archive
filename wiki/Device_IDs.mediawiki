@@ -723,14 +723,14 @@
 | Bamboo Pad
 | 
 | 4.1
-| NO
+| 3.17
 |-
 | 056a:0319
 | CTH-300
 | Bamboo Pad wireless
 | 
 | 4.1
-| NO
+| 3.17
 |-
 | 056a:0323
 | CTL-680

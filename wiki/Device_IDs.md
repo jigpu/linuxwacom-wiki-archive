@@ -112,8 +112,8 @@ USB Peripherals
 | 056a:0314 | PTH-451      | Intuos pro (S)                         |                | 3.13   | 2.6.30†     |
 | 056a:0315 | PTH-651      | Intuos pro (M)                         |                | 3.13   | 2.6.30†     |
 | 056a:0317 | PTH-851      | Intuos pro (L)                         |                | 3.13   | 2.6.30†     |
-| 056a:0318 | CTH-301      | Bamboo Pad                             |                | 4.1    | NO          |
-| 056a:0319 | CTH-300      | Bamboo Pad wireless                    |                | 4.1    | NO          |
+| 056a:0318 | CTH-301      | Bamboo Pad                             |                | 4.1    | 3.17        |
+| 056a:0319 | CTH-300      | Bamboo Pad wireless                    |                | 4.1    | 3.17        |
 | 056a:0323 | CTL-680      | Intuos Pen (M)                         |                | 3.19   | 2.6.30\*    |
 | 056a:032f | DTU-1031X    |                                        |                | 3.19   | 2.6.30      |
 |           |              |                                        |                |        |             |
