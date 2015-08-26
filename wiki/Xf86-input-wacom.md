@@ -38,7 +38,7 @@ dependencies. Use the appropriate command below.
 
 | Fedora, Red Hat, Mageia | `$ sudo yum install gcc xorg-x11-util-macros xorg-x11-server-devel libXext-devel libXi-devel libXrandr-devel libXinerama-devel libudev-devel` |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Ubuntu, Mint, Debian    | `$ sudo apt-get install xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev`                   |
+| Ubuntu, Mint, Debian    | `$ sudo apt-get install pkg-config make xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev`   |
 
 With all the build dependencies installed, you should now [download the
 latest xf86-input-wacom
