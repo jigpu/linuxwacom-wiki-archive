@@ -174,3 +174,15 @@ Impatient users have already applied the patch set and compiled their
 own custom wacom.ko. They report they can choose which one of the 4
 small LEDs to light up, make the intensity of the LED change when the
 stylus is touching the tablet, and send images to the OLEDs.
+
+### DTU-1141
+
+The DTU-1141 relies on both the [Wacom Kernel
+Driver](http://linuxwacom.sourceforge.net/wiki/index.php/Input-wacom)
+and [Display Link's Linux software
+package](http://www.displaylink.com/downloads/ubuntu.php). Directions
+for installing DisplayLink's package are available at DisplayLink's
+site. DisplayLink has prepared their package to be compatible with
+Ubuntu 14.04.2 LTS. We have verified that the DTU-1141 works as both a
+second display and a standalone monitor with an up to date [Ubuntu
+14.04.02](http://old-releases.ubuntu.com/releases/).
