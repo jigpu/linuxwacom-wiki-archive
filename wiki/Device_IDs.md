@@ -158,6 +158,7 @@ Tablet PCs
 | 056a:010e |              |                         |                           | 3.12   | 2.6.38      |     |
 | 056a:010f |              |                         |                           | 3.12   | 2.6.30\*    |     |
 | 056a:0116 |              |                         |                           | 3.16   | 2.6.30      |     |
+| 056a:012c |              |                         |                           | 3.18   | 2.6.30      |     |
 | 056a:0307 | DTH-A1300    | Cintiq Companion Hybrid | pen/pad sensor            | 3.13   | 2.6.38      |     |
 | 056a:0309 | DTH-A1300    | Cintiq Companion Hybrid | touch sensor              | 3.13   | 2.6.38      |     |
 | 056a:030a | DTH-W1300    | Cintiq Companion        | pen/pad sensor            | 3.18   | 2.6.38      |     |
