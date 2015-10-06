@@ -795,6 +795,34 @@
 | 4.2
 | 2.6.30
 |-
+| 056a:033b
+| CTL-490
+| Intuos Draw small
+| 
+| 4.4
+| NO
+|-
+| 056a:033c
+| CTH-490
+| Intuos Art/Photo/Comic small
+| 
+| 4.4
+| NO
+|-
+| 056a:033d
+| CTL-690
+| Intuos Draw medium
+| 
+| 4.4
+| NO
+|-
+| 056a:033e
+| CTH-690
+| Intuos Art medium
+| 
+| 4.4
+| NO
+|-
 |}
 
 = Bluetooth Peripherals =

@@ -123,6 +123,10 @@ USB Peripherals
 | 056a:0333 | DTH-1300     | Cintiq 13HD Touch                      | pen/pad sensor | 4.1            | 2.6.30      |
 | 056a:0335 | DTH-1300     | Cintiq 13HD Touch                      | touch sensor   | 4.1            | 2.6.38      |
 | 056a:0336 | DTU-1141     |                                        |                | 4.2            | 2.6.30      |
+| 056a:033b | CTL-490      | Intuos Draw small                      |                | 4.4            | NO          |
+| 056a:033c | CTH-490      | Intuos Art/Photo/Comic small           |                | 4.4            | NO          |
+| 056a:033d | CTL-690      | Intuos Draw medium                     |                | 4.4            | NO          |
+| 056a:033e | CTH-690      | Intuos Art medium                      |                | 4.4            | NO          |
 |           |              |                                        |                |                |             |
 
 Bluetooth Peripherals
