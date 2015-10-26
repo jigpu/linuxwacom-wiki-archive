@@ -34,6 +34,12 @@ This page is a list of external applications that can make use of Wacom tablets 
 
 * '''[https://sourceforge.net/apps/trac/easystroke/ easystroke]''': A gesture-recognition application for X11. Gestures can be made to emulate key presses, execute shell commands, hold down modifiers and emulate a scroll wheel.
 
+* '''[https://simmesimme.github.io/gnome-pie.html Gnome-Pie]''': A circular application launcher (''pie menu'') for Linux. By activating one of its slices, applications may be launched, key presses may be simulated, or files can be opened.
+
+* '''[http://www.nongnu.org/xbindkeys/xbindkeys.html xbindkeys]''': A tool that allows you to launch shell commands with your keyboard or your mouse (''or tablet'') under X Windows. It links commands to keys or mouse buttons (''e.g. as set with xsetwacom''), using a configuration file.
+
+* '''[http://www.semicomplete.com/projects/xdotool xdotool]''': A command-line based tool which lets you simulate keyboarde input and mouse activity, move and resize windows, etc. Might be useful in conjunction with '''xbindkeys''' above.
+
 == Libraries / Toolkits / Frameworks ==
 * '''[http://git.gnome.org/browse/gnome-settings-daemon/commit/?id=9863ccf9d99fdd712778b31197365723b9caa0behttp://git.gnome.org/browse/gnome-settings-daemon/commit/?id=9863ccf9d99fdd712778b31197365723b9caa0be gnome-settings-daemon]''' already supports several wacom-related [http://library.gnome.org/devel/gio/2.28/GSettings.html gsettings] keys for configuration. This includes hotplugging support so that the configuration options are applied both after login and whenever a tablet is plugged in.
 

@@ -114,6 +114,28 @@ Utilities
     emulate key presses, execute shell commands, hold down modifiers and
     emulate a scroll wheel.
 
+<!-- -->
+
+-   **[Gnome-Pie](https://simmesimme.github.io/gnome-pie.html)**: A
+    circular application launcher (*pie menu*) for Linux. By activating
+    one of its slices, applications may be launched, key presses may be
+    simulated, or files can be opened.
+
+<!-- -->
+
+-   **[xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)**: A
+    tool that allows you to launch shell commands with your keyboard or
+    your mouse (*or tablet*) under X Windows. It links commands to keys
+    or mouse buttons (*e.g. as set with xsetwacom*), using a
+    configuration file.
+
+<!-- -->
+
+-   **[xdotool](http://www.semicomplete.com/projects/xdotool)**: A
+    command-line based tool which lets you simulate keyboarde input and
+    mouse activity, move and resize windows, etc. Might be useful in
+    conjunction with **xbindkeys** above.
+
 Libraries / Toolkits / Frameworks
 ---------------------------------
 
