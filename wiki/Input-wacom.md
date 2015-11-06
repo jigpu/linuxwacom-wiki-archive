@@ -35,7 +35,7 @@ been installed on your system:
 
 <code>
 
-`sudo apt-get install linux-headers-$(uname -r)  # on Debian, Ubuntu, Mint`  
+`sudo apt-get install linux-headers-$(uname -r) build-essential # on Debian, Ubuntu, Mint`  
 `sudo yum install gcc kernel-devel               # on RHEL, CentOS, Fedora`
 
 </code>

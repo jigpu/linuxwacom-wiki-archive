@@ -7,7 +7,7 @@ This driver builds two separate kernel modules: [[wacom.ko]] and [[wacom_w8001.k
 Before building, you'll need to ensure the necessary dependencies have been installed on your system:
 
 <code>
- sudo apt-get install linux-headers-$(uname -r)  # on Debian, Ubuntu, Mint
+ sudo apt-get install linux-headers-$(uname -r) build-essential # on Debian, Ubuntu, Mint
  sudo yum install gcc kernel-devel               # on RHEL, CentOS, Fedora
 </code>
 
