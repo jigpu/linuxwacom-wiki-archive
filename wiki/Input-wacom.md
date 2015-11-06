@@ -63,8 +63,7 @@ it:
 
 `./configure`  
 `make`  
-`sudo make install`  
-`sudo depmod -a`
+`sudo make install`
 
 </code>
 
@@ -82,8 +81,8 @@ force the running kernel to reload the module without rebooting:
 
 `sudo modprobe -r wacom`  
 `sudo modprobe -r wacom_w8001`  
-`sudo insmod */wacom.ko`  
-`sudo insmod */wacom_w8001.ko`
+`sudo modprobe wacom`  
+`sudo modprobe wacom_w8001`
 
 </code>
 

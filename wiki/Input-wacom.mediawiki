@@ -26,7 +26,6 @@ From within the extracted input-wacom directory, run the following commands to b
  ./configure
  make
  sudo make install
- sudo depmod -a
 </code>
 
 Note: If installing from git, use ./autogen.sh instead of ./configure.
@@ -37,8 +36,8 @@ Finally, you'll need to have the module loaded by the kernel so that it can be u
 <code>
  sudo modprobe -r wacom
  sudo modprobe -r wacom_w8001
- sudo insmod */wacom.ko
- sudo insmod */wacom_w8001.ko
+ sudo modprobe wacom
+ sudo modprobe wacom_w8001
 </code>
 
 == Development ==
