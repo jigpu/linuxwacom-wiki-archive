@@ -108,6 +108,7 @@ USB Peripherals
 | 056a:0302 | CTH-480      | Intuos Pen & Touch (S)                 |                | 3.14           | 2.6.30\*†            |
 | 056a:0303 | CTH-680      | Intuos Pen & Touch (M)                 |                | 3.14           | 2.6.30\*†            |
 | 056a:0304 | DTK-1300     | Cintiq 13HD                            |                | 3.1            | 2.6.30               |
+| 056a:0304 | DTK-1301     | Cintiq 13HD                            |                | 3.1            | 2.6.30               |
 | 056a:030e | CTL-480      | Intuos Pen (S)                         |                | 3.14           | 2.6.30\*             |
 | 056a:0314 | PTH-451      | Intuos pro (S)                         |                | 3.13           | 2.6.30†              |
 | 056a:0315 | PTH-651      | Intuos pro (M)                         |                | 3.13           | 2.6.30†              |
