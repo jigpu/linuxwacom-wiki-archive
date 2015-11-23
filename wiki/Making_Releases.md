@@ -77,21 +77,23 @@ This section describes how to do a new
 1.  Change configure.ac to reflect the new version number and commit:
     **git commit -sm "input-wacom VERSION" configure.ac** You *must not*
     have uncommitted changes when releasing a new version.
-2.  Run **make dist**. Verify the name of the tarball
+2.  Tag the module: '''git tag -m "input-wacom VERSION" -s
+    input-wacom-VERSION
+3.  Run **make dist**. Verify the name of the tarball
     (input-wacom-VERSION.tar.bz2). If this is a clean clone of the
     repository, you will need to first run autogen.sh to generate the
     Makefile.
-3.  Build, install, and test the driver from the tarball
-4.  Tag the module: '''git tag -m "input-wacom VERSION" -s
-    input-wacom-VERSION
-5.  Run the release script: **sh release.sh** with the correct
+4.  Build, install, and load the driver from the tarball
+5.  Verify the version number of the loaded driver with \`modinfo wacom
+    \| grep version\`
+6.  Run the release script: **sh release.sh** with the correct
     arguments. This script will push the tag and upload the tarball to
     the remote. (To use this script, make sure $USER equals your
     username on sourceforge. You may just want to edit the user ID in
     the ssh section of the script and --ignore-local-changes to
     release.sh.)
-6.  Type up a short announce email summarising the new features in this
+7.  Type up a short announce email summarising the new features in this
     version and append the git shortlog: **git shortlog
     input-wacom-OLDVERSION..input-wacom-VERSION**
-7.  **Sign off the email** and send it to the [ linuxwacom-announce
+8.  **Sign off the email** and send it to the [ linuxwacom-announce
     list](/wiki/Mailing_lists "wikilink")
