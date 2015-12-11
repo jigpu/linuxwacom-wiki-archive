@@ -551,28 +551,28 @@
 | 2.6.30
 |-
 | 056a:00d6
-| CTH-460
+| CTH-460(A)
 | Bamboo Pen & Touch
 | 
 | 2.6.38
 | 2.6.30‡
 |-
 | 056a:00d7
-| CTH-461
+| CTH-461(A)
 | Bamboo Fun/Craft/Comic Pen & Touch (S)
 | 
 | 2.6.38
 | 2.6.30‡
 |-
 | 056a:00d8
-| CTH-661
+| CTH-661(A)
 | Bamboo Fun/Comic Pen & Touch (M)
 | 
 | 2.6.37
 | 2.6.30‡
 |-
 | 056a:00d9
-| CTT-460
+| CTT-460(A)
 | Bamboo Touch
 | 
 | NO

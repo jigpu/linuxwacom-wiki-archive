@@ -88,10 +88,10 @@ USB Peripherals
 | 056a:00d3 | CTH-661      | Bamboo Fun/Comic Pen & Touch (M)       |                | 2.6.37         | 2.6.30‡              |
 | 056a:00d4 | CTL-460      | Bamboo Pen (S)                         |                | 2.6.37         | 2.6.30               |
 | 056a:00d5 | CTL-660      | Bamboo Pen (M)                         |                | 3.1            | 2.6.30               |
-| 056a:00d6 | CTH-460      | Bamboo Pen & Touch                     |                | 2.6.38         | 2.6.30‡              |
-| 056a:00d7 | CTH-461      | Bamboo Fun/Craft/Comic Pen & Touch (S) |                | 2.6.38         | 2.6.30‡              |
-| 056a:00d8 | CTH-661      | Bamboo Fun/Comic Pen & Touch (M)       |                | 2.6.37         | 2.6.30‡              |
-| 056a:00d9 | CTT-460      | Bamboo Touch                           |                | NO             | NO                   |
+| 056a:00d6 | CTH-460(A)   | Bamboo Pen & Touch                     |                | 2.6.38         | 2.6.30‡              |
+| 056a:00d7 | CTH-461(A)   | Bamboo Fun/Craft/Comic Pen & Touch (S) |                | 2.6.38         | 2.6.30‡              |
+| 056a:00d8 | CTH-661(A)   | Bamboo Fun/Comic Pen & Touch (M)       |                | 2.6.37         | 2.6.30‡              |
+| 056a:00d9 | CTT-460(A)   | Bamboo Touch                           |                | NO             | NO                   |
 | 056a:00da | CTH-461SE    | Bamboo Pen & Touch Special Edition (S) |                | 2.6.37         | 2.6.30‡              |
 | 056a:00db | CTH-661SE    | Bamboo Pen & Touch Special Edition (M) |                | 2.6.37         | 2.6.30‡              |
 | 056a:00dc | CTT-470      | Bamboo Touch                           |                | NO             | NO                   |
