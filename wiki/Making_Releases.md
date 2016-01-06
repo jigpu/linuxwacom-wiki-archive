@@ -86,14 +86,15 @@ This section describes how to do a new
 4.  Build, install, and load the driver from the tarball
 5.  Verify the version number of the loaded driver with \`modinfo wacom
     \| grep version\`
-6.  Run the release script: **sh release.sh** with the correct
+6.  Push to the remote: **git push origin master**
+7.  Run the release script: **sh release.sh** with the correct
     arguments. This script will push the tag and upload the tarball to
     the remote. (To use this script, make sure $USER equals your
     username on sourceforge. You may just want to edit the user ID in
     the ssh section of the script and --ignore-local-changes to
     release.sh.)
-7.  Type up a short announce email summarising the new features in this
+8.  Type up a short announce email summarising the new features in this
     version and append the git shortlog: **git shortlog
     input-wacom-OLDVERSION..input-wacom-VERSION**
-8.  **Sign off the email** and send it to the [ linuxwacom-announce
+9.  **Sign off the email** and send it to the [ linuxwacom-announce
     list](/wiki/Mailing_lists "wikilink")
