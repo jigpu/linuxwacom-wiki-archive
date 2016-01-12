@@ -43,8 +43,14 @@ dependencies. Use the appropriate command below.
 With all the build dependencies installed, you should now [download the
 latest xf86-input-wacom
 release](https://sourceforge.net/projects/linuxwacom/files/latest/download)
-and extract it to a convenient location. Open a terminal, navigate to
-the directory you extracted, and run the following commands:
+and extract it to a convenient location. Open a terminal, and navigate
+to the directory you extracted. If you were instructed to apply a patch
+file for testing purposes, download it, move it into the current
+directory, and run `patch -p1 < `<patchfile> (replacing "<patchfile>"
+with the name of the downloaded patch file).
+
+At this point, you should run the following commands to configure,
+build, and install the driver:
 
     $ ./configure --prefix=/usr
     $ make
