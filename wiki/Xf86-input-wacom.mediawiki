@@ -22,8 +22,8 @@ The easiest (and recomended) way to get support for Wacom hardware is to install
 |}
 
 == Building from Source ==
+{{Tip|text=Developers cloning from git will want to also install the 'git', 'automake', and 'autoconf' packages. Our repository may be cloned by running <code>git clone git://git.code.sf.net/p/linuxwacom/xf86-input-wacom</code> and prepared for building by running <code>./automake.sh</code>}}
 There is also the option of building and installing the driver from source. Before doing so, you'll need to install a number of build dependencies. Use the appropriate command below.
-{{Tip|text=Developers cloning from git will want to also install the 'git', 'automake', and 'autoconf' packages.}}
 {|
 |-
 ! Fedora, Red Hat, Mageia
@@ -32,8 +32,6 @@ There is also the option of building and installing the driver from source. Befo
 ! style="background:#E8EFF8" | Ubuntu, Mint, Debian
 | style="background:#E8EFF8" | <code>$ sudo apt-get install pkg-config make xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev</code>
 |}
-
-{{Tip|text=Developers also have the option of building from git by running <code>git clone git://git.code.sf.net/p/linuxwacom/xf86-input-wacom</code>. After checking out, you should run <code>./automake.sh</code> to create the configure script and then run the commands found to the left to configure, build, and install.}}
 
 With all the build dependencies installed, you should now [https://sourceforge.net/projects/linuxwacom/files/latest/download download the latest xf86-input-wacom release] and extract it to a convenient location. Open a terminal, and navigate to the directory you extracted. If you were instructed to apply a patch file for testing purposes, download it, move it into the current directory, and run <code>patch -p1 < <patchfile></code> (replacing "<patchfile>" with the name of the downloaded patch file).
 
