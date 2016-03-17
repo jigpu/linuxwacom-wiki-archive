@@ -155,3 +155,11 @@ On Fedora:
 sudo yum-builddep libwacom
 
 </code>
+
+After building, copy the libwacom data files in to /usr/share/libwacom:
+
+<code>
+
+sudo cp -r /home/<path>/linuxwacom-libwacom/data/\* /usr/share/libwacom/
+
+</code>
