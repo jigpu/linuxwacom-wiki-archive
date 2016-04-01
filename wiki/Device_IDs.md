@@ -103,6 +103,7 @@ USB Peripherals
 | 056a:00f8 | DTH-2400     | Cintiq 24HD touch                      | pen/pad sensor | 3.6            | 2.6.30               |
 | 056a:00fa | DTK-2200     | Cintiq 22HD                            | pen/pad sensor | 3.6            | 2.6.30               |
 | 056a:00fb | DTU-1031     |                                        |                | 3.14           | 2.6.30               |
+| 056a:0221 | MDP-123      | Wacom Inkling                          |                |                |                      |
 | 056a:0300 | CTL-471      | Bamboo Splash, One by Wacom (S)        |                | 3.11           | 2.6.30\*             |
 | 056a:0301 | CTL-671      | One by Wacom (M)                       |                | 3.11           | 2.6.30\*             |
 | 056a:0302 | CTH-480      | Intuos Pen & Touch (S)                 |                | 3.14           | 2.6.30\*†            |
