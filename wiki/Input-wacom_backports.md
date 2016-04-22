@@ -55,15 +55,22 @@ names, please substitute them where necessary.
 
 ### Importing Upstream Commits
 
-**Step 1:** The first step is to navigate to your upstream kernel
-directory and have it update its remotes so that you can have access to
-the latest commits. The output of this command lists the branches which
-have been updated; you can use this information to determine if anything
-interesting may need to be imported into the input-wacom repository. As
-can be seen in the sample output below, there have been updates to
-"jiri/for-4.6/wacom", "for-4.6/upstream-fixes", etc. Of particular
-interest are Jiri's "wacom", "upstream", and "upstream-fixes" branches
-since these will typically be where he pushes updates to.
+**Step 1:** Navigate to your upstream kernel directory and fetch all
+upstream updates for the remotes. As git downloads the new commits, it
+will print out information about new branches and branches which have
+updates. New code which affects our driver could potentially be
+contained in any updated branch, but typically updates will only occur
+in Jiri's "wacom", "upstream", and "upstream-fixes" branches (and
+similar branches owned by Dmitry). Additionally, it is a good idea to
+periodically also check Linus' RC tags to ensure they don't contain any
+unexpected code.
+
+In the sample below, we fetch updates for all upstream repositories by
+running \`git remote update\`. The output lists a number of branches of
+interest: "jiri/for-4.5/upstream", "jiri/for-4.5/upstream-fixes",
+"jiri/for-4.6/upstream", "jiri/for-4.6/upstream-fixes", and
+"jiri/for-4.6/wacom". Additionally, there are new RCs tagged by Linus
+that could also be investigated.
 
 <code>
 
@@ -111,38 +118,51 @@ since these will typically be where he pushes updates to.
 
 </code>
 
-**Step 2:** Now that you've updated the kernel repository and are aware
-of which branches have updates, it is time to determine the last commit
-that has appeared in each relevant input-wacom branch. Since there were
-updates to "jiri/for-4.6/wacom" and "for-4.6/upstream-fixes", lets look
-at the corresponding "jiri/for-4.6" branch in input-wacom. The last
-commit should have a note stating something like
+**Step 2:** For each branch or tag of interest from step 1, you will
+need to see if they contain any new commits that have not already been
+added to the input-wacom repository. The easiest way of doing this is to
+look at the last commit in each of input-wacom's upstream mirror
+branches. For example, we might find that the commit message of the last
+commit to our "jiri/for-4.5" branch contains the message
 "\[jason.gerecke@wacom.com: Imported into input-wacom repository
-(f620516)\]" -- the final hex value in this line indicates what upstream
-commit this was imported from.
+(0bbfe28)\]". This indicates that the branch should contain all commits
+prior to 0bbfe28 and that anything newer may need to be added.
 
-**Step 3:** Now that we know the last upstream commit that was imported
-into our branch of interest, we can export all the more recent commits
-from the kernel repository. For example, the command below would produce
-a list of patches produced between f620516 and Jiri's "for-4.6/wacom"
-branch that changed one of the `drivers/hid/wacom*` files. When
-exporting patches made to the w8001 driver under Dmitry's care, you'll
-need to change this last argument to
-`drivers/input/tablet/wacom* drivers/input/touchscreen/wacom*`.
+For each branch that may have new upstream commits (e.g., "jiri/for-4.5"
+and "jiri/for-4.6") take note of the commit ID mentioned in the last
+commit message.
+
+**Step 3:** With the information gathered in step 2, we can have git
+export all commits newer than than that commit which affect our driver.
+To do this, we can run a command similar to the following example. The
+command should be run for each branch that may have new commits on it,
+replacing the commit SHA with the SHA from step 2 and the branch name
+with the branch of interest. The final path argument will depend on the
+remote -- for Jiri's branches you will want to use
+"drivers/hid/wacom\*", while for Dmitry's use
+"drivers/input/touchscreen/wacom\*".
 
 <code>
 
-`(kernel.git)~ git format-patch f620516..jiri/for-4.6/wacom -- drivers/hid/wacom*`  
-`# No output`
+`(kernel.git)~ git format-patch 0bbfe28..jiri/for-4.5/upstream -- drivers/hid/wacom*`  
+`# No output.`
 
 </code>
 
-Since nothing was printed out, that means that none of the new upstream
-commits in "jiri/for-4.6/wacom" affected our driver. Next, lets do the
-same thing, but for the "jiri/for-4.6/upstream-fixes" branch:
+If nothing is printed out, that means that none of the new upstream
+commits to "jiri/for-4.5/upstream" directly affect our driver. In such a
+case you can run the command again for the next branch of interest. If
+something is printed out, however, proceed to step 4 to integrate the
+patches into input-wacom.
 
 <code>
 
+`(kernel.git)~ git format-patch 0bbfe28..jiri/for-4.5/upstream-fixes -- drivers/hid/wacom*`  
+`# No output.`  
+`(kernel.git)~ git format-patch f620516..jiri/for-4.6/wacom -- drivers/hid/wacom*`  
+`# No output.`  
+`(kernel.git)~ git format-patch f620516..jiri/for-4.6/upstream -- drivers/hid/wacom*`  
+`# No output.`  
 `(kernel.git)~ git format-patch f620516..jiri/for-4.6/upstream-fixes -- drivers/hid/wacom*`  
 `0001-HID-wacom-fix-Bamboo-ONE-oops.patch`  
 `0002-HID-wacom-Initialize-hid_data.inputmode-to-1.patch`  
@@ -150,13 +170,15 @@ same thing, but for the "jiri/for-4.6/upstream-fixes" branch:
 
 </code>
 
-This time, we can see that there are three commits that Jiri applied
-which affected our driver which will have to be added to input-wacom.
+After checking several branches, each with no commits of interest, we
+see that 3 patches were generated for the "jiri/for-4.6/upstream-fixes"
+branch. We should now proceed to step 4 to integrate these patches into
+input-wacom.
 
-**Step 4:** With the commits that need to be imported now available as
-.patch files, we need to make some small edits to them before importing
-them. Firstly, we need to change the path to coincide with the path used
-by input-wacom:
+**Step 4:** The patch files generated in step 3 will need to be slightly
+modified before importing them into the input-wacom repository. Firstly,
+we need to change the path to coincide with the path used by
+input-wacom:
 
 <code>
 
@@ -179,10 +201,10 @@ import them into the input-wacom repository:
 </code>
 
 If a merge error occurs during the import process, git will suggest
-trying to apply the patch manually (e.g. with \`patch -p1 &lt;
-.git/rebase-apply/patch\`). Go ahead and try this, and then resolve any
-patch errors by looking at the generated ".rej" files. Commit the fixed
-version, and then continue applying patches by running
+trying to apply the patch manually (e.g. with
+`patch -p1 < .git/rebase-apply/patch`). Go ahead and try this, and then
+resolve any patch errors by looking at the generated ".rej" files.
+Commit the fixed version, and then continue applying patches by running
 `git am --continue`.
 
 **Step 6:** With all the patches successfully imported, it is now time
@@ -192,12 +214,19 @@ If any errors are encountered, you'll need to edit the buggy commit with
 the necessary changes.
 
 **Step 7:** Once you've completed importing the patches from one
-upstream branch, you can move on to the next until you've imported
-patches from all upstream branches.
+upstream branch, you can remove the patch files from the kernel
+directory and return to step 3 with the next branch of interest. In this
+particular example, "jiri/for-4.6/upstream-fixes" was the last branch of
+interest so there was no need to return to step 3.
 
-**Step 8:** After everything has been imported, the next step is to go
-through the patches and see if any need to be backported. If they do,
-you can continue with the steps below.
+**Step 8:** After all the upstream changes have been imported, the next
+step is to go see if any of them need to be backported to earlier kernel
+versions (e.g. 3.7, 2.6.38, etc.). Determining if a particular change
+needs to be backported will require an understanding of whether the
+change fixes a bug or adds a feature that is applicable to older kernel
+versions. Any backported changes should be added to the input-wacom
+"master" branch rather than one of the upstream mirror branches like
+"jiri/for-4.6".
 
 ### Backporting Patches to Earlier Kernels
 
