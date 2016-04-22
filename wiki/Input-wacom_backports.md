@@ -33,13 +33,13 @@ development trees. The two remotes we deal most often with are Jiri's
 
 </code>
 
-In addition, to keep \[our Github
-mirror\](https://github.com/linuxwacom/input-wacom) in sync with
+In addition, to keep [our Github
+mirror](https://github.com/linuxwacom/input-wacom) in sync with
 Sourceforge, it will need to be added as a "remote" of the input-wacom
 repository as well. Furthermore, if you would like the full benefit of
 our continuous integration tests, it is recommended to fork the Github
-repository and then \[sign up for a Travis-CI
-account\](https://travis-ci.org/). Once the fork has been made and the
+repository and then [sign up for a Travis-CI
+account](https://travis-ci.org/). Once the fork has been made and the
 repository enabled in Travis-CI, you can add it as a remote as well:
 
 <code>
