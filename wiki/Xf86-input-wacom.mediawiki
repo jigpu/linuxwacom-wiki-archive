@@ -37,6 +37,7 @@ With all the build dependencies installed, you should now [https://sourceforge.n
 
 At this point, you should run the following commands to configure, build, and install the driver:
 <pre>
+$ ./autogen.sh
 $ ./configure --prefix=/usr
 $ make
 $ sudo make install
