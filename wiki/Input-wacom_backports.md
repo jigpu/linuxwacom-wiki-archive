@@ -60,7 +60,7 @@ upstream updates for the remotes. As git downloads the new commits, it
 will print out information about new branches and branches which have
 updates. New code which affects our driver could potentially be
 contained in any updated branch, but typically updates will only occur
-in Jiri's "wacom", "upstream", and "upstream-fixes" branches (and
+in Jiri's "wacom", "upstream", and "upstream-fixes" branches (as well as
 similar branches owned by Dmitry). Additionally, it is a good idea to
 periodically also check Linus' RC tags to ensure they don't contain any
 unexpected code.

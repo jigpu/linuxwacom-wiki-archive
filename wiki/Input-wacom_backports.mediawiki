@@ -21,7 +21,7 @@ The remainder of this document assumes that the remotes "jiri", "dtor", "mirror"
 
 === Importing Upstream Commits ===
 
-'''Step 1:''' Navigate to your upstream kernel directory and fetch all upstream updates for the remotes. As git downloads the new commits, it will print out information about new branches and branches which have updates. New code which affects our driver could potentially be contained in any updated branch, but typically updates will only occur in Jiri's "wacom", "upstream", and "upstream-fixes" branches (and similar branches owned by Dmitry). Additionally, it is a good idea to periodically also check Linus' RC tags to ensure they don't contain any unexpected code.
+'''Step 1:''' Navigate to your upstream kernel directory and fetch all upstream updates for the remotes. As git downloads the new commits, it will print out information about new branches and branches which have updates. New code which affects our driver could potentially be contained in any updated branch, but typically updates will only occur in Jiri's "wacom", "upstream", and "upstream-fixes" branches (as well as similar branches owned by Dmitry). Additionally, it is a good idea to periodically also check Linus' RC tags to ensure they don't contain any unexpected code.
 
 In the sample below, we fetch updates for all upstream repositories by running `git remote update`. The output lists a number of branches of interest: "jiri/for-4.5/upstream", "jiri/for-4.5/upstream-fixes", "jiri/for-4.6/upstream", "jiri/for-4.6/upstream-fixes", and "jiri/for-4.6/wacom". Additionally, there are new RCs tagged by Linus that could also be investigated.
 
