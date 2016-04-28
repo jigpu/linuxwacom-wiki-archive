@@ -158,8 +158,6 @@ sudo yum-builddep libwacom
 
 After building, copy the libwacom data files in to /usr/share/libwacom:
 
-<code>
-
-sudo cp -r /home/<path>/linuxwacom-libwacom/data/\* /usr/share/libwacom/
-
-</code>
+`sudo cp -r /home/`<path>`/libwacom/data/* /usr/share/libwacom/`  
+or  
+`sudo cp -r /home/`<path>`/linuxwacom-libwacom/data/* /usr/share/libwacom/`
