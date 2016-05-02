@@ -23,6 +23,10 @@ If you are running on kernels older than 2.6.30 or X servers older than 1.7, the
 | [[external applications|Find Applications]]
 | [[:Mailing lists|Mailing List]] / [[IRC]]
 | [[Submitting Patches]]
+|-
+| 
+| [[:Special:AllPages|All Pages]]
+| 
 |}
 
 == News ==
