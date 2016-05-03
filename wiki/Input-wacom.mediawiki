@@ -20,7 +20,7 @@ Please download the latest release from the [https://sourceforge.net/projects/li
 </code>
 
 === Build / Install ===
-From within the extracted input-wacom directory, run the following commands to build the driver and install it where your system can find it. If the <code>./configure</code> script does not exist (as will be the case with pre-release code), run <code>./autogen.sh</code> instead.
+From within the extracted input-wacom directory, run the following commands to build the driver and install it where your system can find it. Note that if the <code>./configure</code> script does not exist (as will be the case with pre-release code), you will need to run <code>./autogen.sh</code> instead.
 
 <code>
  ./configure
