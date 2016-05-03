@@ -20,15 +20,15 @@ Please download the latest release from the [https://sourceforge.net/projects/li
 </code>
 
 === Build / Install ===
-From within the extracted input-wacom directory, run the following commands to build the driver and install it where your system can find it. Note that if the <code>./configure</code> script does not exist (as will be the case with pre-release code), you will need to run <code>./autogen.sh</code> instead.
+From within the extracted input-wacom directory, run the following commands to build the driver and install it where your system can find it.
+
+Note that if the <code>./configure</code> script does not exist (as will be the case with code from git or pre-release versions), you will need to run <code>./autogen.sh</code> instead.
 
 <code>
  ./configure
  make
  sudo make install
 </code>
-
-Note: If installing from git, use ./autogen.sh instead of ./configure.
 
 === Module Loading ===
 Finally, you'll need to have the module loaded by the kernel so that it can be used by the rest of the system. The easiest way to do this is to simply reboot; the kernel will automatically load the newly-installed module when necessary. Alternatively, you can use the commands below to force the running kernel to reload the module without rebooting:

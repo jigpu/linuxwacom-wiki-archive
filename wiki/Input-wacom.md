@@ -57,9 +57,11 @@ and unpack it with:
 
 From within the extracted input-wacom directory, run the following
 commands to build the driver and install it where your system can find
-it. Note that if the `./configure` script does not exist (as will be the
-case with pre-release code), you will need to run `./autogen.sh`
-instead.
+it.
+
+Note that if the `./configure` script does not exist (as will be the
+case with code from git or pre-release versions), you will need to run
+`./autogen.sh` instead.
 
 <code>
 
@@ -68,8 +70,6 @@ instead.
 `sudo make install`
 
 </code>
-
-Note: If installing from git, use ./autogen.sh instead of ./configure.
 
 ### Module Loading
 
