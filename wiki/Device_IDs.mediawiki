@@ -785,7 +785,7 @@
 | ACK-411050
 | ExpressKey Remote
 | 
-| 4.3 (expected)
+| 4.3
 | NO
 |-
 | 056a:0333
@@ -813,29 +813,29 @@
 | CTL-490
 | Intuos Draw small
 | 
-| 4.4 (expected)
-| 2.6.30*† (expected)
+| 4.4
+| 2.6.30*†
 |-
 | 056a:033c
 | CTH-490
 | Intuos Art/Photo/Comic small
 | 
-| 4.4 (expected)
-| 2.6.30*† (expected)
+| 4.4
+| 2.6.30*†
 |-
 | 056a:033d
 | CTL-690
 | Intuos Draw medium
 | 
-| 4.4 (expected)
-| 2.6.30*† (expected)
+| 4.4
+| 2.6.30*†
 |-
 | 056a:033e
 | CTH-690
 | Intuos Art medium
 | 
-| 4.4 (expected)
-| 2.6.30*† (expected)
+| 4.4
+| 2.6.30*†
 |-
 |}
 
