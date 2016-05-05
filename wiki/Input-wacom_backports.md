@@ -209,9 +209,9 @@ Commit the fixed version, and then continue applying patches by running
 
 **Step 6:** With all the patches successfully imported, it is now time
 to test them. Run \`./configure && make\` to verify everything compiles,
-\`sudo modprobe -r wacom && insmod 3.17/wacom.ko\` to test things out.
-If any errors are encountered, you'll need to edit the buggy commit with
-the necessary changes.
+\`sudo modprobe -r wacom && sudo insmod 3.17/wacom.ko\` to test things
+out. If any errors are encountered, you'll need to edit the buggy commit
+with the necessary changes.
 
 **Step 7:** Once you've completed importing the patches from one
 upstream branch, you can remove the patch files from the kernel

@@ -113,7 +113,7 @@ Secondly, we need to edit the files to add in the "Imported" message and a new "
 
 If a merge error occurs during the import process, git will suggest trying to apply the patch manually (e.g. with <code>patch -p1 < .git/rebase-apply/patch</code>). Go ahead and try this, and then resolve any patch errors by looking at the generated ".rej" files. Commit the fixed version, and then continue applying patches by running <code>git am --continue</code>.
 
-'''Step 6:''' With all the patches successfully imported, it is now time to test them. Run `./configure && make` to verify everything compiles, `sudo modprobe -r wacom && insmod 3.17/wacom.ko` to test things out. If any errors are encountered, you'll need to edit the buggy commit with the necessary changes.
+'''Step 6:''' With all the patches successfully imported, it is now time to test them. Run `./configure && make` to verify everything compiles, `sudo modprobe -r wacom && sudo insmod 3.17/wacom.ko` to test things out. If any errors are encountered, you'll need to edit the buggy commit with the necessary changes.
 
 '''Step 7:''' Once you've completed importing the patches from one upstream branch, you can remove the patch files from the kernel directory and return to step 3 with the next branch of interest. In this particular example, "jiri/for-4.6/upstream-fixes" was the last branch of interest so there was no need to return to step 3.
 
