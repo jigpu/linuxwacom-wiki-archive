@@ -121,6 +121,16 @@ If a merge error occurs during the import process, git will suggest trying to ap
 
 === Backporting Patches to Earlier Kernels ===
 
-TBD.
+Backporting requires an understanding of the history of the driver, so it is not as step-by-step as the importing to 3.17 done above.
+
+As of May 2016, 3.17 is the newest kernel driver in input-wacom. There are 4 older kernel drivers to backport patches to. These older kernel drivers are are 3.7, 2.6.38. 2.6.36, and 2.6.30. 3.7 and 2.6.38 are closer to the 3.17 driver while 2.6.36 and 2.6.30 have been diverged from.
+
+Whereas imports to the newest driver (3.17) are done on the (jiri/dtor)/for-x.x branches, backports to the older kernels are done on master. To begin, find all of the existing patches on the jiri/dtor branches (see above) which have not been merged into master. Our job will be to determine how, and if, to 'backport' (or replicate these changes) for the older kernels.
+
+The following types of changes will be encountered: new features, new devices, bug fixes,  upstream code refactoring, and upstream code cleanup. In general, we only backport new features, new devices and bug fixes which are relevant to the older kernels. Upstream code refactoring and cleanup are considered on a case-by-case basis. 
+
+There are many tidbits of knowledge about backporting. Some of them will be collected below:
+
+Kernel 2.6.36 has a transitional touch system. Patches for new devices which have touch are mostly not not backported to this branch.
 
 [[Category:DeveloperPages]]
