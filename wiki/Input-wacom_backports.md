@@ -256,4 +256,4 @@ Some bits of knowledge about backporting
 ----------------------------------------
 
 Kernel 2.6.36 has a transitional touch system. Patches for new devices
-which have touch are mostly not not backported to this branch.
+which have touch are mostly not backported to this branch.

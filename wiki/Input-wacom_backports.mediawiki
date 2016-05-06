@@ -131,6 +131,6 @@ The following types of changes will be encountered: new features, new devices, b
 
 == Some bits of knowledge about backporting ==
 
-Kernel 2.6.36 has a transitional touch system. Patches for new devices which have touch are mostly not not backported to this branch.
+Kernel 2.6.36 has a transitional touch system. Patches for new devices which have touch are mostly not backported to this branch.
 
 [[Category:DeveloperPages]]
