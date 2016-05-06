@@ -22,7 +22,7 @@ The easiest (and recomended) way to get support for Wacom hardware is to install
 |}
 
 == Building from Source ==
-{{Tip|text=Developers cloning from git will want to also install the 'git', 'automake', and 'autoconf' packages. Our repository may be cloned by running <code>git clone git://git.code.sf.net/p/linuxwacom/xf86-input-wacom</code> and prepared for building by running <code>./automake.sh</code>}}
+{{Tip|text=Developers cloning from git will want to also install the 'git', 'automake', and 'autoconf' packages. Our repository may be cloned by running <code>git clone git://git.code.sf.net/p/linuxwacom/xf86-input-wacom</code> and prepared for building by running <code>./autogen.sh</code>}}
 There is also the option of building and installing the driver from source. Before doing so, you'll need to install a number of build dependencies. Use the appropriate command below.
 {|
 |-
@@ -37,7 +37,6 @@ With all the build dependencies installed, you should now [https://sourceforge.n
 
 At this point, you should run the following commands to configure, build, and install the driver:
 <pre>
-$ ./autogen.sh
 $ ./configure --prefix=/usr
 $ make
 $ sudo make install

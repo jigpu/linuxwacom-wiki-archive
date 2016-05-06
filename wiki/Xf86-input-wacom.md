@@ -52,7 +52,6 @@ with the name of the downloaded patch file).
 At this point, you should run the following commands to configure,
 build, and install the driver:
 
-    $ ./autogen.sh
     $ ./configure --prefix=/usr
     $ make
     $ sudo make install
