@@ -252,8 +252,7 @@ cleanup. In general, we only backport new features, new devices and bug
 fixes which are relevant to the older kernels. Upstream code refactoring
 and cleanup are considered on a case-by-case basis.
 
-There are many tidbits of knowledge about backporting. Some of them will
-be collected below:
+Some bits of knowledge about backporting will be collected below:
 
 Kernel 2.6.36 has a transitional touch system. Patches for new devices
 which have touch are mostly not not backported to this branch.
