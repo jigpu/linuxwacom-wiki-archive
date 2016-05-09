@@ -129,6 +129,13 @@ $ git push origin j45:jiri/for-4.5<br>
 $ git push origin j46:jiri/for-4.6<br>
 </code>
 
+Also merge the 'old' current branch (eg j45) into master.
+
+<code>
+$ git checkout master
+$ git merge j45
+</code>
+
 === Backporting Patches to Earlier Kernels ===
 
 Backporting requires an understanding of the history of the driver, so it is not as step-by-step as the importing to 3.17 done above.

@@ -241,6 +241,10 @@ jiri/for-4.5). Then create a new import branch from the current (now
 `$ git push origin j45:jiri/for-4.5`  
 `$ git push origin j46:jiri/for-4.6`  
 
+Also merge the 'old' current branch (eg j45) into master.
+
+`$ git checkout master` `$ git merge j45`
+
 ### Backporting Patches to Earlier Kernels
 
 Backporting requires an understanding of the history of the driver, so
