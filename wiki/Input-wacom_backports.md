@@ -234,14 +234,16 @@ To accomplish the above you will need to create new branches when new
 branches are created at the (jiri, dtor, etc) kernel remotes. To do
 this, merge master on to the current (soon to be old) import branch (eg
 jiri/for-4.5). Then create a new import branch from the current (now
-old) import branch. Then push those branches up to origin.
+'old') import branch. Then push those branches up to origin.
 
 `$ git merge master`  
 `$ git branch j46`  
-`$ git push origin j46:jiri/for-4.5`  
-`$ git push origin j47:jiri/for-4.6`  
+`$ git push origin j45:jiri/for-4.5`  
+`$ git push origin j46:jiri/for-4.6`  
 
-...
+Also merge the 'old' current branch (eg j45) into master.
+
+`$ git checkout master` `$ git merge j45`
 
 ### Backporting Patches to Earlier Kernels
 

@@ -120,16 +120,22 @@ If a merge error occurs during the import process, git will suggest trying to ap
 '''Step 8:''' After all the upstream changes have been imported, the next step is to go see if any of them need to be backported to earlier kernel versions (e.g. 3.7, 2.6.38, etc.). Determining if a particular change needs to be backported will require an understanding of whether the change fixes a bug or adds a feature that is applicable to older kernel versions. Any backported changes should be added to the input-wacom "master" branch rather than one of the upstream mirror branches like "jiri/for-4.6".
 
 === Creating New input-wacom Branches ===
-To accomplish the above you will need to create new branches when new branches are created at the (jiri, dtor, etc) kernel remotes. To do this, merge master on to the current (soon to be old) import branch (eg jiri/for-4.5). Then create a new import branch from the current (now old) import branch. Then push those branches up to origin.
+To accomplish the above you will need to create new branches when new branches are created at the (jiri, dtor, etc) kernel remotes. To do this, merge master on to the current (soon to be old) import branch (eg jiri/for-4.5). Then create a new import branch from the current (now 'old') import branch. Then push those branches up to origin.
 
 <code>
 $ git merge master <br>
 $ git branch j46 <br>
-$ git push origin j46:jiri/for-4.5<br>
-$ git push origin j47:jiri/for-4.6<br>
+$ git push origin j45:jiri/for-4.5<br>
+$ git push origin j46:jiri/for-4.6<br>
 </code>
 
-...
+Also merge the 'old' current branch (eg j45) into master.
+
+<code>
+$ git checkout master
+$ git merge j45
+</code>
+
 === Backporting Patches to Earlier Kernels ===
 
 Backporting requires an understanding of the history of the driver, so it is not as step-by-step as the importing to 3.17 done above.
