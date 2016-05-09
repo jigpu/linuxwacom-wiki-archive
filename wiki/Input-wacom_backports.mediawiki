@@ -119,6 +119,17 @@ If a merge error occurs during the import process, git will suggest trying to ap
 
 '''Step 8:''' After all the upstream changes have been imported, the next step is to go see if any of them need to be backported to earlier kernel versions (e.g. 3.7, 2.6.38, etc.). Determining if a particular change needs to be backported will require an understanding of whether the change fixes a bug or adds a feature that is applicable to older kernel versions. Any backported changes should be added to the input-wacom "master" branch rather than one of the upstream mirror branches like "jiri/for-4.6".
 
+=== Creating New input-wacom Branches ===
+To accomplish the above you will need to create new branches when new branches are created at the (jiri, dtor, etc) kernel remotes. To do this, merge master on to the current (soon to be old) import branch (eg jiri/for-4.5). Then create a new import branch from the current (now old) import branch. Then push those branches up to origin.
+
+<code>
+$ git merge master <br>
+$ git branch j46 <br>
+$ git push origin j46:jiri/for-4.5<br>
+$ git push origin j47:jiri/for-4.6<br>
+</code>
+
+...
 === Backporting Patches to Earlier Kernels ===
 
 Backporting requires an understanding of the history of the driver, so it is not as step-by-step as the importing to 3.17 done above.
@@ -127,7 +138,7 @@ As of May 2016, 3.17 is the newest kernel driver in input-wacom. There are 4 old
 
 Whereas imports to the newest driver (3.17) are done on the (jiri/dtor)/for-x.x branches, backports to the older kernels are done on master. To begin, find all of the existing patches on the jiri/dtor branches (see above) which have not been merged into master. Our job will be to determine how, and if, to 'backport' (or replicate these changes) for the older kernels.
 
-The following types of changes will be encountered: new features, new devices, bug fixes,  upstream code refactoring, and upstream code cleanup. In general, we only backport new features, new devices and bug fixes which are relevant to the older kernels. Upstream code refactoring and cleanup are considered on a case-by-case basis. 
+The following types of changes will be encountered: new features, new devices, bug fixes,  upstream code refactoring, and upstream code cleanup. In general, we only backport new features, new devices and bug fixes which are relevant to the older kernels. Upstream code refactoring and cleanup are considered on a case-by-case basis.
 
 == Some bits of knowledge about backporting ==
 

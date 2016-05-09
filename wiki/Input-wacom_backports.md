@@ -228,6 +228,21 @@ versions. Any backported changes should be added to the input-wacom
 "master" branch rather than one of the upstream mirror branches like
 "jiri/for-4.6".
 
+### Creating New input-wacom Branches
+
+To accomplish the above you will need to create new branches when new
+branches are created at the (jiri, dtor, etc) kernel remotes. To do
+this, merge master on to the current (soon to be old) import branch (eg
+jiri/for-4.5). Then create a new import branch from the current (now
+old) import branch. Then push those branches up to origin.
+
+`$ git merge master`  
+`$ git branch j46`  
+`$ git push origin j46:jiri/for-4.5`  
+`$ git push origin j47:jiri/for-4.6`  
+
+...
+
 ### Backporting Patches to Earlier Kernels
 
 Backporting requires an understanding of the history of the driver, so
