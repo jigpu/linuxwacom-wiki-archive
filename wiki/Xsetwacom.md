@@ -11,8 +11,10 @@ tags:
 settings at runtime. This includes direct settings of driver properties
 but also several 'indirect' settings (i.e. the xsetwacom command does
 not relate directly to a single property). For a detailed description of
-xsetwacom's commands and options, please refer to the man page. This
-page provides a general overview and describes some of the
+xsetwacom's commands and options, please refer to the man page. Also see
+[Tablet Configuration](/wiki/Tablet_Configuration "wikilink") for examples of
+how to use xsetwacom. This page provides a general overview and
+describes some of the
 [quirks](#xsetwacom_Command_Parameter_Usage "wikilink") you may
 encounter.
 
