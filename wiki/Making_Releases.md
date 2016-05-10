@@ -83,15 +83,15 @@ This section describes how to do a new
     (input-wacom-VERSION.tar.bz2). If this is a clean clone of the
     repository, you will need to first run autogen.sh to generate the
     Makefile.
-4.  Build, install, and load the driver from the tarball
+4.  Build, install, and load the driver from the tarball.
 5.  Verify the version number of the loaded driver with \`modinfo wacom
-    \| grep version\`
-6.  Push to the remote: **git push origin master**
+    \| grep version\`.
+6.  Push to the remote: **git push origin master**.
 7.  Run the release script: **sh release.sh** with the correct arguments
     (--user <username>@ <path>). This script will push the tag and
     upload the tarball to the remote.
-8.  Type up a short announce email summarising the new features in this
-    version and append the git shortlog: **git shortlog
-    input-wacom-OLDVERSION..input-wacom-VERSION**
+8.  Type up a short announcement summarizing the new features in this
+    version and insert it in the generated .announce email file (the git
+    shortlog).
 9.  **Sign off the email** and send it to the [ linuxwacom-announce
-    list](/wiki/Mailing_lists "wikilink")
+    list](/wiki/Mailing_lists "wikilink") using git send-email.
