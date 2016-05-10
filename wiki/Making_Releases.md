@@ -33,6 +33,9 @@ version (e.g. 0.10.2).
     list](/wiki/Mailing_lists "wikilink")
 9.  Change the default download on Sourceforge to be the newly-uploaded
     tarball
+10. Close all Sourceforge and Github bugs that were fixed in this
+    release by setting the status to "closed-fixed" and posting the
+    following message: "Fix available in xf86-input-wacom <version>"
 
 Note that it may take a while until the uploaded tarballs are available
 through the download links.
@@ -64,6 +67,9 @@ release.
     section you added above.
 9.  **Sign off the email** and send it to the [ linuxwacom-announce
     list](/wiki/Mailing_lists "wikilink")
+10. Close all Sourceforge and Github bugs that were fixed in this
+    release by setting the status to "closed-fixed" and posting the
+    following message: "Fix available in libwacom <version>"
 
 Note that it may take a while until the uploaded tarballs are available
 through the download links.
@@ -95,3 +101,8 @@ This section describes how to do a new
     shortlog).
 9.  **Sign off the email** and send it to the [ linuxwacom-announce
     list](/wiki/Mailing_lists "wikilink") using git send-email.
+10. Close all Sourceforge and Github bugs that were fixed in this
+    release ***and** which are fixed in an upstream Linux release* by
+    setting the status to "closed-fixed" and posting the following
+    message: "Fix available in Linux <version> and input-wacom
+    <version>"
