@@ -78,7 +78,7 @@ This section describes how to do a new
     **git commit -sm "input-wacom VERSION" configure.ac** You *must not*
     have uncommitted changes when releasing a new version.
 2.  Tag the module: '''git tag -m "input-wacom VERSION" -s
-    input-wacom-VERSION
+    input-wacom-VERSION . You will use your pgp key for this step.
 3.  Run **make dist**. Verify the name of the tarball
     (input-wacom-VERSION.tar.bz2). If this is a clean clone of the
     repository, you will need to first run autogen.sh to generate the
