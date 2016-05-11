@@ -83,3 +83,4 @@ Relevant Developer Discussions:
 <https://www.mail-archive.com/linuxwacom-devel%40lists.sourceforge.net/msg04918.html>  
 <https://www.mail-archive.com/linuxwacom-devel%40lists.sourceforge.net/msg05980.html>  
 <http://sourceforge.net/p/linuxwacom/mailman/message/32091384/>  
+<http://who-t.blogspot.com/2016/04/libinput-and-graphics-tablet-pad-support.html>  
