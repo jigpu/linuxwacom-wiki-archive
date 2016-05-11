@@ -20,19 +20,25 @@ History
 -------
 
 Wacom Branded devices have historically been divided into 2 categories,
-Professional (e.g. Intuos Pro) and Consumer (e.g. Intuos 2 (2015)).
+professional (e.g. Intuos Pro) and consumer (e.g. Intuos 2 (2015)).
 Because of the different target users of these devices, Wacom defines
-the default button mapping of each device differently. Wacom defines the
-default Windows button mapping for its consumer devices to be Left
-Button, Right Button, Back Button, and Forward Button. To replicate the
-default Windows button mapping, the Wacom Kernel driver and Wacom X
-driver attempts to pass along these same default button meanings, but
-GNOME does not watch for these values.
+the default button mapping of each device differently.
 
-These consumer tablet ExpressKey events are given the values 1,3,8, and
-9 when leaving the Wacom X driver. In contrast, the X driver passes
-along sequential numerical button mappings (1,2,3,8,9,...) for the
-professional tablet series (e.g. Intuos Pro, Intuos 4, Cintiq, etc.).
+Whereas the buttons for the professional devices are numbered
+sequentially, consumer devices are defined as Left Button, Right Button,
+Back Button, and Forward Button. Because Wacom has full control over the
+Wacom Windows driver, remapping the directional buttons to other values
+is more direct. Remapping the directional buttons on Linux requires
+navigating the input stack. To replicate the default Windows button
+mapping, the Wacom Kernel driver and Wacom X driver attempt to pass
+along the same default directional button meanings, but GNOME does not
+watch for the consumer device's button definitions.
+
+For four button devices, these consumer tablet ExpressKey buttons are
+given the values 1,3,8, and 9 when leaving the Wacom X driver. In
+contrast, the X driver passes along sequential numerical button mappings
+(1,2,3,8,9,...) for the professional tablet series (e.g. Intuos Pro,
+Intuos 4, Cintiq, etc.).
 
 GNOME
 -----
