@@ -27,18 +27,21 @@ the default button mapping of each device differently.
 Whereas the buttons for the professional devices are numbered
 sequentially, consumer devices are defined as Left Button, Right Button,
 Back Button, and Forward Button. Because Wacom has full control over the
-Wacom Windows driver, remapping the directional buttons to other values
-is more direct. Remapping the directional buttons on Linux requires
-navigating the input stack. To replicate the default Windows button
-mapping, the Wacom Kernel driver and Wacom X driver attempt to pass
-along the same default directional button meanings, but GNOME does not
-watch for the consumer device's button definitions.
+Wacom Windows driver and control panel, remapping the directional
+buttons to other values is more straightforward. Remapping the
+directional buttons on Linux requires navigating the input stack. To
+replicate the default Windows button mapping, the Wacom Kernel driver
+and Wacom X driver attempt to pass along the same default directional
+button mappings, but GNOME does not watch for the consumer device's
+button definitions.
 
 For four button devices, these consumer tablet ExpressKey buttons are
 given the values 1,3,8, and 9 when leaving the Wacom X driver. In
 contrast, the X driver passes along sequential numerical button mappings
 (1,2,3,8,9,...) for the professional tablet series (e.g. Intuos Pro,
-Intuos 4, Cintiq, etc.).
+Intuos 4, Cintiq, etc.). A relevant side note is that GNOME [works
+around](https://git.gnome.org/browse/gnome-settings-daemon/tree/plugins/wacom/gsd-wacom-device.c#n2047)
+the button numbering gap for buttons 4 to 7 introduced by the X driver.
 
 GNOME
 -----
