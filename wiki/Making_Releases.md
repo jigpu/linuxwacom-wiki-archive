@@ -93,15 +93,18 @@ This section describes how to do a new
 5.  Verify the version number of the loaded driver with \`modinfo wacom
     \| grep version\`.
 6.  Push to the remote: **git push origin master**.
-7.  Run the release script: **sh release.sh** with the correct arguments
+7.  By default, the git push command doesn’t transfer tags to remote
+    servers. Push the tag to the remote: **git push origin
+    input-wacom-VERSION**.
+8.  Run the release script: **sh release.sh** with the correct arguments
     (--user <username>@ <path>). This script will push the tag and
     upload the tarball to the remote.
-8.  Type up a short announcement summarizing the new features in this
+9.  Type up a short announcement summarizing the new features in this
     version and insert it in the generated .announce email file (the git
     shortlog).
-9.  **Sign off the email** and send it to the [ linuxwacom-announce
+10. **Sign off the email** and send it to the [ linuxwacom-announce
     list](/wiki/Mailing_lists "wikilink") using git send-email.
-10. Close all Sourceforge and Github bugs that were fixed in this
+11. Close all Sourceforge and Github bugs that were fixed in this
     release ***and** which are fixed in an upstream Linux release* by
     setting the status to "closed-fixed" and posting the following
     message: "Fix available in Linux <version> and input-wacom
