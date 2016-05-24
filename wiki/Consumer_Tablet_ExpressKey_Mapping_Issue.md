@@ -65,8 +65,7 @@ the xinput or xsetwacom command with each restart, so you may want to
 use a startup script like the one discussed in [Tablet
 Configuration](/wiki/Tablet_Configuration#Sample_Runtime_Script "wikilink").
 
-Example Commands
-----------------
+### Example Commands
 
 You want to do something like:
 

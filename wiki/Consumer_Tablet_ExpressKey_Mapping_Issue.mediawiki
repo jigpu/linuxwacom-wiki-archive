@@ -28,7 +28,7 @@ gnome-settings-daemon (gsd) and gnome-control-panel (gcc) work closely together.
 
 The most direct way to assign these buttons is to use [[xsetwacom|xsetwacom]]. See [[Tablet Configuration|Tablet Configuration]] for instructions on how to use xsetwacom. Using xsetwacom, you can bypass GNOME and set the meaning of the buttons one layer lower in the stack. You have to apply the xinput or xsetwacom command with each restart, so you may want to use a startup script like the one discussed in [[Tablet Configuration#Sample Runtime Script|Tablet Configuration]].
 
-== Example Commands ==
+=== Example Commands ===
 
 You want to do something like:
 
