@@ -65,6 +65,19 @@ the xinput or xsetwacom command with each restart, so you may want to
 use a startup script like the one discussed in [Tablet
 Configuration](/wiki/Tablet_Configuration#Sample_Runtime_Script "wikilink").
 
+Example Commands
+----------------
+
+You want to do something like:
+
+`xsetwacom set "Wacom Bamboo Pad pad" Button 1 "key esc"`  
+`xsetwacom set "Wacom Bamboo Pad pad" Button 3 "key F11"`  
+`xsetwacom set "Wacom Bamboo Pad pad" Button 8 "key ctrl alt t"`  
+`xsetwacom set "Wacom Bamboo Pad pad" Button 9 "key p"`  
+
+after running **xsetwacom --list** to get the name of the device in the
+first set of quotes.
+
 Technical details
 -----------------
 
