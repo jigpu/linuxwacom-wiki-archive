@@ -45,58 +45,81 @@ devices, among others, may experience issues:
 -   *CTE-640* Wacom Graphire4 6x8
 -   *CTE-440* Wacom Graphire4 4x5
 
-History
--------
+Issue Description
+-----------------
 
-Wacom Branded devices have historically been divided into 2 categories,
-professional (e.g. Intuos Pro) and consumer (e.g. Intuos 2 (2015)).
-Because of the different target users of these devices, Wacom defines
-the default button mapping of each device differently.
+Wacom has historically split their tablet lineup to better cater towards
+two market segments: the professionals who demand performance and
+flexibility, and consumers who place a premium on ease-of-use and price.
+Because each segment is expected to deal with different use cases, Wacom
+treats the pad buttons ("ExpressKeys") differently. Whereas the buttons
+on a professional tablet are expected to be configured by a user to
+improve their workflow, those on a consumer tablet are expected to
+largely be used for navigational purposes. Following Wacom's example,
+the open source community also treats the buttons differently; buttons
+on the former are sequentially numbered (except for a "hole"
+corresponding to the X11 scroll buttons 4-7), while those on the latter
+use just the numbers of relevant navigation buttons. For example,
+four-button consumer devices default to sending X11 buttons 1 (left
+click), 3 (right click), 8 (navigate back), and 9 (navigate forward).
 
-Whereas the buttons for the professional devices are numbered
-sequentially, consumer devices are defined as Left Button, Right Button,
-Back Button, and Forward Button. Because Wacom has full control over the
-Wacom Windows driver and control panel, remapping the directional
-buttons to other values is more straightforward. Remapping the
-directional buttons on Linux requires navigating the input stack. To
-replicate the default Windows button mapping, the Wacom Kernel driver
-and Wacom X driver attempt to pass along the same default directional
-button mappings, but GNOME does not watch for the consumer device's
-button definitions.
+In order to allow buttons to perform actions that would not normally be
+possible with the xf86-input-wacom driver, the GNOME desktop (and
+related forks) has its `gnome-settings-daemon` process intercept any
+button events sent by the tablet. The received button number is used as
+an index into a list of actions which tells GNOME what it should do in
+response. This works well for professional devices where the buttons are
+sequential, but breaks for consumer devices. Consider the case of a
+four-button consumer device: the first button sends X11 button 1 which
+is correctly interpreted by GNOME, the second button sends X11 button 3
+which is treated like the third button, the third button sends X11
+button 8 which is treated like the fourth button (remember the "hole"
+mentioned above), and the fourth button sends X11 button 9 which is
+ignored since there is no fifth button for it to act like.
 
-For four button devices, these consumer tablet ExpressKey buttons are
-given the values 1,3,8, and 9 when leaving the Wacom X driver. In
-contrast, the X driver passes along sequential numerical button mappings
-(1,2,3,8,9,...) for the professional tablet series (e.g. Intuos Pro,
-Intuos 4, Cintiq, etc.). A relevant side note is that GNOME [works
-around](https://git.gnome.org/browse/gnome-settings-daemon/tree/plugins/wacom/gsd-wacom-device.c#n2047)
-the button numbering gap for buttons 4 to 7 introduced by the X driver.
+This behavior was noticed sometime around 2012, but GNOME was of the
+opinion that it was not their problem to resolve. They have no way of
+knowing what X11 buttons will be sent by our driver for any given
+button, so the best they could do is guess based on information
+available through libinput and other sources. Changing our driver to use
+sequential numbering for both consumer and professional tablets would
+fix the issue, but at a cost of the default behavior in other desktop
+environments being broken. Other solutions have been proposed (e.g.
+modifying libinput's tablet "Button" property to reflect the X11 button
+numbers instead of physical button numbers) but none have gained
+traction as an appropriate solution that is agreeable to both linuxwacom
+and GNOME developers.
 
-GNOME
------
+### Workarounds
 
-gnome-settings-daemon (gsd) and gnome-control-panel (gcc) work closely
-together. They provide the button mappings seen in the Wacom Gnome
-control panel (used in Fedora and RHEL) as well as the derivative Unity
-Control Panel (used in Ubuntu). The maintainers of gsd/gcc
-understandably do not wish to support the awkward button mapping of the
-consumer buttons. See the section "Relevant Discussions" below for more
-details.
+#### wacom-gnome-compat.sh
 
-### Solutions - How to assign keyboard shortcuts
+The
+[`wacom-gnome-compat.sh`](https://gist.github.com/jigpu/fde784840ba5731726e7382952b0d5ed)
+script was created as a workaround that allows you to configure the X
+driver so that your tablet sends the X11 buttons expected by GNOME. The
+script asks you to press each button on your tablet in turn and then 'q'
+to quit. Once done, it provides both a list of xsetwacom commands that
+can be used to temporarily change the button assignments, as well as an
+[xorg.conf.d snippet](/wiki/Xorg.conf.d "wikilink") that is a more permanant
+and hassle-free change.
 
-The most direct way to assign these buttons is to use
-[xsetwacom](xsetwacom "wikilink"). See [Tablet
+#### xsetwacom
+
+Another option is to not use the GNOME Control Center at all and instead
+use [xsetwacom](xsetwacom "wikilink") to configure the tablet buttons to
+act as keyboard keys. See [Tablet
 Configuration](/wiki/Tablet_Configuration "wikilink") for instructions on how
-to use xsetwacom. Using xsetwacom, you can bypass GNOME and set the
-meaning of the buttons one layer lower in the stack. You have to apply
-the xinput or xsetwacom command with each restart, so you may want to
-use a startup script like the one discussed in [Tablet
-Configuration](/wiki/Tablet_Configuration#Sample_Runtime_Script "wikilink").
+to use xsetwacom. The primary downsides to using xsetwacom are that you
+can't use it to send mouse buttons to applications (since GNOME will
+intercept them [unless
+disabled](/wiki/Tablet_Configuration#gnome-settings-daemon "wikilink")), and
+that the commands must be re-run any time the X server is restarted or
+the tablet reconnected (so you may want to use a startup script like the
+one discussed in [Tablet
+Configuration](/wiki/Tablet_Configuration#Sample_Runtime_Script "wikilink")).
 
-### Example Commands
-
-You want to do something like:
+For example, you could do something like:
 
 `xsetwacom set "Wacom Bamboo Pad pad" Button 1 "key esc"`  
 `xsetwacom set "Wacom Bamboo Pad pad" Button 3 "key F11"`  
@@ -106,22 +129,25 @@ You want to do something like:
 after running **xsetwacom --list** to get the name of the device in the
 first set of quotes.
 
-Technical details
------------------
+Discussions
+-----------
 
-The Consumer devices end up with the button numbers of 1,3,8, and 9 due
-to the translation of BTN\_LEFT, BTN\_RIGHT, BTN\_BACK, and BTN\_FORWARD
-(not respectively). It is possible, though potentially frustrating, to
-assign buttons 1,3, and 8 using GNOME's interface. For those buttons,
-the button representations on screen won't line up with the buttons on
-the physical tablet, but can still be assigned.
+Relevant fix discussions:
 
-Relevant fix discussions:  
-<https://sourceforge.net/p/linuxwacom/mailman/message/32096190/>  
-<https://sourceforge.net/p/linuxwacom/bugs/244/>  
-Relevant Developer Discussions:  
-<https://www.mail-archive.com/linuxwacom-devel%40lists.sourceforge.net/msg04896.html>  
-<https://www.mail-archive.com/linuxwacom-devel%40lists.sourceforge.net/msg04918.html>  
-<https://www.mail-archive.com/linuxwacom-devel%40lists.sourceforge.net/msg05980.html>  
-<http://sourceforge.net/p/linuxwacom/mailman/message/32091384/>  
-<http://who-t.blogspot.com/2016/04/libinput-and-graphics-tablet-pad-support.html>  
+-   <https://sourceforge.net/p/linuxwacom/mailman/message/32096190/>
+-   <https://sourceforge.net/p/linuxwacom/bugs/244/>
+-   <https://sourceforge.net/p/linuxwacom/bugs/266/>
+-   <https://sourceforge.net/p/linuxwacom/bugs/266/>
+-   <https://sourceforge.net/p/linuxwacom/bugs/268/>
+-   <https://sourceforge.net/p/linuxwacom/bugs/291/>
+
+Relevant Developer Discussions:
+
+-   <https://www.mail-archive.com/linuxwacom-devel%40lists.sourceforge.net/msg04896.html>
+-   <https://www.mail-archive.com/linuxwacom-devel%40lists.sourceforge.net/msg04918.html>
+-   <https://www.mail-archive.com/linuxwacom-devel%40lists.sourceforge.net/msg05980.html>
+-   <http://sourceforge.net/p/linuxwacom/mailman/message/32091384/>
+
+Other Discussions:
+
+-   <http://who-t.blogspot.com/2016/04/libinput-and-graphics-tablet-pad-support.html>
