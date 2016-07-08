@@ -8,7 +8,7 @@ Before building, you'll need to ensure the necessary dependencies have been inst
 
 <code>
  sudo apt-get install linux-headers-$(uname -r) build-essential # on Debian, Ubuntu, Mint
- sudo yum install gcc kernel-devel                              # on RHEL, CentOS, Fedora
+ sudo yum install gcc "kernel-devel-uname-r == $(uname -r)"     # on RHEL, CentOS, Fedora
 </code>
 
 === Download ===
