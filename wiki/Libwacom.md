@@ -150,11 +150,11 @@ sudo apt-get build-dep libwacom
 
 On Fedora:
 
-<code>
+`sudo yum-builddep libwacom`
 
-sudo yum-builddep libwacom
+<b>or</b>
 
-</code>
+`sudo dnf builddep libwacom`
 
 After building, copy the libwacom data files in to /usr/share/libwacom:
 
