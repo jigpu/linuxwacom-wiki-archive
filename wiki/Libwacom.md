@@ -158,9 +158,11 @@ On Fedora:
 
 Building:
 
-Depending on your system, you may find it helpful to use this commands
+Depending on your system, you may find it helpful to use these commands
 
-`./autogen.sh --prefix=/usr --libdir=/lib64` `make` `sudo make install`
+`./autogen.sh --prefix=/usr --libdir=/lib64`  
+`make`  
+`sudo make install`  
 
 After building, copy the libwacom data files in to /usr/share/libwacom:
 
