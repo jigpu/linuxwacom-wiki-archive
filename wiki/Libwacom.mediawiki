@@ -110,6 +110,17 @@ sudo yum-builddep libwacom </code>
 
 <code> sudo dnf builddep libwacom </code>
 
+Building:
+
+Depending on your system, you may find it helpful to use this commands
+
+<code>
+./autogen.sh --prefix=/usr --libdir=/lib64
+make
+sudo make install
+</code>
+
+
 
 After building, copy the libwacom data files in to /usr/share/libwacom:
 
