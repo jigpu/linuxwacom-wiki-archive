@@ -219,7 +219,18 @@ directory and return to step 3 with the next branch of interest. In this
 particular example, "jiri/for-4.6/upstream-fixes" was the last branch of
 interest so there was no need to return to step 3.
 
-**Step 8:** After all the upstream changes have been imported, the next
+**Step 8:** Post your changes to the Linux Wacom developer list, or push
+your changes with, for example:
+
+<code>
+
+`~ git push fork dtor47:dtor/for-4.7`  
+`~ git push mirror dtor47:dtor/for-4.7`  
+`~ git push origin dtor47:dtor/for-4.7`
+
+</code>
+
+**Step 9:** After all the upstream changes have been imported, the next
 step is to go see if any of them need to be backported to earlier kernel
 versions (e.g. 3.7, 2.6.38, etc.). Determining if a particular change
 needs to be backported will require an understanding of whether the
