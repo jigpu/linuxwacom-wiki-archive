@@ -97,8 +97,8 @@ This section describes how to do a new
     servers. Push the tag to the remote: **git push origin
     input-wacom-VERSION**.
 8.  Run the release script: **sh release.sh** with the correct arguments
-    (--user <username>@ <path>). This script will push the tag and
-    upload the tarball to the remote.
+    (--user <username>@ <path>). Your path is probably 'dot' (.). This
+    script will push the tag and upload the tarball to the remote.
 9.  Type up a short announcement summarizing the new features in this
     version and insert it in the generated .announce email file (the git
     shortlog).
