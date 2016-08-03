@@ -129,6 +129,7 @@ USB Peripherals
 | 056a:033c | CTH-490      | Intuos Art/Photo/Comic small           |                | 4.4    | 2.6.30\*†   |
 | 056a:033d | CTL-690      | Intuos Draw medium                     |                | 4.4    | 2.6.30\*†   |
 | 056a:033e | CTH-690      | Intuos Art medium                      |                | 4.4    | 2.6.30\*†   |
+| 056a:0343 | DTK-1651     |                                        |                | 4.4    | 2.6.30      |
 |           |              |                                        |                |        |             |
 
 Bluetooth Peripherals

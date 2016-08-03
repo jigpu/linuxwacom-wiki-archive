@@ -844,7 +844,7 @@
 | 4.4
 | 2.6.30
 |-
-}
+|}
 
 = Bluetooth Peripherals =
 {| border="1"
