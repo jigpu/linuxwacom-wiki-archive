@@ -184,6 +184,10 @@ input-wacom:
 
 `(kernel.git)~ sed -i 's!drivers/hid/!3.17/!' *.patch`
 
+</code> or <code>
+
+`(kernel.git)~ sed -i 's!drivers/input/touchscreen!3.17!' *.patch`
+
 </code>
 
 Secondly, we need to edit the files to add in the "Imported" message and

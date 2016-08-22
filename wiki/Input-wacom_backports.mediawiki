@@ -102,6 +102,10 @@ After checking several branches, each with no commits of interest, we see that 3
 <code>
  (kernel.git)~ sed -i 's!drivers/hid/!3.17/!' *.patch
 </code>
+or
+<code>
+ (kernel.git)~ sed -i 's!drivers/input/touchscreen!3.17!' *.patch
+</code>
 
 Secondly, we need to edit the files to add in the "Imported" message and a new "Signed-off-by" line to the end of the commit message. When writing the "Imported" message, the first 7 characters of the commit ID (listed in full on the first line of the patch file) should be used.
 
