@@ -88,6 +88,21 @@ force the running kernel to reload the module without rebooting:
 
 </code>
 
+If building on newer Fedoras (at least Fedora 24), you will need to
+rebuild your intramfs in order for the changes to be permanent. You can
+do this by loading the module (directly above) and then issuing the
+command:
+
+<code>
+
+`sudo dracut --force`
+
+</code>
+
+However, if you have manually installed other kernel modules, this may
+or may not interfere with those modules. We need to investigate further
+to understand how to use dracut safely.
+
 Development
 -----------
 
