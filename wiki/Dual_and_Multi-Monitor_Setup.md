@@ -60,6 +60,15 @@ property.
 
 ` xinput list-props "Wacom Intuos4 6x9 stylus"`
 
+MapToOutput Without xrandr (eg. DTU-1031X):
+-------------------------------------------
+
+` xsetwacom set `<pen id>` maptooutput 1280x780+1280+0`
+
+Where <pen id> is obtained from
+
+` xsetwacom --list`
+
 Coordinate Transformation Matrix
 --------------------------------
 

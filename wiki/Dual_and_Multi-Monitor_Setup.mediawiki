@@ -36,5 +36,13 @@ In this example, the three available outputs are "VGA1", "LVDS1" and "DVI1". To 
 [[xsetwacom]] then goes off, gets the screen size for the given output (in relation to the total desktop) and calculates a 3x3 matrix that maps the tablet input range to the given output. This matrix is set as the server's "Device Transformation Matrix". You can check the matrix by running xinput and looking at the value of this property.
   xinput list-props "Wacom Intuos4 6x9 stylus"
 
+==MapToOutput Without xrandr (eg. DTU-1031X):==
+
+  xsetwacom set <pen id> maptooutput 1280x780+1280+0
+
+Where <pen id> is obtained from 
+
+  xsetwacom --list
+
 == Coordinate Transformation Matrix ==
 If you use the NVIDIA binary driver or are running an earlier version of xf86-input-wacom, you can manually calculate the matrix and set the property with the ''xinput'' tool.  While the following may seem a little daunting if you look at the examples you'll find it is not that hard.
