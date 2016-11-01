@@ -88,10 +88,21 @@ force the running kernel to reload the module without rebooting:
 
 </code>
 
-If building on newer Fedoras (at least Fedora 24), you will need to
-rebuild your intramfs in order for the changes to be permanent. You can
-do this by loading the module (directly above) and then issuing the
-command:
+To verify that the input-wacom kernel module is loaded, use the
+following command. The output should look something like "v2.00-0.32.0"
+if it was loaded correctly. A version number of just "v2.00" indicates
+that something went wrong and that the stock module is still in use.
+
+<code>
+
+`cat /sys/module/wacom*/version`
+
+</code>
+
+Note that ff building on newer Fedoras (at least Fedora 24), you will
+need to rebuild your intramfs in order for the changes to be permanent.
+You can do this by loading the module (directly above) and then issuing
+the command:
 
 <code>
 
