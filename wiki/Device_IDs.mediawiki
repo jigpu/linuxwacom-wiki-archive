@@ -804,6 +804,38 @@
 | 2.6.30
 |
 |-
+| 056a:0307
+| DTH-A1300
+| Cintiq Companion Hybrid
+| pen/pad sensor
+| 3.13
+| 2.6.38
+| 0.9
+|-
+| 056a:0309
+| DTH-A1300
+| Cintiq Companion Hybrid
+| touch sensor
+| 3.13
+| 2.6.38
+| 0.9
+|-
+| 056a:030a
+| DTH-W1300
+| Cintiq Companion
+| pen/pad sensor
+| 3.18
+| 2.6.38
+| 0.11
+|-
+| 056a:030c
+| DTH-W1300
+| Cintiq Companion
+| touch sensor
+| 3.18
+| 2.6.38
+| 0.11
+|-
 | 056a:030e
 | CTL-480
 | Intuos Pen (S)
@@ -859,6 +891,22 @@
 | 3.19
 | 2.6.30*
 | 0.12
+|-
+| 056a:0325
+| DTH-W1310
+| Cintiq Companion 2
+| pen/pad sensor
+| 4.4
+| 2.6.38
+| 0.17
+|-
+| 056a:0326
+| DTH-W1310
+| Cintiq Companion 2
+| touch sensor
+| 4.4
+| 2.6.38
+| 0.17
 |-
 | 056a:032a
 | DTK-2700
@@ -963,6 +1011,38 @@
 | 4.4
 | 2.6.30
 |
+|-
+| 056a:034a
+| DTH-W1320
+| MobileStudio Pro 13
+| touch sensor
+| <s>4.10</s>
+| <s>2.6.30</s>
+| <s>0.23</s>
+|-
+| 056a:034b
+| DTH-W1620
+| MobileStudio Pro 16
+| touch sensor
+| <s>4.10</s>
+| <s>2.6.30</s>
+| <s>0.23</s>
+|-
+| 056a:034d
+| DTH-W1320
+| MobileStudio Pro 13
+| pen/pad sensor
+| <s>4.10</s>
+| <s>2.6.30</s>
+| <s>0.23</s>
+|-
+| 056a:034e
+| DTH-W1620
+| MobileStudio Pro 16
+| pen/pad sensor
+| <s>4.10</s>
+| <s>2.6.30</s>
+| <s>0.23</s>
 |-
 |}
 
