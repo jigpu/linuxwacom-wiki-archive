@@ -49,9 +49,9 @@ USB Peripherals
 | 056a:0045 | XD-1218-U    | Intuos2 (12x18)                        |                | 2.6.22      | 2.6.30        |             |
 | 056a:0057 | DTK-2241     |                                        |                | 3.1         | 2.6.30        |             |
 | 056a:0059 | DTH-2242     |                                        | pen/pad sensor | 3.9         | 2.6.30        |             |
-| 056a:005b | DTH-2200     | Cintiq 22HD Touch                      | pen/pad sensor | 3.1         | 2.6.30        |             |
+| 056a:005b | DTH-2200     | Cintiq 22HD Touch                      | pen/pad sensor | 3.10        | 2.6.30        |             |
 | 056a:005d | DTH-2242     |                                        | touch sensor   | 3.9         | 2.6.38        |             |
-| 056a:005e | DTH-2200     | Cintiq 22HD Touch                      | touch sensor   | 3.1         | 2.6.38        |             |
+| 056a:005e | DTH-2200     | Cintiq 22HD Touch                      | touch sensor   | 3.10        | 2.6.38        |             |
 | 056a:0060 | FT-0405      | Volito, PenPartner, PenStation (4x5)   |                | 2.6.22      | 2.6.30        |             |
 | 056a:0061 | FT-0203      | Volito, PenPartner, PenStation (2x3)   |                | 2.6.22      | 2.6.30        |             |
 | 056a:0062 | CTF-420      | Volito2                                |                | 2.6.22      | 2.6.30        |             |
