@@ -99,7 +99,7 @@ that something went wrong and that the stock module is still in use.
 
 </code>
 
-Note that ff building on newer Fedoras (at least Fedora 24), you will
+Note that if building on newer Fedoras (at least Fedora 24), you will
 need to rebuild your intramfs in order for the changes to be permanent.
 You can do this by loading the module (directly above) and then issuing
 the command:

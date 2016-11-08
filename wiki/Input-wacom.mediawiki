@@ -46,7 +46,7 @@ To verify that the input-wacom kernel module is loaded, use the following comman
  cat /sys/module/wacom*/version
 </code>
 
-Note that ff building on newer Fedoras (at least Fedora 24), you will need to rebuild your intramfs in order for the changes to be permanent. You can do this by loading the module (directly above) and then issuing the command:
+Note that if building on newer Fedoras (at least Fedora 24), you will need to rebuild your intramfs in order for the changes to be permanent. You can do this by loading the module (directly above) and then issuing the command:
 
 <code>
  sudo dracut --force
