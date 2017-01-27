@@ -138,7 +138,7 @@ maintainer. Use the [mailing lists](mailing_lists "wikilink") instead.
 Building
 --------
 
-Before building from git with ./autogen.sh:
+Before building from git with ./autogen.sh, install the dependencies:
 
 On Ubuntu:
 
@@ -156,7 +156,11 @@ On Fedora:
 
 `sudo dnf builddep libwacom`
 
-Building:
+On Centos 6:
+
+`sudo yum install libgudev1-devel`
+
+Then build:
 
 Depending on your system, you may find it helpful to use these commands
 

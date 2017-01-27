@@ -91,7 +91,7 @@ Please do not send email regarding bugs or feature requests to the maintainer. U
 
 == Building ==
 
-Before building from git with ./autogen.sh:
+Before building from git with ./autogen.sh, install the dependencies:
 
 On Ubuntu:
 
@@ -110,7 +110,13 @@ sudo yum-builddep libwacom </code>
 
 <code> sudo dnf builddep libwacom </code>
 
-Building:
+On Centos 6:
+
+<code> sudo yum install libgudev1-devel </code>
+
+
+
+Then build:
 
 Depending on your system, you may find it helpful to use these commands
 
