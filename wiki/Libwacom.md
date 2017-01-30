@@ -173,3 +173,25 @@ After building, copy the libwacom data files in to /usr/share/libwacom:
 `sudo cp -r /home/`<path>`/libwacom/data/* /usr/share/libwacom/`  
 or  
 `sudo cp -r /home/`<path>`/linuxwacom-libwacom/data/* /usr/share/libwacom/`
+
+Udev Rules (from the README)
+----------------------------
+
+If you are updating libwacom to support a new device, the device should
+also be added to the udev rule to ensure all required properties are
+set.
+
+When building from source generate an updated ruleset with
+tools/generate-udev-rules after adding the tablet description files.
+
+When updating an installed version of libwacom, add it manually to the
+existing ruleset (/lib/udev/rules.d/65-libwacom.rules). Copy a similar
+device and change the PID to match the PID from the device (for example
+0357 below). Obtain the PID from the lsusb command in a terminal. Note
+that the first line below should start with a '\#' to escape the line,
+not '&\#'.
+
+`&# Wacom Intuos Pro 2 M`  
+`ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="056a", ENV{ID_MODEL_ID}=="`**`0357`**`", ENV{ID_INPUT}="1", ENV{ID_INPUT_JOYSTICK}="", ENV{ID_INPUT_TABLET}="1"`  
+`ATTRS{name}=="* Finger", ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="056a", ENV{ID_MODEL_ID}=="`**`0357`**`", ENV{ID_INPUT_TOUCHPAD}="1"`  
+`ATTRS{name}=="* Pad", ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="056a", ENV{ID_MODEL_ID}=="`**`0357`**`", ENV{ID_INPUT_TABLET_PAD}="1"`  
