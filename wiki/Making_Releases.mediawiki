@@ -18,6 +18,7 @@ Note that it may take a while until the uploaded tarballs are available through 
 This section describes how to do a new [[libwacom]] release.  
 
 # Update <code>NEWS</code> with an outline of changes since the last version
+# Change LIBWACOM_LT_VERSION according to the directions in configure.ac
 # Change configure.ac to reflect the new version number and commit: '''git commit -sm "libwacom VERSION" configure.ac NEWS''' You ''must not'' have uncommitted changes when releasing a new version.
 # Run '''autoreconf -iv''' or '''autogen.sh''', build and install the library. Verify that ''' pkg-config --modversion libwacom''' shows the new version
 # Run '''make distcheck'''. Verify the name of the tarball (libwacom-VERSION.tar.bz2).
