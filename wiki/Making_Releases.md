@@ -63,7 +63,7 @@ release.
 8.  Scp the tarball to sourceforge. [Create a
     shell](/wiki/DealingWithSourceforge "wikilink") and then run **scp
     libwacom-VERSION.tar.bz2
-    USER@shell.sourceforge.net:/home/frs/project/l/li/linuxwacom/libwacom/**
+    USER@shell.sourceforge.net:/home/frs/project/linuxwacom/libwacom**
 9.  Generate the git shortlog with **git log --no-merges
     libwacom-0.4..libwacom-0.5 \| git shortlog**, then add the NEWS
     section you added above.
