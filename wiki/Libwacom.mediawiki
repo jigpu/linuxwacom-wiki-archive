@@ -89,7 +89,7 @@ Bastien Nocera is the current libwacom maintainer.
 
 Please do not send email regarding bugs or feature requests to the maintainer. Use the [[mailing lists]] instead.
 
-== Building ==
+== Dependencies ==
 
 Before building from git with ./autogen.sh, install the dependencies:
 
@@ -97,8 +97,11 @@ On Ubuntu:
 
 <code>
 
-sudo apt-get build-dep libwacom
+sudo apt-get build-dep libwacom 
 
+or 
+
+sudo apt-get install libgudev-1.0-dev
 </code>
 
 On Fedora:
@@ -115,8 +118,7 @@ On Centos 6:
 <code> sudo yum install libgudev1-devel </code>
 
 
-
-Then build:
+== Building ==
 
 Depending on your system, you may find it helpful to use these commands
 
@@ -134,6 +136,7 @@ On Ubuntu 16.04 instead use:
 
 for the first command in the above block.
 
+==Data Files==
 
 After building, copy the libwacom data files in to /usr/share/libwacom:
 
