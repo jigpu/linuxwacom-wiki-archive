@@ -223,7 +223,7 @@ directory and return to step 3 with the next branch of interest. In this
 particular example, "jiri/for-4.6/upstream-fixes" was the last branch of
 interest so there was no need to return to step 3.
 
-**Step 8:** Post your changes to the Linux Wacom developer list, or push
+**Step 8:** Post your changes to the Linux Wacom developer list and push
 your changes with, for example:
 
 <code>

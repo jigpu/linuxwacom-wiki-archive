@@ -121,7 +121,7 @@ If a merge error occurs during the import process, git will suggest trying to ap
 
 '''Step 7:''' Once you've completed importing the patches from one upstream branch, you can remove the patch files from the kernel directory and return to step 3 with the next branch of interest. In this particular example, "jiri/for-4.6/upstream-fixes" was the last branch of interest so there was no need to return to step 3.
 
-'''Step 8:''' Post your changes to the Linux Wacom developer list, or push your changes with, for example:
+'''Step 8:''' Post your changes to the Linux Wacom developer list and push your changes with, for example:
 
 <code> 
  ~ git push fork dtor47:dtor/for-4.7
