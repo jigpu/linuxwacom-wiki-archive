@@ -168,6 +168,12 @@ Depending on your system, you may find it helpful to use these commands
 `make`  
 `sudo make install`  
 
+On Ubuntu 16.04 instead use:
+
+`./autogen.sh --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu/`  
+
+for the first command in the above block.
+
 After building, copy the libwacom data files in to /usr/share/libwacom:
 
 `sudo cp -r /home/`<path>`/libwacom/data/* /usr/share/libwacom/`  
