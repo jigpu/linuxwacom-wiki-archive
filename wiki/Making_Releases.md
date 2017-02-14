@@ -80,31 +80,34 @@ input-wacom
 This section describes how to do a new
 [input-wacom](input-wacom "wikilink") release.
 
-1.  Change configure.ac to reflect the new version number and commit:
+1.  Merge master into all current branches, and then merge those
+    branches into master. Use the '--no-ff' option with 'git merge' to
+    force a commit message.
+2.  Change configure.ac to reflect the new version number and commit:
     **git commit -sm "input-wacom VERSION" configure.ac** You *must not*
     have uncommitted changes when releasing a new version.
-2.  Tag the module: **git tag -m "input-wacom VERSION" -s
+3.  Tag the module: **git tag -m "input-wacom VERSION" -s
     input-wacom-VERSION**. You will use your pgp key for this step.
-3.  Run **make dist**. Verify the name of the tarball
+4.  Run **make dist**. Verify the name of the tarball
     (input-wacom-VERSION.tar.bz2). If this is a clean clone of the
     repository, you will need to first run autogen.sh to generate the
     Makefile.
-4.  Build, install, and load the driver from the tarball.
-5.  Verify the version number of the loaded driver with \`modinfo wacom
+5.  Build, install, and load the driver from the tarball.
+6.  Verify the version number of the loaded driver with \`modinfo wacom
     \| grep version\`.
-6.  Push to the remote: **git push origin master**.
-7.  By default, the git push command doesn’t transfer tags to remote
+7.  Push to the remote: **git push origin master**.
+8.  By default, the git push command doesn’t transfer tags to remote
     servers. Push the tag to the remote: **git push origin
     input-wacom-VERSION**.
-8.  Run the release script: **sh release.sh** with the correct arguments
+9.  Run the release script: **sh release.sh** with the correct arguments
     (--user <username>@ <path>). Your path is probably 'dot' (.). This
     script will push the tag and upload the tarball to the remote.
-9.  Type up a short announcement summarizing the new features in this
+10. Type up a short announcement summarizing the new features in this
     version and insert it in the generated .announce email file (the git
     shortlog).
-10. **Sign off the email** and send it to the [ linuxwacom-announce
+11. **Sign off the email** and send it to the [ linuxwacom-announce
     list](/wiki/Mailing_lists "wikilink") using git send-email.
-11. Close all Sourceforge and Github bugs that were fixed in this
+12. Close all Sourceforge and Github bugs that were fixed in this
     release ***and** which are fixed in an upstream Linux release* by
     setting the status to "closed-fixed" and posting the following
     message: "Fix available in Linux <version> and input-wacom
