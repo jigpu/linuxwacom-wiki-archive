@@ -131,7 +131,7 @@ USB Peripherals
 | 056a:033e | CTH-690      | Intuos Art medium                      |                                | 4.4         | 2.6.30\*†   |          |
 | 056a:0343 | DTK-1651     |                                        |                                | 4.4         | 2.6.30      |          |
 | 056a:0357 | PTH-660      | Intuos Pro medium                      | 2nd-generation (USB interface) | <s>4.11</s> | 2.6.30      |          |
-| 056a:0358 | PTH-660      | Intuos Pro large                       | 2nd-generation (USB interface) | <s>4.11</s> | 2.6.30      |          |
+| 056a:0358 | PTH-860      | Intuos Pro large                       | 2nd-generation (USB interface) | <s>4.11</s> | 2.6.30      |          |
 |           |              |                                        |                                |             |             |          |
 
 Bluetooth Peripherals
@@ -142,7 +142,7 @@ Bluetooth Peripherals
 | 056a:0081 | CTE-630BT    | Graphire Wireless (6x8) |                                      | 2.6.31      | 3.17        |     |
 | 056a:00bd | PTK-540WL    | Intuos4 Wireless        |                                      | 2.6.35      | 3.17        |     |
 | 056a:0360 | PTH-660      | Intuos Pro medium       | 2nd-generation (Bluetooth interface) | <s>4.11</s> | 2.6.30      |     |
-| 056a:0361 | PTH-660      | Intuos Pro large        | 2nd-generation (Bluetooth interface) | <s>4.11</s> | 2.6.30      |     |
+| 056a:0361 | PTH-860      | Intuos Pro large        | 2nd-generation (Bluetooth interface) | <s>4.11</s> | 2.6.30      |     |
 |           |              |                         |                                      |             |             |     |
 
 Tablet PCs

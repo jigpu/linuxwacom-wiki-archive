@@ -973,7 +973,7 @@
 |
 |-
 | 056a:0358
-| PTH-660
+| PTH-860
 | Intuos Pro large
 | 2nd-generation (USB interface)
 | <s>4.11</s>
@@ -1015,7 +1015,7 @@
 |
 |-
 | 056a:0361
-| PTH-660
+| PTH-860
 | Intuos Pro large
 | 2nd-generation (Bluetooth interface)
 | <s>4.11</s>
