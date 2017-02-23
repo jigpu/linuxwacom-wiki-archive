@@ -176,6 +176,35 @@ other models. An example xsetwacom command to set the behaviour is:
 Note that the *TabletPCButton* parameter is only available in
 *xf86-input-wacom-0.10.10* or later.
 
+Interaction with gnome-settings-daemon
+--------------------------------------
+
+If you run, for example, the following command:
+
+`xsetwacom -s get "Wacom Intuos Pro M Pad pad" all`
+
+The output may include something like the following:
+
+<code>
+
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "RelWheelUp" "1" "button +90 -90 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "RelWheelDown" "2" "button +91 -91 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "AbsWheelUp" "3" "button +90 -90 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "AbsWheelDown" "4" "button +91 -91 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "AbsWheel2Up" "5" "button +92 -92 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "AbsWheel2Down" "6" "button +93 -93 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "StripLeftUp" "1" "button +94 -94 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "StripLeftDown" "2" "button +95 -95 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "StripRightUp" "3" "button +96 -96 "
+    xsetwacom set "Wacom Intuos Pro M Pad pad" "StripRightDown" "4" "button +97 -97 "
+
+</code>
+
+The 90/91/etc indicates that gnome-settings-daemon (or some fork of it)
+is trying to control the tablet. g-s-d listens for these buttons
+(90/91/etc) to determine if you've used those particular parts of the
+pad.
+
 Table of New Parameter Names
 ============================
 
