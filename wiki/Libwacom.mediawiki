@@ -101,7 +101,7 @@ sudo apt-get build-dep libwacom
 
 or 
 
-sudo apt-get install libgudev-1.0-dev
+sudo apt-get install libgudev-1.0-dev libxml++2.6-dev
 </code>
 
 On Fedora:
@@ -116,7 +116,6 @@ sudo yum-builddep libwacom </code>
 On Centos 6:
 
 <code> sudo yum install libgudev1-devel </code>
-
 
 == Building ==
 
