@@ -36,9 +36,9 @@ There is also the option of building and installing the driver from
 source. Before doing so, you'll need to install a number of build
 dependencies. Use the appropriate command below.
 
-| Fedora, Red Hat, Mageia | `$ sudo yum install gcc xorg-x11-util-macros xorg-x11-server-devel libXext-devel libXi-devel libXrandr-devel libXinerama-devel libudev-devel` |
-|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Ubuntu, Mint, Debian    | `$ sudo apt-get install pkg-config make xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev`   |
+| Fedora, Red Hat, Mageia | `$ sudo yum install gcc xorg-x11-util-macros xorg-x11-server-devel libXext-devel libXi-devel libXrandr-devel libXinerama-devel libudev-devel`        |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ubuntu, Mint, Debian    | `$ sudo apt-get install autoconf pkg-config make xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev` |
 
 With all the build dependencies installed, you should now [download the
 latest xf86-input-wacom

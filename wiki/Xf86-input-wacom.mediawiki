@@ -30,7 +30,7 @@ There is also the option of building and installing the driver from source. Befo
 | <code>$ sudo yum install gcc xorg-x11-util-macros xorg-x11-server-devel libXext-devel libXi-devel libXrandr-devel libXinerama-devel libudev-devel</code>
 |- 
 ! style="background:#E8EFF8" | Ubuntu, Mint, Debian
-| style="background:#E8EFF8" | <code>$ sudo apt-get install pkg-config make xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev</code>
+| style="background:#E8EFF8" | <code>$ sudo apt-get install autoconf pkg-config make xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev</code>
 |}
 
 With all the build dependencies installed, you should now [https://sourceforge.net/projects/linuxwacom/files/latest/download download the latest xf86-input-wacom release] and extract it to a convenient location. Open a terminal, and navigate to the directory you extracted. If you were instructed to apply a patch file for testing purposes, download it, move it into the current directory, and run <code>patch -p1 < <patchfile></code> (replacing "<patchfile>" with the name of the downloaded patch file).
