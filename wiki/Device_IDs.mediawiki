@@ -1015,6 +1015,7 @@
 ! Notes
 ! style="width: 7em" | Linux
 ! style="width: 7em" | input-wacom
+! style="width: 9em" | libwacom
 |-
 | 056a:0081
 | CTE-630BT
@@ -1022,6 +1023,7 @@
 |
 | 2.6.31
 | 3.17
+|
 |-
 | 056a:00bd
 | PTK-540WL
@@ -1029,6 +1031,7 @@
 |
 | 2.6.35
 | 3.17
+|
 |-
 | 056a:0360
 | PTH-660
