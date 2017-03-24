@@ -151,67 +151,67 @@ Bluetooth Peripherals
 Tablet PCs
 ==========
 
-| ID        | Model Number | Model Name              | Note                      | Linux       | input-wacom   | libwacom    |
-|-----------|--------------|-------------------------|---------------------------|-------------|---------------|-------------|
-| 056a:0090 |              |                         | pen only                  | 2.6.28      | 2.6.30        |             |
-| 056a:0093 |              |                         | pen & single-finger touch | 2.6.28      | 2.6.30        |             |
-| 056a:0097 |              |                         | pen only                  | 3.1         | 2.6.30        |             |
-| 056a:009a |              |                         | pen & single-finger touch | 2.6.28      | 2.6.30        |             |
-| 056a:009f |              |                         |                           | 2.6.33      | 2.6.30        |             |
-| 056a:00e2 |              |                         | pen & two-finger touch    | 2.6.33      | 2.6.30        |             |
-| 056a:00e3 |              |                         | two-finger touch only     | 2.6.33      | 2.6.30        |             |
-| 056a:00e5 |              |                         |                           | 3.5         | 2.6.36        |             |
-| 056a:00e6 |              |                         | pen & two-finger touch    | 2.6.39      | 2.6.30        |             |
-| 056a:00ec |              |                         |                           | 3.2         | 2.6.38        |             |
-| 056a:00ed |              |                         |                           | 3.6         | 2.6.38        |             |
-| 056a:00ef |              |                         |                           | 3.6         | 2.6.38        |             |
-| 056a:0100 |              |                         |                           | 3.8         | 2.6.30\*      |             |
-| 056a:0101 |              |                         |                           | 3.8         | 2.6.30\*      |             |
-| 056a:010d |              |                         |                           | 3.9         | 2.6.30\*      |             |
-| 056a:010e |              |                         |                           | 3.12        | 2.6.38        |             |
-| 056a:010f |              |                         |                           | 3.12        | 2.6.30\*      |             |
-| 056a:0116 |              |                         |                           | 3.16        | 2.6.30        |             |
-| 056a:012c |              |                         |                           | 3.18        | 2.6.30        |             |
-| 056a:0307 | DTH-A1300    | Cintiq Companion Hybrid | pen/pad sensor            | 3.13        | 2.6.38        | 0.9         |
-| 056a:0309 | DTH-A1300    | Cintiq Companion Hybrid | touch sensor              | 3.13        | 2.6.38        | 0.9         |
-| 056a:030a | DTH-W1300    | Cintiq Companion        | pen/pad sensor            | 3.18        | 2.6.38        | 0.11        |
-| 056a:030c | DTH-W1300    | Cintiq Companion        | touch sensor              | 3.18        | 2.6.38        | 0.11        |
-| 056a:0325 | DTH-W1310    | Cintiq Companion 2      | pen/pad sensor            | 4.4         | 2.6.38        | 0.17        |
-| 056a:0326 | DTH-W1310    | Cintiq Companion 2      | touch sensor              | 4.4         | 2.6.38        | 0.17        |
-| 056a:034a | DTH-W1320    | MobileStudio Pro 13     | touch sensor              | <s>4.10</s> | <s>2.6.30</s> | <s>0.23</s> |
-| 056a:034b | DTH-W1620    | MobileStudio Pro 16     | touch sensor              | <s>4.10</s> | <s>2.6.30</s> | <s>0.23</s> |
-| 056a:034d | DTH-W1320    | MobileStudio Pro 13     | pen/pad sensor            | <s>4.10</s> | <s>2.6.30</s> | <s>0.23</s> |
-| 056a:034e | DTH-W1620    | MobileStudio Pro 16     | pen/pad sensor            | <s>4.10</s> | <s>2.6.30</s> | <s>0.23</s> |
-| 056a:4001 |              |                         |                           | 3.8         | 2.6.30\*      |             |
-| 056a:4004 |              |                         |                           | 3.16        | 2.6.30\*      |             |
-| 056a:5000 |              |                         |                           | 3.16        | 2.6.30\*      |             |
-| 056a:5002 |              |                         |                           | 3.16        | 2.6.30\*      |             |
-| 056a:5010 |              |                         |                           | 3.17        | 2.6.30\*      |             |
-| 056a:5013 |              |                         |                           | 3.17        | 3.17          |             |
-| 056a:503e |              |                         | Lenovo X1 Yoga            | 3.17        | 3.17          |             |
-| 056a:5048 |              |                         | Lenovo Thinkpad Yoga 260  | 3.17        | 3.17          |             |
-| 17ef:6004 |              |                         |                           | 2.6.38      | 2.6.30        |             |
-| FUJ02E9   |              |                         |                           |             |               |             |
-| FUJ02E5   |              |                         |                           |             |               |             |
-| FUJ02E7   |              |                         |                           |             |               |             |
-| PNP0501   |              |                         |                           |             |               |             |
-| WACF004   |              |                         |                           |             |               |             |
-| WACF008   |              |                         |                           |             |               |             |
-| WACF009   |              |                         |                           |             |               |             |
-| WACF00A   |              |                         |                           |             |               |             |
-| WACF00C   |              |                         |                           |             |               |             |
-| WACF00E   |              |                         |                           |             |               |             |
-| WACF010   |              |                         |                           |             |               |             |
-| WACF401   |              |                         |                           |             |               |             |
-| WACF402   |              |                         |                           |             |               |             |
-| WACM0001  |              |                         |                           |             |               |             |
-| WACM0002  |              |                         |                           |             |               |             |
-| WACOM     |              |                         |                           |             |               |             |
-| WCOM0007  |              |                         |                           |             |               |             |
-| WCOM0008  |              |                         |                           |             |               |             |
-| WCOM4000  |              |                         |                           |             |               |             |
-| WCOM501D  |              |                         |                           |             |               |             |
-|           |              |                         |                           |             |               |             |
+| ID        | Model Number | Model Name              | Note                      | Linux  | input-wacom | libwacom |
+|-----------|--------------|-------------------------|---------------------------|--------|-------------|----------|
+| 056a:0090 |              |                         | pen only                  | 2.6.28 | 2.6.30      |          |
+| 056a:0093 |              |                         | pen & single-finger touch | 2.6.28 | 2.6.30      |          |
+| 056a:0097 |              |                         | pen only                  | 3.1    | 2.6.30      |          |
+| 056a:009a |              |                         | pen & single-finger touch | 2.6.28 | 2.6.30      |          |
+| 056a:009f |              |                         |                           | 2.6.33 | 2.6.30      |          |
+| 056a:00e2 |              |                         | pen & two-finger touch    | 2.6.33 | 2.6.30      |          |
+| 056a:00e3 |              |                         | two-finger touch only     | 2.6.33 | 2.6.30      |          |
+| 056a:00e5 |              |                         |                           | 3.5    | 2.6.36      |          |
+| 056a:00e6 |              |                         | pen & two-finger touch    | 2.6.39 | 2.6.30      |          |
+| 056a:00ec |              |                         |                           | 3.2    | 2.6.38      |          |
+| 056a:00ed |              |                         |                           | 3.6    | 2.6.38      |          |
+| 056a:00ef |              |                         |                           | 3.6    | 2.6.38      |          |
+| 056a:0100 |              |                         |                           | 3.8    | 2.6.30\*    |          |
+| 056a:0101 |              |                         |                           | 3.8    | 2.6.30\*    |          |
+| 056a:010d |              |                         |                           | 3.9    | 2.6.30\*    |          |
+| 056a:010e |              |                         |                           | 3.12   | 2.6.38      |          |
+| 056a:010f |              |                         |                           | 3.12   | 2.6.30\*    |          |
+| 056a:0116 |              |                         |                           | 3.16   | 2.6.30      |          |
+| 056a:012c |              |                         |                           | 3.18   | 2.6.30      |          |
+| 056a:0307 | DTH-A1300    | Cintiq Companion Hybrid | pen/pad sensor            | 3.13   | 2.6.38      | 0.9      |
+| 056a:0309 | DTH-A1300    | Cintiq Companion Hybrid | touch sensor              | 3.13   | 2.6.38      | 0.9      |
+| 056a:030a | DTH-W1300    | Cintiq Companion        | pen/pad sensor            | 3.18   | 2.6.38      | 0.11     |
+| 056a:030c | DTH-W1300    | Cintiq Companion        | touch sensor              | 3.18   | 2.6.38      | 0.11     |
+| 056a:0325 | DTH-W1310    | Cintiq Companion 2      | pen/pad sensor            | 4.4    | 2.6.38      | 0.17     |
+| 056a:0326 | DTH-W1310    | Cintiq Companion 2      | touch sensor              | 4.4    | 2.6.38      | 0.17     |
+| 056a:034a | DTH-W1320    | MobileStudio Pro 13     | touch sensor              | 4.10   | 2.6.30      | 0.23     |
+| 056a:034b | DTH-W1620    | MobileStudio Pro 16     | touch sensor              | 4.10   | 2.6.30      | 0.23     |
+| 056a:034d | DTH-W1320    | MobileStudio Pro 13     | pen/pad sensor            | 4.10   | 2.6.30      | 0.23     |
+| 056a:034e | DTH-W1620    | MobileStudio Pro 16     | pen/pad sensor            | 4.10   | 2.6.30      | 0.23     |
+| 056a:4001 |              |                         |                           | 3.8    | 2.6.30\*    |          |
+| 056a:4004 |              |                         |                           | 3.16   | 2.6.30\*    |          |
+| 056a:5000 |              |                         |                           | 3.16   | 2.6.30\*    |          |
+| 056a:5002 |              |                         |                           | 3.16   | 2.6.30\*    |          |
+| 056a:5010 |              |                         |                           | 3.17   | 2.6.30\*    |          |
+| 056a:5013 |              |                         |                           | 3.17   | 3.17        |          |
+| 056a:503e |              |                         | Lenovo X1 Yoga            | 3.17   | 3.17        |          |
+| 056a:5048 |              |                         | Lenovo Thinkpad Yoga 260  | 3.17   | 3.17        |          |
+| 17ef:6004 |              |                         |                           | 2.6.38 | 2.6.30      |          |
+| FUJ02E9   |              |                         |                           |        |             |          |
+| FUJ02E5   |              |                         |                           |        |             |          |
+| FUJ02E7   |              |                         |                           |        |             |          |
+| PNP0501   |              |                         |                           |        |             |          |
+| WACF004   |              |                         |                           |        |             |          |
+| WACF008   |              |                         |                           |        |             |          |
+| WACF009   |              |                         |                           |        |             |          |
+| WACF00A   |              |                         |                           |        |             |          |
+| WACF00C   |              |                         |                           |        |             |          |
+| WACF00E   |              |                         |                           |        |             |          |
+| WACF010   |              |                         |                           |        |             |          |
+| WACF401   |              |                         |                           |        |             |          |
+| WACF402   |              |                         |                           |        |             |          |
+| WACM0001  |              |                         |                           |        |             |          |
+| WACM0002  |              |                         |                           |        |             |          |
+| WACOM     |              |                         |                           |        |             |          |
+| WCOM0007  |              |                         |                           |        |             |          |
+| WCOM0008  |              |                         |                           |        |             |          |
+| WCOM4000  |              |                         |                           |        |             |          |
+| WCOM501D  |              |                         |                           |        |             |          |
+|           |              |                         |                           |        |             |          |
 
 -   \* Excluding Linux 2.6.36 and 2.6.37
 -   † Touch features of tablet unavailable prior to 2.6.38

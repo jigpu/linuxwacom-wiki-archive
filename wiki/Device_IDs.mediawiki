@@ -1263,33 +1263,33 @@
 | DTH-W1320
 | MobileStudio Pro 13
 | touch sensor
-| <s>4.10</s>
-| <s>2.6.30</s>
-| <s>0.23</s>
+| 4.10
+| 2.6.30
+| 0.23
 |-
 | 056a:034b
 | DTH-W1620
 | MobileStudio Pro 16
 | touch sensor
-| <s>4.10</s>
-| <s>2.6.30</s>
-| <s>0.23</s>
+| 4.10
+| 2.6.30
+| 0.23
 |-
 | 056a:034d
 | DTH-W1320
 | MobileStudio Pro 13
 | pen/pad sensor
-| <s>4.10</s>
-| <s>2.6.30</s>
-| <s>0.23</s>
+| 4.10
+| 2.6.30
+| 0.23
 |-
 | 056a:034e
 | DTH-W1620
 | MobileStudio Pro 16
 | pen/pad sensor
-| <s>4.10</s>
-| <s>2.6.30</s>
-| <s>0.23</s>
+| 4.10
+| 2.6.30
+| 0.23
 |-
 | 056a:4001
 |
