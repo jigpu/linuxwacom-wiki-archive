@@ -98,6 +98,7 @@ USB Peripherals
 | 056a:00dd | CTL-470      | Bamboo Connect                         |                                | 3.3         | 2.6.30\*†     |          |
 | 056a:00de | CTH-470      | Bamboo Capture/Manga                   |                                | 3.3         | 2.6.30\*†     |          |
 | 056a:00df | CTH-670      | Bamboo Create/Fun                      |                                | 3.3         | 2.6.30\*†     |          |
+| 056a:00f0 | DTU-1631     |                                        |                                | 2.6.36      | 2.6.30        |          |
 | 056a:00f4 | DTK-2400     | Cintiq 24HD                            | pen/pad sensor                 | 3.3         | 2.6.30        |          |
 | 056a:00f6 | DTH-2400     | Cintiq 24HD touch                      | touch sensor                   | 3.7         | 2.6.38        |          |
 | 056a:00f8 | DTH-2400     | Cintiq 24HD touch                      | pen/pad sensor                 | 3.6         | 2.6.30        |          |
@@ -164,7 +165,6 @@ Tablet PCs
 | 056a:00ec |              |                         |                           | 3.2         | 2.6.38        |             |
 | 056a:00ed |              |                         |                           | 3.6         | 2.6.38        |             |
 | 056a:00ef |              |                         |                           | 3.6         | 2.6.38        |             |
-| 056a:00f0 |              |                         |                           | 2.6.36      | 2.6.30        |             |
 | 056a:0100 |              |                         |                           | 3.8         | 2.6.30\*      |             |
 | 056a:0101 |              |                         |                           | 3.8         | 2.6.30\*      |             |
 | 056a:010d |              |                         |                           | 3.9         | 2.6.30\*      |             |
