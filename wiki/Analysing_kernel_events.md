@@ -16,6 +16,16 @@ available for compiling from source
 of **evtest**, which is no longer maintained (but might be the only
 option for older distributions).
 
+Installing
+==========
+
+| Fedora, Red Hat, Mageia       | `$ sudo -s 'yum makecache && yum install evemu'`            |
+|-------------------------------|-------------------------------------------------------------|
+| Ubuntu, Mint, Debian          | `$ sudo -s 'apt-get update && apt-get install evemu-tools'` |
+| SUSE                          | `$ sudo -s 'zypper update && zypper install evemu'`         |
+| Arch Linux, Antergos, Manjaro | `$ sudo -s 'pacman -Sy && pacman -S evemu'`                 |
+| Gentoo                        | `$ sudo -s 'emerge --sync && emerge evemu'`                 |
+
 Capturing Events
 ================
 

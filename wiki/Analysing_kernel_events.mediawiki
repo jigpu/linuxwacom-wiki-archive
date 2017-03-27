@@ -3,6 +3,26 @@ This page describes how to view and analyze kernel events.
 
 The '''evemu-record''' tool can be used to capture input events from the kernel and display them in a human-readable form. Its often provided as part of a distribution's "evemu" or "evemu-tools" package, and is also available for compiling from source [http://cgit.freedesktop.org/evtest/ here]. This tool takes the place of '''evtest''', which is no longer maintained (but might be the only option for older distributions).
 
+= Installing =
+{|
+|-
+! Fedora, Red Hat, Mageia
+| <code>$ sudo -s 'yum makecache && yum install evemu'</code>
+|- 
+! style="background:#E8EFF8" | Ubuntu, Mint, Debian
+| style="background:#E8EFF8" | <code>$ sudo -s 'apt-get update && apt-get install evemu-tools'</code>
+|-
+! SUSE
+| <code>$ sudo -s 'zypper update && zypper install evemu'</code>
+|-
+! style="background:#E8EFF8" | Arch Linux, Antergos, Manjaro
+| style="background:#E8EFF8" | <code>$ sudo -s 'pacman -Sy && pacman -S evemu'</code>
+|-
+! Gentoo
+| <code>$ sudo -s 'emerge --sync && emerge evemu'</code>
+|}
+
+
 = Capturing Events =
 To capture events with '''evemu-record''', simply run the command as root or with 'sudo', and then choose one of the listed devices. Some preliminary device information will be printed; bring the tool into proximity and events should be printed out in real-time. If multiple devices are listed (e.g. "Graphire4 4x5" and "Graphire4 4x5 Pad"), you may need to experiment to see which device generates the events your interested in. If you need to capture from multiple devices simultaneously, simply run the command a second time in a different window.
 
