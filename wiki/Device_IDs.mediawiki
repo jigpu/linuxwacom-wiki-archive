@@ -975,24 +975,40 @@
 | 056a:034f
 | DTH-1320
 | Cintiq Pro 13
-| 
-| <s>4.11</s>
-| <s>2.6.30</s>
+| pen/pad sensor
+| 4.12
+| 2.6.30
+|
+|-
+| 056a:0353
+| DTH-1320
+| Cintiq Pro 13
+| touch sensor
+| 4.12
+| 2.6.30
 |
 |-
 | 056a:0350
 | DTH-1620
 | Cintiq Pro 16
-| 
-| <s>4.11</s>
-| <s>2.6.30</s>
+| pen/pad sensor
+| 4.12
+| 2.6.30
+|
+|-
+| 056a:0354
+| DTH-1620
+| Cintiq Pro 16
+| touch sensor
+| 4.12
+| 2.6.30
 |
 |-
 | 056a:0357
 | PTH-660
 | Intuos Pro medium
 | 2nd-generation (USB interface)
-| <s>4.11</s>
+| 4.11
 | 2.6.30
 |
 |-
@@ -1000,7 +1016,7 @@
 | PTH-860
 | Intuos Pro large
 | 2nd-generation (USB interface)
-| <s>4.11</s>
+| 4.11
 | 2.6.30
 |
 |-
