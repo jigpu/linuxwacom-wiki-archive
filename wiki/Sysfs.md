@@ -88,9 +88,7 @@ libudev method
 
 You can also use libudev to find this information programmatically. The
 output below is from the first example at
-<http://www.signal11.us/oss/udev/>
-
-<code>
+<http://www.signal11.us/oss/udev/> <code>
 
 `$ ./udev_example `  
 `Device Node Path: /dev/hidraw0`  
