@@ -86,5 +86,32 @@ Here are the steps to find your serial number in sysfs: <code>
 libudev method
 --------------
 
-You can also use libudev to find this information programmatically. See
+You can also use libudev to find this information programmatically. The
+output below is from the first example at
 <http://www.signal11.us/oss/udev/>
+
+<code>
+
+`$ ./udev_example `  
+`Device Node Path: /dev/hidraw0`  
+`  VID/PID: 093a 2510`  
+`  PixArt`  
+`  USB Optical Mouse`  
+`  serial: (null)`  
+`Device Node Path: /dev/hidraw1`  
+`  VID/PID: 056a 0357`  
+`  Wacom Co,.Ltd.`  
+`  Wacom Intuos Pro M`  
+`  serial: 6KQS0A1000014`  
+`Device Node Path: /dev/hidraw2`  
+`  VID/PID: 04ca 0050`  
+`  Lite-On Technology Corp.`  
+`  USB Multimedia Keyboard`  
+`  serial: (null)`  
+`Device Node Path: /dev/hidraw3`  
+`  VID/PID: 04ca 0050`  
+`  Lite-On Technology Corp.`  
+`  USB Multimedia Keyboard`  
+`  serial: (null)`
+
+</code>
