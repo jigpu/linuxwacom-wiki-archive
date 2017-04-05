@@ -4,7 +4,11 @@ permalink: wiki/Sysfs/
 layout: wiki
 ---
 
-### Finding a Wacom serial number and Firmware on Linux
+Finding a Wacom serial number and Firmware on Linux
+===================================================
+
+lsusb method
+------------
 
 First find your VID:PID:
 
@@ -57,5 +61,30 @@ Now use 'lsusb' to get more information about the device.
 
 </code>
 
-Firmware 1.26 ("bcdDevice") and serial 6KQS0A1000014 ("iSerial") are
-listed in the output above.
+In the output above, the firmware version is 1.26 ("bcdDevice") and the
+serial is 6KQS0A1000014 ("iSerial").
+
+sysfs method
+------------
+
+Here are the steps to find your serial number in sysfs: <code>
+
+`$cd /sys/bus/hid/drivers/wacom/`  
+`$ ls`  
+`0003:056A:0357.0011  bind  module  new_id  uevent  unbind`  
+`$ cd 0003\:056A\:0357.0011 (you can type 0 and hit tab)`  
+`$ cd input`  
+`$ ls`  
+`input51 (your input number will differ)`  
+`$ cd input51 `  
+`$ ls`  
+`capabilities  event4  modalias  phys   properties  uevent`  
+`device        id      name      power  subsystem   uniq`  
+`$ cat uniq`  
+`6KQS0A1000014`
+
+libudev method
+--------------
+
+You can also use libudev to find this information programmatically. See
+<http://www.signal11.us/oss/udev/>
