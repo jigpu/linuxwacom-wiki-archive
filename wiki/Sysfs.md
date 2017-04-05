@@ -1,0 +1,61 @@
+---
+title: Sysfs
+permalink: wiki/Sysfs/
+layout: wiki
+---
+
+### Finding a Wacom serial number and Firmware on Linux
+
+First find your VID:PID:
+
+<code>
+
+`$lsusb`  
+`Bus 002 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub`  
+`Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub`  
+`Bus 001 Device 006: ID 04ca:3006 Lite-On Technology Corp.  `  
+`Bus 001 Device 004: ID 0bda:0129 Realtek Semiconductor Corp. RTS5129 Card Reader Controller`  
+`Bus 001 Device 003: ID 04ca:0050 Lite-On Technology Corp. `  
+`Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub`  
+`Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub`  
+`Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub`  
+`Bus 003 Device 009: ID 056a:0357 Wacom Co., Ltd `  
+`Bus 003 Device 002: ID 093a:2510 Pixart Imaging, Inc. Optical Mouse`  
+`Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub`
+
+</code> Your Wacom VID:PID will start with "056a". You may have two
+listings for one Wacom device, in that case you want to select the
+VID:PID of the Pen device for the serial number. For the firmware select
+the pen or touch device as appropriate.
+
+I will use 056a:357 as my example VID:PID below.
+
+Now use 'lsusb' to get more information about the device.
+
+<code>
+
+`$sudo lsusb -vd 056a:0357 | head -n 20`  
+`Bus 003 Device 009: ID 056a:0357 Wacom Co., Ltd `  
+`Device Descriptor:`  
+` bLength                18`  
+` bDescriptorType         1`  
+` bcdUSB               2.00`  
+` bDeviceClass            0 (Defined at Interface level)`  
+` bDeviceSubClass         0 `  
+` bDeviceProtocol         0 `  
+` bMaxPacketSize0        64`  
+` idVendor           0x056a Wacom Co., Ltd`  
+` idProduct          0x0357 `  
+` bcdDevice            1.26 `  
+` iManufacturer           1 Wacom Co,.Ltd.`  
+` iProduct                2 Wacom Intuos Pro M`  
+` iSerial                 3 6KQS0A1000014`  
+` bNumConfigurations      1`  
+` Configuration Descriptor:`  
+`   bLength                 9`  
+`   bDescriptorType         2`
+
+</code>
+
+Firmware 1.26 ("bcdDevice") and serial 6KQS0A1000014 ("iSerial") are
+listed in the output above.
