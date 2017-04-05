@@ -86,7 +86,7 @@ Here are the steps to find your serial number in sysfs: <code>
 libudev method
 --------------
 
-You can also use libudev to find this information programmatically. The
+You can also use libudev to find the serial number programmatically. The
 output below is from the first example at
 <http://www.signal11.us/oss/udev/> <code>
 
