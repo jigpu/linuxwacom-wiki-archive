@@ -131,10 +131,6 @@ USB Peripherals
 | 056a:033d | CTL-690      | Intuos Draw medium                     |                                | 4.4    | 2.6.30\*†   | 0.16     |
 | 056a:033e | CTH-690      | Intuos Art medium                      |                                | 4.4    | 2.6.30\*†   |          |
 | 056a:0343 | DTK-1651     |                                        |                                | 4.4    | 2.6.30      |          |
-| 056a:034a | DTH-W1320    | MobileStudio Pro 13                    | touch sensor                   | 4.10   | 2.6.30      |          |
-| 056a:034b | DTH-W1620    | MobileStudio Pro 13                    | touch sensor                   | 4.10   | 2.6.30      |          |
-| 056a:034d | DTH-W1320    | MobileStudio Pro 13                    | pen/pad sensor                 | 4.10   | 2.6.30      |          |
-| 056a:034e | DTH-W1620    | MobileStudio Pro 13                    | pen/touch sensor               | 4.10   | 2.6.30      |          |
 | 056a:034f | DTH-1320     | Cintiq Pro 13                          | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 | 056a:0350 | DTH-1620     | Cintiq Pro 16                          | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 | 056a:0353 | DTH-1320     | Cintiq Pro 13                          | touch sensor                   | 4.12   | 2.6.30      |          |
