@@ -6,6 +6,9 @@ tags:
  - DeveloperPages
 ---
 
+The most up-to-date list of supported device IDs can be found in
+[wacom\_ids](https://sourceforge.net/p/linuxwacom/input-wacom/ci/master/tree/3.7/wacom_wac.c)
+
 USB Peripherals
 ===============
 
