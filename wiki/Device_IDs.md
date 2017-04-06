@@ -9,7 +9,7 @@ tags:
 USB Peripherals
 ===============
 
-| Device ID | Model Number | Model Name                             | Note                           | Linux  | input-wacom | libwacom |
+| Device ID | Model Number | Model Name                             | Notes                          | Linux  | input-wacom | libwacom |
 |-----------|--------------|----------------------------------------|--------------------------------|--------|-------------|----------|
 | 056a:0003 | PTU-600      | Cintiq Partner                         |                                | 2.6.22 | 2.6.30      |          |
 | 056a:0010 | ET-0405      | Graphire                               |                                | 2.6.22 | 2.6.30      |          |

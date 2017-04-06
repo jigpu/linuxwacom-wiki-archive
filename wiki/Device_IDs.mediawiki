@@ -7,9 +7,9 @@
 ! style="width: 7em" | Device ID
 ! Model Number
 ! Model Name
-! Note
-! style="width: 9em" | Linux
-! style="width: 9em" | input-wacom
+! Notes
+! style="width: 7em" | Linux
+! style="width: 7em" | input-wacom
 ! style="width: 9em" | libwacom
 |-
 | 056a:0003
