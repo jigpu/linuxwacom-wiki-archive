@@ -146,13 +146,13 @@ USB Peripherals
 Bluetooth Peripherals
 =====================
 
-| Device ID | Model Number | Model Name              | Notes                                | Linux       | input-wacom | libwacom |
-|-----------|--------------|-------------------------|--------------------------------------|-------------|-------------|----------|
-| 056a:0081 | CTE-630BT    | Graphire Wireless (6x8) |                                      | 2.6.31      | 3.17        |          |
-| 056a:00bd | PTK-540WL    | Intuos4 Wireless        |                                      | 2.6.35      | 3.17        |          |
-| 056a:0360 | PTH-660      | Intuos Pro medium       | 2nd-generation (Bluetooth interface) | <s>4.11</s> | 2.6.30      |          |
-| 056a:0361 | PTH-860      | Intuos Pro large        | 2nd-generation (Bluetooth interface) | <s>4.11</s> | 2.6.30      |          |
-|           |              |                         |                                      |             |             |          |
+| Device ID | Model Number | Model Name              | Notes                                | Linux  | input-wacom | libwacom |
+|-----------|--------------|-------------------------|--------------------------------------|--------|-------------|----------|
+| 056a:0081 | CTE-630BT    | Graphire Wireless (6x8) |                                      | 2.6.31 | 3.17        |          |
+| 056a:00bd | PTK-540WL    | Intuos4 Wireless        |                                      | 2.6.35 | 3.17        |          |
+| 056a:0360 | PTH-660      | Intuos Pro medium       | 2nd-generation (Bluetooth interface) | 4.11   | 3.17        |          |
+| 056a:0361 | PTH-860      | Intuos Pro large        | 2nd-generation (Bluetooth interface) | 4.11   | 3.17        |          |
+|           |              |                         |                                      |        |             |          |
 
 Tablet PCs
 ==========

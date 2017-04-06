@@ -1085,16 +1085,16 @@
 | PTH-660
 | Intuos Pro medium
 | 2nd-generation (Bluetooth interface)
-| <s>4.11</s>
-| 2.6.30
+| 4.11
+| 3.17
 |
 |-
 | 056a:0361
 | PTH-860
 | Intuos Pro large
 | 2nd-generation (Bluetooth interface)
-| <s>4.11</s>
-| 2.6.30
+| 4.11
+| 3.17
 |
 |-
 |}
