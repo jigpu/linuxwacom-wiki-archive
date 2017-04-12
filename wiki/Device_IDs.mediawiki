@@ -252,6 +252,22 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | 2.6.30
 |
 |-
+| 056a:003a
+| DTI-520
+| 
+| Stylus?
+| 
+| 
+|
+|-
+| 056a:003b
+| DTI-520
+| 
+| Eraser?
+| 
+| 
+|
+|-
 | 056a:003f
 | DTZ-2100
 | Cintiq 21UX
