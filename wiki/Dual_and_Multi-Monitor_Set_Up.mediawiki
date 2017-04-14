@@ -45,7 +45,13 @@ To map a tool to the VGA monitor, simply run
 [[xsetwacom]] then goes off, gets the screen size for the given output (in relation to the total desktop) and calculates a 3x3 matrix that maps the tablet input range to the given output. This matrix is set as the server's "Device Transformation Matrix". You can check the matrix by running xinput and looking at the value of this property.
   xinput list-props "Wacom Intuos4 6x9 stylus"
 
-=== NVIDIA binary driver ===
+If you get the error:
+<pre>
+Unable to find an output
+</pre>
+and are running the NVIDIA binary driver see the section below.
+
+== NVIDIA binary driver ==
 Provided you have the latest git version, you can also use ''MapToOutput'' with the NVIDIA binary driver. In this case, the monitor must be specified with "''HEAD-0''", "''HEAD-1''", etc.
 
 == Coordinate Transformation Matrix ==

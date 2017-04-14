@@ -62,7 +62,14 @@ value of this property.
 
 ` xinput list-props "Wacom Intuos4 6x9 stylus"`
 
-### NVIDIA binary driver
+If you get the error:
+
+    Unable to find an output
+
+and are running the NVIDIA binary driver see the section below.
+
+NVIDIA binary driver
+--------------------
 
 Provided you have the latest git version, you can also use *MapToOutput*
 with the NVIDIA binary driver. In this case, the monitor must be
