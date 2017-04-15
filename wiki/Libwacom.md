@@ -207,3 +207,6 @@ not '&\#'.
 `ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="056a", ENV{ID_MODEL_ID}=="`**`0357`**`", ENV{ID_INPUT}="1", ENV{ID_INPUT_JOYSTICK}="", ENV{ID_INPUT_TABLET}="1"`  
 `ATTRS{name}=="* Finger", ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="056a", ENV{ID_MODEL_ID}=="`**`0357`**`", ENV{ID_INPUT_TOUCHPAD}="1"`  
 `ATTRS{name}=="* Pad", ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="056a", ENV{ID_MODEL_ID}=="`**`0357`**`", ENV{ID_INPUT_TABLET_PAD}="1"`  
+
+You can check if your device was added properly in the rules by
+libwacom-list-local-devices.
