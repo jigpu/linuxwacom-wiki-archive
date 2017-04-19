@@ -42,6 +42,9 @@ $ make
 $ sudo make install
 </pre>
 
+= prefix =
+Your prefix may differ. You might need to use 'find' to find your distro's location for wacom_drv.so. Then copy the file you generated with make into that location.
+
 == Post-Install ==
 After installing the driver, you'll need to restart the driver by logging out. In addition, it may be necessary to configure X before you can use your tablet. See the [[configuring X]] page for more information.
 

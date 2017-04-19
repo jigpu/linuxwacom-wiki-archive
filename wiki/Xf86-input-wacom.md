@@ -56,6 +56,13 @@ build, and install the driver:
     $ make
     $ sudo make install
 
+prefix
+======
+
+Your prefix may differ. You might need to use 'find' to find your
+distro's location for wacom\_drv.so. Then copy the file you generated
+with make into that location.
+
 Post-Install
 ------------
 
