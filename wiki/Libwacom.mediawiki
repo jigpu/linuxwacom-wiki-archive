@@ -140,12 +140,35 @@ for the first command in the above block.
 After building, copy the libwacom data files in to /usr/share/libwacom:
 
 <code>
-sudo cp -r /home/<path>/libwacom/data/* /usr/share/libwacom/
+ sudo cp -r /home/<path>/libwacom/data/* /usr/share/libwacom/
 </code>
-<br>or<br>
+or
 <code>
-sudo cp -r /home/<path>/linuxwacom-libwacom/data/* /usr/share/libwacom/
+ sudo cp -r /home/<path>/linuxwacom-libwacom/data/* /usr/share/libwacom/
 </code>
+
+== Troubleshooting ==
+You can check the installation with 
+
+<code>
+ $ libwacom-list-local-devices
+</code>
+
+This command may give an error:
+
+<code>
+ $ libwacom-list-local-devices 
+ (libwacom-list-local-devices:2595): libwacom-CRITICAL **: Duplicate match of 'usb:056a:00d0' on device 'Wacom Bamboo Touch (2FG)'.
+</code>
+
+If you get this error you need to delete the following files which shipped with your distro from an earlier version of libwacom: 
+
+<code>
+ $ cd /usr/share/libwacom
+ $ sudo rm bamboo-pen.tablet bamboo-craft.tablet bamboo-2fg.tablet bamboo-2fg-6x8.tablet bamboo-2fg-4x5.tablet
+</code>
+
+These files have duplicate VID:PIDs, and cause the above error.
 
 == Udev Rules (from the README) ==
 
