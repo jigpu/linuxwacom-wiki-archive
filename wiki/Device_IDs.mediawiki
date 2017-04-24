@@ -921,7 +921,7 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | ExpressKey Remote
 | 
 | 4.3
-| NO
+| 2.6.38
 |
 |-
 | 056a:0333

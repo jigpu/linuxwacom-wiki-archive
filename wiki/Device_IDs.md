@@ -127,7 +127,7 @@ USB Peripherals
 | 056a:032b | DTH-2700     | Cintiq 27QHD touch                     | pen/pad sensor                 | 4.0    | 2.6.30\*    | 0.12     |
 | 056a:032c | DTH-2700     | Cintiq 27QHD touch                     | touch sensor                   | 4.0    | 2.6.38      |          |
 | 056a:032f | DTU-1031X    |                                        |                                | 3.19   | 2.6.30      | 0.12     |
-| 056a:0331 | ACK-411050   | ExpressKey Remote                      |                                | 4.3    | NO          |          |
+| 056a:0331 | ACK-411050   | ExpressKey Remote                      |                                | 4.3    | 2.6.38      |          |
 | 056a:0333 | DTH-1300     | Cintiq 13HD Touch                      | pen/pad sensor                 | 4.1    | 2.6.30      | 0.14     |
 | 056a:0335 | DTH-1300     | Cintiq 13HD Touch                      | touch sensor                   | 4.1    | 2.6.38      | 0.14     |
 | 056a:0336 | DTU-1141     |                                        |                                | 4.2    | 2.6.30      | 0.13     |
