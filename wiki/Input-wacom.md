@@ -36,7 +36,9 @@ been installed on your system:
 <code>
 
 `sudo apt-get install linux-headers-$(uname -r) build-essential # on Debian, Ubuntu, Mint`  
-`sudo yum install gcc "kernel-devel-uname-r == $(uname -r)"     # on RHEL, CentOS, Fedora`
+`sudo yum install gcc "kernel-devel-uname-r == $(uname -r)"     # on RHEL, CentOS, Fedora`  
+`sudo zypper install kernel-devel                               # on open SUSE 11.4`  
+`sudo zypper install --type pattern devel_basis                 # on open SUSE 11.4`
 
 </code>
 
