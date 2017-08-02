@@ -1036,6 +1036,21 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | 2.6.30
 |
 |-
+| 056a:035A
+| DTH-1152 Pen
+|
+|
+| 4.10
+| 2.6.30
+|
+|-
+| 056a:0368
+| DTH-1152 Touch
+|
+|
+| 4.10
+| 2.6.30
+|
 |}
 
 = Bluetooth Peripherals =
