@@ -6,6 +6,10 @@ tags:
  - DeveloperPages
 ---
 
+Note: The current version of this document is available at:
+<https://github.com/linuxwacom/input-wacom/wiki/Installing-input-wacom-from-source>
+. This page is kept here for historical reasons.
+
 The **input-wacom** driver is a set of loadable kernel modules which
 allows new tablets to be used with systems using kernels as old as Linux
 2.6.30. While this gets many of the updates that are pushed to the

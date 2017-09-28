@@ -1,3 +1,6 @@
+Note: The current version of this document is available at: https://github.com/linuxwacom/input-wacom/wiki/Installing-input-wacom-from-source . This page is kept here for historical reasons.
+
+
 The '''input-wacom''' driver is a set of loadable kernel modules which allows new tablets to be used with systems using kernels as old as Linux 2.6.30. While this gets many of the updates that are pushed to the upstream Linux kernel driver, some differences may exist. This will be particularly apparent for users of older kernels. Because of this, we recommend upgrading your kernel if possible and only installing this driver when absolutely necessary.
 
 This driver builds two separate kernel modules: [[wacom.ko]] and [[wacom_w8001.ko]]. The former is used for the vast majority of tablets (USB-attached for 2.6.30 - 3.16; USB/Bluetooth/I2C-attached for 3.17+), while the latter is used for older tablet PCs whose digitizers are connected via an internal serial interface. The [[hid-wacom.ko]] and [[wacom_i2c.ko]] modules (legacy modules for Bluetooth and I2C tablets, respectively) are ''not'' included with this driver.
