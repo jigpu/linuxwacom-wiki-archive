@@ -2,6 +2,9 @@
 title: Using git bisect
 permalink: wiki/Using_git_bisect/
 layout: wiki
+tags:
+ - HOWTO
+ - DeveloperPages
 ---
 
 The **git-bisect** command can be used to narrow down the point at which

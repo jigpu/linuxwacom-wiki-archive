@@ -76,3 +76,7 @@ Afterwards, it is a good idea to reset your environment in case you need to run 
 
 == Tips & Tricks ==
 Sometimes you may accidentally mark a '''good''' commit as '''bad''' or '''skip''' a commit you didn't intend. If you end up running the wrong command, it is possible to recover by first running <code>git bisect log &gt; bisect.log</code> and then editing the generated '''bisect.log''' file to match what you had intended. Finally, run <code>git bisect reset && git bisect replay bisect.log</code> to apply the fix. Once these commands have been run you can continue with building and testing as normal.
+
+
+[[Category:HOWTO]]
+[[Category:DeveloperPages]]
