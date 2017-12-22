@@ -138,14 +138,19 @@ USB Peripherals
 | 056a:0343 | DTK-1651       |                                        |                                | 4.4    | 2.6.30      |          |
 | 056a:034f | DTH-1320       | Cintiq Pro 13                          | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 | 056a:0350 | DTH-1620       | Cintiq Pro 16                          | pen/pad sensor                 | 4.12   | 2.6.30      |          |
+| 056a:0351 | DTH-2420       | Cintiq Pro 24 PT                       | pen/pad sensor                 | 4.12   | 2.6.30      |          |
+| 056a:0352 | DTH-3220       | Cintiq Pro 32                          | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 | 056a:0353 | DTH-1320       | Cintiq Pro 13                          | touch sensor                   | 4.12   | 2.6.30      |          |
 | 056a:0354 | DTH-1620       | Cintiq Pro 16                          | touch sensor                   | 4.12   | 2.6.30      |          |
+| 056a:0355 | DTH-2420       | Cintiq Pro 24 PT                       | touch sensor                   | 4.12   | 2.6.30      |          |
+| 056a:0356 | DTH-3220       | Cintiq Pro 32                          | touch sensor                   | 4.12   | 2.6.30      |          |
 | 056a:0357 | PTH-660        | Intuos Pro medium                      | 2nd-generation (USB interface) | 4.11   | 2.6.30      |          |
 | 056a:0358 | PTH-860        | Intuos Pro large                       | 2nd-generation (USB interface) | 4.11   | 2.6.30      |          |
 | 056a:035A | DTH-1152 Pen   |                                        |                                | 4.10   | 2.6.30      |          |
 | 056a:0368 | DTH-1152 Touch |                                        |                                | 4.10   | 2.6.30      |          |
 | 056a:037A | CTL-472        | One by Wacom                           |                                | NO     | NO          | NO       |
 | 056a:037B | CTL-672        | One by Wacom                           |                                | NO     | NO          | NO       |
+| 056a:037c | DTK-2420       | Cintiq Pro 24 P                        | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 
 Bluetooth Peripherals
 =====================

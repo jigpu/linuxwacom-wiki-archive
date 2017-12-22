@@ -1004,6 +1004,22 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | 2.6.30
 |
 |-
+| 056a:0351
+| DTH-2420
+| Cintiq Pro 24 PT
+| pen/pad sensor
+| 4.12
+| 2.6.30
+|
+|-
+| 056a:0352
+| DTH-3220
+| Cintiq Pro 32
+| pen/pad sensor
+| 4.12
+| 2.6.30
+|
+|-
 | 056a:0353
 | DTH-1320
 | Cintiq Pro 13
@@ -1015,6 +1031,22 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | 056a:0354
 | DTH-1620
 | Cintiq Pro 16
+| touch sensor
+| 4.12
+| 2.6.30
+|
+|-
+| 056a:0355
+| DTH-2420
+| Cintiq Pro 24 PT
+| touch sensor
+| 4.12
+| 2.6.30
+|
+|-
+| 056a:0356
+| DTH-3220
+| Cintiq Pro 32
 | touch sensor
 | 4.12
 | 2.6.30
@@ -1067,6 +1099,14 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | NO
 | NO
 | NO
+|-
+| 056a:037c
+| DTK-2420
+| Cintiq Pro 24 P
+| pen/pad sensor
+| 4.12
+| 2.6.30
+|
 |}
 
 = Bluetooth Peripherals =
