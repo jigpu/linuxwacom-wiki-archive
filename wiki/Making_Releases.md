@@ -83,9 +83,11 @@ input-wacom
 This section describes how to do a new
 [input-wacom](input-wacom "wikilink") release.
 
-1.  Merge master into all current branches, and then merge those
-    branches into master. Use the '--no-ff' option with 'git merge' to
-    force a commit message.
+1.  Merge master into all current upstream branches (e.g.
+    jiri/for-4.14). Merge branches for *released* kernels back into
+    master (if RC kernel code needs to be part of a release, check with
+    other developers before continuing). Use the '--no-ff' option with
+    'git merge' to force a commit message.
 2.  Change configure.ac to reflect the new version number and commit:
     **git commit -sm "input-wacom VERSION" configure.ac** You *must not*
     have uncommitted changes when releasing a new version.
