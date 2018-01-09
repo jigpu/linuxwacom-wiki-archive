@@ -100,12 +100,14 @@ This section describes how to do a new
 5.  Build, install, and load the driver from the tarball.
 6.  Verify the version number of the loaded driver with \`modinfo wacom
     \| grep version\`.
-7.  Push to the remote: **git push origin master**.
+7.  Push to both SourceForge and Github remotes: **git push origin
+    master && git push mirror master**.
 8.  By default, the git push command doesn’t transfer tags to remote
-    servers. Push the tag to the remote: **git push origin
-    input-wacom-VERSION**.
+    servers. Push the tag to the remotes: **git push origin
+    input-wacom-VERSION && git push mirror input-wacom-VERSION**.
 9.  Run the release script: **sh release.sh** with the correct arguments
-    (--user <sf_username>@ --github <gh_username> <path>). Your path is
+    (--user <sf_username>@ --github <gh_username> <path>). Your github
+    username may need a personal access token attached. Your path is
     probably 'dot' (.). This script will push the tag and upload the
     tarball to the remote.
 10. Type up a short announcement summarizing the new features in this
