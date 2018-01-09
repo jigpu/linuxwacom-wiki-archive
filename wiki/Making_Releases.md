@@ -16,13 +16,14 @@ version (e.g. 0.10.2).
 1.  Change configure.ac to reflect the new version number and commit:
     **git commit -sm "wacom VERSION" configure.ac** You *must not* have
     uncommitted changes when releasing a new version.
-2.  Run **autoreconf -iv** or **autogen.sh**, build and install the
-    driver. Verify that the new version shows in the Xorg.log.
-3.  Run **make distcheck**. Verify the name of the tarball
-    (xf86-input-wacom-VERSION.tar.bz2). If make distcheck fails, reset
-    with **git reset --hard HEAD~1** and resolve the bugs first.
-4.  Tag the module: '''git tag -m "xf86-input-wacom VERSION" -s
+2.  Tag the module: '''git tag -m "xf86-input-wacom VERSION" -s
     xf86-input-wacom-VERSION
+3.  Run **autoreconf -iv** or **autogen.sh**, build and install the
+    driver. Verify that the new version shows in the Xorg.log.
+4.  Run **make distcheck**. Verify the name of the tarball
+    (xf86-input-wacom-VERSION.tar.bz2). If make distcheck fails, delete
+    the tag with **git tag -d xf86-input-wacom-VERSION**, reset with
+    **git reset --hard HEAD~1** and resolve the bugs first.
 5.  Push to the remote: **git push origin master**
 6.  Run the release script: **sh release.sh**. This script will push the
     tag and upload the tarball to the remote.
