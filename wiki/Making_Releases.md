@@ -103,11 +103,10 @@ This section describes how to do a new
 8.  By default, the git push command doesn’t transfer tags to remote
     servers. Push the tag to the remotes: **git push origin
     input-wacom-VERSION && git push mirror input-wacom-VERSION**.
-9.  Run the release script: **sh release.sh** with the correct arguments
-    (--user <sf_username>@ --github <gh_username> <path>). Your github
-    username may need a personal access token attached. Your path is
-    probably 'dot' (.). This script will push the tag and upload the
-    tarball to the remote.
+9.  Run the release script: **sh release.sh --user <sf_username>@
+    --github <gh_username> <path>**. Your github username may need a
+    personal access token attached. Your path is probably 'dot' (.).
+    This script will push the tag and upload the tarball to the remote.
 10. Type up a short announcement summarizing the new features in this
     version and insert it in the generated .announce email file (the git
     shortlog).
