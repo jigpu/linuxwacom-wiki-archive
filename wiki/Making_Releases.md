@@ -93,10 +93,8 @@ This section describes how to do a new
     have uncommitted changes when releasing a new version.
 3.  Tag the module: **git tag -m "input-wacom VERSION" -s
     input-wacom-VERSION**. You will use your pgp key for this step.
-4.  Run **make dist**. Verify the name of the tarball
-    (input-wacom-VERSION.tar.bz2). If this is a clean clone of the
-    repository, you will need to first run autogen.sh to generate the
-    Makefile.
+4.  Run **./autogen.sh** and then **make distcheck**. Verify the name of
+    the tarball (input-wacom-VERSION.tar.bz2).
 5.  Build, install, and load the driver from the tarball.
 6.  Verify the version number of the loaded driver with \`modinfo wacom
     \| grep version\`.

@@ -37,7 +37,7 @@ This section describes how to do a new [[input-wacom]] release.
 # Merge master into all current upstream branches (e.g. jiri/for-4.14). Merge branches for ''released'' kernels back into master (if RC kernel code needs to be part of a release, check with other developers before continuing). Use the '--no-ff' option with 'git merge' to force a commit message.
 # Change configure.ac to reflect the new version number and commit: '''git commit -sm "input-wacom VERSION" configure.ac''' You ''must not'' have uncommitted changes when releasing a new version.
 # Tag the module: '''git tag -m "input-wacom VERSION" -s input-wacom-VERSION'''. You will use your pgp key for this step.
-# Run '''make dist'''. Verify the name of the tarball (input-wacom-VERSION.tar.bz2). If this is a clean clone of the repository, you will need to first run autogen.sh to generate the Makefile.
+# Run '''./autogen.sh''' and then '''make distcheck'''. Verify the name of the tarball (input-wacom-VERSION.tar.bz2).
 # Build, install, and load the driver from the tarball.
 # Verify the version number of the loaded driver with `modinfo wacom | grep version`.
 # Push to both SourceForge and Github remotes: '''git push origin master && git push mirror master'''.
