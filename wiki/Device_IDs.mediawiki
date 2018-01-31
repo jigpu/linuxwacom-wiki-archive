@@ -1106,6 +1106,27 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | pen/pad sensor
 | 4.12
 | 2.6.30
+|-
+| 056a:037d
+| DTH-2452
+|
+| pen/pad sensor
+| 4.12
+| 2.6.30
+|-
+| 056a:037d
+| DTH-2452
+|
+| touch sensor
+| 4.12
+| 2.6.30
+|-
+| 056a:0382
+| DTK-2451
+|
+| pen/pad sensor
+| 4.12
+| 2.6.30
 |
 |}
 
