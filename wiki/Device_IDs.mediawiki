@@ -1088,17 +1088,17 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | CTL-472
 | One by Wacom
 |
-| NO
-| NO
-| NO
+| 4.16
+| 2.6.30
+| 
 |-
 | 056a:037B
 | CTL-672
 | One by Wacom
 |
-| NO
-| NO
-| NO
+| 4.16
+| 2.6.30
+| 
 |-
 | 056a:037c
 | DTK-2420

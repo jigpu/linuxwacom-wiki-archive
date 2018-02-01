@@ -148,8 +148,8 @@ USB Peripherals
 | 056a:0358 | PTH-860        | Intuos Pro large                       | 2nd-generation (USB interface) | 4.11   | 2.6.30      |          |
 | 056a:035A | DTH-1152 Pen   |                                        |                                | 4.10   | 2.6.30      |          |
 | 056a:0368 | DTH-1152 Touch |                                        |                                | 4.10   | 2.6.30      |          |
-| 056a:037A | CTL-472        | One by Wacom                           |                                | NO     | NO          | NO       |
-| 056a:037B | CTL-672        | One by Wacom                           |                                | NO     | NO          | NO       |
+| 056a:037A | CTL-472        | One by Wacom                           |                                | 4.16   | 2.6.30      |          |
+| 056a:037B | CTL-672        | One by Wacom                           |                                | 4.16   | 2.6.30      |          |
 | 056a:037c | DTK-2420       | Cintiq Pro 24 P                        | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 | 056a:037d | DTH-2452       |                                        | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 | 056a:037e | DTH-2452       |                                        | touch sensor                   | 4.12   | 2.6.30      |          |
