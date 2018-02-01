@@ -1114,7 +1114,7 @@ The most up-to-date list of supported device IDs can be found in [https://source
 | 4.12
 | 2.6.30
 |-
-| 056a:037d
+| 056a:037e
 | DTH-2452
 |
 | touch sensor

@@ -152,7 +152,7 @@ USB Peripherals
 | 056a:037B | CTL-672        | One by Wacom                           |                                | NO     | NO          | NO       |
 | 056a:037c | DTK-2420       | Cintiq Pro 24 P                        | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 | 056a:037d | DTH-2452       |                                        | pen/pad sensor                 | 4.12   | 2.6.30      |          |
-| 056a:037d | DTH-2452       |                                        | touch sensor                   | 4.12   | 2.6.30      |          |
+| 056a:037e | DTH-2452       |                                        | touch sensor                   | 4.12   | 2.6.30      |          |
 | 056a:0382 | DTK-2451       |                                        | pen/pad sensor                 | 4.12   | 2.6.30      |          |
 
 Bluetooth Peripherals
