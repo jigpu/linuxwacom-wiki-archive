@@ -1,0 +1,13 @@
+Admin1	Administrator <admin1@linuxwacom-wiki.sourceforge.invalid>
+Cbagwell	Chris Bagwell <chris@cnpbagwell.com>
+Comp nerd	Jason Gerecke <killertofu@gmail.com>
+Egbert e	Egbert Eich <eich@suse.com>
+Favux	Favux <favux.is@gmail.com>
+MediaWiki default	MediaWiki default <default@linuxwacom-wiki.sourceforge.invalid>
+Pfirszt	Przemo Firszt <przemo@firszt.eu>
+Pingc	Ping Cheng <pinglinux@gmail.com>
+Reportingsjr	Reportingsjr <Reportingsjr@linuxwacom-wiki.sourceforge.invalid>
+Samiamiam	Samiamiam <Samiamiam@linuxwacom-wiki.sourceforge.invalid>
+Skomra	Aaron Armstrong Skomra <skomra@gmail.com>
+Tek	Tek <Tek@linuxwacom-wiki.sourceforge.invalid>
+Whot	Peter Hutterer <peter.hutterer@who-t.net>
